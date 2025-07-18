@@ -3,27 +3,36 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 import { AlpesScene } from '@/components/three'
 import { HeroAnimations, ScrollAnimations } from '@/components/animations'
+import Spotlight from '@/components/effects/Spotlight'
+import SpotlightContent from '@/components/effects/SpotlightContent'
+import FloatingCTA from '@/components/ui/FloatingCTA'
 
 export default async function Home() {
   const dictionary = await getDictionary(defaultLocale)
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-osom-black relative">
+      {/* Faisceau Effect */}
+      <Spotlight className="opacity-80" size={350} intensity={0.9} />
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-hero flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-screen bg-osom-black flex items-center justify-center relative overflow-hidden">
         {/* 3D Alpes Background */}
         <AlpesScene />
         
         {/* Hero Content */}
-        <div className="container mx-auto px-4 py-16 relative z-10">
-          <HeroAnimations className="text-center">
+        <div className="container mx-auto px-4 py-16 relative z-20">
+          <SpotlightContent className="text-center" dimmedOpacity={0.3} highlightRadius={400}>
+            <HeroAnimations className="text-center">
             <div className="flex justify-center mb-8" data-animate="logo">
               <Logo size="lg" variant="white" />
             </div>
             <h1 className="text-6xl font-bold text-white mb-6 font-cera" data-animate="title">
               OSOM
             </h1>
-            <p className="text-xl text-brand-light mb-8 max-w-2xl mx-auto" data-animate="subtitle">
+            <p className="text-xl text-osom-yellow mb-4 max-w-2xl mx-auto font-semibold" data-animate="subtitle">
+              « Nous travaillons dans l'ombre pour vous faire briller »
+            </p>
+            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto" data-animate="description">
               {dictionary.home.hero.subtitle}
             </p>
             <div className="flex justify-center gap-4">
@@ -49,69 +58,73 @@ export default async function Home() {
                 </Button>
               </div>
             </div>
-          </HeroAnimations>
+            </HeroAnimations>
+          </SpotlightContent>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-osom-black relative z-10">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ScrollAnimations animation="slideUp" delay={0.1}>
-              <div className="text-center p-8 rounded-lg shadow-brand-lg hover:shadow-brand-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-primary rounded-lg mb-6 flex items-center justify-center mx-auto">
-                  <span className="text-white text-3xl">⚡</span>
+          <SpotlightContent dimmedOpacity={0.25} highlightRadius={350}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <ScrollAnimations animation="slideUp" delay={0.1}>
+                <div className="text-center p-8 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-lg mb-6 flex items-center justify-center mx-auto">
+                    <span className="text-white text-3xl">⚡</span>
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4 text-white">
+                    {dictionary.home.features['web-title']}
+                  </h3>
+                  <p className="text-white/80">
+                    {dictionary.home.features['web-desc']}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-semibold mb-4 text-osom-black">
-                  {dictionary.home.features['web-title']}
-                </h3>
-                <p className="text-brand-dark">
-                  {dictionary.home.features['web-desc']}
-                </p>
-              </div>
-            </ScrollAnimations>
+              </ScrollAnimations>
             
-            <ScrollAnimations animation="slideUp" delay={0.2}>
-              <div className="text-center p-8 rounded-lg shadow-brand-lg hover:shadow-brand-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-secondary rounded-lg mb-6 flex items-center justify-center mx-auto">
-                  <span className="text-white text-3xl">🚀</span>
+              <ScrollAnimations animation="slideUp" delay={0.2}>
+                <div className="text-center p-8 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                  <div className="w-16 h-16 bg-osom-yellow rounded-lg mb-6 flex items-center justify-center mx-auto">
+                    <span className="text-osom-black text-3xl">🚀</span>
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4 text-white">
+                    {dictionary.home.features['seo-title']}
+                  </h3>
+                  <p className="text-white/80">
+                    {dictionary.home.features['seo-desc']}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-semibold mb-4 text-osom-black">
-                  {dictionary.home.features['seo-title']}
-                </h3>
-                <p className="text-brand-dark">
-                  {dictionary.home.features['seo-desc']}
-                </p>
-              </div>
-            </ScrollAnimations>
+              </ScrollAnimations>
             
-            <ScrollAnimations animation="slideUp" delay={0.3}>
-              <div className="text-center p-8 rounded-lg shadow-brand-lg hover:shadow-brand-xl transition-shadow">
-                <div className="w-16 h-16 bg-brand-accent rounded-lg mb-6 flex items-center justify-center mx-auto">
-                  <span className="text-white text-3xl">🎨</span>
+              <ScrollAnimations animation="slideUp" delay={0.3}>
+                <div className="text-center p-8 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                  <div className="w-16 h-16 bg-white rounded-lg mb-6 flex items-center justify-center mx-auto">
+                    <span className="text-osom-black text-3xl">🎨</span>
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4 text-white">
+                    {dictionary.home.features['design-title']}
+                  </h3>
+                  <p className="text-white/80">
+                    {dictionary.home.features['design-desc']}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-semibold mb-4 text-osom-black">
-                  {dictionary.home.features['design-title']}
-                </h3>
-                <p className="text-brand-dark">
-                  {dictionary.home.features['design-desc']}
-                </p>
-              </div>
-            </ScrollAnimations>
-          </div>
+              </ScrollAnimations>
+            </div>
+          </SpotlightContent>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-secondary">
+      <section className="py-16 bg-osom-black relative z-10">
         <div className="container mx-auto px-4 text-center">
-          <ScrollAnimations animation="fadeIn">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Prêt à digitaliser votre entreprise ?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Discutons de votre projet et découvrons comment nous pouvons vous aider à atteindre vos objectifs digitaux.
-            </p>
+          <SpotlightContent dimmedOpacity={0.25} highlightRadius={400}>
+            <ScrollAnimations animation="fadeIn">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Prêt à digitaliser votre entreprise ?
+              </h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Discutons de votre projet et découvrons comment nous pouvons vous aider à atteindre vos objectifs digitaux.
+              </p>
             <div className="flex justify-center gap-4">
               <Button
                 variant="primary"
@@ -132,9 +145,13 @@ export default async function Home() {
                 Voir nos services
               </Button>
             </div>
-          </ScrollAnimations>
+            </ScrollAnimations>
+          </SpotlightContent>
         </div>
       </section>
+      
+      {/* Floating CTA */}
+      <FloatingCTA />
     </div>
   )
 }

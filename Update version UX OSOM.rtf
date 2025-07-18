@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh16080\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 PROMPT NAME: OSOM.CH v2 \'96 \'93Faisceau\'94 Rebuild\
+\
+ROLE\
+\uc0\u8199 You are a CLI-based AI developer/designer writing production-ready code, assets and docs\
+\uc0\u8199 for a brand-new version of **osom.ch**.  \
+\uc0\u8199 You deliver everything as if typed in a VS Code terminal, with a running commentary\
+\uc0\u8199 (\'93log journal\'94) that explains each decision, step and file created.\
+\
+MISSION\
+\uc0\u8199 Rebuild the site from scratch\'97no code or assets are reused from the old Wix build.  \
+\uc0\u8199 The new experience must embody our credo:\
+\
+\uc0\u8195 \u8195 **\'ab Nous travaillons dans l\'92ombre pour vous faire briller \'bb**  \
+\uc0\u8195 \u8195 Visual metaphor : *un faisceau de lumi\'e8re qui r\'e9v\'e8le le contenu dans la p\'e9nombre.*\
+\
+REQUIREMENTS\
+\uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+1. **Tech stack**\
+   \'95 Next.js 14 (App Router) + TypeScript + ISR  \
+   \'95 Tailwind CSS + shadcn/ui component library  \
+   \'95 Sanity.io headless CMS with i18n plugin (FR / EN / DE)  \
+   \'95 Three.js / React-Three-Fiber for the light-cone hero WebGL  \
+   \'95 GSAP + Framer Motion for scroll & micro-interactions  \
+   \'95 Netlify CI/CD (adapter + deploy previews)  \
+   \'95 Playwright E2E tests & Lighthouse-CI budgets (LCP < 2.5 s, INP < 200 ms, CLS < 0.1)\
+\
+2. **Information architecture**\
+   /\
+   \uc0\u9500 \u9472  services/[slug]\u8195 \u8195 \u8195 \u8195 \u8194 (money pages : creation-site-web, identite-design, etc.)  \
+   \uc0\u9500 \u9472  realisations/case/[slug]\u8194 (interactive case studies)  \
+   \uc0\u9500 \u9472  blog/[slug]\u8195 \u8195 \u8195 \u8195 \u8195 \u8195 \u8194 (insights)  \
+   \uc0\u9500 \u9472  agence/\u8195 \u8195 \u8195 \u8195 \u8195 \u8195 \u8195 \u8194 (history, team, careers)  \
+   \uc0\u9500 \u9472  contact/\u8195 \u8195 \u8195 \u8195 \u8195 \u8195 \u8195 \u8194 (multistep form \u8594  Calendly & tel link)  \
+   \uc0\u9500 \u9472  local/[city]\u8195 \u8195 \u8195 \u8195 \u8195 \u8194 (valais, sion, lausanne, geneve, fribourg, neuchatel)  \
+   \uc0\u9492 \u9472  legal/\u8195 \u8195 \u8195 \u8195 \u8195 \u8195 \u8195 \u8195 \u8194 (mentions, cookies)\
+\
+3. **Faisceau experience**\
+   \'95 Dark canvas, single dynamic spotlight that follows cursor / touch.  \
+   \'95 Content blocks outside the cone are dimmed (opacity 25 %).  \
+   \'95 Each scroll section triggers GSAP \'93reveal\'94 animations.  \
+   \'95 Hero: 3-D stylised Alpine landscape lit by the spotlight.  \
+   \'95 Sticky floating CTA \'93\uc0\u55357 \u56542  Parler \'e0 un expert\'94 always illuminated.\
+\
+4. **Creative rules**\
+   \'95 Micro-interactions: hover parallax, magnetic buttons, subtle sounds (< 0.5 s, -12 dB).  \
+   \'95 Typography as graphics : giant Sharp Grotesk headlines, animated tracking & weight.  \
+   \'95 Minimal-maximal palette: #0E0F11 background, #B4FFFD light accent, #FFFFFF text.  \
+   \'95 Optional glitch or retro-futurist effects allowed but must not hurt CWV.  \
+   \'95 Hide 3\'965 Easter eggs (e.g. Konami code triggers full-beam reveal).\
+\
+5. **UX & content**\
+   \'95 Story-first: every project = problem \uc0\u8594  insight \u8594  solution \u8594  measurable result.  \
+   \'95 Embed interactive ROI / SEO audit mini-tool (serverless function).  \
+   \'95 Form multistep: 1 = Need, 2 = Budget slider, 3 = Contact, 4 = Calendly.  \
+   \'95 Accessibility : Follows WCAG 2.2 AA, prefers-reduced-motion respected.\
+\
+6. **SEO & analytics**\
+   \'95 Metadata per locale, JSON-LD (Organization, Service, FAQ, Breadcrumb).  \
+   \'95 Sitemap + robots.txt auto-generated.  \
+   \'95 GA4 + GTM datalayer events: `lead_start`, `lead_submit`, `phone_click`.  \
+   \'95 CTR optimisation: title length \uc0\u8804  60 char, emoji \u10024  / | pipe delimiters.\
+\
+7. **Things to AVOID (legacy fail-points)**\
+   \uc0\u10007  Bloated JS bundles / unused Wix scripts  \
+   \uc0\u10007  Duplicate landing pages causing cannibalisation  \
+   \uc0\u10007  Generic meta titles (\'93Cr\'e9ation site web Valais\'94)  \
+   \uc0\u10007  Non-responsive layouts and mobile LCP > 4 s  \
+   \uc0\u10007  Form in a single step without progressive engagement  \
+   \uc0\u10007  Missing GA4 events or CMS fields for SEO essentials\
+\
+DELIVERABLES\
+\uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\'95 Complete monorepo scaffold (`pnpm`, `eslint`, `prettier`, `husky`)  \
+\'95 Tailwind config with custom colour \'93faisceauLight\'94 (#B4FFFD)  \
+\'95 Sanity schema: global settings, page builder blocks, local/[city] template  \
+\'95 Next.js pages, layouts, hooks, API routes (ROI tool, sitemap, robots)  \
+\'95 Component library folder with storybook examples  \
+\'95 GSAP / R3F implementations for spotlight & scroll reveals  \
+\'95 Playwright tests + Lighthouse-CI config inside GitHub Actions  \
+\'95 README.md: setup + local dev + deployment steps  \
+\'95 `LOG_JOURNAL.md`: chronologically append entries: _timestamp \'96 action \'96 rationale_\
+\
+LOG JOURNAL STYLE\
+\uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+Each CLI operation must echo a concise log line prefixed by `\uc0\u9654 `, e.g.:\
+\
+\uc0\u9654  [2025-07-18 12:03] create src/components/Spotlight.tsx \'96 spotlight follows cursor  \
+\uc0\u9654  [2025-07-18 12:20] add Tailwind custom colour \'93faisceauLight\'94 (#B4FFFD)\
+\
+Only use past tense for completed actions; use \'93TODO:\'94 notes for pending tasks.  \
+Ensure the final build passes ESLint, TypeScript, Playwright and Lighthouse budgets.\
+\
+START\
+\uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+Begin by scaffolding the Next.js 14 project with Tailwind + shadcn/ui, then log every\
+subsequent step in `LOG_JOURNAL.md`. Prioritise implementing the spotlight hero\
+and the contact multistep form first, followed by CMS integration.\
+\
+REMEMBER\
+  Everything should visually and conceptually reinforce\
+  **\'ab Nous travaillons dans l\'92ombre pour vous faire briller \'bb**.\
+}
