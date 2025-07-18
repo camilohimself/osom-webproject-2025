@@ -17,6 +17,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
   const navigation = [
     { name: dictionary.navigation.services, href: '/services' },
     { name: dictionary.navigation.portfolio, href: '/realisations' },
+    { name: dictionary.navigation.calculator, href: '/calculator' },
     { name: dictionary.navigation.blog, href: '/blog' },
     { name: dictionary.navigation.agency, href: '/agence' },
     { name: dictionary.navigation.contact, href: '/contact' },

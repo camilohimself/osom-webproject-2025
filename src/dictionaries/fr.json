@@ -6,7 +6,8 @@
     "blog": "Blog",
     "agency": "Agence",
     "contact": "Contact",
-    "local": "Local"
+    "local": "Local",
+    "calculator": "Calculateur ROI"
   },
   "services": {
     "web-development": "Création Site Web",
