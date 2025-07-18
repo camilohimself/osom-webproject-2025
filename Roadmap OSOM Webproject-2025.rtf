@@ -1,0 +1,115 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 OSOM.CH \'96 PLAN DIRECTEUR (v1.0, juillet 2025)\
+================================================\
+\uc0\u9888 \u65039   Pour toute direction artistique (logos, couleurs, typos), se r\'e9f\'e9rer au dossier \'ab Logo pack \'bb.\
+\
+------------------------------------------------\
+STEP-BY-STEP\
+------------------------------------------------\
+\
+STEP 0 \'96 KICK-OFF & PR\'c9PARATION\
+\uc0\u8199 \u8199 \'95 Workshop objectifs & personas  \
+\uc0\u8199 \u8199 \'95 Audit GA4 + inventaire contenus existants  \
+\uc0\u8199 \u8199 \'95 R\'e9cup\'e9ration des assets du \'ab Logo pack \'bb (charte, logos SVG/PNG)  \
+\uc0\u8199 \u8199 \'95 Mise en place repo GitHub : `camilohimself/webproject-2025`  \
+\uc0\u8199 \u8199 \'95 Netlify site + previews de branche\
+\
+STEP 1 \'96 INFORMATION ARCHITECTURE & WIREFRAMES\
+\uc0\u8199 \u8199 \'95 Valider l\'92arborescence multilingue FR-EN-DE  \
+\uc0\u8199 \u8199 \'95 Wireframes low-fi de : Home, money pages, contact, local pages  \
+\uc0\u8199 \u8199 \'95 Flux de conversion (form multi-steps \u8594  Calendly / tel)\
+\
+STEP 2 \'96 DIRECTION ARTISTIQUE\
+\uc0\u8199 \u8199 \'95 Moodboard & UI Kit (couleurs, typos, composants)  \
+\uc0\u8199 \u8199 \'95 Int\'e9gration stricte des \'e9l\'e9ments \'ab Logo pack \'bb  \
+\uc0\u8199 \u8199 \'95 Prototype haute fid\'e9lit\'e9 (Figma)\
+\
+STEP 3 \'96 COPYWRITING & SEO\
+\uc0\u8199 \u8199 \'95 R\'e9daction FR des 10 money pages (+ EN/DE traduction)  \
+\uc0\u8199 \u8199 \'95 Mod\'e8le de landing page locale (`/local/[city]`)  \
+\uc0\u8199 \u8199 \'95 M\'e9tadonn\'e9es, sch\'e9mas FAQ, sitemap\
+\
+STEP 4 \'96 DEV CORE\
+\uc0\u8199 \u8199 \'95 Stack : Next.js 14 (App Router) + TypeScript  \
+\uc0\u8199 \u8199 \'95 CMS : Sanity.io avec plugin i18n  \
+\uc0\u8199 \u8199 \'95 Routing, ISR, Netlify adapter, Tailwind + shadcn/ui\
+\
+STEP 5 \'96 ANIMATIONS & INTERACTIVIT\'c9S\
+\uc0\u8199 \u8199 \'95 GSAP Hero WebGL (Alpes 3D)  \
+\uc0\u8199 \u8199 \'95 ROI / Audit calculator (serverless functions)  \
+\uc0\u8199 \u8199 \'95 Micro-interactions : cursors, scroll progress, cmd+K palette\
+\
+STEP 6 \'96 QA, TRACKING & PERFORMANCE\
+\uc0\u8199 \u8199 \'95 Playwright E2E + Lighthouse CI  \
+\uc0\u8199 \u8199 \'95 GA4 events : `lead_start`, `lead_submit`, `phone_click`  \
+\uc0\u8199 \u8199 \'95 Budgets Core Web Vitals : LCP < 2.5 s, INP < 200 ms, CLS < 0.1\
+\
+STEP 7 \'96 LAUNCH & MIGRATION\
+\uc0\u8199 \u8199 \'95 301 redirections (anciennes URLs GSC)  \
+\uc0\u8199 \u8199 \'95 Switch DNS \u8594  Netlify, monitoring uptime  \
+\uc0\u8199 \u8199 \'95 Back-up ancien site\
+\
+STEP 8 \'96 OPTIMISATION CONTINUE\
+\uc0\u8199 \u8199 \'95 CRO : A/B titles, CTA variants  \
+\uc0\u8199 \u8199 \'95 2 articles blog/mois + backlinks (5/trimester)  \
+\uc0\u8199 \u8199 \'95 Suivi KPI : \u8805  10 leads/mois ; CTR money pages \u8805  2 %\
+\
+------------------------------------------------\
+ARCHITECTURE DU SITE (FR | EN | DE)\
+------------------------------------------------\
+/\
+\uc0\u9500 \u9472  services/\
+\uc0\u9474   \u9500 \u9472  creation-site-web\
+\uc0\u9474   \u9500 \u9472  identite-design\
+\uc0\u9474   \u9500 \u9472  seo-content-marketing\
+\uc0\u9474   \u9500 \u9472  paid-media-growth\
+\uc0\u9474   \u9500 \u9472  marketing-automation-crm\
+\uc0\u9474   \u9492 \u9472  tracking-data\
+\uc0\u9500 \u9472  realisations/\
+\uc0\u9474   \u9492 \u9472  case/[slug]\
+\uc0\u9500 \u9472  blog/\
+\uc0\u9474   \u9492 \u9472  [slug]\
+\uc0\u9500 \u9472  agence/ (histoire, \'e9quipe, carri\'e8res)\
+\uc0\u9500 \u9472  contact/ (form multi-steps + Calendly)\
+\uc0\u9500 \u9472  local/\
+\uc0\u9474   \u9500 \u9472  valais\
+\uc0\u9474   \u9500 \u9472  sion\
+\uc0\u9474   \u9500 \u9472  lausanne\
+\uc0\u9474   \u9500 \u9472  geneve\
+\uc0\u9474   \u9500 \u9472  fribourg\
+\uc0\u9474   \u9492 \u9472  neuchatel\
+\uc0\u9492 \u9472  legal/ (mentions, cookies)\
+\
+------------------------------------------------\
+STACK TECHNIQUE\
+------------------------------------------------\
+\'95 Frontend : Next.js 14 + TypeScript  \
+\'95 CMS headless : Sanity.io (live preview, i18n)  \
+\'95 Animations : GSAP, Lottie, Framer Motion  \
+\'95 Styling : Tailwind CSS + shadcn/ui  \
+\'95 Analytics : GA4 + GTM + Server-Side GTM  \
+\'95 D\'e9ploiement : GitHub \uc0\u8594  Netlify CI  \
+\'95 Tests : Playwright, Lighthouse CI\
+\
+------------------------------------------------\
+KPI CIBLES\
+------------------------------------------------\
+\'95 Leads qualifi\'e9s \uc0\u8805  10 /mois  \
+\'95 CTR moyenne money pages \uc0\u8805  2 %  \
+\'95 Scroll 90 % Home \uc0\u8805  35 %  \
+\'95 Top 10 Google : \'ab agence web valais \'bb, \'ab cr\'e9ation site Lausanne \'bb, \'ab SEO Gen\'e8ve \'bb (\uc0\u8804  6 mois)  \
+\'95 Core Web Vitals dans le vert\
+\
+------------------------------------------------\
+NOTES FINALES\
+------------------------------------------------\
+1. Toujours se r\'e9f\'e9rer au dossier \'ab Logo pack \'bb pour garantir la coh\'e9rence visuelle.  \
+2. L\'92exp\'e9rience doit \'e9quilibrer cr\'e9ativit\'e9 (animations, storytelling) et performance SEO/UX.  \
+3. Chaque livrable passe par un check-list QA avant validation sprint.\
+}

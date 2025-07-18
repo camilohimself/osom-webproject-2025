@@ -1,0 +1,47 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "portfolio": "Referenzen",
+    "blog": "Blog",
+    "agency": "Agentur",
+    "contact": "Kontakt",
+    "local": "Lokal"
+  },
+  "services": {
+    "web-development": "Webentwicklung",
+    "brand-design": "Marke & Design",
+    "seo-marketing": "SEO & Marketing",
+    "paid-media": "Paid Media & Growth",
+    "marketing-automation": "Marketing Automation & CRM",
+    "tracking-data": "Tracking & Data"
+  },
+  "home": {
+    "hero": {
+      "title": "Digitale Webagentur Wallis",
+      "subtitle": "Leistungsstarke Website-Erstellung, SEO und digitales Marketing für Ihr Unternehmen",
+      "cta-primary": "Unsere Dienstleistungen",
+      "cta-secondary": "Kontakt"
+    },
+    "features": {
+      "web-title": "Webentwicklung",
+      "web-desc": "Moderne und leistungsstarke Websites mit Next.js und TypeScript",
+      "seo-title": "SEO & Marketing",
+      "seo-desc": "Suchmaschinenoptimierung und digitale Marketingstrategien",
+      "design-title": "UX/UI Design",
+      "design-desc": "Außergewöhnliche Benutzererfahrungen und moderne Interfaces"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Vorherige"
+  }
+}

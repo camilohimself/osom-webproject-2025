@@ -1,0 +1,47 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "agency": "Agency",
+    "contact": "Contact",
+    "local": "Local"
+  },
+  "services": {
+    "web-development": "Web Development",
+    "brand-design": "Brand & Design",
+    "seo-marketing": "SEO & Marketing",
+    "paid-media": "Paid Media & Growth",
+    "marketing-automation": "Marketing Automation & CRM",
+    "tracking-data": "Tracking & Data"
+  },
+  "home": {
+    "hero": {
+      "title": "Digital Web Agency Valais",
+      "subtitle": "High-performance website creation, SEO and digital marketing for your business",
+      "cta-primary": "Our Services",
+      "cta-secondary": "Contact"
+    },
+    "features": {
+      "web-title": "Web Development",
+      "web-desc": "Modern and performant websites with Next.js and TypeScript",
+      "seo-title": "SEO & Marketing",
+      "seo-desc": "Search engine optimization and digital marketing strategies",
+      "design-title": "UX/UI Design",
+      "design-desc": "Exceptional user experiences and modern interfaces"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}
