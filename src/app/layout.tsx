@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import { Header, Footer } from '@/components/layout'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
+import { GSAPProvider } from '@/components/animations'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,11 +34,13 @@ export default async function RootLayout({
   return (
     <html lang={defaultLocale}>
       <body className={inter.className}>
-        <Header currentLocale={defaultLocale} dictionary={dictionary} />
-        <main className="pt-16">
-          {children}
-        </main>
-        <Footer currentLocale={defaultLocale} dictionary={dictionary} />
+        <GSAPProvider>
+          <Header currentLocale={defaultLocale} dictionary={dictionary} />
+          <main className="pt-16">
+            {children}
+          </main>
+          <Footer currentLocale={defaultLocale} dictionary={dictionary} />
+        </GSAPProvider>
       </body>
     </html>
   )
