@@ -1,11 +1,11 @@
-import { Logo, Button } from '@/components/ui'
+import { Button } from '@/components/ui'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
-import { AlpesScene } from '@/components/three'
-import { HeroAnimations, ScrollAnimations } from '@/components/animations'
+import { ScrollAnimations } from '@/components/animations'
 import Spotlight from '@/components/effects/Spotlight'
 import SpotlightContent from '@/components/effects/SpotlightContent'
 import FloatingCTA from '@/components/ui/FloatingCTA'
+import RevolutionaryHero from '@/components/ui/RevolutionaryHero'
 
 export default async function Home() {
   const dictionary = await getDictionary(defaultLocale)
@@ -14,54 +14,8 @@ export default async function Home() {
     <div className="min-h-screen bg-osom-black relative">
       {/* Faisceau Effect */}
       <Spotlight className="opacity-80" size={350} intensity={0.9} />
-      {/* Hero Section */}
-      <section className="min-h-screen bg-osom-black flex items-center justify-center relative overflow-hidden">
-        {/* 3D Alpes Background */}
-        <AlpesScene />
-        
-        {/* Hero Content */}
-        <div className="container mx-auto px-4 py-16 relative z-20">
-          <SpotlightContent className="text-center" dimmedOpacity={0.3} highlightRadius={400}>
-            <HeroAnimations className="text-center">
-            <div className="flex justify-center mb-8" data-animate="logo">
-              <Logo size="lg" variant="white" />
-            </div>
-            <h1 className="text-6xl font-bold text-white mb-6 font-cera" data-animate="title">
-              OSOM
-            </h1>
-            <p className="text-xl text-osom-yellow mb-4 max-w-2xl mx-auto font-semibold" data-animate="subtitle">
-              « Nous travaillons dans l'ombre pour vous faire briller »
-            </p>
-            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto" data-animate="description">
-              {dictionary.home.hero.subtitle}
-            </p>
-            <div className="flex justify-center gap-4">
-              <div data-animate="button">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  href="/services"
-                  animated={true}
-                >
-                  {dictionary.home.hero['cta-primary']}
-                </Button>
-              </div>
-              <div data-animate="button">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  href="/contact"
-                  animated={true}
-                  className="border-brand-secondary text-brand-secondary hover:bg-brand-secondary hover:text-osom-black"
-                >
-                  {dictionary.home.hero['cta-secondary']}
-                </Button>
-              </div>
-            </div>
-            </HeroAnimations>
-          </SpotlightContent>
-        </div>
-      </section>
+      {/* Revolutionary Hero Section */}
+      <RevolutionaryHero />
 
       {/* Features Section */}
       <section className="py-16 bg-osom-black relative z-10">

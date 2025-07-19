@@ -47,4 +47,56 @@
 ✅ Infrastructure complete
 ✅ Faisceau effect implemented
 ✅ Deployment ready
-🔄 UX polish and advanced features in progress
+🔴 UX/UI REDESIGN CRITIQUE NÉCESSAIRE
+
+---
+
+## 📋 RÉFÉRENTIEL CRÉATIF OSOM 
+*Document stratégique pour créer un site pionnier - Intégré le 2025-01-18*
+
+### 🎯 VISION PRINCIPALE
+**OSOM = L'agence marketing qui donne vie aux collaborations**
+*Le site doit être pionnier et refléter l'excellence absolue*
+
+### 🔍 MÉTHODOLOGIE D'INSPIRATION
+
+#### 1. **PLONGÉE DANS L'INCONNU** - Industries Éloignées
+- **Studios Créatifs & Animation** : Narration visuelle avancée
+- **Artistes & Portfolios** : Ambiances non-conventionnelles 
+- **Marques de Luxe** : Exclusivité digitale, espace blanc maîtrisé
+- **Sites Expérientiels** : Gamification, découverte progressive
+
+#### 2. **TENDANCES SUBVERSIVES** - Au-delà des Codes
+- **Micro-interactions Audacieuses** : Animations marquantes + storytelling
+- **Typographie Expressive** : Police = élément graphique impactant
+- **Narration Immersive** : Parcours utilisateur = histoire complète
+- **Esthétique Rétro-Futuriste** : Vintage + technologie de pointe
+- **Minimalisme Maximaliste** : Épuré + 1-2 éléments ultra-impactants
+
+#### 3. **EXPÉRIENCE D'ABORD** - Faire Sentir Plus que Voir
+- **Focus "Comment/Pourquoi"** : Philosophie + processus unique
+- **Mini-Jeu Interactif** : Questionnaire guidé vers services
+- **Design Sonore Subtil** : Effets haute qualité discrets
+- **Easter Eggs** : Détails cachés pour explorateurs curieux
+- **Projets = Histoires** : Études de cas interactives complètes
+
+#### 4. **RÉFÉRENCES CRÉATIVES** - Sites qui Osent
+- [Active Theory](https://www.active-theory.com/) : Interactivité 3D immersive
+- [Locomotive](https://www.locomotive.ca/en) : Narration forte + transitions
+- [Dog Studio](https://www.dogstudio.co/) : Techniques visuelles audacieuses
+- [FXX Archer](https://www.fxx.com/shows/archer/) : Approche narrative TV
+
+### 🚀 PRINCIPES DESIGN OSOM
+1. **DIFFÉRENCIATION** = Combinaison inattendue d'idées existantes
+2. **ALIGNEMENT** = Design parfaitement en phase avec proposition de valeur
+3. **INCARNATION** = Le site DOIT incarner ce qu'OSOM promet
+4. **EXCELLENCE** = Chaque détail reflète le niveau "pionnier"
+
+---
+
+## TODO: Redesign Prioritaire
+- [ ] Analyse références créatives (Active Theory, Locomotive, Dog Studio)
+- [ ] Hero section révolutionnaire avec impact maximum
+- [ ] Micro-interactions storytelling avancées
+- [ ] Easter eggs et détails créatifs cachés
+- [ ] Portfolio interactif avec études de cas immersives
