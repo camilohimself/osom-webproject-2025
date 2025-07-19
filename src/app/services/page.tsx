@@ -110,7 +110,7 @@ export default async function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center bg-osom-yellow text-osom-black px-6 py-2 rounded-full text-sm font-bold mb-6">
               🏆 Agence Data-Driven Certifiée
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -123,24 +123,24 @@ export default async function ServicesPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="text-center">
-              <div className="w-20 h-20 bg-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-lg">SAWI</span>
+              <div className="w-20 h-20 bg-osom-black rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-osom-yellow font-bold text-lg">SAWI</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Certification SAWI</h3>
               <p className="text-gray-600">Formation marketing digital avancée à Lausanne</p>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-lg">IA</span>
+              <div className="w-20 h-20 bg-osom-yellow rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-osom-black font-bold text-lg">IA</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Expertise IA</h3>
               <p className="text-gray-600">Claude AI, GPT-4, automatisations intelligentes</p>
             </div>
             
             <div className="text-center">
-              <div className="w-20 h-20 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-lg">DATA</span>
+              <div className="w-20 h-20 bg-osom-black rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-osom-yellow font-bold text-lg">DATA</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Analytics Avancées</h3>
               <p className="text-gray-600">GA4, Google Search Console, SEMrush</p>
@@ -151,32 +151,32 @@ export default async function ServicesPage() {
             <h3 className="text-2xl font-bold text-center mb-8">Outils Professionnels Maîtrisés</h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
               <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-white font-bold text-xs">SEM</span>
+                <div className="w-16 h-16 bg-osom-yellow rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-osom-black font-bold text-xs">SEM</span>
                 </div>
                 <p className="text-sm font-medium">SEMrush</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-white font-bold text-xs">GA4</span>
+                <div className="w-16 h-16 bg-osom-black rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-osom-yellow font-bold text-xs">GA4</span>
                 </div>
                 <p className="text-sm font-medium">Google Analytics</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-white font-bold text-xs">GSC</span>
+                <div className="w-16 h-16 bg-osom-yellow rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-osom-black font-bold text-xs">GSC</span>
                 </div>
                 <p className="text-sm font-medium">Search Console</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-white font-bold text-xs">AI</span>
+                <div className="w-16 h-16 bg-osom-black rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-osom-yellow font-bold text-xs">AI</span>
                 </div>
                 <p className="text-sm font-medium">Claude IA</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center mb-2">
-                  <span className="text-white font-bold text-xs">GPT</span>
+                <div className="w-16 h-16 bg-osom-yellow rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-osom-black font-bold text-xs">GPT</span>
                 </div>
                 <p className="text-sm font-medium">OpenAI GPT</p>
               </div>
@@ -226,7 +226,7 @@ export default async function ServicesPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-osom-yellow text-osom-black rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 1
               </div>
               <h3 className="text-xl font-semibold mb-2">Analyse</h3>
@@ -234,7 +234,7 @@ export default async function ServicesPage() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-osom-black text-osom-yellow rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 2
               </div>
               <h3 className="text-xl font-semibold mb-2">Conception</h3>
@@ -242,7 +242,7 @@ export default async function ServicesPage() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-osom-yellow text-osom-black rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 3
               </div>
               <h3 className="text-xl font-semibold mb-2">Développement</h3>
@@ -250,7 +250,7 @@ export default async function ServicesPage() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+              <div className="w-16 h-16 bg-osom-black text-osom-yellow rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                 4
               </div>
               <h3 className="text-xl font-semibold mb-2">Lancement</h3>
@@ -272,13 +272,13 @@ export default async function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium"
+              className="bg-osom-yellow text-osom-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
             >
               Calculer mon ROI
             </Link>
             <Link
               href="/calculator"
-              className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-gray-400 transition-colors font-medium"
+              className="border-2 border-osom-black text-osom-black px-8 py-4 rounded-lg hover:bg-osom-black hover:text-white transition-colors font-medium"
             >
               Simulateur d'investissement
             </Link>

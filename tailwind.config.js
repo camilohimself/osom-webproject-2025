@@ -10,18 +10,17 @@ module.exports = {
       colors: {
         'osom': {
           'black': '#000000',
-          'dark-gray': '#514747',
-          'light-gray': '#bcbbbb',
-          'yellow': '#ffdd00',
-          'teal': '#00dbb6',
-          'red': '#ff0031',
+          'yellow': '#ffdd07',
+          'white': '#ffffff',
+          'gray': '#f8f9fa',
+          'dark-gray': '#6c757d',
         },
         'brand': {
-          'primary': '#00dbb6',
-          'secondary': '#ffdd00',
-          'accent': '#ff0031',
-          'dark': '#514747',
-          'light': '#bcbbbb',
+          'primary': '#ffdd07',
+          'secondary': '#000000',
+          'accent': '#ffdd07',
+          'dark': '#000000',
+          'light': '#f8f9fa',
         }
       },
       fontFamily: {

@@ -20,13 +20,13 @@ export default async function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium"
+                className="bg-osom-yellow text-osom-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
               >
                 Démarrer un projet
               </Link>
               <Link
                 href="/realisations"
-                className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-gray-400 transition-colors font-medium"
+                className="border-2 border-osom-black text-osom-black px-8 py-4 rounded-lg hover:bg-osom-black hover:text-white transition-colors font-medium"
               >
                 Voir nos réalisations
               </Link>
@@ -48,9 +48,11 @@ export default async function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg mb-6"></div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">
+            <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:border-osom-yellow transition-colors">
+              <div className="w-12 h-12 bg-osom-yellow rounded-lg mb-6 flex items-center justify-center">
+                <span className="text-osom-black font-bold text-xl">🌐</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-osom-black">
                 Création de sites web
               </h3>
               <p className="text-gray-600">
@@ -58,9 +60,11 @@ export default async function Home() {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-xl">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg mb-6"></div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">
+            <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:border-osom-yellow transition-colors">
+              <div className="w-12 h-12 bg-osom-yellow rounded-lg mb-6 flex items-center justify-center">
+                <span className="text-osom-black font-bold text-xl">🚀</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-osom-black">
                 SEO & Référencement
               </h3>
               <p className="text-gray-600">
@@ -68,9 +72,11 @@ export default async function Home() {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-xl">
-              <div className="w-12 h-12 bg-gray-900 rounded-lg mb-6"></div>
-              <h3 className="text-xl font-semibold mb-4 text-gray-900">
+            <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:border-osom-yellow transition-colors">
+              <div className="w-12 h-12 bg-osom-yellow rounded-lg mb-6 flex items-center justify-center">
+                <span className="text-osom-black font-bold text-xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-osom-black">
                 Marketing Digital
               </h3>
               <p className="text-gray-600">
@@ -92,7 +98,7 @@ export default async function Home() {
           </p>
           <Link
             href="/contact"
-            className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium inline-block"
+            className="bg-osom-yellow text-osom-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold inline-block"
           >
             Contactez-nous
           </Link>
