@@ -24,28 +24,43 @@ export default async function ServicesPage() {
       icon: "🌐"
     },
     {
-      title: "SEO & Référencement",
-      description: "Optimisation pour les moteurs de recherche et visibilité maximale",
+      title: "SEO Technique Avancé",
+      description: "Optimisation technique poussée avec outils professionnels et analyse data",
       features: [
-        "Audit SEO complet",
-        "Optimisation technique",
-        "Recherche de mots-clés",
-        "Content marketing",
-        "Suivi des performances"
+        "Audit technique poussé avec SEMrush",
+        "Analyse data GA4/GSC avancée",
+        "Veille concurrentielle automatisée",
+        "Optimisation technique Core Web Vitals",
+        "Recherche de mots-clés data-driven",
+        "Reporting ROI transparent"
       ],
       icon: "🚀"
     },
     {
-      title: "Marketing Digital",
-      description: "Stratégies digitales pour maximiser votre retour sur investissement",
+      title: "Marketing Digital & IA",
+      description: "Stratégies intelligentes avec automatisation IA pour un ROI optimal",
       features: [
-        "Publicité en ligne (Google Ads, Facebook)",
-        "Email marketing",
-        "Analytics et reporting",
-        "Stratégie de contenu",
-        "Réseaux sociaux"
+        "Workflows d'automatisation IA",
+        "Optimisation avec Claude/GPT",
+        "Stratégies data-driven",
+        "Publicité en ligne optimisée",
+        "Analytics prédictifs",
+        "Content marketing intelligent"
       ],
-      icon: "📈"
+      icon: "🤖"
+    },
+    {
+      title: "Projets Complets 360°",
+      description: "Notre spécialité : projets intégrés de A à Z avec accompagnement global",
+      features: [
+        "Site + stratégie + monitoring + formation",
+        "Approche globale intégrée",
+        "ROI mesurable et garanti",
+        "Accompagnement sur 12 mois",
+        "Formation aux outils professionnels",
+        "Suivi performance mensuel"
+      ],
+      icon: "🎯"
     },
     {
       title: "E-commerce",
@@ -53,35 +68,25 @@ export default async function ServicesPage() {
       features: [
         "Boutique en ligne complète",
         "Système de paiement sécurisé",
-        "Gestion des stocks",
+        "Gestion des stocks automatisée",
         "Intégration ERP/CRM",
-        "Mobile-first design"
+        "Analytics e-commerce avancées",
+        "Optimisation conversion IA"
       ],
       icon: "🛒"
     },
     {
-      title: "Maintenance & Support",
-      description: "Support technique continu et maintenance préventive",
+      title: "Transformation Digitale & IA",
+      description: "Accompagnement premium pour l'intégration des outils IA dans votre entreprise",
       features: [
-        "Mises à jour de sécurité",
-        "Sauvegardes automatiques",
-        "Monitoring 24/7",
-        "Support technique",
-        "Optimisations continues"
-      ],
-      icon: "🔧"
-    },
-    {
-      title: "Consulting Digital",
-      description: "Accompagnement stratégique pour votre transformation digitale",
-      features: [
+        "Formation aux outils IA (Claude, GPT)",
+        "Automatisations marketing intelligentes",
+        "Accompagnement mensuel personnalisé",
         "Audit digital complet",
         "Stratégie digitale sur mesure",
-        "Formation des équipes",
-        "Accompagnement au changement",
-        "Roadmap technologique"
+        "ROI et performance tracking"
       ],
-      icon: "💡"
+      icon: "⚡"
     }
   ]
 
@@ -95,8 +100,87 @@ export default async function ServicesPage() {
               Nos Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Des solutions digitales complètes pour faire grandir votre entreprise et maximiser votre présence en ligne.
+              Investissez dans votre croissance avec des solutions digitales avancées qui génèrent un ROI mesurable.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Notre Expertise Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
+              🏆 Agence Data-Driven Certifiée
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Notre Expertise Technique
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Formés SAWI Lausanne, nous maîtrisons les outils les plus avancés du marché pour garantir vos résultats.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-lg">SAWI</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Certification SAWI</h3>
+              <p className="text-gray-600">Formation marketing digital avancée à Lausanne</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-lg">IA</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Expertise IA</h3>
+              <p className="text-gray-600">Claude AI, GPT-4, automatisations intelligentes</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold text-lg">DATA</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Analytics Avancées</h3>
+              <p className="text-gray-600">GA4, Google Search Console, SEMrush</p>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-center mb-8">Outils Professionnels Maîtrisés</h3>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-white font-bold text-xs">SEM</span>
+                </div>
+                <p className="text-sm font-medium">SEMrush</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-white font-bold text-xs">GA4</span>
+                </div>
+                <p className="text-sm font-medium">Google Analytics</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-white font-bold text-xs">GSC</span>
+                </div>
+                <p className="text-sm font-medium">Search Console</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-white font-bold text-xs">AI</span>
+                </div>
+                <p className="text-sm font-medium">Claude IA</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gray-800 rounded-lg flex items-center justify-center mb-2">
+                  <span className="text-white font-bold text-xs">GPT</span>
+                </div>
+                <p className="text-sm font-medium">OpenAI GPT</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -136,7 +220,7 @@ export default async function ServicesPage() {
               Notre processus
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Une méthode éprouvée pour garantir le succès de votre projet
+              Une méthode éprouvée pour garantir un ROI mesurable et des résultats concrets
             </p>
           </div>
           
@@ -180,25 +264,28 @@ export default async function ServicesPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Prêt à démarrer votre projet ?
+            Prêt à investir dans votre croissance ?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Discutons de vos besoins et trouvons ensemble la solution qui correspond à vos objectifs.
+            Obtenez un ROI transparent et mesurable. Résultats garantis avec notre accompagnement premium data-driven.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium"
             >
-              Demander un devis
+              Calculer mon ROI
             </Link>
             <Link
               href="/calculator"
               className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-gray-400 transition-colors font-medium"
             >
-              Calculateur de projet
+              Simulateur d'investissement
             </Link>
           </div>
+          <p className="text-sm text-gray-500 mt-4">
+            ✅ ROI transparent et suivi • ✅ Résultats mesurables garantis • ✅ Accompagnement personnalisé
+          </p>
         </div>
       </section>
     </div>
