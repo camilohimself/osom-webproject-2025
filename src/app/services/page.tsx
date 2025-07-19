@@ -192,7 +192,7 @@ export default async function ServicesPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               Pourquoi nous faire confiance ?
             </h2>
-            <div className="bg-white rounded-2xl p-8 max-w-4xl mx-auto border-2 border-osom-yellow">
+            <div className="bg-white rounded-2xl p-8 max-w-5xl mx-auto border-2 border-osom-yellow">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                 <div className="flex items-center">
                   <span className="text-osom-yellow text-xl mr-3">✅</span>
@@ -200,7 +200,15 @@ export default async function ServicesPage() {
                 </div>
                 <div className="flex items-center">
                   <span className="text-osom-yellow text-xl mr-3">✅</span>
-                  <span className="font-semibold">Formation SAWI Lausanne certifiée</span>
+                  <span className="font-semibold">Formation Marketing SAWI Lausanne</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-osom-yellow text-xl mr-3">✅</span>
+                  <span className="font-semibold">Brevet Fédéral de spécialiste en marketing</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-osom-yellow text-xl mr-3">✅</span>
+                  <span className="font-semibold">Certification Google Data Analyst</span>
                 </div>
                 <div className="flex items-center">
                   <span className="text-osom-yellow text-xl mr-3">✅</span>
@@ -223,14 +231,14 @@ export default async function ServicesPage() {
               <div className="w-16 h-16 bg-osom-yellow rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-osom-black font-bold text-2xl">🎓</span>
               </div>
-              <h3 className="text-xl font-bold mb-4">Formation SAWI Lausanne</h3>
+              <h3 className="text-xl font-bold mb-4">Certifications Officielles</h3>
               <p className="text-gray-600 mb-4">
-                Certification officielle en marketing digital de la référence suisse SAWI.
+                Triple certification reconnue : excellence technique garantie.
               </p>
               <div className="text-sm text-osom-black font-medium">
-                ✓ Marketing digital avancé<br/>
-                ✓ Stratégies data-driven<br/>
-                ✓ ROI et performance
+                ✓ SAWI Lausanne (Marketing digital)<br/>
+                ✓ Brevet Fédéral Marketing<br/>
+                ✓ Google Data Analyst
               </div>
             </div>
             
