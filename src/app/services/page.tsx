@@ -24,15 +24,15 @@ export default async function ServicesPage() {
       icon: "🌐"
     },
     {
-      title: "SEO Technique Avancé",
+      title: "SEO Technique Expert",
       description: "Optimisation technique poussée avec outils professionnels et analyse data",
       features: [
         "Audit technique poussé avec SEMrush",
         "Analyse data GA4/GSC avancée",
-        "Veille concurrentielle automatisée",
+        "Croissance de visibilité mesurable (suivi SEMrush)",
+        "Reporting transparent mensuel",
         "Optimisation technique Core Web Vitals",
-        "Recherche de mots-clés data-driven",
-        "Reporting ROI transparent"
+        "Recherche de mots-clés data-driven"
       ],
       icon: "🚀"
     },
@@ -40,12 +40,12 @@ export default async function ServicesPage() {
       title: "Marketing Digital & IA",
       description: "Stratégies intelligentes avec automatisation IA pour un ROI optimal",
       features: [
+        "Automatisations intelligentes avec IA",
+        "ROI transparent et optimisé",
         "Workflows d'automatisation IA",
         "Optimisation avec Claude/GPT",
         "Stratégies data-driven",
-        "Publicité en ligne optimisée",
-        "Analytics prédictifs",
-        "Content marketing intelligent"
+        "Analytics prédictifs"
       ],
       icon: "🤖"
     },
@@ -100,7 +100,7 @@ export default async function ServicesPage() {
               Nos Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Investissez dans votre croissance avec des solutions digitales avancées qui génèrent un ROI mesurable.
+              Agence SAWI certifiée - Expertise SEO & IA pour votre croissance digitale mesurable.
             </p>
           </div>
         </div>
@@ -185,6 +185,98 @@ export default async function ServicesPage() {
         </div>
       </section>
 
+      {/* Section Crédibilité */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              Pourquoi nous faire confiance ?
+            </h2>
+            <div className="bg-white rounded-2xl p-8 max-w-4xl mx-auto border-2 border-osom-yellow">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div className="flex items-center">
+                  <span className="text-osom-yellow text-xl mr-3">✅</span>
+                  <span className="font-semibold">4.9/5 sur Google (17 avis clients)</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-osom-yellow text-xl mr-3">✅</span>
+                  <span className="font-semibold">Formation SAWI Lausanne certifiée</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-osom-yellow text-xl mr-3">✅</span>
+                  <span className="font-semibold">Professionnels de santé nous font confiance</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-osom-yellow text-xl mr-3">✅</span>
+                  <span className="font-semibold">Résultats SEO mesurables dès les premiers mois</span>
+                </div>
+                <div className="flex items-center md:col-span-2 justify-center">
+                  <span className="text-osom-yellow text-xl mr-3">✅</span>
+                  <span className="font-semibold">Outils professionnels : SEMrush, GA4, Claude IA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl text-center border-2 border-gray-200">
+              <div className="w-16 h-16 bg-osom-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-osom-black font-bold text-2xl">🎓</span>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Formation SAWI Lausanne</h3>
+              <p className="text-gray-600 mb-4">
+                Certification officielle en marketing digital de la référence suisse SAWI.
+              </p>
+              <div className="text-sm text-osom-black font-medium">
+                ✓ Marketing digital avancé<br/>
+                ✓ Stratégies data-driven<br/>
+                ✓ ROI et performance
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl text-center border-2 border-gray-200">
+              <div className="w-16 h-16 bg-osom-black rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-osom-yellow font-bold text-2xl">🚀</span>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Résultats Mesurables</h3>
+              <p className="text-gray-600 mb-4">
+                Chaque stratégie est suivie et optimisée pour un ROI transparent.
+              </p>
+              <div className="text-sm text-osom-black font-medium">
+                ✓ Reporting mensuel détaillé<br/>
+                ✓ KPIs transparents<br/>
+                ✓ Optimisation continue
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl text-center border-2 border-gray-200">
+              <div className="w-16 h-16 bg-osom-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-osom-black font-bold text-2xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-bold mb-4">Technologie Avancée</h3>
+              <p className="text-gray-600 mb-4">
+                Outils professionnels et IA pour maximiser votre performance.
+              </p>
+              <div className="text-sm text-osom-black font-medium">
+                ✓ SEMrush & GA4 expert<br/>
+                ✓ Automatisations IA<br/>
+                ✓ Technologies modernes
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-16 bg-osom-yellow rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-bold text-osom-black mb-4">
+              🏆 Garantie de résultats
+            </h3>
+            <p className="text-lg text-osom-black">
+              Si nous n'améliorons pas votre visibilité SEO dans les 3 premiers mois, 
+              nous vous remboursons intégralement.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -261,30 +353,67 @@ export default async function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-osom-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Prêt à investir dans votre croissance ?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Obtenez un audit SEO gratuit de votre site
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Obtenez un ROI transparent et mesurable. Résultats garantis avec notre accompagnement premium data-driven.
+          <p className="text-xl text-osom-yellow mb-4 font-semibold">
+            30 minutes - Sans engagement
           </p>
+          <p className="text-lg text-gray-300 mb-8">
+            Découvrons ensemble le potentiel de croissance de votre présence digitale.
+          </p>
+          
+          <div className="bg-white rounded-2xl p-8 mb-8 text-left max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold text-osom-black mb-4">
+              📊 Ce que vous recevrez :
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="flex items-start">
+                <span className="text-osom-yellow mr-2">✓</span>
+                <span>Audit SEO technique complet</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-osom-yellow mr-2">✓</span>
+                <span>Analyse concurrentielle</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-osom-yellow mr-2">✓</span>
+                <span>Opportunités de croissance</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-osom-yellow mr-2">✓</span>
+                <span>Plan d'action personnalisé</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-osom-yellow mr-2">✓</span>
+                <span>Estimation ROI potentiel</span>
+              </div>
+              <div className="flex items-start">
+                <span className="text-osom-yellow mr-2">✓</span>
+                <span>Conseils d'expert immédiatement applicables</span>
+              </div>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-osom-yellow text-osom-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
+              className="bg-osom-yellow text-osom-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold text-lg"
             >
-              Calculer mon ROI
+              🚀 Réserver mon audit gratuit
             </Link>
             <Link
               href="/calculator"
-              className="border-2 border-osom-black text-osom-black px-8 py-4 rounded-lg hover:bg-osom-black hover:text-white transition-colors font-medium"
+              className="border-2 border-osom-yellow text-osom-yellow px-8 py-4 rounded-lg hover:bg-osom-yellow hover:text-osom-black transition-colors font-medium"
             >
-              Simulateur d'investissement
+              Calculateur ROI
             </Link>
           </div>
-          <p className="text-sm text-gray-500 mt-4">
-            ✅ ROI transparent et suivi • ✅ Résultats mesurables garantis • ✅ Accompagnement personnalisé
+          
+          <p className="text-sm text-gray-400 mt-6">
+            ⚡ Réponse sous 24h • 🎯 100% personnalisé • 🏆 Expert SAWI certifié
           </p>
         </div>
       </section>
