@@ -9,37 +9,6 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[functions]
-  directory = "netlify/functions"
-
-# Redirects pour les routes Next.js
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
-# Redirects pour les pages locales
-[[redirects]]
-  from = "/local/valais"
-  to = "/local/valais"
-  status = 200
-
-[[redirects]]
-  from = "/local/sion"
-  to = "/local/sion"
-  status = 200
-
-[[redirects]]
-  from = "/local/lausanne"
-  to = "/local/lausanne"
-  status = 200
-
-[[redirects]]
-  from = "/local/geneve"
-  to = "/local/geneve"
-  status = 200
-
 # Headers pour la sécurité
 [[headers]]
   for = "/*"
