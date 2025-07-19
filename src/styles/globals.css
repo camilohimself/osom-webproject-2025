@@ -1,8 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* OSOM Custom Colors for Tailwind v4 */
+@theme {
+  --color-osom-black: #000000;
+  --color-osom-dark-gray: #514747;
+  --color-osom-light-gray: #bcbbbb;
+  --color-osom-yellow: #ffdd00;
+  --color-osom-teal: #00dbb6;
+  --color-osom-red: #ff0031;
+  
+  --color-brand-primary: #00dbb6;
+  --color-brand-secondary: #ffdd00;
+  --color-brand-accent: #ff0031;
+  --color-brand-dark: #514747;
+  --color-brand-light: #bcbbbb;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -20,12 +34,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #ffffff;
   font-family: 'Inter', sans-serif;
 }
 
