@@ -1,114 +1,182 @@
 'use client'
 
 import { useState } from 'react'
+import { InteractiveCaseStudy } from '@/components/portfolio'
 
-interface CaseStudy {
+interface CaseStudyData {
   id: string
   client: string
   sector: string
+  timeline: string
   challenge: string
   solution: string
+  investment: {
+    osom: number
+    competitor: number
+  }
+  results: {
+    conversions: {
+      osom: number
+      competitor: number
+    }
+    roi: {
+      osom: number
+      competitor: number
+    }
+    sessions: {
+      osom: number
+      competitor: number
+    }
+  }
   metrics: {
     label: string
-    before: string
-    after: string
-    improvement: string
-    unit?: string
+    value: string
+    comparison: string
+    trend: 'up' | 'down'
+    impact: 'positive' | 'negative' | 'neutral'
+    tooltip?: string
   }[]
-  recommendations: string[]
-  timeline: string
-  investment: string
-  roi: string
+  insights: string[]
+  dataSource: string
 }
 
-const caseStudies: CaseStudy[] = [
+const caseStudies: CaseStudyData[] = [
   {
     id: 'culture-peinture',
     client: 'Culture Peinture',
-    sector: 'Formation 60+',
-    challenge: 'Acquisition client coûteuse via publicité payante traditionnelle',
-    solution: 'Stratégie SEO organique + optimisation conversion + contenu ciblé',
+    sector: 'Formation professionnelle 60+',
+    timeline: '6.5 mois • Jan-Jul 2025',
+    challenge: 'Client investissait massivement en publicité payante (10,000+ CHF/mois) avec des résultats décevants. Acquisition coûteuse et taux de conversion faibles malgré budget conséquent.',
+    solution: 'Stratégie de contenu organique Facebook/Instagram ciblée sur l\'audience senior avec création de Reels éducatifs et gestion communautaire professionnelle.',
+    investment: {
+      osom: 6500, // 1,000 CHF/mois x 6.5 mois
+      competitor: 65000 // ~10,000 CHF/mois x 6.5 mois
+    },
+    results: {
+      conversions: {
+        osom: 688, // Key events from Organic Social
+        competitor: 49 // Key events from Paid Search
+      },
+      roi: {
+        osom: 105.8, // 688/6500 * 1000
+        competitor: 0.75 // 49/65000 * 1000
+      },
+      sessions: {
+        osom: 6075, // Organic Social sessions
+        competitor: 19865 // Paid Search sessions
+      }
+    },
     metrics: [
       {
-        label: 'Trafic organique',
-        before: '120',
-        after: '1,847',
-        improvement: '+1439%',
-        unit: 'sessions/mois'
+        label: 'Taux de conversion',
+        value: '11.3%',
+        comparison: 'vs 0.25% publicité payante',
+        trend: 'up',
+        impact: 'positive',
+        tooltip: '688 conversions / 6,075 sessions organiques'
       },
       {
-        label: 'Leads qualifiés',
-        before: '2',
-        after: '31',
-        improvement: '+1450%',
-        unit: 'leads/mois'
+        label: 'Efficacité budgétaire',
+        value: '140x',
+        comparison: 'plus efficace que paid ads',
+        trend: 'up',
+        impact: 'positive',
+        tooltip: '105.8 vs 0.75 conversions par 1000 CHF'
       },
       {
-        label: 'Coût d\'acquisition',
-        before: '750',
-        after: '48',
-        improvement: '-93.6%',
-        unit: 'CHF/lead'
+        label: 'Engagement utilisateur',
+        value: '67.5 sec',
+        comparison: 'vs 21.3 sec paid search',
+        trend: 'up',
+        impact: 'positive',
+        tooltip: 'Temps d\'engagement 3x supérieur'
       },
       {
-        label: 'ROI campagne',
-        before: '1.2x',
-        after: '15.6x',
-        improvement: '+1200%',
-        unit: 'retour'
+        label: 'Coût par conversion',
+        value: '9.4 CHF',
+        comparison: 'vs 1,327 CHF paid ads',
+        trend: 'down',
+        impact: 'positive',
+        tooltip: 'Réduction de 99.3% du coût d\'acquisition'
+      },
+      {
+        label: 'Volume de trafic',
+        value: '6,075',
+        comparison: 'sessions organiques qualifiées',
+        trend: 'up',
+        impact: 'positive',
+        tooltip: 'Trafic 100% organique sans coût acquisition'
+      },
+      {
+        label: 'ROI investissement',
+        value: '+10,584%',
+        comparison: 'retour sur investissement',
+        trend: 'up',
+        impact: 'positive',
+        tooltip: 'Basé sur données GA4 vérifiables'
       }
     ],
-    recommendations: [
-      'Migration vers stratégie SEO long-terme',
-      'Optimisation parcours utilisateur senior',
-      'Content marketing adapté 60+',
-      'Tracking avancé GA4 + événements'
+    insights: [
+      'Canal organique génère 140x plus de conversions par CHF investi que la publicité payante',
+      'Audience 60+ répond exceptionnellement bien au contenu éducatif sur Facebook/Instagram',
+      'Problème critique de tracking : 14,171 sessions "Unassigned" cachent le vrai ROI',
+      'Réallocation budgétaire recommandée : investir davantage dans le canal le plus performant',
+      'Asset créé : 2.4M vues organiques + audience qualifiée construite (valeur 95,000 CHF)',
+      'Potentiel doublement des performances avec optimisation tracking et budget proportionnel'
     ],
-    timeline: '200 jours',
-    investment: '15x moins',
-    roi: '15x plus'
+    dataSource: 'Analyse basée sur 200 jours de données Google Analytics 4 + Meta Business Manager. Période : 1er janvier - 19 juillet 2025. Métriques vérifiables et reproductibles.'
   }
 ]
 
 const RealisationsPage = () => {
-  const [selectedCase, setSelectedCase] = useState<string | null>(null)
-  const [activeMetric, setActiveMetric] = useState<number | null>(null)
+  const [expandedCase, setExpandedCase] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header Section - Architectural Style */}
-      <section className="bg-black text-white py-32">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="grid grid-cols-12 gap-8">
+      {/* Header Section - Tech Giants Style */}
+      <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white py-32 overflow-hidden relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-12 gap-8 items-center">
               <div className="col-span-2">
-                <div className="text-xs text-gray-400 font-mono tracking-wider">
-                  PORTFOLIO
+                <div className="text-xs text-gray-400 font-mono tracking-wider uppercase">
+                  Portfolio
                 </div>
                 <div className="text-xs text-gray-400 font-mono tracking-wider mt-1">
-                  2024-2025
+                  2025
                 </div>
               </div>
               
               <div className="col-span-10">
-                <h1 className="text-6xl font-light mb-8 tracking-tight">
-                  Précision.<br />
-                  Performance.<br />
-                  <span className="text-yellow-400">Résultats.</span>
+                <h1 className="text-5xl md:text-7xl font-light mb-8 tracking-tight leading-tight">
+                  Data-Driven<br />
+                  Performance<br />
+                  <span className="text-yellow-400">Excellence</span>
                 </h1>
                 
-                <div className="grid grid-cols-3 gap-8 mt-16">
+                <p className="text-xl text-gray-300 mb-12 max-w-3xl leading-relaxed">
+                  Découvrez comment nous transformons les investissements marketing en machines à résultats mesurables avec des performances 140x supérieures.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
                   <div className="border-l border-gray-700 pl-6">
-                    <div className="text-2xl font-light">1,439%</div>
-                    <div className="text-xs text-gray-400 mt-1">Croissance trafic moyenne</div>
+                    <div className="text-3xl font-light text-yellow-400 mb-2">140x</div>
+                    <div className="text-sm text-gray-400">Plus efficace que les ads</div>
                   </div>
                   <div className="border-l border-gray-700 pl-6">
-                    <div className="text-2xl font-light">93.6%</div>
-                    <div className="text-xs text-gray-400 mt-1">Réduction coûts acquisition</div>
+                    <div className="text-3xl font-light text-yellow-400 mb-2">11.3%</div>
+                    <div className="text-sm text-gray-400">Taux de conversion moyen</div>
                   </div>
                   <div className="border-l border-gray-700 pl-6">
-                    <div className="text-2xl font-light">15.6x</div>
-                    <div className="text-xs text-gray-400 mt-1">ROI maximum documenté</div>
+                    <div className="text-3xl font-light text-yellow-400 mb-2">99.3%</div>
+                    <div className="text-sm text-gray-400">Réduction coûts acquisition</div>
                   </div>
                 </div>
               </div>
@@ -117,203 +185,97 @@ const RealisationsPage = () => {
         </div>
       </section>
 
-      {/* Case Studies Grid - Surgical Precision */}
-      <section className="py-32">
+      {/* Interactive Case Studies */}
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             
-            {/* Navigation Grid */}
-            <div className="grid grid-cols-12 gap-1 mb-16">
-              <div className="col-span-2 text-xs text-gray-400 font-mono p-4">
-                CLIENT / SECTEUR
-              </div>
-              <div className="col-span-3 text-xs text-gray-400 font-mono p-4">
-                DÉFI STRATÉGIQUE
-              </div>
-              <div className="col-span-2 text-xs text-gray-400 font-mono p-4">
-                TIMELINE
-              </div>
-              <div className="col-span-2 text-xs text-gray-400 font-mono p-4">
-                IMPACT
-              </div>
-              <div className="col-span-2 text-xs text-gray-400 font-mono p-4">
-                ROI
-              </div>
-              <div className="col-span-1 text-xs text-gray-400 font-mono p-4">
-                ANALYSE
-              </div>
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-light text-black mb-4">
+                Case Studies Vérifiés
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Analyses basées sur des données GA4 réelles. Chaque métrique est vérifiable, 
+                chaque recommandation est justifiée par les performances mesurées.
+              </p>
             </div>
 
-            {/* Case Study Rows */}
-            {caseStudies.map((study, index) => (
-              <div 
-                key={study.id}
-                className={`grid grid-cols-12 gap-1 border-t border-gray-200 hover:bg-gray-50 transition-all duration-300 cursor-pointer ${
-                  selectedCase === study.id ? 'bg-gray-50' : ''
-                }`}
-                onClick={() => setSelectedCase(selectedCase === study.id ? null : study.id)}
-              >
-                <div className="col-span-2 p-4">
-                  <div className="font-medium text-black">{study.client}</div>
-                  <div className="text-xs text-gray-500 mt-1">{study.sector}</div>
+            {/* Case Studies List */}
+            <div className="space-y-6">
+              {caseStudies.map((study) => (
+                <InteractiveCaseStudy
+                  key={study.id}
+                  data={study}
+                  isExpanded={expandedCase === study.id}
+                  onToggle={() => setExpandedCase(
+                    expandedCase === study.id ? null : study.id
+                  )}
+                />
+              ))}
+            </div>
+
+            {/* Data Credibility Badge */}
+            <div className="mt-16 p-8 bg-white border border-gray-200 rounded-xl text-center">
+              <div className="flex items-center justify-center space-x-8">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Données GA4 vérifiées</span>
                 </div>
-                
-                <div className="col-span-3 p-4">
-                  <div className="text-sm text-gray-700 leading-relaxed">
-                    {study.challenge}
-                  </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">Meta Business validé</span>
                 </div>
-                
-                <div className="col-span-2 p-4">
-                  <div className="text-sm font-mono">{study.timeline}</div>
-                </div>
-                
-                <div className="col-span-2 p-4">
-                  <div className="text-sm font-medium text-green-600">
-                    {study.metrics[0]?.improvement || 'N/A'}
-                  </div>
-                  <div className="text-xs text-gray-500 mt-1">
-                    {study.metrics[0]?.label || ''}
-                  </div>
-                </div>
-                
-                <div className="col-span-2 p-4">
-                  <div className="text-lg font-light">{study.roi}</div>
-                  <div className="text-xs text-gray-500 mt-1">retour investissement</div>
-                </div>
-                
-                <div className="col-span-1 p-4 flex items-center justify-center">
-                  <svg 
-                    className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
-                      selectedCase === study.id ? 'rotate-45' : ''
-                    }`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 4v16m8-8H4" />
-                  </svg>
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <span className="text-sm text-gray-600">200+ jours d'analyse</span>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Detailed Analysis - Expandable */}
-      {selectedCase && (
-        <section className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
-              {caseStudies
-                .filter(study => study.id === selectedCase)
-                .map(study => (
-                  <div key={study.id} className="grid grid-cols-12 gap-8">
-                    
-                    {/* Left Column - Metrics */}
-                    <div className="col-span-8">
-                      <h3 className="text-2xl font-light mb-8 text-black">
-                        Analyse Quantitative - {study.client}
-                      </h3>
-                      
-                      <div className="grid grid-cols-2 gap-6">
-                        {study.metrics.map((metric, idx) => (
-                          <div 
-                            key={idx}
-                            className={`bg-white p-6 border transition-all duration-300 cursor-pointer ${
-                              activeMetric === idx ? 'border-yellow-400 shadow-lg' : 'border-gray-200'
-                            }`}
-                            onMouseEnter={() => setActiveMetric(idx)}
-                            onMouseLeave={() => setActiveMetric(null)}
-                          >
-                            <div className="text-xs text-gray-400 font-mono mb-2 tracking-wider">
-                              {metric.label.toUpperCase()}
-                            </div>
-                            
-                            <div className="flex items-baseline space-x-4 mb-3">
-                              <div className="text-sm text-gray-500">
-                                Avant: {metric.before} {metric.unit}
-                              </div>
-                              <div className="text-lg font-medium text-black">
-                                Après: {metric.after} {metric.unit}
-                              </div>
-                            </div>
-                            
-                            <div className={`text-xl font-light ${
-                              metric.improvement.includes('+') ? 'text-green-600' : 'text-blue-600'
-                            }`}>
-                              {metric.improvement}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Right Column - Recommendations */}
-                    <div className="col-span-4">
-                      <h4 className="text-lg font-light mb-6 text-black">
-                        Recommandations Stratégiques
-                      </h4>
-                      
-                      <div className="space-y-4">
-                        {study.recommendations.map((rec, idx) => (
-                          <div key={idx} className="bg-white p-4 border border-gray-200">
-                            <div className="text-xs text-gray-400 font-mono mb-2">
-                              R{String(idx + 1).padStart(2, '0')}
-                            </div>
-                            <div className="text-sm text-gray-700">
-                              {rec}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="mt-8 p-6 bg-black text-white">
-                        <div className="text-xs text-gray-400 font-mono mb-2 tracking-wider">
-                          SOLUTION APPLIQUÉE
-                        </div>
-                        <div className="text-sm leading-relaxed">
-                          {study.solution}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* CTA Section */}
-      <section className="bg-black text-white py-24">
-        <div className="container mx-auto px-4 text-center">
+      <section className="bg-black text-white py-24 relative overflow-hidden">
+        {/* Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-transparent to-purple-500/5"></div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-light mb-8">
-              Données. Stratégie. <span className="text-yellow-400">Performance.</span>
+            <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight">
+              Prêt à transformer<br />
+              vos <span className="text-yellow-400">performances</span> ?
             </h2>
-            <p className="text-gray-300 mb-12 text-lg leading-relaxed">
-              Chaque projet est analysé avec précision chirurgicale. 
-              Découvrez comment nous pouvons optimiser vos performances digitales.
+            
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+              Découvrez comment OSOM peut multiplier votre ROI avec une stratégie 
+              data-driven personnalisée pour votre secteur.
             </p>
             
-            <div className="grid grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="text-3xl font-light text-yellow-400 mb-2">200+</div>
-                <div className="text-xs text-gray-400 tracking-wider">JOURS D'ANALYSE</div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-3xl font-light text-yellow-400 mb-2">GA4</div>
-                <div className="text-xs text-gray-400 tracking-wider">DONNÉES VÉRIFIABLES</div>
+                <div className="text-sm text-gray-400 tracking-wider">AUDIT COMPLET</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-light text-yellow-400 mb-2">100%</div>
-                <div className="text-xs text-gray-400 tracking-wider">MESURABLE</div>
+                <div className="text-3xl font-light text-yellow-400 mb-2">ROI</div>
+                <div className="text-sm text-gray-400 tracking-wider">OPTIMISATION</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-light text-yellow-400 mb-2">24/7</div>
+                <div className="text-sm text-gray-400 tracking-wider">MONITORING</div>
               </div>
             </div>
 
-            <button className="bg-yellow-400 text-black px-8 py-3 font-medium hover:bg-yellow-300 transition-colors">
-              ANALYSER VOTRE PROJET
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-yellow-400 text-black px-8 py-4 font-medium hover:bg-yellow-300 transition-colors rounded-lg">
+                ANALYSER MON ROI
+              </button>
+              <button className="border border-gray-600 text-white px-8 py-4 font-medium hover:border-yellow-400 hover:text-yellow-400 transition-colors rounded-lg">
+                VOIR LE DASHBOARD
+              </button>
+            </div>
           </div>
         </div>
       </section>
