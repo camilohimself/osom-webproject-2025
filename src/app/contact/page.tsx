@@ -307,24 +307,107 @@ const ContactPage = () => {
             Quelques questions pour comprendre vos besoins et vous proposer la solution la plus adaptée à votre entreprise.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">🎯</div>
-              <div className="text-lg font-medium mb-2">Diagnostic Gratuit</div>
-              <div className="text-sm text-gray-300">Analyse de votre situation actuelle</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+            
+            {/* Bloc 1 - Diagnostic Gratuit */}
+            <div className="group relative overflow-hidden">
+              {/* Background avec dégradé */}
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-yellow-400/10 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-lg rounded-2xl border border-yellow-400/30 group-hover:border-yellow-400/60 transition-all duration-500"></div>
+              
+              {/* Contenu */}
+              <div className="relative z-10 p-8 text-center h-full flex flex-col justify-between min-h-[280px]">
+                {/* Icon premium */}
+                <div className="mb-6">
+                  <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                    <span className="text-black text-3xl font-bold">🎯</span>
+                  </div>
+                  <div className="text-yellow-400 font-mono text-xs tracking-wider uppercase">GRATUIT</div>
+                </div>
+                
+                {/* Titre principal */}
+                <div className="mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+                    Diagnostic
+                    <br />
+                    <span className="text-yellow-400">Complet</span>
+                  </h3>
+                </div>
+                
+                {/* Description */}
+                <div className="text-gray-300 leading-relaxed">
+                  <p className="text-base mb-3">Analyse approfondie de votre</p>
+                  <p className="text-sm text-yellow-400 font-medium">situation digitale actuelle</p>
+                </div>
+              </div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">📊</div>
-              <div className="text-lg font-medium mb-2">Recommandations Personnalisées</div>
-              <div className="text-sm text-gray-300">Solutions adaptées à vos objectifs</div>
+            {/* Bloc 2 - Recommandations */}
+            <div className="group relative overflow-hidden">
+              {/* Background avec dégradé violet */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-lg rounded-2xl border border-purple-500/30 group-hover:border-purple-500/60 transition-all duration-500"></div>
+              
+              {/* Contenu */}
+              <div className="relative z-10 p-8 text-center h-full flex flex-col justify-between min-h-[280px]">
+                {/* Icon premium */}
+                <div className="mb-6">
+                  <div className="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                    <span className="text-white text-3xl font-bold">📊</span>
+                  </div>
+                  <div className="text-purple-400 font-mono text-xs tracking-wider uppercase">PERSONNALISÉ</div>
+                </div>
+                
+                {/* Titre principal */}
+                <div className="mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+                    Plan d'Action
+                    <br />
+                    <span className="text-purple-400">Sur Mesure</span>
+                  </h3>
+                </div>
+                
+                {/* Description */}
+                <div className="text-gray-300 leading-relaxed">
+                  <p className="text-base mb-3">Stratégie adaptée à vos</p>
+                  <p className="text-sm text-purple-400 font-medium">objectifs & budget spécifique</p>
+                </div>
+              </div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl mb-3">⏰</div>
-              <div className="text-lg font-medium mb-2">Consultation Rapide</div>
-              <div className="text-sm text-gray-300">RDV sous 48h maximum</div>
+            {/* Bloc 3 - Consultation Rapide */}
+            <div className="group relative overflow-hidden">
+              {/* Background avec dégradé cyan */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-cyan-400/10 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 bg-black/40 backdrop-blur-lg rounded-2xl border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-500"></div>
+              
+              {/* Contenu */}
+              <div className="relative z-10 p-8 text-center h-full flex flex-col justify-between min-h-[280px]">
+                {/* Icon premium */}
+                <div className="mb-6">
+                  <div className="w-20 h-20 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                    <span className="text-black text-3xl font-bold">⚡</span>
+                  </div>
+                  <div className="text-cyan-400 font-mono text-xs tracking-wider uppercase">RAPIDE</div>
+                </div>
+                
+                {/* Titre principal */}
+                <div className="mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+                    Consultation
+                    <br />
+                    <span className="text-cyan-400">Express</span>
+                  </h3>
+                </div>
+                
+                {/* Description */}
+                <div className="text-gray-300 leading-relaxed">
+                  <p className="text-base mb-3">Rendez-vous programmé</p>
+                  <p className="text-sm text-cyan-400 font-medium">sous 48h maximum</p>
+                </div>
+              </div>
             </div>
+            
           </div>
         </div>
       </section>
