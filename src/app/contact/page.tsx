@@ -23,6 +23,7 @@ interface FormData {
 const ContactPage = () => {
   const [currentStep, setCurrentStep] = useState(0)
   const [showCalendly, setShowCalendly] = useState(false)
+  const [isConsultationScheduled, setIsConsultationScheduled] = useState(false)
   const [formData, setFormData] = useState<FormData>({
     projectType: '',
     timeline: '',
@@ -261,7 +262,7 @@ const ContactPage = () => {
                     </div>
                     
                     {/* Progress steps avec animations */}
-                    <div className="flex items-center justify-center mb-12 max-w-3xl mx-auto">
+                    <div id="progress-section" className="flex items-center justify-center mb-12 max-w-3xl mx-auto">
                       
                       {/* Step 1 - Complété */}
                       <div className="flex items-center">
@@ -276,46 +277,117 @@ const ContactPage = () => {
                       
                       {/* Connexion animée */}
                       <div className="flex-1 mx-8">
-                        <div className="h-1 bg-gradient-to-r from-green-500 to-yellow-400 rounded-full animate-pulse"></div>
+                        <motion.div 
+                          className={`h-1 rounded-full ${
+                            isConsultationScheduled 
+                              ? 'bg-gradient-to-r from-green-500 to-green-400' 
+                              : 'bg-gradient-to-r from-green-500 to-yellow-400'
+                          }`}
+                          initial={{ width: '0%' }}
+                          animate={{ width: '100%' }}
+                          transition={{ duration: 2, ease: "easeInOut" }}
+                        />
                       </div>
                       
-                      {/* Step 2 - En cours */}
+                      {/* Step 2 - Consultation */}
                       <div className="flex items-center">
-                        <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center animate-pulse shadow-lg">
-                          <span className="text-black text-xl">📅</span>
-                        </div>
+                        <motion.div 
+                          className={`w-12 h-12 rounded-full flex items-center justify-center shadow-lg ${
+                            isConsultationScheduled 
+                              ? 'bg-green-500 animate-bounce' 
+                              : 'bg-yellow-400 animate-pulse'
+                          }`}
+                          animate={isConsultationScheduled ? { scale: [1, 1.2, 1] } : {}}
+                          transition={{ duration: 0.5 }}
+                        >
+                          <span className={`text-xl ${
+                            isConsultationScheduled ? 'text-white' : 'text-black'
+                          }`}>
+                            {isConsultationScheduled ? '✓' : '📅'}
+                          </span>
+                        </motion.div>
                         <div className="ml-4 text-left">
-                          <div className="text-yellow-400 font-semibold">Consultation</div>
-                          <div className="text-gray-300 text-sm">En cours...</div>
+                          <div className={`font-semibold ${
+                            isConsultationScheduled ? 'text-green-400' : 'text-yellow-400'
+                          }`}>
+                            Consultation
+                          </div>
+                          <div className="text-gray-300 text-sm">
+                            {isConsultationScheduled ? 'Planifiée !' : 'En cours...'}
+                          </div>
                         </div>
                       </div>
                       
                       {/* Connexion future */}
                       <div className="flex-1 mx-8">
-                        <div className="h-1 bg-gray-600 rounded-full"></div>
+                        <motion.div 
+                          className={`h-1 rounded-full ${
+                            isConsultationScheduled 
+                              ? 'bg-gradient-to-r from-green-400 to-purple-500' 
+                              : 'bg-gray-600'
+                          }`}
+                          initial={{ width: '0%' }}
+                          animate={{ width: isConsultationScheduled ? '100%' : '0%' }}
+                          transition={{ delay: isConsultationScheduled ? 1 : 0, duration: 2 }}
+                        />
                       </div>
                       
-                      {/* Step 3 - Futur */}
+                      {/* Step 3 - Transformation */}
                       <div className="flex items-center">
-                        <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                        <motion.div 
+                          className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                            isConsultationScheduled 
+                              ? 'bg-purple-500 animate-pulse' 
+                              : 'bg-gray-600'
+                          }`}
+                          animate={isConsultationScheduled ? { scale: [1, 1.1, 1] } : {}}
+                          transition={{ delay: 2, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
+                        >
                           <span className="text-white text-xl">🚀</span>
-                        </div>
+                        </motion.div>
                         <div className="ml-4 text-left">
-                          <div className="text-purple-400 font-semibold">Transformation</div>
-                          <div className="text-gray-400 text-sm">Bientôt...</div>
+                          <div className={`font-semibold ${
+                            isConsultationScheduled ? 'text-purple-400' : 'text-gray-500'
+                          }`}>
+                            Transformation
+                          </div>
+                          <div className="text-gray-400 text-sm">
+                            {isConsultationScheduled ? 'Préparée...' : 'Bientôt...'}
+                          </div>
                         </div>
                       </div>
                       
                     </div>
                     
                     {/* Message motivant */}
-                    <div className="bg-gradient-to-r from-yellow-400/10 to-purple-500/10 rounded-xl p-6 border border-yellow-400/30">
-                      <p className="text-white text-lg mb-2">
-                        <span className="text-yellow-400 font-bold">Félicitations !</span> Vous avez franchi la première étape.
-                      </p>
-                      <p className="text-gray-300">
-                        Planifiez maintenant votre consultation pour découvrir comment multiplier votre ROI par <span className="text-yellow-400 font-bold">140x</span>
-                      </p>
+                    <div className={`rounded-xl p-6 border transition-all duration-1000 ${
+                      isConsultationScheduled 
+                        ? 'bg-gradient-to-r from-green-400/20 to-purple-500/20 border-green-400/50' 
+                        : 'bg-gradient-to-r from-yellow-400/10 to-purple-500/10 border-yellow-400/30'
+                    }`}>
+                      {isConsultationScheduled ? (
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.8 }}
+                        >
+                          <p className="text-white text-lg mb-2">
+                            <span className="text-green-400 font-bold">🎉 Parfait !</span> Votre consultation est planifiée !
+                          </p>
+                          <p className="text-gray-300">
+                            Nous préparons déjà votre analyse personnalisée pour découvrir comment multiplier votre ROI par <span className="text-green-400 font-bold">140x</span>
+                          </p>
+                        </motion.div>
+                      ) : (
+                        <div>
+                          <p className="text-white text-lg mb-2">
+                            <span className="text-yellow-400 font-bold">Félicitations !</span> Vous avez franchi la première étape.
+                          </p>
+                          <p className="text-gray-300">
+                            Planifiez maintenant votre consultation pour découvrir comment multiplier votre ROI par <span className="text-yellow-400 font-bold">140x</span>
+                          </p>
+                        </div>
+                      )}
                     </div>
                     
                   </div>
@@ -389,7 +461,21 @@ const ContactPage = () => {
             Quelques questions pour comprendre vos besoins et vous proposer la solution la plus adaptée à votre entreprise.
           </p>
           
-          <InteractiveBenefitCards />
+          <InteractiveBenefitCards 
+            onCalendlyEvent={(eventName, eventData) => {
+              if (eventName === 'event_scheduled') {
+                console.log('RDV planifié détecté!', eventData)
+                setIsConsultationScheduled(true)
+                // Optionnel : faire défiler vers la barre de progression
+                setTimeout(() => {
+                  const progressSection = document.getElementById('progress-section')
+                  if (progressSection) {
+                    progressSection.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }, 1000)
+              }
+            }}
+          />
         </div>
       </section>
 

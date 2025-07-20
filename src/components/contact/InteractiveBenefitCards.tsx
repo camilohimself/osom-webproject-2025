@@ -12,6 +12,10 @@ declare global {
   }
 }
 
+interface InteractiveBenefitCardsProps {
+  onCalendlyEvent?: (eventName: string, eventData: any) => void;
+}
+
 interface ChartData {
   label: string
   value: number
@@ -19,7 +23,7 @@ interface ChartData {
   description: string
 }
 
-const InteractiveBenefitCards = () => {
+const InteractiveBenefitCards = ({ onCalendlyEvent }: InteractiveBenefitCardsProps) => {
   const [activeCard, setActiveCard] = useState<number | null>(null)
   const [animatedValues, setAnimatedValues] = useState({
     diagnostic: 0,
@@ -65,6 +69,26 @@ const InteractiveBenefitCards = () => {
       setAnimatedValues({ diagnostic: 0, roi: 0, timeline: 0 })
     }
   }, [activeCard])
+
+  // Configuration des événements Calendly
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Écouter les événements Calendly
+      window.addEventListener('message', function(e) {
+        if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+          console.log('Calendly Event:', e.data.event)
+          
+          if (e.data.event === 'calendly.event_scheduled') {
+            console.log('RDV planifié!', e.data.event_details)
+            // Notifier le parent que le RDV est planifié
+            if (onCalendlyEvent) {
+              onCalendlyEvent('event_scheduled', e.data.event_details)
+            }
+          }
+        }
+      })
+    }
+  }, [onCalendlyEvent])
 
   // Fonction pour ouvrir Calendly
   const openCalendly = () => {
