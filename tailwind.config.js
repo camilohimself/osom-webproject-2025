@@ -24,8 +24,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'cera': ['CeraPro-Regular', 'Inter', 'system-ui', 'sans-serif'],
+        'sans': ['Cera PRO', 'Inter', 'system-ui', 'sans-serif'],
+        'cera': ['Cera PRO', 'Inter', 'system-ui', 'sans-serif'],
         'myriad': ['MyriadPro-Regular', 'Inter', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {

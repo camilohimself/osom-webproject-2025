@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Cera PRO Custom Fonts */
+@font-face {
+  font-family: 'Cera PRO';
+  src: url('/fonts/CeraPRO-Light.woff2') format('woff2'),
+       url('/fonts/CeraPRO-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cera PRO';
+  src: url('/fonts/CeraPRO-Bold.woff2') format('woff2'),
+       url('/fonts/CeraPRO-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -21,7 +41,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Cera PRO', 'Inter', sans-serif;
 }
 
 html {
