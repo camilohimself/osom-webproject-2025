@@ -3,6 +3,15 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
+// Déclaration du type Calendly pour TypeScript
+declare global {
+  interface Window {
+    Calendly: {
+      initPopupWidget: (options: { url: string; [key: string]: any }) => void;
+    };
+  }
+}
+
 interface ChartData {
   label: string
   value: number
@@ -56,6 +65,22 @@ const InteractiveBenefitCards = () => {
       setAnimatedValues({ diagnostic: 0, roi: 0, timeline: 0 })
     }
   }, [activeCard])
+
+  // Fonction pour ouvrir Calendly
+  const openCalendly = () => {
+    if (typeof window !== 'undefined' && window.Calendly) {
+      window.Calendly.initPopupWidget({
+        url: 'https://calendly.com/osomcreativemarketing',
+        text: 'Planifier une consultation',
+        color: '#eab308',
+        textColor: '#000000',
+        branding: false
+      })
+    } else {
+      // Fallback : ouvrir dans un nouvel onglet
+      window.open('https://calendly.com/osomcreativemarketing', '_blank')
+    }
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
@@ -206,13 +231,15 @@ const InteractiveBenefitCards = () => {
         </div>
       </motion.div>
       
-      {/* Carte 3 - Timeline interactive */}
+      {/* Carte 3 - Timeline interactive avec Calendly */}
       <motion.div 
         className="group relative overflow-hidden cursor-pointer"
         onHoverStart={() => setActiveCard(2)}
         onHoverEnd={() => setActiveCard(null)}
         whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
         transition={{ duration: 0.3 }}
+        onClick={openCalendly}
       >
         {/* Background avec dégradé cyan */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-cyan-400/10 to-transparent rounded-2xl"></div>
@@ -220,12 +247,15 @@ const InteractiveBenefitCards = () => {
         
         {/* Contenu */}
         <div className="relative z-10 p-8 text-center h-full flex flex-col justify-between min-h-[320px]">
-          {/* Icon premium */}
+          {/* Icon premium avec indication de clic */}
           <div className="mb-6">
-            <div className="w-20 h-20 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+            <div className="w-20 h-20 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl group-hover:shadow-cyan-400/50">
               <span className="text-black text-3xl font-bold">⚡</span>
             </div>
-            <div className="text-cyan-400 font-mono text-xs tracking-wider uppercase">RAPIDE</div>
+            <div className="text-cyan-400 font-mono text-xs tracking-wider uppercase flex items-center justify-center gap-2">
+              RAPIDE
+              <span className="text-white animate-pulse">👆</span>
+            </div>
           </div>
           
           {/* Titre principal */}
@@ -270,7 +300,10 @@ const InteractiveBenefitCards = () => {
             ) : (
               <div className="text-gray-300 leading-relaxed">
                 <p className="text-base mb-3">Rendez-vous programmé</p>
-                <p className="text-sm text-cyan-400 font-medium">sous 48h maximum</p>
+                <p className="text-sm text-cyan-400 font-medium mb-2">sous 48h maximum</p>
+                <div className="mt-3 px-4 py-2 bg-cyan-400/20 rounded-lg border border-cyan-400/30">
+                  <p className="text-cyan-400 text-sm font-bold">🗓️ Cliquer pour réserver</p>
+                </div>
               </div>
             )}
           </div>

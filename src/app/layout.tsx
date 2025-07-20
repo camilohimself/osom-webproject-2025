@@ -32,6 +32,10 @@ export default async function RootLayout({
 
   return (
     <html lang={defaultLocale}>
+      <head>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      </head>
       <body className={inter.className}>
         <Header currentLocale={defaultLocale} dictionary={dictionary} />
         <main>
