@@ -214,30 +214,111 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* Benefits */}
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-black text-2xl">🎯</span>
+            {/* Animation de Succès */}
+            <div className="mt-16 relative">
+              {/* Container principal avec effet glow */}
+              <div className="relative max-w-5xl mx-auto">
+                
+                {/* Background avec dégradé animé */}
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-purple-500/20 to-cyan-400/20 rounded-3xl blur-xl animate-pulse"></div>
+                
+                {/* Contenu principal */}
+                <div className="relative bg-black/60 backdrop-blur-xl rounded-3xl border border-yellow-400/40 p-12 overflow-hidden">
+                  
+                  {/* Particles flottantes */}
+                  <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-400 rounded-full animate-bounce"></div>
+                  <div className="absolute top-8 right-8 w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce delay-300"></div>
+                  <div className="absolute bottom-6 left-12 w-1 h-1 bg-cyan-400 rounded-full animate-bounce delay-700"></div>
+                  <div className="absolute bottom-4 right-4 w-2.5 h-2.5 bg-yellow-400 rounded-full animate-pulse delay-1000"></div>
+                  
+                  {/* Message central avec animation */}
+                  <div className="text-center">
+                    
+                    {/* Icon principal avec scaling */}
+                    <div className="mb-8 relative">
+                      <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl animate-pulse">
+                        <span className="text-black text-6xl animate-bounce">🎯</span>
+                      </div>
+                      
+                      {/* Cercles concentriques animés */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-40 h-40 border-2 border-yellow-400/30 rounded-full animate-ping"></div>
+                      </div>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-48 h-48 border border-yellow-400/20 rounded-full animate-ping delay-500"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Titre principal animé */}
+                    <div className="mb-8">
+                      <h2 className="text-5xl md:text-6xl font-light text-white mb-4 animate-fade-in">
+                        Vous y êtes <span className="text-yellow-400">presque</span> !
+                      </h2>
+                      <p className="text-2xl text-gray-300 font-light animate-fade-in delay-300">
+                        Une consultation vous sépare de la <span className="text-purple-400">transformation</span> de votre business
+                      </p>
+                    </div>
+                    
+                    {/* Progress steps avec animations */}
+                    <div className="flex items-center justify-center mb-12 max-w-3xl mx-auto">
+                      
+                      {/* Step 1 - Complété */}
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center animate-bounce">
+                          <span className="text-white text-xl">✓</span>
+                        </div>
+                        <div className="ml-4 text-left">
+                          <div className="text-green-400 font-semibold">Questionnaire</div>
+                          <div className="text-gray-400 text-sm">Complété</div>
+                        </div>
+                      </div>
+                      
+                      {/* Connexion animée */}
+                      <div className="flex-1 mx-8">
+                        <div className="h-1 bg-gradient-to-r from-green-500 to-yellow-400 rounded-full animate-pulse"></div>
+                      </div>
+                      
+                      {/* Step 2 - En cours */}
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center animate-pulse shadow-lg">
+                          <span className="text-black text-xl">📅</span>
+                        </div>
+                        <div className="ml-4 text-left">
+                          <div className="text-yellow-400 font-semibold">Consultation</div>
+                          <div className="text-gray-300 text-sm">En cours...</div>
+                        </div>
+                      </div>
+                      
+                      {/* Connexion future */}
+                      <div className="flex-1 mx-8">
+                        <div className="h-1 bg-gray-600 rounded-full"></div>
+                      </div>
+                      
+                      {/* Step 3 - Futur */}
+                      <div className="flex items-center">
+                        <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-xl">🚀</span>
+                        </div>
+                        <div className="ml-4 text-left">
+                          <div className="text-purple-400 font-semibold">Transformation</div>
+                          <div className="text-gray-400 text-sm">Bientôt...</div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    
+                    {/* Message motivant */}
+                    <div className="bg-gradient-to-r from-yellow-400/10 to-purple-500/10 rounded-xl p-6 border border-yellow-400/30">
+                      <p className="text-white text-lg mb-2">
+                        <span className="text-yellow-400 font-bold">Félicitations !</span> Vous avez franchi la première étape.
+                      </p>
+                      <p className="text-gray-300">
+                        Planifiez maintenant votre consultation pour découvrir comment multiplier votre ROI par <span className="text-yellow-400 font-bold">140x</span>
+                      </p>
+                    </div>
+                    
+                  </div>
                 </div>
-                <h3 className="text-white font-medium mb-2">Analyse Personnalisée</h3>
-                <p className="text-gray-400 text-sm">Diagnostic sur mesure de votre situation actuelle</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-black text-2xl">📊</span>
-                </div>
-                <h3 className="text-white font-medium mb-2">Recommandations Concrètes</h3>
-                <p className="text-gray-400 text-sm">Plan d'action basé sur vos objectifs spécifiques</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-black text-2xl">🚀</span>
-                </div>
-                <h3 className="text-white font-medium mb-2">Devis Détaillé</h3>
-                <p className="text-gray-400 text-sm">Proposition adaptée à votre budget et timeline</p>
               </div>
             </div>
 
