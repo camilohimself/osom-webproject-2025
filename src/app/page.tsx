@@ -29,20 +29,63 @@ export default async function Home() {
               Agence web digitale spécialisée dans la création de sites performants, le SEO et le marketing digital en Valais.
             </p>
             
-            {/* Stats Pills */}
-            <div className="flex flex-wrap justify-center gap-6 mb-12">
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-yellow-400 font-bold">140x</span>
-                <span className="text-gray-300 ml-2">plus efficace</span>
+            {/* Impact Pills - Chiffre d'Affaires Focus */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
+              
+              {/* ROI Performance */}
+              <div className="group bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/30 hover:border-yellow-400/50 transition-all duration-500 hover:scale-105 cursor-pointer">
+                <div className="text-center">
+                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    140x
+                  </div>
+                  <div className="text-lg font-medium text-white mb-2">
+                    Plus Performant
+                  </div>
+                  <div className="text-sm text-gray-300 leading-relaxed">
+                    Que la publicité payante traditionnelle selon nos analyses GA4
+                  </div>
+                  <div className="mt-4 text-xs text-yellow-400 font-mono opacity-75">
+                    → MULTIPLIER VOTRE CA
+                  </div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-yellow-400 font-bold">1500 CHF</span>
-                <span className="text-gray-300 ml-2">sites premium</span>
+              
+              {/* Premium Pricing */}
+              <div className="group bg-gradient-to-br from-yellow-400/20 to-yellow-400/5 backdrop-blur-lg rounded-2xl p-8 border border-yellow-400/40 hover:border-yellow-400 transition-all duration-500 hover:scale-105 cursor-pointer">
+                <div className="text-center">
+                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    1500
+                  </div>
+                  <div className="text-lg font-medium text-white mb-2">
+                    CHF Site Premium
+                  </div>
+                  <div className="text-sm text-gray-300 leading-relaxed">
+                    Site complet optimisé conversion + SEO technique inclus
+                  </div>
+                  <div className="mt-4 text-xs text-yellow-400 font-mono opacity-75">
+                    → INVESTISSEMENT INTELLIGENT
+                  </div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-yellow-400 font-bold">10 jours</span>
-                <span className="text-gray-300 ml-2">livraison</span>
+              
+              {/* Speed Delivery */}
+              <div className="group bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/30 hover:border-yellow-400/50 transition-all duration-500 hover:scale-105 cursor-pointer">
+                <div className="text-center">
+                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    10
+                  </div>
+                  <div className="text-lg font-medium text-white mb-2">
+                    Jours Livraison
+                  </div>
+                  <div className="text-sm text-gray-300 leading-relaxed">
+                    De l'idée au site live générant du chiffre d'affaires
+                  </div>
+                  <div className="mt-4 text-xs text-yellow-400 font-mono opacity-75">
+                    → RAPIDITÉ = REVENUS
+                  </div>
+                </div>
               </div>
+              
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
