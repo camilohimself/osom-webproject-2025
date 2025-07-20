@@ -48,7 +48,6 @@ const OSOMMotionHero = () => {
             className="w-full h-full object-cover"
             autoPlay
             muted
-            loop
             playsInline
             onLoadedData={handleVideoLoad}
           >
