@@ -18,14 +18,39 @@ export default async function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <div className="mb-8 flex justify-center">
-              <img 
-                src="/logo-white.jpg" 
-                alt="OSOM Digital Agency" 
-                className="h-24 md:h-32 lg:h-40 w-auto"
-              />
+            <div className="mb-12 flex justify-center relative">
+              {/* Logo avec effet dramatic */}
+              <div className="relative group">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-yellow-400/20 blur-3xl rounded-full scale-150 group-hover:scale-200 transition-transform duration-1000"></div>
+                
+                {/* Logo principal */}
+                <div className="relative z-10 bg-black/50 backdrop-blur-sm rounded-3xl p-8 border border-yellow-400/30 group-hover:border-yellow-400/60 transition-all duration-500">
+                  <img 
+                    src="/logo-icon.svg" 
+                    alt="OSOM Digital Agency" 
+                    className="h-32 md:h-48 lg:h-64 w-auto filter brightness-0 invert group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                
+                {/* Particles effect */}
+                <div className="absolute -top-4 -right-4 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-300"></div>
+                <div className="absolute top-1/2 -right-6 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse delay-700"></div>
+              </div>
             </div>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            
+            {/* Tagline impactant */}
+            <div className="mb-8">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 tracking-tight">
+                <span className="text-yellow-400">140x</span> Plus Performant
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 font-light">
+                L'agence qui transforme vos investissements marketing en <span className="text-yellow-400">machines à résultats</span>
+              </p>
+            </div>
+            
+            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
               Agence web digitale spécialisée dans la création de sites performants, le SEO et le marketing digital en Valais.
             </p>
             
