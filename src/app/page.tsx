@@ -25,11 +25,11 @@ export default async function Home() {
                 <div className="absolute inset-0 bg-yellow-400/20 blur-3xl rounded-full scale-150 group-hover:scale-200 transition-transform duration-1000"></div>
                 
                 {/* Logo principal */}
-                <div className="relative z-10 bg-black/50 backdrop-blur-sm rounded-3xl p-8 border border-yellow-400/30 group-hover:border-yellow-400/60 transition-all duration-500">
+                <div className="relative z-10 bg-white/95 backdrop-blur-sm rounded-3xl p-8 border border-yellow-400/30 group-hover:border-yellow-400/60 transition-all duration-500 shadow-2xl">
                   <img 
                     src="/logo-icon.svg" 
                     alt="OSOM Digital Agency" 
-                    className="h-32 md:h-48 lg:h-64 w-auto filter brightness-0 invert group-hover:scale-110 transition-transform duration-500"
+                    className="h-32 md:h-48 lg:h-64 w-auto group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 
