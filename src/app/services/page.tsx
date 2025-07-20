@@ -312,7 +312,7 @@ export default async function ServicesPage() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Process Section - Timeline */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -324,37 +324,56 @@ export default async function ServicesPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-osom-yellow text-osom-black rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                1
+          {/* Timeline verticale temporaire */}
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-16">
+              <div className="flex items-center">
+                <div className="flex-1 text-right pr-12">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100">
+                    <h3 className="text-2xl font-bold mb-4 text-osom-black">Analyse</h3>
+                    <p className="text-gray-600 text-lg">Nous analysons vos besoins et votre marché pour définir la stratégie optimale.</p>
+                  </div>
+                </div>
+                <div className="w-16 h-16 bg-osom-yellow text-osom-black rounded-full flex items-center justify-center text-xl font-bold border-4 border-white shadow-lg">
+                  1
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Analyse</h3>
-              <p className="text-gray-600">Nous analysons vos besoins et votre marché pour définir la stratégie optimale.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-osom-black text-osom-yellow rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                2
+              
+              <div className="flex items-center flex-row-reverse">
+                <div className="flex-1 text-left pl-12">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100">
+                    <h3 className="text-2xl font-bold mb-4 text-osom-black">Conception</h3>
+                    <p className="text-gray-600 text-lg">Création des maquettes et définition de l'architecture technique de votre projet.</p>
+                  </div>
+                </div>
+                <div className="w-16 h-16 bg-osom-black text-osom-yellow rounded-full flex items-center justify-center text-xl font-bold border-4 border-white shadow-lg">
+                  2
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Conception</h3>
-              <p className="text-gray-600">Création des maquettes et définition de l'architecture technique de votre projet.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-osom-yellow text-osom-black rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                3
+              
+              <div className="flex items-center">
+                <div className="flex-1 text-right pr-12">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100">
+                    <h3 className="text-2xl font-bold mb-4 text-osom-black">Développement</h3>
+                    <p className="text-gray-600 text-lg">Développement avec les dernières technologies et tests qualité rigoureux.</p>
+                  </div>
+                </div>
+                <div className="w-16 h-16 bg-osom-yellow text-osom-black rounded-full flex items-center justify-center text-xl font-bold border-4 border-white shadow-lg">
+                  3
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Développement</h3>
-              <p className="text-gray-600">Développement avec les dernières technologies et tests qualité rigoureux.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-osom-black text-osom-yellow rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                4
+              
+              <div className="flex items-center flex-row-reverse">
+                <div className="flex-1 text-left pl-12">
+                  <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100">
+                    <h3 className="text-2xl font-bold mb-4 text-osom-black">Lancement</h3>
+                    <p className="text-gray-600 text-lg">Mise en ligne, formation et accompagnement pour assurer votre succès.</p>
+                  </div>
+                </div>
+                <div className="w-16 h-16 bg-osom-black text-osom-yellow rounded-full flex items-center justify-center text-xl font-bold border-4 border-white shadow-lg">
+                  4
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Lancement</h3>
-              <p className="text-gray-600">Mise en ligne, formation et accompagnement pour assurer votre succès.</p>
             </div>
           </div>
         </div>

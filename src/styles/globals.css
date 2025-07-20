@@ -33,3 +33,127 @@ html {
   padding: 0;
   margin: 0;
 }
+
+/* Timeline Animation Styles */
+.timeline-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-progress {
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+  animation: timeline-draw 3s ease-in-out forwards;
+}
+
+.timeline-step {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: step-fade-in 0.8s ease-out forwards;
+}
+
+.timeline-step[data-step="1"] {
+  animation-delay: 0.5s;
+}
+
+.timeline-step[data-step="2"] {
+  animation-delay: 1s;
+}
+
+.timeline-step[data-step="3"] {
+  animation-delay: 1.5s;
+}
+
+.timeline-step[data-step="4"] {
+  animation-delay: 2s;
+}
+
+.timeline-step.animate-step {
+  opacity: 1;
+  transform: translateY(0);
+  animation: step-fade-in 0.8s ease-out forwards;
+}
+
+.process-circle {
+  transition: all 0.3s ease;
+}
+
+.process-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 221, 7, 0.4);
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1.5s;
+}
+
+@keyframes timeline-draw {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes step-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timeline Verticale Animations */
+.timeline-step-vertical {
+  position: relative;
+  min-height: 120px;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s ease-out forwards;
+}
+
+/* Responsive timeline adjustments */
+@media (max-width: 768px) {
+  .timeline-line {
+    display: none;
+  }
+  
+  .timeline-step {
+    animation-delay: 0s !important;
+    animation-duration: 0.6s;
+  }
+  
+  .timeline-step-vertical {
+    min-height: auto;
+  }
+}
