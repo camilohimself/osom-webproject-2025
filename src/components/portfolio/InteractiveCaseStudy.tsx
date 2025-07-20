@@ -2,6 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import B2BTooltip from './B2BTooltip'
+import AnimatedCounter from './AnimatedCounter'
+import ProfessionalBadge from './ProfessionalBadge'
 
 interface Metric {
   label: string
@@ -50,54 +53,116 @@ interface InteractiveCaseStudyProps {
 
 const MetricCard = ({ metric, index }: { metric: Metric; index: number }) => {
   const [isHovered, setIsHovered] = useState(false)
+  
+  // B2B terminology mapping
+  const getB2BExplanation = (label: string) => {
+    const explanations: Record<string, { term: string; explanation: string }> = {
+      'Taux de conversion': {
+        term: 'Taux de Conversion',
+        explanation: 'Pourcentage de visiteurs qui réalisent l\'action souhaitée (achat, contact, téléchargement). Métrique clé pour mesurer l\'efficacité commerciale de votre trafic.'
+      },
+      'Efficacité budgétaire': {
+        term: 'Efficacité Budgétaire ROI',
+        explanation: 'Ratio coût/performance. Mesure combien chaque franc investi génère de résultats. Essentiel pour optimiser l\'allocation des budgets marketing.'
+      },
+      'Engagement utilisateur': {
+        term: 'Engagement Utilisateur',
+        explanation: 'Temps passé sur le site et interaction avec le contenu. Indicateur de qualité du trafic et de pertinence de l\'offre pour votre audience cible.'
+      },
+      'Coût par conversion': {
+        term: 'Coût d\'Acquisition Client (CAC)',
+        explanation: 'Montant investi pour obtenir une conversion. Métrique fondamentale pour calculer la rentabilité et optimiser les canaux d\'acquisition.'
+      },
+      'Volume de trafic': {
+        term: 'Volume de Trafic Qualifié',
+        explanation: 'Nombre de visiteurs pertinents pour votre business. Focus sur la qualité plutôt que la quantité pour maximiser le ROI marketing.'
+      },
+      'ROI investissement': {
+        term: 'Retour sur Investissement (ROI)',
+        explanation: 'Rapport entre les bénéfices générés et les coûts engagés. Métrique ultime pour valider la rentabilité de vos actions marketing.'
+      }
+    }
+    return explanations[label] || { term: label, explanation: 'Métrique de performance business.' }
+  }
+
+  const b2bInfo = getB2BExplanation(metric.label)
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className={`relative bg-white border border-gray-200 p-6 rounded-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
-        isHovered ? 'border-yellow-400' : ''
+      className={`relative bg-white border border-gray-200 p-6 rounded-lg hover:shadow-xl transition-all duration-300 cursor-pointer group ${
+        isHovered ? 'border-yellow-400 shadow-yellow-100' : ''
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Metric Value */}
+      {/* Professional Badge */}
+      <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+        <ProfessionalBadge 
+          label="B2B"
+          value="✓"
+          variant={metric.impact === 'positive' ? 'green' : 'blue'}
+          icon="verified"
+        />
+      </div>
+
+      {/* Metric Value with Animation */}
       <div className="flex items-center justify-between mb-4">
         <div className={`text-3xl font-light ${
           metric.impact === 'positive' ? 'text-green-600' : 
           metric.impact === 'negative' ? 'text-red-600' : 'text-gray-900'
         }`}>
-          {metric.value}
+          <AnimatedCounter 
+            from={0}
+            to={parseFloat(metric.value.replace(/[^0-9.]/g, '')) || 0}
+            suffix={metric.value.replace(/[0-9.]/g, '')}
+            duration={1500}
+            delay={index * 200}
+          />
         </div>
-        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-          metric.trend === 'up' ? 'bg-green-100' : 'bg-red-100'
-        }`}>
+        <motion.div 
+          className={`w-8 h-8 rounded-full flex items-center justify-center ${
+            metric.trend === 'up' ? 'bg-green-100' : 'bg-red-100'
+          }`}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <svg className={`w-4 h-4 ${
             metric.trend === 'up' ? 'text-green-600 rotate-0' : 'text-red-600 rotate-180'
           }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l10-10M17 7v10M17 7H7" />
           </svg>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Metric Label */}
-      <div className="text-sm text-gray-500 mb-2">{metric.label}</div>
+      {/* Metric Label with B2B Tooltip */}
+      <div className="text-sm text-gray-500 mb-2">
+        <B2BTooltip 
+          term={b2bInfo.term}
+          explanation={b2bInfo.explanation}
+          variant="light"
+        >
+          {metric.label}
+        </B2BTooltip>
+      </div>
       
       {/* Comparison */}
       <div className="text-xs text-gray-400 font-mono">{metric.comparison}</div>
 
-      {/* Tooltip */}
+      {/* Enhanced Tooltip */}
       <AnimatePresence>
         {isHovered && metric.tooltip && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            className="absolute -top-2 left-1/2 transform -translate-x-1/2 -translate-y-full z-10 bg-black text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap"
+            initial={{ opacity: 0, scale: 0.95, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 10 }}
+            className="absolute -top-2 left-1/2 transform -translate-x-1/2 -translate-y-full z-10 bg-gray-900 text-white text-xs px-4 py-3 rounded-lg whitespace-nowrap shadow-xl border border-gray-700"
           >
+            <div className="font-semibold text-yellow-400 mb-1">Détail Technique</div>
             {metric.tooltip}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -106,69 +171,117 @@ const MetricCard = ({ metric, index }: { metric: Metric; index: number }) => {
 }
 
 const ROIComparison = ({ data }: { data: CaseStudyData }) => {
-  const [animatedValues, setAnimatedValues] = useState({ osom: 0, competitor: 0 })
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimatedValues({
-        osom: data.results.roi.osom,
-        competitor: data.results.roi.competitor
-      })
-    }, 500)
-
-    return () => clearTimeout(timer)
-  }, [data.results.roi])
-
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border border-gray-200">
-      <h4 className="text-lg font-medium mb-6 text-center">ROI Comparison Analysis</h4>
-      
-      <div className="grid grid-cols-2 gap-8">
-        {/* OSOM Results */}
-        <div className="text-center">
-          <div className="text-xs text-gray-400 font-mono mb-2 tracking-wider">OSOM STRATEGY</div>
-          <div className="text-4xl font-light text-green-600 mb-4">
-            {animatedValues.osom.toLocaleString()}x
-          </div>
-          <div className="space-y-2">
-            <div className="text-sm text-gray-600">
-              {data.results.conversions.osom} conversions
-            </div>
-            <div className="text-sm text-gray-600">
-              {data.investment.osom.toLocaleString()} CHF investment
-            </div>
-            <div className="text-xs text-green-600 font-medium">
-              {(data.results.conversions.osom / data.investment.osom * 1000).toFixed(1)} conv/1k CHF
-            </div>
-          </div>
-        </div>
-
-        {/* Competitor Results */}
-        <div className="text-center">
-          <div className="text-xs text-gray-400 font-mono mb-2 tracking-wider">PAID ADVERTISING</div>
-          <div className="text-4xl font-light text-red-600 mb-4">
-            {animatedValues.competitor.toLocaleString()}x
-          </div>
-          <div className="space-y-2">
-            <div className="text-sm text-gray-600">
-              {data.results.conversions.competitor} conversions
-            </div>
-            <div className="text-sm text-gray-600">
-              {data.investment.competitor.toLocaleString()} CHF investment
-            </div>
-            <div className="text-xs text-red-600 font-medium">
-              {(data.results.conversions.competitor / data.investment.competitor * 1000).toFixed(1)} conv/1k CHF
-            </div>
-          </div>
-        </div>
+    <div className="bg-gradient-to-br from-gray-50 via-white to-gray-50 p-8 rounded-xl border border-gray-200 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='m20 20 20-20v40z'/%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
       </div>
-
-      {/* Performance Ratio */}
-      <div className="mt-8 pt-6 border-t border-gray-200 text-center">
-        <div className="text-xs text-gray-400 font-mono mb-2">PERFORMANCE MULTIPLIER</div>
-        <div className="text-2xl font-light text-yellow-600">
-          {(data.results.roi.osom / data.results.roi.competitor).toFixed(0)}x more efficient
+      
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <B2BTooltip 
+            term="Analyse ROI Comparative"
+            explanation="Comparaison directe des performances financières entre stratégies. Métrique clé pour la prise de décision budgétaire et l'allocation des ressources marketing."
+          >
+            <h4 className="text-lg font-medium">ROI Comparison Analysis</h4>
+          </B2BTooltip>
+          
+          {/* Professional Badges */}
+          <div className="flex justify-center space-x-3 mt-4">
+            <ProfessionalBadge label="DATA" value="GA4" variant="blue" icon="analytics" />
+            <ProfessionalBadge label="PÉRIODE" value="200J" variant="purple" icon="performance" />
+            <ProfessionalBadge label="VÉRIFIÉ" value="B2B" variant="green" icon="security" />
+          </div>
         </div>
+        
+        <div className="grid grid-cols-2 gap-8">
+          {/* OSOM Results */}
+          <motion.div 
+            className="text-center p-6 bg-white rounded-lg border border-green-100"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="text-xs text-gray-400 font-mono mb-2 tracking-wider">STRATÉGIE OSOM</div>
+            <div className="text-4xl font-light text-green-600 mb-4">
+              <AnimatedCounter 
+                from={0}
+                to={data.results.roi.osom}
+                suffix="x"
+                duration={2000}
+                delay={500}
+              />
+            </div>
+            <div className="space-y-2">
+              <div className="text-sm text-gray-600">
+                <AnimatedCounter from={0} to={data.results.conversions.osom} delay={800} /> conversions
+              </div>
+              <div className="text-sm text-gray-600">
+                {data.investment.osom.toLocaleString()} CHF investis
+              </div>
+              <div className="text-xs text-green-600 font-medium">
+                {(data.results.conversions.osom / data.investment.osom * 1000).toFixed(1)} conv/1k CHF
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Competitor Results */}
+          <motion.div 
+            className="text-center p-6 bg-white rounded-lg border border-red-100"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="text-xs text-gray-400 font-mono mb-2 tracking-wider">PUBLICITÉ PAYANTE</div>
+            <div className="text-4xl font-light text-red-600 mb-4">
+              <AnimatedCounter 
+                from={0}
+                to={data.results.roi.competitor}
+                suffix="x"
+                duration={2000}
+                delay={700}
+              />
+            </div>
+            <div className="space-y-2">
+              <div className="text-sm text-gray-600">
+                <AnimatedCounter from={0} to={data.results.conversions.competitor} delay={1000} /> conversions
+              </div>
+              <div className="text-sm text-gray-600">
+                {data.investment.competitor.toLocaleString()} CHF investis
+              </div>
+              <div className="text-xs text-red-600 font-medium">
+                {(data.results.conversions.competitor / data.investment.competitor * 1000).toFixed(1)} conv/1k CHF
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Performance Ratio */}
+        <motion.div 
+          className="mt-8 pt-6 border-t border-gray-200 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+        >
+          <div className="text-xs text-gray-400 font-mono mb-2">
+            <B2BTooltip 
+              term="Multiplicateur de Performance"
+              explanation="Rapport d'efficacité entre les deux stratégies. Indique combien de fois la stratégie OSOM surperforme la méthode traditionnelle."
+            >
+              MULTIPLICATEUR DE PERFORMANCE
+            </B2BTooltip>
+          </div>
+          <div className="text-3xl font-light text-yellow-600">
+            <AnimatedCounter 
+              from={1}
+              to={Math.round(data.results.roi.osom / data.results.roi.competitor)}
+              suffix="x plus efficace"
+              duration={2500}
+              delay={1800}
+            />
+          </div>
+        </motion.div>
       </div>
     </div>
   )

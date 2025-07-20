@@ -202,12 +202,12 @@ const caseStudies: CaseStudyData[] = [
       }
     ],
     insights: [
-      'Trafic SEO déjà 54% plus engagé que le trafic direct, preuve de la qualité de l\'audience organique',
-      'Secteur artisanal/abat-jour : niche à faible concurrence = opportunité de domination SEO',
-      'Diagnostic révèle 0 événements clés configurés = ROI invisible, problème critique à corriger',
-      'Volume actuel (0.875 sessions/jour) peut être multiplié par 5x avec stratégie OSOM ciblée',
-      'PME artisanale type : fort potentiel digital inexploité par manque d\'expertise technique',
-      'Investissement ponctuel OSOM vs coûts récurrents publicité = ROI long-terme supérieur'
+      'OSOM génère trafic 54% plus engagé que direct, mais site non-optimisé crée fuite massive',
+      'Problème structurel : OSOM amène audience qualifiée, parcours utilisateur défaillant tue conversions',
+      'Diagnostic révèle 0 événements clés configurés = conversions invisibles, ROI sous-estimé',
+      'Contrainte critique : OSOM n\'a pas la main sur UX/conversion = potentiel bridé',
+      'Solution OSOM Web : trafic qualifié + site optimisé = performances réelles mesurables',
+      'Volume actuel peut être multiplié par 5x avec contrôle total du parcours utilisateur'
     ],
     dataSource: 'Diagnostic basé sur 200 jours de données Google Analytics 4. Site : abat-jour-adl.ch. Période : 1er janvier - 20 juillet 2025. Analyse technique et concurrentielle approfondie.'
   }
