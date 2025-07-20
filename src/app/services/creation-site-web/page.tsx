@@ -149,7 +149,7 @@ export default function CreationSiteWebPage() {
             <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all">
               <div className="text-yellow-400 text-3xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Optimale</h3>
-              <p className="text-gray-300">Score 95+ PageSpeed, temps de chargement < 2 secondes</p>
+              <p className="text-gray-300">Score 95+ PageSpeed, temps de chargement inférieur à 2 secondes</p>
             </div>
             
             <div className="bg-gray-900 p-8 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all">

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Logo } from '@/components/ui'
+import Image from 'next/image'
 import { locales, type Locale } from '@/lib/i18n'
 
 interface HeaderProps {
@@ -30,35 +30,44 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-yellow-400/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <Logo size="sm" />
-            <span className="text-xl font-bold text-osom-black">OSOM</span>
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <Image 
+                src="/osom-logo.svg" 
+                alt="OSOM" 
+                width={48} 
+                height={48} 
+                className="group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <span className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300">OSOM</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-10">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-brand-dark hover:text-brand-primary transition-colors font-medium"
+                className="text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg relative group"
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-6">
             {/* Language Selector */}
             <div className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="flex items-center space-x-1 text-brand-dark hover:text-brand-primary transition-colors"
+                className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
               >
                 <span className="text-sm font-medium">{localeNames[currentLocale]}</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,12 +76,12 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
               </button>
               
               {isLangMenuOpen && (
-                <div className="absolute right-0 mt-2 w-20 bg-white rounded-md shadow-lg border border-gray-100">
+                <div className="absolute right-0 mt-2 w-20 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-yellow-400/20">
                   {locales.map((locale) => (
                     <Link
                       key={locale}
                       href={`/${locale}`}
-                      className="block px-3 py-2 text-sm text-brand-dark hover:bg-gray-50 hover:text-brand-primary transition-colors"
+                      className="block px-3 py-2 text-sm text-gray-300 hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors first:rounded-t-lg last:rounded-b-lg"
                       onClick={() => setIsLangMenuOpen(false)}
                     >
                       {localeNames[locale]}
@@ -85,7 +94,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="bg-brand-primary text-white px-4 py-2 rounded-md hover:bg-osom-teal transition-colors font-medium"
+              className="bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-all duration-300 font-bold shadow-lg hover:shadow-yellow-400/25 hover:scale-105"
             >
               {dictionary.navigation.contact}
             </Link>
@@ -94,7 +103,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden flex items-center justify-center w-8 h-8 text-brand-dark hover:text-brand-primary transition-colors"
+            className="md:hidden flex items-center justify-center w-10 h-10 text-gray-300 hover:text-yellow-400 transition-colors rounded-lg hover:bg-white/10"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
@@ -108,22 +117,22 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white">
+          <div className="md:hidden border-t border-yellow-400/20 bg-black/95 backdrop-blur-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-brand-dark hover:text-brand-primary hover:bg-gray-50 transition-colors font-medium"
+                  className="block px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-white/10 transition-colors font-medium rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               
-              <div className="pt-4 border-t border-gray-100">
-                <div className="flex items-center justify-between px-3 py-2">
-                  <span className="text-sm font-medium text-brand-dark">Language</span>
+              <div className="pt-4 border-t border-yellow-400/20">
+                <div className="flex items-center justify-between px-4 py-2">
+                  <span className="text-sm font-medium text-gray-300">Language</span>
                   <div className="flex space-x-2">
                     {locales.map((locale) => (
                       <Link
@@ -131,8 +140,8 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                         href={`/${locale}`}
                         className={`text-xs px-2 py-1 rounded transition-colors ${
                           locale === currentLocale
-                            ? 'bg-brand-primary text-white'
-                            : 'text-brand-dark hover:bg-gray-100'
+                            ? 'bg-yellow-400 text-black'
+                            : 'text-gray-300 hover:bg-white/10'
                         }`}
                         onClick={() => setIsMenuOpen(false)}
                       >
@@ -144,7 +153,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                 
                 <Link
                   href="/contact"
-                  className="block mx-3 mt-2 bg-brand-primary text-white text-center px-4 py-2 rounded-md hover:bg-osom-teal transition-colors font-medium"
+                  className="block mx-4 mt-3 bg-yellow-400 text-black text-center px-4 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {dictionary.navigation.contact}

@@ -42,15 +42,15 @@ export default async function Home() {
             
             {/* Tagline impactant */}
             <div className="mb-8">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 tracking-tight">
-                <span className="text-yellow-400">140x</span> Plus Performant
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-4 tracking-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                <span className="text-yellow-400 font-bold">140x</span> Plus Performant
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 font-light">
-                L'agence qui transforme vos investissements marketing en <span className="text-yellow-400">machines à résultats</span>
+              <p className="text-xl md:text-2xl text-gray-300 font-light" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                L'agence qui transforme vos investissements marketing en <span className="text-yellow-400 font-bold">machines à résultats</span>
               </p>
             </div>
             
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
               Agence web digitale spécialisée dans la création de sites performants, le SEO et le marketing digital en Valais.
             </p>
             
@@ -60,13 +60,13 @@ export default async function Home() {
               {/* ROI Performance */}
               <div className="group bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/30 hover:border-yellow-400/50 transition-all duration-500 hover:scale-105 cursor-pointer">
                 <div className="text-center">
-                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     140x
                   </div>
-                  <div className="text-lg font-medium text-white mb-2">
+                  <div className="text-lg font-bold text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Plus Performant
                   </div>
-                  <div className="text-sm text-gray-300 leading-relaxed">
+                  <div className="text-sm text-gray-300 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Que la publicité payante traditionnelle selon nos analyses GA4
                   </div>
                   <div className="mt-4 text-xs text-yellow-400 font-mono opacity-75">
@@ -78,13 +78,13 @@ export default async function Home() {
               {/* Premium Pricing */}
               <div className="group bg-gradient-to-br from-yellow-400/20 to-yellow-400/5 backdrop-blur-lg rounded-2xl p-8 border border-yellow-400/40 hover:border-yellow-400 transition-all duration-500 hover:scale-105 cursor-pointer">
                 <div className="text-center">
-                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     1500
                   </div>
-                  <div className="text-lg font-medium text-white mb-2">
+                  <div className="text-lg font-bold text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     CHF Site Premium
                   </div>
-                  <div className="text-sm text-gray-300 leading-relaxed">
+                  <div className="text-sm text-gray-300 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Site complet optimisé conversion + SEO technique inclus
                   </div>
                   <div className="mt-4 text-xs text-yellow-400 font-mono opacity-75">
@@ -96,13 +96,13 @@ export default async function Home() {
               {/* Speed Delivery */}
               <div className="group bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/30 hover:border-yellow-400/50 transition-all duration-500 hover:scale-105 cursor-pointer">
                 <div className="text-center">
-                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     10
                   </div>
-                  <div className="text-lg font-medium text-white mb-2">
+                  <div className="text-lg font-bold text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Jours Livraison
                   </div>
-                  <div className="text-sm text-gray-300 leading-relaxed">
+                  <div className="text-sm text-gray-300 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     De l'idée au site live générant du chiffre d'affaires
                   </div>
                   <div className="mt-4 text-xs text-yellow-400 font-mono opacity-75">
@@ -117,12 +117,14 @@ export default async function Home() {
               <Link
                 href="/questionnaire"
                 className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold shadow-lg"
+                style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               >
                 Démarrer un projet
               </Link>
               <Link
                 href="/realisations"
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
+                style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               >
                 Voir nos réalisations
               </Link>
@@ -142,10 +144,10 @@ export default async function Home() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
-              Notre <span className="text-yellow-400">Vue d'Ensemble</span>
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Notre <span className="text-yellow-400 font-bold">Vue d'Ensemble</span>
             </h2>
-            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
               Chaque axe change la donne. Nos études de cas prouvent l'impact de notre approche globale.
             </p>
             <div className="mt-8 text-yellow-400 text-lg font-mono">
@@ -163,12 +165,12 @@ export default async function Home() {
                     <div className="w-16 h-16 bg-yellow-400 rounded-2xl mr-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <span className="text-black font-bold text-2xl">🌐</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-white">
+                    <h3 className="text-3xl font-bold text-white" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                       Création de Sites Web
                     </h3>
                   </div>
                   
-                  <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                  <p className="text-xl text-gray-300 leading-relaxed mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Sites optimisés conversion + SEO technique. Notre approche OSOM Web génère des résultats mesurables dès la mise en ligne.
                   </p>
                   
@@ -239,12 +241,12 @@ export default async function Home() {
                     <div className="w-16 h-16 bg-yellow-400 rounded-2xl mr-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <span className="text-black font-bold text-2xl">🚀</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-white">
+                    <h3 className="text-3xl font-bold text-white" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                       SEO & Référencement
                     </h3>
                   </div>
                   
-                  <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                  <p className="text-xl text-gray-300 leading-relaxed mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Notre diagnostic SEO révèle les opportunités cachées. Approche technique + contenu = trafic qualifié supérieur.
                   </p>
                   
@@ -279,12 +281,12 @@ export default async function Home() {
                     <div className="w-16 h-16 bg-yellow-400 rounded-2xl mr-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <span className="text-black font-bold text-2xl">📈</span>
                     </div>
-                    <h3 className="text-3xl font-bold text-white">
+                    <h3 className="text-3xl font-bold text-white" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                       Marketing Digital
                     </h3>
                   </div>
                   
-                  <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                  <p className="text-xl text-gray-300 leading-relaxed mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Stratégie 140x plus performante que la pub payante. Notre approche organique génère des conversions durables.
                   </p>
                   
@@ -343,11 +345,11 @@ export default async function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-transparent to-purple-500/5"></div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             Prêt à transformer<br />
-            vos <span className="text-yellow-400">performances</span> ?
+            vos <span className="text-yellow-400 font-bold">performances</span> ?
           </h2>
-          <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             Discutons de votre projet et découvrons comment nous pouvons multiplier votre ROI avec une approche data-driven.
           </p>
           
@@ -355,12 +357,14 @@ export default async function Home() {
             <Link
               href="/contact"
               className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold shadow-lg"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
               Consultation gratuite
             </Link>
             <Link
               href="/calculator"
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
               Calculer mon ROI
             </Link>
