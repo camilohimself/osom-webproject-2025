@@ -18,9 +18,13 @@ export default async function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-8 tracking-tight">
-              <span className="text-yellow-400">O</span>SOM
-            </h1>
+            <div className="mb-8 flex justify-center">
+              <img 
+                src="/logo-white.jpg" 
+                alt="OSOM Digital Agency" 
+                className="h-24 md:h-32 lg:h-40 w-auto"
+              />
+            </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Agence web digitale spécialisée dans la création de sites performants, le SEO et le marketing digital en Valais.
             </p>
