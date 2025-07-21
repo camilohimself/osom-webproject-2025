@@ -115,12 +115,91 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
   }
 
   const industries = [
-    { key: 'general', label: '👔 Général', icon: '👔' },
-    { key: 'healthcare', label: '🏥 Santé', icon: '🏥' },
-    { key: 'legal', label: '⚖️ Juridique', icon: '⚖️' },
-    { key: 'nonprofit', label: '🏛️ Associatif', icon: '🏛️' },
-    { key: 'services', label: '💼 Services', icon: '💼' }
+    { key: 'general', label: 'Général', icon: 'briefcase' },
+    { key: 'healthcare', label: 'Santé', icon: 'medical' },
+    { key: 'legal', label: 'Juridique', icon: 'scales' },
+    { key: 'nonprofit', label: 'Associatif', icon: 'heart' },
+    { key: 'services', label: 'Services', icon: 'network' }
   ]
+
+  // SVG Icons Component
+  const IconSVG = ({ type, className = "w-4 h-4" }: { type: string, className?: string }) => {
+    const icons = {
+      calendar: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+          <rect x="8" y="14" width="2" height="2" rx="1"/>
+        </svg>
+      ),
+      lightning: (
+        <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+      ),
+      briefcase: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+      ),
+      medical: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      ),
+      scales: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M12 3v18"/>
+          <path d="M8 6l4-4 4 4"/>
+          <path d="M4 14a4 4 0 0 0 8 0c0-1-1-3-4-3s-4 2-4 3"/>
+          <path d="M12 14a4 4 0 0 0 8 0c0-1-1-3-4-3s-4 2-4 3"/>
+        </svg>
+      ),
+      heart: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      ),
+      network: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="2"/>
+          <path d="M16.24 7.76a6 6 0 0 1 0 8.49"/>
+          <path d="M7.76 16.24a6 6 0 0 1 0-8.49"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+          <path d="M4.93 19.07a10 10 0 0 1 0-14.14"/>
+        </svg>
+      ),
+      chevronDown: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <polyline points="6,9 12,15 18,9"/>
+        </svg>
+      ),
+      target: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <circle cx="12" cy="12" r="6"/>
+          <circle cx="12" cy="12" r="2"/>
+        </svg>
+      ),
+      strategy: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+        </svg>
+      ),
+      rocket: (
+        <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+          <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+        </svg>
+      )
+    }
+    
+    return icons[type as keyof typeof icons] || null
+  }
 
   // Animation des valeurs au hover
   useEffect(() => {
@@ -231,7 +310,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
           <span className="text-green-400 text-sm font-medium tracking-wide">VOTRE SECTEUR</span>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
           {industries.map((industry) => (
             <button
               key={industry.key}
@@ -243,14 +322,20 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                   step: 1
                 })
               }}
-              className={`px-4 py-2 rounded-lg transition-all duration-300 font-medium text-sm ${
+              className={`group flex items-center space-x-3 px-6 py-4 rounded-2xl transition-all duration-300 font-medium text-base hover:scale-105 ${
                 selectedIndustry === industry.key
-                  ? 'bg-green-400 text-black shadow-lg'
-                  : 'bg-black/40 text-gray-400 hover:text-white border border-white/10 hover:border-white/20'
+                  ? 'bg-green-400 text-black shadow-2xl shadow-green-400/25'
+                  : 'bg-black/60 text-gray-400 hover:text-white border border-white/10 hover:border-white/30 backdrop-blur-sm'
               }`}
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
-              {industry.label}
+              <IconSVG 
+                type={industry.icon} 
+                className={`w-5 h-5 transition-transform duration-300 ${
+                  selectedIndustry === industry.key ? 'scale-110' : 'group-hover:scale-110'
+                }`}
+              />
+              <span className="font-semibold">{industry.label}</span>
             </button>
           ))}
         </div>
@@ -267,7 +352,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
           <span className="text-yellow-400 text-sm font-medium tracking-wide">MODE DE CONSULTATION</span>
         </div>
         
-        <div className="inline-flex items-center bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-2">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => {
               setIsUrgentMode(false)
@@ -276,15 +361,22 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                 step: 2
               })
             }}
-            className={`px-6 py-3 rounded-xl transition-all duration-300 font-medium text-sm ${
+            className={`group flex items-center space-x-4 px-8 py-6 rounded-2xl transition-all duration-500 font-semibold text-lg hover:scale-105 ${
               !isUrgentMode 
-                ? 'bg-cyan-400 text-black shadow-lg' 
-                : 'text-gray-400 hover:text-white'
+                ? 'bg-gradient-to-r from-cyan-400 to-cyan-500 text-black shadow-2xl shadow-cyan-400/30 scale-105' 
+                : 'bg-black/60 text-gray-300 hover:text-white border border-white/10 hover:border-cyan-400/30 backdrop-blur-sm'
             }`}
             style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
           >
-            🗓️ Consultation Standard
+            <IconSVG 
+              type="calendar" 
+              className={`w-6 h-6 transition-all duration-300 ${
+                !isUrgentMode ? 'text-black' : 'text-cyan-400 group-hover:scale-110'
+              }`}
+            />
+            <span>Consultation Standard</span>
           </button>
+          
           <button
             onClick={() => {
               setIsUrgentMode(true)
@@ -293,14 +385,20 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                 step: 2
               })
             }}
-            className={`px-6 py-3 rounded-xl transition-all duration-300 font-medium text-sm ${
+            className={`group flex items-center space-x-4 px-8 py-6 rounded-2xl transition-all duration-500 font-semibold text-lg hover:scale-105 ${
               isUrgentMode 
-                ? 'bg-red-400 text-black shadow-lg' 
-                : 'text-gray-400 hover:text-white'
+                ? 'bg-gradient-to-r from-red-400 to-red-500 text-black shadow-2xl shadow-red-400/30 scale-105' 
+                : 'bg-black/60 text-gray-300 hover:text-white border border-white/10 hover:border-red-400/30 backdrop-blur-sm'
             }`}
             style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
           >
-            🚨 Urgence Professionnelle
+            <IconSVG 
+              type="lightning" 
+              className={`w-6 h-6 transition-all duration-300 ${
+                isUrgentMode ? 'text-black' : 'text-red-400 group-hover:scale-110'
+              }`}
+            />
+            <span>Urgence Professionnelle</span>
           </button>
         </div>
         
@@ -345,16 +443,16 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                 step: 2.5
               })
             }}
-            className="mx-auto flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm"
+            className="group mx-auto flex items-center space-x-3 px-6 py-3 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10 hover:border-white/30 text-gray-400 hover:text-white transition-all duration-300 text-sm font-medium hover:scale-105"
+            style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
           >
             <span>À quoi s'attendre ?</span>
             <motion.div
               animate={{ rotate: showExpectations ? 180 : 0 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.3 }}
+              className="group-hover:scale-110 transition-transform duration-300"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+              <IconSVG type="chevronDown" className="w-4 h-4" />
             </motion.div>
           </button>
           
@@ -369,8 +467,8 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-gray-700">
               <div className="text-center">
-                <div className="w-12 h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="text-yellow-400 text-xl">📋</span>
+                <div className="w-12 h-12 bg-yellow-400/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <IconSVG type="target" className="w-6 h-6 text-yellow-400" />
                 </div>
                 <h4 className="text-white font-semibold mb-2">Étape 1: Diagnostic</h4>
                 <ul className="text-gray-400 text-sm space-y-1">
@@ -382,8 +480,8 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
               </div>
               
               <div className="text-center">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="text-purple-400 text-xl">🎯</span>
+                <div className="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <IconSVG type="strategy" className="w-6 h-6 text-purple-400" />
                 </div>
                 <h4 className="text-white font-semibold mb-2">Étape 2: Stratégie</h4>
                 <ul className="text-gray-400 text-sm space-y-1">
@@ -395,10 +493,11 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
               </div>
               
               <div className="text-center">
-                <div className={`w-12 h-12 ${isUrgentMode ? 'bg-red-400/20' : 'bg-cyan-400/20'} rounded-lg flex items-center justify-center mx-auto mb-3`}>
-                  <span className={`${isUrgentMode ? 'text-red-400' : 'text-cyan-400'} text-xl`}>
-                    {isUrgentMode ? '⚡' : '🚀'}
-                  </span>
+                <div className={`w-12 h-12 ${isUrgentMode ? 'bg-red-400/20' : 'bg-cyan-400/20'} rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                  <IconSVG 
+                    type={isUrgentMode ? 'lightning' : 'rocket'} 
+                    className={`w-6 h-6 ${isUrgentMode ? 'text-red-400' : 'text-cyan-400'}`} 
+                  />
                 </div>
                 <h4 className="text-white font-semibold mb-2">Étape 3: {isUrgentMode ? 'Urgence' : 'Lancement'}</h4>
                 <ul className="text-gray-400 text-sm space-y-1">
@@ -449,10 +548,10 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
         <div className="relative z-10 p-8 text-center h-full flex flex-col justify-between min-h-[320px]">
           {/* Icon premium */}
           <div className="mb-6">
-            <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
-              <span className="text-black text-3xl font-bold">🎯</span>
+            <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl shadow-yellow-400/25">
+              <IconSVG type="target" className="w-10 h-10 text-black" />
             </div>
-            <div className="text-yellow-400 font-mono text-xs tracking-wider uppercase">GRATUIT</div>
+            <div className="text-yellow-400 font-mono text-xs tracking-wider uppercase font-bold">GRATUIT</div>
           </div>
           
           {/* Titre principal */}
@@ -512,8 +611,8 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
           >
             <div className="flex items-start space-x-3">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                  <span className="text-yellow-400 text-sm">👩‍⚕️</span>
+                <div className="w-8 h-8 bg-yellow-400/20 rounded-lg flex items-center justify-center">
+                  <IconSVG type="medical" className="w-4 h-4 text-yellow-400" />
                 </div>
               </div>
               <div className="min-w-0 flex-1">
@@ -562,10 +661,10 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
         <div className="relative z-10 p-8 text-center h-full flex flex-col justify-between min-h-[320px]">
           {/* Icon premium */}
           <div className="mb-6">
-            <div className="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl">
-              <span className="text-white text-3xl font-bold">📊</span>
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl shadow-purple-500/25">
+              <IconSVG type="strategy" className="w-10 h-10 text-white" />
             </div>
-            <div className="text-purple-400 font-mono text-xs tracking-wider uppercase">PERSONNALISÉ</div>
+            <div className="text-purple-400 font-mono text-xs tracking-wider uppercase font-bold">PERSONNALISÉ</div>
           </div>
           
           {/* Titre principal */}
@@ -627,8 +726,8 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
           >
             <div className="flex items-start space-x-3">
               <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-purple-400/20 rounded-full flex items-center justify-center">
-                  <span className="text-purple-400 text-sm">⚖️</span>
+                <div className="w-8 h-8 bg-purple-400/20 rounded-lg flex items-center justify-center">
+                  <IconSVG type="scales" className="w-4 h-4 text-purple-400" />
                 </div>
               </div>
               <div className="min-w-0 flex-1">
@@ -679,12 +778,15 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
         <div className="relative z-10 p-8 text-center h-full flex flex-col justify-between min-h-[320px]">
           {/* Icon premium avec indication de clic */}
           <div className="mb-6">
-            <div className={`w-20 h-20 ${isUrgentMode ? 'bg-red-400' : 'bg-cyan-400'} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl ${isUrgentMode ? 'group-hover:shadow-red-400/50' : 'group-hover:shadow-cyan-400/50'}`}>
-              <span className="text-black text-3xl font-bold">{isUrgentMode ? '🚨' : '⚡'}</span>
+            <div className={`w-20 h-20 ${isUrgentMode ? 'bg-gradient-to-br from-red-400 to-red-500' : 'bg-gradient-to-br from-cyan-400 to-cyan-500'} rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-2xl ${isUrgentMode ? 'shadow-red-400/25 group-hover:shadow-red-400/40' : 'shadow-cyan-400/25 group-hover:shadow-cyan-400/40'}`}>
+              <IconSVG 
+                type={isUrgentMode ? 'lightning' : 'calendar'} 
+                className="w-10 h-10 text-black" 
+              />
             </div>
-            <div className={`${isUrgentMode ? 'text-red-400' : 'text-cyan-400'} font-mono text-xs tracking-wider uppercase flex items-center justify-center gap-2`}>
+            <div className={`${isUrgentMode ? 'text-red-400' : 'text-cyan-400'} font-mono text-xs tracking-wider uppercase font-bold flex items-center justify-center gap-2`}>
               {isUrgentMode ? 'URGENT' : 'RAPIDE'}
-              <span className="text-white animate-pulse">👆</span>
+              <div className="w-2 h-2 rounded-full bg-current animate-pulse"></div>
             </div>
           </div>
           
@@ -738,7 +840,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                     <p className="text-base mb-3">Contact immédiat</p>
                     <p className="text-sm text-red-400 font-medium mb-2">Réponse garantie sous 2h</p>
                     <div className="mt-3 px-4 py-2 bg-red-400/20 rounded-lg border border-red-400/30">
-                      <p className="text-red-400 text-sm font-bold">⚡ Urgence professionnelle</p>
+                      <p className="text-red-400 text-sm font-bold">Urgence professionnelle</p>
                     </div>
                   </>
                 ) : (
@@ -746,7 +848,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                     <p className="text-base mb-3">Rendez-vous programmé</p>
                     <p className="text-sm text-cyan-400 font-medium mb-2">sous 48h maximum</p>
                     <div className="mt-3 px-4 py-2 bg-cyan-400/20 rounded-lg border border-cyan-400/30">
-                      <p className="text-cyan-400 text-sm font-bold">🗓️ Cliquer pour réserver</p>
+                      <p className="text-cyan-400 text-sm font-bold">Cliquer pour réserver</p>
                     </div>
                   </>
                 )}
@@ -763,8 +865,11 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
           >
             <div className="flex items-start space-x-3">
               <div className="flex-shrink-0">
-                <div className={`w-8 h-8 ${isUrgentMode ? 'bg-red-400/20' : 'bg-cyan-400/20'} rounded-full flex items-center justify-center`}>
-                  <span className={`${isUrgentMode ? 'text-red-400' : 'text-cyan-400'} text-sm`}>🏛️</span>
+                <div className={`w-8 h-8 ${isUrgentMode ? 'bg-red-400/20' : 'bg-cyan-400/20'} rounded-lg flex items-center justify-center`}>
+                  <IconSVG 
+                    type="heart" 
+                    className={`w-4 h-4 ${isUrgentMode ? 'text-red-400' : 'text-cyan-400'}`} 
+                  />
                 </div>
               </div>
               <div className="min-w-0 flex-1">
