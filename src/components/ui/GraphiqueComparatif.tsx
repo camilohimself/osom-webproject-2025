@@ -49,8 +49,8 @@ export default function GraphiqueComparatif({
     return () => observer.disconnect()
   }, [])
 
-  const maxValue = Math.max(...data.map(item => item.value))
-  const improvement = data.length >= 2 ? ((data[0].value - data[1].value) / data[1].value * 100) : 0
+  const maxValue = Math.max(...data.map(item => Math.abs(item.value)), 1) // Minimum 1 pour éviter division par 0
+  const improvement = data.length >= 2 ? ((data[0].value - data[1].value) / Math.max(data[1].value, 1) * 100) : 0
 
   return (
     <div ref={containerRef} className={`relative p-6 ${className}`} style={{ backgroundColor: "rgba(15, 23, 42, 0.8)" }}>
@@ -79,10 +79,10 @@ export default function GraphiqueComparatif({
 
         {/* Bars */}
         {data.map((item, index) => {
-          const barHeight = (item.value / maxValue) * (height * 0.7)
+          const barHeight = Math.max((Math.abs(item.value) / maxValue) * (height * 0.7), 0)
           const barWidth = 80
           const x = 100 + index * 150
-          const y = height - barHeight - 40
+          const y = Math.max(height - barHeight - 40, 0)
 
           return (
             <g key={index}>
@@ -91,7 +91,7 @@ export default function GraphiqueComparatif({
                 x={x}
                 y={height - 40}
                 width={barWidth}
-                height={-(height * 0.7)}
+                height={Math.max(height * 0.7, 0)}
                 fill="#1F2937"
                 rx="4"
               />
