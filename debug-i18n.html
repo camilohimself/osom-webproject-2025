@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i18n Debug Test</title>
+</head>
+<body>
+    <h1>i18n Debug Test</h1>
+    <p>This file can be used to test language switching logic</p>
+    
+    <script>
+        console.log('=== i18n Debug Test ===');
+        
+        // Test locale detection
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLocale = urlParams.get('locale');
+        console.log('URL locale parameter:', urlLocale);
+        
+        // Test localStorage
+        const savedLocale = localStorage.getItem('NEXT_LOCALE');
+        console.log('Saved locale in localStorage:', savedLocale);
+        
+        // Test basic logic
+        const locales = ['fr', 'en', 'de'];
+        console.log('Available locales:', locales);
+        console.log('URL locale is valid:', locales.includes(urlLocale));
+        
+        if (urlLocale && locales.includes(urlLocale)) {
+            console.log('Setting new locale:', urlLocale);
+            localStorage.setItem('NEXT_LOCALE', urlLocale);
+            
+            // Clean URL
+            const cleanUrl = window.location.pathname;
+            console.log('Cleaning URL to:', cleanUrl);
+            window.history.replaceState({}, '', cleanUrl);
+        } else {
+            console.log('Using saved or default locale');
+        }
+        
+        console.log('Final localStorage value:', localStorage.getItem('NEXT_LOCALE'));
+    </script>
+</body>
+</html>

@@ -15,12 +15,20 @@ function ClientLayoutContent({ children }: ClientLayoutContentProps) {
   const [dictionary, setDictionary] = useState<any>(null)
 
   useEffect(() => {
+    console.log('🔄 ClientLayout: Loading dictionary for locale:', locale)
+    
     async function loadDictionary() {
       try {
         const dict = await getDictionary(locale)
+        console.log('✅ ClientLayout: Dictionary loaded for locale:', locale)
+        console.log('📚 Dictionary sample:', {
+          navigation: dict.navigation,
+          hasHome: !!dict.home,
+          hasContact: !!dict.contact
+        })
         setDictionary(dict)
       } catch (error) {
-        console.error('Failed to load dictionary:', error)
+        console.error('❌ ClientLayout: Failed to load dictionary for locale:', locale, error)
       }
     }
 
