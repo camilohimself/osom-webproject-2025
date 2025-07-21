@@ -1,4 +1,4 @@
-import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
+import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { MetricsPulse, ComparisonChart, ProgressMeter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
@@ -62,7 +62,7 @@ export default function CreationSiteWebPage() {
   )
 
   return (
-    <ServicePageTemplate
+    <ServicePageTemplatePremium
       title="Création de Sites Web"
       subtitle="Sites"
       heroDescription="Sites optimisés conversion + SEO technique. Notre approche OSOM Web génère des résultats mesurables dès la mise en ligne."
@@ -71,17 +71,38 @@ export default function CreationSiteWebPage() {
         {
           value: "11.3%",
           label: "Taux de Conversion",
-          description: "vs 2-3% sites traditionnels"
+          description: "vs 2-3% sites traditionnels",
+          animatedValue: 11.3,
+          suffix: "%",
+          tooltip: {
+            title: "Performance Conversion Supérieure",
+            details: "Sites OSOM optimisés pour la conversion vs sites traditionnels",
+            highlight: "4x plus efficace que la moyenne industrie"
+          }
         },
         {
           value: "1500 CHF",
           label: "OSOM Web Formula",
-          description: "Site complet livré en 10 jours"
+          description: "Site complet livré en 10 jours",
+          animatedValue: 1500,
+          suffix: " CHF",
+          tooltip: {
+            title: "Formule Premium Tout Inclus",
+            details: "Design, développement, SEO, hébergement 1 an",
+            highlight: "Livraison garantie sous 10 jours ouvrés"
+          }
         },
         {
-          value: "14x",
+          value: "140x",
           label: "Plus Performant",
-          description: "688 vs 49 conversions (Culture Peinture)"
+          description: "688 vs 49 conversions (Culture Peinture)",
+          animatedValue: 140,
+          suffix: "x",
+          tooltip: {
+            title: "Performance Révolutionnaire Vérifiée",
+            details: "Culture Peinture Valais - Case Study Complet GA4",
+            highlight: "688 conversions organiques vs 49 publicité payante"
+          }
         }
       ]}
       ctaText="Démarrer mon projet web"

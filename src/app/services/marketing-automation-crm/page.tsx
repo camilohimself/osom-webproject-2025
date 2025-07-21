@@ -1,4 +1,4 @@
-import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
+import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { MetricsPulse, ProgressMeter, ComparisonChart, AssetValueCounter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
@@ -107,7 +107,7 @@ export default function MarketingAutomationCRMPage() {
   )
 
   return (
-    <ServicePageTemplate
+    <ServicePageTemplatePremium
       title="Marketing Automation & CRM"
       subtitle="CRM"
       heroDescription="Automatisez vos conversions et transformez chaque prospect en client avec des systèmes intelligents qui travaillent 24/7."

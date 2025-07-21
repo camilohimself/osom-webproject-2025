@@ -1,4 +1,4 @@
-import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
+import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
@@ -103,7 +103,7 @@ export default function TrackingDataPage() {
   )
 
   return (
-    <ServicePageTemplate
+    <ServicePageTemplatePremium
       title="Tracking & Data Analytics"
       subtitle="Data"
       heroDescription="Révélez le ROI invisible de vos actions marketing. Données vérifiables, décisions éclairées, performance optimisée."

@@ -1,4 +1,4 @@
-import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
+import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { ComparisonChart, ProgressMeter, ROIVisualization, AssetValueCounter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
@@ -67,7 +67,7 @@ export default function SEOContentMarketingPage() {
   )
 
   return (
-    <ServicePageTemplate
+    <ServicePageTemplatePremium
       title="SEO & Content Marketing"
       subtitle="Marketing"
       heroDescription="Notre diagnostic SEO révèle les opportunités cachées. Trafic qualifié supérieur garanti avec méthodes éprouvées."

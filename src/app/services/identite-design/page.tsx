@@ -1,4 +1,4 @@
-import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
+import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
@@ -98,7 +98,7 @@ export default function IdentiteDesignPage() {
   )
 
   return (
-    <ServicePageTemplate
+    <ServicePageTemplatePremium
       title="Identité & Design"
       subtitle="Design"
       heroDescription="Créons une identité visuelle qui marque les esprits et génère de la confiance instantanée avec des résultats mesurables."

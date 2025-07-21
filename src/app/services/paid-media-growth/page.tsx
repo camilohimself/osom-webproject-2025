@@ -1,4 +1,4 @@
-import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
+import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { ROIVisualization, ComparisonChart, MetricsPulse, ProgressMeter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
@@ -80,7 +80,7 @@ export default function PaidMediaGrowthPage() {
   )
 
   return (
-    <ServicePageTemplate
+    <ServicePageTemplatePremium
       title="Paid Media & Growth"
       subtitle="Growth"
       heroDescription="Stratégie organique 140x plus performante que la publicité payante. Conversions durables et coût d'acquisition réduit de 99.3%."
