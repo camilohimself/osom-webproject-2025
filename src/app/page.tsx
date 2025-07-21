@@ -1,15 +1,99 @@
 import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
-import { OSOMMotionHero } from '@/components/ui'
+import { GraphiqueLinear } from '@/components/ui'
 
 export default async function Home() {
   const dictionary = await getDictionary(defaultLocale)
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Hero Section avec Motion Design */}
-      <OSOMMotionHero />
+      {/* Hero Section avec Graphique Linear Style */}
+      <section className="min-h-screen bg-black relative overflow-hidden flex items-center">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Content */}
+            <div>
+              <div className="flex items-center mb-8">
+                <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
+                <span className="text-yellow-400 text-sm font-medium tracking-wide">OSOM PERFORMANCE</span>
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Build with <span className="text-yellow-400 font-bold">focus</span>.<br />
+                Ship with <span className="text-yellow-400 font-bold">impact</span>.
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Marketing digital basé sur la performance mesurable. Nos études de cas prouvent des résultats 140x supérieurs à la concurrence.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <Link
+                  href="/contact"
+                  className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold shadow-lg"
+                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                >
+                  Consultation gratuite
+                </Link>
+                <Link
+                  href="/calculator"
+                  className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
+                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                >
+                  Voir nos résultats
+                </Link>
+              </div>
+              
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap gap-8 text-gray-400 text-sm">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                  <span>688 vs 49 conversions (GA4)</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                  <span>68.6% vs 44.6% engagement</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
+                  <span>ROI transparent et mesurable</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right: Graphique Linear */}
+            <div>
+              <GraphiqueLinear
+                title="Performance Impact"
+                subtitle="Données réelles basées sur 400+ jours d'analyses GA4"
+                primaryMetric={{
+                  label: "Stratégie OSOM",
+                  value: "688 conversions",
+                  color: "#06B6D4"
+                }}
+                secondaryMetric={{
+                  label: "Publicité payante",
+                  value: "49 conversions",
+                  color: "#6B7280"
+                }}
+                improvement={{
+                  label: "ROI Supérieur",
+                  value: "140x plus efficace"
+                }}
+                backgroundColor="rgba(0,0,0,0.3)"
+                className="backdrop-blur-sm border border-white/10 rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Section - Vue d'Ensemble Expertise */}
       <section className="py-32 bg-gray-900 relative overflow-hidden">

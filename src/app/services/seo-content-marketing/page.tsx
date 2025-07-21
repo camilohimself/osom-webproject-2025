@@ -1,9 +1,32 @@
 import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
 import { ComparisonChart, ProgressMeter, ROIVisualization, AssetValueCounter } from '@/components/charts'
+import { GraphiqueLinear } from '@/components/ui'
 
 export default function SEOContentMarketingPage() {
   const proofContent = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* GraphiqueLinear - Style Linear avec données réelles */}
+      <GraphiqueLinear
+        title="Engagement Quality Impact"
+        subtitle="Artisane de Lumière - 200+ jours d'analyse GA4 temps réel"
+        primaryMetric={{
+          label: "Trafic SEO OSOM",
+          value: "68.6% engagement",
+          color: "#06B6D4"
+        }}
+        secondaryMetric={{
+          label: "Trafic Direct",
+          value: "44.6% engagement", 
+          color: "#6B7280"
+        }}
+        improvement={{
+          label: "Qualité Supérieure",
+          value: "+54% plus qualifié"
+        }}
+        backgroundColor="rgba(15, 23, 42, 0.8)"
+        className="backdrop-blur-sm border border-cyan-400/20 rounded-2xl"
+      />
+
       {/* ROI Visualization - Gérance Swiss */}
       <ROIVisualization
         multiplier={397}
@@ -13,18 +36,6 @@ export default function SEOContentMarketingPage() {
         color="#70c1a9"
         description="Audit Gérance Swiss - Visibilité vs concurrent leader"
       />
-
-      {/* Comparison Chart - Engagement Quality */}
-      <div className="mt-8">
-        <ComparisonChart
-          title="Qualité Engagement - Artisane de Lumière"
-          data={[
-            { label: "Trafic SEO OSOM", value: 68.6, color: "#70c1a9" },
-            { label: "Trafic Direct", value: 44.6, color: "#6B7280" }
-          ]}
-          subtitle="Analyse GA4 sur 200+ jours - Taux d'engagement"
-        />
-      </div>
 
       {/* Asset Value Counter */}
       <div className="mt-8">

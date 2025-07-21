@@ -1,9 +1,32 @@
 import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
 import { ROIVisualization, ComparisonChart, MetricsPulse, ProgressMeter } from '@/components/charts'
+import { GraphiqueLinear } from '@/components/ui'
 
 export default function PaidMediaGrowthPage() {
   const proofContent = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* GraphiqueLinear - Organic vs Paid Performance */}
+      <GraphiqueLinear
+        title="Organic vs Paid Performance"
+        subtitle="Culture Peinture - Révolution marketing 140x supérieur"
+        primaryMetric={{
+          label: "Stratégie Organique OSOM",
+          value: "688 conversions",
+          color: "#EAB308"
+        }}
+        secondaryMetric={{
+          label: "Publicité Payante",
+          value: "49 conversions",
+          color: "#6B7280"
+        }}
+        improvement={{
+          label: "Révolution",
+          value: "140x plus efficace"
+        }}
+        backgroundColor="rgba(15, 23, 42, 0.8)"
+        className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
+      />
+
       {/* ROI Visualization - Organic vs Paid */}
       <ROIVisualization
         multiplier={140}

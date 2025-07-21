@@ -1,9 +1,32 @@
 import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
 import { MetricsPulse, ProgressMeter, ComparisonChart, AssetValueCounter } from '@/components/charts'
+import { GraphiqueLinear } from '@/components/ui'
 
 export default function MarketingAutomationCRMPage() {
   const proofContent = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* GraphiqueLinear - Automation Performance */}
+      <GraphiqueLinear
+        title="Automation Performance"
+        subtitle="Funnel automatisé - Impact sur conversion et temps manuel"
+        primaryMetric={{
+          label: "Funnel Automatisé OSOM",
+          value: "+78% conversions",
+          color: "#10B981"
+        }}
+        secondaryMetric={{
+          label: "Processus Manuel",
+          value: "Baseline 22%",
+          color: "#6B7280"
+        }}
+        improvement={{
+          label: "Efficacité",
+          value: "-65% temps manuel"
+        }}
+        backgroundColor="rgba(15, 23, 42, 0.8)"
+        className="backdrop-blur-sm border border-green-400/20 rounded-2xl"
+      />
+
       {/* Conversion Improvement */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <MetricsPulse

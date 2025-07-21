@@ -1,9 +1,32 @@
 import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
+import { GraphiqueLinear } from '@/components/ui'
 
 export default function IdentiteDesignPage() {
   const proofContent = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* GraphiqueLinear - Brand Asset Value */}
+      <GraphiqueLinear
+        title="Brand Asset Generation"
+        subtitle="Culture Peinture - Mesure d'impact sur la valeur de marque"
+        primaryMetric={{
+          label: "Asset Créé OSOM",
+          value: "95K CHF value",
+          color: "#8B5CF6"
+        }}
+        secondaryMetric={{
+          label: "Investissement",
+          value: "3.5K CHF cout",
+          color: "#6B7280"
+        }}
+        improvement={{
+          label: "ROI Brand",
+          value: "27x retour investissement"
+        }}
+        backgroundColor="rgba(15, 23, 42, 0.8)"
+        className="backdrop-blur-sm border border-purple-400/20 rounded-2xl"
+      />
+
       {/* Asset Value Counter - Brand Value */}
       <AssetValueCounter
         value={95000}

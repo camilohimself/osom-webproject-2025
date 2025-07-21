@@ -1,9 +1,32 @@
 import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
+import { GraphiqueLinear } from '@/components/ui'
 
 export default function TrackingDataPage() {
   const proofContent = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* GraphiqueLinear - Data Attribution Recovery */}
+      <GraphiqueLinear
+        title="Data Attribution Recovery"
+        subtitle="Audit tracking - Révélation ROI invisible des actions marketing"
+        primaryMetric={{
+          label: "Attribution Complète",
+          value: "14,171 sessions",
+          color: "#EC4899"
+        }}
+        secondaryMetric={{
+          label: "Sessions Perdues",
+          value: "Unassigned avant",
+          color: "#6B7280"
+        }}
+        improvement={{
+          label: "Visibilité ROI",
+          value: "100% transparence"
+        }}
+        backgroundColor="rgba(15, 23, 42, 0.8)"
+        className="backdrop-blur-sm border border-pink-400/20 rounded-2xl"
+      />
+
       {/* Lost Sessions Recovery */}
       <AssetValueCounter
         value={14171}

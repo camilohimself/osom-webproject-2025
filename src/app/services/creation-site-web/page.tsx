@@ -1,11 +1,34 @@
 import ServicePageTemplate from '@/components/templates/ServicePageTemplate'
 import { MetricsPulse, ComparisonChart, ProgressMeter } from '@/components/charts'
+import { GraphiqueLinear } from '@/components/ui'
 
 export default function CreationSiteWebPage() {
   const proofContent = (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* GraphiqueLinear - Conversion Performance */}
+      <GraphiqueLinear
+        title="Conversion Performance"
+        subtitle="Culture Peinture - Données GA4 vérifiées sur 200+ jours"
+        primaryMetric={{
+          label: "Sites OSOM",
+          value: "688 conversions",
+          color: "#EAB308"
+        }}
+        secondaryMetric={{
+          label: "Publicité payante",
+          value: "49 conversions",
+          color: "#6B7280"
+        }}
+        improvement={{
+          label: "Performance",
+          value: "14x supérieur"
+        }}
+        backgroundColor="rgba(15, 23, 42, 0.8)"
+        className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
+      />
+
       {/* Metrics with Dynamic Charts */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <MetricsPulse
           value={11.3}
           suffix="%"
@@ -21,16 +44,6 @@ export default function CreationSiteWebPage() {
           color="#ffd507"
         />
       </div>
-
-      {/* Comparison Chart */}
-      <ComparisonChart
-        title="Performance Sites OSOM vs Traditionnels"
-        data={[
-          { label: "Sites OSOM", value: 688, color: "#10B981" },
-          { label: "Sites traditionnels", value: 49, color: "#EF4444" }
-        ]}
-        subtitle="Basé sur l'analyse Culture Peinture (GA4 - 200+ jours)"
-      />
 
       {/* Engagement Quality */}
       <div className="pt-6 border-t border-gray-700">
