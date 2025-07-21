@@ -9,6 +9,7 @@ import { cookies } from 'next/headers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://osom.ch'),
   title: 'osom - Agence Web Digitale Valais | Création Site Internet',
   description: 'Agence web spécialisée dans la création de sites internet, SEO, et marketing digital en Valais. Expertise Next.js, design UX/UI moderne.',
   keywords: 'agence web valais, création site internet, SEO, marketing digital, Next.js, design UX/UI',

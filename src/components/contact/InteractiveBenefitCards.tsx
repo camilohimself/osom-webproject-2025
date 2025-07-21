@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 
 // Déclaration du type Calendly pour TypeScript
@@ -223,7 +223,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
   }, [activeCard])
 
   // Fonction de tracking des conversions
-  const trackConversion = (eventName: string, eventData: any = {}) => {
+  const trackConversion = useCallback((eventName: string, eventData: any = {}) => {
     const trackingData = {
       timestamp: new Date().toISOString(),
       industry: selectedIndustry,
@@ -247,7 +247,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
         ...eventData
       })
     }
-  }
+  }, [selectedIndustry, isUrgentMode, onConversionEvent])
 
   // Configuration des événements Calendly
   useEffect(() => {
@@ -275,7 +275,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
         }
       })
     }
-  }, [onCalendlyEvent, selectedIndustry, isUrgentMode])
+  }, [onCalendlyEvent, selectedIndustry, isUrgentMode, trackConversion])
 
   // Fonction pour ouvrir Calendly
   const openCalendly = () => {

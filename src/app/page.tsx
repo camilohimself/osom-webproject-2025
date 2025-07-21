@@ -5,6 +5,9 @@ import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImp
 import { cookies } from 'next/headers'
 import HeroPremium from '@/components/homepage/HeroPremium'
 import AnimatedElement from '@/components/ui/AnimatedElement'
+import InteractiveBackground from '@/components/ui/InteractiveBackground'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import MagneticButton from '@/components/ui/MagneticButton'
 
 export default async function Home() {
   // Get locale from cookie (same logic as layout.tsx)
@@ -19,7 +22,12 @@ export default async function Home() {
   const dictionary = await getDictionary(currentLocale)
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black relative">
+      {/* Interactive Background Layer */}
+      <InteractiveBackground />
+      
+      {/* Scroll Progress Indicator */}
+      <ScrollProgressIndicator />
       {/* Hero Premium Section */}
       <HeroPremium dictionary={dictionary.home} />
 
@@ -307,21 +315,21 @@ export default async function Home() {
             {dictionary.home.cta.description}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+            <MagneticButton
               href="/contact"
-              className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold shadow-lg"
-              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              variant="primary"
+              className="text-lg px-10 py-5"
             >
               {dictionary.home.cta.cta_primary}
-            </Link>
-            <Link
+            </MagneticButton>
+            <MagneticButton
               href="/calculator"
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
-              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              variant="secondary"
+              className="text-lg px-10 py-5"
             >
               {dictionary.home.cta.cta_secondary}
-            </Link>
+            </MagneticButton>
           </div>
 
           {/* Trust Indicators */}

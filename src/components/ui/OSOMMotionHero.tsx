@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const OSOMMotionHero = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
@@ -75,9 +76,12 @@ const OSOMMotionHero = () => {
             
             {/* Logo container */}
             <div className="relative z-10 bg-white/95 backdrop-blur-sm rounded-3xl p-8 border border-yellow-400/40 group-hover:border-yellow-400/80 transition-all duration-500 shadow-2xl">
-              <img 
+              <Image 
                 src="/osom-logo.svg" 
-                alt="OSOM Digital Agency" 
+                alt="osom Digital Agency" 
+                width={256}
+                height={256}
+                priority
                 className="h-32 md:h-48 lg:h-64 w-auto group-hover:scale-110 transition-transform duration-500"
               />
             </div>
