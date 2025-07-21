@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { locales, type Locale } from '@/lib/i18n'
 
@@ -16,24 +16,10 @@ const localeNames = {
 
 export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeLocale, setActiveLocale] = useState<Locale>(currentLocale)
-
-  useEffect(() => {
-    // Simple URL parameter detection
-    const urlParams = new URLSearchParams(window.location.search)
-    const urlLocale = urlParams.get('locale')
-    
-    if (urlLocale && locales.includes(urlLocale as Locale)) {
-      setActiveLocale(urlLocale as Locale)
-      // Reload page to apply new locale
-      setTimeout(() => {
-        window.location.reload()
-      }, 100)
-    }
-  }, [])
 
   const handleLanguageChange = (locale: Locale) => {
     setIsOpen(false)
+    // Simple redirect - let the server handle the rest
     window.location.href = `/?locale=${locale}`
   }
 
@@ -48,7 +34,7 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
           <div className="w-5 h-5 rounded-full border-2 border-current flex items-center justify-center">
             <div className="w-2 h-2 rounded-full bg-current"></div>
           </div>
-          <span className="text-sm font-semibold uppercase tracking-wide">{localeNames[activeLocale]}</span>
+          <span className="text-sm font-semibold uppercase tracking-wide">{localeNames[currentLocale]}</span>
         </div>
         <svg 
           className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
@@ -66,14 +52,14 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
                 key={locale}
                 onClick={() => handleLanguageChange(locale)}
                 className={`group flex items-center space-x-3 px-4 py-3 text-sm transition-all duration-300 hover:bg-yellow-400/10 hover:scale-105 w-full text-left ${
-                  locale === activeLocale 
+                  locale === currentLocale 
                     ? 'text-yellow-400 bg-yellow-400/5' 
                     : 'text-gray-300 hover:text-white'
                 }`}
                 style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               >
                 <div className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold ${
-                  locale === activeLocale 
+                  locale === currentLocale 
                     ? 'bg-yellow-400 text-black' 
                     : 'bg-white/10 text-gray-300 group-hover:bg-yellow-400/20 group-hover:text-yellow-400'
                 }`}>
@@ -87,7 +73,7 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
                     {locale === 'de' && 'Deutsch'}
                   </div>
                 </div>
-                {locale === activeLocale && (
+                {locale === currentLocale && (
                   <div className="ml-auto">
                     <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
                   </div>
