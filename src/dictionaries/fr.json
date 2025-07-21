@@ -19,18 +19,138 @@
   },
   "home": {
     "hero": {
-      "title": "Agence Web Digitale Valais",
-      "subtitle": "Création de sites internet performants, SEO et marketing digital pour votre entreprise",
-      "cta-primary": "Nos Services",
-      "cta-secondary": "Contact"
+      "title": "Agence Digitale Data-Driven",
+      "subtitle": "Précision suisse et excellence digitale. Nous livrons des résultats mesurables pour les professionnels de la santé, juridiques et services.",
+      "description": "Transformez votre présence digitale avec notre méthodologie éprouvée. De 140x d'amélioration ROI aux solutions d'entreprise.",
+      "cta-primary": "Découvrir nos Services",
+      "cta-secondary": "Consultation Gratuite",
+      "stats": {
+        "projects": "200+ Projets",
+        "roi": "140x ROI Max",
+        "experience": "5+ Années",
+        "data": "400+ Jours Analytics"
+      }
     },
-    "features": {
-      "web-title": "Création Web",
-      "web-desc": "Sites internet modernes et performants avec Next.js et TypeScript",
-      "seo-title": "SEO & Marketing",
-      "seo-desc": "Optimisation pour les moteurs de recherche et stratégies marketing digital",
-      "design-title": "Design UX/UI",
-      "design-desc": "Expériences utilisateur exceptionnelles et interfaces modernes"
+    "services": {
+      "title": "Solutions Digitales Professionnelles",
+      "subtitle": "Qualité Suisse, Standards Globaux",
+      "web": {
+        "title": "Développement Web Enterprise",
+        "description": "Sites web haute performance avec Next.js, TypeScript et technologies de pointe. Optimisés pour la conversion et la scalabilité.",
+        "features": ["11,3% taux conversion", "Temps chargement <2s", "Design mobile-first", "Sécurité enterprise"]
+      },
+      "branding": {
+        "title": "Identité de Marque Stratégique",
+        "description": "Développement de marque professionnel qui crée confiance et crédibilité sur votre marché. Systèmes d'identité visuelle complets.",
+        "features": ["2,4M impressions organiques", "95K CHF valeur asset", "Guidelines de marque", "Cohérence multi-plateforme"]
+      },
+      "marketing": {
+        "title": "Marketing Data-Driven",
+        "description": "Marketing de performance qui livre des résultats mesurables. SEO, stratégie de contenu et optimisation de croissance.",
+        "features": ["68,6% qualité engagement", "Croissance trafic organique", "Stratégie contenu", "Suivi performance"]
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Prêt à Transformer votre Entreprise ?",
+      "subtitle": "Consultation professionnelle pour les entreprises de santé, juridiques et de services",
+      "description": "Obtenez des insights actionnables et une roadmap stratégique adaptée à votre secteur."
+    },
+    "industry": {
+      "title": "Votre Secteur",
+      "general": {
+        "title": "Tous Professionnels",
+        "description": "Solutions digitales adaptées à votre secteur d'activité",
+        "urgent": "Site en panne, campagne critique, deadline importante"
+      },
+      "healthcare": {
+        "title": "Professionnels de Santé",
+        "description": "Conformité HIPAA, prise RDV patients, visibilité locale",
+        "urgent": "Nouvelle clinique, crise réputation, concurrence agressive"
+      },
+      "legal": {
+        "title": "Cabinets Juridiques",
+        "description": "Conformité déontologique, génération clients, autorité légale",
+        "urgent": "Lancement cabinet, litige public, expertise médiatique"
+      },
+      "nonprofit": {
+        "title": "Fondations & ONG",
+        "description": "Collecte de fonds, transparence, engagement communautaire",
+        "urgent": "Campagne urgente, financement critique, crise communication"
+      },
+      "services": {
+        "title": "Entreprises Services",
+        "description": "Lead generation B2B, crédibilité secteur, différenciation",
+        "urgent": "Nouveau marché, concurrence déloyale, pivot stratégique"
+      }
+    },
+    "consultation": {
+      "title": "Mode de Consultation",
+      "standard": {
+        "title": "Consultation Standard",
+        "description": "Idéal pour planifier votre stratégie digitale sur le long terme"
+      },
+      "urgent": {
+        "title": "Urgence Professionnelle",
+        "description": "Situations critiques nécessitant une intervention rapide"
+      }
+    },
+    "process": {
+      "title": "À quoi s'attendre ?",
+      "step1": {
+        "title": "Étape 1: Diagnostic",
+        "features": ["Analyse de vos outils actuels", "Identification des lacunes", "Rapport détaillé en 48h", "100% gratuit, sans engagement"]
+      },
+      "step2": {
+        "title": "Étape 2: Stratégie",
+        "features": ["Plan d'action personnalisé", "Priorisation des actions", "Budget transparent", "Timeline réaliste"]
+      },
+      "step3": {
+        "title": "Étape 3: Lancement",
+        "standard": ["Planification détaillée", "Mise en œuvre progressive", "Suivi des résultats", "Optimisation continue"],
+        "urgent": ["Réponse sous 2h garantie", "Solutions immédiates", "Support prioritaire", "Intervention express"]
+      }
+    },
+    "cards": {
+      "diagnostic": {
+        "title": "Diagnostic Complet",
+        "subtitle": "Gratuit",
+        "description": "Analyse approfondie de votre situation digitale actuelle"
+      },
+      "strategy": {
+        "title": "Stratégie Sur Mesure",
+        "subtitle": "Personnalisé",
+        "description": "Stratégie adaptée à vos objectifs et budget spécifique"
+      },
+      "consultation": {
+        "title": "Consultation Express",
+        "subtitle": "Rapide",
+        "standard": "Rendez-vous programmé sous 48h maximum",
+        "urgent": "Contact immédiat avec réponse garantie sous 2h",
+        "cta": "Cliquer pour réserver"
+      }
+    },
+    "testimonials": {
+      "diagnostic": "Le diagnostic OSOM a révélé 14,171 sessions perdues dans nos données. Exactement ce dont nous avions besoin.",
+      "strategy": "Leur approche data-driven nous a permis de multiplier nos conversions par 4. Outils professionnels, résultats mesurables.",
+      "urgent": "Réponse sous 90 minutes pour notre urgence marketing. Professionnalisme exemplaire."
+    }
+  },
+  "calculator": {
+    "title": "Calculateur ROI",
+    "subtitle": "Estimez le Retour sur Investissement Digital",
+    "description": "Outil professionnel pour évaluer le potentiel de votre transformation digitale",
+    "form": {
+      "revenue": "Chiffre d'Affaires Annuel (CHF)",
+      "industry": "Secteur d'Activité",
+      "goals": "Objectifs Principaux",
+      "timeline": "Timeline Attendue",
+      "budget": "Budget Disponible (CHF)"
+    },
+    "results": {
+      "title": "Votre Projection ROI",
+      "subtitle": "Basée sur notre base de données 200+ projets"
     }
   },
   "common": {
@@ -43,6 +163,12 @@
     "delete": "Supprimer",
     "back": "Retour",
     "next": "Suivant",
-    "previous": "Précédent"
+    "previous": "Précédent",
+    "readMore": "Lire la Suite",
+    "getStarted": "Commencer",
+    "learnMore": "En Savoir Plus",
+    "viewAll": "Voir Tout",
+    "contactUs": "Nous Contacter",
+    "bookConsultation": "Réserver Consultation"
   }
 }

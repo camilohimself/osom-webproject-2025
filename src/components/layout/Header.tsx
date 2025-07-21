@@ -167,31 +167,70 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-6">
-            {/* Language Selector */}
+            {/* Modern Language Selector */}
             <div className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
+                className="group flex items-center space-x-3 bg-black/60 border border-white/10 hover:border-yellow-400/30 text-gray-300 hover:text-white transition-all duration-300 px-4 py-2 rounded-xl backdrop-blur-sm hover:scale-105"
                 style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               >
-                <span className="text-sm font-medium">{localeNames[currentLocale]}</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center space-x-2">
+                  <div className="w-5 h-5 rounded-full border-2 border-current flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-current"></div>
+                  </div>
+                  <span className="text-sm font-semibold uppercase tracking-wide">{currentLocale}</span>
+                </div>
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-300 ${isLangMenuOpen ? 'rotate-180' : ''}`} 
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               
               {isLangMenuOpen && (
-                <div className="absolute right-0 mt-2 w-20 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-yellow-400/20">
-                  {locales.map((locale) => (
-                    <Link
-                      key={locale}
-                      href={`/${locale}`}
-                      className="block px-3 py-2 text-sm text-gray-300 hover:bg-yellow-400/10 hover:text-yellow-400 transition-colors first:rounded-t-lg last:rounded-b-lg"
-                      onClick={() => setIsLangMenuOpen(false)}
-                    >
-                      {localeNames[locale]}
-                    </Link>
-                  ))}
+                <div className="absolute right-0 mt-3 w-48 bg-black/95 backdrop-blur-md rounded-2xl shadow-2xl border border-white/10 overflow-hidden">
+                  <div className="py-2">
+                    {locales.map((locale) => (
+                      <Link
+                        key={locale}
+                        href={`/${locale}`}
+                        className={`group flex items-center space-x-3 px-4 py-3 text-sm transition-all duration-300 hover:bg-yellow-400/10 hover:scale-105 ${
+                          locale === currentLocale 
+                            ? 'text-yellow-400 bg-yellow-400/5' 
+                            : 'text-gray-300 hover:text-white'
+                        }`}
+                        onClick={() => setIsLangMenuOpen(false)}
+                        style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                      >
+                        <div className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold ${
+                          locale === currentLocale 
+                            ? 'bg-yellow-400 text-black' 
+                            : 'bg-white/10 text-gray-300 group-hover:bg-yellow-400/20 group-hover:text-yellow-400'
+                        }`}>
+                          {locale.toUpperCase()}
+                        </div>
+                        <div>
+                          <div className="font-semibold">{localeNames[locale]}</div>
+                          <div className="text-xs text-gray-400">
+                            {locale === 'fr' && 'Français'}
+                            {locale === 'en' && 'English'}
+                            {locale === 'de' && 'Deutsch'}
+                          </div>
+                        </div>
+                        {locale === currentLocale && (
+                          <div className="ml-auto">
+                            <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                          </div>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="border-t border-white/10 px-4 py-3">
+                    <div className="text-xs text-gray-400 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                      Professional B2B Content
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

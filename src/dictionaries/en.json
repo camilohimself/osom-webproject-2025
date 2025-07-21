@@ -6,7 +6,8 @@
     "blog": "Blog",
     "agency": "Agency",
     "contact": "Contact",
-    "local": "Local"
+    "local": "Local",
+    "calculator": "ROI Calculator"
   },
   "services": {
     "web-development": "Web Development",
@@ -14,22 +15,142 @@
     "seo-marketing": "SEO & Marketing",
     "paid-media": "Paid Media & Growth",
     "marketing-automation": "Marketing Automation & CRM",
-    "tracking-data": "Tracking & Data"
+    "tracking-data": "Analytics & Tracking"
   },
   "home": {
     "hero": {
-      "title": "Digital Web Agency Valais",
-      "subtitle": "High-performance website creation, SEO and digital marketing for your business",
-      "cta-primary": "Our Services",
-      "cta-secondary": "Contact"
+      "title": "Data-Driven Digital Agency",
+      "subtitle": "Swiss precision meets digital excellence. We deliver measurable results for professional services, healthcare, and legal firms.",
+      "description": "Transform your digital presence with our proven methodology. From 140x ROI improvements to enterprise-grade solutions.",
+      "cta-primary": "Explore Our Services",
+      "cta-secondary": "Get Free Consultation",
+      "stats": {
+        "projects": "200+ Projects",
+        "roi": "140x Max ROI",
+        "experience": "5+ Years",
+        "data": "400+ Days Analytics"
+      }
     },
-    "features": {
-      "web-title": "Web Development",
-      "web-desc": "Modern and performant websites with Next.js and TypeScript",
-      "seo-title": "SEO & Marketing",
-      "seo-desc": "Search engine optimization and digital marketing strategies",
-      "design-title": "UX/UI Design",
-      "design-desc": "Exceptional user experiences and modern interfaces"
+    "services": {
+      "title": "Professional Digital Solutions",
+      "subtitle": "Swiss Quality, Global Standards",
+      "web": {
+        "title": "Enterprise Web Development",
+        "description": "High-performance websites built with Next.js, TypeScript, and cutting-edge technology. Optimized for conversion and scalability.",
+        "features": ["11.3% conversion rate", "Sub-2s loading times", "Mobile-first design", "Enterprise security"]
+      },
+      "branding": {
+        "title": "Strategic Brand Identity",
+        "description": "Professional brand development that builds trust and credibility in your market. Complete visual identity systems.",
+        "features": ["2.4M organic impressions", "95K CHF asset value", "Brand guidelines", "Multi-platform consistency"]
+      },
+      "marketing": {
+        "title": "Data-Driven Marketing",
+        "description": "Performance marketing that delivers measurable results. SEO, content strategy, and growth optimization.",
+        "features": ["68.6% engagement quality", "Organic traffic growth", "Content strategy", "Performance tracking"]
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Professional consultation for healthcare, legal, and service companies",
+      "description": "Get actionable insights and a strategic roadmap tailored to your industry."
+    },
+    "industry": {
+      "title": "Your Industry",
+      "general": {
+        "title": "All Industries",
+        "description": "Digital solutions adapted to your specific business sector",
+        "urgent": "System outage, critical campaign, important deadline"
+      },
+      "healthcare": {
+        "title": "Healthcare Professionals",
+        "description": "HIPAA compliance, patient booking systems, local visibility optimization",
+        "urgent": "New clinic launch, reputation crisis, aggressive competition"
+      },
+      "legal": {
+        "title": "Legal Firms",
+        "description": "Professional compliance, client acquisition, legal authority building",
+        "urgent": "Firm launch, public litigation, media expertise positioning"
+      },
+      "nonprofit": {
+        "title": "Foundations & NGOs",
+        "description": "Fundraising optimization, transparency, community engagement",
+        "urgent": "Urgent campaign, critical funding, communication crisis"
+      },
+      "services": {
+        "title": "Service Companies",
+        "description": "B2B lead generation, industry credibility, competitive differentiation",
+        "urgent": "New market entry, unfair competition, strategic pivot"
+      }
+    },
+    "consultation": {
+      "title": "Consultation Mode",
+      "standard": {
+        "title": "Standard Consultation",
+        "description": "Perfect for planning your long-term digital strategy"
+      },
+      "urgent": {
+        "title": "Professional Emergency",
+        "description": "Critical situations requiring immediate intervention"
+      }
+    },
+    "process": {
+      "title": "What to Expect?",
+      "step1": {
+        "title": "Step 1: Diagnosis",
+        "features": ["Current tools analysis", "Gap identification", "Detailed report in 48h", "100% free, no commitment"]
+      },
+      "step2": {
+        "title": "Step 2: Strategy",
+        "features": ["Personalized action plan", "Action prioritization", "Transparent budget", "Realistic timeline"]
+      },
+      "step3": {
+        "title": "Step 3: Launch",
+        "standard": ["Detailed planning", "Progressive implementation", "Results tracking", "Continuous optimization"],
+        "urgent": ["2h response guarantee", "Immediate solutions", "Priority support", "Express intervention"]
+      }
+    },
+    "cards": {
+      "diagnostic": {
+        "title": "Complete Diagnosis",
+        "subtitle": "Free",
+        "description": "In-depth analysis of your current digital situation"
+      },
+      "strategy": {
+        "title": "Custom Strategy",
+        "subtitle": "Personalized",
+        "description": "Strategy adapted to your specific objectives and budget"
+      },
+      "consultation": {
+        "title": "Express Consultation",
+        "subtitle": "Fast",
+        "standard": "Scheduled appointment within 48h maximum",
+        "urgent": "Immediate contact with 2h response guarantee",
+        "cta": "Click to Book"
+      }
+    },
+    "testimonials": {
+      "diagnostic": "OSOM's diagnosis revealed 14,171 lost sessions in our data. Exactly what we needed.",
+      "strategy": "Their data-driven approach allowed us to multiply our conversions by 4. Professional tools, measurable results.",
+      "urgent": "90-minute response for our marketing emergency. Exemplary professionalism."
+    }
+  },
+  "calculator": {
+    "title": "ROI Calculator",
+    "subtitle": "Estimate Your Digital Investment Return",
+    "description": "Professional tool to evaluate the potential of your digital transformation",
+    "form": {
+      "revenue": "Annual Revenue (CHF)",
+      "industry": "Industry",
+      "goals": "Primary Goals",
+      "timeline": "Expected Timeline",
+      "budget": "Available Budget (CHF)"
+    },
+    "results": {
+      "title": "Your ROI Projection",
+      "subtitle": "Based on our 200+ project database"
     }
   },
   "common": {
@@ -42,6 +163,12 @@
     "delete": "Delete",
     "back": "Back",
     "next": "Next",
-    "previous": "Previous"
+    "previous": "Previous",
+    "readMore": "Read More",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "contactUs": "Contact Us",
+    "bookConsultation": "Book Consultation"
   }
 }

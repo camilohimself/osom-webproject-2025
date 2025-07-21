@@ -6,7 +6,8 @@
     "blog": "Blog",
     "agency": "Agentur",
     "contact": "Kontakt",
-    "local": "Lokal"
+    "local": "Lokal",
+    "calculator": "ROI-Rechner"
   },
   "services": {
     "web-development": "Webentwicklung",
@@ -14,22 +15,142 @@
     "seo-marketing": "SEO & Marketing",
     "paid-media": "Paid Media & Growth",
     "marketing-automation": "Marketing Automation & CRM",
-    "tracking-data": "Tracking & Data"
+    "tracking-data": "Analytics & Tracking"
   },
   "home": {
     "hero": {
-      "title": "Digitale Webagentur Wallis",
-      "subtitle": "Leistungsstarke Website-Erstellung, SEO und digitales Marketing für Ihr Unternehmen",
+      "title": "Datengesteuerte Digitalagentur",
+      "subtitle": "Schweizer Präzision trifft digitale Exzellenz. Wir liefern messbare Ergebnisse für professionelle Dienstleistungen, Gesundheitswesen und Anwaltskanzleien.",
+      "description": "Transformieren Sie Ihre digitale Präsenz mit unserer bewährten Methodik. Von 140x ROI-Verbesserungen bis hin zu unternehmensweiten Lösungen.",
       "cta-primary": "Unsere Dienstleistungen",
-      "cta-secondary": "Kontakt"
+      "cta-secondary": "Kostenlose Beratung",
+      "stats": {
+        "projects": "200+ Projekte",
+        "roi": "140x Max ROI",
+        "experience": "5+ Jahre",
+        "data": "400+ Tage Analytics"
+      }
     },
-    "features": {
-      "web-title": "Webentwicklung",
-      "web-desc": "Moderne und leistungsstarke Websites mit Next.js und TypeScript",
-      "seo-title": "SEO & Marketing",
-      "seo-desc": "Suchmaschinenoptimierung und digitale Marketingstrategien",
-      "design-title": "UX/UI Design",
-      "design-desc": "Außergewöhnliche Benutzererfahrungen und moderne Interfaces"
+    "services": {
+      "title": "Professionelle Digitallösungen",
+      "subtitle": "Schweizer Qualität, Globale Standards",
+      "web": {
+        "title": "Enterprise Webentwicklung",
+        "description": "Hochleistungs-Websites mit Next.js, TypeScript und modernster Technologie. Optimiert für Conversion und Skalierbarkeit.",
+        "features": ["11,3% Conversion-Rate", "Sub-2s Ladezeiten", "Mobile-first Design", "Enterprise Security"]
+      },
+      "branding": {
+        "title": "Strategische Markenidentität",
+        "description": "Professionelle Markenentwicklung, die Vertrauen und Glaubwürdigkeit in Ihrem Markt schafft. Komplette visuelle Identitätssysteme.",
+        "features": ["2,4M organische Impressionen", "95K CHF Asset-Wert", "Brand Guidelines", "Multi-Platform Konsistenz"]
+      },
+      "marketing": {
+        "title": "Datengesteuerte Marketing",
+        "description": "Performance-Marketing mit messbaren Ergebnissen. SEO, Content-Strategie und Growth-Optimierung.",
+        "features": ["68,6% Engagement-Qualität", "Organisches Traffic-Wachstum", "Content-Strategie", "Performance-Tracking"]
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Bereit, Ihr Unternehmen zu transformieren?",
+      "subtitle": "Professionelle Beratung für Gesundheitswesen, Anwaltskanzleien und Dienstleistungsunternehmen",
+      "description": "Erhalten Sie umsetzbare Erkenntnisse und einen strategischen Fahrplan für Ihre Branche."
+    },
+    "industry": {
+      "title": "Ihre Branche",
+      "general": {
+        "title": "Alle Branchen",
+        "description": "Digitallösungen angepasst an Ihren spezifischen Geschäftsbereich",
+        "urgent": "Systemausfall, kritische Kampagne, wichtige Deadline"
+      },
+      "healthcare": {
+        "title": "Gesundheitsfachkräfte",
+        "description": "HIPAA-Compliance, Patientenbuchungssysteme, lokale Sichtbarkeitsoptimierung",
+        "urgent": "Klinik-Eröffnung, Reputationskrise, aggressive Konkurrenz"
+      },
+      "legal": {
+        "title": "Anwaltskanzleien",
+        "description": "Berufliche Compliance, Mandantengewinnung, juristische Autorität aufbauen",
+        "urgent": "Kanzlei-Gründung, öffentliche Rechtsstreitigkeiten, Medienexpertise-Positionierung"
+      },
+      "nonprofit": {
+        "title": "Stiftungen & NGOs",
+        "description": "Fundraising-Optimierung, Transparenz, Community-Engagement",
+        "urgent": "Dringende Kampagne, kritische Finanzierung, Kommunikationskrise"
+      },
+      "services": {
+        "title": "Dienstleistungsunternehmen",
+        "description": "B2B-Lead-Generierung, Branchenglaubwürdigkeit, Wettbewerbsdifferenzierung",
+        "urgent": "Markteintritt, unlauterer Wettbewerb, strategische Neuausrichtung"
+      }
+    },
+    "consultation": {
+      "title": "Beratungsmodus",
+      "standard": {
+        "title": "Standard-Beratung",
+        "description": "Perfekt für die Planung Ihrer langfristigen Digitalstrategie"
+      },
+      "urgent": {
+        "title": "Professioneller Notfall",
+        "description": "Kritische Situationen, die sofortige Intervention erfordern"
+      }
+    },
+    "process": {
+      "title": "Was Sie erwarten können?",
+      "step1": {
+        "title": "Schritt 1: Diagnose",
+        "features": ["Analyse aktueller Tools", "Identifikation von Lücken", "Detaillierter Bericht in 48h", "100% kostenlos, unverbindlich"]
+      },
+      "step2": {
+        "title": "Schritt 2: Strategie",
+        "features": ["Personalisierter Aktionsplan", "Priorisierung von Maßnahmen", "Transparentes Budget", "Realistische Zeitplanung"]
+      },
+      "step3": {
+        "title": "Schritt 3: Start",
+        "standard": ["Detaillierte Planung", "Schrittweise Umsetzung", "Ergebnisverfolgung", "Kontinuierliche Optimierung"],
+        "urgent": ["2h Antwortgarantie", "Sofortige Lösungen", "Prioritätssupport", "Express-Intervention"]
+      }
+    },
+    "cards": {
+      "diagnostic": {
+        "title": "Vollständige Diagnose",
+        "subtitle": "Kostenlos",
+        "description": "Tiefgreifende Analyse Ihrer aktuellen digitalen Situation"
+      },
+      "strategy": {
+        "title": "Maßgeschneiderte Strategie",
+        "subtitle": "Personalisiert",
+        "description": "Strategie angepasst an Ihre spezifischen Ziele und Ihr Budget"
+      },
+      "consultation": {
+        "title": "Express-Beratung",
+        "subtitle": "Schnell",
+        "standard": "Geplanter Termin innerhalb max. 48h",
+        "urgent": "Sofortiger Kontakt mit 2h Antwortgarantie",
+        "cta": "Klicken zum Buchen"
+      }
+    },
+    "testimonials": {
+      "diagnostic": "OSOMs Diagnose enthüllte 14.171 verlorene Sessions in unseren Daten. Genau das, was wir brauchten.",
+      "strategy": "Ihr datengestützter Ansatz ermöglichte es uns, unsere Conversions um das 4-fache zu steigern. Professionelle Tools, messbare Ergebnisse.",
+      "urgent": "90-Minuten-Antwort für unseren Marketing-Notfall. Beispielhafter Professionalismus."
+    }
+  },
+  "calculator": {
+    "title": "ROI-Rechner",
+    "subtitle": "Schätzen Sie Ihre digitale Investitionsrendite",
+    "description": "Professionelles Tool zur Bewertung des Potentials Ihrer digitalen Transformation",
+    "form": {
+      "revenue": "Jahresumsatz (CHF)",
+      "industry": "Branche",
+      "goals": "Hauptziele",
+      "timeline": "Erwarteter Zeitrahmen",
+      "budget": "Verfügbares Budget (CHF)"
+    },
+    "results": {
+      "title": "Ihre ROI-Prognose",
+      "subtitle": "Basierend auf unserer 200+ Projekt-Datenbank"
     }
   },
   "common": {
@@ -42,6 +163,12 @@
     "delete": "Löschen",
     "back": "Zurück",
     "next": "Weiter",
-    "previous": "Vorherige"
+    "previous": "Vorherige",
+    "readMore": "Mehr lesen",
+    "getStarted": "Loslegen",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen",
+    "contactUs": "Kontakt",
+    "bookConsultation": "Beratung buchen"
   }
 }
