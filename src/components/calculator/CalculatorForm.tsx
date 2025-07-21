@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui'
 import { ScrollAnimations } from '@/components/animations'
 import type { CalculatorInputs, CalculatorResults } from '@/types/calculator'
@@ -128,120 +129,272 @@ export default function CalculatorForm({ onResults, onLoading }: CalculatorFormP
     }
   }
 
+  // Premium animation variants matching homepage
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    }
+  }
+
+  const stepVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -50 }
+  }
+
   return (
-    <div className="max-w-2xl mx-auto">
-      {/* Progress Bar */}
-      <div className="mb-8">
-        <div className="flex justify-between items-center mb-4">
+    <motion.div 
+      className="max-w-4xl mx-auto"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      {/* Premium Progress Bar */}
+      <motion.div 
+        className="mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="flex justify-between items-center mb-8 relative">
+          {/* Connection line */}
+          <div className="absolute top-4 left-8 right-8 h-px bg-gradient-to-r from-yellow-400/30 via-green-400/30 via-cyan-400/30 to-purple-400/30" />
+          
           {steps.map((step, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`flex items-center ${index < steps.length - 1 ? 'flex-1' : ''}`}
+              className="flex flex-col items-center relative z-10"
+              whileHover={{ scale: index + 1 <= currentStep ? 1.1 : 1 }}
             >
-              <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
+              <motion.div
+                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all duration-300 ${
                   index + 1 <= currentStep
-                    ? 'bg-brand-primary text-white'
-                    : 'bg-gray-200 text-gray-500'
+                    ? 'bg-yellow-400 border-yellow-400 text-black shadow-lg shadow-yellow-400/30'
+                    : index + 1 === currentStep + 1 
+                    ? 'bg-yellow-400/20 border-yellow-400/60 text-yellow-400'
+                    : 'bg-white/10 border-white/30 text-gray-400'
                 }`}
+                animate={{
+                  scale: index + 1 === currentStep ? [1, 1.1, 1] : 1,
+                  boxShadow: index + 1 === currentStep ? [
+                    '0 0 0px rgba(255, 221, 0, 0)',
+                    '0 0 20px rgba(255, 221, 0, 0.4)',
+                    '0 0 0px rgba(255, 221, 0, 0)'
+                  ] : 'none'
+                }}
+                transition={{ duration: 2, repeat: index + 1 === currentStep ? Infinity : 0 }}
               >
-                {index + 1}
-              </div>
-              {index < steps.length - 1 && (
-                <div
-                  className={`flex-1 h-1 mx-2 ${
-                    index + 1 < currentStep ? 'bg-brand-primary' : 'bg-gray-200'
-                  }`}
-                />
-              )}
-            </div>
+                {index + 1 < currentStep ? (
+                  <motion.svg 
+                    className="w-4 h-4" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                    initial={{ pathLength: 0 }}
+                    animate={{ pathLength: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </motion.svg>
+                ) : (
+                  <span style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>{index + 1}</span>
+                )}
+              </motion.div>
+              
+              <motion.div 
+                className="text-center mt-3"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: index + 1 <= currentStep + 1 ? 1 : 0.5 }}
+                transition={{ delay: 0.2 }}
+              >
+                <p className={`text-sm font-medium ${
+                  index + 1 === currentStep ? 'text-yellow-400' : 
+                  index + 1 < currentStep ? 'text-green-400' : 'text-gray-400'
+                }`} style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  {step.title}
+                </p>
+                <p className="text-xs text-gray-400 mt-1" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  {step.description}
+                </p>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
-        <div className="text-center">
-          <h3 className="text-lg font-semibold text-osom-black">
-            {steps[currentStep - 1].title}
-          </h3>
-          <p className="text-brand-dark text-sm">
-            {steps[currentStep - 1].description}
-          </p>
-        </div>
-      </div>
+      </motion.div>
 
-      {/* Step Content */}
-      <div className="bg-white rounded-lg shadow-brand-lg p-6">
+      {/* Premium Step Content */}
+      <motion.div 
+        className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl rounded-3xl border border-white/20 p-8 relative overflow-hidden"
+        layout
+      >
+        {/* Background accent based on step */}
+        <motion.div
+          className="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-10 blur-3xl"
+          style={{ 
+            backgroundColor: currentStep === 1 ? '#FFDD00' : 
+                           currentStep === 2 ? '#10B981' : 
+                           currentStep === 3 ? '#06B6D4' : '#8B5CF6' 
+          }}
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        
+        <AnimatePresence mode="wait">
         {currentStep === 1 && (
-          <ScrollAnimations animation="fadeIn">
-            <div className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-osom-black mb-2">
-                  Taille de votre entreprise
+          <motion.div
+            key="step1"
+            variants={stepVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            transition={{ duration: 0.5 }}
+            className="space-y-8 relative z-10"
+          >
+            <motion.div 
+              className="text-center mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="flex items-center justify-center mb-4">
+                <motion.div 
+                  className="w-3 h-3 rounded-full bg-yellow-400 mr-3"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.7, 1, 0.7]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                <span className="text-yellow-400 text-sm font-medium tracking-wide" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  ÉTAPE 1/4 • VOTRE ENTREPRISE
+                </span>
+              </div>
+              <h3 className="text-2xl font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Parlez-nous de <span className="text-yellow-400 font-bold">votre entreprise</span>
+              </h3>
+              <p className="text-gray-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Ces informations nous aident à personnaliser vos projections ROI
+              </p>
+            </motion.div>
+
+            {/* Premium Form Fields */}
+            <div className="space-y-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <label className="block text-sm font-medium text-white mb-3" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  🏢 Taille de votre entreprise
                 </label>
-                <select
+                <motion.select
                   value={inputs.companySize}
                   onChange={(e) => handleInputChange('companySize', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 backdrop-blur-sm"
+                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                  whileFocus={{ scale: 1.02 }}
                 >
-                  <option value="startup">Startup (1-10 employés)</option>
-                  <option value="small">Petite entreprise (11-50 employés)</option>
-                  <option value="medium">Moyenne entreprise (51-200 employés)</option>
-                  <option value="large">Grande entreprise (200+ employés)</option>
-                </select>
+                  <option value="startup" className="bg-gray-900 text-white">Startup (1-10 employés)</option>
+                  <option value="small" className="bg-gray-900 text-white">Petite entreprise (11-50 employés)</option>
+                  <option value="medium" className="bg-gray-900 text-white">Moyenne entreprise (51-200 employés)</option>
+                  <option value="large" className="bg-gray-900 text-white">Grande entreprise (200+ employés)</option>
+                </motion.select>
                 {errors.companySize && (
-                  <p className="text-brand-accent text-sm mt-1">{errors.companySize}</p>
+                  <motion.p 
+                    className="text-red-400 text-sm mt-2"
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                  >
+                    ⚠️ {errors.companySize}
+                  </motion.p>
                 )}
-              </div>
+              </motion.div>
 
-              <div>
-                <label className="block text-sm font-medium text-osom-black mb-2">
-                  Secteur d&apos;activité
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <label className="block text-sm font-medium text-white mb-3" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  🎯 Secteur d&apos;activité
                 </label>
-                <select
+                <motion.select
                   value={inputs.industry}
                   onChange={(e) => handleInputChange('industry', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 backdrop-blur-sm"
+                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                  whileFocus={{ scale: 1.02 }}
                 >
-                  <option value="ecommerce">E-commerce</option>
-                  <option value="services">Services</option>
-                  <option value="saas">SaaS / Logiciel</option>
-                  <option value="manufacturing">Manufacturing</option>
-                  <option value="healthcare">Santé</option>
-                  <option value="finance">Finance</option>
-                  <option value="other">Autre</option>
-                </select>
+                  <option value="ecommerce" className="bg-gray-900 text-white">E-commerce</option>
+                  <option value="services" className="bg-gray-900 text-white">Services</option>
+                  <option value="saas" className="bg-gray-900 text-white">SaaS / Logiciel</option>
+                  <option value="manufacturing" className="bg-gray-900 text-white">Manufacturing</option>
+                  <option value="healthcare" className="bg-gray-900 text-white">Santé</option>
+                  <option value="finance" className="bg-gray-900 text-white">Finance</option>
+                  <option value="other" className="bg-gray-900 text-white">Autre</option>
+                </motion.select>
                 {errors.industry && (
-                  <p className="text-brand-accent text-sm mt-1">{errors.industry}</p>
+                  <motion.p 
+                    className="text-red-400 text-sm mt-2"
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                  >
+                    ⚠️ {errors.industry}
+                  </motion.p>
                 )}
-              </div>
+              </motion.div>
 
-              <div>
-                <label className="block text-sm font-medium text-osom-black mb-2">
-                  Avez-vous une équipe marketing interne ?
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                <label className="block text-sm font-medium text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  👥 Avez-vous une équipe marketing interne ?
                 </label>
-                <div className="flex space-x-4">
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="hasInternalTeam"
-                      checked={inputs.hasInternalTeam === true}
-                      onChange={() => handleInputChange('hasInternalTeam', true)}
-                      className="mr-2"
-                    />
-                    Oui
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="hasInternalTeam"
-                      checked={inputs.hasInternalTeam === false}
-                      onChange={() => handleInputChange('hasInternalTeam', false)}
-                      className="mr-2"
-                    />
-                    Non
-                  </label>
+                <div className="flex gap-4">
+                  {[{value: true, label: 'Oui', icon: '✅'}, {value: false, label: 'Non', icon: '❌'}].map((option) => (
+                    <motion.label 
+                      key={option.label}
+                      className={`flex-1 flex items-center justify-center p-4 rounded-xl border-2 cursor-pointer transition-all duration-300 ${
+                        inputs.hasInternalTeam === option.value
+                          ? 'border-yellow-400 bg-yellow-400/10 text-yellow-400'
+                          : 'border-white/20 bg-white/5 text-white hover:border-white/40'
+                      }`}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <input
+                        type="radio"
+                        name="hasInternalTeam"
+                        checked={inputs.hasInternalTeam === option.value}
+                        onChange={() => handleInputChange('hasInternalTeam', option.value)}
+                        className="sr-only"
+                      />
+                      <span className="text-lg mr-3">{option.icon}</span>
+                      <span className="font-medium" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>{option.label}</span>
+                    </motion.label>
+                  ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </ScrollAnimations>
+          </motion.div>
         )}
 
         {currentStep === 2 && (
@@ -406,36 +559,59 @@ export default function CalculatorForm({ onResults, onLoading }: CalculatorFormP
           </ScrollAnimations>
         )}
 
-        {/* Navigation */}
-        <div className="flex justify-between mt-8">
-          <Button
-            variant="outline"
+        </AnimatePresence>
+        
+        {/* Premium Navigation */}
+        <motion.div 
+          className="flex justify-between items-center mt-12 pt-8 border-t border-white/10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+        >
+          <motion.button
             onClick={handlePrevious}
             disabled={currentStep === 1}
-            className="px-6"
+            className={`px-8 py-3 rounded-xl font-medium transition-all duration-300 ${
+              currentStep === 1 
+                ? 'text-gray-500 cursor-not-allowed opacity-50' 
+                : 'text-white border-2 border-white/30 hover:border-white/60 hover:bg-white/10'
+            }`}
+            style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+            whileHover={currentStep === 1 ? {} : { scale: 1.05 }}
+            whileTap={currentStep === 1 ? {} : { scale: 0.95 }}
           >
-            Précédent
-          </Button>
+            ← Précédent
+          </motion.button>
           
           {currentStep < steps.length ? (
-            <Button
-              variant="primary"
+            <motion.button
               onClick={handleNext}
-              className="px-6"
+              className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 10px 30px rgba(255, 221, 0, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
             >
-              Suivant
-            </Button>
+              Suivant →
+            </motion.button>
           ) : (
-            <Button
-              variant="primary"
+            <motion.button
               onClick={handleSubmit}
-              className="px-6"
+              className="bg-gradient-to-r from-green-400 to-green-500 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 15px 40px rgba(16, 185, 129, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
             >
-              Calculer le ROI
-            </Button>
+              🚀 Calculer le ROI
+            </motion.button>
           )}
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   )
 }

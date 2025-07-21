@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import InteractiveBenefitCards from '@/components/contact/InteractiveBenefitCards'
+import AnimatedCounter from '@/components/ui/AnimatedCounter'
 
 interface ContactDictionary {
   title: string
@@ -164,42 +165,290 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              {dictionary.title}
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              {dictionary.subtitle}
-            </p>
+      {/* Premium Hero Section - Homepage Level */}
+      <section className="py-20 lg:py-32 relative overflow-hidden">
+        {/* Multi-layered Background System */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2306B6D4' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <button
+        {/* Premium Gradient Animation */}
+        <motion.div
+          className="absolute inset-0 opacity-10"
+          animate={{
+            background: [
+              "radial-gradient(circle at 25% 25%, #06b6d415, transparent 50%)",
+              "radial-gradient(circle at 75% 75%, #06b6d420, transparent 50%)",
+              "radial-gradient(circle at 25% 25%, #06b6d415, transparent 50%)"
+            ]
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        {/* Floating Accent Elements */}
+        <motion.div
+          className="absolute top-20 right-20 w-64 h-64 rounded-full opacity-20 blur-3xl"
+          style={{ backgroundColor: "#06B6D4" }}
+          animate={{
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-32 left-16 w-48 h-48 rounded-full opacity-10 blur-2xl"
+          style={{ backgroundColor: "#FFDD00" }}
+          animate={{
+            x: [0, -20, 0],
+            y: [0, 15, 0],
+            scale: [1, 0.9, 1]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 5
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center">
+            {/* Premium Badge with Pulse Animation */}
+            <motion.div 
+              className="flex items-center justify-center mb-8"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, ease: [0.25, 0.25, 0.25, 0.75] }}
+            >
+              <motion.div 
+                className="w-2 h-2 rounded-full bg-cyan-400 mr-3"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <span className="text-cyan-400 text-sm font-medium tracking-wide">
+                CONSULTATION GRATUITE • RÉSULTATS GARANTIS
+              </span>
+            </motion.div>
+            
+            {/* Premium Title with Word-by-Word Animation */}
+            <motion.h1 
+              className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight tracking-tight" 
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.25, 0.25, 0.25, 0.75] }}
+            >
+              {dictionary.title.split(' ').map((word, index) => {
+                const isHighlight = word.toLowerCase().includes('contact') || word.toLowerCase().includes('consultation')
+                return (
+                  <motion.span
+                    key={index}
+                    className={isHighlight ? 'text-cyan-400 font-bold' : ''}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      duration: 0.8, 
+                      delay: index * 0.1 + 0.3,
+                      ease: [0.25, 0.25, 0.25, 0.75]
+                    }}
+                  >
+                    {word}{' '}
+                  </motion.span>
+                )
+              })}
+            </motion.h1>
+            
+            {/* Enhanced Description */}
+            <motion.p 
+              className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto" 
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              {dictionary.subtitle}
+              <br />
+              <span className="text-cyan-400 font-semibold">30 minutes</span> pour définir votre stratégie de 
+              <span className="text-yellow-400 font-semibold"> croissance digitale</span> personnalisée.
+            </motion.p>
+            
+            {/* Premium Animated Stats Pills */}
+            <motion.div 
+              className="flex flex-wrap justify-center gap-6 mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              {[
+                { label: "Consultation", detail: "100% gratuite", color: "#06B6D4", icon: "🎯" },
+                { label: "Stratégie", detail: "personnalisée", color: "#10B981", icon: "📋" },
+                { label: "ROI garanti", detail: "ou remboursé", color: "#FFDD00", icon: "💎" },
+                { label: "Experts", detail: "certifiés", color: "#8B5CF6", icon: "⭐" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl rounded-2xl px-6 py-4 border transition-all duration-500 group cursor-pointer"
+                  style={{ 
+                    borderColor: `${stat.color}20`,
+                    backgroundColor: 'transparent'
+                  }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    boxShadow: `0 10px 20px ${stat.color}20`,
+                    borderColor: `${stat.color}40`
+                  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 1 }}
+                >
+                  <div className="flex items-center">
+                    <span className="text-lg mr-2">{stat.icon}</span>
+                    <div>
+                      <span className="font-bold" style={{ color: stat.color }}>
+                        {stat.label}
+                      </span>
+                      <span className="text-gray-300 ml-2 text-sm">{stat.detail}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Premium CTA Buttons */}
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <motion.button
                 onClick={scheduleConsultation}
-                className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold text-lg shadow-lg"
+                className="bg-gradient-to-r from-cyan-400 to-cyan-500 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg relative overflow-hidden group"
                 style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)"
+                }}
+                whileTap={{ scale: 0.98 }}
               >
-                {dictionary.cta_schedule} ⚡
-              </button>
+                <span className="relative z-10 flex items-center justify-center">
+                  🎯 {dictionary.cta_schedule}
+                  <motion.span
+                    className="ml-2"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                </span>
+              </motion.button>
               
-              <div className="text-gray-400">ou</div>
+              <div className="text-gray-400 text-lg font-medium">ou</div>
               
-              <Link
+              <motion.a
                 href="#questionnaire"
-                className="border-2 border-yellow-400/50 text-yellow-400 px-8 py-4 rounded-lg hover:bg-yellow-400 hover:text-black transition-colors font-medium backdrop-blur-sm"
+                className="border-2 border-cyan-400/60 text-cyan-400 px-10 py-4 rounded-xl font-medium text-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 backdrop-blur-sm"
                 style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
-                {dictionary.cta_questionnaire} 📝
-              </Link>
-            </div>
-          </motion.div>
+                📝 {dictionary.cta_questionnaire}
+              </motion.a>
+            </motion.div>
+
+            {/* Premium Trust Indicators */}
+            <motion.div 
+              className="flex flex-wrap justify-center gap-8 text-gray-400 text-sm"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
+            >
+              <div className="flex items-center">
+                <motion.div 
+                  className="w-2 h-2 rounded-full bg-green-400 mr-2"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                <span>+100 Projets Réalisés</span>
+              </div>
+              <div className="flex items-center">
+                <motion.div 
+                  className="w-2 h-2 rounded-full bg-cyan-400 mr-2"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                />
+                <span>Valais + Suisse Romande</span>
+              </div>
+              <div className="flex items-center">
+                <motion.div 
+                  className="w-2 h-2 rounded-full bg-yellow-400 mr-2"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                />
+                <span>Réponse &lt; 24h Garantie</span>
+              </div>
+            </motion.div>
+
+            {/* Animated Metrics Section */}
+            <motion.div 
+              className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+            >
+              {[
+                { value: 140, label: "ROI Moyen", suffix: "x", color: "#10B981", icon: "📈" },
+                { value: 688, label: "Conversions Générées", suffix: "", color: "#06B6D4", icon: "🎯" },
+                { value: 24, label: "Heures Response", suffix: "h", color: "#FFDD00", icon: "⚡" }
+              ].map((metric, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center group"
+                  whileHover={{ scale: 1.05 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2 + 1.8 }}
+                >
+                  <motion.div
+                    className="text-4xl mb-2"
+                    animate={{ 
+                      rotate: [0, 10, -10, 0],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ 
+                      duration: 4,
+                      repeat: Infinity,
+                      delay: index * 0.5
+                    }}
+                  >
+                    {metric.icon}
+                  </motion.div>
+                  
+                  <div className="text-4xl font-bold mb-2" style={{ color: metric.color, fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                    <AnimatedCounter from={0} to={metric.value} duration={2.5} />{metric.suffix}
+                  </div>
+                  
+                  <p className="text-white font-medium" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>{metric.label}</p>
+                  <p className="text-gray-400 text-sm">Données clients réelles</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
 
