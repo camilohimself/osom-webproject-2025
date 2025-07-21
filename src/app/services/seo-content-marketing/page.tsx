@@ -25,19 +25,19 @@ export default function SEOContentMarketingPage() {
             {/* KPI Hero */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+                <div className="text-4xl font-light text-cyan-400 mb-2">397x</div>
+                <div className="text-white font-medium mb-2">Potentiel Révélé</div>
+                <div className="text-gray-400 text-sm">vs concurrents sans GA4/GSC</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
                 <div className="text-4xl font-light text-cyan-400 mb-2">68.6%</div>
                 <div className="text-white font-medium mb-2">Engagement SEO</div>
                 <div className="text-gray-400 text-sm">vs 44.6% trafic direct</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
-                <div className="text-4xl font-light text-cyan-400 mb-2">+54%</div>
-                <div className="text-white font-medium mb-2">Plus Qualifié</div>
-                <div className="text-gray-400 text-sm">Trafic SEO vs autres canaux</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
-                <div className="text-4xl font-light text-cyan-400 mb-2">5x</div>
-                <div className="text-white font-medium mb-2">Potentiel Growth</div>
-                <div className="text-gray-400 text-sm">Secteurs niche optimisés</div>
+                <div className="text-4xl font-light text-cyan-400 mb-2">22</div>
+                <div className="text-white font-medium mb-2">Mots-Clés Manqués</div>
+                <div className="text-gray-400 text-sm">Audit externe exclusivement</div>
               </div>
             </div>
 
@@ -59,43 +59,77 @@ export default function SEOContentMarketingPage() {
               <span className="text-cyan-400">Diagnostic</span> Révélateur
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Notre audit technique révèle pourquoi votre SEO ne performe pas
+              Notre audit externe révèle les gaps invisibles même sans accès GA4/GSC
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Case Study ADL */}
-            <div className="bg-black/30 rounded-2xl p-8 border border-gray-700">
-              <h3 className="text-2xl font-semibold text-white mb-6">Cas Artisane de Lumière</h3>
-              <div className="space-y-6">
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-gray-300">Trafic Direct</span>
-                    <span className="text-gray-400">44.6% engagement</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Case Studies - Stack verticalement */}
+            <div className="space-y-8">
+              {/* Case Study ADL */}
+              <div className="bg-black/30 rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-semibold text-white mb-6">Cas Artisane de Lumière</h3>
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-300">Trafic Direct</span>
+                      <span className="text-gray-400">44.6% engagement</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <div className="bg-gray-400 h-3 rounded-full" style={{width: '45%'}}></div>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-3">
-                    <div className="bg-gray-400 h-3 rounded-full" style={{width: '45%'}}></div>
+                  
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-300">Trafic SEO OSOM</span>
+                      <span className="text-cyan-400 font-bold">68.6% engagement</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <div className="bg-cyan-400 h-3 rounded-full" style={{width: '69%'}}></div>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-gray-700">
+                    <div className="text-cyan-400 text-3xl font-light mb-2">+54% plus qualifié</div>
+                    <div className="text-gray-400 text-sm">Diagnostic sur 200 jours de données GA4</div>
                   </div>
                 </div>
-                
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-gray-300">Trafic SEO OSOM</span>
-                    <span className="text-cyan-400 font-bold">68.6% engagement</span>
+              </div>
+
+              {/* Case Study Gerance Swiss */}
+              <div className="bg-black/30 rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-semibold text-white mb-6">Audit Gérance Swiss</h3>
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-300">Gérance Swiss</span>
+                      <span className="text-gray-400">0.07 visibilité</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <div className="bg-gray-400 h-3 rounded-full" style={{width: '1%'}}></div>
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-3">
-                    <div className="bg-cyan-400 h-3 rounded-full" style={{width: '69%'}}></div>
+                  
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-300">Concurrent Leader</span>
+                      <span className="text-cyan-400 font-bold">28.35 visibilité</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-3">
+                      <div className="bg-cyan-400 h-3 rounded-full" style={{width: '100%'}}></div>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="pt-4 border-t border-gray-700">
-                  <div className="text-cyan-400 text-3xl font-light mb-2">+54% plus qualifié</div>
-                  <div className="text-gray-400 text-sm">Diagnostic sur 200 jours de données GA4</div>
+                  
+                  <div className="pt-4 border-t border-gray-700">
+                    <div className="text-cyan-400 text-3xl font-light mb-2">397x potentiel</div>
+                    <div className="text-gray-400 text-sm">Audit externe sans accès GA4/GSC</div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Services SEO */}
+            {/* Méthodologie Audit */}
             <div>
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
@@ -103,8 +137,18 @@ export default function SEOContentMarketingPage() {
                     <span className="text-black font-bold">🔍</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Audit Technique</h3>
-                    <p className="text-gray-300">Analyse complète : structure, vitesse, indexation, erreurs techniques</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Audit Externe</h3>
+                    <p className="text-gray-300">Analyse sans accès GA4/GSC révèle gaps invisibles des propriétaires</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-black font-bold">⚡</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Benchmarking Concurrentiel</h3>
+                    <p className="text-gray-300">Comparaison précise avec leaders du secteur, potentiel quantifié</p>
                   </div>
                 </div>
                 
@@ -113,18 +157,8 @@ export default function SEOContentMarketingPage() {
                     <span className="text-black font-bold">🎯</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Stratégie Contenu</h3>
-                    <p className="text-gray-300">Mots-clés secteur spécifique, intent mapping, calendrier éditorial</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-black font-bold">📊</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Tracking ROI</h3>
-                    <p className="text-gray-300">Setup GA4 professionnel, conversions mesurables, reporting transparent</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Opportunités Cachées</h3>
+                    <p className="text-gray-300">22 mots-clés commerciaux non exploités révélés par analyse externe</p>
                   </div>
                 </div>
               </div>
