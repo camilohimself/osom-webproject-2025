@@ -18,7 +18,18 @@ const InteractiveBackground = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [particles, setParticles] = useState<Particle[]>([])
+  const [isMobile, setIsMobile] = useState(false)
   const animationFrame = useRef<number | null>(null)
+
+  // Mobile detection
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || 'ontouchstart' in window)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // Initialize particles
   useEffect(() => {
@@ -27,7 +38,9 @@ const InteractiveBackground = () => {
     
     const initParticles = () => {
       const newParticles: Particle[] = []
-      for (let i = 0; i < 50; i++) {
+      // Reduce particles on mobile for 60fps
+      const particleCount = isMobile ? 25 : 50
+      for (let i = 0; i < particleCount; i++) {
         newParticles.push({
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
@@ -44,17 +57,19 @@ const InteractiveBackground = () => {
     initParticles()
     window.addEventListener('resize', initParticles)
     return () => window.removeEventListener('resize', initParticles)
-  }, [])
+  }, [isMobile])
 
-  // Mouse move handler
+  // Mouse move handler - disabled on mobile for performance
   useEffect(() => {
+    if (isMobile) return
+
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+  }, [isMobile])
 
   // Animation loop
   useEffect(() => {
@@ -72,15 +87,17 @@ const InteractiveBackground = () => {
 
       setParticles(prevParticles => 
         prevParticles.map(particle => {
-          // Mouse attraction
-          const dx = mousePosition.x - particle.x
-          const dy = mousePosition.y - particle.y
-          const distance = Math.sqrt(dx * dx + dy * dy)
-          
-          if (distance < 150) {
-            const force = (150 - distance) / 150 * 0.01
-            particle.vx += dx * force * 0.1
-            particle.vy += dy * force * 0.1
+          // Mouse attraction - only on desktop
+          if (!isMobile) {
+            const dx = mousePosition.x - particle.x
+            const dy = mousePosition.y - particle.y
+            const distance = Math.sqrt(dx * dx + dy * dy)
+            
+            if (distance < 150) {
+              const force = (150 - distance) / 150 * 0.01
+              particle.vx += dx * force * 0.1
+              particle.vy += dy * force * 0.1
+            }
           }
 
           // Update position
@@ -101,22 +118,24 @@ const InteractiveBackground = () => {
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`
           ctx.fill()
 
-          // Draw connections
-          prevParticles.forEach(otherParticle => {
-            const dx2 = particle.x - otherParticle.x
-            const dy2 = particle.y - otherParticle.y
-            const distance2 = Math.sqrt(dx2 * dx2 + dy2 * dy2)
+          // Draw connections - reduced on mobile
+          if (!isMobile) {
+            prevParticles.forEach(otherParticle => {
+              const dx2 = particle.x - otherParticle.x
+              const dy2 = particle.y - otherParticle.y
+              const distance2 = Math.sqrt(dx2 * dx2 + dy2 * dy2)
 
-            if (distance2 < 100) {
-              ctx.beginPath()
-              ctx.moveTo(particle.x, particle.y)
-              ctx.lineTo(otherParticle.x, otherParticle.y)
-              const opacity = (100 - distance2) / 100 * 0.1
-              ctx.strokeStyle = `#FFDD00${Math.floor(opacity * 255).toString(16).padStart(2, '0')}`
-              ctx.lineWidth = 0.5
-              ctx.stroke()
-            }
-          })
+              if (distance2 < 100) {
+                ctx.beginPath()
+                ctx.moveTo(particle.x, particle.y)
+                ctx.lineTo(otherParticle.x, otherParticle.y)
+                const opacity = (100 - distance2) / 100 * 0.1
+                ctx.strokeStyle = `#FFDD00${Math.floor(opacity * 255).toString(16).padStart(2, '0')}`
+                ctx.lineWidth = 0.5
+                ctx.stroke()
+              }
+            })
+          }
 
           return particle
         })
@@ -132,7 +151,7 @@ const InteractiveBackground = () => {
         cancelAnimationFrame(animationFrame.current)
       }
     }
-  }, [mousePosition])
+  }, [mousePosition, isMobile])
 
   return (
     <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0">

@@ -1,8 +1,9 @@
 'use client'
 
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useAnalytics } from '@/hooks/useAnalytics'
 
 interface MagneticButtonProps {
   href: string
@@ -10,6 +11,7 @@ interface MagneticButtonProps {
   className?: string
   variant?: 'primary' | 'secondary'
   style?: React.CSSProperties
+  analyticsId?: string
 }
 
 const MagneticButton = ({ 
@@ -17,10 +19,14 @@ const MagneticButton = ({
   children, 
   className = '', 
   variant = 'primary',
-  style = {}
+  style = {},
+  analyticsId
 }: MagneticButtonProps) => {
   const ref = useRef<HTMLAnchorElement>(null)
   const [isHovered, setIsHovered] = useState(false)
+  const [isTouched, setIsTouched] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  const { trackInteraction, trackServiceInterest } = useAnalytics()
   
   // Mouse position relative to button
   const x = useMotionValue(0)
@@ -30,23 +36,35 @@ const MagneticButton = ({
   const springX = useSpring(x, { stiffness: 150, damping: 15 })
   const springY = useSpring(y, { stiffness: 150, damping: 15 })
   
-  // Transform values for different effects
-  const rotateX = useTransform(springY, [-0.5, 0.5], [15, -15])
-  const rotateY = useTransform(springX, [-0.5, 0.5], [-15, 15])
+  // Mobile detection
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || 'ontouchstart' in window)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Transform values for different effects (reduced for mobile)
+  const rotateX = useTransform(springY, [-0.5, 0.5], isMobile ? [5, -5] : [15, -15])
+  const rotateY = useTransform(springX, [-0.5, 0.5], isMobile ? [-5, 5] : [-15, 15])
   const scale = useTransform([springX, springY], (values: number[]) => {
     const x = values[0]
     const y = values[1]
-    return isHovered ? 1.05 + Math.sqrt(x * x + y * y) * 0.1 : 1
+    const baseScale = isMobile ? 1.02 : 1.05
+    const isActive = isHovered || isTouched
+    return isActive ? baseScale + Math.sqrt(x * x + y * y) * (isMobile ? 0.05 : 0.1) : 1
   })
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!ref.current) return
+  const handlePointerMove = (e: React.PointerEvent<HTMLAnchorElement>) => {
+    if (!ref.current || isMobile) return
     
     const rect = ref.current.getBoundingClientRect()
     const centerX = rect.left + rect.width / 2
     const centerY = rect.top + rect.height / 2
     
-    // Normalize mouse position (-0.5 to 0.5)
+    // Normalize pointer position (-0.5 to 0.5)
     const normalizedX = (e.clientX - centerX) / rect.width
     const normalizedY = (e.clientY - centerY) / rect.height
     
@@ -54,14 +72,45 @@ const MagneticButton = ({
     y.set(normalizedY)
   }
 
-  const handleMouseLeave = () => {
+  const handlePointerLeave = () => {
     setIsHovered(false)
+    setIsTouched(false)
     x.set(0)
     y.set(0)
   }
 
-  const handleMouseEnter = () => {
-    setIsHovered(true)
+  const handlePointerEnter = () => {
+    if (!isMobile) {
+      setIsHovered(true)
+    }
+  }
+
+  const handleTouchStart = () => {
+    setIsTouched(true)
+  }
+
+  const handleTouchEnd = () => {
+    setIsTouched(false)
+    x.set(0)
+    y.set(0)
+  }
+
+  const handleClick = () => {
+    // Track magnetic button interaction
+    if (analyticsId) {
+      trackInteraction('magnetic_button', analyticsId, 'click')
+    }
+
+    // Track service interest if it's a service-related link
+    if (href.includes('/services/')) {
+      const serviceName = href.split('/services/')[1]
+      trackServiceInterest(serviceName, href.includes('/contact') ? 'contact' : 'view')
+    }
+
+    // Track CTA clicks
+    if (href.includes('/contact') || href.includes('/calculator')) {
+      trackServiceInterest('general', href.includes('/contact') ? 'contact' : 'calculator')
+    }
   }
 
   const baseClasses = variant === 'primary' 
@@ -84,31 +133,41 @@ const MagneticButton = ({
         href={href}
         className={`
           relative px-8 py-4 rounded-lg font-bold shadow-lg transition-all duration-300 
-          flex items-center justify-center overflow-hidden group
-          ${baseClasses} ${className}
+          flex items-center justify-center overflow-hidden group select-none
+          ${isMobile ? 'active:scale-95' : ''} ${baseClasses} ${className}
         `}
         style={style}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        onMouseEnter={handleMouseEnter}
+        onClick={handleClick}
+        onPointerMove={handlePointerMove}
+        onPointerLeave={handlePointerLeave}
+        onPointerEnter={handlePointerEnter}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         {/* Glowing background on hover */}
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0"
-          initial={{ x: '-100%' }}
-          animate={isHovered ? { x: '100%' } : { x: '-100%' }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-        />
+        {!isMobile && (
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0"
+            initial={{ x: '-100%' }}
+            animate={isHovered ? { x: '100%' } : { x: '-100%' }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+          />
+        )}
         
-        {/* Ripple effect */}
+        {/* Ripple effect - optimized for mobile */}
         <motion.div
           className="absolute inset-0 rounded-lg"
           style={{
-            background: 'radial-gradient(circle at center, rgba(255, 221, 0, 0.1) 0%, transparent 70%)',
+            background: isMobile 
+              ? 'rgba(255, 221, 0, 0.1)' 
+              : 'radial-gradient(circle at center, rgba(255, 221, 0, 0.1) 0%, transparent 70%)',
           }}
           initial={{ scale: 0, opacity: 0 }}
-          animate={isHovered ? { scale: 2, opacity: 1 } : { scale: 0, opacity: 0 }}
-          transition={{ duration: 0.4 }}
+          animate={(isHovered || isTouched) ? { scale: isMobile ? 1.1 : 2, opacity: 1 } : { scale: 0, opacity: 0 }}
+          transition={{ 
+            duration: isMobile ? 0.2 : 0.4,
+            ease: isMobile ? "easeOut" : "easeInOut"
+          }}
         />
 
         {/* Content */}
@@ -138,8 +197,8 @@ const MagneticButton = ({
           </motion.svg>
         </motion.span>
 
-        {/* Particles on hover */}
-        {[...Array(6)].map((_, i) => (
+        {/* Particles on hover - reduced for mobile performance */}
+        {!isMobile && [...Array(6)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-yellow-400 rounded-full"
@@ -162,6 +221,16 @@ const MagneticButton = ({
             }}
           />
         ))}
+        
+        {/* Mobile-specific touch feedback */}
+        {isMobile && isTouched && (
+          <motion.div
+            className="absolute inset-0 bg-yellow-400/20 rounded-lg"
+            initial={{ scale: 1 }}
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 0.2 }}
+          />
+        )}
       </Link>
     </motion.div>
   )

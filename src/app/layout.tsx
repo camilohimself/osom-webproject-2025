@@ -5,6 +5,7 @@ import { Header, Footer } from '@/components/layout'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, locales, type Locale } from '@/lib/i18n'
 import { cookies } from 'next/headers'
+import AnalyticsScripts from '@/components/analytics/AnalyticsScripts'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,6 +56,9 @@ export default async function RootLayout({
           </main>
           <Footer currentLocale={currentLocale} dictionary={dictionary} />
         </div>
+        
+        {/* Advanced Analytics Scripts */}
+        <AnalyticsScripts />
       </body>
     </html>
   )
