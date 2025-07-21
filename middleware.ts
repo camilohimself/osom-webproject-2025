@@ -17,23 +17,17 @@ export function middleware(request: NextRequest) {
     return response
   }
 
-  // Handle direct URL slugs like /en, /de, /fr
+  // Handle direct URL slugs like /en, /de (redirect to root with cookie)
   const pathSegments = pathname.split('/')
   const firstSegment = pathSegments[1]
   
-  if (firstSegment && locales.includes(firstSegment as any)) {
-    // Set the locale cookie and rewrite to the path without locale
-    const pathWithoutLocale = '/' + pathSegments.slice(2).join('/')
-    const response = NextResponse.rewrite(new URL(pathWithoutLocale || '/', request.url))
-    
+  if (firstSegment && locales.includes(firstSegment as any) && pathname !== '/') {
+    // Redirect to root and set cookie - this prevents 404s
+    const response = NextResponse.redirect(new URL('/', request.url))
     response.cookies.set('NEXT_LOCALE', firstSegment, {
       maxAge: 60 * 60 * 24 * 365, // 1 year
       httpOnly: false,
     })
-    
-    // Also set a header so layout can read it immediately
-    response.headers.set('x-current-locale', firstSegment)
-    
     return response
   }
 

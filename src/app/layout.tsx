@@ -4,7 +4,7 @@ import '@/styles/globals.css'
 import { Header, Footer } from '@/components/layout'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, locales, type Locale } from '@/lib/i18n'
-import { cookies, headers } from 'next/headers'
+import { cookies } from 'next/headers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,19 +29,12 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // Get locale from header first (set by middleware for URL slugs), then fallback to cookie
-  const headersList = await headers()
+  // Get locale from cookie (set by middleware)
   const cookieStore = await cookies()
-  
-  const headerLocale = headersList.get('x-current-locale')
   const localeCookie = cookieStore.get('NEXT_LOCALE')?.value
   
   let currentLocale = defaultLocale
-  
-  // Priority: header from middleware (for /en, /de URLs) > cookie > default
-  if (headerLocale && locales.includes(headerLocale as Locale)) {
-    currentLocale = headerLocale as Locale
-  } else if (localeCookie && locales.includes(localeCookie as Locale)) {
+  if (localeCookie && locales.includes(localeCookie as Locale)) {
     currentLocale = localeCookie as Locale
   }
 

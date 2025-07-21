@@ -19,12 +19,12 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
 
   const handleLanguageChange = (locale: Locale) => {
     setIsOpen(false)
-    // Redirect to locale slug URLs like /en, /de, or / for French
-    if (locale === 'fr') {
-      window.location.href = '/'
-    } else {
-      window.location.href = `/${locale}`
-    }
+    
+    // Set cookie directly and reload - this ensures immediate update
+    document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=${60 * 60 * 24 * 365}`
+    
+    // Reload to apply the new locale
+    window.location.reload()
   }
 
   return (
