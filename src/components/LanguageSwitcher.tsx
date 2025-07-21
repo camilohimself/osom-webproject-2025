@@ -19,8 +19,12 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
 
   const handleLanguageChange = (locale: Locale) => {
     setIsOpen(false)
-    // Simple redirect - let the server handle the rest
-    window.location.href = `/?locale=${locale}`
+    // Redirect to locale slug URLs like /en, /de, or / for French
+    if (locale === 'fr') {
+      window.location.href = '/'
+    } else {
+      window.location.href = `/${locale}`
+    }
   }
 
   return (
