@@ -81,17 +81,65 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                     
                     {/* Menu déroulant Services */}
                     {isServicesMenuOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-yellow-400/20 z-50">
-                        <div className="py-2">
-                          {services.map((service) => (
-                            <Link
-                              key={service.href}
-                              href={service.href}
-                              className="block px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm"
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
+                      <div className="absolute top-full left-0 mt-2 w-[520px] bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-yellow-400/20 z-50">
+                        <div className="p-6">
+                          <div className="grid grid-cols-2 gap-8">
+                            {/* Services Digitaux */}
+                            <div>
+                              <div className="mb-4">
+                                <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-1">Services Digitaux</h3>
+                                <p className="text-xs text-gray-400">Solutions techniques & créatives professionnelles</p>
+                              </div>
+                              <div className="space-y-1">
+                                <Link
+                                  href="/services/creation-site-web"
+                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                >
+                                  Création Site Web
+                                </Link>
+                                <Link
+                                  href="/services/identite-design"
+                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                >
+                                  Identité & Design
+                                </Link>
+                                <Link
+                                  href="/services/seo-content-marketing"
+                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                >
+                                  SEO & Content Marketing
+                                </Link>
+                              </div>
+                            </div>
+
+                            {/* Growth & Performance */}
+                            <div>
+                              <div className="mb-4">
+                                <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-1">Growth & Performance</h3>
+                                <p className="text-xs text-gray-400">Acquisition client & optimisation ROI</p>
+                              </div>
+                              <div className="space-y-1">
+                                <Link
+                                  href="/services/paid-media-growth"
+                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                >
+                                  Paid Media & Growth
+                                </Link>
+                                <Link
+                                  href="/services/marketing-automation-crm"
+                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                >
+                                  Marketing Automation & CRM
+                                </Link>
+                                <Link
+                                  href="/services/tracking-data"
+                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                >
+                                  Tracking & Data
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     )}
