@@ -15,10 +15,10 @@ export const pathnames = {
     en: '/services/web-development',
     de: '/dienstleistungen/webentwicklung'
   },
-  '/services/identite-design': {
-    fr: '/services/identite-design',
-    en: '/services/brand-design',
-    de: '/dienstleistungen/markendesign'
+  '/services/programmation-ia': {
+    fr: '/services/programmation-ia',
+    en: '/services/programming-ai',
+    de: '/dienstleistungen/programmierung-ki'
   },
   '/services/seo-content-marketing': {
     fr: '/services/seo-content-marketing',
@@ -64,6 +64,11 @@ export const pathnames = {
     fr: '/local',
     en: '/local',
     de: '/lokal'
+  },
+  '/outils': {
+    fr: '/outils',
+    en: '/tools',
+    de: '/werkzeuge'
   }
 } as const
 

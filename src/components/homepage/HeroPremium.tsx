@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { GraphiqueLinear } from '@/components/ui'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
+import ABTestedCTA from '@/components/ab-testing/ABTestedCTA'
 
 interface HeroPremiumProps {
   dictionary: {
@@ -222,100 +223,19 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
               {dictionary.hero.description}
             </motion.p>
             
-            {/* Ultra-Premium CTA Buttons */}
+            {/* A/B Tested CTA Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-6 mb-12"
               variants={itemVariants}
               transition={{ duration: 0.8, ease: [0.25, 0.25, 0.25, 0.75] }}
             >
-              {/* Primary CTA - Professional */}
-              <motion.div
-                className="group relative"
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 15px 30px rgba(255, 221, 0, 0.25)"
+              <ABTestedCTA
+                defaultPrimary={dictionary.hero.cta_primary}
+                defaultSecondary={dictionary.hero.cta_secondary}
+                className="mb-12"
+                onConversion={() => {
+                  console.log('🎯 Hero CTA conversion tracked')
                 }}
-                whileTap={{ 
-                  scale: 0.98
-                }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 300, 
-                  damping: 20
-                }}
-              >
-                <Link
-                  href="/contact"
-                  className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-10 py-5 rounded-xl font-bold shadow-xl relative overflow-hidden block text-center"
-                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                >
-                  {/* Subtle Hover Gradient */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-400 opacity-0 group-hover:opacity-100"
-                    transition={{ duration: 0.3 }}
-                  />
-                  
-                  {/* Content */}
-                  <div className="relative z-10 flex items-center justify-center">
-                    <motion.span
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      {dictionary.hero.cta_primary}
-                    </motion.span>
-                    
-                    {/* Simple Arrow */}
-                    <motion.span
-                      className="ml-3 text-lg"
-                      animate={{ 
-                        x: [0, 4, 0]
-                      }}
-                      transition={{ 
-                        duration: 2, 
-                        repeat: Infinity, 
-                        ease: "easeInOut"
-                      }}
-                    >
-                      →
-                    </motion.span>
-                  </div>
-                </Link>
-              </motion.div>
-
-              {/* Secondary CTA - Professional */}
-              <motion.div
-                className="group relative"
-                whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)"
-                }}
-                whileTap={{ 
-                  scale: 0.98
-                }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 300, 
-                  damping: 20
-                }}
-              >
-                <Link
-                  href="/calculator"
-                  className="group border-2 border-white/30 text-white px-10 py-5 rounded-xl font-semibold backdrop-blur-sm relative overflow-hidden block text-center hover:border-white/60 hover:bg-white/10 transition-all duration-300"
-                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                >
-                  {/* Subtle Hover Glow */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 opacity-0 group-hover:opacity-100"
-                    transition={{ duration: 0.3 }}
-                  />
-                  
-                  {/* Content */}
-                  <div className="relative z-10 flex items-center justify-center">
-                    <span>
-                      {dictionary.hero.cta_secondary}
-                    </span>
-                  </div>
-                </Link>
-              </motion.div>
+              />
             </motion.div>
             
             {/* Trust Indicators with Tooltips */}

@@ -6,6 +6,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, locales, type Locale } from '@/lib/i18n'
 import { cookies } from 'next/headers'
 import AnalyticsScripts from '@/components/analytics/AnalyticsScripts'
+import { ABTestProvider } from '@/components/ab-testing/ABTestProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -50,11 +51,13 @@ export default async function RootLayout({
       </head>
       <body className={inter.className}>
         <div id="app-container">
-          <Header currentLocale={currentLocale} dictionary={dictionary} />
-          <main>
-            {children}
-          </main>
-          <Footer currentLocale={currentLocale} dictionary={dictionary} />
+          <ABTestProvider>
+            <Header currentLocale={currentLocale} dictionary={dictionary} />
+            <main>
+              {children}
+            </main>
+            <Footer currentLocale={currentLocale} dictionary={dictionary} />
+          </ABTestProvider>
         </div>
         
         {/* Advanced Analytics Scripts */}

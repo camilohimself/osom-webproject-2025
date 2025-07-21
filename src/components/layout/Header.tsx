@@ -18,7 +18,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
   // Liste des services avec les vraies pages
   const services = [
     { name: 'Création Sites Web', href: '/services/creation-site-web' },
-    { name: 'Identité & Design', href: '/services/identite-design' },
+    { name: 'Programmation & IA', href: '/services/programmation-ia' },
     { name: 'SEO & Marketing', href: '/services/seo-content-marketing' },
     { name: 'Paid Media & Growth', href: '/services/paid-media-growth' },
     { name: 'Marketing Automation', href: '/services/marketing-automation-crm' },
@@ -28,6 +28,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
   const navigation = [
     { name: dictionary.navigation.services, href: '/services', hasDropdown: true },
     { name: dictionary.navigation.portfolio, href: '/realisations' },
+    { name: 'Outils', href: '/outils' },
     { name: dictionary.navigation.calculator, href: '/calculator' },
     { name: dictionary.navigation.blog, href: '/blog' },
     { name: dictionary.navigation.agency, href: '/agence' },
@@ -95,11 +96,11 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                   Création Site Web
                                 </Link>
                                 <Link
-                                  href="/services/identite-design"
+                                  href="/services/programmation-ia"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                 >
-                                  Identité & Design
+                                  Programmation & IA
                                 </Link>
                                 <Link
                                   href="/services/seo-content-marketing"

@@ -8,6 +8,7 @@ interface AnimatedCounterProps {
   to: number
   duration?: number
   delay?: number
+  prefix?: string
   suffix?: string
   className?: string
   onComplete?: () => void
@@ -18,6 +19,7 @@ const AnimatedCounter = ({
   to, 
   duration = 2, 
   delay = 0, 
+  prefix = '',
   suffix = '', 
   className = '',
   onComplete 
@@ -47,6 +49,7 @@ const AnimatedCounter = ({
       animate={isVisible ? { scale: 1, opacity: 1 } : {}}
       transition={{ duration: 0.5, delay: delay }}
     >
+      {prefix}
       <motion.span>{rounded}</motion.span>
       {suffix}
     </motion.span>
