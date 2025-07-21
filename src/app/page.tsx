@@ -4,8 +4,7 @@ import { defaultLocale, type Locale } from '@/lib/i18n'
 import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImpact } from '@/components/ui'
 import { cookies } from 'next/headers'
 import HeroPremium from '@/components/homepage/HeroPremium'
-import InteractiveForce from '@/components/homepage/InteractiveForce'
-import { forcesData } from '@/data/forces'
+import AnimatedElement from '@/components/ui/AnimatedElement'
 
 export default async function Home() {
   // Get locale from cookie (same logic as layout.tsx)
@@ -34,23 +33,26 @@ export default async function Home() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-24">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-              <span className="text-yellow-400 text-sm font-medium tracking-wide">{dictionary.home.forces.badge}</span>
+          <AnimatedElement type="fadeIn" delay={0.2}>
+            <div className="text-center mb-24">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
+                <span className="text-yellow-400 text-sm font-medium tracking-wide">{dictionary.home.forces.badge}</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                {dictionary.home.forces.title} <span className="text-yellow-400 font-bold">{dictionary.home.forces.title_service}</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                {dictionary.home.forces.subtitle}
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              {dictionary.home.forces.title} <span className="text-yellow-400 font-bold">{dictionary.home.forces.title_service}</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              {dictionary.home.forces.subtitle}
-            </p>
-          </div>
+          </AnimatedElement>
           
           <div className="space-y-20">
             
             {/* FORCE 1: Design & Expérience Utilisateur */}
-            <InteractiveForce force={forcesData.force1}>
+            <AnimatedElement type="slideUp" delay={0.1}>
+              <div className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-yellow-400/40 hover:shadow-2xl hover:shadow-yellow-400/10 transition-all duration-500 group hover:scale-[1.02]">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 h-full">
                 {/* Graphique à gauche - Layout créatif */}
                 <div className="bg-gradient-to-br from-yellow-400/10 to-black/60 p-8 flex items-center">
@@ -75,10 +77,12 @@ export default async function Home() {
                       </div>
                     </div>
                     
-                    <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      {dictionary.home.force1.title_line1} <span className="text-yellow-400 font-bold">{dictionary.home.force1.title_données}</span>.<br />
-                      {dictionary.home.force1.title_line2} <span className="text-yellow-400 font-bold">{dictionary.home.force1.title_science}</span>.
-                    </h3>
+                    <AnimatedElement type="slideLeft" delay={0.3}>
+                      <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                        {dictionary.home.force1.title_line1} <span className="text-yellow-400 font-bold">{dictionary.home.force1.title_données}</span>.<br />
+                        {dictionary.home.force1.title_line2} <span className="text-yellow-400 font-bold">{dictionary.home.force1.title_science}</span>.
+                      </h3>
+                    </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                       {dictionary.home.force1.description}
@@ -102,26 +106,30 @@ export default async function Home() {
                       </div>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="p-6 bg-yellow-400/10 rounded-xl border border-yellow-400/30">
-                        <div className="text-yellow-400 font-bold text-lg mb-2">{dictionary.home.force1.formula.title}</div>
-                        <div className="text-white text-lg">{dictionary.home.force1.formula.price}</div>
-                        <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.formula.subtitle}</div>
+                    <AnimatedElement type="slideUp" delay={0.8}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="p-6 bg-yellow-400/10 rounded-xl border border-yellow-400/30 hover:bg-yellow-400/15 hover:border-yellow-400/50 transition-all duration-300">
+                          <div className="text-yellow-400 font-bold text-lg mb-2">{dictionary.home.force1.formula.title}</div>
+                          <div className="text-white text-lg">{dictionary.home.force1.formula.price}</div>
+                          <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.formula.subtitle}</div>
+                        </div>
+                        
+                        <div className="p-6 bg-yellow-400/5 rounded-xl border border-yellow-400/20 hover:bg-yellow-400/10 hover:border-yellow-400/40 transition-all duration-300">
+                          <div className="text-yellow-400 text-2xl font-light mb-2">{dictionary.home.force1.conversion.rate}</div>
+                          <div className="text-gray-300">{dictionary.home.force1.conversion.description}</div>
+                          <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.conversion.subtitle}</div>
+                        </div>
                       </div>
-                      
-                      <div className="p-6 bg-yellow-400/5 rounded-xl border border-yellow-400/20">
-                        <div className="text-yellow-400 text-2xl font-light mb-2">{dictionary.home.force1.conversion.rate}</div>
-                        <div className="text-gray-300">{dictionary.home.force1.conversion.description}</div>
-                        <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.conversion.subtitle}</div>
-                      </div>
-                    </div>
+                    </AnimatedElement>
                   </div>
                 </div>
               </div>
-            </InteractiveForce>
+              </div>
+            </AnimatedElement>
             
             {/* FORCE 2: SEO & Acquisition Stratégique */}
-            <InteractiveForce force={forcesData.force2}>
+            <AnimatedElement type="slideUp" delay={0.3}>
+              <div className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/10 transition-all duration-500 group hover:scale-[1.02]">
               {/* Layout centré avec background graphique */}
               <div className="relative">
                 {/* Background graphique */}
@@ -149,10 +157,12 @@ export default async function Home() {
                       </div>
                     </div>
                     
-                    <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      {dictionary.home.force2.title_line1} <span className="text-cyan-400 font-bold">{dictionary.home.force2.title_diagnostic}</span>.<br />
-                      {dictionary.home.force2.title_line2} <span className="text-cyan-400 font-bold">{dictionary.home.force2.title_intelligence}</span>.
-                    </h3>
+                    <AnimatedElement type="fadeIn" delay={0.4}>
+                      <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                        {dictionary.home.force2.title_line1} <span className="text-cyan-400 font-bold">{dictionary.home.force2.title_diagnostic}</span>.<br />
+                        {dictionary.home.force2.title_line2} <span className="text-cyan-400 font-bold">{dictionary.home.force2.title_intelligence}</span>.
+                      </h3>
+                    </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                       {dictionary.home.force2.description}
@@ -185,18 +195,22 @@ export default async function Home() {
                       </div>
                     </div>
                     
-                    <div className="bg-cyan-400/10 rounded-xl p-8 border border-cyan-400/30 max-w-2xl mx-auto">
-                      <div className="text-cyan-400 font-bold text-2xl mb-2">{dictionary.home.force2.engagement.title}</div>
-                      <div className="text-white text-lg">{dictionary.home.force2.engagement.description}</div>
-                      <div className="text-gray-400 text-sm mt-2">{dictionary.home.force2.engagement.subtitle}</div>
-                    </div>
+                    <AnimatedElement type="scale" delay={0.9}>
+                      <div className="bg-cyan-400/10 rounded-xl p-8 border border-cyan-400/30 max-w-2xl mx-auto hover:bg-cyan-400/15 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/20 transition-all duration-500">
+                        <div className="text-cyan-400 font-bold text-2xl mb-2">{dictionary.home.force2.engagement.title}</div>
+                        <div className="text-white text-lg">{dictionary.home.force2.engagement.description}</div>
+                        <div className="text-gray-400 text-sm mt-2">{dictionary.home.force2.engagement.subtitle}</div>
+                      </div>
+                    </AnimatedElement>
                   </div>
                 </div>
               </div>
-            </InteractiveForce>
+              </div>
+            </AnimatedElement>
             
             {/* FORCE 3: Data-Driven Decision Making */}
-            <InteractiveForce force={forcesData.force3}>
+            <AnimatedElement type="slideUp" delay={0.5}>
+              <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group hover:scale-[1.02]">
               {/* Layout asymétrique diagonal */}
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 h-full">
                 {/* Contenu principal - 3 colonnes */}
@@ -211,10 +225,12 @@ export default async function Home() {
                       </div>
                     </div>
                     
-                    <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      {dictionary.home.force3.title_line1} <span className="text-purple-400 font-bold">{dictionary.home.force3.title_data}</span>.<br />
-                      {dictionary.home.force3.title_line2} <span className="text-purple-400 font-bold">{dictionary.home.force3.title_science}</span>.
-                    </h3>
+                    <AnimatedElement type="slideRight" delay={0.4}>
+                      <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                        {dictionary.home.force3.title_line1} <span className="text-purple-400 font-bold">{dictionary.home.force3.title_data}</span>.<br />
+                        {dictionary.home.force3.title_line2} <span className="text-purple-400 font-bold">{dictionary.home.force3.title_science}</span>.
+                      </h3>
+                    </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                       {dictionary.home.force3.description}
@@ -247,11 +263,13 @@ export default async function Home() {
                       </div>
                     </div>
                     
-                    <div className="bg-purple-400/10 rounded-xl p-8 border border-purple-400/30">
-                      <div className="text-purple-400 font-bold text-2xl mb-2">{dictionary.home.force3.conversions.title}</div>
-                      <div className="text-white text-lg">{dictionary.home.force3.conversions.description}</div>
-                      <div className="text-gray-400 text-sm mt-2">{dictionary.home.force3.conversions.subtitle}</div>
-                    </div>
+                    <AnimatedElement type="scale" delay={0.9}>
+                      <div className="bg-purple-400/10 rounded-xl p-8 border border-purple-400/30 hover:bg-purple-400/15 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-500">
+                        <div className="text-purple-400 font-bold text-2xl mb-2">{dictionary.home.force3.conversions.title}</div>
+                        <div className="text-white text-lg">{dictionary.home.force3.conversions.description}</div>
+                        <div className="text-gray-400 text-sm mt-2">{dictionary.home.force3.conversions.subtitle}</div>
+                      </div>
+                    </AnimatedElement>
                   </div>
                 </div>
                 
@@ -268,7 +286,8 @@ export default async function Home() {
                   />
                 </div>
               </div>
-            </InteractiveForce>
+              </div>
+            </AnimatedElement>
             
           </div>
         </div>
