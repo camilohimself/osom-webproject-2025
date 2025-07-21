@@ -66,12 +66,12 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
       subtitle: 'Sélectionnez le type de projet qui vous intéresse',
       type: 'choice',
       options: [
-        { value: 'new-website', label: 'Nouveau site web', desc: 'Création complète d\'un nouveau site', icon: '🌐' },
-        { value: 'redesign', label: 'Refonte de site existant', desc: 'Améliorer un site actuel', icon: '🔄' },
-        { value: 'seo-only', label: 'SEO & Référencement uniquement', desc: 'Optimiser la visibilité Google', icon: '🚀' },
-        { value: 'marketing', label: 'Marketing Digital', desc: 'Stratégie Facebook/Instagram', icon: '📈' },
-        { value: 'complete', label: 'Solution complète', desc: 'Site + SEO + Marketing', icon: '⭐' },
-        { value: 'audit', label: 'Audit de performance', desc: 'Analyser l\'existant', icon: '🔍' }
+        { value: 'new-website', label: 'Nouveau site web', desc: 'Création complète d\'un nouveau site', icon: '' },
+        { value: 'redesign', label: 'Refonte de site existant', desc: 'Améliorer un site actuel', icon: '' },
+        { value: 'seo-only', label: 'SEO & Référencement uniquement', desc: 'Optimiser la visibilité Google', icon: '' },
+        { value: 'marketing', label: 'Marketing Digital', desc: 'Stratégie Facebook/Instagram', icon: '' },
+        { value: 'complete', label: 'Solution complète', desc: 'Site + SEO + Marketing', icon: '' },
+        { value: 'audit', label: 'Audit de performance', desc: 'Analyser l\'existant', icon: '' }
       ]
     },
     {
@@ -80,11 +80,11 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
       subtitle: 'Choisissez votre urgence pour adapter notre approche',
       type: 'choice',
       options: [
-        { value: 'asap', label: 'Le plus vite possible', desc: 'Démarrage immédiat', icon: '⚡' },
-        { value: '2-weeks', label: 'Dans 2 semaines', desc: 'Planning optimal', icon: '📅' },
-        { value: '1-month', label: 'D\'ici 1 mois', desc: 'Préparation soignée', icon: '🎯' },
-        { value: '3-months', label: 'Dans 2-3 mois', desc: 'Planification stratégique', icon: '📋' },
-        { value: 'flexible', label: 'Je suis flexible', desc: 'Quand c\'est optimal', icon: '🤝' }
+        { value: 'asap', label: 'Le plus vite possible', desc: 'Démarrage immédiat', icon: '' },
+        { value: '2-weeks', label: 'Dans 2 semaines', desc: 'Planning optimal', icon: '' },
+        { value: '1-month', label: 'D\'ici 1 mois', desc: 'Préparation soignée', icon: '' },
+        { value: '3-months', label: 'Dans 2-3 mois', desc: 'Planification stratégique', icon: '' },
+        { value: 'flexible', label: 'Je suis flexible', desc: 'Quand c\'est optimal', icon: '' }
       ]
     },
     {
@@ -93,11 +93,11 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
       subtitle: 'Pour vous proposer la solution la plus adaptée',
       type: 'choice',
       options: [
-        { value: '1500-3000', label: '1 500 - 3 000 CHF', desc: 'OSOM Web Formula', icon: '🎯' },
-        { value: '3000-5000', label: '3 000 - 5 000 CHF', desc: 'Site premium + SEO', icon: '🚀' },
-        { value: '5000-10000', label: '5 000 - 10 000 CHF', desc: 'Solution complète', icon: '⭐' },
-        { value: '10000+', label: '10 000+ CHF', desc: 'Projet sur mesure', icon: '💎' },
-        { value: 'audit-first', label: 'Commencer par un audit', desc: 'Définir le budget après diagnostic', icon: '🔍' }
+        { value: '1500-3000', label: '1 500 - 3 000 CHF', desc: 'OSOM Web Formula', icon: '' },
+        { value: '3000-5000', label: '3 000 - 5 000 CHF', desc: 'Site premium + SEO', icon: '' },
+        { value: '5000-10000', label: '5 000 - 10 000 CHF', desc: 'Solution complète', icon: '' },
+        { value: '10000+', label: '10 000+ CHF', desc: 'Projet sur mesure', icon: '' },
+        { value: 'audit-first', label: 'Commencer par un audit', desc: 'Définir le budget après diagnostic', icon: '' }
       ]
     },
     {
@@ -106,12 +106,12 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
       subtitle: 'Pour comprendre vos besoins spécifiques',
       type: 'choice',
       options: [
-        { value: 'no-website', label: 'Pas de site web', desc: 'Création from scratch', icon: '🆕' },
-        { value: 'old-website', label: 'Site web obsolète', desc: 'Besoin de modernisation', icon: '🔧' },
-        { value: 'low-traffic', label: 'Site actuel, peu de trafic', desc: 'Optimisation SEO', icon: '📊' },
-        { value: 'no-conversions', label: 'Du trafic mais pas de ventes', desc: 'Optimisation conversion', icon: '🎯' },
-        { value: 'manual-work', label: 'Tout en manuel actuellement', desc: 'Automatisation nécessaire', icon: '⚙️' },
-        { value: 'competitor-behind', label: 'En retard sur la concurrence', desc: 'Rattrapage stratégique', icon: '🏃' }
+        { value: 'no-website', label: 'Pas de site web', desc: 'Création from scratch', icon: '' },
+        { value: 'old-website', label: 'Site web obsolète', desc: 'Besoin de modernisation', icon: '' },
+        { value: 'low-traffic', label: 'Site actuel, peu de trafic', desc: 'Optimisation SEO', icon: '' },
+        { value: 'no-conversions', label: 'Du trafic mais pas de ventes', desc: 'Optimisation conversion', icon: '' },
+        { value: 'manual-work', label: 'Tout en manuel actuellement', desc: 'Automatisation nécessaire', icon: '' },
+        { value: 'competitor-behind', label: 'En retard sur la concurrence', desc: 'Rattrapage stratégique', icon: '' }
       ]
     },
     {
@@ -120,12 +120,12 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
       subtitle: 'Pour mesurer le succès de votre projet',
       type: 'choice',
       options: [
-        { value: 'more-leads', label: 'Plus de prospects qualifiés', desc: 'Génération de leads B2B', icon: '📈' },
-        { value: 'more-sales', label: 'Augmenter les ventes', desc: 'ROI et conversions', icon: '💰' },
-        { value: 'brand-awareness', label: 'Notoriété de marque', desc: 'Visibilité et reconnaissance', icon: '✨' },
-        { value: 'compete-better', label: 'Mieux concurrencer', desc: 'Avantage concurrentiel', icon: '🏆' },
-        { value: 'save-time', label: 'Gagner du temps', desc: 'Automatisation processus', icon: '⏰' },
-        { value: 'credibility', label: 'Crédibilité professionnelle', desc: 'Image de marque', icon: '👔' }
+        { value: 'more-leads', label: 'Plus de prospects qualifiés', desc: 'Génération de leads B2B', icon: '' },
+        { value: 'more-sales', label: 'Augmenter les ventes', desc: 'ROI et conversions', icon: '' },
+        { value: 'brand-awareness', label: 'Notoriété de marque', desc: 'Visibilité et reconnaissance', icon: '' },
+        { value: 'compete-better', label: 'Mieux concurrencer', desc: 'Avantage concurrentiel', icon: '' },
+        { value: 'save-time', label: 'Gagner du temps', desc: 'Automatisation processus', icon: '' },
+        { value: 'credibility', label: 'Crédibilité professionnelle', desc: 'Image de marque', icon: '' }
       ]
     },
     {
@@ -134,12 +134,12 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
       subtitle: 'Pour adapter notre stratégie marketing',
       type: 'choice',
       options: [
-        { value: 'b2b-local', label: 'Entreprises locales (Valais)', desc: 'B2B proximité', icon: '🏢' },
-        { value: 'b2b-swiss', label: 'Entreprises suisses', desc: 'B2B national', icon: '🇨🇭' },
-        { value: 'professionals', label: 'Professionnels spécialisés', desc: 'Médecins, avocats, etc.', icon: '👨‍💼' },
-        { value: 'consumers', label: 'Particuliers/Consommateurs', desc: 'B2C local', icon: '👥' },
-        { value: 'mixed', label: 'Mixte B2B + B2C', desc: 'Double cible', icon: '🎯' },
-        { value: 'international', label: 'Marché international', desc: 'Export/e-commerce', icon: '🌍' }
+        { value: 'b2b-local', label: 'Entreprises locales (Valais)', desc: 'B2B proximité', icon: '' },
+        { value: 'b2b-swiss', label: 'Entreprises suisses', desc: 'B2B national', icon: '' },
+        { value: 'professionals', label: 'Professionnels spécialisés', desc: 'Médecins, avocats, etc.', icon: '' },
+        { value: 'consumers', label: 'Particuliers/Consommateurs', desc: 'B2C local', icon: '' },
+        { value: 'mixed', label: 'Mixte B2B + B2C', desc: 'Double cible', icon: '' },
+        { value: 'international', label: 'Marché international', desc: 'Export/e-commerce', icon: '' }
       ]
     }
   ]
@@ -295,10 +295,10 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { label: "Consultation", detail: "100% gratuite", color: "#06B6D4", icon: "🎯" },
-                { label: "Stratégie", detail: "personnalisée", color: "#10B981", icon: "📋" },
-                { label: "ROI garanti", detail: "ou remboursé", color: "#FFDD00", icon: "💎" },
-                { label: "Experts", detail: "certifiés", color: "#8B5CF6", icon: "⭐" }
+                { label: "Consultation", detail: "100% gratuite", color: "#06B6D4", icon: "" },
+                { label: "Stratégie", detail: "personnalisée", color: "#10B981", icon: "" },
+                { label: "ROI garanti", detail: "ou remboursé", color: "#FFDD00", icon: "" },
+                { label: "Experts", detail: "certifiés", color: "#8B5CF6", icon: "" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -347,7 +347,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                 whileTap={{ scale: 0.98 }}
               >
                 <span className="relative z-10 flex items-center justify-center">
-                  🎯 {dictionary.cta_schedule}
+                  {dictionary.cta_schedule}
                   <motion.span
                     className="ml-2"
                     animate={{ x: [0, 4, 0] }}
@@ -367,7 +367,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                📝 {dictionary.cta_questionnaire}
+                {dictionary.cta_questionnaire}
               </motion.a>
             </motion.div>
 
@@ -412,9 +412,9 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
               transition={{ duration: 0.8, delay: 1.6 }}
             >
               {[
-                { value: 140, label: "ROI Moyen", suffix: "x", color: "#10B981", icon: "📈" },
-                { value: 688, label: "Conversions Générées", suffix: "", color: "#06B6D4", icon: "🎯" },
-                { value: 24, label: "Heures Response", suffix: "h", color: "#FFDD00", icon: "⚡" }
+                { value: 140, label: "ROI Moyen", suffix: "x", color: "#10B981", icon: "" },
+                { value: 688, label: "Conversions Générées", suffix: "", color: "#06B6D4", icon: "" },
+                { value: 24, label: "Heures Response", suffix: "h", color: "#FFDD00", icon: "" }
               ].map((metric, index) => (
                 <motion.div
                   key={index}

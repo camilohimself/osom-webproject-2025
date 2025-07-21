@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
 // Handle GET requests for API documentation
 export async function GET() {
   return NextResponse.json({
-    name: 'OSOM ROI Calculator API',
+    name: 'osom ROI Calculator API',
     version: '1.0.0',
     description: 'Calculate ROI projections for digital marketing investments',
     endpoints: {

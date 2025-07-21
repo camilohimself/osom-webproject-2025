@@ -183,10 +183,10 @@ export default function CalculatorPage() {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { label: "4 étapes", detail: "seulement", color: "#ffd507", icon: "📋" },
-                { label: "100%", detail: "gratuit", color: "#10B981", icon: "🎯" },
-                { label: "< 2 min", detail: "chrono", color: "#06B6D4", icon: "⚡" },
-                { label: "ROI garanti", detail: "ou remboursé", color: "#8B5CF6", icon: "💎" }
+                { label: "4 étapes", detail: "seulement", color: "#ffd507", icon: "" },
+                { label: "100%", detail: "gratuit", color: "#10B981", icon: "" },
+                { label: "< 2 min", detail: "chrono", color: "#06B6D4", icon: "" },
+                { label: "ROI garanti", detail: "ou remboursé", color: "#8B5CF6", icon: "" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -205,7 +205,7 @@ export default function CalculatorPage() {
                   transition={{ delay: index * 0.1 + 1 }}
                 >
                   <div className="flex items-center">
-                    <span className="text-lg mr-2">{stat.icon}</span>
+                    {stat.icon && <span className="text-lg mr-2">{stat.icon}</span>}
                     <div>
                       <span className="font-bold" style={{ color: stat.color }}>
                         {stat.label}
@@ -376,7 +376,7 @@ export default function CalculatorPage() {
                 whileTap={{ scale: 0.98 }}
               >
                 <span className="relative z-10 flex items-center justify-center">
-                  🎯 Stratégie Gratuite
+                  Stratégie Gratuite
                   <motion.span
                     className="ml-2"
                     animate={{ x: [0, 4, 0] }}
@@ -393,7 +393,7 @@ export default function CalculatorPage() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                📊 Voir Case Studies
+                Voir Case Studies
               </motion.a>
             </div>
           </AnimatedElement>

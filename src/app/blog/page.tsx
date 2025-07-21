@@ -210,9 +210,9 @@ export default function BlogPage() {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { label: "400+", detail: "jours de données", color: "#FFDD00", icon: "📋", value: 400 },
-                { label: "100%", detail: "case studies réels", color: "#10B981", icon: "✅", value: 100 },
-                { label: "3", detail: "analyses GA4 vérifiées", color: "#8B5CF6", icon: "📈", value: 3 }
+                { label: "400+", detail: "jours de données", color: "#FFDD00", icon: "", value: 400 },
+                { label: "100%", detail: "case studies réels", color: "#10B981", icon: "", value: 100 },
+                { label: "3", detail: "analyses GA4 vérifiées", color: "#8B5CF6", icon: "", value: 3 }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -231,7 +231,7 @@ export default function BlogPage() {
                   transition={{ delay: index * 0.1 + 1 }}
                 >
                   <div className="flex items-center">
-                    <span className="text-lg mr-2">{stat.icon}</span>
+                    {stat.icon && <span className="text-lg mr-2">{stat.icon}</span>}
                     <div>
                       <span className="font-bold text-2xl" style={{ color: stat.color }}>
                         {stat.label === "400+" ? (
@@ -315,7 +315,7 @@ export default function BlogPage() {
                         delay: index * 0.5
                       }}
                     >
-                      {article.category === 'Case Study' ? '📊' : '🔍'}
+                      {article.category === 'Case Study' ? '' : ''}
                     </motion.span>
                   </div>
                   
@@ -542,7 +542,7 @@ export default function BlogPage() {
                 whileTap={{ scale: 0.98 }}
               >
                 <span className="relative z-10 flex items-center justify-center">
-                  🚀 Démarrer mon projet
+                  Démarrer mon projet
                   <motion.span
                     className="ml-2"
                     animate={{ x: [0, 4, 0] }}
@@ -560,7 +560,7 @@ export default function BlogPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                📊 Calculer mon ROI
+                Calculer mon ROI
               </motion.a>
             </div>
           </motion.div>

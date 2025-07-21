@@ -481,7 +481,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                         {/* Proof */}
                         <div className="flex items-center justify-between pt-3 border-t border-gray-700">
                           <div className="text-gray-400 text-xs">
-                            📊 {metricTooltips[key as keyof typeof metricTooltips].proof}
+                            {metricTooltips[key as keyof typeof metricTooltips].proof}
                           </div>
                           <div className="text-xs text-gray-500">
                             {metricTooltips[key as keyof typeof metricTooltips].details}

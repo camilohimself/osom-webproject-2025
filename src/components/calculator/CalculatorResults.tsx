@@ -163,7 +163,7 @@ export default function CalculatorResults({ results, onReset }: CalculatorResult
             label: "Revenus projetés", 
             sublabel: "Projection 12 mois",
             color: "#10B981", 
-            icon: "💰",
+            icon: "",
             isCurrency: true
           },
           { 
@@ -171,7 +171,7 @@ export default function CalculatorResults({ results, onReset }: CalculatorResult
             label: "Leads qualifiés", 
             sublabel: "Prospects chauds",
             color: "#06B6D4", 
-            icon: "🎯",
+            icon: "",
             isCurrency: false
           },
           { 
@@ -179,7 +179,7 @@ export default function CalculatorResults({ results, onReset }: CalculatorResult
             label: "Visiteurs mensuels", 
             sublabel: "Traffic organique",
             color: "#8B5CF6", 
-            icon: "📈",
+            icon: "",
             isCurrency: false
           }
         ].map((metric, index) => (
@@ -266,12 +266,12 @@ export default function CalculatorResults({ results, onReset }: CalculatorResult
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {[
-            { key: 'webDevelopment', label: 'Développement Web', icon: '🌐', color: '#FFDD00' },
-            { key: 'seoOptimization', label: 'SEO & Référencement', icon: '🚀', color: '#10B981' },
-            { key: 'contentMarketing', label: 'Content Marketing', icon: '📝', color: '#06B6D4' },
-            { key: 'paidAdvertising', label: 'Publicité Payante', icon: '📢', color: '#8B5CF6' },
-            { key: 'analytics', label: 'Analytics & Tracking', icon: '📊', color: '#EC4899' },
-            { key: 'maintenance', label: 'Maintenance & Support', icon: '⚙️', color: '#F59E0B' }
+            { key: 'webDevelopment', label: 'Développement Web', icon: '', color: '#FFDD00' },
+            { key: 'seoOptimization', label: 'SEO & Référencement', icon: '', color: '#10B981' },
+            { key: 'contentMarketing', label: 'Content Marketing', icon: '', color: '#06B6D4' },
+            { key: 'paidAdvertising', label: 'Publicité Payante', icon: '', color: '#8B5CF6' },
+            { key: 'analytics', label: 'Analytics & Tracking', icon: '', color: '#EC4899' },
+            { key: 'maintenance', label: 'Maintenance & Support', icon: '', color: '#F59E0B' }
           ].map((item, index) => (
             <motion.div 
               key={item.key}
@@ -555,7 +555,7 @@ export default function CalculatorResults({ results, onReset }: CalculatorResult
               transition={{ delay: 0.6 }}
             >
               <span className="relative z-10 flex items-center justify-center">
-                🎁 Stratégie Gratuite
+                Stratégie Gratuite
                 <motion.span
                   className="ml-2"
                   animate={{ x: [0, 4, 0] }}
@@ -576,7 +576,7 @@ export default function CalculatorResults({ results, onReset }: CalculatorResult
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
             >
-              🔄 Nouveau Calcul
+              Nouveau Calcul
             </motion.button>
           </div>
           

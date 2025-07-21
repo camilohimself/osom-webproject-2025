@@ -10,7 +10,7 @@ export default function MarketingAutomationCRMPage() {
         title="Automation Performance"
         subtitle="Funnel automatisé - Impact sur conversion et temps manuel"
         primaryMetric={{
-          label: "Funnel Automatisé OSOM",
+          label: "Funnel Automatisé osom",
           value: "+78% conversions",
           color: "#10B981"
         }}
@@ -65,7 +65,7 @@ export default function MarketingAutomationCRMPage() {
         <ComparisonChart
           title="Performance Funnel: Automatisé vs Manuel"
           data={[
-            { label: "Funnel Automatisé OSOM", value: 78, color: "#70c1a9" },
+            { label: "Funnel Automatisé osom", value: 78, color: "#70c1a9" },
             { label: "Processus Manuel", value: 22, color: "#6B7280" }
           ]}
           subtitle="Taux de conversion prospect → client"
@@ -135,17 +135,17 @@ export default function MarketingAutomationCRMPage() {
       methodDescription="Transformez votre funnel en machine à convertir qui fonctionne sans intervention"
       processSteps={[
         {
-          number: "🎯",
+          number: "01",
           title: "Audit Funnel Actuel",
           description: "Analyse des points de friction et opportunités d'automatisation"
         },
         {
-          number: "⚙️",
+          number: "02",
           title: "Setup Automation",
           description: "Configuration CRM + email sequences + lead scoring + workflows"
         },
         {
-          number: "📊",
+          number: "03",
           title: "Optimisation Continue",
           description: "A/B testing automatisé et amélioration performances en temps réel"
         }
@@ -158,38 +158,38 @@ export default function MarketingAutomationCRMPage() {
       featuresDescription="Tous les outils pour automatiser et optimiser votre acquisition client"
       features={[
         {
-          icon: "📧",
+          icon: "",
           title: "Email Marketing Automation",
           description: "Sequences personnalisées, segmentation avancée - +92% taux ouverture"
         },
         {
-          icon: "🎯",
+          icon: "",
           title: "Lead Scoring Intelligent",
           description: "Qualification automatique prospects - 87% précision qualification"
         },
         {
-          icon: "🔄",
+          icon: "",
           title: "Workflows Multi-Canal",
           description: "Automation email + SMS + social + retargeting coordonné"
         },
         {
-          icon: "📊",
+          icon: "",
           title: "CRM Intégration Complète",
           description: "Synchronisation données temps réel - 94% accuracy data"
         },
         {
-          icon: "🤖",
+          icon: "",
           title: "Chatbot & AI Support",
           description: "Réponses automatisées 24/7 - Qualification premier niveau"
         },
         {
-          icon: "📈",
+          icon: "",
           title: "Analytics & Reporting",
           description: "Dashboard automation performance - ROI transparent par canal"
         }
       ]}
       
-      pricingTitle="Automation OSOM Suite"
+      pricingTitle="Automation osom Suite"
       price="3900 CHF"
       pricingDescription="Setup + Formation + Support 6 mois"
       pricingFeatures={[

@@ -19,7 +19,7 @@
   },
   "home": {
     "hero": {
-      "badge": "OSOM PERFORMANCE",
+      "badge": "osom PERFORMANCE",
       "title_line1": "Build with",
       "title_focus": "focus",
       "title_line2": "Ship with",
@@ -34,7 +34,7 @@
       }
     },
     "forces": {
-      "badge": "DIE 3 OSOM KRÄFTE",
+      "badge": "DIE 3 osom KRÄFTE",
       "title": "Daten im",
       "title_service": "Dienst des Kunden",
       "subtitle": "Unsere Expertise basiert auf 3 sich ergänzenden Säulen. Jede Entscheidung wird von Daten geleitet, um Ihren ROI zu maximieren."
@@ -59,7 +59,7 @@
         "description": "Next.js, React, Tailwind. Tech-Stack gewählt für Performance, nicht für Trends. Technischer ROI gemessen über 200+ Tage nach Launch."
       },
       "formula": {
-        "title": "OSOM Web Formel",
+        "title": "osom Web Formel",
         "price": "1500 CHF • 10 Tage • ROI garantiert",
         "subtitle": "Maler-Handwerk Wallis (2024)"
       },
@@ -83,13 +83,13 @@
       },
       "traffic": {
         "title": "Bewiesener Qualifizierter Traffic",
-        "description": "68,6% Engagement SEO-Traffic vs 44,6% direkter Traffic. Jeder OSOM SEO-Besucher generiert 54% mehr Wert für Ihr Business.",
+        "description": "68,6% Engagement SEO-Traffic vs 44,6% direkter Traffic. Jeder osom SEO-Besucher generiert 54% mehr Wert für Ihr Business.",
         "subtitle": "Licht-Handwerk Wallis (200+ Tage GA4)"
       },
       "optimization": {
         "title": "Kontinuierliche Optimierung",
         "description": "Monatliches ROI-Tracking transparent. Jede SEO-Aktion wird gemessen, jede Optimierung durch Performance-Daten begründet.",
-        "subtitle": "Standardisierte OSOM-Methode"
+        "subtitle": "Standardisierte osom-Methode"
       },
       "roi": {
         "title": "Transparenter ROI",
@@ -98,7 +98,7 @@
       },
       "engagement": {
         "title": "+54% Überlegenes Engagement",
-        "description": "OSOM SEO-Traffic vs Standard Direkttraffic",
+        "description": "osom SEO-Traffic vs Standard Direkttraffic",
         "subtitle": "6-Monats-Vergleichsanalyse • Verifizierbare Daten"
       }
     },
@@ -168,7 +168,7 @@
         "title": "Messbare Performance",
         "subtitle": "Verifizierte Daten • 400+ Tage GA4-Analysen",
         "primary_metric": {
-          "label": "OSOM-Strategie",
+          "label": "osom-Strategie",
           "value": "688 Conversions"
         },
         "secondary_metric": {
@@ -186,8 +186,8 @@
       },
       "comparatif": {
         "title": "Überlegenes Engagement",
-        "subtitle": "OSOM SEO vs Standard",
-        "seo_label": "OSOM SEO-Traffic",
+        "subtitle": "osom SEO vs Standard",
+        "seo_label": "osom SEO-Traffic",
         "direct_label": "Direkter Traffic"
       },
       "impact": {
@@ -277,7 +277,7 @@
       }
     },
     "testimonials": {
-      "diagnostic": "OSOMs Diagnose enthüllte 14.171 verlorene Sessions in unseren Daten. Genau das, was wir brauchten.",
+      "diagnostic": "osoms Diagnose enthüllte 14.171 verlorene Sessions in unseren Daten. Genau das, was wir brauchten.",
       "strategy": "Ihr datengestützter Ansatz ermöglichte es uns, unsere Conversions um das 4-fache zu steigern. Professionelle Tools, messbare Ergebnisse.",
       "urgent": "90-Minuten-Antwort für unseren Marketing-Notfall. Beispielhafter Professionalismus."
     }
@@ -393,7 +393,7 @@
       }
     },
     "testimonials": {
-      "diagnostic": "OSOMs Diagnose enthüllte 14.171 verlorene Sessions in unseren Daten. Genau das, was wir brauchten.",
+      "diagnostic": "osoms Diagnose enthüllte 14.171 verlorene Sessions in unseren Daten. Genau das, was wir brauchten.",
       "strategy": "Ihr datengestützter Ansatz ermöglichte es uns, unsere Conversions um das 4-fache zu steigern. Professionelle Tools, messbare Ergebnisse.",
       "urgent": "90-Minuten-Antwort für unseren Marketing-Notfall. Beispielhafter Professionalismus."
     }

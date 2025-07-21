@@ -19,7 +19,7 @@
   },
   "home": {
     "hero": {
-      "badge": "OSOM PERFORMANCE",
+      "badge": "osom PERFORMANCE",
       "title_line1": "Build with",
       "title_focus": "focus",
       "title_line2": "Ship with",
@@ -34,7 +34,7 @@
       }
     },
     "forces": {
-      "badge": "LES 3 FORCES OSOM",
+      "badge": "LES 3 FORCES osom",
       "title": "Data au",
       "title_service": "Service du Client",
       "subtitle": "Notre expertise repose sur 3 piliers complémentaires. Chaque décision est guidée par la data pour maximiser votre retour sur investissement."
@@ -59,7 +59,7 @@
         "description": "Next.js, React, Tailwind. Stack technique choisie pour la performance, pas la tendance. ROI technique mesuré sur 200+ jours post-lancement."
       },
       "formula": {
-        "title": "OSOM Web Formula",
+        "title": "osom Web Formula",
         "price": "1500 CHF • 10 jours • ROI garanti",
         "subtitle": "Artisan peinture Valais (2024)"
       },
@@ -83,13 +83,13 @@
       },
       "traffic": {
         "title": "Trafic Qualifié Prouvé",
-        "description": "68.6% engagement trafic SEO vs 44.6% direct. Chaque visiteur SEO OSOM génère 54% plus de valeur pour votre business.",
+        "description": "68.6% engagement trafic SEO vs 44.6% direct. Chaque visiteur SEO osom génère 54% plus de valeur pour votre business.",
         "subtitle": "Artisan lumière Valais (200+ jours GA4)"
       },
       "optimization": {
         "title": "Optimisation Continue",
         "description": "Suivi mensuel ROI transparent. Chaque action SEO est mesurée, chaque optimisation justifiée par les données de performance.",
-        "subtitle": "Méthode OSOM standardisée"
+        "subtitle": "Méthode osom standardisée"
       },
       "roi": {
         "title": "ROI Transparent",
@@ -98,7 +98,7 @@
       },
       "engagement": {
         "title": "+54% Engagement Supérieur",
-        "description": "Trafic SEO OSOM vs trafic direct standard",
+        "description": "Trafic SEO osom vs trafic direct standard",
         "subtitle": "Analyse comparative sur 6 mois • Données vérifiables"
       }
     },
@@ -168,7 +168,7 @@
         "title": "Performance Mesurable",
         "subtitle": "Données vérifiées • 400+ jours d'analyses GA4",
         "primary_metric": {
-          "label": "Stratégie OSOM",
+          "label": "Stratégie osom",
           "value": "688 conversions"
         },
         "secondary_metric": {
@@ -186,8 +186,8 @@
       },
       "comparatif": {
         "title": "Engagement Supérieur",
-        "subtitle": "SEO OSOM vs Standard",
-        "seo_label": "Trafic SEO OSOM",
+        "subtitle": "SEO osom vs Standard",
+        "seo_label": "Trafic SEO osom",
         "direct_label": "Trafic Direct"
       },
       "impact": {
@@ -291,7 +291,7 @@
       }
     },
     "testimonials": {
-      "diagnostic": "Le diagnostic OSOM a révélé 14,171 sessions perdues dans nos données. Exactement ce dont nous avions besoin.",
+      "diagnostic": "Le diagnostic osom a révélé 14,171 sessions perdues dans nos données. Exactement ce dont nous avions besoin.",
       "strategy": "Leur approche data-driven nous a permis de multiplier nos conversions par 4. Outils professionnels, résultats mesurables.",
       "urgent": "Réponse sous 90 minutes pour notre urgence marketing. Professionnalisme exemplaire."
     }

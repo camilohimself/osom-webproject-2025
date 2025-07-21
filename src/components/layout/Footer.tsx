@@ -48,7 +48,7 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Logo size="sm" variant="white" />
-              <span className="text-xl font-bold">OSOM</span>
+              <span className="text-xl font-bold">osom</span>
             </div>
             <p className="text-brand-light text-sm">
               Agence web digitale spécialisée dans la création de sites internet performants, 
@@ -170,7 +170,7 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
             ))}
           </div>
           <p className="text-sm text-brand-light mt-4 md:mt-0">
-            © {new Date().getFullYear()} OSOM. Tous droits réservés.
+            © {new Date().getFullYear()} osom. Tous droits réservés.
           </p>
         </div>
       </div>

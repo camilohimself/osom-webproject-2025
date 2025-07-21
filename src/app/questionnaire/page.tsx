@@ -44,12 +44,12 @@ const QuestionnairePage = () => {
       subtitle: 'Sélectionnez le type de projet qui vous intéresse',
       type: 'choice',
       options: [
-        { value: 'new-website', label: 'Nouveau site web', desc: 'Création complète d\'un nouveau site', icon: '🌐' },
-        { value: 'redesign', label: 'Refonte de site existant', desc: 'Améliorer un site actuel', icon: '🔄' },
-        { value: 'seo-only', label: 'SEO & Référencement uniquement', desc: 'Optimiser la visibilité Google', icon: '🚀' },
-        { value: 'marketing', label: 'Marketing Digital', desc: 'Stratégie Facebook/Instagram', icon: '📈' },
-        { value: 'complete', label: 'Solution complète', desc: 'Site + SEO + Marketing', icon: '⭐' },
-        { value: 'not-sure', label: 'Je ne sais pas encore', desc: 'Besoin de conseils', icon: '💡' }
+        { value: 'new-website', label: 'Nouveau site web', desc: 'Création complète d\'un nouveau site', icon: '' },
+        { value: 'redesign', label: 'Refonte de site existant', desc: 'Améliorer un site actuel', icon: '' },
+        { value: 'seo-only', label: 'SEO & Référencement uniquement', desc: 'Optimiser la visibilité Google', icon: '' },
+        { value: 'marketing', label: 'Marketing Digital', desc: 'Stratégie Facebook/Instagram', icon: '' },
+        { value: 'complete', label: 'Solution complète', desc: 'Site + SEO + Marketing', icon: '' },
+        { value: 'not-sure', label: 'Je ne sais pas encore', desc: 'Besoin de conseils', icon: '' }
       ]
     },
     {
@@ -58,11 +58,11 @@ const QuestionnairePage = () => {
       subtitle: 'Choisissez votre urgence pour adapter notre approche',
       type: 'choice',
       options: [
-        { value: 'asap', label: 'Le plus vite possible', desc: 'Démarrage immédiat', icon: '⚡' },
-        { value: '2-weeks', label: 'Dans 2 semaines', desc: 'Planning optimal', icon: '📅' },
-        { value: '1-month', label: 'D\'ici 1 mois', desc: 'Préparation soignée', icon: '🎯' },
-        { value: '3-months', label: 'Dans 2-3 mois', desc: 'Planification stratégique', icon: '📋' },
-        { value: 'flexible', label: 'Je suis flexible', desc: 'Quand c\'est optimal', icon: '🤝' }
+        { value: 'asap', label: 'Le plus vite possible', desc: 'Démarrage immédiat', icon: '' },
+        { value: '2-weeks', label: 'Dans 2 semaines', desc: 'Planning optimal', icon: '' },
+        { value: '1-month', label: 'D\'ici 1 mois', desc: 'Préparation soignée', icon: '' },
+        { value: '3-months', label: 'Dans 2-3 mois', desc: 'Planification stratégique', icon: '' },
+        { value: 'flexible', label: 'Je suis flexible', desc: 'Quand c\'est optimal', icon: '' }
       ]
     },
     {
@@ -71,11 +71,11 @@ const QuestionnairePage = () => {
       subtitle: 'Pour vous proposer la solution la plus adaptée',
       type: 'choice',
       options: [
-        { value: '1500-3000', label: '1 500 - 3 000 CHF', desc: 'OSOM Web Formula', icon: '🎯' },
-        { value: '3000-5000', label: '3 000 - 5 000 CHF', desc: 'Site premium + SEO', icon: '🚀' },
-        { value: '5000-10000', label: '5 000 - 10 000 CHF', desc: 'Solution complète', icon: '⭐' },
-        { value: '10000+', label: '10 000+ CHF', desc: 'Projet sur mesure', icon: '💎' },
-        { value: 'not-defined', label: 'Budget à définir', desc: 'Conseils personnalisés', icon: '💡' }
+        { value: '1500-3000', label: '1 500 - 3 000 CHF', desc: 'OSOM Web Formula', icon: '' },
+        { value: '3000-5000', label: '3 000 - 5 000 CHF', desc: 'Site premium + SEO', icon: '' },
+        { value: '5000-10000', label: '5 000 - 10 000 CHF', desc: 'Solution complète', icon: '' },
+        { value: '10000+', label: '10 000+ CHF', desc: 'Projet sur mesure', icon: '' },
+        { value: 'not-defined', label: 'Budget à définir', desc: 'Conseils personnalisés', icon: '' }
       ]
     },
     {
@@ -84,12 +84,12 @@ const QuestionnairePage = () => {
       subtitle: 'Pour comprendre vos besoins spécifiques',
       type: 'choice',
       options: [
-        { value: 'no-website', label: 'Pas de site web', desc: 'Création from scratch', icon: '🆕' },
-        { value: 'old-website', label: 'Site web obsolète', desc: 'Besoin de modernisation', icon: '🔧' },
-        { value: 'low-traffic', label: 'Site actuel, peu de trafic', desc: 'Optimisation SEO', icon: '📊' },
-        { value: 'no-conversions', label: 'Du trafic mais pas de ventes', desc: 'Optimisation conversion', icon: '🎯' },
-        { value: 'manual-work', label: 'Tout en manuel actuellement', desc: 'Automatisation nécessaire', icon: '⚙️' },
-        { value: 'competitor-behind', label: 'En retard sur la concurrence', desc: 'Rattrapage stratégique', icon: '🏃' }
+        { value: 'no-website', label: 'Pas de site web', desc: 'Création from scratch', icon: '' },
+        { value: 'old-website', label: 'Site web obsolète', desc: 'Besoin de modernisation', icon: '' },
+        { value: 'low-traffic', label: 'Site actuel, peu de trafic', desc: 'Optimisation SEO', icon: '' },
+        { value: 'no-conversions', label: 'Du trafic mais pas de ventes', desc: 'Optimisation conversion', icon: '' },
+        { value: 'manual-work', label: 'Tout en manuel actuellement', desc: 'Automatisation nécessaire', icon: '' },
+        { value: 'competitor-behind', label: 'En retard sur la concurrence', desc: 'Rattrapage stratégique', icon: '' }
       ]
     },
     {
@@ -98,12 +98,12 @@ const QuestionnairePage = () => {
       subtitle: 'Pour mesurer le succès de votre projet',
       type: 'choice',
       options: [
-        { value: 'increase-sales', label: 'Augmenter les ventes', desc: 'ROI et conversions', icon: '💰' },
-        { value: 'get-leads', label: 'Générer des prospects', desc: 'Contacts qualifiés', icon: '🎯' },
-        { value: 'brand-awareness', label: 'Notoriété de marque', desc: 'Visibilité et reconnaissance', icon: '🌟' },
-        { value: 'save-time', label: 'Automatiser et gagner du temps', desc: 'Efficacité opérationnelle', icon: '⏰' },
-        { value: 'compete', label: 'Rattraper la concurrence', desc: 'Avantage compétitif', icon: '🏆' },
-        { value: 'all-above', label: 'Tous ces objectifs', desc: 'Transformation globale', icon: '🚀' }
+        { value: 'increase-sales', label: 'Augmenter les ventes', desc: 'ROI et conversions', icon: '' },
+        { value: 'get-leads', label: 'Générer des prospects', desc: 'Contacts qualifiés', icon: '' },
+        { value: 'brand-awareness', label: 'Notoriété de marque', desc: 'Visibilité et reconnaissance', icon: '' },
+        { value: 'save-time', label: 'Automatiser et gagner du temps', desc: 'Efficacité opérationnelle', icon: '' },
+        { value: 'compete', label: 'Rattraper la concurrence', desc: 'Avantage compétitif', icon: '' },
+        { value: 'all-above', label: 'Tous ces objectifs', desc: 'Transformation globale', icon: '' }
       ]
     },
     {
@@ -112,12 +112,12 @@ const QuestionnairePage = () => {
       subtitle: 'Pour adapter notre stratégie marketing',
       type: 'choice',
       options: [
-        { value: 'b2b-local', label: 'Entreprises locales (Valais)', desc: 'B2B proximité', icon: '🏢' },
-        { value: 'b2b-national', label: 'Entreprises Suisse', desc: 'B2B national', icon: '🇨🇭' },
-        { value: 'b2c-local', label: 'Particuliers locaux', desc: 'B2C proximité', icon: '👥' },
-        { value: 'b2c-national', label: 'Particuliers Suisse', desc: 'B2C national', icon: '🌍' },
-        { value: 'seniors', label: 'Clientèle 50+ ans', desc: 'Audience senior', icon: '👴' },
-        { value: 'mixed', label: 'Clientèle mixte', desc: 'B2B + B2C', icon: '🎭' }
+        { value: 'b2b-local', label: 'Entreprises locales (Valais)', desc: 'B2B proximité', icon: '' },
+        { value: 'b2b-national', label: 'Entreprises Suisse', desc: 'B2B national', icon: '' },
+        { value: 'b2c-local', label: 'Particuliers locaux', desc: 'B2C proximité', icon: '' },
+        { value: 'b2c-national', label: 'Particuliers Suisse', desc: 'B2C national', icon: '' },
+        { value: 'seniors', label: 'Clientèle 50+ ans', desc: 'Audience senior', icon: '' },
+        { value: 'mixed', label: 'Clientèle mixte', desc: 'B2B + B2C', icon: '' }
       ]
     },
     {
@@ -355,10 +355,10 @@ const QuestionnairePage = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { value: 5, suffix: " min", label: "Temps requis", color: "#8B5CF6", icon: "⏱️" },
-                { value: 100, suffix: "%", label: "Gratuit", color: "#10B981", icon: "🎁" },
-                { value: 24, suffix: "h", label: "Réponse garantie", color: "#FFDD00", icon: "⚡" },
-                { value: 0, suffix: "", label: "Engagement", color: "#06B6D4", icon: "🔓" }
+                { value: 5, suffix: " min", label: "Temps requis", color: "#8B5CF6", icon: "" },
+                { value: 100, suffix: "%", label: "Gratuit", color: "#10B981", icon: "" },
+                { value: 24, suffix: "h", label: "Réponse garantie", color: "#FFDD00", icon: "" },
+                { value: 0, suffix: "", label: "Engagement", color: "#06B6D4", icon: "" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -413,19 +413,19 @@ const QuestionnairePage = () => {
             >
               {[
                 {
-                  icon: "🎯",
+                  icon: "",
                   title: "Diagnostic Personnalisé",
                   desc: "Analyse précise de votre situation et identification des axes prioritaires",
                   color: "#FFDD00"
                 },
                 {
-                  icon: "📊", 
+                  icon: "", 
                   title: "Stratégie Sur Mesure",
                   desc: "Recommandations adaptées à votre secteur et objectifs",
                   color: "#10B981"
                 },
                 {
-                  icon: "⚡",
+                  icon: "",
                   title: "Actions Concrètes", 
                   desc: "Plan détaillé avec étapes pour maximiser votre ROI",
                   color: "#06B6D4"
@@ -521,7 +521,7 @@ const QuestionnairePage = () => {
                     }}
                     transition={{ duration: 3, repeat: Infinity }}
                   >
-                    ⏱️ Diagnostic complet en 3-5 minutes
+                    Diagnostic complet en 3-5 minutes
                   </motion.p>
                   
                   <p className="text-gray-300 text-lg mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
@@ -533,9 +533,9 @@ const QuestionnairePage = () => {
                   {/* Trust indicators */}
                   <div className="flex justify-center items-center space-x-6 text-sm text-gray-400">
                     {[
-                      { icon: "🔒", text: "Sécurisé" },
-                      { icon: "⚡", text: "Rapide" },
-                      { icon: "🎯", text: "Précis" }
+                      { icon: "", text: "Sécurisé" },
+                      { icon: "", text: "Rapide" },
+                      { icon: "", text: "Précis" }
                     ].map((item, index) => (
                       <motion.div 
                         key={index}
@@ -876,7 +876,7 @@ const QuestionnairePage = () => {
                       />
                       
                       <span className="relative z-10 flex items-center justify-center">
-                        🚀 Envoyer ma demande
+                        Envoyer ma demande
                         <motion.span
                           className="ml-3"
                           animate={{ x: [0, 4, 0] }}
@@ -921,15 +921,15 @@ const QuestionnairePage = () => {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6, delay: 0.5 }}
                         >
-                          🎯 Résumé de votre projet
+                          Résumé de votre projet
                         </motion.h3>
                         
                         <div className="space-y-6">
                           {[
-                            { label: "Projet", value: questions[0].options.find(o => o.value === formData.projectType)?.label, icon: "🌐", color: "#8B5CF6" },
-                            { label: "Timeline", value: questions[1].options.find(o => o.value === formData.timeline)?.label, icon: "⏱️", color: "#FFDD00" },
-                            { label: "Budget", value: questions[2].options.find(o => o.value === formData.budget)?.label, icon: "💰", color: "#10B981" },
-                            { label: "Objectif", value: questions[4].options.find(o => o.value === formData.mainGoal)?.label, icon: "🎯", color: "#06B6D4" }
+                            { label: "Projet", value: questions[0].options.find(o => o.value === formData.projectType)?.label, icon: "", color: "#8B5CF6" },
+                            { label: "Timeline", value: questions[1].options.find(o => o.value === formData.timeline)?.label, icon: "", color: "#FFDD00" },
+                            { label: "Budget", value: questions[2].options.find(o => o.value === formData.budget)?.label, icon: "", color: "#10B981" },
+                            { label: "Objectif", value: questions[4].options.find(o => o.value === formData.mainGoal)?.label, icon: "", color: "#06B6D4" }
                           ].map((item, index) => (
                             <motion.div 
                               key={item.label}
@@ -961,9 +961,9 @@ const QuestionnairePage = () => {
                         >
                           <div className="flex items-center justify-center space-x-6 text-sm text-gray-400">
                             {[
-                              { icon: "🔒", text: "100% sécurisé" },
-                              { icon: "⚡", text: "Réponse 24h" },
-                              { icon: "🎁", text: "Analyse gratuite" }
+                              { icon: "", text: "100% sécurisé" },
+                              { icon: "", text: "Réponse 24h" },
+                              { icon: "", text: "Analyse gratuite" }
                             ].map((item, index) => (
                               <motion.div 
                                 key={index}

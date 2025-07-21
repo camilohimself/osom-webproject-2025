@@ -7,12 +7,12 @@ const cityData = getCityPageData('fribourg')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital fribourg, agence web fribourg, SEO fribourg, création site internet fribourg, marketing digital bilingue, gruyère digital, OSOM fribourg',
+  keywords: 'agence marketing digital fribourg, agence web fribourg, SEO fribourg, création site internet fribourg, marketing digital bilingue, gruyère digital, osom fribourg',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: 'https://osom.ch/local/fribourg',
-    siteName: 'OSOM Agence Marketing Digital',
+    siteName: 'osom Agence Marketing Digital',
     locale: 'fr_CH',
     type: 'website',
   },

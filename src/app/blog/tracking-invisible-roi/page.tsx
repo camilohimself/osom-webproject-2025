@@ -105,7 +105,7 @@ export default function TrackingInvisibleROIPage() {
           <AnimatedElement type="slideUp" delay={0.3}>
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8">
-                Le Problème : 🕳️ <span className="text-pink-400">Revenue Invisible</span>
+                Le Problème : <span className="text-pink-400">Revenue Invisible</span>
               </h2>
               
               <div className="bg-gradient-to-r from-red-500/10 to-transparent rounded-xl p-8 border-l-4 border-red-500 mb-8">
@@ -142,7 +142,7 @@ export default function TrackingInvisibleROIPage() {
           <AnimatedElement type="slideUp" delay={0.5}>
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8">
-                📊 Case Study: <span className="text-cyan-400">Client E-commerce B2B</span>
+                Case Study: <span className="text-cyan-400">Client E-commerce B2B</span>
               </h2>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
@@ -221,7 +221,7 @@ export default function TrackingInvisibleROIPage() {
           <AnimatedElement type="slideUp" delay={0.7}>
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8">
-                🔬 <span className="text-yellow-400">Méthodologie OSOM</span>
+                <span className="text-yellow-400">Méthodologie OSOM</span>
               </h2>
 
               <div className="space-y-6">
@@ -304,7 +304,7 @@ gtag('event', 'lead_qualified', {
           <AnimatedElement type="slideUp" delay={0.9}>
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8">
-                📈 <span className="text-pink-400">Résultats Détaillés</span>
+                <span className="text-pink-400">Résultats Détaillés</span>
               </h2>
 
               <div className="bg-gradient-to-br from-pink-500/5 to-purple-500/5 rounded-2xl p-8 border border-pink-500/20">
@@ -375,12 +375,12 @@ gtag('event', 'lead_qualified', {
           <AnimatedElement type="slideUp" delay={1.1}>
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8">
-                🎯 <span className="text-purple-400">Key Learnings</span>
+                <span className="text-purple-400">Key Learnings</span>
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-purple-500/10 to-transparent rounded-xl p-6 border border-purple-500/20">
-                  <h3 className="text-lg font-bold text-purple-400 mb-3">💡 Insights Business</h3>
+                  <h3 className="text-lg font-bold text-purple-400 mb-3">Insights Business</h3>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li>• 67% du ROI marketing était invisible</li>
                     <li>• Canaux "low performance" étaient mal trackés</li>
@@ -391,7 +391,7 @@ gtag('event', 'lead_qualified', {
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-500/10 to-transparent rounded-xl p-6 border border-blue-500/20">
-                  <h3 className="text-lg font-bold text-blue-400 mb-3">🔧 Solutions Techniques</h3>
+                  <h3 className="text-lg font-bold text-blue-400 mb-3">Solutions Techniques</h3>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li>• Server-Side Tracking mandatory</li>
                     <li>• Enhanced Conversions activated</li>
@@ -408,7 +408,7 @@ gtag('event', 'lead_qualified', {
           <AnimatedElement type="scale" delay={1.3}>
             <div className="bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-pink-500/30 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
-                🔍 <span className="text-pink-400">Votre ROI Marketing Est-il Invisible ?</span>
+                <span className="text-pink-400">Votre ROI Marketing Est-il Invisible ?</span>
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 67% des entreprises perdent la trace de leur ROI. Combien de revenue caché laissez-vous sur la table ?
@@ -419,13 +419,13 @@ gtag('event', 'lead_qualified', {
                   href="/contact"
                   className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  🎯 Audit Attribution Gratuit
+                  Audit Attribution Gratuit
                 </Link>
                 <Link
                   href="/calculator"
                   className="border-2 border-pink-500/60 text-pink-400 px-8 py-4 rounded-xl font-medium hover:bg-pink-500 hover:text-white transition-all duration-300"
                 >
-                  📊 Calculer Votre ROI Invisible
+                  Calculer Votre ROI Invisible
                 </Link>
               </div>
 

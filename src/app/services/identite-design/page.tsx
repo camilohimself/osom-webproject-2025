@@ -10,7 +10,7 @@ export default function IdentiteDesignPage() {
         title="Brand Asset Generation"
         subtitle="Culture Peinture - Mesure d'impact sur la valeur de marque"
         primaryMetric={{
-          label: "Asset Créé OSOM",
+          label: "Asset Créé osom",
           value: "95K CHF value",
           color: "#8B5CF6"
         }}
@@ -154,38 +154,38 @@ export default function IdentiteDesignPage() {
       featuresDescription="Identité visuelle forte pour impact maximum sur votre marché"
       features={[
         {
-          icon: "🎨",
+          icon: "",
           title: "Logo & Identité",
           description: "Création de logo, charte graphique, déclinaisons - Design unique & mémorable"
         },
         {
-          icon: "📱",
+          icon: "",
           title: "UI/UX Design",
           description: "Interface utilisateur optimisée conversion - +45% engagement moyen"
         },
         {
-          icon: "🖼️",
+          icon: "",
           title: "Supports Print",
           description: "Cartes visite, brochures, signalétique - Cohérence 360° garantie"
         },
         {
-          icon: "📊",
+          icon: "",
           title: "Infographies",
           description: "Visualisation de données impactante - +78% partages sociaux moyens"
         },
         {
-          icon: "🎬",
+          icon: "",
           title: "Motion Design",
           description: "Animations, vidéos, Reels - Content viral-ready pour réseaux sociaux"
         },
         {
-          icon: "📋",
+          icon: "",
           title: "Brand Guidelines",
           description: "Guide d'utilisation complet - Manuel de marque pour équipes"
         }
       ]}
       
-      pricingTitle="Identité OSOM Formula"
+      pricingTitle="Identité osom Formula"
       price="3500 CHF"
       pricingDescription="Logo + Charte + Déclinaisons + Guidelines"
       pricingFeatures={[

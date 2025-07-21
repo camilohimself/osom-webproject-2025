@@ -59,7 +59,7 @@ export default function TrackingDataPage() {
       {/* Tracking Performance */}
       <div className="mt-8">
         <ComparisonChart
-          title="Attribution Tracking: Avant vs Après OSOM"
+          title="Attribution Tracking: Avant vs Après osom"
           data={[
             { label: "Attribution Complète", value: 87, color: "#8B5CF6" },
             { label: "Sessions Non-Attribuées", value: 13, color: "#6B7280" }
@@ -131,17 +131,17 @@ export default function TrackingDataPage() {
       methodDescription="Transformez vos données floues en insights actionnables pour optimiser chaque franc investi"
       processSteps={[
         {
-          number: "🔍",
+          number: "01",
           title: "Audit Tracking Complet",
           description: "Analyse configuration GA4, GTM, attribution et identification gaps tracking"
         },
         {
-          number: "⚙️",
+          number: "02",
           title: "Configuration Avancée",
           description: "Setup tracking précis, events conversions, attribution multi-touch"
         },
         {
-          number: "📊",
+          number: "03",
           title: "Dashboard ROI Temps Réel",
           description: "Visibilité performance par canal, campagne et action marketing"
         }
@@ -154,38 +154,38 @@ export default function TrackingDataPage() {
       featuresDescription="Outils professionnels pour tracking précis et décisions data-driven"
       features={[
         {
-          icon: "📊",
+          icon: "",
           title: "Google Analytics 4 Pro",
           description: "Configuration complète, events personnalisés - 98% data quality"
         },
         {
-          icon: "🎯",
+          icon: "",
           title: "Attribution Multi-Touch",
           description: "Tracking parcours client complet - 94% précision attribution"
         },
         {
-          icon: "🔗",
+          icon: "",
           title: "GTM Configuration",
           description: "Google Tag Manager optimisé - Tracking sans erreur technique"
         },
         {
-          icon: "📈",
+          icon: "",
           title: "Dashboard Temps Réel",
           description: "Visualisation ROI par canal - Decisions éclairées instantanées"
         },
         {
-          icon: "🤖",
+          icon: "",
           title: "Automatisation Reporting",
           description: "Reports automatisés - Gain temps 85% vs reporting manuel"
         },
         {
-          icon: "🔒",
+          icon: "",
           title: "GDPR Compliant",
           description: "Tracking respectueux données - Conformité légale 100% garantie"
         }
       ]}
       
-      pricingTitle="Analytics OSOM Pro"
+      pricingTitle="Analytics osom Pro"
       price="2900 CHF"
       pricingDescription="Audit + Setup + Dashboard + Formation"
       pricingFeatures={[

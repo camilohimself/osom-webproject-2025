@@ -10,7 +10,7 @@ export default function PaidMediaGrowthPage() {
         title="Organic vs Paid Performance"
         subtitle="Culture Peinture - Révolution marketing 140x supérieur"
         primaryMetric={{
-          label: "Stratégie Organique OSOM",
+          label: "Stratégie Organique osom",
           value: "688 conversions",
           color: "#EAB308"
         }}
@@ -60,7 +60,7 @@ export default function PaidMediaGrowthPage() {
         <ComparisonChart
           title="Conversion Organique vs Payante - Culture Peinture"
           data={[
-            { label: "Stratégie Organique OSOM", value: 688, color: "#ffd507" },
+            { label: "Stratégie Organique osom", value: 688, color: "#ffd507" },
             { label: "Publicité Payante", value: 49, color: "#6B7280" }
           ]}
           subtitle="Données GA4 - 6 mois d'analyse comparative"
@@ -108,17 +108,17 @@ export default function PaidMediaGrowthPage() {
       methodDescription="Pourquoi dépenser en publicité quand l'organique génère 140x plus de conversions ?"
       processSteps={[
         {
-          number: "🎯",
+          number: "01",
           title: "Audit Concurrentiel",
           description: "Analyse des gaps d'acquisition et opportunités organiques cachées"
         },
         {
-          number: "🚀",
+          number: "02",
           title: "Stratégie Organique",
           description: "Développement écosystème content + SEO pour croissance durable"
         },
         {
-          number: "📊",
+          number: "03",
           title: "Optimisation Continue",
           description: "Suivi performances et réinvestissement gains dans croissance organique"
         }
@@ -131,38 +131,38 @@ export default function PaidMediaGrowthPage() {
       featuresDescription="Abandonnons la publicité payante pour la croissance organique durable"
       features={[
         {
-          icon: "🎯",
+          icon: "",
           title: "Growth Hacking Organique",
           description: "Stratégies viral + SEO + content pour croissance exponentielle naturelle"
         },
         {
-          icon: "📊",
+          icon: "",
           title: "Analytics Avancée",
           description: "Tracking conversions organiques vs payantes - ROI transparent en temps réel"
         },
         {
-          icon: "🚀",
+          icon: "",
           title: "Acquisition Durable",
           description: "Clients acquis organiquement = LTV 300% supérieure vs payant"
         },
         {
-          icon: "💡",
+          icon: "",
           title: "Content Viral",
           description: "Création contenus organiques qui génèrent plus que les ads payantes"
         },
         {
-          icon: "🔄",
+          icon: "",
           title: "Funnel Organique",
           description: "Parcours client naturel optimisé pour conversion automatique"
         },
         {
-          icon: "📈",
+          icon: "",
           title: "Scaling Sans Limites",
           description: "Croissance organique infinie sans augmenter budgets publicitaires"
         }
       ]}
       
-      pricingTitle="Growth OSOM Revolution"
+      pricingTitle="Growth osom Revolution"
       price="4500 CHF"
       pricingDescription="Stratégie + Exécution + Suivi 12 mois"
       pricingFeatures={[

@@ -7,12 +7,12 @@ const cityData = getCityPageData('neuchatel')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital neuchâtel, agence web neuchâtel, SEO neuchâtel, création site internet neuchâtel, marketing digital horlogerie, microtechnique digital, OSOM neuchâtel',
+  keywords: 'agence marketing digital neuchâtel, agence web neuchâtel, SEO neuchâtel, création site internet neuchâtel, marketing digital horlogerie, microtechnique digital, osom neuchâtel',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: 'https://osom.ch/local/neuchatel',
-    siteName: 'OSOM Agence Marketing Digital',
+    siteName: 'osom Agence Marketing Digital',
     locale: 'fr_CH',
     type: 'website',
   },

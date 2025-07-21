@@ -470,42 +470,42 @@ export const localServicesData = {
 // Testimonials per city
 export const cityTestimonials = {
   valais: {
-    quote: "OSOM a transformé notre visibilité digitale en Valais. De 49 à 688 conversions mensuelles, c'est du jamais vu dans l'artisanat !",
+    quote: "osom a transformé notre visibilité digitale en Valais. De 49 à 688 conversions mensuelles, c'est du jamais vu dans l'artisanat !",
     author: "Jean-Marc Sarrasin", 
     company: "Culture Peinture",
     industry: "Artisanat & Décoration"
   },
   
   sion: {
-    quote: "L'expertise locale d'OSOM à Sion nous a permis de devenir la référence éclairage haut de gamme en Valais. ROI exceptionnel !",
+    quote: "L'expertise locale d'osom à Sion nous a permis de devenir la référence éclairage haut de gamme en Valais. ROI exceptionnel !",
     author: "Caroline Métrailler",
     company: "Artisane de Lumière", 
     industry: "Design & Éclairage"
   },
 
   lausanne: {
-    quote: "Scale-up réussi grâce à OSOM ! De startup à 1.8M CHF ARR en 18 mois. Leur compréhension de l'écosystème tech lausannois est parfaite.",
+    quote: "Scale-up réussi grâce à osom ! De startup à 1.8M CHF ARR en 18 mois. Leur compréhension de l'écosystème tech lausannois est parfaite.",
     author: "David Chen",
     company: "TechStart Lausanne",
     industry: "SaaS B2B"
   },
 
   geneve: {
-    quote: "Discrétion, efficacité, résultats : OSOM maîtrise parfaitement les codes du luxury marketing genevois. Clients premium conquis !",
+    quote: "Discrétion, efficacité, résultats : osom maîtrise parfaitement les codes du luxury marketing genevois. Clients premium conquis !",
     author: "Isabella Marchetti",
     company: "Luxury Swiss Services", 
     industry: "Services Premium"
   },
 
   fribourg: {
-    quote: "Vente directe multipliée par 6 grâce au marketing territorial d'OSOM. Ils comprennent l'âme du terroir fribourgeois !",
+    quote: "Vente directe multipliée par 6 grâce au marketing territorial d'osom. Ils comprennent l'âme du terroir fribourgeois !",
     author: "Paul Ducrest",
     company: "Bio-Terroir Fribourg",
     industry: "Agriculture Bio"
   },
 
   neuchatel: {
-    quote: "Innovation B2B horlogère révélée au monde grâce à OSOM. De local à européen en 2 ans, expertise technique remarquable !",
+    quote: "Innovation B2B horlogère révélée au monde grâce à osom. De local à européen en 2 ans, expertise technique remarquable !",
     author: "Marie-Claude Jeanneret", 
     company: "Precision Watch Tech",
     industry: "Microtechnique"
@@ -568,9 +568,9 @@ export function getCityPageData(cityKey: keyof typeof swissCitiesData): CityPage
   return {
     cityData,
     localMetrics,
-    metaTitle: `Agence Marketing Digital ${cityData.name} - OSOM | ROI +4693% Prouvé`,
+    metaTitle: `Agence Marketing Digital ${cityData.name} - osom | ROI +4693% Prouvé`,
     metaDescription: `Agence web ${cityData.name} spécialisée ROI mesurable. ${localMetrics.localClients} clients ${cityData.region}, ${localMetrics.averageROI} ROI moyen. Marketing digital, SEO, sites premium 1500 CHF.`,
-    heroTitle: `OSOM ${cityData.name}`,
+    heroTitle: `osom ${cityData.name}`,
     heroSubtitle: cityData.name,
     heroDescription: `Agence marketing digital ${cityData.region} spécialisée ROI mesurable. Transformez votre présence digitale avec nos méthodes data-driven éprouvées par ${localMetrics.localClients} clients locaux.`,
     localCaseStudy: caseStudy,

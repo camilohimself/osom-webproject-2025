@@ -7,12 +7,12 @@ const cityData = getCityPageData('valais')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital valais, agence web valais, SEO valais, création site internet valais, marketing digital sion, OSOM valais',
+  keywords: 'agence marketing digital valais, agence web valais, SEO valais, création site internet valais, marketing digital sion, osom valais',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: 'https://osom.ch/local/valais',
-    siteName: 'OSOM Agence Marketing Digital',
+    siteName: 'osom Agence Marketing Digital',
     locale: 'fr_CH',
     type: 'website',
   },

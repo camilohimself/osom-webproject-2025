@@ -7,12 +7,12 @@ const cityData = getCityPageData('sion')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital sion, agence web sion, SEO sion, création site internet sion, marketing digital capitale valais, OSOM sion',
+  keywords: 'agence marketing digital sion, agence web sion, SEO sion, création site internet sion, marketing digital capitale valais, osom sion',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,
     url: 'https://osom.ch/local/sion',
-    siteName: 'OSOM Agence Marketing Digital',
+    siteName: 'osom Agence Marketing Digital',
     locale: 'fr_CH',
     type: 'website',
   },

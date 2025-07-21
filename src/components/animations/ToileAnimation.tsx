@@ -36,10 +36,10 @@ const ToileAnimation = ({
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  // Couleurs thématiques OSOM
+  // Couleurs thématiques osom
   const themeColors = {
     osom: {
-      primary: '#FFDD00', // Jaune OSOM
+      primary: '#FFDD00', // Jaune osom
       secondary: '#FFF',
       glow: 'rgba(255, 221, 0, 0.3)'
     },

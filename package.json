@@ -43,7 +43,7 @@
     "type": "git",
     "url": "https://github.com/camilohimself/osom-webproject-2025.git"
   },
-  "author": "OSOM Agency",
+  "author": "osom Agency",
   "license": "MIT",
   "engines": {
     "node": ">=20.0.0",

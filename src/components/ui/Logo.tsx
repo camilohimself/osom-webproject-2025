@@ -37,7 +37,7 @@ export const Logo: React.FC<LogoProps> = ({
     <div className={`${sizeClasses[size]} ${className} relative`}>
       <Image 
         src={logoSrc}
-        alt="OSOM Logo"
+        alt="osom Logo"
         width={200}
         height={60}
         className="w-full h-auto object-contain"

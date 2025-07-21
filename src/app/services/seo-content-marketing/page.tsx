@@ -10,7 +10,7 @@ export default function SEOContentMarketingPage() {
         title="Engagement Quality Impact"
         subtitle="Artisane de Lumière - 200+ jours d'analyse GA4 temps réel"
         primaryMetric={{
-          label: "Trafic SEO OSOM",
+          label: "Trafic SEO osom",
           value: "68.6% engagement",
           color: "#06B6D4"
         }}
@@ -95,17 +95,17 @@ export default function SEOContentMarketingPage() {
       methodDescription="Notre audit externe révèle les gaps invisibles même sans accès GA4/GSC"
       processSteps={[
         {
-          number: "🔍",
+          number: "01",
           title: "Audit Externe",
           description: "Analyse sans accès GA4/GSC révèle gaps invisibles des propriétaires"
         },
         {
-          number: "⚡",
+          number: "02",
           title: "Benchmarking Concurrentiel", 
           description: "Comparaison précise avec leaders du secteur, potentiel quantifié"
         },
         {
-          number: "🎯",
+          number: "03",
           title: "Opportunités Cachées",
           description: "22 mots-clés commerciaux non exploités révélés par analyse externe"
         }
@@ -118,38 +118,38 @@ export default function SEOContentMarketingPage() {
       featuresDescription="De l'audit à l'optimisation, tout pour dominer votre secteur"
       features={[
         {
-          icon: "🔍",
+          icon: "",
           title: "Audit SEO Technique",
           description: "Diagnostic complet de 150+ points techniques - Rapport détaillé 48h"
         },
         {
-          icon: "🎯",
+          icon: "",
           title: "Recherche Mots-Clés", 
           description: "Analyse secteur + concurrence + opportunités - 500+ keywords analysés"
         },
         {
-          icon: "✍️",
+          icon: "",
           title: "Content Marketing",
           description: "Création contenu optimisé conversion - +78% trafic organique moyen"
         },
         {
-          icon: "🔗",
+          icon: "",
           title: "Link Building",
           description: "Stratégie backlinks haute autorité - White-hat exclusivement"
         },
         {
-          icon: "📱",
+          icon: "",
           title: "SEO Local",
           description: "Optimisation Google My Business + citations - Domination locale Valais"
         },
         {
-          icon: "📊",
+          icon: "",
           title: "Analytics & Reporting",
           description: "Dashboard temps réel + rapports mensuels - ROI transparent"
         }
       ]}
       
-      pricingTitle="SEO OSOM Formula"
+      pricingTitle="SEO osom Formula"
       price="2500 CHF"
       pricingDescription="Audit + Stratégie + Content + Suivi 6 mois"
       pricingFeatures={[

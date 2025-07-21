@@ -10,7 +10,7 @@ export default function CreationSiteWebPage() {
         title="Conversion Performance"
         subtitle="Culture Peinture - Données GA4 vérifiées sur 200+ jours"
         primaryMetric={{
-          label: "Sites OSOM",
+          label: "Sites osom",
           value: "688 conversions",
           color: "#EAB308"
         }}
@@ -32,7 +32,7 @@ export default function CreationSiteWebPage() {
         <MetricsPulse
           value={11.3}
           suffix="%"
-          label="Taux de Conversion OSOM"
+          label="Taux de Conversion osom"
           description="vs 2-3% sites traditionnels"
           color="#ffd507"
         />
@@ -65,7 +65,7 @@ export default function CreationSiteWebPage() {
     <ServicePageTemplatePremium
       title="Création de Sites Web"
       subtitle="Sites"
-      heroDescription="Sites optimisés conversion + SEO technique. Notre approche OSOM Web génère des résultats mesurables dès la mise en ligne."
+      heroDescription="Sites optimisés conversion + SEO technique. Notre approche osom Web génère des résultats mesurables dès la mise en ligne."
       color="yellow"
       heroMetrics={[
         {
@@ -76,13 +76,13 @@ export default function CreationSiteWebPage() {
           suffix: "%",
           tooltip: {
             title: "Performance Conversion Supérieure",
-            details: "Sites OSOM optimisés pour la conversion vs sites traditionnels",
+            details: "Sites osom optimisés pour la conversion vs sites traditionnels",
             highlight: "4x plus efficace que la moyenne industrie"
           }
         },
         {
           value: "1500 CHF",
-          label: "OSOM Web Formula",
+          label: "osom Web Formula",
           description: "Site complet livré en 10 jours",
           animatedValue: 1500,
           suffix: " CHF",
@@ -107,7 +107,7 @@ export default function CreationSiteWebPage() {
       ]}
       ctaText="Démarrer mon projet web"
       
-      methodTitle="La Méthode OSOM"
+      methodTitle="La Méthode osom"
       methodDescription="Chaque site est conçu pour maximiser les conversions et performer en SEO dès le lancement"
       processSteps={[
         {
@@ -134,38 +134,38 @@ export default function CreationSiteWebPage() {
       featuresDescription="Stack technique moderne pour des performances maximales"
       features={[
         {
-          icon: "⚡",
+          icon: "",
           title: "Performance Optimale",
           description: "Score 95+ PageSpeed, temps de chargement inférieur à 2 secondes"
         },
         {
-          icon: "📱", 
+          icon: "", 
           title: "Responsive Design",
           description: "Parfait sur mobile, tablette et desktop avec animations fluides"
         },
         {
-          icon: "🔒",
+          icon: "",
           title: "Sécurité Renforcée", 
           description: "SSL, protection DDoS, sauvegardes automatiques"
         },
         {
-          icon: "📊",
+          icon: "",
           title: "Analytics Intégré",
           description: "Google Analytics 4, tracking conversions, ROI mesurable"
         },
         {
-          icon: "🚀",
+          icon: "",
           title: "SEO Ready",
           description: "Structure optimisée, meta tags, sitemap automatique"
         },
         {
-          icon: "⚙️",
+          icon: "",
           title: "CMS Intuitif",
           description: "Interface simple pour gérer votre contenu en autonomie"
         }
       ]}
       
-      pricingTitle="OSOM Web Formula"
+      pricingTitle="osom Web Formula"
       price="1500 CHF"
       pricingDescription="Design + Développement + SEO + Analytics + Formation"
       pricingFeatures={[
@@ -176,7 +176,7 @@ export default function CreationSiteWebPage() {
         "Formation incluse",
         "Livraison 10 jours"
       ]}
-      finalCtaText="Commander mon site OSOM"
+      finalCtaText="Commander mon site osom"
     />
   )
 }

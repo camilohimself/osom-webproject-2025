@@ -101,7 +101,7 @@ export default function CityPageTemplate({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": `OSOM Agence Marketing Digital ${cityData.name}`,
+            "name": `osom Agence Marketing Digital ${cityData.name}`,
             "description": metaDescription,
             "url": `https://osom.ch/local/${cityData.name.toLowerCase()}`,
             "telephone": contactInfo.phone,
@@ -174,7 +174,7 @@ export default function CityPageTemplate({
                 
                 <h1 className="text-5xl md:text-7xl font-light text-white mb-8 tracking-tight leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                   {heroTitle.split(' ').map((word, index) => 
-                    word === cityData.name || word === 'OSOM' ? (
+                    word === cityData.name || word === 'osom' ? (
                       <span key={index} className="text-yellow-400 font-bold">
                         {word}{' '}
                       </span>
@@ -293,7 +293,7 @@ export default function CityPageTemplate({
                   </div>
                   
                   <div className="mb-8">
-                    <h3 className="text-2xl font-semibold text-cyan-400 mb-4">Solution OSOM</h3>
+                    <h3 className="text-2xl font-semibold text-cyan-400 mb-4">Solution osom</h3>
                     <p className="text-gray-300 text-lg leading-relaxed">
                       {localCaseStudy.solution}
                     </p>

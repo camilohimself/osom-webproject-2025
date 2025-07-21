@@ -3,7 +3,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 
 export const metadata = {
-  title: 'Nos Services | OSOM - Agence Web Digitale Valais',
+  title: 'Nos Services | osom - Agence Web Digitale Valais',
   description: 'Découvrez nos services : création de sites web, SEO, marketing digital et plus. Solutions complètes pour votre présence en ligne.',
 }
 
@@ -12,7 +12,7 @@ export default async function ServicesPage() {
 
   const services = [
     {
-      title: "OSOM Web",
+      title: "osom Web",
       subtitle: "Sites 1500 CHF • Livrés en 10 jours",
       description: "Notre nouvelle offre standardisée : sites premium livrés rapidement avec SEO complet intégré",
       pricing: "1500 CHF",
@@ -24,7 +24,7 @@ export default async function ServicesPage() {
         "Formation complète incluse"
       ],
       caseStudy: "Nouveau format révolutionnaire",
-      icon: "⚡",
+      icon: "",
       badge: "NOUVEAU",
       highlight: true
     },
@@ -41,7 +41,7 @@ export default async function ServicesPage() {
         "688 conversions documentées"
       ],
       caseStudy: "Culture Peinture : 140x plus efficace",
-      icon: "📊",
+      icon: "",
       realData: true
     },
     {
@@ -57,7 +57,7 @@ export default async function ServicesPage() {
         "Trafic organique croissant"
       ],
       caseStudy: "Augmentation trafic moyenne +150%",
-      icon: "🚀"
+      icon: ""
     },
     {
       title: "Sites Web Premium",
@@ -72,7 +72,7 @@ export default async function ServicesPage() {
         "Interface utilisateur premium"
       ],
       caseStudy: "Projets web depuis 2019",
-      icon: "🌐"
+      icon: ""
     },
     {
       title: "E-commerce & IA",
@@ -87,7 +87,7 @@ export default async function ServicesPage() {
         "Optimisation conversion IA"
       ],
       caseStudy: "E-commerce nouvelle génération",
-      icon: "🛒"
+      icon: ""
     },
     {
       title: "Transformation Digitale",
@@ -102,7 +102,7 @@ export default async function ServicesPage() {
         "Accompagnement continu"
       ],
       caseStudy: "Transformation réussie IA",
-      icon: "🤖"
+      icon: ""
     }
   ]
 
@@ -181,7 +181,7 @@ export default async function ServicesPage() {
             {services.map((service, index) => {
               // Mapping thématique couleurs par service
               const serviceColors: { [key: number]: { main: string; bg: string } } = {
-                0: { main: '#EAB308', bg: 'yellow-400' }, // OSOM Web - Jaune
+                0: { main: '#EAB308', bg: 'yellow-400' }, // osom Web - Jaune
                 1: { main: '#A855F7', bg: 'purple-400' }, // Marketing Data - Violet  
                 2: { main: '#06B6D4', bg: 'cyan-400' }, // SEO - Cyan
                 3: { main: '#EAB308', bg: 'yellow-400' }, // Sites Premium - Jaune
@@ -402,7 +402,7 @@ export default async function ServicesPage() {
                   <div className="bg-green-400 h-24 w-32 rounded-xl flex items-center justify-center mb-4 shadow-lg">
                     <span className="text-black font-light text-2xl" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>105.8</span>
                   </div>
-                  <span className="text-sm text-green-400 font-medium">Stratégie OSOM</span>
+                  <span className="text-sm text-green-400 font-medium">Stratégie osom</span>
                 </div>
                 <div className="text-3xl text-gray-400 pb-12">vs</div>
                 <div className="text-center">
@@ -434,7 +434,7 @@ export default async function ServicesPage() {
         </div>
       </section>
 
-      {/* Méthode OSOM - Data-Driven Process - Style Linear */}
+      {/* Méthode osom - Data-Driven Process - Style Linear */}
       <section className="py-32 bg-black text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -545,7 +545,7 @@ export default async function ServicesPage() {
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-2 h-2 rounded-full bg-white mr-3"></div>
-                <span className="text-white text-sm font-medium tracking-wide">DIFFÉRENCIATEURS OSOM</span>
+                <span className="text-white text-sm font-medium tracking-wide">DIFFÉRENCIATEURS osom</span>
               </div>
               <h3 className="text-3xl md:text-4xl font-light text-white leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 Différence par <span className="text-yellow-400 font-bold">science</span>.<br />

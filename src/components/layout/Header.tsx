@@ -44,13 +44,13 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
             <div className="relative">
               <Image 
                 src="/osom-logo.svg" 
-                alt="OSOM" 
+                alt="osom" 
                 width={48} 
                 height={48} 
                 className="group-hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <span className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>OSOM</span>
+            <span className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>osom</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -8,7 +8,7 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 
 export default defineConfig({
   name: 'osom-cms',
-  title: 'OSOM CMS',
+  title: 'osom CMS',
   
   projectId,
   dataset,

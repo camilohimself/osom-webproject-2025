@@ -10,7 +10,7 @@ export default function AgencePage() {
   const valeurs = [
     {
       id: 'data-driven',
-      icon: '📊',
+      icon: '',
       title: 'Data-Driven',
       subtitle: 'Zéro intuition, que des faits',
       description: 'Chaque décision basée sur des données vérifiables. 400+ jours d\'analyses GA4 ne mentent jamais.',
@@ -19,7 +19,7 @@ export default function AgencePage() {
     },
     {
       id: 'transparence',
-      icon: '🔍',
+      icon: '',
       title: 'Transparence Totale',
       subtitle: 'ROI visible et mesurable',
       description: '140x plus efficace que la publicité payante. Nos résultats parlent d\'eux-mêmes, preuves à l\'appui.',
@@ -28,7 +28,7 @@ export default function AgencePage() {
     },
     {
       id: 'innovation',
-      icon: '⚡',
+      icon: '',
       title: 'Innovation Continue',
       subtitle: 'Technologies premium',
       description: 'Next.js, IA, tracking avancé. Nous adoptons les meilleures technologies avant qu\'elles deviennent mainstream.',
@@ -42,46 +42,46 @@ export default function AgencePage() {
       year: '2019',
       title: 'Les Débuts',
       description: 'Premiers projets web avec une approche artisanale. Focus sur la qualité technique et l\'expérience utilisateur.',
-      icon: '🌱',
+      icon: '',
       color: 'cyan'
     },
     {
       year: '2021',
       title: 'Certification Data',
       description: 'Formation Google Data Analyst. Pivot vers une approche 100% data-driven avec tracking avancé GA4.',
-      icon: '📈',
+      icon: '',
       color: 'green'
     },
     {
       year: '2023',
       title: 'Brevet Fédéral',
       description: 'Obtention du Brevet Fédéral en Marketing SAWI. Expertise reconnue officiellement par la Confédération.',
-      icon: '🏆',
+      icon: '',
       color: 'yellow'
     },
     {
       year: '2024',
       title: 'Révolution ROI',
       description: 'Culture Peinture : 140x plus efficace que les ads. Naissance de la méthodologie OSOM.',
-      icon: '🚀',
+      icon: '',
       color: 'purple'
     },
     {
       year: '2025',
       title: 'OSOM Today',
       description: '200+ projets, méthodologie éprouvée, résultats transparents. L\'agence qui mesure tout.',
-      icon: '💫',
+      icon: '',
       color: 'pink'
     }
   ]
 
   const stats = [
-    { number: '200+', label: 'Projets Réalisés', icon: '🎯' },
-    { number: '140x', label: 'ROI Maximum', icon: '📊' },
-    { number: '5+', label: 'Années d\'Expertise', icon: '⏱️' },
-    { number: '400+', label: 'Jours de Données', icon: '📈' },
-    { number: '100%', label: 'Satisfaction Client', icon: '😊' },
-    { number: '68.6%', label: 'Engagement SEO', icon: '🔍' }
+    { number: '200+', label: 'Projets Réalisés', icon: '' },
+    { number: '140x', label: 'ROI Maximum', icon: '' },
+    { number: '5+', label: 'Années d\'Expertise', icon: '' },
+    { number: '400+', label: 'Jours de Données', icon: '' },
+    { number: '100%', label: 'Satisfaction Client', icon: '' },
+    { number: '68.6%', label: 'Engagement SEO', icon: '' }
   ]
 
   return (
@@ -143,7 +143,7 @@ export default function AgencePage() {
                   whileHover={{ scale: 1.1, y: -5 }}
                   className="backdrop-blur-sm border border-white/10 rounded-2xl p-4 bg-gradient-to-br from-white/5 to-black/40 group"
                 >
-                  <div className="text-2xl mb-2">{stat.icon}</div>
+                  {stat.icon && <div className="text-2xl mb-2">{stat.icon}</div>}
                   <div className="text-2xl font-light text-yellow-400 mb-1" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     {stat.number}
                   </div>
@@ -202,13 +202,15 @@ export default function AgencePage() {
                 />
                 
                 <div className="relative z-10">
-                  <motion.div 
-                    className="text-6xl mb-6"
-                    animate={hoveredCard === valeur.id ? { scale: 1.2, rotate: 10 } : { scale: 1, rotate: 0 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {valeur.icon}
-                  </motion.div>
+                  {valeur.icon && (
+                    <motion.div 
+                      className="text-6xl mb-6"
+                      animate={hoveredCard === valeur.id ? { scale: 1.2, rotate: 10 } : { scale: 1, rotate: 0 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      {valeur.icon}
+                    </motion.div>
+                  )}
                   
                   <h3 className="text-2xl font-light text-white mb-3" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     {valeur.title}
@@ -279,7 +281,7 @@ export default function AgencePage() {
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <span className="text-2xl">{item.icon}</span>
+                    {item.icon && <span className="text-2xl">{item.icon}</span>}
                   </motion.div>
                   
                   <div className="w-5/12"></div>
@@ -326,7 +328,7 @@ export default function AgencePage() {
               <div className="backdrop-blur-sm border border-green-400/30 rounded-3xl p-8 bg-gradient-to-br from-green-400/10 to-black/60">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🏆</span>
+                    <span className="text-2xl"></span>
                   </div>
                   <div>
                     <h3 className="text-2xl font-light text-white" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
@@ -344,7 +346,7 @@ export default function AgencePage() {
               <div className="backdrop-blur-sm border border-cyan-400/30 rounded-3xl p-8 bg-gradient-to-br from-cyan-400/10 to-black/60">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📊</span>
+                    <span className="text-2xl"></span>
                   </div>
                   <div>
                     <h3 className="text-2xl font-light text-white" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>

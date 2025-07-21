@@ -368,10 +368,10 @@ const RealisationsPage = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { value: 140, suffix: "x", label: "ROI Maximum", color: "#EC4899", icon: "📈" },
-                { value: 688, suffix: "", label: "Conversions Réelles", color: "#10B981", icon: "🎯" },
-                { value: 68.6, suffix: "%", label: "Engagement SEO", color: "#06B6D4", icon: "🚀" },
-                { value: 400, suffix: "+", label: "Jours Données GA4", color: "#FFDD00", icon: "📋" }
+                { value: 140, suffix: "x", label: "ROI Maximum", color: "#EC4899", icon: "" },
+                { value: 688, suffix: "", label: "Conversions Réelles", color: "#10B981", icon: "" },
+                { value: 68.6, suffix: "%", label: "Engagement SEO", color: "#06B6D4", icon: "" },
+                { value: 400, suffix: "+", label: "Jours Données GA4", color: "#FFDD00", icon: "" }
               ].map((metric, index) => (
                 <motion.div
                   key={index}
@@ -381,20 +381,22 @@ const RealisationsPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 + 1 }}
                 >
-                  <motion.div
-                    className="text-4xl mb-3"
-                    animate={{ 
-                      rotate: [0, 10, -10, 0],
-                      scale: [1, 1.1, 1]
-                    }}
-                    transition={{ 
-                      duration: 4,
-                      repeat: Infinity,
-                      delay: index * 0.5
-                    }}
-                  >
-                    {metric.icon}
-                  </motion.div>
+                  {metric.icon && (
+                    <motion.div
+                      className="text-4xl mb-3"
+                      animate={{ 
+                        rotate: [0, 10, -10, 0],
+                        scale: [1, 1.1, 1]
+                      }}
+                      transition={{ 
+                        duration: 4,
+                        repeat: Infinity,
+                        delay: index * 0.5
+                      }}
+                    >
+                      {metric.icon}
+                    </motion.div>
+                  )}
                   
                   <div className="text-4xl font-bold mb-2" style={{ color: metric.color, fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                     <AnimatedCounter from={0} to={metric.value} duration={2.5} />{metric.suffix}
@@ -502,10 +504,10 @@ const RealisationsPage = () => {
           >
             <div className="flex flex-wrap justify-center gap-8">
               {[
-                { label: "Données GA4 vérifiées", color: "#10B981", icon: "✅" },
-                { label: "Meta Business validé", color: "#06B6D4", icon: "📊" },
-                { label: "200+ jours d'analyse", color: "#FFDD00", icon: "📈" },
-                { label: "Métriques reproductibles", color: "#EC4899", icon: "🔄" }
+                { label: "Données GA4 vérifiées", color: "#10B981", icon: "" },
+                { label: "Meta Business validé", color: "#06B6D4", icon: "" },
+                { label: "200+ jours d'analyse", color: "#FFDD00", icon: "" },
+                { label: "Métriques reproductibles", color: "#EC4899", icon: "" }
               ].map((item, index) => (
                 <motion.div 
                   key={index}
@@ -516,7 +518,7 @@ const RealisationsPage = () => {
                   transition={{ delay: index * 0.1 + 0.5 }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <span className="text-lg">{item.icon}</span>
+                  {item.icon && <span className="text-lg">{item.icon}</span>}
                   <motion.div 
                     className="w-3 h-3 rounded-full"
                     style={{ backgroundColor: item.color }}
@@ -646,7 +648,7 @@ const RealisationsPage = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <span className="relative z-10 flex items-center justify-center">
-                  📊 Analyser Mon ROI
+                  Analyser Mon ROI
                   <motion.span
                     className="ml-2"
                     animate={{ x: [0, 4, 0] }}
@@ -664,7 +666,7 @@ const RealisationsPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                🎯 Calculateur ROI
+                Calculateur ROI
               </motion.a>
             </div>
           </motion.div>

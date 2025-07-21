@@ -9,16 +9,16 @@ import { cookies } from 'next/headers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'OSOM - Agence Web Digitale Valais | Création Site Internet',
+  title: 'osom - Agence Web Digitale Valais | Création Site Internet',
   description: 'Agence web spécialisée dans la création de sites internet, SEO, et marketing digital en Valais. Expertise Next.js, design UX/UI moderne.',
   keywords: 'agence web valais, création site internet, SEO, marketing digital, Next.js, design UX/UI',
-  authors: [{ name: 'OSOM Agency' }],
+  authors: [{ name: 'osom Agency' }],
   robots: 'index, follow',
   openGraph: {
-    title: 'OSOM - Agence Web Digitale Valais',
+    title: 'osom - Agence Web Digitale Valais',
     description: 'Agence web spécialisée dans la création de sites internet, SEO, et marketing digital en Valais.',
     url: 'https://osom.ch',
-    siteName: 'OSOM',
+    siteName: 'osom',
     locale: 'fr_CH',
     type: 'website',
   },
