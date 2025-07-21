@@ -3,6 +3,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, type Locale } from '@/lib/i18n'
 import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImpact } from '@/components/ui'
 import { cookies } from 'next/headers'
+import HeroPremium from '@/components/homepage/HeroPremium'
 
 export default async function Home() {
   // Get locale from cookie (same logic as layout.tsx)
@@ -18,92 +19,8 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* Hero Section avec Graphique Linear Style */}
-      <section className="min-h-screen bg-black relative overflow-hidden flex items-center">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left: Content */}
-            <div>
-              <div className="flex items-center mb-8">
-                <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-                <span className="text-yellow-400 text-sm font-medium tracking-wide">{dictionary.home.hero.badge}</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-6xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                {dictionary.home.hero.title_line1} <span className="text-yellow-400 font-bold">{dictionary.home.hero.title_focus}</span>.<br />
-                {dictionary.home.hero.title_line2} <span className="text-yellow-400 font-bold">{dictionary.home.hero.title_impact}</span>.
-              </h1>
-              
-              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                {dictionary.home.hero.description}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <Link
-                  href="/contact"
-                  className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold shadow-lg"
-                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                >
-                  {dictionary.home.hero.cta_primary}
-                </Link>
-                <Link
-                  href="/calculator"
-                  className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
-                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                >
-                  {dictionary.home.hero.cta_secondary}
-                </Link>
-              </div>
-              
-              {/* Trust Indicators */}
-              <div className="flex flex-wrap gap-8 text-gray-400 text-sm">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                  <span>{dictionary.home.hero.trust_indicators.conversions}</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
-                  <span>{dictionary.home.hero.trust_indicators.engagement}</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                  <span>{dictionary.home.hero.trust_indicators.roi}</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right: Graphique Linear */}
-            <div>
-              <GraphiqueLinear
-                title={dictionary.home.charts.performance.title}
-                subtitle={dictionary.home.charts.performance.subtitle}
-                primaryMetric={{
-                  label: dictionary.home.charts.performance.primary_metric.label,
-                  value: dictionary.home.charts.performance.primary_metric.value,
-                  color: "#EAB308"
-                }}
-                secondaryMetric={{
-                  label: dictionary.home.charts.performance.secondary_metric.label,
-                  value: dictionary.home.charts.performance.secondary_metric.value,
-                  color: "#6B7280"
-                }}
-                improvement={{
-                  label: dictionary.home.charts.performance.improvement.label,
-                  value: dictionary.home.charts.performance.improvement.value
-                }}
-                backgroundColor="rgba(0,0,0,0.4)"
-                className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Premium Section */}
+      <HeroPremium dictionary={dictionary.home} />
 
       {/* Les 3 Forces OSOM - Design System Linear */}
       <section className="py-32 bg-black relative overflow-hidden">

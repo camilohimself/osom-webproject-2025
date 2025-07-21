@@ -29,6 +29,7 @@ interface GraphiqueLinearProps {
   width?: number
   height?: number
   className?: string
+  animate?: boolean
 }
 
 export default function GraphiqueLinear({
@@ -40,10 +41,12 @@ export default function GraphiqueLinear({
   backgroundColor = "#0F0F0F",
   width = 800,
   height = 300,
-  className = ""
+  className = "",
+  animate = false
 }: GraphiqueLinearProps) {
   const svgRef = useRef<SVGSVGElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [animationProgress, setAnimationProgress] = useState(animate ? 0 : 1)
 
   // Generate smooth curve data points
   const generateCurveData = (progress: number, baseline: number = 0.3, peak: number = 0.8): DataPoint[] => {
@@ -100,6 +103,28 @@ export default function GraphiqueLinear({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)
+          
+          // Start progressive animation if animate prop is true
+          if (animate) {
+            const startTime = Date.now()
+            const duration = 2500 // 2.5 seconds
+            
+            const animateChart = () => {
+              const elapsed = Date.now() - startTime
+              const progress = Math.min(elapsed / duration, 1)
+              
+              // Easing function for smooth animation
+              const easedProgress = 1 - Math.pow(1 - progress, 3)
+              setAnimationProgress(easedProgress)
+              
+              if (progress < 1) {
+                requestAnimationFrame(animateChart)
+              }
+            }
+            
+            // Delay start for dramatic effect
+            setTimeout(animateChart, 500)
+          }
         }
       },
       { threshold: 0.3 }
@@ -110,7 +135,7 @@ export default function GraphiqueLinear({
     }
 
     return () => observer.disconnect()
-  }, [])
+  }, [animate])
 
   return (
     <div className={`relative ${className}`} style={{ backgroundColor }}>
@@ -148,29 +173,29 @@ export default function GraphiqueLinear({
 
             {/* Secondary metric line (baseline) */}
             <motion.path
-              d={createPath(generateCurveData(1, 0.3, 0.45))}
+              d={createPath(generateCurveData(animate ? animationProgress : 1, 0.3, 0.45))}
               fill="none"
               stroke={secondaryMetric.color}
               strokeWidth="3"
-              initial={{ pathLength: 0, opacity: 0 }}
+              initial={{ pathLength: animate ? 0 : 1, opacity: 0 }}
               animate={isVisible ? { pathLength: 1, opacity: 0.6 } : {}}
-              transition={{ duration: 2, delay: 0.5, ease: "easeInOut" }}
+              transition={{ duration: animate ? 2 : 0, delay: animate ? 0.5 : 0, ease: "easeInOut" }}
             />
 
             {/* Primary metric line (growth) */}
             <motion.path
-              d={createPath(generateCurveData(1, 0.4, 0.8))}
+              d={createPath(generateCurveData(animate ? animationProgress : 1, 0.4, 0.8))}
               fill="none"
               stroke={primaryMetric.color}
               strokeWidth="4"
-              initial={{ pathLength: 0, opacity: 0 }}
+              initial={{ pathLength: animate ? 0 : 1, opacity: 0 }}
               animate={isVisible ? { pathLength: 1, opacity: 1 } : {}}
-              transition={{ duration: 2.5, delay: 1, ease: "easeInOut" }}
+              transition={{ duration: animate ? 2.5 : 0, delay: animate ? 1 : 0, ease: "easeInOut" }}
             />
 
             {/* Glow effect for primary line */}
             <motion.path
-              d={createPath(generateCurveData(1, 0.4, 0.8))}
+              d={createPath(generateCurveData(animate ? animationProgress : 1, 0.4, 0.8))}
               fill="none"
               stroke={primaryMetric.color}
               strokeWidth="8"
