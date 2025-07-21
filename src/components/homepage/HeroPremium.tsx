@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Link from 'next/link'
 import { GraphiqueLinear } from '@/components/ui'
+import AnimatedCounter from '@/components/ui/AnimatedCounter'
 
 interface HeroPremiumProps {
   dictionary: {
@@ -78,25 +79,46 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
     visible: { opacity: 1, x: 0, scale: 1 }
   }
 
-  // Tooltip data for metrics
+  // Enhanced tooltip data for metrics
   const metricTooltips = {
     conversions: {
-      title: "Performance Vérifiée GA4",
-      details: "Culture Peinture Valais - 6 mois d'analyse",
-      highlight: "688 conversions organiques vs 49 payantes",
-      context: "Même audience, même période, budget 10x inférieur"
+      title: "Performance Révolutionnaire Vérifiée",
+      details: "Culture Peinture Valais - Case Study Complet",
+      highlight: "140x Plus Efficace que la Publicité Payante",
+      metrics: {
+        organic: 688,
+        paid: 49,
+        period: "6 mois",
+        budget_ratio: "10x moins cher"
+      },
+      context: "Stratégie organique basée sur SEO technique + contenu optimisé",
+      proof: "Données GA4 + Meta Business Manager vérifiables"
     },
     engagement: {
-      title: "Engagement Supérieur SEO",
-      details: "Artisane de Lumière - 200+ jours GA4",
-      highlight: "68.6% engagement trafic SEO vs 44.6% direct",
-      context: "Chaque visiteur SEO génère 54% plus de valeur"
+      title: "Engagement Supérieur Mesuré",
+      details: "Artisane de Lumière - Étude 200+ jours",
+      highlight: "54% Plus de Valeur par Visiteur SEO",
+      metrics: {
+        seo_engagement: 68.6,
+        direct_engagement: 44.6,
+        improvement: "+54%",
+        sessions_recovered: "14,171"
+      },
+      context: "Trafic SEO OSOM génère plus d'interactions, temps de session et conversions",
+      proof: "Analytics GA4 comparatif sur période identique"
     },
     roi: {
-      title: "ROI Transparent & Mesurable",
-      details: "Données vérifiables en temps réel",
-      highlight: "Dashboard GA4 + Search Console intégrés",
-      context: "Rapports mensuels détaillés avec attribution complète"
+      title: "ROI Transparent & Traçable",
+      details: "Méthodologie OSOM standardisée",
+      highlight: "Visibilité Complète sur Chaque Euro Investi",
+      metrics: {
+        attribution: "100%",
+        reporting: "Temps réel",
+        channels: "Multi-canal",
+        transparency: "Données client"
+      },
+      context: "Dashboard temps réel + rapports mensuels avec attribution complète par source",
+      proof: "GA4 + Search Console + Data Studio intégrés"
     }
   }
 
@@ -200,59 +222,185 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
               {dictionary.hero.description}
             </motion.p>
             
-            {/* Premium CTA Buttons */}
+            {/* Ultra-Premium CTA Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              className="flex flex-col sm:flex-row gap-6 mb-12"
               variants={itemVariants}
+              transition={{ duration: 0.8, ease: [0.25, 0.25, 0.25, 0.75] }}
             >
-              {/* Primary CTA with premium hover */}
+              {/* Primary CTA - Ultra Premium */}
               <motion.div
+                className="group relative"
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 20px 40px rgba(255, 221, 0, 0.3)"
+                  rotateX: 2,
+                  rotateY: -2
                 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                whileTap={{ 
+                  scale: 0.98,
+                  rotateX: 0,
+                  rotateY: 0
+                }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 400, 
+                  damping: 25,
+                  duration: 0.2
+                }}
+                style={{ transformStyle: "preserve-3d" }}
               >
+                {/* Glow Ring */}
+                <motion.div 
+                  className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl blur opacity-0 group-hover:opacity-40"
+                  animate={{ 
+                    scale: [1, 1.02, 1],
+                    opacity: [0, 0.4, 0]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                />
+                
                 <Link
                   href="/contact"
-                  className="group bg-yellow-400 text-black px-8 py-4 rounded-lg font-bold shadow-lg relative overflow-hidden block text-center"
+                  className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-10 py-5 rounded-xl font-bold shadow-2xl relative overflow-hidden block text-center border-2 border-yellow-300/50"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 >
+                  {/* Shimmer Effect */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-500 opacity-0 group-hover:opacity-100"
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
                     initial={{ x: '-100%' }}
-                    whileHover={{ x: 0 }}
+                    animate={{ x: '100%' }}
+                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, ease: "easeInOut" }}
+                  />
+                  
+                  {/* Hover Gradient */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-400 opacity-0 group-hover:opacity-100"
                     transition={{ duration: 0.3 }}
                   />
-                  <span className="relative z-10 flex items-center justify-center">
-                    {dictionary.hero.cta_primary}
+                  
+                  {/* Content */}
+                  <div className="relative z-10 flex items-center justify-center">
                     <motion.span
-                      className="ml-2"
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                      className="mr-3"
+                      whileHover={{ scale: 1.05 }}
                     >
-                      →
+                      {dictionary.hero.cta_primary}
                     </motion.span>
-                  </span>
+                    
+                    {/* Animated Icon */}
+                    <motion.div className="relative">
+                      <motion.span
+                        animate={{ 
+                          x: [0, 8, 0],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 1.8, 
+                          repeat: Infinity, 
+                          ease: "easeInOut",
+                          delay: 0.5
+                        }}
+                      >
+                        🚀
+                      </motion.span>
+                      
+                      {/* Trailing particles */}
+                      <motion.div 
+                        className="absolute -right-2 top-1/2 w-1 h-1 bg-orange-400 rounded-full"
+                        animate={{
+                          scale: [0, 1, 0],
+                          x: [-5, 5, -5],
+                          opacity: [0, 1, 0]
+                        }}
+                        transition={{ duration: 1.5, repeat: Infinity, delay: 0.7 }}
+                      />
+                    </motion.div>
+                  </div>
+                  
+                  {/* Bottom shine */}
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-200 to-transparent" />
                 </Link>
               </motion.div>
 
-              {/* Secondary CTA with subtle hover */}
+              {/* Secondary CTA - Sophisticated */}
               <motion.div
+                className="group relative"
                 whileHover={{ 
-                  scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(255, 255, 255, 0.1)"
+                  scale: 1.03,
+                  rotateX: -1,
+                  rotateY: 1
                 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                whileTap={{ 
+                  scale: 0.98,
+                  rotateX: 0,
+                  rotateY: 0
+                }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 300, 
+                  damping: 25
+                }}
+                style={{ transformStyle: "preserve-3d" }}
               >
+                {/* Animated Border */}
+                <motion.div 
+                  className="absolute inset-0 rounded-xl"
+                  style={{
+                    background: "linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent)"
+                  }}
+                  animate={{
+                    rotate: [0, 360]
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+                
                 <Link
                   href="/calculator"
-                  className="group border-2 border-white/30 text-white px-8 py-4 rounded-lg font-medium backdrop-blur-sm relative overflow-hidden block text-center hover:border-white/60 hover:bg-white/5 transition-all duration-300"
+                  className="group border-2 border-white/30 text-white px-10 py-5 rounded-xl font-semibold backdrop-blur-sm relative overflow-hidden block text-center hover:border-white/60 hover:bg-white/10 transition-all duration-500"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 >
-                  {dictionary.hero.cta_secondary}
+                  {/* Hover Glow */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 opacity-0 group-hover:opacity-100"
+                    transition={{ duration: 0.4 }}
+                  />
+                  
+                  {/* Content */}
+                  <div className="relative z-10 flex items-center justify-center">
+                    <motion.span
+                      className="mr-2"
+                      whileHover={{ letterSpacing: "0.05em" }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {dictionary.hero.cta_secondary}
+                    </motion.span>
+                    
+                    {/* Animated Calculator Icon */}
+                    <motion.span
+                      animate={{ 
+                        rotate: [0, 5, -5, 0],
+                        scale: [1, 1.05, 1]
+                      }}
+                      transition={{ 
+                        duration: 2, 
+                        repeat: Infinity, 
+                        ease: "easeInOut",
+                        delay: 1
+                      }}
+                    >
+                      📊
+                    </motion.span>
+                  </div>
+                  
+                  {/* Corner accents */}
+                  <div className="absolute top-1 left-1 w-3 h-3 border-l-2 border-t-2 border-white/20 group-hover:border-white/40 transition-colors" />
+                  <div className="absolute top-1 right-1 w-3 h-3 border-r-2 border-t-2 border-white/20 group-hover:border-white/40 transition-colors" />
+                  <div className="absolute bottom-1 left-1 w-3 h-3 border-l-2 border-b-2 border-white/20 group-hover:border-white/40 transition-colors" />
+                  <div className="absolute bottom-1 right-1 w-3 h-3 border-r-2 border-b-2 border-white/20 group-hover:border-white/40 transition-colors" />
                 </Link>
               </motion.div>
             </motion.div>
@@ -289,28 +437,148 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                     {text}
                   </span>
                   
-                  {/* Premium Tooltip */}
+                  {/* Ultra-Premium Tooltip with Animated Counters */}
                   {hoveredMetric === key && metricTooltips[key as keyof typeof metricTooltips] && (
                     <motion.div
-                      className="absolute bottom-full left-0 mb-3 p-4 bg-black/95 backdrop-blur-md rounded-xl border border-yellow-400/30 shadow-2xl min-w-80 z-20"
-                      initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                      className="absolute bottom-full left-0 mb-3 p-6 bg-gradient-to-br from-black/95 to-gray-900/95 backdrop-blur-md rounded-2xl border border-yellow-400/40 shadow-2xl min-w-96 z-20"
+                      initial={{ opacity: 0, y: 15, scale: 0.85 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
-                      transition={{ duration: 0.2 }}
+                      transition={{ 
+                        type: "spring", 
+                        stiffness: 300, 
+                        damping: 25,
+                        duration: 0.3 
+                      }}
                     >
-                      <div className="text-yellow-400 font-semibold mb-2 text-sm">
-                        {metricTooltips[key as keyof typeof metricTooltips].title}
+                      {/* Glow Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-cyan-400/10 rounded-2xl blur-sm" />
+                      
+                      <div className="relative">
+                        {/* Header */}
+                        <div className="flex items-center mb-4">
+                          <div className="w-3 h-3 rounded-full bg-yellow-400 mr-3 animate-pulse" />
+                          <div className="text-yellow-400 font-bold text-base">
+                            {metricTooltips[key as keyof typeof metricTooltips].title}
+                          </div>
+                        </div>
+
+                        {/* Main Highlight */}
+                        <div className="text-white font-semibold mb-4 text-lg">
+                          {metricTooltips[key as keyof typeof metricTooltips].highlight}
+                        </div>
+
+                        {/* Animated Metrics */}
+                        {key === 'conversions' && (
+                          <div className="grid grid-cols-2 gap-4 mb-4 p-4 bg-gradient-to-r from-green-400/10 to-yellow-400/10 rounded-xl">
+                            <div className="text-center">
+                              <div className="text-2xl font-bold text-green-400">
+                                <AnimatedCounter 
+                                  from={0} 
+                                  to={metricTooltips.conversions.metrics.organic}
+                                  duration={1.5}
+                                  delay={0.2}
+                                />
+                              </div>
+                              <div className="text-xs text-gray-300">Conversions Organiques</div>
+                            </div>
+                            <div className="text-center">
+                              <div className="text-2xl font-bold text-gray-400">
+                                <AnimatedCounter 
+                                  from={0} 
+                                  to={metricTooltips.conversions.metrics.paid}
+                                  duration={1.5}
+                                  delay={0.4}
+                                />
+                              </div>
+                              <div className="text-xs text-gray-300">Conversions Payantes</div>
+                            </div>
+                            <div className="col-span-2 text-center mt-2">
+                              <div className="text-yellow-400 font-bold">
+                                = {metricTooltips.conversions.metrics.budget_ratio}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
+                        {key === 'engagement' && (
+                          <div className="grid grid-cols-2 gap-4 mb-4 p-4 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-xl">
+                            <div className="text-center">
+                              <div className="text-2xl font-bold text-cyan-400">
+                                <AnimatedCounter 
+                                  from={0} 
+                                  to={metricTooltips.engagement.metrics.seo_engagement}
+                                  duration={1.5}
+                                  delay={0.2}
+                                  suffix="%"
+                                />
+                              </div>
+                              <div className="text-xs text-gray-300">Engagement SEO OSOM</div>
+                            </div>
+                            <div className="text-center">
+                              <div className="text-2xl font-bold text-gray-400">
+                                <AnimatedCounter 
+                                  from={0} 
+                                  to={metricTooltips.engagement.metrics.direct_engagement}
+                                  duration={1.5}
+                                  delay={0.4}
+                                  suffix="%"
+                                />
+                              </div>
+                              <div className="text-xs text-gray-300">Engagement Direct</div>
+                            </div>
+                            <div className="col-span-2 text-center mt-2">
+                              <div className="text-cyan-400 font-bold">
+                                Sessions récupérées: <AnimatedCounter 
+                                  from={0} 
+                                  to={14171}
+                                  duration={2}
+                                  delay={0.6}
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
+                        {key === 'roi' && (
+                          <div className="grid grid-cols-2 gap-3 mb-4 p-4 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-xl">
+                            <div className="text-center">
+                              <div className="text-lg font-bold text-yellow-400">
+                                <AnimatedCounter 
+                                  from={0} 
+                                  to={100}
+                                  duration={1.5}
+                                  delay={0.2}
+                                  suffix="%"
+                                />
+                              </div>
+                              <div className="text-xs text-gray-300">Attribution</div>
+                            </div>
+                            <div className="text-center">
+                              <div className="text-lg font-bold text-yellow-400">24/7</div>
+                              <div className="text-xs text-gray-300">Reporting</div>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Context */}
+                        <div className="text-gray-300 text-sm mb-3 leading-relaxed">
+                          {metricTooltips[key as keyof typeof metricTooltips].context}
+                        </div>
+
+                        {/* Proof */}
+                        <div className="flex items-center justify-between pt-3 border-t border-gray-700">
+                          <div className="text-gray-400 text-xs">
+                            📊 {metricTooltips[key as keyof typeof metricTooltips].proof}
+                          </div>
+                          <div className="text-xs text-gray-500">
+                            {metricTooltips[key as keyof typeof metricTooltips].details}
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-white font-medium mb-1 text-sm">
-                        {metricTooltips[key as keyof typeof metricTooltips].highlight}
-                      </div>
-                      <div className="text-gray-300 text-xs mb-1">
-                        {metricTooltips[key as keyof typeof metricTooltips].context}
-                      </div>
-                      <div className="text-gray-400 text-xs">
-                        {metricTooltips[key as keyof typeof metricTooltips].details}
-                      </div>
-                      {/* Arrow */}
-                      <div className="absolute top-full left-6 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-yellow-400/30" />
+
+                      {/* Enhanced Arrow */}
+                      <div className="absolute top-full left-8 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-yellow-400/40" />
+                      <div className="absolute top-full left-8 mt-1 w-0 h-0 border-l-6 border-r-6 border-t-6 border-transparent border-t-black/95" />
                     </motion.div>
                   )}
                 </motion.div>
