@@ -3,7 +3,8 @@ import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import { Header, Footer } from '@/components/layout'
 import { getDictionary } from '@/lib/dictionaries'
-import { defaultLocale } from '@/lib/i18n'
+import { defaultLocale, locales, type Locale } from '@/lib/i18n'
+import { headers, cookies } from 'next/headers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,25 +24,37 @@ export const metadata: Metadata = {
   },
 }
 
+async function getLocaleFromRequest(): Promise<Locale> {
+  const headersList = await headers()
+  const cookieStore = await cookies()
+  
+  const locale = headersList.get('x-locale') || 
+    cookieStore.get('NEXT_LOCALE')?.value || 
+    defaultLocale
+  
+  return locales.includes(locale as Locale) ? locale as Locale : defaultLocale
+}
+
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const dictionary = await getDictionary(defaultLocale)
+  const currentLocale = await getLocaleFromRequest()
+  const dictionary = await getDictionary(currentLocale)
 
   return (
-    <html lang={defaultLocale}>
+    <html lang={currentLocale}>
       <head>
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
       </head>
       <body className={inter.className}>
-        <Header currentLocale={defaultLocale} dictionary={dictionary} />
+        <Header currentLocale={currentLocale} dictionary={dictionary} />
         <main>
           {children}
         </main>
-        <Footer currentLocale={defaultLocale} dictionary={dictionary} />
+        <Footer currentLocale={currentLocale} dictionary={dictionary} />
       </body>
     </html>
   )

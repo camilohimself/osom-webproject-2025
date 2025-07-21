@@ -194,7 +194,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                     {locales.map((locale) => (
                       <Link
                         key={locale}
-                        href={`/${locale}`}
+                        href={`/?locale=${locale}`}
                         className={`group flex items-center space-x-3 px-4 py-3 text-sm transition-all duration-300 hover:bg-yellow-400/10 hover:scale-105 ${
                           locale === currentLocale 
                             ? 'text-yellow-400 bg-yellow-400/5' 
@@ -312,7 +312,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                     {locales.map((locale) => (
                       <Link
                         key={locale}
-                        href={`/${locale}`}
+                        href={`/?locale=${locale}`}
                         className={`text-xs px-2 py-1 rounded transition-colors ${
                           locale === currentLocale
                             ? 'bg-yellow-400 text-black'
