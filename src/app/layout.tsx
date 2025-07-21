@@ -25,14 +25,27 @@ export const metadata: Metadata = {
 }
 
 async function getLocaleFromRequest(): Promise<Locale> {
-  const headersList = await headers()
-  const cookieStore = await cookies()
-  
-  const locale = headersList.get('x-locale') || 
-    cookieStore.get('NEXT_LOCALE')?.value || 
-    defaultLocale
-  
-  return locales.includes(locale as Locale) ? locale as Locale : defaultLocale
+  try {
+    const headersList = await headers()
+    const locale = headersList.get('x-locale')
+    
+    if (locale && locales.includes(locale as Locale)) {
+      return locale as Locale
+    }
+    
+    // Fallback to cookies if header is not available
+    const cookieStore = await cookies()
+    const cookieLocale = cookieStore.get('NEXT_LOCALE')?.value
+    
+    if (cookieLocale && locales.includes(cookieLocale as Locale)) {
+      return cookieLocale as Locale
+    }
+    
+    return defaultLocale
+  } catch (error) {
+    // Fallback to default if there's any error
+    return defaultLocale
+  }
 }
 
 export default async function RootLayout({

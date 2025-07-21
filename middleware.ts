@@ -24,53 +24,43 @@ function getLocale(request: NextRequest): string {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-
-  // Check if the pathname is missing a locale
-  const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
-
-  // Handle locale changes via URL parameters
   const url = request.nextUrl.clone()
+  
+  // Handle locale changes via URL parameters
   const localeParam = url.searchParams.get('locale')
   
   if (localeParam && locales.includes(localeParam as any)) {
     // Set locale cookie and redirect to clean URL
-    const response = NextResponse.redirect(url.origin + pathname)
+    const cleanUrl = url.origin + pathname
+    const response = NextResponse.redirect(cleanUrl)
     response.cookies.set('NEXT_LOCALE', localeParam, { 
       httpOnly: false, 
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax'
+      sameSite: 'lax',
+      maxAge: 31536000 // 1 year
     })
     return response
   }
 
-  // For root path or locale-specific paths, serve the content with the right locale
-  if (pathname === '/' || pathname.startsWith('/fr') || pathname.startsWith('/en') || pathname.startsWith('/de')) {
-    const locale = pathname === '/' ? getLocale(request) : pathname.split('/')[1]
-    
-    // Rewrite to the actual page while preserving the URL
-    const newUrl = request.nextUrl.clone()
-    
-    // If it's a locale-specific path, remove the locale from the pathname for internal routing
-    if (pathname !== '/') {
-      const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/'
-      newUrl.pathname = pathWithoutLocale
-    }
-    
-    // Set locale in headers for the app to use
-    const response = NextResponse.rewrite(newUrl)
-    response.headers.set('x-locale', locale)
-    response.cookies.set('NEXT_LOCALE', locale, { 
-      httpOnly: false, 
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax'
-    })
-    
-    return response
-  }
-
-  return NextResponse.next()
+  // Get current locale from cookie or default
+  const currentLocale = request.cookies.get('NEXT_LOCALE')?.value || defaultLocale
+  
+  // Ensure we have a valid locale
+  const validLocale = locales.includes(currentLocale as any) ? currentLocale : defaultLocale
+  
+  // Set locale header for the app to read
+  const response = NextResponse.next()
+  response.headers.set('x-locale', validLocale)
+  
+  // Refresh cookie with current locale
+  response.cookies.set('NEXT_LOCALE', validLocale, { 
+    httpOnly: false, 
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    maxAge: 31536000 // 1 year
+  })
+  
+  return response
 }
 
 export const config = {
