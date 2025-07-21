@@ -1,6 +1,18 @@
+import { Metadata } from 'next'
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
+
+export const metadata: Metadata = {
+  title: 'Tracking & Data Analytics Valais | Agence Marketing Digital OSOM',
+  description: 'Agence marketing digital Valais : tracking avancé et analytics. 14,171 sessions récupérées, ROI transparent pour entreprises valaisannes.',
+  keywords: 'agence marketing valais, marketing digital valais, analytics valais, tracking ga4 suisse, data marketing valais',
+  openGraph: {
+    title: 'Analytics & Tracking Valais | Data Marketing OSOM',
+    description: 'Expertise marketing digital Valais : révélez le ROI invisible de vos actions marketing avec notre tracking avancé.',
+    type: 'website',
+  }
+}
 
 export default function TrackingDataPage() {
   const proofContent = (
@@ -104,9 +116,9 @@ export default function TrackingDataPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Tracking & Data Analytics"
-      subtitle="Data"
-      heroDescription="Révélez le ROI invisible de vos actions marketing. Données vérifiables, décisions éclairées, performance optimisée."
+      title="Analytics & Tracking Valais"
+      subtitle="Data Valais"
+      heroDescription="Agence marketing digital Valais : révélez le ROI invisible de vos actions marketing. Expertise locale pour données vérifiables, décisions éclairées et performance optimisée."
       color="purple"
       heroMetrics={[
         {
@@ -125,15 +137,15 @@ export default function TrackingDataPage() {
           description: "Trafic 'Unassigned' récupéré"
         }
       ]}
-      ctaText="Audit tracking gratuit"
+      ctaText="Audit tracking gratuit Valais"
       
       methodTitle="Révélateur ROI Invisible"
-      methodDescription="Transformez vos données floues en insights actionnables pour optimiser chaque franc investi"
+      methodDescription="Expertise marketing digital Valais : transformez vos données floues en insights actionnables pour optimiser chaque franc investi sur le marché valaisan"
       processSteps={[
         {
           number: "01",
-          title: "Audit Tracking Complet",
-          description: "Analyse configuration GA4, GTM, attribution et identification gaps tracking"
+          title: "Audit Tracking Complet Valais",
+          description: "Analyse configuration GA4, GTM, attribution spécifique au marché valaisan et identification gaps tracking"
         },
         {
           number: "02",
@@ -155,8 +167,8 @@ export default function TrackingDataPage() {
       features={[
         {
           icon: "",
-          title: "Google Analytics 4 Pro",
-          description: "Configuration complète, events personnalisés - 98% data quality"
+          title: "Google Analytics 4 Pro Valais",
+          description: "Configuration complète adaptée au marché valaisan, events personnalisés - 98% data quality"
         },
         {
           icon: "",
@@ -170,8 +182,8 @@ export default function TrackingDataPage() {
         },
         {
           icon: "",
-          title: "Dashboard Temps Réel",
-          description: "Visualisation ROI par canal - Decisions éclairées instantanées"
+          title: "Dashboard Temps Réel Valais",
+          description: "Visualisation ROI par canal avec expertise locale - Décisions éclairées pour entreprises valaisannes"
         },
         {
           icon: "",
@@ -196,7 +208,7 @@ export default function TrackingDataPage() {
         "Formation équipe",
         "Support 3 mois"
       ]}
-      finalCtaText="Révéler mon ROI invisible"
+      finalCtaText="Révéler mon ROI invisible Valais"
     />
   )
 }

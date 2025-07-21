@@ -1,6 +1,18 @@
+import { Metadata } from 'next'
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { ROIVisualization, ComparisonChart, MetricsPulse, ProgressMeter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
+
+export const metadata: Metadata = {
+  title: 'Paid Media & Growth Valais | Agence Marketing Digital OSOM',
+  description: 'Agence marketing Valais : stratégie organique 140x plus efficace que la publicité payante. Expertise locale pour croissance durable des entreprises valaisannes.',
+  keywords: 'agence marketing valais, marketing digital valais, growth marketing valais, publicité organique suisse, paid media valais',
+  openGraph: {
+    title: 'Growth Marketing Valais | Stratégie Organique OSOM',
+    description: 'Agence marketing Valais : croissance organique 140x plus performante. Expertise locale pour entreprises valaisannes.',
+    type: 'website',
+  }
+}
 
 export default function PaidMediaGrowthPage() {
   const proofContent = (
@@ -81,9 +93,9 @@ export default function PaidMediaGrowthPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Paid Media & Growth"
-      subtitle="Growth"
-      heroDescription="Stratégie organique 140x plus performante que la publicité payante. Conversions durables et coût d'acquisition réduit de 99.3%."
+      title="Growth Marketing Valais"
+      subtitle="Growth Valais"
+      heroDescription="Agence marketing Valais : stratégie organique 140x plus performante que la publicité payante. Expertise locale pour conversions durables et coût d'acquisition réduit de 99.3%."
       color="yellow"
       heroMetrics={[
         {
@@ -102,15 +114,15 @@ export default function PaidMediaGrowthPage() {
           description: "vs 49 ads payantes"
         }
       ]}
-      ctaText="Révolutionner mon acquisition"
+      ctaText="Révolutionner mon acquisition en Valais"
       
       methodTitle="Révolution Growth Organique"
-      methodDescription="Pourquoi dépenser en publicité quand l'organique génère 140x plus de conversions ?"
+      methodDescription="Agence marketing digital Valais : pourquoi dépenser en publicité quand notre expertise locale génère 140x plus de conversions pour les entreprises valaisannes ?"
       processSteps={[
         {
           number: "01",
-          title: "Audit Concurrentiel",
-          description: "Analyse des gaps d'acquisition et opportunités organiques cachées"
+          title: "Audit Concurrentiel Valais",
+          description: "Analyse des gaps d'acquisition et opportunités organiques cachées sur le marché valaisan"
         },
         {
           number: "02",
@@ -132,8 +144,8 @@ export default function PaidMediaGrowthPage() {
       features={[
         {
           icon: "",
-          title: "Growth Hacking Organique",
-          description: "Stratégies viral + SEO + content pour croissance exponentielle naturelle"
+          title: "Growth Hacking Organique Valais",
+          description: "Stratégies viral adaptées au Valais + SEO local + content pour croissance exponentielle naturelle"
         },
         {
           icon: "",
@@ -142,8 +154,8 @@ export default function PaidMediaGrowthPage() {
         },
         {
           icon: "",
-          title: "Acquisition Durable",
-          description: "Clients acquis organiquement = LTV 300% supérieure vs payant"
+          title: "Acquisition Durable Valais",
+          description: "Clients valaisans acquis organiquement = LTV 300% supérieure vs payant avec expertise locale"
         },
         {
           icon: "",
@@ -173,7 +185,7 @@ export default function PaidMediaGrowthPage() {
         "Analytics & optimisation",
         "Support growth 12 mois"
       ]}
-      finalCtaText="Abandonner la pub payante maintenant"
+      finalCtaText="Croissance organique Valais maintenant"
     />
   )
 }

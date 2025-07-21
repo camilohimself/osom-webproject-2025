@@ -1,6 +1,18 @@
+import { Metadata } from 'next'
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
+
+export const metadata: Metadata = {
+  title: 'Identité & Design Valais | Agence Web & Marketing Digital OSOM',
+  description: 'Agence web Valais spécialisée en identité visuelle. 95K CHF valeur créée, 2.4M impressions. Expertise design pour entreprises valaisannes.',
+  keywords: 'agence marketing valais, agence web valais, design graphique valais, identité visuelle suisse, logo entreprise valais',
+  openGraph: {
+    title: 'Design & Identité Visuelle Valais | OSOM',
+    description: 'Agence web Valais : création d\'identité visuelle impactante. 95K CHF de valeur créée pour entreprises valaisannes.',
+    type: 'website',
+  }
+}
 
 export default function IdentiteDesignPage() {
   const proofContent = (
@@ -49,8 +61,8 @@ export default function IdentiteDesignPage() {
         <MetricsPulse
           value={67}
           suffix="%"
-          label="Reconnaissance Brand"
-          description="Notoriété marque Valais"
+          label="Reconnaissance Brand Valais"
+          description="Notoriété marque entreprises valaisannes"
           color="#8B5CF6"
         />
       </div>
@@ -99,9 +111,9 @@ export default function IdentiteDesignPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Identité & Design"
-      subtitle="Design"
-      heroDescription="Créons une identité visuelle qui marque les esprits et génère de la confiance instantanée avec des résultats mesurables."
+      title="Design & Identité Valais"
+      subtitle="Design Valais"
+      heroDescription="Agence web Valais : créons une identité visuelle qui marque les esprits valaisans et génère de la confiance instantanée avec des résultats mesurables adaptés au marché local."
       color="purple"
       heroMetrics={[
         {
@@ -120,20 +132,20 @@ export default function IdentiteDesignPage() {
           description: "Asset brand généré"
         }
       ]}
-      ctaText="Créer mon identité de marque"
+      ctaText="Créer mon identité de marque Valais"
       
       methodTitle="Design System Complet"
-      methodDescription="De la conception du logo à l'identité digitale complète, nous créons des marques mémorables"
+      methodDescription="Agence web Valais : de la conception du logo à l'identité digitale complète, nous créons des marques mémorables pour entreprises valaisannes"
       processSteps={[
         {
           number: "01",
-          title: "Découverte",
-          description: "Analyse de votre marché, concurrence, positionnement unique et objectifs business"
+          title: "Découverte Valais",
+          description: "Analyse de votre marché valaisan, concurrence locale, positionnement unique et objectifs business en Valais"
         },
         {
           number: "02",
-          title: "Concept",
-          description: "Création de 3 directions créatives alignées sur vos objectifs et votre audience"
+          title: "Concept Valais",
+          description: "Création de 3 directions créatives alignées sur vos objectifs et votre audience valaisanne"
         },
         {
           number: "03",
@@ -155,13 +167,13 @@ export default function IdentiteDesignPage() {
       features={[
         {
           icon: "",
-          title: "Logo & Identité",
-          description: "Création de logo, charte graphique, déclinaisons - Design unique & mémorable"
+          title: "Logo & Identité Valais",
+          description: "Création de logo adapté au marché valaisan, charte graphique, déclinaisons - Design unique & mémorable"
         },
         {
           icon: "",
-          title: "UI/UX Design",
-          description: "Interface utilisateur optimisée conversion - +45% engagement moyen"
+          title: "UI/UX Design Valais",
+          description: "Interface utilisateur optimisée pour clients valaisans - +45% engagement moyen sur marché Valais"
         },
         {
           icon: "",
@@ -196,7 +208,7 @@ export default function IdentiteDesignPage() {
         "Brand guidelines",
         "Formation équipe"
       ]}
-      finalCtaText="Créer ma signature visuelle"
+      finalCtaText="Créer ma signature visuelle Valais"
     />
   )
 }

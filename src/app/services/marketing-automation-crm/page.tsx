@@ -1,6 +1,18 @@
+import { Metadata } from 'next'
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { MetricsPulse, ProgressMeter, ComparisonChart, AssetValueCounter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
+
+export const metadata: Metadata = {
+  title: 'Marketing Automation & CRM Valais | Agence Marketing Digital OSOM',
+  description: 'Agence marketing digital Valais spécialisée en automation CRM. +78% conversions, -65% temps manuel. Expertise locale pour entreprises valaisannes.',
+  keywords: 'marketing digital valais, agence marketing valais, automation crm valais, marketing automation suisse, crm entreprise valais',
+  openGraph: {
+    title: 'Marketing Automation & CRM Valais | OSOM',
+    description: 'Automatisez vos conversions avec l\'expertise marketing digital Valais. ROI mesurable +78% pour entreprises valaisannes.',
+    type: 'website',
+  }
+}
 
 export default function MarketingAutomationCRMPage() {
   const proofContent = (
@@ -108,9 +120,9 @@ export default function MarketingAutomationCRMPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Marketing Automation & CRM"
-      subtitle="CRM"
-      heroDescription="Automatisez vos conversions et transformez chaque prospect en client avec des systèmes intelligents qui travaillent 24/7."
+      title="Marketing Automation & CRM Valais"
+      subtitle="CRM Valais"
+      heroDescription="Agence marketing digital Valais : automatisez vos conversions et transformez chaque prospect valaisan en client fidèle avec des systèmes intelligents qui travaillent 24/7 pour votre entreprise."
       color="cyan"
       heroMetrics={[
         {
@@ -129,15 +141,15 @@ export default function MarketingAutomationCRMPage() {
           description: "Lifetime value améliorée"
         }
       ]}
-      ctaText="Automatiser mes conversions"
+      ctaText="Automatiser mes conversions en Valais"
       
       methodTitle="Système Automatisation Intelligente"
-      methodDescription="Transformez votre funnel en machine à convertir qui fonctionne sans intervention"
+      methodDescription="Expertise marketing digital Valais : transformez votre funnel en machine à convertir adaptée au marché valaisan qui fonctionne sans intervention"
       processSteps={[
         {
           number: "01",
-          title: "Audit Funnel Actuel",
-          description: "Analyse des points de friction et opportunités d'automatisation"
+          title: "Audit Funnel Actuel Valais",
+          description: "Analyse des points de friction et opportunités d'automatisation spécifiques au marché valaisan"
         },
         {
           number: "02",
@@ -159,13 +171,13 @@ export default function MarketingAutomationCRMPage() {
       features={[
         {
           icon: "",
-          title: "Email Marketing Automation",
-          description: "Sequences personnalisées, segmentation avancée - +92% taux ouverture"
+          title: "Email Marketing Automation Valais",
+          description: "Sequences personnalisées pour clients valaisans, segmentation locale - +92% taux ouverture en Valais"
         },
         {
           icon: "",
-          title: "Lead Scoring Intelligent",
-          description: "Qualification automatique prospects - 87% précision qualification"
+          title: "Lead Scoring Intelligent Valais",
+          description: "Qualification automatique prospects valaisans avec expertise locale - 87% précision sur marché Valais"
         },
         {
           icon: "",
@@ -200,7 +212,7 @@ export default function MarketingAutomationCRMPage() {
         "Chatbot & AI integration", 
         "Formation équipe + support"
       ]}
-      finalCtaText="Lancer mon système automatisé"
+      finalCtaText="Lancer mon système automatisé Valais"
     />
   )
 }

@@ -2,15 +2,21 @@ import ServicePageTemplatePremium from '@/components/templates/ServicePageTempla
 import { MetricsPulse, ComparisonChart, ProgressMeter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
+export const metadata = {
+  title: 'Création Site Internet Valais | Agence Web - osom',
+  description: 'Agence web Valais spécialisée création site internet. 1500 CHF, 10 jours, 11.3% conversion vs 2.5% industrie. 688 conversions Culture Peinture.',
+  keywords: 'création site internet valais, agence web valais, site web valais, développement web valais, site vitrine valais, e-commerce valais'
+}
+
 export default function CreationSiteWebPage() {
   const proofContent = (
     <div className="space-y-8">
       {/* GraphiqueLinear - Conversion Performance */}
       <GraphiqueLinear
-        title="Conversion Performance"
-        subtitle="Culture Peinture - Données GA4 vérifiées sur 200+ jours"
+        title="Performance Web Valais"
+        subtitle="Culture Peinture Valais - 200+ jours GA4 marché local"
         primaryMetric={{
-          label: "Sites osom",
+          label: "Site Web Valais osom",
           value: "688 conversions",
           color: "#EAB308"
         }}
@@ -20,8 +26,8 @@ export default function CreationSiteWebPage() {
           color: "#6B7280"
         }}
         improvement={{
-          label: "Performance",
-          value: "14x supérieur"
+          label: "Avantage Local",
+          value: "14x marché Valais"
         }}
         backgroundColor="rgba(15, 23, 42, 0.8)"
         className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
@@ -63,9 +69,9 @@ export default function CreationSiteWebPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Création de Sites Web"
-      subtitle="Sites"
-      heroDescription="Sites optimisés conversion + SEO technique. Notre approche osom Web génère des résultats mesurables dès la mise en ligne."
+      title="Création Site Internet Valais"
+      subtitle="Agence Web Valais"
+      heroDescription="Agence web Valais expert création site internet. Sites optimisés conversion + SEO. 11.3% vs 2.5% industrie - Culture Peinture Valais validé."
       color="yellow"
       heroMetrics={[
         {
@@ -82,8 +88,8 @@ export default function CreationSiteWebPage() {
         },
         {
           value: "1500 CHF",
-          label: "osom Web Formula",
-          description: "Site complet livré en 10 jours",
+          label: "osom Web Formula Valais",
+          description: "Site Valais complet livré 10 jours",
           animatedValue: 1500,
           suffix: " CHF",
           tooltip: {
@@ -107,18 +113,18 @@ export default function CreationSiteWebPage() {
       ]}
       ctaText="Démarrer mon projet web"
       
-      methodTitle="La Méthode osom"
-      methodDescription="Chaque site est conçu pour maximiser les conversions et performer en SEO dès le lancement"
+      methodTitle="Méthode Web Valais osom"
+      methodDescription="Sites internet Valais conçus pour dominer le marché local. Performance 11.3% vs 2.5% industrie validée."
       processSteps={[
         {
           number: "01",
-          title: "Architecture Conversion",
-          description: "Design centré sur l'expérience utilisateur et l'optimisation du parcours client"
+          title: "Architecture Conversion Valais",
+          description: "Design adapté marché Valais, UX optimisée clients locaux Sion/Martigny/Monthey"
         },
         {
           number: "02", 
-          title: "SEO Technique Intégré",
-          description: "Structure optimisée, vitesse de chargement, et tracking GA4 configuré"
+          title: "SEO Local Valais Intégré",
+          description: "Structure technique + SEO local Valais, vitesse optimisée, GA4 marché local"
         },
         {
           number: "03",
@@ -165,18 +171,18 @@ export default function CreationSiteWebPage() {
         }
       ]}
       
-      pricingTitle="osom Web Formula"
+      pricingTitle="osom Web Formula Valais"
       price="1500 CHF"
-      pricingDescription="Design + Développement + SEO + Analytics + Formation"
+      pricingDescription="Site Internet Valais : Design + Développement + SEO Local + Analytics + Formation"
       pricingFeatures={[
-        "Design sur mesure",
-        "Responsive mobile",
-        "SEO optimisé",
-        "Analytics configuré", 
-        "Formation incluse",
-        "Livraison 10 jours"
+        "Design adapté marché Valais",
+        "Mobile-first Suisse",
+        "SEO local Valais optimisé",
+        "GA4 marché local configuré", 
+        "Formation création contenu",
+        "Livraison Valais 10 jours"
       ]}
-      finalCtaText="Commander mon site osom"
+      finalCtaText="Commander mon site web Valais"
     />
   )
 }
