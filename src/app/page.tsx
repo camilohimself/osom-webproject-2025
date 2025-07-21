@@ -71,12 +71,12 @@ export default async function Home() {
             {/* Right: Graphique Linear */}
             <div>
               <GraphiqueLinear
-                title="Performance Impact"
-                subtitle="Données réelles basées sur 400+ jours d'analyses GA4"
+                title="Performance Mesurable"
+                subtitle="Données vérifiées • 400+ jours d'analyses GA4"
                 primaryMetric={{
                   label: "Stratégie OSOM",
                   value: "688 conversions",
-                  color: "#06B6D4"
+                  color: "#EAB308"
                 }}
                 secondaryMetric={{
                   label: "Publicité payante",
@@ -84,11 +84,11 @@ export default async function Home() {
                   color: "#6B7280"
                 }}
                 improvement={{
-                  label: "ROI Supérieur",
+                  label: "Impact Supérieur",
                   value: "140x plus efficace"
                 }}
-                backgroundColor="rgba(0,0,0,0.3)"
-                className="backdrop-blur-sm border border-white/10 rounded-2xl"
+                backgroundColor="rgba(0,0,0,0.4)"
+                className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
               />
             </div>
           </div>
@@ -126,8 +126,8 @@ export default async function Home() {
                 {/* Graphique à gauche - Layout créatif */}
                 <div className="bg-gradient-to-br from-yellow-400/10 to-black/60 p-8 flex items-center">
                   <GraphiqueConversion
-                    title="Performance Design"
-                    subtitle="Sites OSOM vs traditionnels"
+                    title="Conversion Optimisée"
+                    subtitle="Data-driven vs intuitif"
                     traditionalRate={2.5}
                     osomRate={11.3}
                     className="w-full border-0"
@@ -138,19 +138,21 @@ export default async function Home() {
                 <div className="col-span-2 p-16 bg-gradient-to-br from-black/60 to-black/30">
                   <div className="max-w-3xl">
                     <div className="flex items-center mb-8">
-                      <div className="w-16 h-16 bg-yellow-400 rounded-2xl mr-6 flex items-center justify-center">
-                        <span className="text-black font-bold text-2xl">🎨</span>
+                      <div className="w-16 h-16 bg-yellow-400 rounded-full mr-6 flex items-center justify-center">
+                        <div className="w-8 h-8 bg-black rounded-full"></div>
                       </div>
                       <div>
-                        <h3 className="text-3xl font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                          Design & Expérience Utilisateur
-                        </h3>
-                        <div className="text-yellow-400 font-medium">FORCE #1 - DATA-DRIVEN DESIGN</div>
+                        <div className="text-yellow-400 font-medium text-sm mb-2">FORCE #1 - DATA-DRIVEN DESIGN</div>
                       </div>
                     </div>
                     
+                    <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                      Design avec <span className="text-yellow-400 font-bold">données</span>.<br />
+                      Conversion par <span className="text-yellow-400 font-bold">science</span>.
+                    </h3>
+                    
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Chaque pixel est optimisé grâce à nos analyses comportementales. Nos sites convertissent 4x mieux car nous concevons avec la data utilisateur, pas l'intuition.
+                      Chaque pixel optimisé grâce à nos analyses comportementales. Nos sites convertissent <span className="text-yellow-400 font-semibold">4x mieux</span> car nous concevons avec la data utilisateur, pas l'intuition.
                     </p>
                     
                     {/* Arguments renforcés */}
@@ -194,15 +196,15 @@ export default async function Home() {
               {/* Layout centré avec background graphique */}
               <div className="relative">
                 {/* Background graphique */}
-                <div className="absolute inset-0 opacity-30">
+                <div className="absolute inset-0 opacity-20">
                   <GraphiqueComparatif
-                    title="Qualité d'Engagement"
-                    subtitle="Trafic SEO OSOM vs Direct"
+                    title="Engagement Supérieur"
+                    subtitle="SEO OSOM vs Standard"
                     data={[
                       { label: "Trafic SEO OSOM", value: 68.6, color: "#06B6D4" },
                       { label: "Trafic Direct", value: 44.6, color: "#6B7280" }
                     ]}
-                    className="h-full border-0 opacity-60"
+                    className="h-full border-0"
                   />
                 </div>
                 
@@ -210,19 +212,21 @@ export default async function Home() {
                 <div className="relative z-10 p-16 bg-gradient-to-br from-black/80 to-black/60">
                   <div className="max-w-4xl mx-auto text-center">
                     <div className="flex items-center justify-center mb-8">
-                      <div className="w-16 h-16 bg-cyan-400 rounded-2xl mr-6 flex items-center justify-center">
-                        <span className="text-black font-bold text-2xl">🚀</span>
+                      <div className="w-16 h-16 bg-cyan-400 rounded-full mr-6 flex items-center justify-center">
+                        <div className="w-8 h-8 bg-black rounded-full"></div>
                       </div>
                       <div>
-                        <h3 className="text-3xl font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                          SEO & Acquisition Stratégique
-                        </h3>
-                        <div className="text-cyan-400 font-medium">FORCE #2 - TRAFIC QUALIFIÉ SUPÉRIEUR</div>
+                        <div className="text-cyan-400 font-medium text-sm mb-2">FORCE #2 - TRAFIC QUALIFIÉ SUPÉRIEUR</div>
                       </div>
                     </div>
                     
-                    <p className="text-xl text-gray-300 leading-relaxed mb-12" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Notre diagnostic externe révèle ce que vous ne voyez pas. Nous transformons les données invisibles en trafic qualifié supérieur, avec un engagement 54% plus élevé que la moyenne.
+                    <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                      SEO par <span className="text-cyan-400 font-bold">diagnostic</span>.<br />
+                      Trafic par <span className="text-cyan-400 font-bold">intelligence</span>.
+                    </h3>
+                    
+                    <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                      Notre diagnostic externe révèle ce que vous ne voyez pas. Trafic qualifié <span className="text-cyan-400 font-semibold">54% supérieur</span>, engagement mesuré, résultats transparents.
                     </p>
                     
                     {/* Arguments centrés sur 2 colonnes */}
@@ -270,19 +274,21 @@ export default async function Home() {
                 <div className="col-span-3 p-16 bg-gradient-to-br from-purple-900/20 to-black/60">
                   <div className="max-w-3xl">
                     <div className="flex items-center mb-8">
-                      <div className="w-16 h-16 bg-purple-400 rounded-2xl mr-6 flex items-center justify-center">
-                        <span className="text-black font-bold text-2xl">📊</span>
+                      <div className="w-16 h-16 bg-purple-400 rounded-full mr-6 flex items-center justify-center">
+                        <div className="w-8 h-8 bg-black rounded-full"></div>
                       </div>
                       <div>
-                        <h3 className="text-3xl font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                          Data-Driven Decision Making
-                        </h3>
-                        <div className="text-purple-400 font-medium">FORCE #3 - DÉCISIONS BASÉES SUR LA DATA</div>
+                        <div className="text-purple-400 font-medium text-sm mb-2">FORCE #3 - DÉCISIONS BASÉES SUR LA DATA</div>
                       </div>
                     </div>
                     
+                    <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                      Décisions par <span className="text-purple-400 font-bold">data</span>.<br />
+                      Performance par <span className="text-purple-400 font-bold">science</span>.
+                    </h3>
+                    
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Nous révélons le ROI invisible de vos actions marketing. 140x plus efficace que la publicité payante, nos stratégies organiques sont guidées par l'analyse comportementale, pas l'intuition.
+                      Nous révélons le ROI invisible de vos actions marketing. <span className="text-purple-400 font-semibold">140x plus efficace</span> que la publicité payante, stratégies guidées par l'analyse, pas l'intuition.
                     </p>
                     
                     {/* Arguments avec data forte */}
@@ -323,8 +329,8 @@ export default async function Home() {
                 {/* Graphique diagonal - 2 colonnes */}
                 <div className="col-span-2 bg-gradient-to-tl from-purple-900/30 to-black/80 flex items-center p-8">
                   <GraphiqueImpact
-                    title="Impact Révolutionnaire"
-                    subtitle="Données réelles PME Suisse romande"
+                    title="ROI Révolutionnaire"
+                    subtitle="Performance mesurée • PME Suisse romande"
                     organicValue={688}
                     paidValue={49}
                     multiplier={140}
