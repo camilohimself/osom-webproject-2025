@@ -4,6 +4,8 @@ import { defaultLocale, type Locale } from '@/lib/i18n'
 import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImpact } from '@/components/ui'
 import { cookies } from 'next/headers'
 import HeroPremium from '@/components/homepage/HeroPremium'
+import InteractiveForce from '@/components/homepage/InteractiveForce'
+import { forcesData } from '@/data/forces'
 
 export default async function Home() {
   // Get locale from cookie (same logic as layout.tsx)
@@ -48,7 +50,7 @@ export default async function Home() {
           <div className="space-y-20">
             
             {/* FORCE 1: Design & Expérience Utilisateur */}
-            <div className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl overflow-hidden min-h-[600px]">
+            <InteractiveForce force={forcesData.force1}>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 h-full">
                 {/* Graphique à gauche - Layout créatif */}
                 <div className="bg-gradient-to-br from-yellow-400/10 to-black/60 p-8 flex items-center">
@@ -116,10 +118,10 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </InteractiveForce>
             
             {/* FORCE 2: SEO & Acquisition Stratégique */}
-            <div className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl overflow-hidden min-h-[600px]">
+            <InteractiveForce force={forcesData.force2}>
               {/* Layout centré avec background graphique */}
               <div className="relative">
                 {/* Background graphique */}
@@ -191,10 +193,10 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </InteractiveForce>
             
             {/* FORCE 3: Data-Driven Decision Making */}
-            <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px]">
+            <InteractiveForce force={forcesData.force3}>
               {/* Layout asymétrique diagonal */}
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 h-full">
                 {/* Contenu principal - 3 colonnes */}
@@ -266,7 +268,7 @@ export default async function Home() {
                   />
                 </div>
               </div>
-            </div>
+            </InteractiveForce>
             
           </div>
         </div>
