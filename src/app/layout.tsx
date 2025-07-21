@@ -1,10 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
-import { Header, Footer } from '@/components/layout'
-import { getDictionary } from '@/lib/dictionaries'
-import { defaultLocale, locales, type Locale } from '@/lib/i18n'
-import { headers, cookies } from 'next/headers'
+import { ClientLayout } from '@/components/ClientLayout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,50 +21,21 @@ export const metadata: Metadata = {
   },
 }
 
-async function getLocaleFromRequest(): Promise<Locale> {
-  try {
-    const headersList = await headers()
-    const locale = headersList.get('x-locale')
-    
-    if (locale && locales.includes(locale as Locale)) {
-      return locale as Locale
-    }
-    
-    // Fallback to cookies if header is not available
-    const cookieStore = await cookies()
-    const cookieLocale = cookieStore.get('NEXT_LOCALE')?.value
-    
-    if (cookieLocale && locales.includes(cookieLocale as Locale)) {
-      return cookieLocale as Locale
-    }
-    
-    return defaultLocale
-  } catch (error) {
-    // Fallback to default if there's any error
-    return defaultLocale
-  }
-}
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const currentLocale = await getLocaleFromRequest()
-  const dictionary = await getDictionary(currentLocale)
-
   return (
-    <html lang={currentLocale}>
+    <html lang="fr">
       <head>
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
       </head>
       <body className={inter.className}>
-        <Header currentLocale={currentLocale} dictionary={dictionary} />
-        <main>
+        <ClientLayout>
           {children}
-        </main>
-        <Footer currentLocale={currentLocale} dictionary={dictionary} />
+        </ClientLayout>
       </body>
     </html>
   )
