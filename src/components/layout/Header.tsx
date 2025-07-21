@@ -55,7 +55,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                 className="group-hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <span className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300">OSOM</span>
+            <span className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>OSOM</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -71,6 +71,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                     <Link
                       href={item.href}
                       className="text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg relative group flex items-center"
+                      style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                     >
                       {item.name}
                       <svg className="w-4 h-4 ml-1 transition-transform duration-200" style={{ transform: isServicesMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,25 +88,28 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                             {/* Services Digitaux */}
                             <div>
                               <div className="mb-4">
-                                <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-1">Services Digitaux</h3>
-                                <p className="text-xs text-gray-400">Solutions techniques & créatives professionnelles</p>
+                                <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-1" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Services Digitaux</h3>
+                                <p className="text-xs text-gray-400" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Solutions techniques & créatives professionnelles</p>
                               </div>
                               <div className="space-y-1">
                                 <Link
                                   href="/services/creation-site-web"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                 >
                                   Création Site Web
                                 </Link>
                                 <Link
                                   href="/services/identite-design"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                 >
                                   Identité & Design
                                 </Link>
                                 <Link
                                   href="/services/seo-content-marketing"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                 >
                                   SEO & Content Marketing
                                 </Link>
@@ -115,25 +119,28 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                             {/* Growth & Performance */}
                             <div>
                               <div className="mb-4">
-                                <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-1">Growth & Performance</h3>
-                                <p className="text-xs text-gray-400">Acquisition client & optimisation ROI</p>
+                                <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-1" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Growth & Performance</h3>
+                                <p className="text-xs text-gray-400" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Acquisition client & optimisation ROI</p>
                               </div>
                               <div className="space-y-1">
                                 <Link
                                   href="/services/paid-media-growth"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                 >
                                   Paid Media & Growth
                                 </Link>
                                 <Link
                                   href="/services/marketing-automation-crm"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                 >
                                   Marketing Automation & CRM
                                 </Link>
                                 <Link
                                   href="/services/tracking-data"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                 >
                                   Tracking & Data
                                 </Link>
@@ -148,6 +155,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                   <Link
                     href={item.href}
                     className="text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg relative group"
+                    style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                   >
                     {item.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
@@ -164,6 +172,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                 className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors px-3 py-2 rounded-lg hover:bg-white/10"
+                style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               >
                 <span className="text-sm font-medium">{localeNames[currentLocale]}</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -191,6 +200,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
             <Link
               href="/contact"
               className="bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-all duration-300 font-bold shadow-lg hover:shadow-yellow-400/25 hover:scale-105"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
               {dictionary.navigation.contact}
             </Link>
@@ -247,6 +257,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                     <Link
                       href={item.href}
                       className="block px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-white/10 transition-colors font-medium rounded-lg"
+                      style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -257,7 +268,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
               
               <div className="pt-4 border-t border-yellow-400/20">
                 <div className="flex items-center justify-between px-4 py-2">
-                  <span className="text-sm font-medium text-gray-300">Language</span>
+                  <span className="text-sm font-medium text-gray-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Language</span>
                   <div className="flex space-x-2">
                     {locales.map((locale) => (
                       <Link
@@ -268,6 +279,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                             ? 'bg-yellow-400 text-black'
                             : 'text-gray-300 hover:bg-white/10'
                         }`}
+                        style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {localeNames[locale]}
@@ -279,6 +291,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                 <Link
                   href="/contact"
                   className="block mx-4 mt-3 bg-yellow-400 text-black text-center px-4 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
+                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {dictionary.navigation.contact}
