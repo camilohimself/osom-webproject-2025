@@ -266,18 +266,30 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 bg-[#0D1117]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Features Section - Style Linear */}
+      <section className="py-32 bg-black relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='${colorValue.replace('#', '%23')}' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-20"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-light text-white mb-6">
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: colorValue }}></div>
+              <span className="text-sm font-medium tracking-wide" style={{ color: colorValue }}>SERVICES DÉTAILLÉS</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
               {featuresTitle.split(' ').map((word, index) => 
-                word.includes('Premium') || word.includes('Technologies') ? (
+                word.includes('Services') || word.includes('Premium') || word.includes('Technologies') ? (
                   <span key={index} style={{ color: colorValue }}>
                     {word}{' '}
                   </span>
@@ -286,38 +298,75 @@ export default function ServicePageTemplate({
                 )
               )}
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
               {featuresDescription}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="bg-[#21262D] p-8 rounded-xl border border-[#21262D] hover:border-opacity-50 transition-all duration-300 group hover:scale-105"
-                style={{ '--hover-color': `${colorValue}50` } as any}
+                className="backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-opacity-60 transition-all duration-500 relative overflow-hidden bg-gradient-to-br from-white/5 to-black/40 group"
+                style={{
+                  '--hover-border': `${colorValue}30`
+                } as any}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = `${colorValue}50`
+                  e.currentTarget.style.borderColor = `${colorValue}30`
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = '#21262D'
+                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
                 }}
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <motion.div 
-                  className="text-3xl mb-4"
-                  style={{ color: colorValue }}
-                  whileHover={{ scale: 1.2, rotate: 10 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {feature.icon}
-                </motion.div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                {/* Header avec icône */}
+                <div className="flex items-start justify-between mb-8">
+                  <div className="flex items-center space-x-4">
+                    <motion.div 
+                      className="w-16 h-16 rounded-full flex items-center justify-center group-hover:animate-pulse"
+                      style={{ backgroundColor: colorValue }}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                        <span className="text-lg" style={{ color: colorValue }}>
+                          {feature.icon}
+                        </span>
+                      </div>
+                    </motion.div>
+                    <div>
+                      <h3 className="text-2xl font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                        {feature.title}
+                      </h3>
+                      <div className="w-8 h-1 rounded-full" style={{ backgroundColor: colorValue }}></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Description - Style Linear */}
+                <p className="text-gray-300 leading-relaxed text-lg" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  {feature.description}
+                </p>
+
+                {/* Indicator Bottom - Style Linear */}
+                <div className="mt-6 pt-6 border-t border-white/10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: colorValue }}></div>
+                      <span className="text-xs text-gray-400 font-medium">Service Premium</span>
+                    </div>
+                    <motion.div
+                      className="text-xs font-medium transition-colors"
+                      style={{ color: colorValue }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      Inclus →
+                    </motion.div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
