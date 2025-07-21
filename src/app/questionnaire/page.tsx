@@ -187,6 +187,86 @@ const QuestionnairePage = () => {
         </div>
       </header>
 
+      {/* Hero Section SEO - Valeur du Questionnaire */}
+      <section className="py-20 bg-black relative overflow-hidden">
+        {/* Background Pattern Linear */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-2 h-2 rounded-full bg-purple-400 mr-3"></div>
+              <span className="text-purple-400 text-sm font-medium tracking-wide">QUESTIONNAIRE STRATÉGIQUE</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Diagnostic <span className="text-purple-400 font-bold">gratuit</span><br />
+              de votre potentiel digital
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              7 questions stratégiques pour identifier vos <span className="text-purple-400 font-semibold">opportunités de croissance</span> et 
+              recevoir un plan d'action personnalisé basé sur vos réponses.
+            </p>
+          </div>
+
+          {/* Bénéfices du Questionnaire */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40 text-center">
+              <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-black font-bold text-lg">🎯</span>
+              </div>
+              <h3 className="text-lg font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Diagnostic Personnalisé
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Analyse précise de votre situation actuelle et identificaction des axes d'amélioration prioritaires
+              </p>
+            </div>
+
+            <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40 text-center">
+              <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-black font-bold text-lg">📊</span>
+              </div>
+              <h3 className="text-lg font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Stratégie Sur Mesure
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Recommandations adaptées à votre secteur, budget et objectifs de croissance
+              </p>
+            </div>
+
+            <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40 text-center">
+              <div className="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-black font-bold text-lg">⚡</span>
+              </div>
+              <h3 className="text-lg font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Actions Concrètes
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Plan d'action détaillé avec étapes prioritaires pour maximiser votre ROI digital
+              </p>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <div className="backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 bg-gradient-to-br from-purple-400/10 to-black/60 inline-block">
+              <p className="text-purple-400 text-sm font-medium mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                ⏱️ Temps estimé : 3-5 minutes
+              </p>
+              <p className="text-gray-300 text-sm" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Réponses 100% confidentielles • Analyse gratuite • Sans engagement
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-12">
         <AnimatePresence mode="wait">

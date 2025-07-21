@@ -479,6 +479,112 @@ const ContactPage = () => {
         </div>
       </section>
 
+      {/* Certifications & Expertise Section - SEO Boost */}
+      <section className="py-32 bg-black relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-2 h-2 rounded-full bg-green-400 mr-3"></div>
+              <span className="text-green-400 text-sm font-medium tracking-wide">EXPERTISE CERTIFIÉE</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Expert <span className="text-green-400 font-bold">certifié</span> marketing digital
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Formations officielles reconnues + expertise terrain sur 200+ projets réalisés.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {/* Brevet Fédéral Marketing */}
+            <div className="backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-green-400/30 transition-all duration-500 bg-gradient-to-br from-white/5 to-black/40 group">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center group-hover:animate-pulse">
+                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                    <span className="text-green-400 font-bold text-lg">🏆</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    Brevet Fédéral Marketing
+                  </h3>
+                  <div className="w-12 h-1 rounded-full bg-green-400"></div>
+                </div>
+              </div>
+              
+              <p className="text-gray-300 leading-relaxed text-lg mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Formation officielle suisse en marketing stratégique et opérationnel. Expertise reconnue par la Confédération.
+              </p>
+              
+              <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                  <span className="text-xs text-gray-400 font-medium">Certification Officielle</span>
+                </div>
+                <div className="text-xs font-medium text-green-400">SAWI Certified →</div>
+              </div>
+            </div>
+
+            {/* Google Data Analyst */}
+            <div className="backdrop-blur-sm border border-white/10 rounded-3xl p-8 hover:border-cyan-400/30 transition-all duration-500 bg-gradient-to-br from-white/5 to-black/40 group">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center group-hover:animate-pulse">
+                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                    <span className="text-cyan-400 font-bold text-lg">📊</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    Google Data Analyst
+                  </h3>
+                  <div className="w-12 h-1 rounded-full bg-cyan-400"></div>
+                </div>
+              </div>
+              
+              <p className="text-gray-300 leading-relaxed text-lg mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Certification professionnelle Google en analyse de données. Maîtrise GA4, tracking avancé et data-driven marketing.
+              </p>
+              
+              <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 rounded-full bg-cyan-400"></div>
+                  <span className="text-xs text-gray-400 font-medium">Google Certified</span>
+                </div>
+                <div className="text-xs font-medium text-cyan-400">Data Expert →</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Statistiques Expertise */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40">
+              <div className="text-3xl font-light text-yellow-400 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>200+</div>
+              <div className="text-gray-300 text-sm" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Projets Réalisés</div>
+            </div>
+            <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40">
+              <div className="text-3xl font-light text-green-400 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>5+</div>
+              <div className="text-gray-300 text-sm" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Années Expérience</div>
+            </div>
+            <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40">
+              <div className="text-3xl font-light text-cyan-400 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>140x</div>
+              <div className="text-gray-300 text-sm" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>ROI Maximum</div>
+            </div>
+            <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40">
+              <div className="text-3xl font-light text-purple-400 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>100%</div>
+              <div className="text-gray-300 text-sm" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-12">
         <AnimatePresence mode="wait">
