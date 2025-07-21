@@ -228,51 +228,28 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
               variants={itemVariants}
               transition={{ duration: 0.8, ease: [0.25, 0.25, 0.25, 0.75] }}
             >
-              {/* Primary CTA - Ultra Premium */}
+              {/* Primary CTA - Professional */}
               <motion.div
                 className="group relative"
                 whileHover={{ 
-                  scale: 1.05,
-                  rotateX: 2,
-                  rotateY: -2
+                  scale: 1.02,
+                  boxShadow: "0 15px 30px rgba(255, 221, 0, 0.25)"
                 }}
                 whileTap={{ 
-                  scale: 0.98,
-                  rotateX: 0,
-                  rotateY: 0
+                  scale: 0.98
                 }}
                 transition={{ 
                   type: "spring", 
-                  stiffness: 400, 
-                  damping: 25,
-                  duration: 0.2
+                  stiffness: 300, 
+                  damping: 20
                 }}
-                style={{ transformStyle: "preserve-3d" }}
               >
-                {/* Glow Ring */}
-                <motion.div 
-                  className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl blur opacity-0 group-hover:opacity-40"
-                  animate={{ 
-                    scale: [1, 1.02, 1],
-                    opacity: [0, 0.4, 0]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                />
-                
                 <Link
                   href="/contact"
-                  className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-10 py-5 rounded-xl font-bold shadow-2xl relative overflow-hidden block text-center border-2 border-yellow-300/50"
+                  className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-10 py-5 rounded-xl font-bold shadow-xl relative overflow-hidden block text-center"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 >
-                  {/* Shimmer Effect */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
-                    initial={{ x: '-100%' }}
-                    animate={{ x: '100%' }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, ease: "easeInOut" }}
-                  />
-                  
-                  {/* Hover Gradient */}
+                  {/* Subtle Hover Gradient */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-400 opacity-0 group-hover:opacity-100"
                     transition={{ duration: 0.3 }}
@@ -281,126 +258,62 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                   {/* Content */}
                   <div className="relative z-10 flex items-center justify-center">
                     <motion.span
-                      className="mr-3"
                       whileHover={{ scale: 1.05 }}
                     >
                       {dictionary.hero.cta_primary}
                     </motion.span>
                     
-                    {/* Animated Icon */}
-                    <motion.div className="relative">
-                      <motion.span
-                        animate={{ 
-                          x: [0, 8, 0],
-                          scale: [1, 1.1, 1]
-                        }}
-                        transition={{ 
-                          duration: 1.8, 
-                          repeat: Infinity, 
-                          ease: "easeInOut",
-                          delay: 0.5
-                        }}
-                      >
-                        🚀
-                      </motion.span>
-                      
-                      {/* Trailing particles */}
-                      <motion.div 
-                        className="absolute -right-2 top-1/2 w-1 h-1 bg-orange-400 rounded-full"
-                        animate={{
-                          scale: [0, 1, 0],
-                          x: [-5, 5, -5],
-                          opacity: [0, 1, 0]
-                        }}
-                        transition={{ duration: 1.5, repeat: Infinity, delay: 0.7 }}
-                      />
-                    </motion.div>
-                  </div>
-                  
-                  {/* Bottom shine */}
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-yellow-200 to-transparent" />
-                </Link>
-              </motion.div>
-
-              {/* Secondary CTA - Sophisticated */}
-              <motion.div
-                className="group relative"
-                whileHover={{ 
-                  scale: 1.03,
-                  rotateX: -1,
-                  rotateY: 1
-                }}
-                whileTap={{ 
-                  scale: 0.98,
-                  rotateX: 0,
-                  rotateY: 0
-                }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 300, 
-                  damping: 25
-                }}
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                {/* Animated Border */}
-                <motion.div 
-                  className="absolute inset-0 rounded-xl"
-                  style={{
-                    background: "linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent)"
-                  }}
-                  animate={{
-                    rotate: [0, 360]
-                  }}
-                  transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-                
-                <Link
-                  href="/calculator"
-                  className="group border-2 border-white/30 text-white px-10 py-5 rounded-xl font-semibold backdrop-blur-sm relative overflow-hidden block text-center hover:border-white/60 hover:bg-white/10 transition-all duration-500"
-                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                >
-                  {/* Hover Glow */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 opacity-0 group-hover:opacity-100"
-                    transition={{ duration: 0.4 }}
-                  />
-                  
-                  {/* Content */}
-                  <div className="relative z-10 flex items-center justify-center">
+                    {/* Simple Arrow */}
                     <motion.span
-                      className="mr-2"
-                      whileHover={{ letterSpacing: "0.05em" }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {dictionary.hero.cta_secondary}
-                    </motion.span>
-                    
-                    {/* Animated Calculator Icon */}
-                    <motion.span
+                      className="ml-3 text-lg"
                       animate={{ 
-                        rotate: [0, 5, -5, 0],
-                        scale: [1, 1.05, 1]
+                        x: [0, 4, 0]
                       }}
                       transition={{ 
                         duration: 2, 
                         repeat: Infinity, 
-                        ease: "easeInOut",
-                        delay: 1
+                        ease: "easeInOut"
                       }}
                     >
-                      📊
+                      →
                     </motion.span>
                   </div>
+                </Link>
+              </motion.div>
+
+              {/* Secondary CTA - Professional */}
+              <motion.div
+                className="group relative"
+                whileHover={{ 
+                  scale: 1.02,
+                  boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)"
+                }}
+                whileTap={{ 
+                  scale: 0.98
+                }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 300, 
+                  damping: 20
+                }}
+              >
+                <Link
+                  href="/calculator"
+                  className="group border-2 border-white/30 text-white px-10 py-5 rounded-xl font-semibold backdrop-blur-sm relative overflow-hidden block text-center hover:border-white/60 hover:bg-white/10 transition-all duration-300"
+                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                >
+                  {/* Subtle Hover Glow */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 opacity-0 group-hover:opacity-100"
+                    transition={{ duration: 0.3 }}
+                  />
                   
-                  {/* Corner accents */}
-                  <div className="absolute top-1 left-1 w-3 h-3 border-l-2 border-t-2 border-white/20 group-hover:border-white/40 transition-colors" />
-                  <div className="absolute top-1 right-1 w-3 h-3 border-r-2 border-t-2 border-white/20 group-hover:border-white/40 transition-colors" />
-                  <div className="absolute bottom-1 left-1 w-3 h-3 border-l-2 border-b-2 border-white/20 group-hover:border-white/40 transition-colors" />
-                  <div className="absolute bottom-1 right-1 w-3 h-3 border-r-2 border-b-2 border-white/20 group-hover:border-white/40 transition-colors" />
+                  {/* Content */}
+                  <div className="relative z-10 flex items-center justify-center">
+                    <span>
+                      {dictionary.hero.cta_secondary}
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             </motion.div>
