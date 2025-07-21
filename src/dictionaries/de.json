@@ -19,16 +19,129 @@
   },
   "home": {
     "hero": {
-      "title": "Datengesteuerte Digitalagentur",
-      "subtitle": "Schweizer Präzision trifft digitale Exzellenz. Wir liefern messbare Ergebnisse für professionelle Dienstleistungen, Gesundheitswesen und Anwaltskanzleien.",
-      "description": "Transformieren Sie Ihre digitale Präsenz mit unserer bewährten Methodik. Von 140x ROI-Verbesserungen bis hin zu unternehmensweiten Lösungen.",
-      "cta-primary": "Unsere Dienstleistungen",
-      "cta-secondary": "Kostenlose Beratung",
-      "stats": {
-        "projects": "200+ Projekte",
-        "roi": "140x Max ROI",
-        "experience": "5+ Jahre",
-        "data": "400+ Tage Analytics"
+      "badge": "OSOM PERFORMANCE",
+      "title_line1": "Build with",
+      "title_focus": "focus",
+      "title_line2": "Ship with",
+      "title_impact": "impact",
+      "description": "Digitales Marketing basierend auf messbarer Performance. Unsere Case Studies beweisen 140x bessere Ergebnisse als die Konkurrenz.",
+      "cta_primary": "Kostenlose Beratung",
+      "cta_secondary": "Unsere Ergebnisse ansehen",
+      "trust_indicators": {
+        "conversions": "688 vs 49 Conversions (GA4)",
+        "engagement": "68,6% vs 44,6% Engagement",
+        "roi": "Transparenter & messbarer ROI"
+      }
+    },
+    "forces": {
+      "badge": "DIE 3 OSOM KRÄFTE",
+      "title": "Daten im",
+      "title_service": "Dienst des Kunden",
+      "subtitle": "Unsere Expertise basiert auf 3 sich ergänzenden Säulen. Jede Entscheidung wird von Daten geleitet, um Ihren ROI zu maximieren."
+    },
+    "force1": {
+      "badge": "KRAFT #1 - DATA-DRIVEN DESIGN",
+      "title_line1": "Design mit",
+      "title_données": "Daten",
+      "title_line2": "Conversion durch",
+      "title_science": "Wissenschaft",
+      "description": "Jeder Pixel optimiert durch unsere Verhaltensanalysen. Unsere Websites konvertieren 4x besser, weil wir mit Nutzerdaten designen, nicht mit Intuition.",
+      "architecture": {
+        "title": "Conversion-Optimierte Architektur",
+        "description": "Nutzerreisen getestet über 1000+ Interaktionen. Jeder Button, jedes Formular und jeder CTA ist nach unseren Verhaltensheatmaps positioniert."
+      },
+      "performance": {
+        "title": "Messbare Performance",
+        "description": "Websites mit PageSpeed 95+, Ladezeiten < 2s geliefert. Direkter Einfluss auf SEO und Nutzererfahrung, gemessen via GA4."
+      },
+      "technologies": {
+        "title": "Moderne Technologien",
+        "description": "Next.js, React, Tailwind. Tech-Stack gewählt für Performance, nicht für Trends. Technischer ROI gemessen über 200+ Tage nach Launch."
+      },
+      "formula": {
+        "title": "OSOM Web Formel",
+        "price": "1500 CHF • 10 Tage • ROI garantiert",
+        "subtitle": "Maler-Handwerk Wallis (2024)"
+      },
+      "conversion": {
+        "rate": "11,3% vs 2,5%",
+        "description": "Durchschnittliche Conversion-Rate",
+        "subtitle": "Basierend auf 6-monatiger GA4-Analyse"
+      }
+    },
+    "force2": {
+      "badge": "KRAFT #2 - ÜBERLEGENER QUALIFIZIERTER TRAFFIC",
+      "title_line1": "SEO durch",
+      "title_diagnostic": "Diagnose",
+      "title_line2": "Traffic durch",
+      "title_intelligence": "Intelligenz",
+      "description": "Unsere externe Diagnose enthüllt, was Sie nicht sehen. 54% höherwertigerer qualifizierter Traffic, gemessenes Engagement, transparente Ergebnisse.",
+      "diagnostic": {
+        "title": "Enthüllende Diagnose",
+        "description": "Externer Audit ohne GA4/GSC-Zugang, der unsichtbare Lücken selbst für Eigentümer enthüllt. 397x Potenzial entdeckt vs führende Konkurrenten.",
+        "subtitle": "Immobilienunternehmen Genf (2024)"
+      },
+      "traffic": {
+        "title": "Bewiesener Qualifizierter Traffic",
+        "description": "68,6% Engagement SEO-Traffic vs 44,6% direkter Traffic. Jeder OSOM SEO-Besucher generiert 54% mehr Wert für Ihr Business.",
+        "subtitle": "Licht-Handwerk Wallis (200+ Tage GA4)"
+      },
+      "optimization": {
+        "title": "Kontinuierliche Optimierung",
+        "description": "Monatliches ROI-Tracking transparent. Jede SEO-Aktion wird gemessen, jede Optimierung durch Performance-Daten begründet.",
+        "subtitle": "Standardisierte OSOM-Methode"
+      },
+      "roi": {
+        "title": "Transparenter ROI",
+        "description": "Echtzeit-Dashboard + monatliche Berichte. Vollständige Sichtbarkeit über den Impact jedes investierten Euros in SEO.",
+        "subtitle": "GA4 + Search Console integriert"
+      },
+      "engagement": {
+        "title": "+54% Überlegenes Engagement",
+        "description": "OSOM SEO-Traffic vs Standard Direkttraffic",
+        "subtitle": "6-Monats-Vergleichsanalyse • Verifizierbare Daten"
+      }
+    },
+    "force3": {
+      "badge": "KRAFT #3 - DATENBASIERTE ENTSCHEIDUNGEN",
+      "title_line1": "Entscheidungen durch",
+      "title_data": "Daten",
+      "title_line2": "Performance durch",
+      "title_science": "Wissenschaft",
+      "description": "Wir enthüllen den unsichtbaren ROI Ihrer Marketing-Aktionen. 140x effektiver als bezahlte Werbung, Strategien geleitet durch Analyse, nicht Intuition.",
+      "revolution": {
+        "title": "Organische Revolution",
+        "roi": "140x ROI",
+        "description": "688 organische vs 49 bezahlte Conversions. Gleiche Zielgruppe, gleicher Zeitraum, 10x geringeres Budget. Daten lügen nicht.",
+        "subtitle": "KMU Ausbildung Wallis • 6 Monate GA4 + Meta Business"
+      },
+      "cost": {
+        "title": "Akquisitionskosten",
+        "reduction": "-99,3%",
+        "description": "Massive CPA-Reduktion durch organische Strategie. Jeder investierte Franken generiert 140x mehr Conversions als bezahlte Werbung.",
+        "subtitle": "Vergleich Meta Ads vs Organisch • Verifizierbarer ROI"
+      },
+      "tracking": {
+        "title": "Transparentes Tracking",
+        "description": "Echtzeit-Dashboard, vollständige Attribution, ROI pro Kanal. Sie wissen genau, woher Ihre Ergebnisse kommen und warum.",
+        "subtitle": "GA4 + Data Studio + Monatliche Berichte"
+      },
+      "conversions": {
+        "title": "688 vs 49 Conversions",
+        "description": "Organische Strategie vs bezahlte Werbung",
+        "subtitle": "Identischer Zeitraum • Identische Zielgruppe • 10x geringeres Budget"
+      }
+    },
+    "cta": {
+      "title_line1": "Bereit, Ihre",
+      "title_performances": "Performance zu transformieren",
+      "description": "Lassen Sie uns über Ihr Projekt sprechen und entdecken, wie wir Ihren ROI mit einem datengetriebenen Ansatz vervielfachen können.",
+      "cta_primary": "Kostenlose Beratung",
+      "cta_secondary": "Meinen ROI berechnen",
+      "trust_indicators": {
+        "ga4": "Verifizierbare GA4-Daten",
+        "results": "140x überlegene Ergebnisse",
+        "guarantee": "Performance garantiert"
       }
     },
     "services": {
@@ -37,7 +150,7 @@
       "web": {
         "title": "Enterprise Webentwicklung",
         "description": "Hochleistungs-Websites mit Next.js, TypeScript und modernster Technologie. Optimiert für Conversion und Skalierbarkeit.",
-        "features": ["11,3% Conversion-Rate", "Sub-2s Ladezeiten", "Mobile-first Design", "Enterprise Security"]
+        "features": ["11,3% Conversion-Rate", "Ladezeiten <2s", "Mobile-first Design", "Enterprise Sicherheit"]
       },
       "branding": {
         "title": "Strategische Markenidentität",
@@ -48,6 +161,38 @@
         "title": "Datengesteuerte Marketing",
         "description": "Performance-Marketing mit messbaren Ergebnissen. SEO, Content-Strategie und Growth-Optimierung.",
         "features": ["68,6% Engagement-Qualität", "Organisches Traffic-Wachstum", "Content-Strategie", "Performance-Tracking"]
+      }
+    },
+    "charts": {
+      "performance": {
+        "title": "Messbare Performance",
+        "subtitle": "Verifizierte Daten • 400+ Tage GA4-Analysen",
+        "primary_metric": {
+          "label": "OSOM-Strategie",
+          "value": "688 Conversions"
+        },
+        "secondary_metric": {
+          "label": "Bezahlte Werbung",
+          "value": "49 Conversions"
+        },
+        "improvement": {
+          "label": "Überlegener Impact",
+          "value": "140x effektiver"
+        }
+      },
+      "conversion": {
+        "title": "Optimierte Conversion",
+        "subtitle": "Datengetrieben vs intuitiv"
+      },
+      "comparatif": {
+        "title": "Überlegenes Engagement",
+        "subtitle": "OSOM SEO vs Standard",
+        "seo_label": "OSOM SEO-Traffic",
+        "direct_label": "Direkter Traffic"
+      },
+      "impact": {
+        "title": "Revolutionärer ROI",
+        "subtitle": "Gemessene Performance • Schweizer KMU"
       }
     }
   },
@@ -151,6 +296,106 @@
     "results": {
       "title": "Ihre ROI-Prognose",
       "subtitle": "Basierend auf unserer 200+ Projekt-Datenbank"
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Lassen Sie uns über Ihr Projekt sprechen",
+    "cta_schedule": "Beratungstermin vereinbaren",
+    "cta_questionnaire": "Fragebogen ausfüllen", 
+    "form_name": "Vollständiger Name",
+    "form_email": "E-Mail-Adresse",
+    "form_phone": "Telefonnummer",
+    "form_company": "Unternehmen",
+    "step_of": "Schritt {current} von {total}",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "submit": "Anfrage senden"
+  },
+  "contact_old": {
+    "hero": {
+      "title": "Bereit, Ihr Unternehmen zu transformieren?",
+      "subtitle": "Professionelle Beratung für Gesundheitswesen, Anwaltskanzleien und Dienstleistungsunternehmen",
+      "description": "Erhalten Sie umsetzbare Erkenntnisse und einen strategischen Fahrplan für Ihre Branche."
+    },
+    "industry": {
+      "title": "Ihre Branche",
+      "general": {
+        "title": "Alle Branchen",
+        "description": "Digitallösungen angepasst an Ihren spezifischen Geschäftsbereich",
+        "urgent": "Systemausfall, kritische Kampagne, wichtige Deadline"
+      },
+      "healthcare": {
+        "title": "Gesundheitsfachkräfte",
+        "description": "HIPAA-Compliance, Patientenbuchungssysteme, lokale Sichtbarkeitsoptimierung",
+        "urgent": "Klinik-Eröffnung, Reputationskrise, aggressive Konkurrenz"
+      },
+      "legal": {
+        "title": "Anwaltskanzleien",
+        "description": "Berufliche Compliance, Mandantengewinnung, juristische Autorität aufbauen",
+        "urgent": "Kanzlei-Gründung, öffentliche Rechtsstreitigkeiten, Medienexpertise-Positionierung"
+      },
+      "nonprofit": {
+        "title": "Stiftungen & NGOs",
+        "description": "Fundraising-Optimierung, Transparenz, Community-Engagement",
+        "urgent": "Dringende Kampagne, kritische Finanzierung, Kommunikationskrise"
+      },
+      "services": {
+        "title": "Dienstleistungsunternehmen",
+        "description": "B2B-Lead-Generierung, Branchenglaubwürdigkeit, Wettbewerbsdifferenzierung",
+        "urgent": "Markteintritt, unlauterer Wettbewerb, strategische Neuausrichtung"
+      }
+    },
+    "consultation": {
+      "title": "Beratungsmodus",
+      "standard": {
+        "title": "Standard-Beratung",
+        "description": "Perfekt für die Planung Ihrer langfristigen Digitalstrategie"
+      },
+      "urgent": {
+        "title": "Professioneller Notfall",
+        "description": "Kritische Situationen, die sofortige Intervention erfordern"
+      }
+    },
+    "process": {
+      "title": "Was Sie erwarten können?",
+      "step1": {
+        "title": "Schritt 1: Diagnose",
+        "features": ["Analyse aktueller Tools", "Identifikation von Lücken", "Detaillierter Bericht in 48h", "100% kostenlos, unverbindlich"]
+      },
+      "step2": {
+        "title": "Schritt 2: Strategie",
+        "features": ["Personalisierter Aktionsplan", "Priorisierung von Maßnahmen", "Transparentes Budget", "Realistische Zeitplanung"]
+      },
+      "step3": {
+        "title": "Schritt 3: Start",
+        "standard": ["Detaillierte Planung", "Schrittweise Umsetzung", "Ergebnisverfolgung", "Kontinuierliche Optimierung"],
+        "urgent": ["2h Antwortgarantie", "Sofortige Lösungen", "Prioritätssupport", "Express-Intervention"]
+      }
+    },
+    "cards": {
+      "diagnostic": {
+        "title": "Vollständige Diagnose",
+        "subtitle": "Kostenlos",
+        "description": "Tiefgreifende Analyse Ihrer aktuellen digitalen Situation"
+      },
+      "strategy": {
+        "title": "Maßgeschneiderte Strategie",
+        "subtitle": "Personalisiert",
+        "description": "Strategie angepasst an Ihre spezifischen Ziele und Ihr Budget"
+      },
+      "consultation": {
+        "title": "Express-Beratung",
+        "subtitle": "Schnell",
+        "standard": "Geplanter Termin innerhalb max. 48h",
+        "urgent": "Sofortiger Kontakt mit 2h Antwortgarantie",
+        "cta": "Klicken zum Buchen"
+      }
+    },
+    "testimonials": {
+      "diagnostic": "OSOMs Diagnose enthüllte 14.171 verlorene Sessions in unseren Daten. Genau das, was wir brauchten.",
+      "strategy": "Ihr datengestützter Ansatz ermöglichte es uns, unsere Conversions um das 4-fache zu steigern. Professionelle Tools, messbare Ergebnisse.",
+      "urgent": "90-Minuten-Antwort für unseren Marketing-Notfall. Beispielhafter Professionalismus."
     }
   },
   "common": {

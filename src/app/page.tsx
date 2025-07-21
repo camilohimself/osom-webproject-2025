@@ -1,10 +1,20 @@
 import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
-import { defaultLocale } from '@/lib/i18n'
+import { defaultLocale, type Locale } from '@/lib/i18n'
 import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImpact } from '@/components/ui'
+import { cookies } from 'next/headers'
 
 export default async function Home() {
-  const dictionary = await getDictionary(defaultLocale)
+  // Get locale from cookie (same logic as layout.tsx)
+  const cookieStore = await cookies()
+  const localeCookie = cookieStore.get('NEXT_LOCALE')?.value
+  
+  let currentLocale = defaultLocale
+  if (localeCookie && ['fr', 'en', 'de'].includes(localeCookie)) {
+    currentLocale = localeCookie as Locale
+  }
+
+  const dictionary = await getDictionary(currentLocale)
 
   return (
     <div className="min-h-screen bg-black">
@@ -22,16 +32,16 @@ export default async function Home() {
             <div>
               <div className="flex items-center mb-8">
                 <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-                <span className="text-yellow-400 text-sm font-medium tracking-wide">OSOM PERFORMANCE</span>
+                <span className="text-yellow-400 text-sm font-medium tracking-wide">{dictionary.home.hero.badge}</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Build with <span className="text-yellow-400 font-bold">focus</span>.<br />
-                Ship with <span className="text-yellow-400 font-bold">impact</span>.
+                {dictionary.home.hero.title_line1} <span className="text-yellow-400 font-bold">{dictionary.home.hero.title_focus}</span>.<br />
+                {dictionary.home.hero.title_line2} <span className="text-yellow-400 font-bold">{dictionary.home.hero.title_impact}</span>.
               </h1>
               
               <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Marketing digital basé sur la performance mesurable. Nos études de cas prouvent des résultats 140x supérieurs à la concurrence.
+                {dictionary.home.hero.description}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -40,14 +50,14 @@ export default async function Home() {
                   className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold shadow-lg"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 >
-                  Consultation gratuite
+                  {dictionary.home.hero.cta_primary}
                 </Link>
                 <Link
                   href="/calculator"
                   className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 >
-                  Voir nos résultats
+                  {dictionary.home.hero.cta_secondary}
                 </Link>
               </div>
               
@@ -55,15 +65,15 @@ export default async function Home() {
               <div className="flex flex-wrap gap-8 text-gray-400 text-sm">
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                  <span>688 vs 49 conversions (GA4)</span>
+                  <span>{dictionary.home.hero.trust_indicators.conversions}</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
-                  <span>68.6% vs 44.6% engagement</span>
+                  <span>{dictionary.home.hero.trust_indicators.engagement}</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                  <span>ROI transparent et mesurable</span>
+                  <span>{dictionary.home.hero.trust_indicators.roi}</span>
                 </div>
               </div>
             </div>
@@ -71,21 +81,21 @@ export default async function Home() {
             {/* Right: Graphique Linear */}
             <div>
               <GraphiqueLinear
-                title="Performance Mesurable"
-                subtitle="Données vérifiées • 400+ jours d'analyses GA4"
+                title={dictionary.home.charts.performance.title}
+                subtitle={dictionary.home.charts.performance.subtitle}
                 primaryMetric={{
-                  label: "Stratégie OSOM",
-                  value: "688 conversions",
+                  label: dictionary.home.charts.performance.primary_metric.label,
+                  value: dictionary.home.charts.performance.primary_metric.value,
                   color: "#EAB308"
                 }}
                 secondaryMetric={{
-                  label: "Publicité payante",
-                  value: "49 conversions",
+                  label: dictionary.home.charts.performance.secondary_metric.label,
+                  value: dictionary.home.charts.performance.secondary_metric.value,
                   color: "#6B7280"
                 }}
                 improvement={{
-                  label: "Impact Supérieur",
-                  value: "140x plus efficace"
+                  label: dictionary.home.charts.performance.improvement.label,
+                  value: dictionary.home.charts.performance.improvement.value
                 }}
                 backgroundColor="rgba(0,0,0,0.4)"
                 className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
@@ -108,13 +118,13 @@ export default async function Home() {
           <div className="text-center mb-24">
             <div className="flex items-center justify-center mb-4">
               <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-              <span className="text-yellow-400 text-sm font-medium tracking-wide">LES 3 FORCES OSOM</span>
+              <span className="text-yellow-400 text-sm font-medium tracking-wide">{dictionary.home.forces.badge}</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Data au <span className="text-yellow-400 font-bold">Service du Client</span>
+              {dictionary.home.forces.title} <span className="text-yellow-400 font-bold">{dictionary.home.forces.title_service}</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Notre expertise repose sur 3 piliers complémentaires. Chaque décision est guidée par la data pour maximiser votre retour sur investissement.
+              {dictionary.home.forces.subtitle}
             </p>
           </div>
           
@@ -126,8 +136,8 @@ export default async function Home() {
                 {/* Graphique à gauche - Layout créatif */}
                 <div className="bg-gradient-to-br from-yellow-400/10 to-black/60 p-8 flex items-center">
                   <GraphiqueConversion
-                    title="Conversion Optimisée"
-                    subtitle="Data-driven vs intuitif"
+                    title={dictionary.home.charts.conversion.title}
+                    subtitle={dictionary.home.charts.conversion.subtitle}
                     traditionalRate={2.5}
                     osomRate={11.3}
                     className="w-full border-0"
@@ -142,48 +152,48 @@ export default async function Home() {
                         <div className="w-8 h-8 bg-black rounded-full"></div>
                       </div>
                       <div>
-                        <div className="text-yellow-400 font-medium text-sm mb-2">FORCE #1 - DATA-DRIVEN DESIGN</div>
+                        <div className="text-yellow-400 font-medium text-sm mb-2">{dictionary.home.force1.badge}</div>
                       </div>
                     </div>
                     
                     <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Design avec <span className="text-yellow-400 font-bold">données</span>.<br />
-                      Conversion par <span className="text-yellow-400 font-bold">science</span>.
+                      {dictionary.home.force1.title_line1} <span className="text-yellow-400 font-bold">{dictionary.home.force1.title_données}</span>.<br />
+                      {dictionary.home.force1.title_line2} <span className="text-yellow-400 font-bold">{dictionary.home.force1.title_science}</span>.
                     </h3>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Chaque pixel optimisé grâce à nos analyses comportementales. Nos sites convertissent <span className="text-yellow-400 font-semibold">4x mieux</span> car nous concevons avec la data utilisateur, pas l'intuition.
+                      {dictionary.home.force1.description}
                     </p>
                     
                     {/* Arguments renforcés */}
                     <div className="space-y-6 mb-10">
                       <div className="bg-yellow-400/5 rounded-lg p-4 border-l-4 border-yellow-400">
-                        <div className="font-semibold text-yellow-400 mb-2">Architecture Conversion-Optimisée</div>
-                        <div className="text-gray-300">Parcours utilisateur testé sur 1000+ interactions. Chaque bouton, formulaire et CTA est positionné selon nos heatmaps comportementales.</div>
+                        <div className="font-semibold text-yellow-400 mb-2">{dictionary.home.force1.architecture.title}</div>
+                        <div className="text-gray-300">{dictionary.home.force1.architecture.description}</div>
                       </div>
                       
                       <div className="bg-yellow-400/5 rounded-lg p-4 border-l-4 border-yellow-400">
-                        <div className="font-semibold text-yellow-400 mb-2">Performance Mesurable</div>
-                        <div className="text-gray-300">Sites livrés avec PageSpeed 95+, temps de chargement &lt; 2s. Impact direct sur le SEO et l'expérience utilisateur mesurée via GA4.</div>
+                        <div className="font-semibold text-yellow-400 mb-2">{dictionary.home.force1.performance.title}</div>
+                        <div className="text-gray-300">{dictionary.home.force1.performance.description}</div>
                       </div>
                       
                       <div className="bg-yellow-400/5 rounded-lg p-4 border-l-4 border-yellow-400">
-                        <div className="font-semibold text-yellow-400 mb-2">Technologies Modernes</div>
-                        <div className="text-gray-300">Next.js, React, Tailwind. Stack technique choisie pour la performance, pas la tendance. ROI technique mesuré sur 200+ jours post-lancement.</div>
+                        <div className="font-semibold text-yellow-400 mb-2">{dictionary.home.force1.technologies.title}</div>
+                        <div className="text-gray-300">{dictionary.home.force1.technologies.description}</div>
                       </div>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="p-6 bg-yellow-400/10 rounded-xl border border-yellow-400/30">
-                        <div className="text-yellow-400 font-bold text-lg mb-2">OSOM Web Formula</div>
-                        <div className="text-white text-lg">1500 CHF • 10 jours • ROI garanti</div>
-                        <div className="text-gray-400 text-sm mt-2">Artisan peinture Valais (2024)</div>
+                        <div className="text-yellow-400 font-bold text-lg mb-2">{dictionary.home.force1.formula.title}</div>
+                        <div className="text-white text-lg">{dictionary.home.force1.formula.price}</div>
+                        <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.formula.subtitle}</div>
                       </div>
                       
                       <div className="p-6 bg-yellow-400/5 rounded-xl border border-yellow-400/20">
-                        <div className="text-yellow-400 text-2xl font-light mb-2">11.3% vs 2.5%</div>
-                        <div className="text-gray-300">Taux de conversion moyen</div>
-                        <div className="text-gray-400 text-sm mt-2">Basé sur analyses GA4 6 mois</div>
+                        <div className="text-yellow-400 text-2xl font-light mb-2">{dictionary.home.force1.conversion.rate}</div>
+                        <div className="text-gray-300">{dictionary.home.force1.conversion.description}</div>
+                        <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.conversion.subtitle}</div>
                       </div>
                     </div>
                   </div>
@@ -198,11 +208,11 @@ export default async function Home() {
                 {/* Background graphique */}
                 <div className="absolute inset-0 opacity-20">
                   <GraphiqueComparatif
-                    title="Engagement Supérieur"
-                    subtitle="SEO OSOM vs Standard"
+                    title={dictionary.home.charts.comparatif.title}
+                    subtitle={dictionary.home.charts.comparatif.subtitle}
                     data={[
-                      { label: "Trafic SEO OSOM", value: 68.6, color: "#06B6D4" },
-                      { label: "Trafic Direct", value: 44.6, color: "#6B7280" }
+                      { label: dictionary.home.charts.comparatif.seo_label, value: 68.6, color: "#06B6D4" },
+                      { label: dictionary.home.charts.comparatif.direct_label, value: 44.6, color: "#6B7280" }
                     ]}
                     className="h-full border-0"
                   />
@@ -216,50 +226,50 @@ export default async function Home() {
                         <div className="w-8 h-8 bg-black rounded-full"></div>
                       </div>
                       <div>
-                        <div className="text-cyan-400 font-medium text-sm mb-2">FORCE #2 - TRAFIC QUALIFIÉ SUPÉRIEUR</div>
+                        <div className="text-cyan-400 font-medium text-sm mb-2">{dictionary.home.force2.badge}</div>
                       </div>
                     </div>
                     
                     <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      SEO par <span className="text-cyan-400 font-bold">diagnostic</span>.<br />
-                      Trafic par <span className="text-cyan-400 font-bold">intelligence</span>.
+                      {dictionary.home.force2.title_line1} <span className="text-cyan-400 font-bold">{dictionary.home.force2.title_diagnostic}</span>.<br />
+                      {dictionary.home.force2.title_line2} <span className="text-cyan-400 font-bold">{dictionary.home.force2.title_intelligence}</span>.
                     </h3>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Notre diagnostic externe révèle ce que vous ne voyez pas. Trafic qualifié <span className="text-cyan-400 font-semibold">54% supérieur</span>, engagement mesuré, résultats transparents.
+                      {dictionary.home.force2.description}
                     </p>
                     
                     {/* Arguments centrés sur 2 colonnes */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                       <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Diagnostic Révélateur</div>
-                        <div className="text-gray-300 mb-4">Audit externe sans accès GA4/GSC qui révèle les gaps invisibles même aux propriétaires. 397x potentiel découvert vs concurrents leaders.</div>
-                        <div className="text-cyan-400 text-sm">Entreprise immobilier Genève (2024)</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">{dictionary.home.force2.diagnostic.title}</div>
+                        <div className="text-gray-300 mb-4">{dictionary.home.force2.diagnostic.description}</div>
+                        <div className="text-cyan-400 text-sm">{dictionary.home.force2.diagnostic.subtitle}</div>
                       </div>
                       
                       <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Trafic Qualifié Prouvé</div>
-                        <div className="text-gray-300 mb-4">68.6% engagement trafic SEO vs 44.6% direct. Chaque visiteur SEO OSOM génère 54% plus de valeur pour votre business.</div>
-                        <div className="text-cyan-400 text-sm">Artisan lumière Valais (200+ jours GA4)</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">{dictionary.home.force2.traffic.title}</div>
+                        <div className="text-gray-300 mb-4">{dictionary.home.force2.traffic.description}</div>
+                        <div className="text-cyan-400 text-sm">{dictionary.home.force2.traffic.subtitle}</div>
                       </div>
                       
                       <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Optimisation Continue</div>
-                        <div className="text-gray-300 mb-4">Suivi mensuel ROI transparent. Chaque action SEO est mesurée, chaque optimisation justifiée par les données de performance.</div>
-                        <div className="text-cyan-400 text-sm">Méthode OSOM standardisée</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">{dictionary.home.force2.optimization.title}</div>
+                        <div className="text-gray-300 mb-4">{dictionary.home.force2.optimization.description}</div>
+                        <div className="text-cyan-400 text-sm">{dictionary.home.force2.optimization.subtitle}</div>
                       </div>
                       
                       <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">ROI Transparent</div>
-                        <div className="text-gray-300 mb-4">Dashboard temps réel + rapports mensuels. Visibilité complète sur l'impact de chaque euro investi en SEO.</div>
-                        <div className="text-cyan-400 text-sm">GA4 + Search Console intégrés</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">{dictionary.home.force2.roi.title}</div>
+                        <div className="text-gray-300 mb-4">{dictionary.home.force2.roi.description}</div>
+                        <div className="text-cyan-400 text-sm">{dictionary.home.force2.roi.subtitle}</div>
                       </div>
                     </div>
                     
                     <div className="bg-cyan-400/10 rounded-xl p-8 border border-cyan-400/30 max-w-2xl mx-auto">
-                      <div className="text-cyan-400 font-bold text-2xl mb-2">+54% Engagement Supérieur</div>
-                      <div className="text-white text-lg">Trafic SEO OSOM vs trafic direct standard</div>
-                      <div className="text-gray-400 text-sm mt-2">Analyse comparative sur 6 mois • Données vérifiables</div>
+                      <div className="text-cyan-400 font-bold text-2xl mb-2">{dictionary.home.force2.engagement.title}</div>
+                      <div className="text-white text-lg">{dictionary.home.force2.engagement.description}</div>
+                      <div className="text-gray-400 text-sm mt-2">{dictionary.home.force2.engagement.subtitle}</div>
                     </div>
                   </div>
                 </div>
@@ -278,50 +288,50 @@ export default async function Home() {
                         <div className="w-8 h-8 bg-black rounded-full"></div>
                       </div>
                       <div>
-                        <div className="text-purple-400 font-medium text-sm mb-2">FORCE #3 - DÉCISIONS BASÉES SUR LA DATA</div>
+                        <div className="text-purple-400 font-medium text-sm mb-2">{dictionary.home.force3.badge}</div>
                       </div>
                     </div>
                     
                     <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Décisions par <span className="text-purple-400 font-bold">data</span>.<br />
-                      Performance par <span className="text-purple-400 font-bold">science</span>.
+                      {dictionary.home.force3.title_line1} <span className="text-purple-400 font-bold">{dictionary.home.force3.title_data}</span>.<br />
+                      {dictionary.home.force3.title_line2} <span className="text-purple-400 font-bold">{dictionary.home.force3.title_science}</span>.
                     </h3>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Nous révélons le ROI invisible de vos actions marketing. <span className="text-purple-400 font-semibold">140x plus efficace</span> que la publicité payante, stratégies guidées par l'analyse, pas l'intuition.
+                      {dictionary.home.force3.description}
                     </p>
                     
                     {/* Arguments avec data forte */}
                     <div className="space-y-6 mb-10">
                       <div className="bg-gradient-to-r from-purple-400/10 to-transparent rounded-lg p-6 border-l-4 border-purple-400">
                         <div className="flex justify-between items-start mb-3">
-                          <div className="font-semibold text-purple-400">Révolution Organique</div>
-                          <div className="text-purple-400 font-bold text-lg">140x ROI</div>
+                          <div className="font-semibold text-purple-400">{dictionary.home.force3.revolution.title}</div>
+                          <div className="text-purple-400 font-bold text-lg">{dictionary.home.force3.revolution.roi}</div>
                         </div>
-                        <div className="text-gray-300">688 conversions organiques vs 49 payantes. Même audience, même période, budget 10x inférieur. La data ne ment jamais.</div>
-                        <div className="text-purple-300 text-sm mt-2">PME formation Valais • 6 mois GA4 + Meta Business</div>
+                        <div className="text-gray-300">{dictionary.home.force3.revolution.description}</div>
+                        <div className="text-purple-300 text-sm mt-2">{dictionary.home.force3.revolution.subtitle}</div>
                       </div>
                       
                       <div className="bg-gradient-to-r from-purple-400/10 to-transparent rounded-lg p-6 border-l-4 border-purple-400">
                         <div className="flex justify-between items-start mb-3">
-                          <div className="font-semibold text-purple-400">Coût d'Acquisition</div>
-                          <div className="text-purple-400 font-bold text-lg">-99.3%</div>
+                          <div className="font-semibold text-purple-400">{dictionary.home.force3.cost.title}</div>
+                          <div className="text-purple-400 font-bold text-lg">{dictionary.home.force3.cost.reduction}</div>
                         </div>
-                        <div className="text-gray-300">Réduction massive du CPA grâce à la stratégie organique. Chaque franc investi génère 140x plus de conversions qu'en publicité payante.</div>
-                        <div className="text-purple-300 text-sm mt-2">Comparatif Meta Ads vs Organique • ROI vérifiable</div>
+                        <div className="text-gray-300">{dictionary.home.force3.cost.description}</div>
+                        <div className="text-purple-300 text-sm mt-2">{dictionary.home.force3.cost.subtitle}</div>
                       </div>
                       
                       <div className="bg-gradient-to-r from-purple-400/5 to-transparent rounded-lg p-6 border-l-4 border-purple-300">
-                        <div className="font-semibold text-purple-400 mb-3">Tracking Transparent</div>
-                        <div className="text-gray-300">Dashboard temps réel, attribution complète, ROI par canal. Vous savez exactement d'où viennent vos résultats et pourquoi.</div>
-                        <div className="text-purple-300 text-sm mt-2">GA4 + Data Studio + Rapports mensuels</div>
+                        <div className="font-semibold text-purple-400 mb-3">{dictionary.home.force3.tracking.title}</div>
+                        <div className="text-gray-300">{dictionary.home.force3.tracking.description}</div>
+                        <div className="text-purple-300 text-sm mt-2">{dictionary.home.force3.tracking.subtitle}</div>
                       </div>
                     </div>
                     
                     <div className="bg-purple-400/10 rounded-xl p-8 border border-purple-400/30">
-                      <div className="text-purple-400 font-bold text-2xl mb-2">688 vs 49 Conversions</div>
-                      <div className="text-white text-lg">Stratégie organique vs publicité payante</div>
-                      <div className="text-gray-400 text-sm mt-2">Période identique • Audience identique • Budget 10x inférieur</div>
+                      <div className="text-purple-400 font-bold text-2xl mb-2">{dictionary.home.force3.conversions.title}</div>
+                      <div className="text-white text-lg">{dictionary.home.force3.conversions.description}</div>
+                      <div className="text-gray-400 text-sm mt-2">{dictionary.home.force3.conversions.subtitle}</div>
                     </div>
                   </div>
                 </div>
@@ -329,8 +339,8 @@ export default async function Home() {
                 {/* Graphique diagonal - 2 colonnes */}
                 <div className="col-span-2 bg-gradient-to-tl from-purple-900/30 to-black/80 flex items-center p-8">
                   <GraphiqueImpact
-                    title="ROI Révolutionnaire"
-                    subtitle="Performance mesurée • PME Suisse romande"
+                    title={dictionary.home.charts.impact.title}
+                    subtitle={dictionary.home.charts.impact.subtitle}
                     organicValue={688}
                     paidValue={49}
                     multiplier={140}
@@ -352,11 +362,11 @@ export default async function Home() {
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Prêt à transformer<br />
-            vos <span className="text-yellow-400 font-bold">performances</span> ?
+            {dictionary.home.cta.title_line1}<br />
+            vos <span className="text-yellow-400 font-bold">{dictionary.home.cta.title_performances}</span> ?
           </h2>
           <p className="text-xl text-gray-300 mb-12 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Discutons de votre projet et découvrons comment nous pouvons multiplier votre ROI avec une approche data-driven.
+            {dictionary.home.cta.description}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -365,14 +375,14 @@ export default async function Home() {
               className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold shadow-lg"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
-              Consultation gratuite
+              {dictionary.home.cta.cta_primary}
             </Link>
             <Link
               href="/calculator"
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
-              Calculer mon ROI
+              {dictionary.home.cta.cta_secondary}
             </Link>
           </div>
 
@@ -380,15 +390,15 @@ export default async function Home() {
           <div className="flex flex-wrap justify-center gap-8 text-gray-400 text-sm">
             <div className="flex items-center">
               <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-              <span>Données vérifiables GA4</span>
+              <span>{dictionary.home.cta.trust_indicators.ga4}</span>
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-              <span>Résultats 140x supérieurs</span>
+              <span>{dictionary.home.cta.trust_indicators.results}</span>
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-              <span>Performance garantie</span>
+              <span>{dictionary.home.cta.trust_indicators.guarantee}</span>
             </div>
           </div>
         </div>

@@ -19,16 +19,129 @@
   },
   "home": {
     "hero": {
-      "title": "Agence Digitale Data-Driven",
-      "subtitle": "Précision suisse et excellence digitale. Nous livrons des résultats mesurables pour les professionnels de la santé, juridiques et services.",
-      "description": "Transformez votre présence digitale avec notre méthodologie éprouvée. De 140x d'amélioration ROI aux solutions d'entreprise.",
-      "cta-primary": "Découvrir nos Services",
-      "cta-secondary": "Consultation Gratuite",
-      "stats": {
-        "projects": "200+ Projets",
-        "roi": "140x ROI Max",
-        "experience": "5+ Années",
-        "data": "400+ Jours Analytics"
+      "badge": "OSOM PERFORMANCE",
+      "title_line1": "Build with",
+      "title_focus": "focus",
+      "title_line2": "Ship with",
+      "title_impact": "impact",
+      "description": "Marketing digital basé sur la performance mesurable. Nos études de cas prouvent des résultats 140x supérieurs à la concurrence.",
+      "cta_primary": "Consultation gratuite",
+      "cta_secondary": "Voir nos résultats",
+      "trust_indicators": {
+        "conversions": "688 vs 49 conversions (GA4)",
+        "engagement": "68.6% vs 44.6% engagement",
+        "roi": "ROI transparent et mesurable"
+      }
+    },
+    "forces": {
+      "badge": "LES 3 FORCES OSOM",
+      "title": "Data au",
+      "title_service": "Service du Client",
+      "subtitle": "Notre expertise repose sur 3 piliers complémentaires. Chaque décision est guidée par la data pour maximiser votre retour sur investissement."
+    },
+    "force1": {
+      "badge": "FORCE #1 - DATA-DRIVEN DESIGN",
+      "title_line1": "Design avec",
+      "title_données": "données",
+      "title_line2": "Conversion par",
+      "title_science": "science",
+      "description": "Chaque pixel optimisé grâce à nos analyses comportementales. Nos sites convertissent 4x mieux car nous concevons avec la data utilisateur, pas l'intuition.",
+      "architecture": {
+        "title": "Architecture Conversion-Optimisée",
+        "description": "Parcours utilisateur testé sur 1000+ interactions. Chaque bouton, formulaire et CTA est positionné selon nos heatmaps comportementales."
+      },
+      "performance": {
+        "title": "Performance Mesurable",
+        "description": "Sites livrés avec PageSpeed 95+, temps de chargement < 2s. Impact direct sur le SEO et l'expérience utilisateur mesurée via GA4."
+      },
+      "technologies": {
+        "title": "Technologies Modernes",
+        "description": "Next.js, React, Tailwind. Stack technique choisie pour la performance, pas la tendance. ROI technique mesuré sur 200+ jours post-lancement."
+      },
+      "formula": {
+        "title": "OSOM Web Formula",
+        "price": "1500 CHF • 10 jours • ROI garanti",
+        "subtitle": "Artisan peinture Valais (2024)"
+      },
+      "conversion": {
+        "rate": "11.3% vs 2.5%",
+        "description": "Taux de conversion moyen",
+        "subtitle": "Basé sur analyses GA4 6 mois"
+      }
+    },
+    "force2": {
+      "badge": "FORCE #2 - TRAFIC QUALIFIÉ SUPÉRIEUR",
+      "title_line1": "SEO par",
+      "title_diagnostic": "diagnostic",
+      "title_line2": "Trafic par",
+      "title_intelligence": "intelligence",
+      "description": "Notre diagnostic externe révèle ce que vous ne voyez pas. Trafic qualifié 54% supérieur, engagement mesuré, résultats transparents.",
+      "diagnostic": {
+        "title": "Diagnostic Révélateur",
+        "description": "Audit externe sans accès GA4/GSC qui révèle les gaps invisibles même aux propriétaires. 397x potentiel découvert vs concurrents leaders.",
+        "subtitle": "Entreprise immobilier Genève (2024)"
+      },
+      "traffic": {
+        "title": "Trafic Qualifié Prouvé",
+        "description": "68.6% engagement trafic SEO vs 44.6% direct. Chaque visiteur SEO OSOM génère 54% plus de valeur pour votre business.",
+        "subtitle": "Artisan lumière Valais (200+ jours GA4)"
+      },
+      "optimization": {
+        "title": "Optimisation Continue",
+        "description": "Suivi mensuel ROI transparent. Chaque action SEO est mesurée, chaque optimisation justifiée par les données de performance.",
+        "subtitle": "Méthode OSOM standardisée"
+      },
+      "roi": {
+        "title": "ROI Transparent",
+        "description": "Dashboard temps réel + rapports mensuels. Visibilité complète sur l'impact de chaque euro investi en SEO.",
+        "subtitle": "GA4 + Search Console intégrés"
+      },
+      "engagement": {
+        "title": "+54% Engagement Supérieur",
+        "description": "Trafic SEO OSOM vs trafic direct standard",
+        "subtitle": "Analyse comparative sur 6 mois • Données vérifiables"
+      }
+    },
+    "force3": {
+      "badge": "FORCE #3 - DÉCISIONS BASÉES SUR LA DATA",
+      "title_line1": "Décisions par",
+      "title_data": "data",
+      "title_line2": "Performance par",
+      "title_science": "science",
+      "description": "Nous révélons le ROI invisible de vos actions marketing. 140x plus efficace que la publicité payante, stratégies guidées par l'analyse, pas l'intuition.",
+      "revolution": {
+        "title": "Révolution Organique",
+        "roi": "140x ROI",
+        "description": "688 conversions organiques vs 49 payantes. Même audience, même période, budget 10x inférieur. La data ne ment jamais.",
+        "subtitle": "PME formation Valais • 6 mois GA4 + Meta Business"
+      },
+      "cost": {
+        "title": "Coût d'Acquisition",
+        "reduction": "-99.3%",
+        "description": "Réduction massive du CPA grâce à la stratégie organique. Chaque franc investi génère 140x plus de conversions qu'en publicité payante.",
+        "subtitle": "Comparatif Meta Ads vs Organique • ROI vérifiable"
+      },
+      "tracking": {
+        "title": "Tracking Transparent",
+        "description": "Dashboard temps réel, attribution complète, ROI par canal. Vous savez exactement d'où viennent vos résultats et pourquoi.",
+        "subtitle": "GA4 + Data Studio + Rapports mensuels"
+      },
+      "conversions": {
+        "title": "688 vs 49 Conversions",
+        "description": "Stratégie organique vs publicité payante",
+        "subtitle": "Période identique • Audience identique • Budget 10x inférieur"
+      }
+    },
+    "cta": {
+      "title_line1": "Prêt à transformer",
+      "title_performances": "performances",
+      "description": "Discutons de votre projet et découvrons comment nous pouvons multiplier votre ROI avec une approche data-driven.",
+      "cta_primary": "Consultation gratuite",
+      "cta_secondary": "Calculer mon ROI",
+      "trust_indicators": {
+        "ga4": "Données vérifiables GA4",
+        "results": "Résultats 140x supérieurs",
+        "guarantee": "Performance garantie"
       }
     },
     "services": {
@@ -49,9 +162,55 @@
         "description": "Marketing de performance qui livre des résultats mesurables. SEO, stratégie de contenu et optimisation de croissance.",
         "features": ["68,6% qualité engagement", "Croissance trafic organique", "Stratégie contenu", "Suivi performance"]
       }
+    },
+    "charts": {
+      "performance": {
+        "title": "Performance Mesurable",
+        "subtitle": "Données vérifiées • 400+ jours d'analyses GA4",
+        "primary_metric": {
+          "label": "Stratégie OSOM",
+          "value": "688 conversions"
+        },
+        "secondary_metric": {
+          "label": "Publicité payante",
+          "value": "49 conversions"
+        },
+        "improvement": {
+          "label": "Impact Supérieur",
+          "value": "140x plus efficace"
+        }
+      },
+      "conversion": {
+        "title": "Conversion Optimisée",
+        "subtitle": "Data-driven vs intuitif"
+      },
+      "comparatif": {
+        "title": "Engagement Supérieur",
+        "subtitle": "SEO OSOM vs Standard",
+        "seo_label": "Trafic SEO OSOM",
+        "direct_label": "Trafic Direct"
+      },
+      "impact": {
+        "title": "ROI Révolutionnaire",
+        "subtitle": "Performance mesurée • PME Suisse romande"
+      }
     }
   },
   "contact": {
+    "title": "Parlons de Votre Projet",
+    "subtitle": "Consultation gratuite pour découvrir votre potentiel de croissance",
+    "cta_schedule": "Réserver ma consultation",
+    "cta_questionnaire": "Commencer le questionnaire",
+    "form_name": "Nom complet",
+    "form_email": "Email professionnel",
+    "form_phone": "Téléphone",
+    "form_company": "Entreprise",
+    "step_of": "Étape {current} sur {total}",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Envoyer ma demande"
+  },
+  "contact_old": {
     "hero": {
       "title": "Prêt à Transformer votre Entreprise ?",
       "subtitle": "Consultation professionnelle pour les entreprises de santé, juridiques et de services",
