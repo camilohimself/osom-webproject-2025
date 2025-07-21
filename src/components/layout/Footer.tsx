@@ -10,7 +10,7 @@ interface FooterProps {
 export default function Footer({ currentLocale, dictionary }: FooterProps) {
   const services = [
     { name: dictionary.services['web-development'], href: '/services/creation-site-web' },
-    { name: dictionary.services['brand-design'], href: '/services/identite-design' },
+    { name: 'Programmation & IA', href: '/services/programmation-ia' },
     { name: dictionary.services['seo-marketing'], href: '/services/seo-content-marketing' },
     { name: dictionary.services['paid-media'], href: '/services/paid-media-growth' },
     { name: dictionary.services['marketing-automation'], href: '/services/marketing-automation-crm' },
