@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { InteractiveCaseStudy } from '@/components/portfolio'
+import AnimatedCounter from '@/components/ui/AnimatedCounter'
 
 interface CaseStudyData {
   id: string
@@ -216,156 +218,456 @@ const caseStudies: CaseStudyData[] = [
 const RealisationsPage = () => {
   const [expandedCase, setExpandedCase] = useState<string | null>(null)
 
+  // Premium animation variants (homepage level)
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  }
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header Section - Tech Giants Style */}
-      <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white py-32 overflow-hidden relative">
-        {/* Background Pattern */}
+    <div className="min-h-screen bg-black">
+      {/* Premium Hero Section - Homepage Level */}
+      <section className="py-20 lg:py-32 relative overflow-hidden">
+        {/* Multi-layered Background System */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23EC4899' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
           }} />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-12 gap-8 items-center">
-              <div className="col-span-2">
-                <div className="text-xs text-gray-400 font-mono tracking-wider uppercase">
-                  Portfolio
-                </div>
-                <div className="text-xs text-gray-400 font-mono tracking-wider mt-1">
-                  2025
-                </div>
-              </div>
-              
-              <div className="col-span-10">
-                <h1 className="text-5xl md:text-7xl font-light mb-8 tracking-tight leading-tight">
-                  Data-Driven<br />
-                  Performance<br />
-                  <span className="text-yellow-400">Excellence</span>
-                </h1>
-                
-                <p className="text-xl text-gray-300 mb-12 max-w-3xl leading-relaxed">
-                  Découvrez comment nous transformons les investissements marketing en machines à résultats mesurables avec des performances 140x supérieures.
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
-                  <div className="border-l border-gray-700 pl-6">
-                    <div className="text-3xl font-light text-yellow-400 mb-2">140x</div>
-                    <div className="text-sm text-gray-400">Performance maximale</div>
+        {/* Premium Gradient Animation */}
+        <motion.div
+          className="absolute inset-0 opacity-10"
+          animate={{
+            background: [
+              "radial-gradient(circle at 25% 25%, #ec489915, transparent 50%)",
+              "radial-gradient(circle at 75% 75%, #ec489920, transparent 50%)",
+              "radial-gradient(circle at 25% 25%, #ec489915, transparent 50%)"
+            ]
+          }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        {/* Floating Accent Elements */}
+        <motion.div
+          className="absolute top-20 right-20 w-64 h-64 rounded-full opacity-20 blur-3xl"
+          style={{ backgroundColor: "#EC4899" }}
+          animate={{
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-32 left-16 w-48 h-48 rounded-full opacity-10 blur-2xl"
+          style={{ backgroundColor: "#FFDD00" }}
+          animate={{
+            x: [0, -20, 0],
+            y: [0, 15, 0],
+            scale: [1, 0.9, 1]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 5
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="text-center"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {/* Premium Badge with Pulse Animation */}
+            <motion.div 
+              className="flex items-center justify-center mb-8"
+              variants={itemVariants}
+              transition={{ duration: 0.6, ease: [0.25, 0.25, 0.25, 0.75] }}
+            >
+              <motion.div 
+                className="w-2 h-2 rounded-full bg-pink-500 mr-3"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <span className="text-pink-400 text-sm font-medium tracking-wide">
+                CASE STUDIES VÉRIFIÉS • DATA TRANSPARENTE
+              </span>
+            </motion.div>
+            
+            {/* Premium Title with Word-by-Word Animation */}
+            <motion.h1 
+              className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight tracking-tight" 
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              variants={itemVariants}
+              transition={{ duration: 1, ease: [0.25, 0.25, 0.25, 0.75] }}
+            >
+              {'Réalisations Data-Driven'.split(' ').map((word, index) => {
+                const isHighlight = word.includes('Data-Driven')
+                return (
+                  <motion.span
+                    key={index}
+                    className={isHighlight ? 'text-pink-500 font-bold' : ''}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ 
+                      duration: 0.8, 
+                      delay: index * 0.2 + 0.3,
+                      ease: [0.25, 0.25, 0.25, 0.75]
+                    }}
+                  >
+                    {word}{' '}
+                  </motion.span>
+                )
+              })}
+            </motion.h1>
+            
+            {/* Enhanced Description */}
+            <motion.p 
+              className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto" 
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              variants={itemVariants}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              Performances 
+              <span className="text-pink-400 font-semibold">140x supérieures</span> prouvées par la data.
+              <br />
+              <span className="text-yellow-400 font-semibold">688 vs 49 conversions</span> sur des budgets identiques.
+            </motion.p>
+            
+            {/* Premium Animated Metrics Grid */}
+            <motion.div 
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-5xl mx-auto"
+              variants={itemVariants}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              {[
+                { value: 140, suffix: "x", label: "ROI Maximum", color: "#EC4899", icon: "📈" },
+                { value: 688, suffix: "", label: "Conversions Réelles", color: "#10B981", icon: "🎯" },
+                { value: 68.6, suffix: "%", label: "Engagement SEO", color: "#06B6D4", icon: "🚀" },
+                { value: 400, suffix: "+", label: "Jours Données GA4", color: "#FFDD00", icon: "📋" }
+              ].map((metric, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center group"
+                  whileHover={{ scale: 1.05 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 + 1 }}
+                >
+                  <motion.div
+                    className="text-4xl mb-3"
+                    animate={{ 
+                      rotate: [0, 10, -10, 0],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ 
+                      duration: 4,
+                      repeat: Infinity,
+                      delay: index * 0.5
+                    }}
+                  >
+                    {metric.icon}
+                  </motion.div>
+                  
+                  <div className="text-4xl font-bold mb-2" style={{ color: metric.color, fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                    <AnimatedCounter from={0} to={metric.value} duration={2.5} />{metric.suffix}
                   </div>
-                  <div className="border-l border-gray-700 pl-6">
-                    <div className="text-3xl font-light text-yellow-400 mb-2">2</div>
-                    <div className="text-sm text-gray-400">Secteurs maîtrisés</div>
-                  </div>
-                  <div className="border-l border-gray-700 pl-6">
-                    <div className="text-3xl font-light text-yellow-400 mb-2">68.6%</div>
-                    <div className="text-sm text-gray-400">Engagement SEO moyen</div>
-                  </div>
-                  <div className="border-l border-gray-700 pl-6">
-                    <div className="text-3xl font-light text-yellow-400 mb-2">400+</div>
-                    <div className="text-sm text-gray-400">Jours d'analyse GA4</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                  
+                  <p className="text-white font-medium text-sm" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>{metric.label}</p>
+                  <p className="text-gray-400 text-xs">Données vérifiées</p>
+                  
+                  {/* Animated progress bar */}
+                  <motion.div 
+                    className="mt-3 h-1 bg-white/20 rounded-full overflow-hidden mx-auto w-16"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: index * 0.1 + 1.5 }}
+                  >
+                    <motion.div 
+                      className="h-full rounded-full"
+                      style={{ backgroundColor: metric.color }}
+                      initial={{ width: 0 }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 2, delay: index * 0.1 + 2 }}
+                    />
+                  </motion.div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Interactive Case Studies */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            
-            {/* Section Header */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-light text-black mb-4">
-                Case Studies Vérifiés
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Analyses basées sur des données GA4 réelles. Chaque métrique est vérifiable, 
-                chaque recommandation est justifiée par les performances mesurées.
-              </p>
+      {/* Premium Case Studies Section */}
+      <section className="py-32 bg-gradient-to-br from-white/5 via-black to-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Premium Section Header */}
+          <motion.div 
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex items-center justify-center mb-6">
+              <motion.div 
+                className="w-2 h-2 rounded-full bg-pink-500 mr-3"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <span className="text-pink-400 text-sm font-medium tracking-wide">
+                ANALYSES GA4 TRANSPARENTES • MÉTRIQUES VÉRIFIABLES
+              </span>
             </div>
+            
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Case Studies <span className="text-pink-500 font-bold">Vérifiés</span>
+            </h2>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Chaque métrique est <span className="text-pink-400 font-semibold">vérifiable dans GA4</span>. 
+              Chaque recommandation est <span className="text-yellow-400 font-semibold">justifiée par les performances</span>.
+            </p>
+          </motion.div>
 
-            {/* Case Studies List */}
-            <div className="space-y-6">
-              {caseStudies.map((study) => (
+          {/* Interactive Case Studies with Premium Animations */}
+          <motion.div 
+            className="space-y-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {caseStudies.map((study, index) => (
+              <motion.div
+                key={study.id}
+                variants={itemVariants}
+                transition={{ delay: index * 0.2 }}
+                whileHover={{ scale: 1.01 }}
+                className="transition-all duration-500"
+              >
                 <InteractiveCaseStudy
-                  key={study.id}
                   data={study}
                   isExpanded={expandedCase === study.id}
                   onToggle={() => setExpandedCase(
                     expandedCase === study.id ? null : study.id
                   )}
                 />
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Premium Data Credibility Section */}
+          <motion.div 
+            className="mt-20 p-8 bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl rounded-3xl border border-white/20 text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="flex flex-wrap justify-center gap-8">
+              {[
+                { label: "Données GA4 vérifiées", color: "#10B981", icon: "✅" },
+                { label: "Meta Business validé", color: "#06B6D4", icon: "📊" },
+                { label: "200+ jours d'analyse", color: "#FFDD00", icon: "📈" },
+                { label: "Métriques reproductibles", color: "#EC4899", icon: "🔄" }
+              ].map((item, index) => (
+                <motion.div 
+                  key={index}
+                  className="flex items-center space-x-3"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 + 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <span className="text-lg">{item.icon}</span>
+                  <motion.div 
+                    className="w-3 h-3 rounded-full"
+                    style={{ backgroundColor: item.color }}
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      opacity: [0.7, 1, 0.7]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: index * 0.3
+                    }}
+                  />
+                  <span className="text-sm text-white font-medium" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>{item.label}</span>
+                </motion.div>
               ))}
             </div>
-
-            {/* Data Credibility Badge */}
-            <div className="mt-16 p-8 bg-white border border-gray-200 rounded-xl text-center">
-              <div className="flex items-center justify-center space-x-8">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Données GA4 vérifiées</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Meta Business validé</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">200+ jours d'analyse</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-black text-white py-24 relative overflow-hidden">
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-transparent to-purple-500/5"></div>
+      {/* Premium CTA Section */}
+      <section className="py-32 bg-gradient-to-br from-pink-400/10 via-transparent to-yellow-400/5 relative overflow-hidden">
+        {/* Background elements */}
+        <motion.div
+          className="absolute top-0 left-1/4 w-40 h-40 rounded-full opacity-10 blur-3xl"
+          style={{ backgroundColor: "#EC4899" }}
+          animate={{
+            y: [0, -30, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
         
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight">
-              Prêt à transformer<br />
-              vos <span className="text-yellow-400">performances</span> ?
+        <motion.div
+          className="absolute bottom-0 right-1/4 w-32 h-32 rounded-full opacity-10 blur-3xl"
+          style={{ backgroundColor: "#FFDD00" }}
+          animate={{
+            y: [0, 20, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 3
+          }}
+        />
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex items-center justify-center mb-8">
+              <motion.div 
+                className="w-2 h-2 rounded-full bg-pink-500 mr-3"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <span className="text-pink-400 text-sm font-medium tracking-wide">
+                VOTRE TRANSFORMATION • RÉSULTATS GARANTIS
+              </span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Prêt à <span className="text-pink-500 font-bold">multiplier</span>
+              <br />vos performances ?
             </h2>
             
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              Découvrez comment OSOM peut multiplier votre ROI avec une stratégie 
-              data-driven personnalisée pour votre secteur.
+            <p className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Découvrez comment OSOM peut transformer votre ROI avec une 
+              <span className="text-pink-400 font-semibold"> stratégie data-driven</span> personnalisée.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="text-3xl font-light text-yellow-400 mb-2">GA4</div>
-                <div className="text-sm text-gray-400 tracking-wider">AUDIT COMPLET</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-light text-yellow-400 mb-2">ROI</div>
-                <div className="text-sm text-gray-400 tracking-wider">OPTIMISATION</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-light text-yellow-400 mb-2">24/7</div>
-                <div className="text-sm text-gray-400 tracking-wider">MONITORING</div>
-              </div>
-            </div>
+            {/* Premium Stats Showcase */}
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                { label: "AUDIT COMPLET", value: "GA4", color: "#EC4899" },
+                { label: "OPTIMISATION", value: "ROI", color: "#FFDD00" },
+                { label: "MONITORING", value: "24/7", color: "#06B6D4" }
+              ].map((item, index) => (
+                <motion.div 
+                  key={index}
+                  className="text-center"
+                  variants={itemVariants}
+                  transition={{ delay: index * 0.2 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="text-4xl font-bold mb-2" style={{ color: item.color, fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                    {item.value}
+                  </div>
+                  <div className="text-sm text-gray-400 tracking-wider font-medium">{item.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-yellow-400 text-black px-8 py-4 font-medium hover:bg-yellow-300 transition-colors rounded-lg">
-                ANALYSER MON ROI
-              </button>
-              <button className="border border-gray-600 text-white px-8 py-4 font-medium hover:border-yellow-400 hover:text-yellow-400 transition-colors rounded-lg">
-                VOIR LE DASHBOARD
-              </button>
+            {/* Premium CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <motion.a
+                href="/contact"
+                className="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg relative overflow-hidden group"
+                style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(236, 72, 153, 0.4)"
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span className="relative z-10 flex items-center justify-center">
+                  📊 Analyser Mon ROI
+                  <motion.span
+                    className="ml-2"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                </span>
+              </motion.a>
+              
+              <motion.a
+                href="/calculator"
+                className="border-2 border-pink-500/60 text-pink-400 px-10 py-4 rounded-xl font-medium text-lg hover:bg-pink-500 hover:text-white transition-all duration-300 backdrop-blur-sm"
+                style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                🎯 Calculateur ROI
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
