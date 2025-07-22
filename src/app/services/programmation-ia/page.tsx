@@ -311,11 +311,11 @@ export default function ProgrammationIAPage() {
               transition={{ delay: 3, duration: 1 }}
             >
               <div className="text-yellow-400 mb-2"># Claude-Powered Analytics</div>
-              <div className="text-gray-400">claude_analysis = {</div>
+              <div className="text-gray-400">claude_analysis = &#123;</div>
               <div className="text-white ml-4">"performance": "140x superior",</div>
               <div className="text-white ml-4">"conversions": "688 tracked",</div>
               <div className="text-purple-400 ml-4">"viral_potential": "2.4M views" 🚀</div>
-              <div className="text-gray-400">}</div>
+              <div className="text-gray-400">&#125;</div>
             </motion.div>
             
             <div className="mt-6 space-y-3">
