@@ -1,5 +1,7 @@
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import RevolutionaryDashboardHero from '@/components/ui/RevolutionaryDashboardHero'
+import TechStackCarousel from '@/components/ui/TechStackCarousel'
+import DeveloperJourneyTimeline from '@/components/ui/DeveloperJourneyTimeline'
 import { MetricsPulse, ComparisonChart, ProgressMeter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 import Link from 'next/link'
@@ -121,70 +123,18 @@ export default function CreationSiteWebPage() {
         color="#ffd507"
       />
 
-      {/* SECTION MÉTHODE */}
-      <section className="py-24 bg-gradient-to-br from-white/5 via-black to-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight">
-              Méthode création site internet Valais <span className="font-bold" style={{ color: '#ffd507' }}>OSOM</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Agence web Valais nouvelle génération : création site internet Valais avec SEO Valais intégré. Stack moderne Next.js 14 + TypeScript maîtrisé à fond. Spécialistes création site internet Valais, résultats immédiats : 140x performance vs publicité payante (Culture Peinture). Expertise technique supérieure, jeunes et motivés pour réussir vos projets web en Valais.
-            </p>
-          </div>
+      {/* TECH STACK CAROUSEL RÉVOLUTIONNAIRE */}
+      <TechStackCarousel
+        title="Tech Stack Révolutionnaire"
+        subtitle="Méthode OSOM"
+        description="Agence web Valais nouvelle génération : Stack moderne Next.js 14 + TypeScript + Claude IA maîtrisé à fond. Code snippets interactifs, preview live, animations fluides. Expertise technique révolutionnaire pour projets web VALAIS."
+      />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Process Steps */}
-            <div className="space-y-8">
-              {[
-                {
-                  number: "01",
-                  title: "architecture conversion moderne",
-                  description: "Design UX basé sur les dernières recherches comportementales. Navigation intuitive, temps de charge ultra-rapide, formulaires optimisés. Approche moderne sans préjugés, testée sur nos premiers clients valaisans."
-                },
-                {
-                  number: "02", 
-                  title: "SEO Valais technique avancé",
-                  description: "SEO Valais expert : création site internet Valais optimisée pour Google local. Maîtrise technique SEO Valais moderne : Google Business Profile, schema markup, contenu géolocalisé. Agence web Valais spécialisée SEO avec GA4 configuré proprement pour le marché valaisan."
-                },
-                {
-                  number: "03",
-                  title: "stack technique de pointe", 
-                  description: "Maîtrise complète : Next.js 14, React Server Components, TypeScript, Tailwind CSS, Framer Motion. Hébergement Suisse, Cloudflare CDN. Technologies modernes parfaitement maîtrisées par des développeurs passionnés."
-                }
-              ].map((step, index) => (
-                <div key={index} className="flex items-start space-x-6">
-                  <div 
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg"
-                    style={{ backgroundColor: '#ffd507' }}
-                  >
-                    <span className="text-2xl font-bold text-black">
-                      {step.number}
-                    </span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Proof Content */}
-            <div 
-              className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl rounded-3xl p-8 border"
-              style={{ borderColor: '#ffd50730' }}
-            >
-              <h3 className="text-2xl font-bold text-white mb-6">preuves d'impact mesurable</h3>
-              {proofContent}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* DEVELOPER JOURNEY TIMELINE RÉVOLUTIONNAIRE */}
+      <DeveloperJourneyTimeline
+        title="Processus Développement"
+        subtitle="Journey révolutionnaire de conception à livraison : UX Psychology + SEO Valais + Performance Beast. 10 jours pour révolutionner votre présence web avec métriques vérifiées."
+      />
 
       {/* SECTION FEATURES */}
       <section className="py-32 bg-black relative overflow-hidden">
