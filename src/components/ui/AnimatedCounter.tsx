@@ -29,17 +29,23 @@ const AnimatedCounter = ({
   const rounded = useTransform(count, (latest) => Math.round(latest))
 
   useEffect(() => {
+    let animationControls: any
+    
     const timer = setTimeout(() => {
       setIsVisible(true)
-      const controls = animate(count, to, {
+      animationControls = animate(count, to, {
         duration,
         ease: [0.25, 0.25, 0.25, 0.75],
         onComplete
       })
-      return () => controls.stop()
     }, delay * 1000)
 
-    return () => clearTimeout(timer)
+    return () => {
+      clearTimeout(timer)
+      if (animationControls) {
+        animationControls.stop()
+      }
+    }
   }, [count, to, duration, delay, onComplete])
 
   return (

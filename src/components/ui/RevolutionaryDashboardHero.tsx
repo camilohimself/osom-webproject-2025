@@ -82,17 +82,20 @@ export default function RevolutionaryDashboardHero({
   useEffect(() => {
     if (!isInView) return
     
+    let typingInterval: NodeJS.Timeout
+    let mainInterval: NodeJS.Timeout
+    
     const typeCode = () => {
       setIsTyping(true)
       const currentSnippet = codeSnippets[currentCodeIndex]
       let i = 0
       
-      const typing = setInterval(() => {
+      typingInterval = setInterval(() => {
         if (i <= currentSnippet.code.length) {
           setTypedCode(currentSnippet.code.slice(0, i))
           i++
         } else {
-          clearInterval(typing)
+          clearInterval(typingInterval)
           setIsTyping(false)
           setTimeout(() => {
             setCurrentCodeIndex((prev) => (prev + 1) % codeSnippets.length)
@@ -100,15 +103,17 @@ export default function RevolutionaryDashboardHero({
           }, 2000)
         }
       }, 50)
-      
-      return () => clearInterval(typing)
     }
     
-    const interval = setInterval(typeCode, 4000)
-    typeCode() // Start immediately
+    // Start typing immediately, then repeat every 6 seconds
+    typeCode()
+    mainInterval = setInterval(typeCode, 6000)
     
-    return () => clearInterval(interval)
-  }, [isInView, currentCodeIndex])
+    return () => {
+      clearInterval(typingInterval)
+      clearInterval(mainInterval)
+    }
+  }, [isInView]) // REMOVED currentCodeIndex dependency!
 
   // Magnetic button effect
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
