@@ -1,68 +1,568 @@
+'use client'
+
 import { Metadata } from 'next'
+import { motion } from 'framer-motion'
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Code Obsessionnel & IA Virale | Dashboards + 2.4M Vues - osom',
-  description: 'Jeunes développeurs obsessés code + créativité IA. Dashboards techniques + réels viraux. 2.4M vues Culture Peinture, 140x ROI. Python + JavaScript + créativité pure.',
-  keywords: 'programmation obsessionnelle, code python javascript, ia créative, dashboards interactifs, réels viraux, développeur créatif VALAIS, code + content',
+  title: 'Développeur x Claude Code | Collaboration IA Révolutionnaire - osom',
+  description: 'Première collaboration officielle Développeur Humain x Claude Code. Marketing humain amplifiée par IA. 2.4M vues Culture Peinture, 140x ROI. Synergie inédite.',
+  keywords: 'développeur claude code, collaboration humain ia, marketing humain intelligence artificielle, claude 4 sonnet, programmation ia créative',
   openGraph: {
-    title: 'Code + Créativité | 2.4M Vues Documentees VALAIS',
-    description: 'Développeurs-créatifs : code technique + contenu viral. Dashboards + 2.4M vues réels.',
+    title: 'Développeur x Claude Code | Synergie Humain-IA Inédite',
+    description: 'Marketing humain x Puissance Claude = Résultats extraordinaires. 2.4M vues documentées.',
     type: 'website',
   }
 }
 
 export default function ProgrammationIAPage() {
+  // Custom Hero Section - Collaboration Humain x Claude Code
+  const CustomHeroSection = () => (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-purple-900">
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        {/* Liquid Chrome Background */}
+        <motion.div 
+          className="absolute inset-0 opacity-30"
+          animate={{
+            background: [
+              'radial-gradient(circle at 30% 40%, rgba(255,221,0,0.2) 0%, rgba(138,92,246,0.15) 25%, transparent 70%)',
+              'radial-gradient(circle at 70% 60%, rgba(138,92,246,0.2) 0%, rgba(255,221,0,0.15) 25%, transparent 70%)',
+              'radial-gradient(circle at 30% 40%, rgba(255,221,0,0.2) 0%, rgba(138,92,246,0.15) 25%, transparent 70%)'
+            ]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut'
+          }}
+        />
+        
+        {/* Binary Code Rain */}
+        <div className="absolute inset-0 opacity-10">
+          {[...Array(15)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute text-yellow-400/20 text-xs font-mono whitespace-nowrap"
+              style={{
+                left: `${(i * 6.67)}%`,
+                top: 0,
+                transform: 'rotate(-90deg)',
+                transformOrigin: 'left top',
+              }}
+              animate={{
+                y: ['-10%', '110%'],
+                opacity: [0, 0.3, 0.8, 0.3, 0],
+              }}
+              transition={{
+                duration: 15 + (i * 2),
+                repeat: Infinity,
+                delay: i * 0.8,
+                ease: 'linear',
+              }}
+            >
+              {Array.from({ length: 200 }, () => {
+                const rand = Math.random()
+                if (rand > 0.95) return 'CLAUDE '
+                if (rand > 0.9) return 'CODE '
+                if (rand > 0.85) return 'REACT '
+                if (rand > 0.8) return 'PYTHON '
+                return Math.random() > 0.5 ? '1' : '0'
+              }).join('')}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Main Title - Collaboration Story */}
+        <div className="text-center mb-16">
+          <motion.div 
+            className="mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Super title avec cascade */}
+            <div className="flex flex-col items-center space-y-6">
+              <motion.div 
+                className="text-lg text-gray-400 font-mono tracking-wider uppercase"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+              >
+                La première collaboration officielle entre
+              </motion.div>
+              
+              {/* Human + IA Typography Cascade FOLLE */}
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+                <motion.div 
+                  className="text-4xl lg:text-6xl font-light text-cyan-400"
+                  initial={{ opacity: 0, x: -100, rotate: -15 }}
+                  animate={{ 
+                    opacity: 1, 
+                    x: 0, 
+                    rotate: 0,
+                    scale: [1, 1.05, 1]
+                  }}
+                  transition={{
+                    opacity: { duration: 0.6, delay: 0.5 },
+                    x: { duration: 1, delay: 0.5, type: 'spring', stiffness: 100 },
+                    rotate: { duration: 1, delay: 0.5 },
+                    scale: { 
+                      duration: 4, 
+                      repeat: Infinity, 
+                      ease: 'easeInOut',
+                      delay: 2
+                    }
+                  }}
+                  style={{
+                    filter: 'drop-shadow(0 0 20px rgba(6,182,212,0.5))'
+                  }}
+                >
+                  développeur
+                </motion.div>
+                
+                <motion.div 
+                  className="text-3xl lg:text-4xl text-white font-mono"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ 
+                    opacity: 1, 
+                    scale: 1,
+                    rotate: [0, 180, 360]
+                  }}
+                  transition={{
+                    opacity: { duration: 0.6, delay: 0.8 },
+                    scale: { duration: 0.8, delay: 0.8, type: 'spring', stiffness: 150 },
+                    rotate: {
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      delay: 3
+                    }
+                  }}
+                >
+                  ×
+                </motion.div>
+                
+                <motion.div 
+                  className="text-5xl lg:text-8xl font-black text-yellow-400"
+                  initial={{ opacity: 0, x: 100, scale: 0.5 }}
+                  animate={{ 
+                    opacity: 1, 
+                    x: 0, 
+                    scale: 1,
+                  }}
+                  transition={{
+                    opacity: { duration: 0.6, delay: 1 },
+                    x: { duration: 1.2, delay: 1, type: 'spring', stiffness: 80 },
+                    scale: { duration: 1.2, delay: 1, type: 'spring', stiffness: 120 }
+                  }}
+                  style={{
+                    background: 'linear-gradient(135deg, #FFDD00 0%, #ffffff 30%, #8B5CF6 70%, #FFDD00 100%)',
+                    backgroundSize: '400% 400%',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    color: 'transparent',
+                    filter: 'drop-shadow(0 0 30px rgba(255,221,0,0.7))',
+                  }}
+                  animate={{
+                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                  }}
+                  transition={{
+                    backgroundPosition: {
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      delay: 1.5
+                    }
+                  }}
+                >
+                  claude
+                </motion.div>
+              </div>
+              
+              <motion.div 
+                className="text-4xl lg:text-5xl text-purple-400 font-bold mt-4"
+                initial={{ opacity: 0, y: 50, scale: 0 }}
+                animate={{ 
+                  opacity: 1, 
+                  y: 0, 
+                  scale: 1,
+                  rotate: [0, 5, -5, 0]
+                }}
+                transition={{
+                  opacity: { duration: 0.6, delay: 1.4 },
+                  y: { duration: 1, delay: 1.4, type: 'spring', stiffness: 100 },
+                  scale: { duration: 1, delay: 1.4, type: 'spring', stiffness: 150, damping: 8 },
+                  rotate: {
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 4
+                  }
+                }}
+                style={{
+                  filter: 'drop-shadow(0 0 15px rgba(139,92,246,0.6))'
+                }}
+              >
+                code
+              </motion.div>
+            </div>
+          </motion.div>
+          
+          <motion.div 
+            className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.8, duration: 0.8 }}
+          >
+            Premier développeur-créatif épaulé par l'IA la plus puissante au monde. 
+            <span className="text-yellow-400 font-semibold"> Marketing humain</span> × 
+            <span className="text-purple-400 font-semibold"> Puissance artificielle</span> = 
+            <span className="text-cyan-400 font-bold"> Résultats extraordinaires</span>
+          </motion.div>
+        </div>
+
+        {/* Split Screen Collaboration Visual */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          
+          {/* Left Side - Human Developer */}
+          <motion.div 
+            className="bg-gradient-to-br from-cyan-400/10 to-blue-600/20 rounded-3xl p-8 border border-cyan-400/30 backdrop-blur-sm"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 2.2, duration: 0.8 }}
+          >
+            <div className="text-center mb-6">
+              <div className="text-2xl font-bold text-cyan-400 mb-2">
+                👨‍💻 Développeur Humain
+              </div>
+              <div className="text-gray-300">Créativité • Intuition • Vision</div>
+            </div>
+            
+            {/* Code Editor Mock */}
+            <motion.div 
+              className="bg-black/60 rounded-xl p-4 font-mono text-sm border border-cyan-400/20"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2.8, duration: 1 }}
+            >
+              <div className="text-cyan-400 mb-2"># Culture Peinture - Vision Créative</div>
+              <div className="text-gray-400">def create_viral_strategy():</div>
+              <div className="text-white ml-4">emotion = "authentique"</div>
+              <div className="text-white ml-4">hook = "irrésistible"</div>
+              <div className="text-yellow-400 ml-4">return inspiration_humaine() 🎨</div>
+            </motion.div>
+            
+            <div className="mt-6 space-y-3">
+              <motion.div 
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 3.2, duration: 0.5 }}
+              >
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                <span className="text-gray-300">Idées créatives originales</span>
+              </motion.div>
+              <motion.div 
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 3.4, duration: 0.5 }}
+              >
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                <span className="text-gray-300">Empathie utilisateur</span>
+              </motion.div>
+              <motion.div 
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 3.6, duration: 0.5 }}
+              >
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                <span className="text-gray-300">Vision artistique</span>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Right Side - Claude Code */}
+          <motion.div 
+            className="bg-gradient-to-br from-yellow-400/10 to-purple-600/20 rounded-3xl p-8 border border-yellow-400/30 backdrop-blur-sm"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 2.4, duration: 0.8 }}
+          >
+            <div className="text-center mb-6">
+              <div className="text-2xl font-bold text-yellow-400 mb-2">
+                🤖 Claude Code
+              </div>
+              <div className="text-gray-300">Puissance • Précision • Performance</div>
+            </div>
+            
+            {/* AI Analysis Mock */}
+            <motion.div 
+              className="bg-black/60 rounded-xl p-4 font-mono text-sm border border-yellow-400/20"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 3, duration: 1 }}
+            >
+              <div className="text-yellow-400 mb-2"># Claude-Powered Analytics</div>
+              <div className="text-gray-400">claude_analysis = {</div>
+              <div className="text-white ml-4">"performance": "140x superior",</div>
+              <div className="text-white ml-4">"conversions": "688 tracked",</div>
+              <div className="text-purple-400 ml-4">"viral_potential": "2.4M views" 🚀</div>
+              <div className="text-gray-400">}</div>
+            </motion.div>
+            
+            <div className="mt-6 space-y-3">
+              <motion.div 
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 3.2, duration: 0.5 }}
+              >
+                <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                <span className="text-gray-300">Optimisation technique</span>
+              </motion.div>
+              <motion.div 
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 3.4, duration: 0.5 }}
+              >
+                <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                <span className="text-gray-300">Analyse de données</span>
+              </motion.div>
+              <motion.div 
+                className="flex items-center gap-3"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 3.6, duration: 0.5 }}
+              >
+                <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                <span className="text-gray-300">Scaling intelligent</span>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Fusion Result - Culture Peinture Metrics */}
+        <div className="text-center mb-12">
+          <motion.div 
+            className="inline-flex items-center gap-4 mb-8 px-8 py-4 bg-gradient-to-r from-cyan-400/20 via-yellow-400/20 to-purple-400/20 rounded-full border border-white/20 backdrop-blur-sm"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 2.8, duration: 0.8, type: 'spring', stiffness: 150 }}
+          >
+            <span className="text-cyan-400 text-xl">👨‍💻</span>
+            <span className="text-white font-mono">+</span>
+            <span className="text-yellow-400 text-xl">🤖</span>
+            <span className="text-white font-mono">=</span>
+            <span className="text-purple-400 text-xl">🚀</span>
+            <span className="text-white font-semibold">Résultats Extraordinaires</span>
+          </motion.div>
+        </div>
+
+        {/* Metrics Grid - Culture Peinture Results */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <motion.div 
+            className="bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-2xl p-8 text-center border border-yellow-400/30 backdrop-blur-sm"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 3.2, duration: 0.8, type: 'spring', stiffness: 100 }}
+          >
+            <motion.div 
+              className="text-5xl font-black text-yellow-400 mb-3"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ 
+                delay: 3.5, 
+                duration: 1, 
+                type: 'spring', 
+                stiffness: 200,
+                damping: 8 
+              }}
+              style={{
+                filter: 'drop-shadow(0 0 20px rgba(255,221,0,0.8))',
+              }}
+            >
+              2.4M
+            </motion.div>
+            <div className="text-white font-semibold mb-2">Vues Virales</div>
+            <div className="text-gray-400 text-sm">Créativité humaine × Optimisation IA</div>
+          </motion.div>
+          
+          <motion.div 
+            className="bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-2xl p-8 text-center border border-purple-400/30 backdrop-blur-sm"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 3.4, duration: 0.8, type: 'spring', stiffness: 100 }}
+          >
+            <motion.div 
+              className="text-5xl font-black text-purple-400 mb-3"
+              initial={{ scale: 0, rotate: 180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ 
+                delay: 3.7, 
+                duration: 1, 
+                type: 'spring', 
+                stiffness: 200,
+                damping: 8 
+              }}
+              style={{
+                filter: 'drop-shadow(0 0 20px rgba(139,92,246,0.8))',
+              }}
+            >
+              140×
+            </motion.div>
+            <div className="text-white font-semibold mb-2">Performance</div>
+            <div className="text-gray-400 text-sm">vs Publicité payante traditionnelle</div>
+          </motion.div>
+          
+          <motion.div 
+            className="bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-2xl p-8 text-center border border-cyan-400/30 backdrop-blur-sm"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 3.6, duration: 0.8, type: 'spring', stiffness: 100 }}
+          >
+            <motion.div 
+              className="text-5xl font-black text-cyan-400 mb-3"
+              initial={{ scale: 0, rotateY: 180 }}
+              animate={{ scale: 1, rotateY: 0 }}
+              transition={{ 
+                delay: 3.9, 
+                duration: 1, 
+                type: 'spring', 
+                stiffness: 200,
+                damping: 8 
+              }}
+              style={{
+                filter: 'drop-shadow(0 0 20px rgba(6,182,212,0.8))',
+              }}
+            >
+              688
+            </motion.div>
+            <div className="text-white font-semibold mb-2">Conversions</div>
+            <div className="text-gray-400 text-sm">Dashboard tracking intelligent</div>
+          </motion.div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center">
+          <motion.button 
+            className="inline-flex items-center gap-4 px-12 py-6 bg-gradient-to-r from-yellow-400 via-purple-500 to-cyan-400 text-black font-bold text-xl rounded-2xl transition-all duration-300"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 4, duration: 0.8 }}
+            whileHover={{ 
+              scale: 1.05,
+              boxShadow: '0 20px 40px rgba(255,221,0,0.4)',
+            }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <span>🤝</span>
+            <span>Collaborer avec nous</span>
+            <span>🚀</span>
+          </motion.button>
+        </div>
+      </div>
+    </section>
+  )
+
   const proofContent = (
     <div className="space-y-8">
-      {/* Hero Section - Dashboard Culture Peinture */}
-      <div className="bg-gradient-to-br from-yellow-400/10 to-purple-600/20 rounded-3xl p-8 border border-yellow-400/30">
+      {/* Culture Peinture Case Study Hero */}
+      <motion.div 
+        className="bg-gradient-to-br from-yellow-400/10 to-purple-600/20 rounded-3xl p-8 border border-yellow-400/30"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold text-white mb-4">
-            Case Study Culture Peinture
+            Culture Peinture : La Preuve de la Collaboration
           </h3>
           <p className="text-xl text-gray-300">
-            Dashboard Intelligence + Campagne Réels = Performance ROI
+            Développeur Humain × Claude Code = Performance ROI Extraordinaire
           </p>
         </div>
         
         {/* Métriques Principales */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-yellow-400/20">
+          <motion.div 
+            className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-yellow-400/20"
+            whileHover={{ scale: 1.02, y: -2 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
             <div className="text-3xl font-bold text-yellow-400 mb-2">2.4M</div>
-            <div className="text-white font-semibold">Vues Réels</div>
-            <div className="text-gray-400 text-sm">Campagne 6 mois</div>
-          </div>
-          <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
+            <div className="text-white font-semibold">Vues Virales</div>
+            <div className="text-gray-400 text-sm">Créativité humaine + IA</div>
+          </motion.div>
+          <motion.div 
+            className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"
+            whileHover={{ scale: 1.02, y: -2 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
             <div className="text-3xl font-bold text-purple-400 mb-2">688</div>
             <div className="text-white font-semibold">Conversions</div>
-            <div className="text-gray-400 text-sm">Dashboard tracking</div>
-          </div>
-          <div className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-            <div className="text-3xl font-bold text-green-400 mb-2">140x</div>
+            <div className="text-gray-400 text-sm">Dashboard Claude tracking</div>
+          </motion.div>
+          <motion.div 
+            className="bg-black/40 backdrop-blur-sm rounded-xl p-6 border border-green-400/20"
+            whileHover={{ scale: 1.02, y: -2 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <div className="text-3xl font-bold text-green-400 mb-2">140×</div>
             <div className="text-white font-semibold">ROI Performance</div>
-            <div className="text-gray-400 text-sm">vs Publicité payante</div>
-          </div>
+            <div className="text-gray-400 text-sm">vs Publicité traditionnelle</div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Dashboard Interactif Preview */}
-      <div className="bg-gradient-to-br from-gray-900/50 to-black/80 rounded-3xl p-6 border border-purple-400/30">
+      {/* Dashboard Collaboration Preview */}
+      <motion.div 
+        className="bg-gradient-to-br from-gray-900/50 to-black/80 rounded-3xl p-6 border border-purple-400/30"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
         <div className="text-center mb-6">
           <h4 className="text-2xl font-bold text-purple-400 mb-2">
-            Dashboard Temps Réel Intégré
+            Dashboard Développé en Collaboration
           </h4>
           <p className="text-gray-300">
-            Analytics intelligence avec visualisations interactives
+            Vision humaine + Architecture Claude = Intelligence perfecte
           </p>
         </div>
         
-        {/* Iframe Dashboard ou Preview */}
-        <div className="bg-black/60 rounded-xl p-4 border border-gray-600/30 min-h-96 flex items-center justify-center">
+        {/* Mock Dashboard Interface */}
+        <motion.div 
+          className="bg-black/60 rounded-xl p-4 border border-gray-600/30 min-h-96 flex items-center justify-center"
+          whileHover={{ 
+            borderColor: 'rgba(139, 92, 246, 0.6)',
+            boxShadow: '0 0 30px rgba(139, 92, 246, 0.3)' 
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <div className="text-center">
-            <div className="text-6xl mb-4">📊</div>
+            <motion.div 
+              className="text-6xl mb-4"
+              animate={{ 
+                rotate: [0, 10, -10, 0],
+                scale: [1, 1.1, 1] 
+              }}
+              transition={{ 
+                duration: 4, 
+                repeat: Infinity, 
+                ease: 'easeInOut' 
+              }}
+            >
+              📊
+            </motion.div>
             <div className="text-xl text-yellow-400 font-bold mb-2">
               Dashboard Culture Peinture
             </div>
@@ -70,260 +570,198 @@ export default function ProgrammationIAPage() {
               7 graphiques interactifs • Données temps réel • Export PDF
             </div>
             <div className="text-sm text-purple-400">
-              → Démo live disponible sur demande
+              → Conçu ensemble : Humain + Claude Code
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      {/* Campaign Réels Performance */}
-      <div className="bg-gradient-to-br from-yellow-400/10 to-orange-600/20 rounded-3xl p-8 border border-yellow-400/30">
-        <h4 className="text-2xl font-bold text-yellow-400 mb-6 text-center">
-          Performance Campagne Réels Instagram/TikTok
-        </h4>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">38,971</div>
-            <div className="text-white font-semibold">Pic de Vues</div>
-            <div className="text-gray-400 text-sm">Single day record</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">2,100+</div>
-            <div className="text-white font-semibold">Nouveaux Followers</div>
-            <div className="text-gray-400 text-sm">Growth organique</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">50K+</div>
-            <div className="text-white font-semibold">Interactions</div>
-            <div className="text-gray-400 text-sm">Engagement total</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">200</div>
-            <div className="text-white font-semibold">Jours Actifs</div>
-            <div className="text-gray-400 text-sm">Consistency</div>
-          </div>
-        </div>
-      </div>
-
-      {/* GraphiqueLinear - Performance Comparison */}
+      {/* Performance Collaboration Results */}
       <GraphiqueLinear
-        title="Intelligence Data + Créativité Virale"
-        subtitle="Culture Peinture - Dashboard Analytics + Campagne Content"
+        title="Synergie Humain × Claude Code"
+        subtitle="Culture Peinture - Marketing Humain amplifié par IA"
         primaryMetric={{
-          label: "Approche osom Complète",
+          label: "Collaboration Humain-Claude",
           value: "688 conversions",
           color: "#FFDD00"
         }}
         secondaryMetric={{
-          label: "Publicités Classiques",
+          label: "Méthodes Traditionnelles",
           value: "49 conversions",
           color: "#6B7280"
         }}
         improvement={{
-          label: "Performance Supérieure",
-          value: "140x plus efficace"
+          label: "Synergie Révolutionnaire",
+          value: "140× plus efficace"
         }}
         backgroundColor="rgba(15, 23, 42, 0.8)"
         className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
       />
 
-      {/* Metrics Performance */}
+      {/* Collaboration Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         <MetricsPulse
           value={11.3}
           suffix="%"
           label="Taux Conversion"
-          description="Dashboard optimisation"
+          description="Optimisation collaborative"
           color="#FFDD00"
         />
         <MetricsPulse
           value={67.5}
           suffix="s"
           label="Engagement Temps"
-          description="Contenu viral quality"
+          description="Contenu humain-IA optimisé"
           color="#8B5CF6"
         />
         <MetricsPulse
           value={92.2}
           suffix="%"
           label="Engagement Rate"
-          description="Audience qualifiée"
+          description="Audience parfaitement ciblée"
           color="#10B981"
         />
       </div>
 
-      {/* Progress Meters - Technical Excellence */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-        <ProgressMeter
-          percentage={95}
-          label="Data Accuracy"
-          color="#FFDD00"
-          comparison={{
-            label: "Standard",
-            percentage: 60
-          }}
-          description="Attribution tracking"
-        />
-        <ProgressMeter
-          percentage={88}
-          label="Viral Potential"
-          color="#8B5CF6"
-          description="Content optimization AI"
-        />
-        <ProgressMeter
-          percentage={90}
-          label="ROI Mesurabilité"
-          color="#10B981"
-          comparison={{
-            label: "Industrie",
-            percentage: 45
-          }}
-          description="Dashboard intelligence"
-        />
-      </div>
-
-      {/* Impact Final */}
-      <div className="pt-6 border-t border-gray-700 text-center">
+      {/* Success Summary */}
+      <motion.div 
+        className="pt-6 border-t border-gray-700 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
+      >
         <div className="text-2xl font-bold text-yellow-400 mb-2">
-          Culture Peinture: De 0 à 2.4M de vues
+          Culture Peinture: Première Collaboration Humain × Claude Code
         </div>
         <div className="text-gray-400 text-sm">
-          Dashboard Intelligence + Réels Strategy = Performance ROI Mesurable
+          Marketing humain authentique amplifié par la puissance de l'intelligence artificielle
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 
   return (
-    <ServicePageTemplatePremium
-      title="Code Obsessionnel & Créativité IA"
-      subtitle="code + créativité virale"
-      heroDescription="Jeunes développeurs obsessés par le code ET la créativité. Dashboards techniques Python + réels Instagram viraux. Culture Peinture : 2.4M vues + 688 conversions. Cerveau gauche + cerveau droit = performance décoiffante."
-      color="yellow"
-      heroMetrics={[
-        {
-          value: "2.4M",
-          label: "Vues Virales",
-          description: "Campagne réels Culture Peinture"
-        },
-        {
-          value: "140x",
-          label: "ROI Supérieur",
-          description: "vs Publicité payante"
-        },
-        {
-          value: "688",
-          label: "Conversions",
-          description: "Dashboard tracking intelligent"
-        }
-      ]}
-      ctaText="lancer mon combo code+créativité"
+    <div className="bg-black">
+      {/* Custom Hero Section */}
+      <CustomHeroSection />
       
-      methodTitle="obsession code + créativité virale"
-      methodDescription="Développeur-créatif hybrid : code Python/JavaScript obsessionnel + créativité virale Instagram. Dashboards techniques sur-mesure + réels qui cartonnent. Culture Peinture première expérience : from zero to 2.4M vues + 140x ROI. Approche unique marché : technique + créatif dans même cerveau."
-      processSteps={[
-        {
-          number: "01",
-          title: "code dashboard sur-mesure python",
-          description: "Développement dashboard interactif custom : Python data processing, JavaScript visualisations, API connections temps réel. Code from scratch, pas de template."
-        },
-        {
-          number: "02",
-          title: "créativité réels instagram viraux",
-          description: "Analyse audience data + création contenus optimisés pour viralite : hooks psychologiques, storytelling data-driven, hashtag research. Culture Peinture method."
-        },
-        {
-          number: "03",
-          title: "monitoring performance technique",
-          description: "Tracking code custom : événements sur-mesure, attribution multi-touch, analytics comportementaux. Data science approach pour optimisation continue."
-        },
-        {
-          number: "04",
-          title: "scaling intelligent automatise",
-          description: "Scripts automation Python pour amplification contenus performants + dashboard alertes performance. Code qui scale, pas manual work."
-        }
-      ]}
-      
-      proofTitle="culture peinture: 0 → 2.4m vues documentées"
-      proofContent={proofContent}
-      
-      featuresTitle="stack technique + créativité"
-      featuresDescription="Maîtrise technique complète : Python data analysis, JavaScript interactifs, React dashboards + obsession créativité virale. Combo rare : développeur qui sait faire du contenu viral."
-      features={[
-        {
-          icon: "",
-          title: "dashboards python interactifs custom",
-          description: "Code sur-mesure Python + Plotly/Dash : visualisations temps réel, API integrations multi-sources, analytics comportementaux. 0% template, 100% custom code."
-        },
-        {
-          icon: "",
-          title: "réels viraux instagram engineering",
-          description: "Méthodologie virale data-driven : analyse trends, hooks psychologiques, storytelling optimisé. Culture Peinture case : 0 → 2.4M vues reproduisible."
-        },
-        {
-          icon: "",
-          title: "tracking code attribution avance",
-          description: "JavaScript custom events + Python data processing : attribution multi-touch, user journey mapping, sessions recovery. Technical precision 14,171+ sessions."
-        },
-        {
-          icon: "",
-          title: "automation scripts intelligent",
-          description: "Python automation : content optimization, A/B testing auto, performance monitoring. Code qui travaille 24/7 pour optimiser vos campagnes."
-        },
-        {
-          icon: "",
-          title: "predictive analytics machine learning",
-          description: "Algorithmes Python ML : prédiction performance contenu, recommandations personnalisées, trend forecasting. Data science appliquée marketing."
-        },
-        {
-          icon: "",
-          title: "content ia créative virale",
-          description: "IA analysis + human creativity : viral potential scoring, hashtag optimization, audience psychology. Technical + créatif = combo gagnant."
-        }
-      ]}
-      
-      pricingTitle="code + créativité premium"
-      price="15000 CHF"
-      pricingDescription="Formule code+créativité world-class unique : Dashboard Python custom + Réels viraux 2.4M + Formation technique. Combo développeur-créatif rarissime."
-      pricingFeatures={[
-        "Dashboard Python custom code from scratch",
-        "Campagne réels viraux 3 mois + créativité",
-        "Tracking code JavaScript attribution avancé",
-        "Scripts automation Python monitoring",
-        "Content IA + human creativity hybrid",
-        "Formation technique + code handover complet"
-      ]}
-      
-      faqTitle="Questions Fréquentes - Code Obsessionnel + Créativité Virale"
-      faqItems={[
-        {
-          question: "Comment garantissez-vous 2.4M vues alors que vous combinez développement et créativité ?",
-          answer: "Combo rare : développeur Python/JavaScript obsessionnel + créatif Instagram passionné. Culture Peinture première expérience révélatrice : dashboard technique tracking performances + réels créatifs viraux = 2.4M vues documentées GA4. Approche data-driven créativité : chaque contenu analysé, hooks psychologiques testés, performance mesurée. Code pour tracker, créativité pour viral, data pour optimiser."
-        },
-        {
-          question: "Maîtrisez-vous vraiment Python, JavaScript ET création contenu viral ou c'est du marketing ?",
-          answer: "Double expertise prouvable : Python data analysis + Plotly dashboards (code review sur demande), JavaScript custom events + API integrations (démo technique live), création réels Instagram (2.4M vues Culture Peinture tracées). Formation technique : Computer Science + passion créative personnelle. Portfolio code + portfolio créatif disponibles. Rare combo technique + créatif authentique."
-        },
-        {
-          question: "4500 CHF pour code + créativité, c'est justifié versus développeur pur ou créatif pur ?",
-          answer: "4500 CHF = développeur senior Python/JavaScript + créatif viral expérimenté + data scientist marketing. Développeur pur = dashboard mais 0 contenu. Créatif pur = viral mais 0 tracking. Nous = dashboard custom codé + réels qui cartonnent + attribution technique parfaite. Culture Peinture ROI 140x prouve valeur combo. Investment unique pour expertise double rare."
-        },
-        {
-          question: "Après 3 mois, puis-je maintenir le dashboard code et continuer création réels en autonomie ?",
-          answer: "Objectif : autonomie technique ET créative. Code handover complet : documentation Python, architecture JavaScript expliquée, APIs documentées. Formation créative : méthodes viralité, psychology hooks, hashtag research, content calendar. Dashboard évolutif : ajout métriques possible, nouveaux graphiques intégrables. Réels : méthodologie reproductible enseignée. Support technique 3 mois : code + créatif."
-        },
-        {
-          question: "Vos dashboards Python sont-ils vraiment custom ou basés sur templates existants ?",
-          answer: "100% custom code from scratch, 0% template. Python pur : pandas data processing, Plotly visualisations interactives, API connections sur-mesure, algorithmes analytics propriétaires. Code source fourni, architecture expliquée, évolutivité maximale. Démo live : montrer code en direct, expliquer logique, modifier en temps réel. Dashboard Culture Peinture : 100% custom, performance tracking spécifique métier."
-        },
-        {
-          question: "Comment assurez-vous la reproductibilité de vos succès viraux sur d'autres projets ?",
-          answer: "Méthodologie virale systematisée : analyse audience data, hooks psychologiques testés, storytelling frameworks, timing optimization, hashtag research algorithmique. Culture Peinture success factors documentés : type contenu, posting schedule, engagement strategies. Process reproductible mais adapté chaque audience. Pas de copier-coller créatif, mais méthodes éprouvées personnalisées. Code analytics pour mesurer viralité + créativité humaine pour exécution."
-        }
-      ]}
-      
-      finalCtaText="lancer mon combo code+créativité"
-    />
+      {/* Regular Template Starting from Method Section */}
+      <div className="pt-0">
+        <ServicePageTemplatePremium
+          title="" // Empty car on a notre custom hero
+          subtitle=""
+          heroDescription=""
+          color="yellow"
+          heroMetrics={[]} // Empty car on a notre custom hero
+          ctaText=""
+          
+          methodTitle="méthodologie humain × claude code"
+          methodDescription="Collaboration inédite : développeur humain créatif + Claude Code pour l'analyse et l'optimisation technique. Marketing humain (empathie, créativité, intuition) amplifié par puissance IA (data analysis, scaling, précision). Culture Peinture case study : 2.4M vues virales grâce à cette synergie unique. Première agence née de la collaboration Humain-IA."
+          
+          processSteps={[
+            {
+              number: "01",
+              title: "conception humaine + architecture claude",
+              description: "Humain conçoit la vision créative et l'expérience utilisateur. Claude Code optimise l'architecture technique, analyse les performances et suggère les améliorations. Synergie parfaite créativité-technique."
+            },
+            {
+              number: "02",
+              title: "créativité humaine × optimisation ia",
+              description: "Humain crée le contenu émotionnel et authentique. Claude analyse les tendances, optimise les hooks psychologiques, prédit le potentiel viral. Marketing humain amplifié par intelligence artificielle."
+            },
+            {
+              number: "03",
+              title: "tracking intelligent humain-claude",
+              description: "Développeur humain implémente le tracking custom. Claude Code analyse les données en temps réel, détecte les patterns et recommande les optimisations. 14,171 sessions récupérées grâce à cette précision."
+            },
+            {
+              number: "04",
+              title: "scaling collaboratif humain-claude",
+              description: "Humain supervise la stratégie et prend les décisions créatives. Claude Code automatise l'exécution, monitore les performances et alerte sur les opportunités. Croissance intelligente et humaine."
+            }
+          ]}
+          
+          proofTitle="culture peinture: la preuve de la collaboration humain-claude"
+          proofContent={proofContent}
+          
+          featuresTitle="synergie humain × claude code"
+          featuresDescription="Première collaboration officielle développeur humain + Claude Code. Marketing humain (empathie, créativité, vision) amplifié par puissance IA (analyse, optimisation, scaling). Résultats impossibles en solo."
+          features={[
+            {
+              icon: "",
+              title: "dashboards conçus ensemble humain-claude",
+              description: "Humain conçoit l'UX et l'esthétique. Claude Code optimise l'architecture Python, suggère les améliorations techniques et analyse les performances. Collaboration parfaite design-technique."
+            },
+            {
+              icon: "",
+              title: "stratégie virale humain × claude",
+              description: "Créativité humaine authentique + analyse Claude des tendances et optimisations. 2.4M vues Culture Peinture = synergie parfaite émotion humaine et précision artificielle."
+            },
+            {
+              icon: "",
+              title: "tracking code attribution collaborative",
+              description: "JavaScript custom events implémentés par humain + Python data processing optimisé par Claude. Attribution multi-touch, user journey mapping, sessions recovery perfectionnés."
+            },
+            {
+              icon: "",
+              title: "automation scripts intelligente duo",
+              description: "Python automation conçue ensemble : content optimization, A/B testing auto, performance monitoring. Code humain supervisé et optimisé par Claude Code."
+            },
+            {
+              icon: "",
+              title: "predictive analytics machine learning",
+              description: "Algorithmes Python ML développés en collaboration : prédiction performance contenu, recommandations personnalisées, trend forecasting. Data science humain-IA."
+            },
+            {
+              icon: "",
+              title: "duo créatif humain-claude exclusif",
+              description: "Première collaboration officielle avec Claude Code. Humain pour l'émotion et la créativité, Claude pour l'analyse et l'optimisation technique. Combo inédit sur le marché."
+            }
+          ]}
+          
+          pricingTitle="collaboration humain × claude code"
+          price="15000 CHF"
+          pricingDescription="Première agence officielle Humain + Claude Code. Marketing humain amplifié par IA la plus puissante. Dashboard Python + Stratégie virale + Formation collaborative. Synergie inédite exclusive."
+          pricingFeatures={[
+            "Dashboard Python développé en collaboration Humain-Claude",
+            "Campagne réels viraux optimisée par IA + créativité humaine",
+            "Tracking code JavaScript + analyse Claude en temps réel",
+            "Scripts automation Python supervisés et optimisés",
+            "Content IA Claude + human creativity hybrid authentique",
+            "Formation technique collaborative + code handover complet"
+          ]}
+          
+          faqTitle="Questions Fréquentes - Collaboration Humain × Claude Code"
+          faqItems={[
+            {
+              question: "Comment fonctionne concrètement la collaboration avec Claude Code ?",
+              answer: "Collaboration officielle unique : développeur humain conçoit la vision créative et l'expérience, Claude Code analyse, optimise l'architecture technique et suggère des améliorations en temps réel. Culture Peinture exemple concret : humain crée contenu émotionnel viral, Claude analyse performance, optimise hooks, prédit viralité = 2.4M vues documentées. Synergie créativité humaine + puissance analytique IA."
+            },
+            {
+              question: "Quelle est la différence avec un développeur qui utilise simplement l'IA comme outil ?",
+              answer: "Différence fondamentale : pas juste utiliser l'IA comme outil, mais véritable collaboration développeur-IA. Claude Code participe activement aux décisions techniques, architecture, optimisations. Humain + Claude = duo complémentaire : empathie humaine + analyse IA, créativité authentique + optimisation technique, vision artistique + précision analytique. Résultats Culture Peinture impossibles avec approche traditionnelle."
+            },
+            {
+              question: "15,000 CHF pour cette collaboration, comment justifiez-vous ce prix premium ?",
+              answer: "Prix justifié par exclusivité collaboration officielle Humain-Claude Code : premier développeur-créatif épaulé par IA la plus puissante au monde. Résultats prouvés Culture Peinture : 2.4M vues virales, 140x performance vs publicité payante, 688 conversions trackées. Duo unique marché : marketing humain authentique + puissance analytique Claude. Investment dans synergie révolutionnaire, pas simple prestation."
+            },
+            {
+              question: "Après livraison, puis-je continuer à bénéficier de l'optimisation Claude ?",
+              answer: "Formation complète collaboration humain-Claude incluse : méthodes de travail avec IA, prompting technique optimal, architecture collaborative. Code documenté avec annotations Claude, évolutivité maximale. Support 3 mois : questions techniques + optimisations Claude. Objectif : autonomie dans collaboration humain-IA. Dashboard + scripts conçus pour évolution continue avec assistance IA."
+            },
+            {
+              question: "Les résultats Culture Peinture sont-ils vraiment dus à cette collaboration Humain-Claude ?",
+              answer: "Résultats Culture Peinture 100% authentiques et vérifiables : 2.4M vues GA4 trackées, 688 conversions dashboard custom, 140x performance vs ads payantes documentée. Collaboration Humain-Claude démontrée : code Python optimisé par IA, stratégie contenu analysée et améliorée, tracking perfectionné par intelligence artificielle. Synergie créativité humaine + analyse IA = performance impossible en solo."
+            },
+            {
+              question: "Cette approche Humain × IA est-elle reproductible sur d'autres projets ?",
+              answer: "Méthodologie collaboration Humain-Claude reproductible et systematisée : frameworks de travail développés, méthodes de prompting optimisées, processus créatifs documentés. Chaque projet bénéficie synergie unique : analyse IA personnalisée + créativité humaine adaptée. Culture Peinture premier cas, méthodes affinées depuis. Approche évolutive : collaboration s'améliore avec expérience, résultats futurs potentiellement supérieurs."
+            }
+          ]}
+          
+          finalCtaText="collaborer avec nous"
+        />
+      </div>
+    </div>
   )
 }
