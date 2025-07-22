@@ -4,12 +4,12 @@ import { MetricsPulse, ProgressMeter, ComparisonChart, AssetValueCounter } from 
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Marketing Automation & CRM Valais | Agence Marketing Digital OSOM',
-  description: 'Agence marketing digital Valais spécialisée en automation CRM. +78% conversions, -65% temps manuel. Expertise locale pour entreprises valaisannes.',
-  keywords: 'marketing digital valais, agence marketing valais, automation crm valais, marketing automation suisse, crm entreprise valais',
+  title: 'Marketing Automation Obsessionnelle Valais | CRM Setup - osom',
+  description: 'Jeunes experts automation Valais obsessés par l\'efficacité. +78% conversions, -65% temps manuel dès premiers setups. HubSpot, Pipedrive, ActiveCampaign maîtrisés. Setup technique parfait.',
+  keywords: 'marketing automation valais, crm setup technique, hubspot expert, pipedrive automation, activecampaign valais, automation obsessionnelle, crm technique suisse',
   openGraph: {
-    title: 'Marketing Automation & CRM Valais | OSOM',
-    description: 'Automatisez vos conversions avec l\'expertise marketing digital Valais. ROI mesurable +78% pour entreprises valaisannes.',
+    title: 'Marketing Automation Technique | +78% Conversions Valais',
+    description: 'Setup automation obsessionnel : +78% conversions, -65% temps manuel. Expertise technique CRM moderne.',
     type: 'website',
   }
 }
@@ -120,9 +120,9 @@ export default function MarketingAutomationCRMPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Marketing Automation & CRM Valais"
-      subtitle="CRM Valais"
-      heroDescription="Agence marketing digital Valais : automatisez vos conversions et transformez chaque prospect valaisan en client fidèle avec des systèmes intelligents qui travaillent 24/7 pour votre entreprise."
+      title="Marketing Automation Obsessionnelle"
+      subtitle="setup technique parfait"
+      heroDescription="Jeunes experts automation obsessés par l'efficacité technique. HubSpot, Pipedrive, ActiveCampaign setup parfait. +78% conversions dès nos premiers clients. Pas d'expérience de masse, mais maîtrise technique complète des outils."
       color="cyan"
       heroMetrics={[
         {
@@ -143,76 +143,105 @@ export default function MarketingAutomationCRMPage() {
       ]}
       ctaText="Automatiser mes conversions en Valais"
       
-      methodTitle="Système Automatisation Intelligente"
-      methodDescription="Expertise marketing digital Valais : transformez votre funnel en machine à convertir adaptée au marché valaisan qui fonctionne sans intervention"
+      methodTitle="setup automation obsessionnel"
+      methodDescription="Obsession technique automation : chaque workflow pensé, testé, optimisé. Setup CRM moderne avec triggers intelligents, sequences comportementales, scoring prédictif. Jeunes experts tools passionés par la performance mesurable. Résultats immédiats : automation qui fonctionne vraiment."
       processSteps={[
         {
           number: "01",
-          title: "Audit Funnel Actuel Valais",
-          description: "Analyse des points de friction et opportunités d'automatisation spécifiques au marché valaisan"
+          title: "audit funnel technique obsessionnel",
+          description: "Analyse complète 50+ points friction, mapping customer journey, identification gaps automation. Détection opportunités invisibles avec outils pro."
         },
         {
           number: "02",
-          title: "Setup Automation",
-          description: "Configuration CRM + email sequences + lead scoring + workflows"
+          title: "setup crm & automation parfait",
+          description: "Configuration experte HubSpot/Pipedrive : triggers intelligents, sequences comportementales, scoring prédictif, workflows multi-touch. Setup qui fonctionne vraiment."
         },
         {
           number: "03",
-          title: "Optimisation Continue",
-          description: "A/B testing automatisé et amélioration performances en temps réel"
+          title: "optimisation performance continue",
+          description: "A/B testing automatisé, analytics comportementaux, machine learning optimization. Amélioration permanente mesurée au % près."
         }
       ]}
       
-      proofTitle="ROI Automatisation Mesurable"
+      proofTitle="preuves automation technique"
       proofContent={proofContent}
       
-      featuresTitle="Suite Automation Complète"
-      featuresDescription="Tous les outils pour automatiser et optimiser votre acquisition client"
+      featuresTitle="stack automation moderne"
+      featuresDescription="Maîtrise complète des outils automation leaders : HubSpot, Pipedrive, ActiveCampaign, Zapier, Make. Setup technique obsessionnel avec mesure permanente performance. Pas de bricolage, que de la config pro."
       features={[
         {
           icon: "",
-          title: "Email Marketing Automation Valais",
-          description: "Sequences personnalisées pour clients valaisans, segmentation locale - +92% taux ouverture en Valais"
+          title: "email automation sequences expertes",
+          description: "ActiveCampaign/HubSpot maîtrisé : triggers comportementaux, segmentation dynamique, personalisation avancée. +92% open rates via optimisation obsessionnelle."
         },
         {
           icon: "",
-          title: "Lead Scoring Intelligent Valais",
-          description: "Qualification automatique prospects valaisans avec expertise locale - 87% précision sur marché Valais"
+          title: "lead scoring prédictif intelligent",
+          description: "Configuration scoring multidimensionnel : engagement + fit + comportement + timing. Machine learning pour prédiction conversion. 87% accuracy prouvee."
         },
         {
           icon: "",
-          title: "Workflows Multi-Canal",
-          description: "Automation email + SMS + social + retargeting coordonné"
+          title: "workflows omnichannel orchestrés",
+          description: "Zapier/Make integration : email + SMS + retargeting + social media coordonnés. Customer journey fluide cross-plateforme."
         },
         {
           icon: "",
-          title: "CRM Intégration Complète",
-          description: "Synchronisation données temps réel - 94% accuracy data"
+          title: "crm sync & data management parfait",
+          description: "HubSpot/Pipedrive setup : data hygiene, deduplication, field mapping, API sync temps réel. 94% data accuracy maintenue."
         },
         {
           icon: "",
-          title: "Chatbot & AI Support",
-          description: "Réponses automatisées 24/7 - Qualification premier niveau"
+          title: "chatbot & ai qualification 24/7",
+          description: "Setup intelligent : qualification automatique, routing contextualisé, escalation rules. AI pour premier niveau support sans friction."
         },
         {
           icon: "",
-          title: "Analytics & Reporting",
-          description: "Dashboard automation performance - ROI transparent par canal"
+          title: "analytics automation avancées",
+          description: "Dashboard custom : attribution multi-touch, cohort analysis, LTV prediction, ROI par workflow. Métriques qui comptent vraiment."
         }
       ]}
       
-      pricingTitle="Automation osom Suite"
+      pricingTitle="automation setup premium"
       price="3900 CHF"
-      pricingDescription="Setup + Formation + Support 6 mois"
+      pricingDescription="Setup technique complet pour nos premiers clients automation : Configuration experte + Formation équipe + Optimisation continue 6 mois. Investment dans système qui génère sans limite."
       pricingFeatures={[
-        "CRM setup complet",
-        "Email automation sequences",
-        "Lead scoring configuration",
-        "Workflows multi-canal",
-        "Chatbot & AI integration", 
-        "Formation équipe + support"
+        "CRM setup technique expert (HubSpot/Pipedrive)",
+        "Email sequences comportementales avancées",
+        "Lead scoring prédictif + machine learning",
+        "Workflows omnichannel orchestrés",
+        "AI chatbot + qualification intelligente", 
+        "Formation obsessionnelle + support 6 mois"
       ]}
-      finalCtaText="Lancer mon système automatisé Valais"
+      
+      faqTitle="Questions Fréquentes - Setup Automation Obsessionnel"
+      faqItems={[
+        {
+          question: "Comment garantissez-vous +78% conversions et -65% temps manuel dès le setup alors que vous êtes jeunes ?",
+          answer: "Obsession technique pure : on maîtrise HubSpot, Pipedrive, ActiveCampaign à fond, pas en surface. +78% conversions = setup triggers comportementaux précis + sequences testées + scoring prédictif. -65% temps = automation workflows intelligence vs processus manuels. Pas d'expérience de masse, mais expertise tools moderne supérieure aux méthodes obsolètes. Résultats immédiats car setup technique parfait dès premier projet."
+        },
+        {
+          question: "Maîtrisez-vous vraiment HubSpot, Pipedrive, ActiveCampaign ou c'est du marketing ?",
+          answer: "Maîtrise technique complète prouvable : certifications HubSpot (Sales, Marketing, Service), Pipedrive advanced user, ActiveCampaign automation expert. Setup custom fields, triggers multi-conditions, API integrations, webhook automation, advanced segmentation. Pas de surface, que de la config experte. Demo live sur demande : on setup votre automation en direct pour prouver notre niveau technique."
+        },
+        {
+          question: "3900 CHF pour un setup CRM, c'est justifié par rapport aux solutions DIY ou freelances ?",
+          answer: "3900 CHF = setup professionnel vs bricolage amateur. Inclus : audit 50+ points, config experte multi-outils, workflows comportementaux, lead scoring prédictif, formation équipe, support 6 mois. DIY = 200h learning curve + erreurs coûteuses. Freelances = config basique sans vision système. Notre setup génère +78% conversions pendant des années. ROI récupéré en 2-3 mois via efficacité accrue."
+        },
+        {
+          question: "Après setup, mon équipe peut-elle gérer l'automation en autonomie ou y a-t-il dépendance ?",
+          answer: "Objectif : autonomie complète de votre équipe. Formation incluse : maîtrise interface CRM, création sequences, modification triggers, lecture analytics. Documentation complète : processus, best practices, troubleshooting. Support 6 mois pour transition douce. Système conçu pour évolutivité : équipe peut ajouter workflows, modifier segmentation, optimiser performances. Indépendance technique garantie post-formation."
+        },
+        {
+          question: "Comment mesurez-vous concrètement les résultats automation et optimisez-vous en continu ?",
+          answer: "Analytics obsessionnelles : dashboard custom tracking conversion par étape funnel, attribution multi-touch, cohort analysis, LTV prediction. Métriques clés : open rates, click rates, conversion rates par sequence, scoring accuracy, time-to-conversion. A/B testing automatisé : subject lines, send times, content variations. Optimisation continue basée data : ajustement triggers, refinement scoring, amélioration sequences. Reporting mensuel transparent avec recommandations d'amélioration."
+        },
+        {
+          question: "Votre setup automation est-il évolutif et compatible avec la croissance de mon entreprise ?",
+          answer: "Architecture scalable dès le setup : structure modulaire, workflows extensibles, segmentation dynamique. Compatible croissance : plus de leads = automation plus efficace (economies échelle). Integration APIs pour outils futurs, migration data facilitée si changement CRM. Setup anticipant besoins futurs : scoring évolutif, sequences adaptables, reporting extensible. Pas de refonte nécessaire avec croissance, que de l'expansion intelligente du système existant."
+        }
+      ]}
+      
+      finalCtaText="setup mon automation technique parfait"
     />
   )
 }
