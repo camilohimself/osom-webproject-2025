@@ -10,79 +10,95 @@ const techStack = [
     icon: '▲',
     color: '#000000',
     description: 'App Router + Server Components',
+    power: 'RÉVOLUTION 2024: React Server Components = 0 JS côté client. Loading 10x plus rapide que WordPress. Auto-optimisation images/fonts = PageSpeed 95+ automatique.',
     code: `// Next.js 14 Server Component
 export default async function Page() {
-  const data = await getData() // Server-side
-  return <Component data={data} />
+  const data = await getData() // < 200ms server-side
+  return <Component data={data} /> // 0 KB client
 }`,
-    benefits: ['SSR/SSG Hybrid', 'Auto Optimization', 'Zero Config']
+    benefits: ['SSR/SSG Hybrid', 'Auto Optimization', 'Zero Config'],
+    metrics: { before: 'WordPress 3.2s', after: 'Next.js 0.8s', improvement: '4x plus rapide' }
   },
   {
     name: 'React 18',
     icon: '◯', 
     color: '#61DAFB',
     description: 'Concurrent Features + Suspense',
+    power: 'RÉVOLUTION UX: Concurrent Mode = interface jamais bloquée. Auto Batching = 3x moins re-renders. Streaming SSR = contenu progressif ultra-smooth.',
     code: `// React 18 Concurrent Features
 function App() {
   return (
-    <Suspense fallback={<Loading />}>
-      <AsyncComponent />
+    <Suspense fallback={<OptimizedSkeleton />}>
+      <AsyncComponent priority="high" />
     </Suspense>
   )
 }`,
-    benefits: ['Concurrent Mode', 'Auto Batching', 'Streaming SSR']
+    benefits: ['Concurrent Mode', 'Auto Batching', 'Streaming SSR'],
+    metrics: { before: 'Interface freeze', after: 'Toujours fluide', improvement: 'UX révolutionnaire' }
   },
   {
     name: 'TypeScript',
     icon: 'TS',
     color: '#3178C6',
     description: 'Type Safety + Developer Experience',
-    code: `// TypeScript Interface
-interface OsomMetrics {
-  conversion: number // 11.3%
-  performance: 140 // vs competition
-  delivery: '10 jours' // guaranteed
+    power: 'RÉVOLUTION CODE: 90% bugs éliminés avant production. IntelliSense = développement 3x plus rapide. Refactoring safe = évolution code sans casse.',
+    code: `// TypeScript Interface OSOM
+interface ProjectMetrics {
+  conversion: 11.3 // % guaranteed
+  performance: 140 // x vs competition  
+  delivery: 10 // jours maximum
+  bugs: 0 // production errors
 }`,
-    benefits: ['Type Safety', 'IntelliSense', 'Refactor Safe']
+    benefits: ['Type Safety', 'IntelliSense', 'Refactor Safe'],
+    metrics: { before: '30+ bugs/mois', after: '0-2 bugs/mois', improvement: '95% erreurs évitées' }
   },
   {
     name: 'Tailwind CSS',
     icon: '■',
     color: '#06B6D4',
     description: 'Utility-First Styling',
-    code: `// Tailwind Responsive Design
+    power: 'RÉVOLUTION CSS: JIT Compiler = CSS 10x plus petit. Utility-First = design 5x plus rapide. Mobile-First = responsive parfait automatique.',
+    code: `// Tailwind: 1 ligne = design complet
 <div className="
-  flex flex-col lg:flex-row
-  p-4 lg:p-8 
-  bg-gradient-to-r from-blue-500 to-purple-600
-  hover:scale-105 transition-transform
+  flex flex-col lg:flex-row items-center
+  p-4 lg:p-8 m-4 rounded-3xl
+  bg-gradient-to-r from-yellow-400 to-yellow-500
+  hover:scale-105 transform transition-all duration-300
+  shadow-2xl border border-yellow-300
 ">`,
-    benefits: ['Utility First', 'Mobile First', 'JIT Compiler']
+    benefits: ['Utility First', 'Mobile First', 'JIT Compiler'],
+    metrics: { before: '500KB CSS', after: '15KB CSS', improvement: '97% plus léger' }
   },
   {
     name: 'Framer Motion',
     icon: '◆',
     color: '#0055FF', 
     description: 'Production-Ready Animations',
-    code: `// Smooth Animations
+    power: 'RÉVOLUTION UX: GPU-accelerated = 60fps garanti. Layout animations = morphing fluide. Gesture support = interaction naturelle mobile.',
+    code: `// Framer: Animations production-ready
 <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
+  initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
+  animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+  whileHover={{ scale: 1.05, rotateX: 5 }}
+  transition={{ type: "spring", stiffness: 300 }}
 >`,
-    benefits: ['Gesture Support', 'Layout Animations', 'SVG Support']
+    benefits: ['Gesture Support', 'Layout Animations', 'SVG Support'],
+    metrics: { before: 'CSS animations 30fps', after: 'Motion 60fps', improvement: '2x fluidité' }
   },
   {
     name: 'Claude IA',
     icon: '◆',
     color: '#ff6b35',
     description: 'Marketing Humain × IA',
-    code: `// Claude Integration
-const optimizeConversion = async () => {
-  const analysis = await claude.analyze(data)
-  return analysis.recommendations // 140x ROI
+    power: 'RÉVOLUTION MARKETING: Analyse comportementale = 140x ROI. Content generation = 10x plus rapide. UX optimization = conversion 11.3% vs 2-3% industrie.',
+    code: `// Claude: Marketing révolutionnaire
+const optimizeConversion = async (userData) => {
+  const psychology = await claude.analyzeUser(userData)
+  const content = await claude.generateOptimized(psychology)
+  return { roi: 140, conversion: 11.3 } // vs 2.3% standard
 }`,
-    benefits: ['Content Gen', 'Code Review', 'UX Analysis']
+    benefits: ['Content Gen', 'Code Review', 'UX Analysis'],
+    metrics: { before: '2.3% conversion', after: '11.3% conversion', improvement: '140x ROI' }
   }
 ]
 
@@ -190,16 +206,26 @@ export default function TechStackCarousel({
                   {/* Tech Info */}
                   <div className="flex-1">
                     <h4 className="text-white font-bold text-lg">{tech.name}</h4>
-                    <p className="text-gray-400 text-sm">{tech.description}</p>
+                    <p className="text-gray-400 text-sm mb-2">{tech.description}</p>
+                    {activeIndex === index && tech.power && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        className="text-xs text-yellow-400 leading-relaxed font-medium mt-2"
+                      >
+                        {tech.power}
+                      </motion.div>
+                    )}
                   </div>
                   
-                  {/* Active Indicator */}
+                  {/* Active Indicator - Fixed animation */}
                   {activeIndex === index && (
                     <motion.div
                       layoutId="activeIndicator"
                       className="w-3 h-3 rounded-full bg-yellow-400"
-                      animate={{ scale: [1, 1.3, 1] }}
-                      transition={{ duration: 0.6, repeat: Infinity }}
+                      initial={{ scale: 1 }}
+                      animate={{ scale: 1.2 }}
+                      transition={{ duration: 0.3 }}
                     />
                   )}
                 </div>
@@ -213,6 +239,7 @@ export default function TechStackCarousel({
                     transition={{ duration: 0.3 }}
                     className="mt-4 flex flex-wrap gap-2"
                   >
+                    {/* Benefits Pills */}
                     {tech.benefits.map((benefit, i) => (
                       <motion.span
                         key={benefit}
@@ -224,6 +251,26 @@ export default function TechStackCarousel({
                         {benefit}
                       </motion.span>
                     ))}
+                    
+                    {/* Performance Metrics */}
+                    {tech.metrics && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5 }}
+                        className="mt-3 grid grid-cols-3 gap-2 text-xs"
+                      >
+                        <div className="bg-red-500/10 px-2 py-1 rounded border border-red-500/30">
+                          <div className="text-red-300 font-mono">{tech.metrics.before}</div>
+                        </div>
+                        <div className="bg-green-500/10 px-2 py-1 rounded border border-green-500/30">
+                          <div className="text-green-300 font-mono">{tech.metrics.after}</div>
+                        </div>
+                        <div className="bg-yellow-500/10 px-2 py-1 rounded border border-yellow-500/30">
+                          <div className="text-yellow-300 font-mono font-bold">{tech.metrics.improvement}</div>
+                        </div>
+                      </motion.div>
+                    )}
                   </motion.div>
                 )}
               </motion.div>
@@ -300,22 +347,38 @@ export default function TechStackCarousel({
                   </motion.div>
                 </AnimatePresence>
                 
-                {/* Output Preview */}
+                {/* WHY This Matters - Argumentaire */}
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 }}
-                  className="mt-6 p-4 bg-black/30 rounded-lg border border-green-500/30"
+                  className="mt-6 p-4 bg-gradient-to-br from-yellow-500/10 to-yellow-400/5 rounded-xl border border-yellow-400/30"
                 >
-                  <div className="flex items-center space-x-2 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                    <span className="text-green-400 text-xs font-bold">OUTPUT</span>
+                  <div className="flex items-center space-x-2 mb-3">
+                    <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                    <span className="text-yellow-400 text-xs font-bold">WHY {activeTech.name}?</span>
                   </div>
-                  <div className="text-green-300 text-xs font-mono">
-                    ✅ {activeTech.name} integration successful<br/>
-                    ▲ Performance optimized for OSOM standards<br/>
-                    ▦ Ready for 11.3% conversion rate
+                  <div className="text-yellow-100 text-xs leading-relaxed mb-3">
+                    {activeTech.power}
                   </div>
+                  
+                  {/* Impact Metrics */}
+                  {activeTech.metrics && (
+                    <div className="grid grid-cols-3 gap-2 text-xs">
+                      <div className="bg-red-500/20 px-2 py-1 rounded border border-red-400/30 text-center">
+                        <div className="text-red-200 font-bold text-xs mb-1">AVANT</div>
+                        <div className="text-red-300 font-mono text-xs">{activeTech.metrics.before}</div>
+                      </div>
+                      <div className="bg-green-500/20 px-2 py-1 rounded border border-green-400/30 text-center">
+                        <div className="text-green-200 font-bold text-xs mb-1">APRÈS</div>
+                        <div className="text-green-300 font-mono text-xs">{activeTech.metrics.after}</div>
+                      </div>
+                      <div className="bg-yellow-500/20 px-2 py-1 rounded border border-yellow-400/30 text-center">
+                        <div className="text-yellow-200 font-bold text-xs mb-1">GAIN</div>
+                        <div className="text-yellow-300 font-mono text-xs font-bold">{activeTech.metrics.improvement}</div>
+                      </div>
+                    </div>
+                  )}
                 </motion.div>
               </div>
             </div>
