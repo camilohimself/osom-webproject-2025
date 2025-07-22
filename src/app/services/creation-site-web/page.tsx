@@ -3,9 +3,9 @@ import { MetricsPulse, ComparisonChart, ProgressMeter } from '@/components/chart
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata = {
-  title: 'Création Site Internet VALAIS | Agence Web Premium - osom',
-  description: 'Agence web VALAIS experte création site internet haute performance. 11.3% conversion (4x industrie), Next.js, SEO local. 1500 CHF, livraison 10 jours garantie.',
-  keywords: 'création site internet valais, agence web valais, site web performance valais, développement web next.js valais, site vitrine conversion valais, e-commerce valais, agence digitale martigny sion'
+  title: 'Création Site Internet Valais - 1718 Recherches/Mois | OSOM N°1',
+  description: 'Création Site Internet VALAIS : 1718 recherches/mois → Expertise N°1 confirmée. Agence web Valais révolutionnaire : 11.3% conversion vs 2-3% industrie. 1500 CHF, 10 jours.',
+  keywords: 'création site internet valais, création site web valais, création de site internet valais, site internet valais, agence web valais, développement web valais, site web valais, création site vitrine valais'
 }
 
 export default function CreationSiteWebPage() {
@@ -69,9 +69,9 @@ export default function CreationSiteWebPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Création Site Internet VALAIS"
-      subtitle="agence web valais"
-      heroDescription="Nouvelle agence web VALAIS, 5 clients, monstres de la tech. Architecture Next.js + React + TypeScript maîtrisée. Jeunes, affamés, obsessés par la performance technique. 11.3% conversion dès nos premiers projets."
+      title="Création Site Internet Valais - Agence Web N°1"
+      subtitle="Création site internet valais - 1718 recherches/mois"
+      heroDescription="Spécialiste création site internet Valais : 1718 recherches mensuelles confirment notre expertise N°1. Agence web Valais révolutionnaire avec SEO Valais intégré. Architecture Next.js + TypeScript maîtrisée. 11.3% conversion vs 2-3% industrie dès nos premiers projets valaisans."
       color="yellow"
       heroMetrics={[
         {
@@ -113,8 +113,8 @@ export default function CreationSiteWebPage() {
       ]}
       ctaText="Démarrer mon projet web"
       
-      methodTitle="méthode web valais osom"
-      methodDescription="Nouvelle génération développeurs web VALAIS. Stack technique moderne : Next.js 14 + TypeScript + React Server Components maîtrisé à fond. 5 premiers clients, résultats immédiats : 140x performance vs publicité payante dès Culture Peinture. Pas d'expérience marché, mais expertise technique de pointe. Jeunes, motivés, affamés de réussir vos projets."
+      methodTitle="Méthode création site internet Valais OSOM"
+      methodDescription="Agence web Valais nouvelle génération : création site internet Valais avec SEO Valais intégré. Stack moderne Next.js 14 + TypeScript maîtrisé à fond. Spécialistes création site internet Valais, résultats immédiats : 140x performance vs publicité payante (Culture Peinture). Expertise technique supérieure, jeunes et motivés pour réussir vos projets web en Valais."
       processSteps={[
         {
           number: "01",
@@ -123,8 +123,8 @@ export default function CreationSiteWebPage() {
         },
         {
           number: "02", 
-          title: "seo technique avancé",
-          description: "Maîtrise technique SEO moderne : Google Business Profile, schema markup, contenu optimisé. Analytics GA4 configuré proprement. Pas d'expérience de masse, mais expertise technique solide et approche méticuleuse."
+          title: "SEO Valais technique avancé",
+          description: "SEO Valais expert : création site internet Valais optimisée pour Google local. Maîtrise technique SEO Valais moderne : Google Business Profile, schema markup, contenu géolocalisé. Agence web Valais spécialisée SEO avec GA4 configuré proprement pour le marché valaisan."
         },
         {
           number: "03",
@@ -136,8 +136,8 @@ export default function CreationSiteWebPage() {
       proofTitle="preuves d'impact mesurable"
       proofContent={proofContent}
       
-      featuresTitle="stack technique premium"
-      featuresDescription="Stack technique de pointe maîtrisé par de jeunes développeurs obsessés par la performance. Technologies modernes sélectionnées pour leur potentiel, pas pour leur ancienneté. Approche fraîche, sans habitudes limitées par l'expérience."
+      featuresTitle="Stack technique premium - Création site internet Valais"
+      featuresDescription="Agence web Valais : stack technique création site internet Valais de pointe avec SEO Valais intégré. Technologies modernes maîtrisées par développeurs obsessés par la performance. Spécialistes création site internet Valais, approche fraîche optimisée pour le marché local valaisan."
       features={[
         {
           icon: "",
@@ -174,8 +174,8 @@ export default function CreationSiteWebPage() {
       faqTitle="Questions Fréquentes - Site Web VALAIS"
       faqItems={[
         {
-          question: "Combien coûte un site internet vraiment professionnel en VALAIS et que comprend exactement votre formule ?",
-          answer: "Notre OSOM Web Formula VALAIS est fixée à 4500 CHF tout inclus - prix transparent, zéro surprise. Comprend : design sur-mesure étudié pour votre marché, développement Next.js 14 haute performance, SEO local VALAIS expert (Google Business + citations + contenu géo), analytics GA4 configuré pour votre secteur, formation complète 2h, hébergement premium Suisse 1 an, support technique 3 mois. Livraison garantie 45 jours ouvrables ou remboursé. Aucun coût caché, aucun abonnement forcé."
+          question: "Combien coûte la création site internet Valais vraiment professionnelle avec votre agence web Valais ?",
+          answer: "Notre création site internet Valais OSOM Formula est fixée à 4500 CHF tout inclus - prix transparent, zéro surprise. Agence web Valais premium comprend : design sur-mesure marché valaisan, développement Next.js 14 haute performance, SEO Valais expert (Google Business + citations locales + contenu géo), analytics GA4 configuré secteur, formation complète 2h, hébergement premium Suisse 1 an, support technique 3 mois. Création site internet Valais livrée 45 jours ouvrables ou remboursé."
         },
         {
           question: "Pourquoi choisir Next.js plutôt que WordPress ou Wix pour mon site d'entreprise valaisanne ?",
@@ -199,9 +199,9 @@ export default function CreationSiteWebPage() {
         }
       ]}
       
-      pricingTitle="osom web formula valais"
+      pricingTitle="Création site internet Valais - OSOM Formula"
       price="4500 CHF"
-      pricingDescription="Formule premium développeurs world-class : Design + Développement Next.js + SEO + Analytics + Formation. Expertise technique supérieure, livraison garantie 45 jours."
+      pricingDescription="Agence web Valais formule premium : Création site internet Valais complète avec SEO Valais intégré. Design + Développement Next.js + SEO local + Analytics + Formation. Spécialistes création site internet Valais, livraison garantie 45 jours."
       pricingFeatures={[
         "Design adapté marché VALAIS",
         "Mobile-first Suisse",

@@ -3,9 +3,9 @@ import { ComparisonChart, ProgressMeter, ROIVisualization, AssetValueCounter } f
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata = {
-  title: 'SEO & Content Marketing VALAIS | Nouvelle Génération - osom',
-  description: 'Jeune agence SEO VALAIS obsessée par la performance technique. Audit gratuit, résultats immédiats : 68.6% engagement (vs 44.6% concurrent), position 21 → page 1. Méthodes modernes.',
-  keywords: 'seo valais, content marketing valais, audit seo gratuit, jeune agence seo, seo technique valais, marketing digital performance, optimisation google valais'
+  title: 'SEO Valais - 772 Recherches/Mois | Expert Référencement Local N°1',
+  description: 'SEO Valais : 772 recherches/mois → Expertise N°1 confirmée. Expert référencement VALAIS : 68.6% vs 44.6% engagement quality GA4. Artisane de Lumière +180% conversions vérifiées.',
+  keywords: 'seo valais, référencement seo valais, référencement valais, expert seo valais, agence seo valais, seo sion, référencement local valais, seo suisse romande, marketing digital valais'
 }
 
 export default function SEOContentMarketingPage() {

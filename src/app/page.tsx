@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, type Locale } from '@/lib/i18n'
 import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImpact } from '@/components/ui'
@@ -8,6 +9,59 @@ import AnimatedElement from '@/components/ui/AnimatedElement'
 import InteractiveBackground from '@/components/ui/InteractiveBackground'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 import MagneticButton from '@/components/ui/MagneticButton'
+
+export const metadata: Metadata = {
+  title: 'Agence Web Valais OSOM | Marketing IA × Création Site Internet',
+  description: 'Agence Web VALAIS N°1 : 1589 recherches "agence web valais" → Expertise confirmée. Marketing Humain × Claude IA. Création site internet, SEO, marketing digital révolutionnaire.',
+  keywords: 'agence web valais, création site internet valais, seo valais, marketing digital valais, agence marketing valais, référencement valais, agence digitale valais, site web valais',
+  openGraph: {
+    title: 'OSOM - Marketing Humain × Puissance IA Révolutionnaire',
+    description: 'Première collaboration officielle Agence × Claude IA. Résultats vérifiés : 688 conversions vs 49 classique. Révolution marketing VALAIS.',
+    url: 'https://osom.ch',
+    siteName: 'OSOM',
+    locale: 'fr_CH',
+    type: 'website',
+    images: [
+      {
+        url: '/osom-og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'OSOM - Marketing Humain × Puissance IA',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'OSOM - Marketing Humain × Puissance IA',
+    description: '140x plus efficace que publicité classique. Collaboration révolutionnaire Homme × Claude IA.',
+    images: ['/osom-og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://osom.ch',
+    languages: {
+      'fr-CH': 'https://osom.ch',
+      'de-CH': 'https://osom.ch/de',
+      'en': 'https://osom.ch/en',
+    },
+  },
+  other: {
+    'geo.region': 'CH-VS',
+    'geo.placename': 'Valais, Switzerland',
+    'geo.position': '46.2276;7.3597',
+    'ICBM': '46.2276, 7.3597',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
 export default async function Home() {
   // Get locale from cookie (same logic as layout.tsx)
@@ -21,8 +75,73 @@ export default async function Home() {
 
   const dictionary = await getDictionary(currentLocale)
 
+  // Structured Data for SEO
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'OSOM',
+    description: 'Première agence VALAIS spécialisée dans le Marketing Humain × Intelligence Artificielle. Résultats 140x supérieurs à la publicité classique.',
+    url: 'https://osom.ch',
+    logo: 'https://osom.ch/osom-logo.svg',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+41-XX-XXX-XX-XX',
+      contactType: 'Customer Service',
+      areaServed: 'CH-VS',
+      availableLanguage: ['French', 'German', 'English']
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'Valais',
+      addressCountry: 'Switzerland'
+    },
+    sameAs: [
+      'https://linkedin.com/company/osom-ch',
+      'https://instagram.com/osom.ch'
+    ],
+    serviceArea: {
+      '@type': 'State',
+      name: 'Valais'
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Services Marketing IA',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Création Site Web IA',
+            description: '11.3% conversion vs 2-3% industrie'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'SEO & Marketing IA',
+            description: '68.6% vs 44.6% engagement quality'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Tracking & Data IA',
+            description: '14,171 sessions récupérées'
+          }
+        }
+      ]
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-black relative">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen bg-black relative">
       {/* Interactive Background Layer */}
       <InteractiveBackground />
       
@@ -349,6 +468,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

@@ -1,0 +1,173 @@
+Country,Clicks,Impressions,CTR,Position
+Switzerland,128,3190,4.01%,38.23
+France,10,331,3.02%,33.34
+United Kingdom,3,960,0.31%,47.75
+Belgium,3,44,6.82%,16.61
+Algeria,2,48,4.17%,41.58
+Spain,1,174,0.57%,43.04
+Sweden,1,72,1.39%,48.26
+Portugal,1,34,2.94%,40.15
+Greece,1,31,3.23%,43.61
+United States,0,4734,0%,46.86
+Brazil,0,3144,0%,46.72
+South Korea,0,1481,0%,44.44
+Russia,0,1311,0%,44.48
+India,0,797,0%,46.22
+Vietnam,0,550,0%,45.19
+Germany,0,374,0%,47.11
+Taiwan,0,269,0%,48.16
+Argentina,0,262,0%,43.04
+Turkey,0,259,0%,45.9
+Malaysia,0,238,0%,47.69
+Indonesia,0,234,0%,45.96
+Canada,0,210,0%,46.91
+Italy,0,202,0%,44.39
+Ukraine,0,195,0%,42.4
+Bangladesh,0,169,0%,49.47
+Philippines,0,168,0%,42.1
+Mexico,0,163,0%,48.78
+Egypt,0,154,0%,48.58
+Netherlands,0,149,0%,40.83
+South Africa,0,145,0%,49.23
+Ecuador,0,124,0%,49.71
+Poland,0,123,0%,40.89
+Iraq,0,118,0%,55.12
+Pakistan,0,113,0%,53.5
+Japan,0,111,0%,41.6
+Saudi Arabia,0,101,0%,54.42
+Uzbekistan,0,93,0%,51.84
+Morocco,0,88,0%,46.77
+Singapore,0,86,0%,44.86
+Venezuela,0,86,0%,49.42
+Australia,0,81,0%,49.42
+Colombia,0,74,0%,48.23
+Jordan,0,73,0%,52.96
+Lithuania,0,72,0%,40.54
+Ireland,0,71,0%,48.18
+Unknown Region,0,69,0%,39.7
+Chile,0,60,0%,40.97
+Romania,0,55,0%,47.09
+Thailand,0,54,0%,42.81
+Iran,0,53,0%,47.09
+Nepal,0,53,0%,53.43
+Tunisia,0,46,0%,48.7
+Kenya,0,45,0%,48
+Bulgaria,0,42,0%,39.29
+United Arab Emirates,0,42,0%,47.5
+Israel,0,41,0%,50.63
+Czechia,0,34,0%,44.41
+Paraguay,0,34,0%,47.76
+Peru,0,34,0%,49.15
+Dominican Republic,0,33,0%,44
+Trinidad & Tobago,0,32,0%,50.94
+Barbados,0,31,0%,46.32
+Kazakhstan,0,30,0%,46.17
+Norway,0,29,0%,32.59
+Azerbaijan,0,28,0%,48.25
+Uruguay,0,26,0%,43.31
+Serbia,0,26,0%,47.19
+Jamaica,0,23,0%,36.57
+Hong Kong,0,22,0%,57.23
+Cyprus,0,21,0%,37.1
+Finland,0,21,0%,39.05
+Hungary,0,21,0%,49.76
+Bolivia,0,21,0%,51.52
+Belarus,0,21,0%,54.1
+Albania,0,19,0%,45.79
+Armenia,0,18,0%,40.61
+Austria,0,17,0%,32.29
+Palestine,0,17,0%,45.12
+Kuwait,0,17,0%,49.24
+Honduras,0,16,0%,51.25
+Angola,0,15,0%,41.6
+Bahamas,0,15,0%,43.07
+Lebanon,0,14,0%,39.43
+Senegal,0,14,0%,46.57
+Costa Rica,0,14,0%,51
+Slovakia,0,13,0%,32
+Moldova,0,13,0%,46.69
+Bosnia & Herzegovina,0,12,0%,36.75
+New Zealand,0,12,0%,39
+Nigeria,0,12,0%,44.5
+Georgia,0,12,0%,44.92
+Croatia,0,12,0%,49.67
+Syria,0,12,0%,51.92
+El Salvador,0,12,0%,57.67
+Bahrain,0,11,0%,44.45
+Kyrgyzstan,0,11,0%,46.09
+Panama,0,11,0%,52.55
+Côte d’Ivoire,0,10,0%,22.9
+Latvia,0,10,0%,37.4
+Belize,0,10,0%,43.3
+Denmark,0,10,0%,55.1
+Guatemala,0,10,0%,62.2
+Qatar,0,10,0%,64.2
+Oman,0,9,0%,49.78
+Ethiopia,0,9,0%,56.78
+Slovenia,0,8,0%,44.12
+Macedonia,0,8,0%,63.38
+Cambodia,0,7,0%,40.86
+Mauritius,0,7,0%,44.29
+Gabon,0,7,0%,79.14
+Madagascar,0,6,0%,25.33
+Congo - Brazzaville,0,6,0%,38.17
+Sri Lanka,0,6,0%,39
+Puerto Rico,0,6,0%,39.33
+Myanmar (Burma),0,6,0%,72.67
+Congo - Kinshasa,0,5,0%,18.2
+Estonia,0,5,0%,31.2
+Bermuda,0,5,0%,33.6
+Ghana,0,5,0%,47
+St. Kitts & Nevis,0,5,0%,51.2
+Turks & Caicos Islands,0,5,0%,51.2
+Grenada,0,5,0%,52.2
+Cameroon,0,4,0%,6
+Malawi,0,4,0%,27.75
+Iceland,0,4,0%,45.75
+Uganda,0,4,0%,53.5
+Guyana,0,4,0%,57.5
+Nicaragua,0,4,0%,67.25
+Cape Verde,0,4,0%,73.25
+Luxembourg,0,3,0%,14
+Malta,0,3,0%,17
+Zambia,0,3,0%,42
+Guadeloupe,0,3,0%,44.33
+Libya,0,3,0%,50.67
+Cayman Islands,0,3,0%,55.33
+St. Lucia,0,3,0%,55.67
+Jersey,0,3,0%,56.67
+Seychelles,0,3,0%,59
+Cuba,0,3,0%,62.33
+Benin,0,2,0%,8.5
+China,0,2,0%,23
+French Polynesia,0,2,0%,25
+Rwanda,0,2,0%,28.5
+Guernsey,0,2,0%,31
+Brunei,0,2,0%,31.5
+Mongolia,0,2,0%,33.5
+Martinique,0,2,0%,35
+Maldives,0,2,0%,38.5
+Zimbabwe,0,2,0%,40.5
+Tanzania,0,2,0%,44
+Sierra Leone,0,2,0%,45
+British Virgin Islands,0,2,0%,49
+Dominica,0,2,0%,52.5
+Mozambique,0,2,0%,54
+Turkmenistan,0,2,0%,55.5
+St. Vincent & Grenadines,0,2,0%,57
+Botswana,0,2,0%,59
+Burundi,0,1,0%,5
+Niger,0,1,0%,8
+Burkina Faso,0,1,0%,11
+Guinea,0,1,0%,14
+Montenegro,0,1,0%,17
+Suriname,0,1,0%,18
+Antigua & Barbuda,0,1,0%,32
+Caribbean Netherlands,0,1,0%,38
+St. Barthélemy,0,1,0%,50
+Central African Republic,0,1,0%,53
+Tajikistan,0,1,0%,57
+Andorra,0,1,0%,61
+Afghanistan,0,1,0%,64
+Somalia,0,1,0%,64
+Togo,0,1,0%,64
