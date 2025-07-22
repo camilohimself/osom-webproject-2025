@@ -4,12 +4,12 @@ import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from 
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Tracking & Data Analytics Valais | Agence Marketing Digital OSOM',
-  description: 'Agence marketing digital Valais : tracking avancé et analytics. 14,171 sessions récupérées, ROI transparent pour entreprises valaisannes.',
-  keywords: 'agence marketing valais, marketing digital valais, analytics valais, tracking ga4 suisse, data marketing valais',
+  title: 'Data Obsession & Tracking Technique Valais | GA4 Expert - osom',
+  description: 'Jeunes experts data obsessés tracking parfait. 14,171 sessions Unassigned récupérées, ROI invisible révélé. GA4, GTM, attribution maîtrisés. Setup technique impeccable.',
+  keywords: 'data obsession valais, tracking technique ga4, gtm expert, attribution multi-touch, data analyst valais, analytics obsessionnel, roi invisible',
   openGraph: {
-    title: 'Analytics & Tracking Valais | Data Marketing OSOM',
-    description: 'Expertise marketing digital Valais : révélez le ROI invisible de vos actions marketing avec notre tracking avancé.',
+    title: 'Data Obsession | 14,171 Sessions Récupérées Valais',
+    description: 'Experts data young & hungry : tracking obsessionnel, ROI invisible révélé, setup GA4 technique parfait.',
     type: 'website',
   }
 }
@@ -116,9 +116,9 @@ export default function TrackingDataPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Analytics & Tracking Valais"
-      subtitle="Data Valais"
-      heroDescription="Agence marketing digital Valais : révélez le ROI invisible de vos actions marketing. Expertise locale pour données vérifiables, décisions éclairées et performance optimisée."
+      title="Data Obsession & Tracking"
+      subtitle="roi invisible révélé"
+      heroDescription="Jeunes data analysts obsessés par la vérité des chiffres. Premier audit client : 14,171 sessions 'Unassigned' récupérées = ROI invisible révélé. GA4, GTM, attribution technique parfaitement maîtrisés."
       color="purple"
       heroMetrics={[
         {
@@ -139,76 +139,105 @@ export default function TrackingDataPage() {
       ]}
       ctaText="Audit tracking gratuit Valais"
       
-      methodTitle="Révélateur ROI Invisible"
-      methodDescription="Expertise marketing digital Valais : transformez vos données floues en insights actionnables pour optimiser chaque franc investi sur le marché valaisan"
+      methodTitle="data forensics obsessionnel"
+      methodDescription="Approche forensics data : détecter chaque euro perdu dans les trous noirs analytics. 14,171 sessions Unassigned retrouvées = preuve notre obsession technique. Jeunes data nerds qui creusent là où d'autres s'arrêtent. Setup GA4/GTM chirurgical pour ROI 100% transparent."
       processSteps={[
         {
           number: "01",
-          title: "Audit Tracking Complet Valais",
-          description: "Analyse configuration GA4, GTM, attribution spécifique au marché valaisan et identification gaps tracking"
+          title: "audit forensics data obsessionnel",
+          description: "Investigation 100+ points GA4/GTM : configuration errors, data leaks, attribution gaps, sessions perdues. Détection forensics chaque euro invisible."
         },
         {
           number: "02",
-          title: "Configuration Avancée",
-          description: "Setup tracking précis, events conversions, attribution multi-touch"
+          title: "setup technique chirurgical",
+          description: "Configuration GA4 experte : enhanced ecommerce, custom events, attribution modeling, GTM advanced. Setup qui capture 100% data réelles."
         },
         {
           number: "03",
-          title: "Dashboard ROI Temps Réel",
-          description: "Visibilité performance par canal, campagne et action marketing"
+          title: "dashboard roi transparent permanent",
+          description: "Data Studio advanced : attribution multi-touch, cohort analysis, LTV tracking, ROI par canal. Visibilité totale performance marketing temps réel."
         }
       ]}
       
-      proofTitle="14,171 Sessions Récupérées - ROI Révélé"
+      proofTitle="14,171 sessions unassigned récupérées"
       proofContent={proofContent}
       
-      featuresTitle="Suite Analytics Avancée"
-      featuresDescription="Outils professionnels pour tracking précis et décisions data-driven"
+      featuresTitle="arsenal data obsessionnel"
+      featuresDescription="Maîtrise technique complète stack analytics moderne : GA4 advanced, GTM expert, Data Studio pro, attribution modeling. Obsession data forensics pour débusquer chaque centime perdu dans les méandres analytics."
       features={[
         {
           icon: "",
-          title: "Google Analytics 4 Pro Valais",
-          description: "Configuration complète adaptée au marché valaisan, events personnalisés - 98% data quality"
+          title: "google analytics 4 forensics expert",
+          description: "Configuration GA4 chirurgicale : enhanced ecommerce, custom dimensions, calculated metrics, audience modeling. 98% data quality via setup obsessionnel technique."
         },
         {
           icon: "",
-          title: "Attribution Multi-Touch",
-          description: "Tracking parcours client complet - 94% précision attribution"
+          title: "attribution modeling multi-touch",
+          description: "Tracking parcours complet : first-click, last-click, linear, time-decay, data-driven attribution. 94% précision via algorithmes avancés maîtrisés."
         },
         {
           icon: "",
-          title: "GTM Configuration",
-          description: "Google Tag Manager optimisé - Tracking sans erreur technique"
+          title: "google tag manager architecture",
+          description: "GTM setup expert : triggers complexes, variables custom, data layer optimization, debugging approfondi. Zéro erreur technique, capture parfaite."
         },
         {
           icon: "",
-          title: "Dashboard Temps Réel Valais",
-          description: "Visualisation ROI par canal avec expertise locale - Décisions éclairées pour entreprises valaisannes"
+          title: "data studio dashboards avancés",
+          description: "Visualisation data obsessionnelle : blended data, calculated fields, cohort analysis, ROI attribution. Dashboards qui révèlent la vérité chiffres."
         },
         {
           icon: "",
-          title: "Automatisation Reporting",
-          description: "Reports automatisés - Gain temps 85% vs reporting manuel"
+          title: "reporting automation intelligent",
+          description: "Google Apps Script + Zapier : reports automatisés, alertes performance, data export programmé. 85% gain temps vs manuel, précision 100%."
         },
         {
           icon: "",
-          title: "GDPR Compliant",
-          description: "Tracking respectueux données - Conformité légale 100% garantie"
+          title: "privacy & compliance obsessionnel",
+          description: "GDPR + iOS14 + cookieless tracking maîtrisé : server-side tracking, consent management, first-party data strategy. Conformité légale guarantee."
         }
       ]}
       
-      pricingTitle="Analytics osom Pro"
+      pricingTitle="data forensics premium"
       price="2900 CHF"
-      pricingDescription="Audit + Setup + Dashboard + Formation"
+      pricingDescription="Audit forensics complet pour nos premiers clients data : Investigation technique + Setup GA4/GTM chirurgical + Dashboard ROI transparent + Formation obsessionnelle. Détection argent perdu garanti."
       pricingFeatures={[
-        "Audit tracking complet",
-        "GA4 + GTM configuration",
-        "Dashboard personnalisé",
-        "Attribution multi-touch",
-        "Formation équipe",
-        "Support 3 mois"
+        "Audit forensics data 100+ points",
+        "GA4 + GTM setup chirurgical expert",
+        "Data Studio dashboards avancés",
+        "Attribution modeling multi-touch",
+        "Formation technique obsessionnelle",
+        "Support data forensics 3 mois"
       ]}
-      finalCtaText="Révéler mon ROI invisible Valais"
+      
+      faqTitle="Questions Fréquentes - Data Forensics Obsessionnel"
+      faqItems={[
+        {
+          question: "Comment avez-vous récupéré exactement 14,171 sessions 'Unassigned' et que représente ce chiffre ?",
+          answer: "Audit forensics technique approfondi : analyse GA4 configuration, GTM debugging, attribution gaps, UTM parameters manqués, cross-domain tracking errors. 14,171 sessions = trafic réel non attribué = ROI invisible. Investigation révèle sources : email campaigns mal trackées, social media links sans UTM, redirections cassées, cookies expirés. Récupération via setup GA4 chirurgical + GTM expert + attribution modeling. Chaque session = argent perdu retrouvé."
+        },
+        {
+          question: "Maîtrisez-vous vraiment GA4, GTM, Data Studio en profondeur ou c'est du marketing technique ?",
+          answer: "Maîtrise technique prouvable : GA4 enhanced ecommerce + custom dimensions + calculated metrics + audience modeling + server-side tracking. GTM advanced : triggers complexes + variables custom + data layer + debugging + container versioning. Data Studio expert : blended data + calculated fields + community connectors + Apps Script automation. Certifications Google Analytics + Tag Manager. Demo technique live sur demande pour prouver niveau expert réel."
+        },
+        {
+          question: "2900 CHF pour un audit data, c'est justifié versus outils automatiques ou consultants freelance ?",
+          answer: "2900 CHF = investigation forensics manuelle 40h + setup technique expert + dashboards custom + formation. Outils automatiques = surface, pas de forensics deep. Freelances = config basique sans vision systémique. Notre audit révèle gaps invisibles même aux outils pro. 14,171 sessions récupérées = valeur client potentiel énorme. ROI récupéré en 1-2 mois via décisions éclairées, visibilité performance réelle, optimisation budgets basée data vérifiées."
+        },
+        {
+          question: "Après votre setup, mes équipes peuvent-elles interpréter les données en autonomie ou dépendance technique ?",
+          answer: "Objectif : autonomie data complète équipes. Formation incluse : lecture dashboards, interprétation métriques, identification trends, prise décision basée data. Documentation complète : définitions KPIs, processus analyse, best practices, troubleshooting. Setup conçu user-friendly : dashboards intuitifs, métriques essentielles highlighted, alertes automatiques. Support 3 mois transition. Après formation : équipe autonomous pour optimisations quotidiennes, nous pour évolutions complexes setup."
+        },
+        {
+          question: "Comment garantissez-vous la précision et fiabilité des données trackées avec GDPR et iOS14 ?",
+          answer: "Approche compliance obsessionnelle : server-side tracking Google Cloud + consent management Cookiebot + first-party data strategy + iOS14 SKAdNetwork. Privacy-first setup : data anonymization + IP masking + storage EU + retention policies. Testing rigoureux : cross-browser, cross-device, privacy modes, ad-blockers. Validation data : comparaisons multi-sources, cohérence métriques, audit réguliers. 98% data accuracy maintenue même avec restrictions privacy. Future-proof : cookieless tracking préparé."
+        },
+        {
+          question: "Vos dashboards et rapports sont-ils évolutifs avec la croissance de mon business et nouveaux besoins ?",
+          answer: "Architecture scalable dès conception : structure modulaire, métriques extensibles, sources data multiples intégrables. Dashboards évolutifs : nouveaux KPIs ajoutables, segmentations affinables, périodes comparables. API connections : CRM, email tools, ad platforms intégrables. Croissance business = data plus riches, insights plus précis, ROI mieux attribué. Pas de refonte nécessaire, que expansion intelligente système existant. Formation continue : nouvelles fonctionnalités, optimisations, best practices data."
+        }
+      ]}
+      
+      finalCtaText="audit forensics data gratuit"
     />
   )
 }
