@@ -247,7 +247,6 @@ export default function MarketingAutomationCRMPage() {
         ]}
         
         finalCtaText="révolutionner mon automation avec expert crm × claude"
-        skipCustomHero={true}
       />
     </div>
   )

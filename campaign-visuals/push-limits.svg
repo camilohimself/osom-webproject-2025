@@ -1,0 +1,155 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Text Gradient -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Animation -->
+    <style>
+      .pulse-ring {
+        animation: pulseRing 3s ease-out infinite;
+      }
+      @keyframes pulseRing {
+        0% { transform: scale(0.8); opacity: 1; }
+        50% { transform: scale(1.2); opacity: 0.3; }
+        100% { transform: scale(1.5); opacity: 0; }
+      }
+      .float {
+        animation: float 4s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Animated Rings -->
+  <circle cx="540" cy="200" r="80" fill="none" stroke="url(#mainGradient)" stroke-width="3" opacity="0.4" class="pulse-ring"/>
+  <circle cx="540" cy="880" r="60" fill="none" stroke="url(#mainGradient)" stroke-width="2" opacity="0.3" class="pulse-ring"/>
+  
+  <!-- Main Quote -->
+  <g transform="translate(540, 300)" class="float">
+    <text x="0" y="-80" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="300" 
+          font-size="48" 
+          fill="#ffffff" 
+          opacity="0.9">
+      "Let's push the
+    </text>
+    
+    <text x="0" y="-20" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="64" 
+          fill="url(#mainGradient)" 
+          filter="url(#glow)">
+      LIMITS
+    </text>
+    
+    <text x="0" y="40" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="300" 
+          font-size="48" 
+          fill="#ffffff" 
+          opacity="0.9">
+      and see what
+    </text>
+    
+    <text x="0" y="100" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="700" 
+          font-size="56" 
+          fill="url(#mainGradient)">
+      happens"
+    </text>
+  </g>
+  
+  <!-- Results Section -->
+  <g transform="translate(540, 600)">
+    <text x="0" y="0" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="600" 
+          font-size="32" 
+          fill="#ffffff">
+      Résultat:
+    </text>
+    
+    <text x="0" y="60" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="72" 
+          fill="url(#mainGradient)" 
+          filter="url(#glow)">
+      140x
+    </text>
+    
+    <text x="0" y="110" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="600" 
+          font-size="28" 
+          fill="#ffffff">
+      plus performant
+    </text>
+    
+    <text x="0" y="150" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="400" 
+          font-size="22" 
+          fill="#ffffff" 
+          opacity="0.8">
+      vs méthodes classiques
+    </text>
+  </g>
+  
+  <!-- Bottom Branding -->
+  <g transform="translate(540, 850)">
+    <text x="0" y="0" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="42" 
+          fill="url(#mainGradient)">
+      OSOM × CLAUDE CODE
+    </text>
+    
+    <text x="0" y="40" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="600" 
+          font-size="28" 
+          fill="url(#mainGradient)">
+      VALAIS
+    </text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <rect x="100" y="450" width="6" height="150" fill="url(#mainGradient)" opacity="0.6" rx="3"/>
+  <rect x="974" y="400" width="6" height="200" fill="url(#mainGradient)" opacity="0.6" rx="3"/>
+  
+  <!-- Subtle geometric shapes -->
+  <polygon points="150,150 170,130 190,150 170,170" fill="url(#mainGradient)" opacity="0.4"/>
+  <polygon points="920,920 940,900 960,920 940,940" fill="url(#mainGradient)" opacity="0.4"/>
+  
+</svg>

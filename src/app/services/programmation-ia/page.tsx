@@ -1,21 +1,9 @@
 'use client'
 
-import { Metadata } from 'next'
 import { motion } from 'framer-motion'
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
-
-export const metadata: Metadata = {
-  title: 'Développeur x Claude Code | Collaboration IA Révolutionnaire - osom',
-  description: 'Première collaboration officielle Développeur Humain x Claude Code. Marketing humain amplifiée par IA. 2.4M vues Culture Peinture, 140x ROI. Synergie inédite.',
-  keywords: 'développeur claude code, collaboration humain ia, marketing humain intelligence artificielle, claude 4 sonnet, programmation ia créative',
-  openGraph: {
-    title: 'Développeur x Claude Code | Synergie Humain-IA Inédite',
-    description: 'Marketing humain x Puissance Claude = Résultats extraordinaires. 2.4M vues documentées.',
-    type: 'website',
-  }
-}
 
 export default function ProgrammationIAPage() {
   // Custom Hero Section - Collaboration Humain x Claude Code
@@ -155,11 +143,18 @@ export default function ProgrammationIAPage() {
                     opacity: 1, 
                     x: 0, 
                     scale: 1,
+                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
                   }}
                   transition={{
                     opacity: { duration: 0.6, delay: 1 },
                     x: { duration: 1.2, delay: 1, type: 'spring', stiffness: 80 },
-                    scale: { duration: 1.2, delay: 1, type: 'spring', stiffness: 120 }
+                    scale: { duration: 1.2, delay: 1, type: 'spring', stiffness: 120 },
+                    backgroundPosition: {
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      delay: 1.5
+                    }
                   }}
                   style={{
                     background: 'linear-gradient(135deg, #FFDD00 0%, #ffffff 30%, #8B5CF6 70%, #FFDD00 100%)',
@@ -168,17 +163,6 @@ export default function ProgrammationIAPage() {
                     WebkitBackgroundClip: 'text',
                     color: 'transparent',
                     filter: 'drop-shadow(0 0 30px rgba(255,221,0,0.7))',
-                  }}
-                  animate={{
-                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-                  }}
-                  transition={{
-                    backgroundPosition: {
-                      duration: 5,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: 1.5
-                    }
                   }}
                 >
                   claude

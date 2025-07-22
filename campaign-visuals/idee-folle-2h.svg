@@ -1,0 +1,151 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Time Gradient -->
+    <linearGradient id="timeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Success Gradient -->
+    <linearGradient id="successGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Clock Animation -->
+    <style>
+      .clock-hand {
+        transform-origin: 400px 300px;
+        animation: clockRotate 4s linear infinite;
+      }
+      @keyframes clockRotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .pulse {
+        animation: pulse 2s ease-in-out infinite alternate;
+      }
+      @keyframes pulse {
+        from { opacity: 0.6; }
+        to { opacity: 1; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="1200" fill="url(#bgGradient)"/>
+  
+  <!-- Time Section Top -->
+  <g transform="translate(0, 50)">
+    <!-- Clock Icon -->
+    <circle cx="150" cy="120" r="40" fill="none" stroke="url(#timeGradient)" stroke-width="4"/>
+    <line x1="150" y1="95" x2="150" y2="120" stroke="url(#timeGradient)" stroke-width="3" class="clock-hand"/>
+    <line x1="150" y1="120" x2="170" y2="120" stroke="url(#timeGradient)" stroke-width="2" class="clock-hand"/>
+    
+    <!-- 9h00 -->
+    <text x="250" y="130" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="54" 
+          fill="url(#timeGradient)">
+      9h00:
+    </text>
+    
+    <text x="250" y="190" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="400" 
+          font-size="36" 
+          fill="#ffffff">
+      "Idée folle"
+    </text>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(400, 280)">
+    <path d="M -50 -10 L 30 -10 L 20 -20 L 50 0 L 20 20 L 30 10 L -50 10 Z" 
+          fill="url(#successGradient)" class="pulse"/>
+  </g>
+  
+  <!-- Time Section Bottom -->
+  <g transform="translate(0, 350)">
+    <!-- Clock Icon -->
+    <circle cx="150" cy="120" r="40" fill="none" stroke="url(#successGradient)" stroke-width="4"/>
+    <line x1="150" y1="95" x2="150" y2="120" stroke="url(#successGradient)" stroke-width="3"/>
+    <line x1="150" y1="120" x2="165" y2="105" stroke="url(#successGradient)" stroke-width="2"/>
+    
+    <!-- 11h00 -->
+    <text x="250" y="130" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="54" 
+          fill="url(#successGradient)">
+      11h00:
+    </text>
+    
+    <text x="250" y="190" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="700" 
+          font-size="36" 
+          fill="url(#successGradient)">
+      Site live
+    </text>
+  </g>
+  
+  <!-- Main Message -->
+  <text x="400" y="650" text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="64" 
+        fill="#ffffff">
+    L'impossible
+  </text>
+  
+  <text x="400" y="730" text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="64" 
+        fill="url(#successGradient)">
+    en 2h
+  </text>
+  
+  <!-- Separator -->
+  <line x1="200" y1="800" x2="600" y2="800" stroke="url(#successGradient)" stroke-width="3" opacity="0.8"/>
+  
+  <!-- Branding -->
+  <text x="400" y="900" text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="48" 
+        fill="url(#successGradient)">
+    OSOM × CLAUDE CODE
+  </text>
+  
+  <text x="400" y="960" text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-weight="400" 
+        font-size="24" 
+        fill="#ffffff" 
+        opacity="0.8">
+    Collaboration révolutionnaire
+  </text>
+  
+  <text x="400" y="1050" text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-weight="600" 
+        font-size="32" 
+        fill="url(#timeGradient)">
+    VALAIS
+  </text>
+  
+  <!-- Geometric Elements -->
+  <rect x="50" y="600" width="4" height="100" fill="url(#timeGradient)" opacity="0.6"/>
+  <rect x="750" y="550" width="4" height="150" fill="url(#successGradient)" opacity="0.6"/>
+  
+</svg>

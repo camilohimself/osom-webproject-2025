@@ -1,0 +1,190 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Split Background -->
+    <linearGradient id="leftBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#374151;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="rightBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1f2937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradients -->
+    <linearGradient id="oldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6b7280;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="newGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Animation -->
+    <style>
+      .fade-in {
+        animation: fadeIn 3s ease-in-out infinite alternate;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0.6; }
+        to { opacity: 1; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Split Background -->
+  <rect x="0" y="0" width="400" height="1200" fill="url(#leftBg)"/>
+  <rect x="400" y="0" width="400" height="1200" fill="url(#rightBg)"/>
+  
+  <!-- Center Divider -->
+  <line x1="400" y1="0" x2="400" y2="1200" stroke="url(#newGradient)" stroke-width="4" opacity="0.8"/>
+  
+  <!-- Left Side - Old Way -->
+  <g transform="translate(0, 150)">
+    <!-- Cross Symbol -->
+    <g transform="translate(80, 50)">
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#ef4444" stroke-width="4"/>
+      <line x1="-20" y1="-20" x2="20" y2="20" stroke="#ef4444" stroke-width="4"/>
+      <line x1="20" y1="-20" x2="-20" y2="20" stroke="#ef4444" stroke-width="4"/>
+    </g>
+    
+    <text x="200" y="80" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="600" 
+          font-size="28" 
+          fill="url(#oldGradient)">
+      "Je veux un
+    </text>
+    <text x="200" y="120" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="600" 
+          font-size="28" 
+          fill="url(#oldGradient)">
+      bouton bleu"
+    </text>
+    
+    <text x="200" y="180" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="400" 
+          font-size="18" 
+          fill="#9ca3af">
+      Demandes classiques
+    </text>
+    
+    <text x="200" y="220" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="400" 
+          font-size="16" 
+          fill="#6b7280">
+      Résultats prévisibles
+    </text>
+  </g>
+  
+  <!-- Right Side - New Way -->
+  <g transform="translate(400, 150)">
+    <!-- Check Symbol -->
+    <g transform="translate(80, 50)">
+      <circle cx="0" cy="0" r="35" fill="none" stroke="url(#newGradient)" stroke-width="4" class="fade-in"/>
+      <path d="M -15 0 L -5 10 L 15 -10" fill="none" stroke="url(#newGradient)" stroke-width="4" class="fade-in"/>
+    </g>
+    
+    <text x="200" y="60" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="700" 
+          font-size="24" 
+          fill="url(#newGradient)">
+      "Marketing Humain
+    </text>
+    <text x="200" y="90" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="700" 
+          font-size="24" 
+          fill="url(#newGradient)">
+      × Puissance IA"
+    </text>
+    
+    <text x="200" y="140" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="600" 
+          font-size="18" 
+          fill="url(#newGradient)">
+      Vision OSOM
+    </text>
+    
+    <text x="200" y="180" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="500" 
+          font-size="16" 
+          fill="#ffffff">
+      Résultats révolutionnaires
+    </text>
+    
+    <text x="200" y="220" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="600" 
+          font-size="16" 
+          fill="url(#newGradient)">
+      140x plus efficace
+    </text>
+  </g>
+  
+  <!-- Main Message -->
+  <text x="400" y="550" text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="48" 
+        fill="#ffffff">
+    Même brief
+  </text>
+  
+  <text x="400" y="620" text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="52" 
+        fill="url(#newGradient)">
+    RÉVOLUTION
+  </text>
+  
+  <!-- Arrow pointing right -->
+  <g transform="translate(400, 450)">
+    <path d="M -80 -10 L 60 -10 L 50 -20 L 80 0 L 50 20 L 60 10 L -80 10 Z" 
+          fill="url(#newGradient)" opacity="0.8"/>
+  </g>
+  
+  <!-- Bottom Section -->
+  <g transform="translate(0, 750)">
+    <text x="400" y="100" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="900" 
+          font-size="48" 
+          fill="url(#newGradient)">
+      OSOM × CLAUDE CODE
+    </text>
+    
+    <text x="400" y="150" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="400" 
+          font-size="24" 
+          fill="#ffffff" 
+          opacity="0.8">
+      La différence qui change tout
+    </text>
+    
+    <text x="400" y="220" text-anchor="middle" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-weight="600" 
+          font-size="32" 
+          fill="url(#newGradient)">
+      VALAIS
+    </text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <rect x="50" y="700" width="3" height="80" fill="url(#oldGradient)" opacity="0.6"/>
+  <rect x="747" y="650" width="3" height="120" fill="url(#newGradient)" opacity="0.8"/>
+  
+</svg>

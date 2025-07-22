@@ -243,7 +243,6 @@ export default function TrackingDataPage() {
         ]}
         
         finalCtaText="révéler mon roi invisible avec forensics × claude"
-        skipCustomHero={true}
       />
     </div>
   )
