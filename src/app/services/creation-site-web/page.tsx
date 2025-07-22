@@ -2,6 +2,7 @@ import ServicePageTemplatePremium from '@/components/templates/ServicePageTempla
 import RevolutionaryDashboardHero from '@/components/ui/RevolutionaryDashboardHero'
 import TechStackCarousel from '@/components/ui/TechStackCarousel'
 import DeveloperJourneyTimeline from '@/components/ui/DeveloperJourneyTimeline'
+import EngineChoice from '@/components/ui/EngineChoice'
 import { MetricsPulse, ComparisonChart, ProgressMeter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 import Link from 'next/link'
@@ -136,100 +137,11 @@ export default function CreationSiteWebPage() {
         subtitle="Journey révolutionnaire de conception à livraison : UX Psychology + SEO Valais + Performance Beast. 10 jours pour révolutionner votre présence web avec métriques vérifiées."
       />
 
-      {/* SECTION FEATURES */}
-      <section className="py-32 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3" />
-              <span className="text-sm font-medium tracking-wide text-yellow-400">
-                SERVICES DÉTAILLÉS
-              </span>
-            </div>
-            
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight">
-              Stack technique <span className="font-bold text-yellow-400">premium</span> - Création site internet Valais
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Agence web Valais : stack technique création site internet Valais de pointe avec SEO Valais intégré. Technologies modernes maîtrisées par développeurs obsessés par la performance. Spécialistes création site internet Valais, approche fraîche optimisée pour le marché local valaisan.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {[
-              {
-                icon: "⚡",
-                title: "Architecture Next.js 14",
-                description: "Framework React moderne, rendu hybride SSR/SSG, optimisation automatique images et fonts"
-              },
-              {
-                icon: "🚀", 
-                title: "Performance Web Core Vitals",
-                description: "Score 95+ PageSpeed, LCP < 1.5s, CLS optimisé, hébergement CDN Suisse"
-              },
-              {
-                icon: "🎯",
-                title: "SEO Technique Avancé", 
-                description: "Schema markup, sitemap dynamique, meta tags optimisés, internal linking intelligent"
-              },
-              {
-                icon: "📊",
-                title: "Tracking & Analytics Pro",
-                description: "GA4 configuré, événements conversion, attribution multi-touch, ROI transparent"
-              },
-              {
-                icon: "📱",
-                title: "Mobile-First Responsive",
-                description: "Design system Tailwind, animations Framer Motion, touch-friendly interface"
-              },
-              {
-                icon: "🔒",
-                title: "Sécurité & Maintenance",
-                description: "SSL A+, protection DDoS Cloudflare, sauvegardes automatiques, monitoring 24/7"
-              }
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="backdrop-blur-sm border border-white/10 rounded-3xl p-8 relative overflow-hidden bg-gradient-to-br from-white/5 to-black/40 group hover:border-yellow-400/40 transition-all duration-500"
-              >
-                <div className="flex items-start justify-between mb-8">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                      <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
-                        <span className="text-lg text-yellow-400">
-                          {feature.icon}
-                        </span>
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-light text-white mb-2">
-                        {feature.title}
-                      </h3>
-                      <div className="h-1 w-8 bg-yellow-400 rounded-full" />
-                    </div>
-                  </div>
-                </div>
-
-                <p className="text-gray-300 leading-relaxed text-lg mb-6">
-                  {feature.description}
-                </p>
-
-                <div className="pt-6 border-t border-white/10">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full" />
-                      <span className="text-xs text-gray-400 font-medium">Service Premium</span>
-                    </div>
-                    <div className="text-xs font-medium text-yellow-400 flex items-center">
-                      Inclus →
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* POURQUOI CES MOTEURS? - SIMPLIFICATION RÉVOLUTIONNAIRE */}
+      <EngineChoice
+        title="Pourquoi ces"
+        subtitle="Chaque technologie choisie pour une raison précise : votre succès. Explications simples, résultats mesurables."
+      />
 
       {/* SECTION PRICING */}
       <section 
