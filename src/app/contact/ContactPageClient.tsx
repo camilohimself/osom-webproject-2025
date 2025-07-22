@@ -586,472 +586,224 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <motion.h2 
-                  className="mb-8 leading-tight"
+                  className="mb-16 leading-none text-center"
                   style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
                 >
-                  <motion.span 
-                    className="inline-block text-2xl md:text-3xl text-white font-light mr-4"
-                    animate={{
-                      scale: [1, 1.05, 1],
-                      filter: ['hue-rotate(0deg)', 'hue-rotate(10deg)', 'hue-rotate(0deg)']
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: 'easeInOut'
-                    }}
-                  >
-                    Comment
-                  </motion.span>
-                  
-                  <motion.span 
-                    className="inline-block text-6xl md:text-8xl font-black text-yellow-400 mx-2"
-                    style={{
-                      background: 'linear-gradient(135deg, #FFDD00 0%, #ffffff 30%, #00ffff 70%, #FFDD00 100%)',
-                      backgroundSize: '300% 300%',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      color: 'transparent',
-                      filter: 'drop-shadow(0 0 20px rgba(255,221,0,0.6)) drop-shadow(0 0 40px rgba(0,255,255,0.3))',
-                      textShadow: '0 0 30px rgba(255,221,0,0.8)'
-                    }}
-                    animate={{
-                      backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-                      scale: [1, 1.1, 1],
-                      rotate: [0, 2, -2, 0]
-                    }}
-                    transition={{
-                      backgroundPosition: {
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: 'easeInOut'
-                      },
-                      scale: {
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: 'easeInOut'
-                      },
-                      rotate: {
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: 'easeInOut'
-                      }
-                    }}
-                  >
-                    commencer
-                  </motion.span>
-                  
-                  <motion.span 
-                    className="inline-block text-4xl md:text-6xl text-cyan-400 font-extrabold ml-2"
-                    style={{
-                      filter: 'drop-shadow(0 0 15px rgba(0,255,255,0.8))'
-                    }}
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [0.8, 1, 0.8],
-                      y: [0, -5, 0]
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: 1
-                    }}
-                  >
-                    ?
-                  </motion.span>
-                </motion.h2>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                {/* Carte 1: Réserver sur le calendrier */}
-                <motion.div
-                  className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl p-8 hover:border-yellow-400/40 hover:shadow-2xl hover:shadow-yellow-400/10 transition-all duration-500 cursor-pointer group relative overflow-hidden"
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  onClick={() => setShowCalendly(true)}
-                >
-                  {/* Calendar Visual Background */}
-                  <div className="absolute top-4 right-4 opacity-10 pointer-events-none">
-                    <motion.div 
-                      className="w-20 h-20 border border-yellow-400/30 rounded-lg p-2"
-                      animate={{
-                        opacity: [0.1, 0.3, 0.1],
+                  {/* Cascade d'animation avec chaque mot */}
+                  <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+                    <motion.span 
+                      className="text-3xl md:text-5xl text-cyan-400 font-light"
+                      initial={{ opacity: 0, y: -50, rotate: -15 }}
+                      animate={{ 
+                        opacity: 1, 
+                        y: 0, 
+                        rotate: 0,
                         scale: [1, 1.05, 1]
                       }}
                       transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: 'easeInOut'
+                        opacity: { duration: 0.6, delay: 0.2 },
+                        y: { duration: 0.8, delay: 0.2, type: 'spring', stiffness: 100 },
+                        rotate: { duration: 0.8, delay: 0.2 },
+                        scale: { 
+                          duration: 4, 
+                          repeat: Infinity, 
+                          ease: 'easeInOut',
+                          delay: 2
+                        }
                       }}
                     >
-                      {/* Calendar Header */}
-                      <div className="bg-yellow-400/20 h-3 rounded-t mb-1"></div>
-                      {/* Calendar Grid */}
-                      <div className="grid grid-cols-3 gap-1">
-                        {[...Array(9)].map((_, i) => (
-                          <motion.div
-                            key={i}
-                            className={`w-2 h-2 rounded-sm ${
-                              i === 4 ? 'bg-green-500' : 'bg-yellow-400/40'
-                            }`}
-                            animate={i === 4 ? {
-                              scale: [1, 1.3, 1],
-                              opacity: [0.5, 1, 0.5]
-                            } : {}}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                              delay: i * 0.1
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  <div className="text-center relative z-10">
-                    {/* Animated Calendar Icon */}
-                    <motion.div 
-                      className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 relative overflow-hidden shadow-xl"
-                      whileHover={{
-                        boxShadow: '0 20px 40px rgba(255,221,0,0.4)'
-                      }}
-                    >
-                      {/* Calendar Animation */}
-                      <div className="relative">
-                        {/* Calendar base */}
-                        <div className="w-10 h-10 bg-black rounded-lg relative">
-                          {/* Calendar header */}
-                          <div className="h-2 bg-yellow-400 rounded-t-lg"></div>
-                          {/* Calendar grid */}
-                          <div className="p-1 pt-2">
-                            <div className="grid grid-cols-3 gap-0.5">
-                              {[...Array(9)].map((_, i) => (
-                                <motion.div
-                                  key={i}
-                                  className={`w-1 h-1 rounded-xs ${
-                                    i === 4 ? 'bg-green-400' : 'bg-gray-600'
-                                  }`}
-                                  animate={i === 4 ? {
-                                    backgroundColor: ['#4ade80', '#10b981', '#4ade80'],
-                                    scale: [1, 1.2, 1]
-                                  } : {}}
-                                  transition={{
-                                    duration: 2,
-                                    repeat: Infinity,
-                                    delay: i * 0.1
-                                  }}
-                                />
-                              ))}
-                            </div>
-                          </div>
-                          {/* Checkmark animation */}
-                          <motion.div
-                            className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center text-black text-xs font-bold"
-                            animate={{
-                              scale: [0, 1.2, 1],
-                              opacity: [0, 1, 1]
-                            }}
-                            transition={{
-                              duration: 1,
-                              repeat: Infinity,
-                              repeatDelay: 3
-                            }}
-                          >
-                            ✓
-                          </motion.div>
-                        </div>
-                      </div>
-                    </motion.div>
+                      c'est
+                    </motion.span>
                     
-                    <h3 className="text-xl font-semibold text-white mb-3">Réserver sur le calendrier</h3>
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                      <strong className="text-yellow-400">Cliquez sur une date</strong> pour réserver un concert, récital ou direction chorale. 
-                      <span className="block mt-1 text-gray-400">Visualisez les créneaux disponibles en temps réel.</span>
-                    </p>
-                    <motion.div 
-                      className="bg-yellow-400 text-black font-bold text-sm px-4 py-2 rounded-full inline-flex items-center gap-2"
-                      whileHover={{ scale: 1.05 }}
+                    <motion.span 
+                      className="text-6xl md:text-9xl font-black text-yellow-400"
+                      style={{
+                        background: 'linear-gradient(135deg, #FFDD00 0%, #ffffff 40%, #00ffff 80%, #FFDD00 100%)',
+                        backgroundSize: '400% 400%',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        color: 'transparent',
+                        filter: 'drop-shadow(0 0 30px rgba(255,221,0,0.7)) drop-shadow(0 0 50px rgba(0,255,255,0.4))',
+                      }}
+                      initial={{ opacity: 0, y: 50, scale: 0.5 }}
+                      animate={{ 
+                        opacity: 1, 
+                        y: 0, 
+                        scale: 1,
+                        backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+                      }}
+                      transition={{
+                        opacity: { duration: 0.6, delay: 0.6 },
+                        y: { duration: 1, delay: 0.6, type: 'spring', stiffness: 80 },
+                        scale: { duration: 1, delay: 0.6, type: 'spring', stiffness: 120 },
+                        backgroundPosition: {
+                          duration: 5,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                          delay: 1.5
+                        }
+                      }}
                     >
-                      📅 Voir le calendrier
+                      quoi
+                    </motion.span>
+                    
+                    <motion.span 
+                      className="text-4xl md:text-6xl text-purple-400 font-bold"
+                      initial={{ opacity: 0, x: -50, rotate: 15 }}
+                      animate={{ 
+                        opacity: 1, 
+                        x: 0, 
+                        rotate: 0,
+                        y: [0, -10, 0]
+                      }}
+                      transition={{
+                        opacity: { duration: 0.6, delay: 1.0 },
+                        x: { duration: 0.8, delay: 1.0, type: 'spring', stiffness: 100 },
+                        rotate: { duration: 0.8, delay: 1.0 },
+                        y: {
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                          delay: 2.5
+                        }
+                      }}
+                    >
+                      comment
+                    </motion.span>
+                  </div>
+                  
+                  <motion.div className="mt-6">
+                    <motion.span 
+                      className="text-5xl md:text-7xl text-white font-extrabold"
+                      style={{
+                        filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.6))'
+                      }}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ 
+                        opacity: 1, 
+                        scale: 1,
+                        rotate: [0, 5, -5, 0]
+                      }}
+                      transition={{
+                        opacity: { duration: 0.6, delay: 1.4 },
+                        scale: { duration: 1, delay: 1.4, type: 'spring', stiffness: 150, damping: 8 },
+                        rotate: {
+                          duration: 6,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                          delay: 3
+                        }
+                      }}
+                    >
+                      ici ?
+                    </motion.span>
+                  </motion.div>
+                </motion.h2>
+              </div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                {/* Carte 1: Réserver sur le calendrier - MINIMALISME TOTAL */}
+                <motion.div
+                  className="bg-yellow-400/5 border border-yellow-400/30 rounded-2xl p-12 hover:bg-yellow-400/10 hover:border-yellow-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
+                  whileHover={{ scale: 1.01, y: -8 }}
+                  onClick={() => setShowCalendly(true)}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.6 }}
+                >
+                  <div className="flex-1 flex flex-col justify-center text-center">
+                    <motion.h3 
+                      className="text-3xl font-light text-white mb-6 leading-tight"
+                      style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
+                    >
+                      Réserver sur le calendrier
+                    </motion.h3>
+                    
+                    <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
+                      Cliquez sur une date pour réserver un concert, récital ou direction chorale. 
+                      Visualisez les créneaux disponibles en temps réel.
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <motion.div 
+                      className="text-yellow-400 font-semibold text-lg tracking-wide uppercase"
+                      whileHover={{ scale: 1.02 }}
+                      style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
+                    >
+                      Voir le calendrier
                     </motion.div>
                   </div>
                 </motion.div>
                 
-                {/* Carte 2: Contact par email */}
+                {/* Carte 2: Contact par email - MINIMALISME TOTAL */}
                 <motion.div
-                  className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl p-8 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/10 transition-all duration-500 cursor-pointer group relative overflow-hidden"
-                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="bg-cyan-400/5 border border-cyan-400/30 rounded-2xl p-12 hover:bg-cyan-400/10 hover:border-cyan-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
+                  whileHover={{ scale: 1.01, y: -8 }}
                   onClick={() => window.location.href = 'mailto:contact@osom.ch?subject=Consultation stratégie digitale&body=Bonjour OSOM,%0D%0A%0D%0AJe souhaite discuter de mon projet...'}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                  {/* Email Visual Background */}
-                  <div className="absolute top-4 right-4 opacity-15 pointer-events-none">
-                    <motion.div className="text-cyan-400 text-2xl">
-                      {['✉️', '📧', '✈️'].map((emoji, i) => (
-                        <motion.div
-                          key={i}
-                          className="absolute"
-                          style={{
-                            left: `${i * 15}px`,
-                            top: `${i * -10}px`
-                          }}
-                          animate={{
-                            y: [0, -20, 0],
-                            opacity: [0.2, 0.6, 0.2],
-                            rotate: [0, 10, 0]
-                          }}
-                          transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            delay: i * 0.8,
-                            ease: 'easeInOut'
-                          }}
-                        >
-                          {emoji}
-                        </motion.div>
-                      ))}
-                    </motion.div>
-                  </div>
-
-                  <div className="text-center relative z-10">
-                    {/* Animated Email Icon */}
-                    <motion.div 
-                      className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 relative overflow-hidden shadow-xl"
-                      whileHover={{
-                        boxShadow: '0 20px 40px rgba(0,255,255,0.4)'
-                      }}
+                  <div className="flex-1 flex flex-col justify-center text-center">
+                    <motion.h3 
+                      className="text-3xl font-light text-white mb-6 leading-tight"
+                      style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      {/* Envelope Container */}
-                      <div className="relative">
-                        {/* Envelope Base */}
-                        <motion.div 
-                          className="w-12 h-8 bg-black rounded-lg relative overflow-hidden"
-                          animate={{
-                            scale: [1, 1.05, 1]
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: 'easeInOut'
-                          }}
-                        >
-                          {/* Envelope Flap */}
-                          <motion.div
-                            className="absolute top-0 left-0 w-full h-4 bg-gray-700"
-                            style={{
-                              clipPath: 'polygon(0 0, 100% 0, 50% 100%)'
-                            }}
-                            animate={{
-                              rotateX: [0, -30, 0]
-                            }}
-                            transition={{
-                              duration: 3,
-                              repeat: Infinity,
-                              ease: 'easeInOut'
-                            }}
-                          />
-                          
-                          {/* Letter Inside */}
-                          <motion.div
-                            className="absolute bottom-1 left-1 right-1 h-5 bg-white rounded-sm opacity-90 flex items-center justify-center"
-                            animate={{
-                              y: [0, -2, 0],
-                              opacity: [0.9, 1, 0.9]
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: Infinity,
-                              ease: 'easeInOut'
-                            }}
-                          >
-                            <div className="text-black text-xs font-bold">📧</div>
-                          </motion.div>
-                        </motion.div>
-                        
-                        {/* Send Animation */}
-                        <motion.div
-                          className="absolute -top-2 -right-2 text-cyan-300 text-xl"
-                          animate={{
-                            x: [0, 10, 0],
-                            y: [0, -10, 0],
-                            opacity: [0, 1, 0],
-                            scale: [0.5, 1.2, 0.5]
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: 'easeOut',
-                            repeatDelay: 2
-                          }}
-                        >
-                          ✈️
-                        </motion.div>
-                      </div>
-                    </motion.div>
+                      Contact par email
+                    </motion.h3>
                     
-                    <h3 className="text-xl font-semibold text-white mb-3">Contact par email</h3>
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                      <strong className="text-cyan-400">Votre message part instantanément</strong> pour formations, masterclasses et cours particuliers.
-                      <span className="block mt-1 text-gray-400">Réponse garantie sous 48h.</span>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
+                      Votre message part instantanément pour formations, masterclasses et cours particuliers.
+                      Réponse garantie sous 48h.
                     </p>
+                  </div>
+                  
+                  <div className="text-center">
                     <motion.div 
-                      className="bg-cyan-400 text-black font-bold text-sm px-4 py-2 rounded-full inline-flex items-center gap-2"
-                      whileHover={{ scale: 1.05 }}
+                      className="text-cyan-400 font-semibold text-lg tracking-wide uppercase"
+                      whileHover={{ scale: 1.02 }}
+                      style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      ✉️ Envoyer un email
+                      Envoyer un email
                     </motion.div>
                   </div>
                 </motion.div>
                 
-                {/* Carte 3: Diagnostic automatique - Questionnaire intelligent */}
+                {/* Carte 3: Diagnostic automatique - MINIMALISME TOTAL */}
                 <motion.div
-                  className="backdrop-blur-sm border border-purple-400/20 rounded-3xl p-8 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 cursor-pointer group relative overflow-hidden"
-                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="bg-purple-400/5 border border-purple-400/30 rounded-2xl p-12 hover:bg-purple-400/10 hover:border-purple-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
+                  whileHover={{ scale: 1.01, y: -8 }}
                   onClick={() => window.open('/questionnaire', '_blank')}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
                 >
-                  {/* AI Background Animation */}
-                  <div className="absolute top-4 right-4 opacity-10 pointer-events-none">
-                    <motion.div className="text-purple-400 text-xs font-mono">
-                      {['🤖', '📋', '📅', '📊'].map((icon, i) => (
-                        <motion.div
-                          key={i}
-                          className="absolute"
-                          style={{
-                            left: `${i * 12}px`,
-                            top: `${i * -8}px`
-                          }}
-                          animate={{
-                            opacity: [0.1, 0.6, 0.1],
-                            scale: [0.8, 1.2, 0.8],
-                            rotate: [0, 360, 0]
-                          }}
-                          transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            delay: i * 0.5,
-                            ease: 'easeInOut'
-                          }}
-                        >
-                          {icon}
-                        </motion.div>
-                      ))}
-                    </motion.div>
-                  </div>
-
-                  <div className="text-center relative z-10">
-                    {/* Animated AI/Questionnaire Icon */}
-                    <motion.div 
-                      className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 relative overflow-hidden shadow-xl"
-                      whileHover={{
-                        boxShadow: '0 20px 40px rgba(168,85,247,0.4)'
-                      }}
+                  <div className="flex-1 flex flex-col justify-center text-center">
+                    <motion.h3 
+                      className="text-3xl font-light text-white mb-6 leading-tight"
+                      style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      {/* Questionnaire Visual */}
-                      <div className="relative">
-                        {/* Main Questionnaire Container */}
-                        <motion.div 
-                          className="w-12 h-14 bg-black rounded-lg p-1 relative"
-                          animate={{
-                            scale: [1, 1.02, 1]
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: 'easeInOut'
-                          }}
-                        >
-                          {/* Header with AI icon */}
-                          <motion.div
-                            className="h-2 bg-purple-300 rounded-t flex items-center justify-center relative mb-1"
-                            animate={{
-                              backgroundColor: ['#c084fc', '#a855f7', '#c084fc']
-                            }}
-                            transition={{
-                              duration: 3,
-                              repeat: Infinity,
-                              ease: 'easeInOut'
-                            }}
-                          >
-                            <div className="text-black text-xs">🤖</div>
-                          </motion.div>
-                          
-                          {/* Progress Bar */}
-                          <div className="h-0.5 bg-gray-700 mb-1 relative overflow-hidden">
-                            <motion.div
-                              className="h-full bg-green-400"
-                              animate={{
-                                width: ['20%', '60%', '20%']
-                              }}
-                              transition={{
-                                duration: 4,
-                                repeat: Infinity,
-                                ease: 'easeInOut'
-                              }}
-                            />
-                          </div>
-                          
-                          {/* Questions List */}
-                          <div className="space-y-0.5">
-                            {[0, 1, 2].map((i) => (
-                              <motion.div
-                                key={i}
-                                className="flex items-center gap-1"
-                                animate={{
-                                  opacity: i <= 1 ? [0.4, 1, 0.4] : [0.2, 0.4, 0.2]
-                                }}
-                                transition={{
-                                  duration: 2,
-                                  repeat: Infinity,
-                                  delay: i * 0.3,
-                                  ease: 'easeInOut'
-                                }}
-                              >
-                                <div className={`w-1 h-1 rounded-full ${
-                                  i === 0 ? 'bg-green-400' : i === 1 ? 'bg-yellow-400' : 'bg-gray-600'
-                                }`} />
-                                <div className="flex-1 h-0.5 bg-gray-600 rounded" />
-                              </motion.div>
-                            ))}
-                          </div>
-                        </motion.div>
-                        
-                        {/* AI Brain Animation */}
-                        <motion.div
-                          className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center text-white text-xs"
-                          animate={{
-                            scale: [1, 1.3, 1],
-                            rotate: [0, 180, 360],
-                            boxShadow: [
-                              '0 0 10px rgba(168,85,247,0.5)',
-                              '0 0 20px rgba(168,85,247,0.8)',
-                              '0 0 10px rgba(168,85,247,0.5)'
-                            ]
-                          }}
-                          transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            ease: 'easeInOut'
-                          }}
-                        >
-                          🧠
-                        </motion.div>
-                      </div>
-                    </motion.div>
+                      Questionnaire automatique
+                    </motion.h3>
                     
-                    <h3 className="text-xl font-semibold text-white mb-3">Questionnaire automatique</h3>
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                      <strong className="text-purple-400">🧠 INTELLIGENCE ARTIFICIELLE</strong> qui analyse vos besoins en 3 minutes.
-                      <span className="block mt-1 text-gray-400">Recommandations personnalisées et devis automatique !</span>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
+                      Intelligence artificielle qui analyse vos besoins en 3 minutes.
+                      Recommandations personnalisées et devis automatique.
                     </p>
+                  </div>
+                  
+                  <div className="text-center">
                     <motion.div 
-                      className="bg-purple-400 text-black font-bold text-sm px-4 py-2 rounded-full inline-flex items-center gap-2"
-                      whileHover={{ scale: 1.05 }}
+                      className="text-purple-400 font-semibold text-lg tracking-wide uppercase"
+                      whileHover={{ scale: 1.02 }}
+                      style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      🚀 Démarrer le diagnostic
+                      Démarrer le diagnostic
                     </motion.div>
                   </div>
                 </motion.div>
