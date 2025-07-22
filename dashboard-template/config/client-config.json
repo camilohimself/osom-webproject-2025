@@ -1,0 +1,40 @@
+{
+  "client": {
+    "name": "Culture Peinture",
+    "domain": "culturepeinture.com",
+    "industry": "Formation artistique",
+    "period": "Jan - Jul 2025",
+    "site_launch_date": "2025-03-31"
+  },
+  "branding": {
+    "primary_color": "#ffd507",
+    "secondary_color": "#70c1a9", 
+    "accent_color": "#27ae60",
+    "logo_path": "assets/images/client-logo.svg",
+    "favicon_path": "assets/images/favicon.ico"
+  },
+  "language": {
+    "tone": "friendly",
+    "technical_level": "accessible",
+    "currency": "CHF",
+    "locale": "fr-CH"
+  },
+  "sections": {
+    "tldr": true,
+    "kpis": true,
+    "attribution": true,
+    "funnel": true,
+    "audit": true,
+    "tracking": true,
+    "charts": true,
+    "insights": true,
+    "actions": true,
+    "cta": true
+  },
+  "customizations": {
+    "hide_technical_details": true,
+    "positive_language_only": true,
+    "simplified_metrics": true,
+    "client_friendly_colors": true
+  }
+}

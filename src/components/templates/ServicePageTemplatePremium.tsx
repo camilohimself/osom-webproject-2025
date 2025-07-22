@@ -67,6 +67,13 @@ interface ServicePageTemplatePremiumProps {
   pricingFeatures: string[]
   finalCtaText: string
   
+  // FAQ section (optional)
+  faqTitle?: string
+  faqItems?: Array<{
+    question: string
+    answer: string
+  }>
+  
   // Optional background pattern
   backgroundPattern?: string
 }
@@ -86,6 +93,8 @@ export default function ServicePageTemplatePremium({
   featuresTitle,
   featuresDescription,
   features,
+  faqTitle,
+  faqItems,
   pricingTitle,
   price,
   pricingDescription,
@@ -95,6 +104,7 @@ export default function ServicePageTemplatePremium({
 }: ServicePageTemplatePremiumProps) {
   const colorValue = SERVICE_COLORS[color]
   const [hoveredMetric, setHoveredMetric] = useState<string | null>(null)
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   // Premium animation variants (matching HeroPremium)
   const containerVariants = {
@@ -721,6 +731,115 @@ export default function ServicePageTemplatePremium({
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {faqTitle && faqItems && faqItems.length > 0 && (
+        <section className="py-24 bg-gradient-to-br from-white/5 via-black to-white/5">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex items-center justify-center mb-4">
+                <motion.div 
+                  className="w-2 h-2 rounded-full mr-3" 
+                  style={{ backgroundColor: colorValue }}
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                <span 
+                  className="text-sm font-medium tracking-wide" 
+                  style={{ color: colorValue }}
+                >
+                  QUESTIONS FRÉQUENTES
+                </span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                {faqTitle.split(' ').map((word, index) => 
+                  word.includes('FAQ') || word.includes('Questions') || word.includes('Réponses') ? (
+                    <motion.span 
+                      key={index} 
+                      style={{ color: colorValue }}
+                      className="font-bold"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      {word}{' '}
+                    </motion.span>
+                  ) : (
+                    <span key={index}>{word} </span>
+                  )
+                )}
+              </h2>
+            </motion.div>
+
+            <div className="space-y-4">
+              {faqItems.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  className="backdrop-blur-sm border rounded-2xl overflow-hidden bg-gradient-to-br from-white/5 to-black/40"
+                  style={{ borderColor: 'rgba(255,255,255,0.1)' }}
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ 
+                    borderColor: `${colorValue}40`,
+                    boxShadow: `0 10px 20px ${colorValue}10`
+                  }}
+                >
+                  <motion.button
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                    onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                    whileTap={{ scale: 0.99 }}
+                  >
+                    <h3 className="text-lg font-semibold text-white pr-4">
+                      {faq.question}
+                    </h3>
+                    <motion.div
+                      animate={{ rotate: openFaqIndex === index ? 45 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex-shrink-0"
+                    >
+                      <div 
+                        className="w-6 h-6 rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: colorValue }}
+                      >
+                        <span 
+                          className="text-lg font-bold"
+                          style={{ color: color === 'yellow' ? '#000' : '#fff' }}
+                        >
+                          +
+                        </span>
+                      </div>
+                    </motion.div>
+                  </motion.button>
+                  
+                  <motion.div
+                    initial={false}
+                    animate={{ 
+                      height: openFaqIndex === index ? 'auto' : 0,
+                      opacity: openFaqIndex === index ? 1 : 0
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-8 pb-6 text-gray-300 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Enhanced Pricing & Final CTA */}
       <section 

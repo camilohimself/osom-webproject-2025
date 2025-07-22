@@ -1,0 +1,43 @@
+{
+  "csv_columns": {
+    "sessions": ["Sessions", "sessions", "Sessions totales"],
+    "users": ["Users", "users", "Utilisateurs"],
+    "conversions": ["Conversions", "conversions", "Goal Completions"],
+    "revenue": ["Revenue", "revenus", "Purchase Revenue Value"],
+    "source": ["Source", "source", "Default Channel Grouping"],
+    "medium": ["Medium", "medium", "Source / Medium"],
+    "campaign": ["Campaign", "campaign", "Campaign Name"],
+    "date": ["Date", "date", "Day Index"]
+  },
+  "calculated_metrics": {
+    "conversion_rate": {
+      "formula": "conversions / sessions * 100",
+      "format": "percentage"
+    },
+    "revenue_per_session": {
+      "formula": "revenue / sessions",
+      "format": "currency"
+    },
+    "average_order_value": {
+      "formula": "revenue / conversions",
+      "format": "currency"
+    },
+    "roi_comparison": {
+      "formula": "channel_conversions / best_channel_conversions",
+      "format": "multiplier"
+    }
+  },
+  "channel_mapping": {
+    "organic_social": ["Organic Social", "Instagram", "Facebook", "Social"],
+    "direct": ["Direct", "(direct)", "direct"],
+    "email": ["Email", "email", "Newsletter"],
+    "paid_social": ["Paid Social", "facebook", "instagram", "Meta"],
+    "paid_search": ["Paid Search", "google", "Google Ads", "CPC"],
+    "referral": ["Referral", "referral", "Other websites"]
+  },
+  "data_validation": {
+    "required_fields": ["sessions", "source"],
+    "numeric_fields": ["sessions", "users", "conversions", "revenue"],
+    "date_format": "YYYY-MM-DD"
+  }
+}
