@@ -19,7 +19,7 @@ export default async function Page() {
   },
   {
     name: 'React 18',
-    icon: '⚛️', 
+    icon: '◯', 
     color: '#61DAFB',
     description: 'Concurrent Features + Suspense',
     code: `// React 18 Concurrent Features
@@ -47,7 +47,7 @@ interface OsomMetrics {
   },
   {
     name: 'Tailwind CSS',
-    icon: '🎨',
+    icon: '■',
     color: '#06B6D4',
     description: 'Utility-First Styling',
     code: `// Tailwind Responsive Design
@@ -61,7 +61,7 @@ interface OsomMetrics {
   },
   {
     name: 'Framer Motion',
-    icon: '🎯',
+    icon: '◆',
     color: '#0055FF', 
     description: 'Production-Ready Animations',
     code: `// Smooth Animations
@@ -74,7 +74,7 @@ interface OsomMetrics {
   },
   {
     name: 'Claude IA',
-    icon: '🤖',
+    icon: '◆',
     color: '#ff6b35',
     description: 'Marketing Humain × IA',
     code: `// Claude Integration
@@ -154,7 +154,7 @@ export default function TechStackCarousel({
             onMouseLeave={() => setIsAutoPlaying(true)}
           >
             <h3 className="text-2xl font-bold text-white mb-8">
-              🚀 Stack Technique Premium
+              ▲ Stack Technique Premium
             </h3>
             
             {techStack.map((tech, index) => (
@@ -313,8 +313,8 @@ export default function TechStackCarousel({
                   </div>
                   <div className="text-green-300 text-xs font-mono">
                     ✅ {activeTech.name} integration successful<br/>
-                    🚀 Performance optimized for OSOM standards<br/>
-                    📊 Ready for 11.3% conversion rate
+                    ▲ Performance optimized for OSOM standards<br/>
+                    ▦ Ready for 11.3% conversion rate
                   </div>
                 </motion.div>
               </div>
@@ -333,7 +333,7 @@ export default function TechStackCarousel({
                 ease: "easeInOut" 
               }}
             >
-              🏆 140x PERFORMANCE
+              ★ 140x PERFORMANCE
             </motion.div>
           </motion.div>
         </div>

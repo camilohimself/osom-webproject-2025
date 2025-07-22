@@ -44,7 +44,7 @@ const journeySteps = [
       after: { conversion: '11.3%', ux: 'Revolutionary', performance: '95/100' }
     },
     
-    icon: '🎨',
+    icon: '◆',
     color: '#06B6D4', // Cyan
     completionTime: '2-3 jours'
   },
@@ -82,7 +82,7 @@ const journeySteps = [
       after: { ranking: 'Page 1-3', clicks: '400+/mois', visibility: '85%' }
     },
     
-    icon: '📊',
+    icon: '▦',
     color: '#10B981', // Green
     completionTime: '3-4 jours'
   },
@@ -125,7 +125,7 @@ export default async function Page() {
       after: { loading: '<0.8s', lighthouse: '95/100', mobile: 'Ultra-rapide' }
     },
     
-    icon: '⚡',
+    icon: '▲',
     color: '#F59E0B', // Yellow
     completionTime: '4-5 jours'
   }
@@ -340,7 +340,7 @@ export default function DeveloperJourneyTimeline({
                         animate={{ opacity: [0.7, 1, 0.7] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       >
-                        ⏱️ {step.completionTime}
+                        {step.completionTime}
                       </motion.div>
                       
                       <motion.div
@@ -413,7 +413,7 @@ export default function DeveloperJourneyTimeline({
         >
           <div className="bg-gradient-to-r from-yellow-400/10 via-yellow-400/20 to-yellow-400/10 rounded-3xl p-12 border border-yellow-400/30">
             <h3 className="text-3xl font-bold text-white mb-6">
-              🚀 Votre Projet Web VALAIS en <span className="text-yellow-400">10 Jours</span>
+              Votre Projet Web VALAIS en <span className="text-yellow-400">10 Jours</span>
             </h3>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
               Architecture révolutionnaire + Performance 140x + SEO local maîtrisé = 

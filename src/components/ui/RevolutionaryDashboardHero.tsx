@@ -7,11 +7,11 @@ import AnimatedCounter from './AnimatedCounter'
 // Tech Stack Icons (using text for now, can be replaced with actual icons later)
 const techIcons = [
   { name: 'Next.js', icon: '▲', color: '#000' },
-  { name: 'React', icon: '⚛️', color: '#61DAFB' },
+  { name: 'React', icon: '◯', color: '#61DAFB' },
   { name: 'TypeScript', icon: 'TS', color: '#3178C6' },
-  { name: 'Tailwind', icon: '🎨', color: '#06B6D4' },
-  { name: 'Framer', icon: '🎯', color: '#0055FF' },
-  { name: 'GA4', icon: '📊', color: '#4285F4' }
+  { name: 'Tailwind', icon: '■', color: '#06B6D4' },
+  { name: 'Framer', icon: '◆', color: '#0055FF' },
+  { name: 'GA4', icon: '▦', color: '#4285F4' }
 ]
 
 // Code snippets that will type out
