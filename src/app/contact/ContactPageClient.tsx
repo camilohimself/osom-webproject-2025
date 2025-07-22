@@ -125,9 +125,13 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
             </div>
           </motion.section>
 
-
-
-            
+          {/* Funnel Section */}
+          <motion.section 
+            className="mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4, duration: 0.8 }}
+          >
             <div className="relative max-w-2xl mx-auto">
               {/* Funnel Visual Container */}
               <motion.div 
@@ -331,14 +335,14 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
                   >
-                    <div
+                    <motion.div
                       className="h-96 rounded-2xl overflow-hidden bg-white"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5 }}
                     >
                       <div id="calendly-inline-widget" className="w-full h-full"></div>
-                    </div>
+                    </motion.div>
                   </motion.div>
                 ) : (
                   <motion.div
