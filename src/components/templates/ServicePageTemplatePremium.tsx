@@ -233,7 +233,7 @@ export default function ServicePageTemplatePremium({
             
             {/* Premium Title with Word-by-Word Animation */}
             <motion.h1 
-              className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight tracking-tight" 
+              className="text-5xl md:text-7xl font-bold lowercase text-white mb-8 leading-tight tracking-tight" 
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               variants={titleVariants}
               transition={{ duration: 1, ease: [0.25, 0.25, 0.25, 0.75] }}

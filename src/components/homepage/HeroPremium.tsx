@@ -169,7 +169,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
             
             {/* Main Title with staggered animation */}
             <motion.h1 
-              className="text-5xl md:text-6xl font-light text-white mb-8 leading-tight" 
+              className="text-5xl md:text-6xl font-bold lowercase text-white mb-8 leading-tight" 
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               variants={titleVariants}
               transition={{ duration: 1, ease: [0.25, 0.25, 0.25, 0.75] }}
