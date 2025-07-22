@@ -1,4 +1,6 @@
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
+import SEORadarScanner from '@/components/ui/SEORadarScanner'
+import SEOForensicsLab from '@/components/ui/SEOForensicsLab'
 import { ComparisonChart, ProgressMeter, ROIVisualization, AssetValueCounter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
@@ -73,7 +75,47 @@ export default function SEOContentMarketingPage() {
   )
 
   return (
-    <ServicePageTemplatePremium
+    <div className="min-h-screen bg-black">
+      {/* HÉRO RÉVOLUTIONNAIRE SEO RADAR SCANNER */}
+      <SEORadarScanner
+        title="SEO RADAR Scanner VALAIS"
+        subtitle="Expert SEO N°1"
+        description="Révolutionnaire système radar détecte les mots-clés invisibles de vos concurrents. 772 recherches/mois 'SEO Valais' confirment notre expertise N°1. Nouveaux sur le marché mais obsédés par les résultats techniques."
+        metrics={[
+          {
+            value: "397x",
+            label: "Potentiel Révélé",
+            description: "vs concurrents VALAIS",
+            animatedValue: 397,
+            suffix: "x"
+          },
+          {
+            value: "68.6%",
+            label: "Engagement SEO",
+            description: "vs 44.6% direct",
+            animatedValue: 68.6,
+            suffix: "%"
+          },
+          {
+            value: "22",
+            label: "Keywords Manqués",
+            description: "opportunités cachées",
+            animatedValue: 22
+          }
+        ]}
+        ctaText="Scanner gratuit"
+        color="#06B6D4"
+      />
+
+      {/* LABORATOIRE FORENSICS SEO */}
+      <SEOForensicsLab
+        title="SEO Forensics"
+        subtitle="Laboratoire d'analyse concurrentielle révolutionnaire"
+        description="Notre laboratoire forensique décortique techniquement la concurrence. Révèle les secrets invisibles, faiblesses exploitables, opportunités cachées. Diagnostic 150+ points sans accès vos analytics."
+      />
+
+      {/* TEMPLATE PREMIUM POUR LE RESTE */}
+      <ServicePageTemplatePremium
       title="SEO & Content Marketing VALAIS"
       subtitle="Agence Marketing VALAIS"
       heroDescription="Nouveaux sur le marché SEO VALAIS, mais obsessés par les résultats. Diagnostic technique avancé révèle les gaps invisibles. 68.6% engagement dès Artisane de Lumière, notre 3ème client."
@@ -197,5 +239,6 @@ export default function SEOContentMarketingPage() {
       
       finalCtaText="audit seo technique gratuit"
     />
+    </div>
   )
 }
