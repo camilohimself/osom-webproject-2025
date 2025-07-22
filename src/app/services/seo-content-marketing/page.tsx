@@ -1,6 +1,7 @@
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import SEORadarScanner from '@/components/ui/SEORadarScanner'
 import SEOForensicsLab from '@/components/ui/SEOForensicsLab'
+import SEOIntelligenceDashboard from '@/components/ui/SEOIntelligenceDashboard'
 import { ComparisonChart, ProgressMeter, ROIVisualization, AssetValueCounter } from '@/components/charts'
 import { GraphiqueLinear } from '@/components/ui'
 
@@ -114,50 +115,37 @@ export default function SEOContentMarketingPage() {
         description="Notre laboratoire forensique décortique techniquement la concurrence. Révèle les secrets invisibles, faiblesses exploitables, opportunités cachées. Diagnostic 150+ points sans accès vos analytics."
       />
 
-      {/* TEMPLATE PREMIUM POUR LE RESTE */}
-      <ServicePageTemplatePremium
-      title="SEO & Content Marketing VALAIS"
-      subtitle="Agence Marketing VALAIS"
-      heroDescription="Nouveaux sur le marché SEO VALAIS, mais obsessés par les résultats. Diagnostic technique avancé révèle les gaps invisibles. 68.6% engagement dès Artisane de Lumière, notre 3ème client."
-      color="cyan"
-      heroMetrics={[
-        {
-          value: "397x",
-          label: "Potentiel VALAIS Révélé",
-          description: "vs concurrents marché local"
-        },
-        {
-          value: "68.6%",
-          label: "Engagement SEO VALAIS",
-          description: "vs 44.6% trafic direct"
-        },
-        {
-          value: "22",
-          label: "Mots-Clés VALAIS Manqués", 
-          description: "Opportunités locales cachées"
-        }
-      ]}
-      ctaText="Audit SEO gratuit"
-      
-      methodTitle="diagnostic technique obsessionnel"
-      methodDescription="Approche technique moderne pour débusquer les opportunités cachées. Audit externe poussé sans accès GA4/GSC. Jeunes, méthodiques, acharnés. Résultats dès les premiers clients : Artisane de Lumière position 21 → page 1 en 6 mois. Pas d'expérience de masse, mais expertise technique solide et motivation de fer."
-      processSteps={[
-        {
-          number: "01",
-          title: "audit externe technique",
-          description: "Analyse complète sans accès GA4/GSC via outils avancés (SEMrush, Ahrefs, Screaming Frog). Révèle gaps invisibles même pour le client. Méthode rigoureuse 150+ checkpoints techniques."
-        },
-        {
-          number: "02",
-          title: "benchmarking concurrentiel poussé", 
-          description: "Analyse technique des 10 premiers concurrents : backlinks, mots-clés, content gaps, vitesse, structure. Identification opportunités précises pour dépasser leaders locaux."
-        },
-        {
-          number: "03",
-          title: "stratégie mots-clés data-driven",
-          description: "Recherche exhaustive : 500+ keywords analysés, volume/difficulté/intent. Prédiction ROI par keyword. Plan d'attaque précis pour dominer niches rentables."
-        }
-      ]}
+      {/* INTELLIGENCE DASHBOARD */}
+      <SEOIntelligenceDashboard
+        title="SEO Process"
+        subtitle="Processus technique obsessionnel × Intelligence dashboard temps réel. 3 étapes révolutionnaires pour débusquer les 22 opportunités cachées. Case study Gérance Swiss : potentiel 397x révélé."
+      />
+
+      {/* TEMPLATE PREMIUM POUR LE RESTE - START DEPUIS PROOF */}
+      <div className="bg-black">
+        <ServicePageTemplatePremium
+        title="Preuves SEO" 
+        subtitle="Mesures"
+        heroDescription="Case studies réels avec GA4"
+        color="cyan"
+        heroMetrics={[
+          {
+            value: "397x",
+            label: "Potentiel Révélé",
+            description: "Gérance Swiss audit"
+          }
+        ]}
+        ctaText="Audit gratuit"
+        
+        methodTitle="Méthodes avancées"
+        methodDescription="Outils pro maîtrisés."
+        processSteps={[
+          {
+            number: "01",
+            title: "Audit technique",
+            description: "150+ checkpoints"
+          }
+        ]}
       
       proofTitle="preuves techniques mesurables"
       proofContent={proofContent}
@@ -239,6 +227,7 @@ export default function SEOContentMarketingPage() {
       
       finalCtaText="audit seo technique gratuit"
     />
+      </div>
     </div>
   )
 }
