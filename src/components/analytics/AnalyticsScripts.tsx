@@ -6,8 +6,18 @@ import { initAnalytics, GA_TRACKING_ID, HOTJAR_ID } from '@/lib/analytics'
 
 const AnalyticsScripts = () => {
   useEffect(() => {
-    // Initialize analytics after scripts load
-    initAnalytics();
+    // Wait for gtag to be available before initializing analytics
+    const checkGtagAvailability = () => {
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        initAnalytics();
+      } else {
+        // Retry after 100ms if gtag is not ready
+        setTimeout(checkGtagAvailability, 100);
+      }
+    };
+
+    // Start checking after a small delay to let scripts load
+    setTimeout(checkGtagAvailability, 200);
   }, []);
 
   return (

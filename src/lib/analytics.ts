@@ -24,7 +24,7 @@ interface AnalyticsEvent {
 
 // Track Page Views with Enhanced Data
 export const trackPageView = (url: string, title: string) => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('config', GA_TRACKING_ID, {
       page_title: title,
       page_location: url,
@@ -43,7 +43,7 @@ export const trackPageView = (url: string, title: string) => {
 
 // Enhanced Event Tracking with Business Context
 export const trackEvent = ({ action, category, label, value, custom_parameters }: AnalyticsEvent) => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', action, {
       event_category: category,
       event_label: label,
@@ -75,7 +75,7 @@ export const trackConversion = (conversionType: string, value?: number, currency
   });
 
   // Enhanced Conversion for GA4
-  if (typeof window !== 'undefined' && value) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function' && value) {
     window.gtag('event', 'purchase', {
       transaction_id: `osom_${Date.now()}`,
       value: value,
