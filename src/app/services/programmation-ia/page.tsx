@@ -4,12 +4,12 @@ import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from 
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Programmation & IA Valais | Dashboards Intelligents + Campagnes Virales OSOM',
-  description: 'Agence IA Valais: Dashboards intelligents + Content viral. 2.4M vues, 688 conversions, ROI 140x. Intelligence data + Performance créative.',
-  keywords: 'programmation ia valais, dashboard interactif, campagne réels instagram, analyse data valais, intelligence artificielle marketing',
+  title: 'Code Obsessionnel & IA Virale | Dashboards + 2.4M Vues - osom',
+  description: 'Jeunes développeurs obsessés code + créativité IA. Dashboards techniques + réels viraux. 2.4M vues Culture Peinture, 140x ROI. Python + JavaScript + créativité pure.',
+  keywords: 'programmation obsessionnelle, code python javascript, ia créative, dashboards interactifs, réels viraux, développeur créatif VALAIS, code + content',
   openGraph: {
-    title: 'Programmation & IA | Dashboards + Réels Viraux | OSOM Valais',
-    description: 'De l\'analyse data aux contenus viraux : 2.4M vues, 140x ROI. L\'approche OSOM complète.',
+    title: 'Code + Créativité | 2.4M Vues Documentees VALAIS',
+    description: 'Développeurs-créatifs : code technique + contenu viral. Dashboards + 2.4M vues réels.',
     type: 'website',
   }
 }
@@ -197,9 +197,9 @@ export default function ProgrammationIAPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Programmation & IA Valais"
-      subtitle="Data + Content"
-      heroDescription="Au-delà des dashboards : nous créons l'intelligence data ET les campagnes virales qui génèrent des résultats mesurables. L'approche osom complète."
+      title="Code Obsessionnel & Créativité IA"
+      subtitle="code + créativité virale"
+      heroDescription="Jeunes développeurs obsessés par le code ET la créativité. Dashboards techniques Python + réels Instagram viraux. Culture Peinture : 2.4M vues + 688 conversions. Cerveau gauche + cerveau droit = performance décoiffante."
       color="yellow"
       heroMetrics={[
         {
@@ -218,83 +218,112 @@ export default function ProgrammationIAPage() {
           description: "Dashboard tracking intelligent"
         }
       ]}
-      ctaText="Lancer ma stratégie Data+Content"
+      ctaText="lancer mon combo code+créativité"
       
-      methodTitle="Approche Intelligence Complète"
-      methodDescription="De l'analyse data aux contenus viraux : nous maîtrisons toute la chaîne de performance digitale"
+      methodTitle="obsession code + créativité virale"
+      methodDescription="Développeur-créatif hybrid : code Python/JavaScript obsessionnel + créativité virale Instagram. Dashboards techniques sur-mesure + réels qui cartonnent. Culture Peinture première expérience : from zero to 2.4M vues + 140x ROI. Approche unique marché : technique + créatif dans même cerveau."
       processSteps={[
         {
           number: "01",
-          title: "Data Intelligence Setup",
-          description: "Installation tracking avancé, dashboards temps réel, attribution complète pour visibilité ROI"
+          title: "code dashboard sur-mesure python",
+          description: "Développement dashboard interactif custom : Python data processing, JavaScript visualisations, API connections temps réel. Code from scratch, pas de template."
         },
         {
           number: "02",
-          title: "Content Strategy IA",
-          description: "Analyse audience, création réels optimisés, stratégie virale basée sur data insights"
+          title: "créativité réels instagram viraux",
+          description: "Analyse audience data + création contenus optimisés pour viralite : hooks psychologiques, storytelling data-driven, hashtag research. Culture Peinture method."
         },
         {
           number: "03",
-          title: "Performance Monitoring",
-          description: "Suivi temps réel, optimisation continue, ajustements basés sur métriques"
+          title: "monitoring performance technique",
+          description: "Tracking code custom : événements sur-mesure, attribution multi-touch, analytics comportementaux. Data science approach pour optimisation continue."
         },
         {
           number: "04",
-          title: "Scale & Optimize",
-          description: "Amplification des contenus performants, automatisation, scaling intelligent"
+          title: "scaling intelligent automatise",
+          description: "Scripts automation Python pour amplification contenus performants + dashboard alertes performance. Code qui scale, pas manual work."
         }
       ]}
       
-      proofTitle="Culture Peinture - Résultats Vérifiables"
+      proofTitle="culture peinture: 0 → 2.4m vues documentées"
       proofContent={proofContent}
       
-      featuresTitle="Services Programmation & IA"
-      featuresDescription="Intelligence data + Créativité virale = Performance mesurable"
+      featuresTitle="stack technique + créativité"
+      featuresDescription="Maîtrise technique complète : Python data analysis, JavaScript interactifs, React dashboards + obsession créativité virale. Combo rare : développeur qui sait faire du contenu viral."
       features={[
         {
           icon: "",
-          title: "Dashboards Intelligents",
-          description: "Analytics temps réel, visualisations interactives, attribution tracking - ROI transparent 24/7"
+          title: "dashboards python interactifs custom",
+          description: "Code sur-mesure Python + Plotly/Dash : visualisations temps réel, API integrations multi-sources, analytics comportementaux. 0% template, 100% custom code."
         },
         {
           icon: "",
-          title: "Campagnes Réels Virales",
-          description: "Content création optimisée IA, stratégie Instagram/TikTok - 2.4M vues documentées"
+          title: "réels viraux instagram engineering",
+          description: "Méthodologie virale data-driven : analyse trends, hooks psychologiques, storytelling optimisé. Culture Peinture case : 0 → 2.4M vues reproduisible."
         },
         {
           icon: "",
-          title: "Attribution Tracking",
-          description: "Suivi multi-canal, récupération trafic 'unassigned' - 14,171 sessions récupérées"
+          title: "tracking code attribution avance",
+          description: "JavaScript custom events + Python data processing : attribution multi-touch, user journey mapping, sessions recovery. Technical precision 14,171+ sessions."
         },
         {
           icon: "",
-          title: "Automation Intelligence",
-          description: "Optimisation campagnes IA, A/B testing auto - +78% performance moyenne"
+          title: "automation scripts intelligent",
+          description: "Python automation : content optimization, A/B testing auto, performance monitoring. Code qui travaille 24/7 pour optimiser vos campagnes."
         },
         {
           icon: "",
-          title: "Predictive Analytics",
-          description: "Prévision performance, recommandations IA - Décisions data-driven"
+          title: "predictive analytics machine learning",
+          description: "Algorithmes Python ML : prédiction performance contenu, recommandations personnalisées, trend forecasting. Data science appliquée marketing."
         },
         {
           icon: "",
-          title: "Content Performance AI",
-          description: "Analyse virale potential, optimisation hashtags - Viral-ready guarantee"
+          title: "content ia créative virale",
+          description: "IA analysis + human creativity : viral potential scoring, hashtag optimization, audience psychology. Technical + créatif = combo gagnant."
         }
       ]}
       
-      pricingTitle="Intelligence osom Formula"
-      price="4500 CHF"
-      pricingDescription="Dashboard + Campagne Réels + Tracking Intelligence"
+      pricingTitle="code + créativité premium"
+      price="15000 CHF"
+      pricingDescription="Formule code+créativité world-class unique : Dashboard Python custom + Réels viraux 2.4M + Formation technique. Combo développeur-créatif rarissime."
       pricingFeatures={[
-        "Dashboard interactif temps réel",
-        "Campagne réels 3 mois",
-        "Attribution tracking setup",
-        "Performance monitoring IA",
-        "Content creation optimisée",
-        "Formation équipe + handover"
+        "Dashboard Python custom code from scratch",
+        "Campagne réels viraux 3 mois + créativité",
+        "Tracking code JavaScript attribution avancé",
+        "Scripts automation Python monitoring",
+        "Content IA + human creativity hybrid",
+        "Formation technique + code handover complet"
       ]}
-      finalCtaText="Démarrer mon Intelligence Marketing"
+      
+      faqTitle="Questions Fréquentes - Code Obsessionnel + Créativité Virale"
+      faqItems={[
+        {
+          question: "Comment garantissez-vous 2.4M vues alors que vous combinez développement et créativité ?",
+          answer: "Combo rare : développeur Python/JavaScript obsessionnel + créatif Instagram passionné. Culture Peinture première expérience révélatrice : dashboard technique tracking performances + réels créatifs viraux = 2.4M vues documentées GA4. Approche data-driven créativité : chaque contenu analysé, hooks psychologiques testés, performance mesurée. Code pour tracker, créativité pour viral, data pour optimiser."
+        },
+        {
+          question: "Maîtrisez-vous vraiment Python, JavaScript ET création contenu viral ou c'est du marketing ?",
+          answer: "Double expertise prouvable : Python data analysis + Plotly dashboards (code review sur demande), JavaScript custom events + API integrations (démo technique live), création réels Instagram (2.4M vues Culture Peinture tracées). Formation technique : Computer Science + passion créative personnelle. Portfolio code + portfolio créatif disponibles. Rare combo technique + créatif authentique."
+        },
+        {
+          question: "4500 CHF pour code + créativité, c'est justifié versus développeur pur ou créatif pur ?",
+          answer: "4500 CHF = développeur senior Python/JavaScript + créatif viral expérimenté + data scientist marketing. Développeur pur = dashboard mais 0 contenu. Créatif pur = viral mais 0 tracking. Nous = dashboard custom codé + réels qui cartonnent + attribution technique parfaite. Culture Peinture ROI 140x prouve valeur combo. Investment unique pour expertise double rare."
+        },
+        {
+          question: "Après 3 mois, puis-je maintenir le dashboard code et continuer création réels en autonomie ?",
+          answer: "Objectif : autonomie technique ET créative. Code handover complet : documentation Python, architecture JavaScript expliquée, APIs documentées. Formation créative : méthodes viralité, psychology hooks, hashtag research, content calendar. Dashboard évolutif : ajout métriques possible, nouveaux graphiques intégrables. Réels : méthodologie reproductible enseignée. Support technique 3 mois : code + créatif."
+        },
+        {
+          question: "Vos dashboards Python sont-ils vraiment custom ou basés sur templates existants ?",
+          answer: "100% custom code from scratch, 0% template. Python pur : pandas data processing, Plotly visualisations interactives, API connections sur-mesure, algorithmes analytics propriétaires. Code source fourni, architecture expliquée, évolutivité maximale. Démo live : montrer code en direct, expliquer logique, modifier en temps réel. Dashboard Culture Peinture : 100% custom, performance tracking spécifique métier."
+        },
+        {
+          question: "Comment assurez-vous la reproductibilité de vos succès viraux sur d'autres projets ?",
+          answer: "Méthodologie virale systematisée : analyse audience data, hooks psychologiques testés, storytelling frameworks, timing optimization, hashtag research algorithmique. Culture Peinture success factors documentés : type contenu, posting schedule, engagement strategies. Process reproductible mais adapté chaque audience. Pas de copier-coller créatif, mais méthodes éprouvées personnalisées. Code analytics pour mesurer viralité + créativité humaine pour exécution."
+        }
+      ]}
+      
+      finalCtaText="lancer mon combo code+créativité"
     />
   )
 }

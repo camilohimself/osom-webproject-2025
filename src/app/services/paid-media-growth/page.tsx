@@ -4,11 +4,11 @@ import { ROIVisualization, ComparisonChart, MetricsPulse, ProgressMeter } from '
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Growth Organique Valais | Anti-Pub Payante - osom',
-  description: 'Jeune agence growth Valais obsessée par la croissance organique. 140x plus efficace que pub payante prouvé Culture Peinture. 688 vs 49 conversions. Méthodes modernes anti-ads.',
+  title: 'Growth Organique VALAIS | Anti-Pub Payante - osom',
+  description: 'Jeune agence growth VALAIS obsessée par la croissance organique. 140x plus efficace que pub payante prouvé Culture Peinture. 688 vs 49 conversions. Méthodes modernes anti-ads.',
   keywords: 'growth organique valais, anti publicité payante, growth hacking valais, acquisition organique, marketing viral valais, croissance durable suisse',
   openGraph: {
-    title: 'Growth Organique Valais | 140x Plus Efficace que Ads',
+    title: 'Growth Organique VALAIS | 140x Plus Efficace que Ads',
     description: 'Growth organique obsessionnel : 688 conversions vs 49 pub payante. Méthodes modernes anti-ads.',
     type: 'website',
   }
@@ -93,9 +93,9 @@ export default function PaidMediaGrowthPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="Growth Organique Valais"
+      title="Growth Organique VALAIS"
       subtitle="anti-pub payante"
-      heroDescription="Nouvelle approche growth Valais : pourquoi dépenser en ads quand l'organique cartonne 140x plus ? Première expérience Culture Peinture : 688 conversions organiques vs 49 payantes. Jeunes, motivés, anti-gaspillage publicitaire."
+      heroDescription="Nouvelle approche growth VALAIS : pourquoi dépenser en ads quand l'organique cartonne 140x plus ? Première expérience Culture Peinture : 688 conversions organiques vs 49 payantes. Jeunes, motivés, anti-gaspillage publicitaire."
       color="yellow"
       heroMetrics={[
         {
@@ -114,7 +114,7 @@ export default function PaidMediaGrowthPage() {
           description: "vs 49 ads payantes"
         }
       ]}
-      ctaText="Révolutionner mon acquisition en Valais"
+      ctaText="Révolutionner mon acquisition en VALAIS"
       
       methodTitle="growth organique obsessionnel"
       methodDescription="Nouvelle génération growth : zéro euro en ads, tout en organique. Culture Peinture notre révélation : 688 conversions organiques vs 49 payantes même période. Méthode anti-gaspillage, pro-performance. Jeunes affamés de résultats durables sans burn de budget publicitaire."
@@ -175,8 +175,8 @@ export default function PaidMediaGrowthPage() {
       ]}
       
       pricingTitle="growth organique revolution"
-      price="4500 CHF"
-      pricingDescription="Investment anti-ads pour nos premiers clients growth : Stratégie organique + Exécution + Suivi 12 mois. ROI garanti supérieur aux budgets pub payante traditionnels."
+      price="12500 CHF"
+      pricingDescription="Investment growth révolutionnaire : Stratégie organique 140x + Exécution expert + Suivi obsessionnel 12 mois. Performance anti-ads garantie."
       pricingFeatures={[
         "Audit gaspillage ads + opportunités",
         "Stratégie growth 100% organique",

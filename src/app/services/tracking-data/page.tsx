@@ -4,11 +4,11 @@ import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from 
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Data Obsession & Tracking Technique Valais | GA4 Expert - osom',
+  title: 'Data Obsession & Tracking Technique VALAIS | GA4 Expert - osom',
   description: 'Jeunes experts data obsessés tracking parfait. 14,171 sessions Unassigned récupérées, ROI invisible révélé. GA4, GTM, attribution maîtrisés. Setup technique impeccable.',
   keywords: 'data obsession valais, tracking technique ga4, gtm expert, attribution multi-touch, data analyst valais, analytics obsessionnel, roi invisible',
   openGraph: {
-    title: 'Data Obsession | 14,171 Sessions Récupérées Valais',
+    title: 'Data Obsession | 14,171 Sessions Récupérées VALAIS',
     description: 'Experts data young & hungry : tracking obsessionnel, ROI invisible révélé, setup GA4 technique parfait.',
     type: 'website',
   }
@@ -137,7 +137,7 @@ export default function TrackingDataPage() {
           description: "Trafic 'Unassigned' récupéré"
         }
       ]}
-      ctaText="Audit tracking gratuit Valais"
+      ctaText="Audit tracking gratuit VALAIS"
       
       methodTitle="data forensics obsessionnel"
       methodDescription="Approche forensics data : détecter chaque euro perdu dans les trous noirs analytics. 14,171 sessions Unassigned retrouvées = preuve notre obsession technique. Jeunes data nerds qui creusent là où d'autres s'arrêtent. Setup GA4/GTM chirurgical pour ROI 100% transparent."
@@ -198,8 +198,8 @@ export default function TrackingDataPage() {
       ]}
       
       pricingTitle="data forensics premium"
-      price="2900 CHF"
-      pricingDescription="Audit forensics complet pour nos premiers clients data : Investigation technique + Setup GA4/GTM chirurgical + Dashboard ROI transparent + Formation obsessionnelle. Détection argent perdu garanti."
+      price="7500 CHF"
+      pricingDescription="Audit forensics premium GA4/GTM expert : Investigation technique obsessionnelle + Setup chirurgical + Dashboard transparent + Formation. 14,171 sessions type récupérées garanties."
       pricingFeatures={[
         "Audit forensics data 100+ points",
         "GA4 + GTM setup chirurgical expert",

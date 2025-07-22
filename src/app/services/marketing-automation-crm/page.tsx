@@ -4,11 +4,11 @@ import { MetricsPulse, ProgressMeter, ComparisonChart, AssetValueCounter } from 
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Marketing Automation Obsessionnelle Valais | CRM Setup - osom',
-  description: 'Jeunes experts automation Valais obsessés par l\'efficacité. +78% conversions, -65% temps manuel dès premiers setups. HubSpot, Pipedrive, ActiveCampaign maîtrisés. Setup technique parfait.',
+  title: 'Marketing Automation Obsessionnelle VALAIS | CRM Setup - osom',
+  description: 'Jeunes experts automation VALAIS obsessés par l\'efficacité. +78% conversions, -65% temps manuel dès premiers setups. HubSpot, Pipedrive, ActiveCampaign maîtrisés. Setup technique parfait.',
   keywords: 'marketing automation valais, crm setup technique, hubspot expert, pipedrive automation, activecampaign valais, automation obsessionnelle, crm technique suisse',
   openGraph: {
-    title: 'Marketing Automation Technique | +78% Conversions Valais',
+    title: 'Marketing Automation Technique | +78% Conversions VALAIS',
     description: 'Setup automation obsessionnel : +78% conversions, -65% temps manuel. Expertise technique CRM moderne.',
     type: 'website',
   }
@@ -141,7 +141,7 @@ export default function MarketingAutomationCRMPage() {
           description: "Lifetime value améliorée"
         }
       ]}
-      ctaText="Automatiser mes conversions en Valais"
+      ctaText="Automatiser mes conversions en VALAIS"
       
       methodTitle="setup automation obsessionnel"
       methodDescription="Obsession technique automation : chaque workflow pensé, testé, optimisé. Setup CRM moderne avec triggers intelligents, sequences comportementales, scoring prédictif. Jeunes experts tools passionés par la performance mesurable. Résultats immédiats : automation qui fonctionne vraiment."
@@ -202,8 +202,8 @@ export default function MarketingAutomationCRMPage() {
       ]}
       
       pricingTitle="automation setup premium"
-      price="3900 CHF"
-      pricingDescription="Setup technique complet pour nos premiers clients automation : Configuration experte + Formation équipe + Optimisation continue 6 mois. Investment dans système qui génère sans limite."
+      price="8900 CHF"
+      pricingDescription="Setup automation premium HubSpot/Pipedrive expert : Configuration technique obsessionnelle + Formation équipe + Optimisation continue 6 mois. +78% conversions garanties."
       pricingFeatures={[
         "CRM setup technique expert (HubSpot/Pipedrive)",
         "Email sequences comportementales avancées",

@@ -3,8 +3,8 @@ import { ComparisonChart, ProgressMeter, ROIVisualization, AssetValueCounter } f
 import { GraphiqueLinear } from '@/components/ui'
 
 export const metadata = {
-  title: 'SEO & Content Marketing Valais | Nouvelle Génération - osom',
-  description: 'Jeune agence SEO Valais obsessée par la performance technique. Audit gratuit, résultats immédiats : 68.6% engagement (vs 44.6% concurrent), position 21 → page 1. Méthodes modernes.',
+  title: 'SEO & Content Marketing VALAIS | Nouvelle Génération - osom',
+  description: 'Jeune agence SEO VALAIS obsessée par la performance technique. Audit gratuit, résultats immédiats : 68.6% engagement (vs 44.6% concurrent), position 21 → page 1. Méthodes modernes.',
   keywords: 'seo valais, content marketing valais, audit seo gratuit, jeune agence seo, seo technique valais, marketing digital performance, optimisation google valais'
 }
 
@@ -13,21 +13,21 @@ export default function SEOContentMarketingPage() {
     <div className="space-y-8">
       {/* GraphiqueLinear - Style Linear avec données réelles */}
       <GraphiqueLinear
-        title="SEO Valais Performance Impact"
-        subtitle="Artisane de Lumière Valais - 200+ jours GA4 marché local"
+        title="SEO VALAIS Performance Impact"
+        subtitle="Artisane de Lumière VALAIS - 200+ jours GA4 marché local"
         primaryMetric={{
-          label: "SEO Valais osom",
+          label: "SEO VALAIS osom",
           value: "68.6% engagement",
           color: "#06B6D4"
         }}
         secondaryMetric={{
-          label: "Trafic Direct Valais",
+          label: "Trafic Direct VALAIS",
           value: "44.6% engagement", 
           color: "#6B7280"
         }}
         improvement={{
           label: "Avantage Local",
-          value: "+54% marché Valais"
+          value: "+54% marché VALAIS"
         }}
         backgroundColor="rgba(15, 23, 42, 0.8)"
         className="backdrop-blur-sm border border-cyan-400/20 rounded-2xl"
@@ -74,24 +74,24 @@ export default function SEOContentMarketingPage() {
 
   return (
     <ServicePageTemplatePremium
-      title="SEO & Content Marketing Valais"
-      subtitle="Agence Marketing Valais"
-      heroDescription="Nouveaux sur le marché SEO Valais, mais obsessés par les résultats. Diagnostic technique avancé révèle les gaps invisibles. 68.6% engagement dès Artisane de Lumière, notre 3ème client."
+      title="SEO & Content Marketing VALAIS"
+      subtitle="Agence Marketing VALAIS"
+      heroDescription="Nouveaux sur le marché SEO VALAIS, mais obsessés par les résultats. Diagnostic technique avancé révèle les gaps invisibles. 68.6% engagement dès Artisane de Lumière, notre 3ème client."
       color="cyan"
       heroMetrics={[
         {
           value: "397x",
-          label: "Potentiel Valais Révélé",
+          label: "Potentiel VALAIS Révélé",
           description: "vs concurrents marché local"
         },
         {
           value: "68.6%",
-          label: "Engagement SEO Valais",
+          label: "Engagement SEO VALAIS",
           description: "vs 44.6% trafic direct"
         },
         {
           value: "22",
-          label: "Mots-Clés Valais Manqués", 
+          label: "Mots-Clés VALAIS Manqués", 
           description: "Opportunités locales cachées"
         }
       ]}
@@ -156,18 +156,18 @@ export default function SEOContentMarketingPage() {
       ]}
       
       pricingTitle="seo technique formula"
-      price="2500 CHF"
-      pricingDescription="Formule complète pour nos premiers clients SEO : Audit technique + Stratégie data-driven + Content optimisé + Suivi rigoureux 6 mois. Tarif fixe, engagement résultats."
+      price="6500 CHF"
+      pricingDescription="Formule SEO premium expertise technique : Audit forensics + Stratégie data-driven + Content optimisé + Suivi obsessionnel 6 mois. Résultats mesurables garantis."
       pricingFeatures={[
-        "Audit technique Valais complet",
+        "Audit technique VALAIS complet",
         "Keywords locaux Sion/Martigny/Monthey", 
-        "Content marketing Valais mensuel",
+        "Content marketing VALAIS mensuel",
         "Link building autorités locales",
-        "SEO local Valais optimisé",
-        "ROI marché Valais transparent"
+        "SEO local VALAIS optimisé",
+        "ROI marché VALAIS transparent"
       ]}
       
-      faqTitle="Questions Fréquentes - SEO Technique Valais"
+      faqTitle="Questions Fréquentes - SEO Technique VALAIS"
       faqItems={[
         {
           question: "Votre audit SEO gratuit révèle-t-il vraiment des opportunités cachées sans accès à nos analytics ?",
@@ -175,7 +175,7 @@ export default function SEOContentMarketingPage() {
         },
         {
           question: "Comment garantissez-vous des résultats SEO alors que vous êtes nouveaux sur le marché valaisan ?",
-          answer: "Nouveaux en Valais, mais expertise technique SEO solide acquise sur d'autres marchés. Résultat immédiat prouvé : Artisane de Lumière, notre 3ème client, position 21.67 → page 1 en 6 mois, +340% trafic organique. Notre avantage : pas d'habitudes limitantes, méthodes SEO modernes, acharnement de jeunes affamés. Chaque action mesurée, chaque résultat tracé. Engagement résultats ou remboursement partiel."
+          answer: "Nouveaux en VALAIS, mais expertise technique SEO solide acquise sur d'autres marchés. Résultat immédiat prouvé : Artisane de Lumière, notre 3ème client, position 21.67 → page 1 en 6 mois, +340% trafic organique. Notre avantage : pas d'habitudes limitantes, méthodes SEO modernes, acharnement de jeunes affamés. Chaque action mesurée, chaque résultat tracé. Engagement résultats ou remboursement partiel."
         },
         {
           question: "Quelle est concrètement votre différence avec les 20+ agences SEO valaisannes établies ?",
@@ -183,11 +183,11 @@ export default function SEOContentMarketingPage() {
         },
         {
           question: "Combien coûte réellement votre accompagnement SEO et que comprend exactement votre formule ?",
-          answer: "SEO Technique Formula 2500 CHF / 6 mois tout inclus. Comprend : audit technique 150+ points, recherche 500+ keywords, content plan mensuel, rédaction optimisée, link building éthique, SEO local Valais, monitoring GA4/Search Console, rapports mensuels détaillés. Aucun coût caché, pas d'engagement au-delà. Tarif fixe car jeune agence, prix augmentera avec expérience. Investissement rentabilisé dès mois 3 généralement."
+          answer: "SEO Technique Formula 2500 CHF / 6 mois tout inclus. Comprend : audit technique 150+ points, recherche 500+ keywords, content plan mensuel, rédaction optimisée, link building éthique, SEO local VALAIS, monitoring GA4/Search Console, rapports mensuels détaillés. Aucun coût caché, pas d'engagement au-delà. Tarif fixe car jeune agence, prix augmentera avec expérience. Investissement rentabilisé dès mois 3 généralement."
         },
         {
-          question: "Pouvez-vous vraiment améliorer le référencement local Valais sans connaître spécifiquement ce marché ?",
-          answer: "SEO local = technique universelle + adaptation locale. Technique maîtrisée : Google Business Profile, citations locales, schema LocalBusiness, content géolocalisé. Adaptation Valais : recherche exhaustive concurrents locaux, mots-clés spécifiques (stations ski, communes, dialecte), saisonnalité touristique. Avantage : regard neuf sans idées préconçues. Artisane de Lumière preuve concrète : local SEO efficace dès premier projet valaisan."
+          question: "Pouvez-vous vraiment améliorer le référencement local VALAIS sans connaître spécifiquement ce marché ?",
+          answer: "SEO local = technique universelle + adaptation locale. Technique maîtrisée : Google Business Profile, citations locales, schema LocalBusiness, content géolocalisé. Adaptation VALAIS : recherche exhaustive concurrents locaux, mots-clés spécifiques (stations ski, communes, dialecte), saisonnalité touristique. Avantage : regard neuf sans idées préconçues. Artisane de Lumière preuve concrète : local SEO efficace dès premier projet valaisan."
         },
         {
           question: "Vos méthodes SEO sont-elles risquées ou respectent-elles les guidelines Google ?",
