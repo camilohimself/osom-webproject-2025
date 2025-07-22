@@ -390,10 +390,10 @@ export default function RevolutionaryDashboardHero({
                           {metric.label}
                         </div>
                         <motion.div
-                          className="w-8 h-1 rounded-full"
+                          className="w-6 h-1 rounded-full"
                           style={{ backgroundColor: color }}
-                          animate={{ width: [8, 24, 8] }}
-                          transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                          animate={{ opacity: [0.3, 1, 0.3] }}
+                          transition={{ duration: 3, repeat: Infinity, delay: index * 0.5 }}
                         />
                       </div>
                       
@@ -424,25 +424,32 @@ export default function RevolutionaryDashboardHero({
                         
                         {/* Mini Chart Visualization */}
                         <div className="flex-1 h-8 flex items-end space-x-1">
-                          {[...Array(8)].map((_, i) => (
-                            <motion.div
-                              key={i}
-                              className="flex-1 rounded-t"
-                              style={{ backgroundColor: `${color}40` }}
-                              animate={{ 
-                                height: [
-                                  `${20 + Math.random() * 50}%`,
-                                  `${30 + Math.random() * 60}%`,
-                                  `${20 + Math.random() * 50}%`
-                                ]
-                              }}
-                              transition={{ 
-                                duration: 2, 
-                                repeat: Infinity, 
-                                delay: i * 0.1 
-                              }}
-                            />
-                          ))}
+                          {[...Array(8)].map((_, i) => {
+                            // Fixed heights to prevent re-render
+                            const heights = [35, 65, 45, 80, 25, 90, 55, 70]
+                            const baseHeight = heights[i] || 50
+                            
+                            return (
+                              <motion.div
+                                key={i}
+                                className="flex-1 rounded-t"
+                                style={{ backgroundColor: `${color}40` }}
+                                animate={{ 
+                                  height: [
+                                    `${Math.max(20, baseHeight - 15)}%`,
+                                    `${Math.min(90, baseHeight + 15)}%`,
+                                    `${Math.max(20, baseHeight - 15)}%`
+                                  ]
+                                }}
+                                transition={{ 
+                                  duration: 2.5 + i * 0.2, 
+                                  repeat: Infinity, 
+                                  delay: i * 0.15,
+                                  repeatDelay: 1
+                                }}
+                              />
+                            )
+                          })}
                         </div>
                       </div>
                       
