@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { GraphiqueLinear } from '@/components/ui'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
-import ABTestedCTA from '@/components/ab-testing/ABTestedCTA'
+import { MagneticButton } from '@/components/ui'
 
 interface HeroPremiumProps {
   dictionary: {
@@ -223,19 +223,27 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
               {dictionary.hero.description}
             </motion.p>
             
-            {/* A/B Tested CTA Buttons */}
+            {/* CTA Buttons */}
             <motion.div 
+              className="flex flex-col sm:flex-row gap-4 mb-12"
               variants={itemVariants}
               transition={{ duration: 0.8, ease: [0.25, 0.25, 0.25, 0.75] }}
             >
-              <ABTestedCTA
-                defaultPrimary={dictionary.hero.cta_primary}
-                defaultSecondary={dictionary.hero.cta_secondary}
-                className="mb-12"
-                onConversion={() => {
-                  console.log('🎯 Hero CTA conversion tracked')
-                }}
-              />
+              <MagneticButton
+                href="/contact"
+                variant="primary"
+                className="w-full sm:w-auto text-lg px-8 py-4 min-h-[44px]"
+              >
+                CONTACTEZ OSOM
+              </MagneticButton>
+              
+              <MagneticButton
+                href="/projets"
+                variant="secondary"
+                className="w-full sm:w-auto text-lg px-8 py-4 min-h-[44px]"
+              >
+                PROJETS OSOM
+              </MagneticButton>
             </motion.div>
             
             {/* Trust Indicators with Tooltips */}
