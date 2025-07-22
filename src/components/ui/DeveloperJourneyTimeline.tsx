@@ -200,22 +200,17 @@ export default function DeveloperJourneyTimeline({
             {journeySteps.map((step, index) => (
               <motion.div
                 key={step.id}
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-4"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
               >
                 <motion.div
-                  className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold border-2 ${
+                  className={`w-10 h-10 flex items-center justify-center text-xl font-bold ${
                     activeStep >= index
-                      ? `border-yellow-400 bg-yellow-400 text-black shadow-lg`
-                      : `border-gray-600 bg-gray-800 text-gray-400`
+                      ? `text-yellow-400`
+                      : `text-gray-400`
                   }`}
-                  animate={activeStep === index ? {
-                    scale: [1, 1.1, 1],
-                    boxShadow: ["0 0 0 0 rgba(255,212,7,0.4)", "0 0 0 15px rgba(255,212,7,0)"]
-                  } : {}}
-                  transition={{ duration: 2, repeat: Infinity }}
                 >
                   {step.icon}
                 </motion.div>
@@ -263,19 +258,12 @@ export default function DeveloperJourneyTimeline({
                 {/* Step Content */}
                 <div className={`relative ${index % 2 === 0 ? '' : 'lg:col-start-2'}`}>
                   
-                  {/* Timeline Node */}
+                  {/* Timeline Node - Simplifié */}
                   <motion.div
-                    className="absolute -left-8 lg:left-1/2 top-8 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold border-4 lg:-translate-x-1/2 z-10"
+                    className="absolute -left-8 lg:left-1/2 top-8 w-12 h-12 flex items-center justify-center text-xl font-bold lg:-translate-x-1/2 z-10"
                     style={{ 
-                      backgroundColor: step.color,
-                      borderColor: step.color,
-                      color: '#000'
+                      color: step.color
                     }}
-                    animate={activeStep === index ? {
-                      scale: [1, 1.2, 1],
-                      rotate: [0, 360]
-                    } : { scale: activeStep > index ? 1.1 : 0.9 }}
-                    transition={{ duration: 1, repeat: activeStep === index ? Infinity : 0 }}
                   >
                     {step.icon}
                   </motion.div>
@@ -367,7 +355,6 @@ export default function DeveloperJourneyTimeline({
                     >
                       <div className="bg-red-500/20 p-3 border-b border-red-500/30">
                         <div className="flex items-center space-x-2">
-                          <div className="w-3 h-3 rounded-full bg-red-500"></div>
                           <span className="text-red-300 text-sm font-mono">before.tsx</span>
                         </div>
                       </div>
@@ -387,7 +374,6 @@ export default function DeveloperJourneyTimeline({
                     >
                       <div className="bg-green-500/20 p-3 border-b border-green-500/30">
                         <div className="flex items-center space-x-2">
-                          <div className="w-3 h-3 rounded-full bg-green-500"></div>
                           <span className="text-green-300 text-sm font-mono">after.tsx</span>
                         </div>
                       </div>
