@@ -629,6 +629,262 @@ export default function ProgrammationIAPage() {
       {/* Custom Hero Section */}
       <CustomHeroSection />
       
+      {/* BLOC 2 - DÉMONSTRATION LIVE CODE COLLABORATION */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block px-6 py-3 bg-yellow-400/20 rounded-full text-yellow-400 text-lg font-bold mb-6">
+              Live coding session révolutionnaire
+            </div>
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
+              Code Collaboration <span className="font-bold text-yellow-400">Humain × Claude en temps réel</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Assistez à la première collaboration de développement entre créatif humain et Claude Code
+            </p>
+          </div>
+
+          {/* CODE COLLABORATION DASHBOARD */}
+          <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl border border-yellow-400/20 overflow-hidden mb-12">
+            <div className="bg-gray-800/80 px-6 py-4 border-b border-gray-700/50">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <div className="ml-4 text-gray-300 text-sm font-mono">OSOM Collaborative Development Studio</div>
+              </div>
+            </div>
+            
+            <div className="p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* DÉVELOPPEUR HUMAIN CRÉATIF */}
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-white">Développeur Humain Créatif</h3>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></div>
+                      <span className="text-cyan-400 text-sm">Creative Flow</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-black/60 rounded-xl p-4 font-mono text-sm overflow-hidden">
+                    <div className="text-cyan-400 mb-2">// Vision créative Culture Peinture</div>
+                    <div className="text-green-400 inline">const </div>
+                    <div className="text-yellow-400 inline">campagneVirale </div>
+                    <div className="text-white inline">= &#123;</div>
+                    <div className="ml-4 text-white">emotion: <span className="text-cyan-400">&apos;authenticité&apos;</span>,</div>
+                    <div className="ml-4 text-white">hook: <span className="text-cyan-400">&apos;irrésistible&apos;</span>,</div>
+                    <div className="ml-4 text-white">storytelling: <span className="text-cyan-400">&apos;captivant&apos;</span>,</div>
+                    <div className="ml-4 text-white">target: <span className="text-cyan-400 animate-pulse">&apos;cœur client&apos;</span></div>
+                    <div className="text-white">&#125;</div>
+                    
+                    <div className="mt-4 text-cyan-400">✓ Concept créatif défini</div>
+                    <div className="text-cyan-400">✓ Story board émotionnel</div>
+                    <div className="text-cyan-400">✓ UX expérience utilisateur</div>
+                    <div className="text-cyan-400 animate-pulse">🎨 En attente analyse Claude...</div>
+                  </div>
+                </div>
+                
+                {/* CLAUDE CODE OPTIMIZATION */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-4">Claude Code Intelligence</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="bg-black/40 rounded-xl p-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white">Potentiel Viral Analysé</span>
+                        <span className="text-yellow-400 font-bold text-xl">2.4M vues</span>
+                      </div>
+                      <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full transition-all duration-3000 ease-out" style={{width: '96%'}}></div>
+                      </div>
+                      <div className="text-xs text-gray-400 mt-1">Claude prédiction tendances</div>
+                    </div>
+                    
+                    <div className="bg-black/40 rounded-xl p-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white">Code Optimization</span>
+                        <span className="text-yellow-400 font-bold text-xl">94% efficace</span>
+                      </div>
+                      <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-yellow-400 to-purple-400 rounded-full transition-all duration-4000 ease-out" style={{width: '94%'}}></div>
+                      </div>
+                      <div className="text-xs text-gray-400 mt-1">Architecture Python optimisée</div>
+                    </div>
+                    
+                    <div className="bg-black/40 rounded-xl p-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white">Performance Tracking</span>
+                        <span className="text-yellow-400 font-bold text-2xl animate-pulse">688</span>
+                      </div>
+                      <div className="text-xs text-gray-400">Conversions mesurées précisément</div>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-yellow-400/20 to-purple-400/20 rounded-xl p-4 border border-yellow-400/30">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 rounded-full bg-yellow-400 animate-pulse"></div>
+                        <span className="text-white font-semibold">Humain × Claude synchronisés</span>
+                      </div>
+                      <div className="text-sm text-gray-300 mt-1">Collaboration parfaite créativité + IA</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* CODE SNIPPETS COLLABORATION */}
+              <div className="mt-12 pt-8 border-t border-gray-700/50">
+                <h3 className="text-2xl font-bold text-white text-center mb-8">Code Collaboratif Culture Peinture</h3>
+                
+                <div className="bg-black/60 rounded-xl p-6 font-mono text-sm">
+                  <div className="text-yellow-400 mb-4">// Fusion créativité humaine × optimisation Claude</div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <div className="text-cyan-400 mb-2">/* Concept Humain */</div>
+                      <div className="text-green-400">function </div>
+                      <div className="text-white inline">createViralContent() &#123;</div>
+                      <div className="ml-4 text-gray-300">// Emotion authentique</div>
+                      <div className="ml-4 text-gray-300">// Storytelling captivant</div>
+                      <div className="ml-4 text-gray-300">// Hook irrésistible</div>
+                      <div className="text-white">&#125;</div>
+                    </div>
+                    
+                    <div>
+                      <div className="text-purple-400 mb-2">/* Optimisation Claude */</div>
+                      <div className="text-green-400">function </div>
+                      <div className="text-white inline">optimizePerformance() &#123;</div>
+                      <div className="ml-4 text-gray-300">// Prédiction viralité: 2.4M</div>
+                      <div className="ml-4 text-gray-300">// Tracking précis: 688</div>
+                      <div className="ml-4 text-gray-300">// ROI calculé: 140x</div>
+                      <div className="text-white">&#125;</div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 text-center">
+                    <div className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 rounded-full border border-yellow-400/30">
+                      <span className="text-yellow-400 font-bold">Résultat = 2.4M vues virales documentées</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BLOC 3 - PERFORMANCE CULTURE PEINTURE MESURÉE */}
+      <section className="py-24 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
+              Culture Peinture <span className="font-bold text-yellow-400">Résultats Vérifiés</span>
+            </h2>
+            <p className="text-xl text-gray-300">
+              Première collaboration officielle Humain × Claude Code - Performance mesurée
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-yellow-400/20 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Timeline collaboration */}
+              <div className="space-y-8">
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 rounded-full bg-cyan-600 flex items-center justify-center">
+                    <span className="text-white font-bold">J1</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex justify-between mb-2">
+                      <span className="text-white">Créativité Humaine</span>
+                      <span className="text-cyan-400 font-bold">Concept viral défini</span>
+                    </div>
+                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                      <div className="h-full bg-cyan-400 rounded-full" style={{width: '100%'}} />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center">
+                    <span className="text-white font-bold">J2</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex justify-between mb-2">
+                      <span className="text-white">Analyse Claude</span>
+                      <span className="text-purple-400 font-bold">2.4M potentiel prédit</span>
+                    </div>
+                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                      <div className="h-full bg-purple-400 rounded-full" style={{width: '100%'}} />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 rounded-full bg-yellow-500 flex items-center justify-center">
+                    <span className="text-black font-bold">J3</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex justify-between mb-2">
+                      <span className="text-white">Lancement Collaboratif</span>
+                      <span className="text-yellow-400 font-bold">2.4M vues atteintes</span>
+                    </div>
+                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full transition-all duration-3000 ease-out" style={{width: '100%'}} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Résultats Culture Peinture */}
+              <div className="text-center">
+                <div className="mb-8">
+                  <div className="text-8xl md:text-9xl font-black transition-all duration-2000 text-yellow-400">
+                    140x
+                  </div>
+                  <div className="text-2xl text-white mt-4">
+                    Plus Performant
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="bg-black/40 rounded-xl p-4">
+                    <div className="text-yellow-400 font-bold text-2xl">2.4M</div>
+                    <div className="text-gray-300">Vues Virales</div>
+                  </div>
+                  <div className="text-gray-400 text-sm">+</div>
+                  <div className="bg-black/40 rounded-xl p-4">
+                    <div className="text-purple-400 font-bold text-2xl">688</div>
+                    <div className="text-gray-300">Conversions Trackées</div>
+                  </div>
+                  <div className="text-gray-400 text-sm">=</div>
+                  <div className="bg-black/20 rounded-xl p-4">
+                    <div className="text-cyan-400 font-bold text-2xl">140x</div>
+                    <div className="text-gray-300">vs Publicité Payante</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-8 text-center">
+              <div className="text-sm text-gray-400">
+                Données GA4 certifiées • Première collaboration Humain × Claude Code documentée
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="text-gray-400 mb-8">Projets développés en collaboration Humain × Claude</div>
+            <div className="flex justify-center items-center space-x-12 opacity-70">
+              <div className="text-white font-semibold">DASHBOARDS IA</div>
+              <div className="text-white font-semibold">AUTOMATION PYTHON</div>
+              <div className="text-white font-semibold">CAMPAGNES VIRALES</div>
+              <div className="text-yellow-400 font-semibold">+ 12 PROJETS</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Regular Template Starting from Method Section */}
       <div className="pt-0">
         <ServicePageTemplatePremium
