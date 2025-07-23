@@ -525,7 +525,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                   {/* Performance Metrics Animation */}
                   <div className="absolute top-4 right-4 opacity-15 pointer-events-none">
                     <motion.div className="text-purple-400 text-xs font-mono">
-                      {['+11.3%', '+68.6%', '+140x', 'ROI+'].map((metric, i) => (
+                      {['+11.3%', '+68.6%', '+14x', 'ROI+'].map((metric, i) => (
                         <motion.div
                           key={i}
                           className="mb-1"
