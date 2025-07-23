@@ -268,7 +268,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                     >
                       <AnimatedCounter
                         from={0}
-                        to={140}
+                        to={14}
                         duration={3}
                         delay={1}
                         suffix="x"

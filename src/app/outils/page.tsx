@@ -24,16 +24,8 @@ export default async function OutilsPage() {
 
   const dictionary = await getDictionary(currentLocale)
 
-  const handleLeadCapture = async (email: string, toolData: any) => {
-    // In a real application, this would send the data to a CRM/email service
-    console.log('Lead captured:', { email, toolData })
-    
-    // Here you could integrate with:
-    // - HubSpot CRM
-    // - Mailchimp
-    // - SendGrid
-    // - Custom backend API
-  }
+  // Lead capture will be handled by client components internally
+  // Server components cannot pass async functions to client components
 
   return (
     <div className="min-h-screen bg-black relative">
@@ -98,7 +90,7 @@ export default async function OutilsPage() {
               </p>
             </div>
             
-            <SEOAuditTool onLeadCapture={handleLeadCapture} />
+            <SEOAuditTool />
           </div>
 
           {/* ROI Calculator */}
@@ -113,7 +105,7 @@ export default async function OutilsPage() {
               </p>
             </div>
             
-            <ROICalculator onLeadCapture={handleLeadCapture} />
+            <ROICalculator />
           </div>
 
           {/* Social Proof Section */}
