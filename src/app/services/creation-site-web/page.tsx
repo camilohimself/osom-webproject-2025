@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export const metadata = {
   title: 'Agence Web Valais 140x Plus Performante - 688 Clients/6 Mois | OSOM',
@@ -7,8 +10,57 @@ export const metadata = {
   keywords: 'création site internet valais, création site web valais, création de site internet valais, site internet valais, agence web valais, développement web valais, site web valais, création site vitrine valais'
 }
 
-// VERSION CEO-FRIENDLY - OPTIMISÉE DÉCISION RAPIDE PDG PME
+// VERSION CEO-FRIENDLY + FAQ SEO - ARME SECRÈTE LONG-TAIL
 export default function CreationSiteWebPage() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null)
+
+  const faqData = [
+    {
+      question: "Combien coûte un site web professionnel en Valais ?",
+      answer: "4500 CHF tout inclus. Ce prix comprend le design, le développement, le SEO, l'hébergement 1 an et la formation. Aucun frais caché, contrairement aux agences qui facturent à part chaque service."
+    },
+    {
+      question: "Combien de temps faut-il pour créer un site web ?",
+      answer: "45 jours ouvrés garantis. Semaines 1-2 : stratégie et design. Semaines 3-4 : développement. Semaines 5-6 : SEO et optimisation. Semaine 7 : formation et lancement. Transparence totale à chaque étape."
+    },
+    {
+      question: "Pourquoi choisir une agence web spécialisée Valais ?",
+      answer: "Nous connaissons le marché local : Culture Peinture a généré 688 clients en 6 mois avec notre site, soit 140x plus efficace que leur publicité payante. Expertise locale + résultats vérifiés."
+    },
+    {
+      question: "Que comprend exactement votre service de création de site ?",
+      answer: "Design professionnel adapté à votre secteur, développement avec technologies modernes, SEO pour être trouvé sur Google, configuration Google Analytics, hébergement 1 an, formation complète et support. Tout pour générer des clients automatiquement."
+    },
+    {
+      question: "Comment garantissez-vous que mon site génèrera des clients ?",
+      answer: "Nos sites ont un taux de conversion de 11.3% vs 2-3% pour les sites traditionnels. Nous utilisons les mêmes outils que Google : SEMrush, PageSpeed, Analytics. Résultats mesurables et transparents dès le premier mois."
+    },
+    {
+      question: "Proposez-vous un suivi après la livraison du site ?",
+      answer: "Formation complète incluse pour que vous restiez autonome. Support technique 1 an inclus. Nous analysons vos résultats ensemble et optimisons si nécessaire. Objectif : que votre site travaille pour vous 24h/24."
+    },
+    {
+      question: "Mon secteur d'activité convient-il pour un site web performant ?",
+      answer: "Tous nos clients génèrent plus de clients : Culture Peinture (BTP), Artisane Lumière (artisanat), cabinets conseils, commerces. Chaque secteur a ses spécificités que nous maîtrisonsparfaitement."
+    },
+    {
+      question: "Puis-je voir des exemples de sites créés pour des entreprises valaisannes ?",
+      answer: "Culture Peinture Genève : 688 clients générés en 6 mois. Artisane Lumière Valais : +180% d'engagement. Données Google Analytics certifiées sur 200+ jours. Résultats concrets et vérifiables."
+    }
+  ]
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  }
 
   return (
     <div className="min-h-screen bg-black">
@@ -144,6 +196,60 @@ export default function CreationSiteWebPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ SEO - ARME SECRÈTE LONG-TAIL */}
+      <section className="py-24 bg-gray-900/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
+              Questions <span className="font-bold text-yellow-400">Fréquentes</span>
+            </h2>
+            <p className="text-xl text-gray-300">
+              Tout ce que les dirigeants d'entreprise veulent savoir
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <div key={index} className="bg-black/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-yellow-400/5 transition-colors duration-300"
+                >
+                  <h3 className="text-lg font-medium text-white pr-8">{faq.question}</h3>
+                  <div className={`text-yellow-400 text-2xl transform transition-transform duration-300 ${openFaq === index ? 'rotate-45' : ''}`}>
+                    +
+                  </div>
+                </button>
+                
+                {openFaq === index && (
+                  <div className="px-8 pb-6">
+                    <div className="border-t border-gray-700/50 pt-6">
+                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-400 mb-6">D'autres questions sur votre projet web ?</p>
+            <Link
+              href="/contact"
+              className="inline-block px-8 py-4 rounded-xl border border-yellow-400/40 text-yellow-400 hover:bg-yellow-400/10 transition-colors duration-300"
+            >
+              Poser Ma Question →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* JSON-LD FAQ Schema pour Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
     </div>
   )
 }
