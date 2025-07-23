@@ -266,7 +266,7 @@ export default async function Home() {
               </div>
             </AnimatedElement>
             
-            {/* FORCE 2: SEO & Acquisition Stratégique */}
+            {/* FORCE 2: Data Analytics & SEO Revolution pour Entrepreneurs */}
             <AnimatedElement type="slideUp" delay={0.3}>
               <div className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/10 transition-all duration-500 group hover:scale-[1.02]">
               {/* Layout centré avec background graphique */}
@@ -274,11 +274,11 @@ export default async function Home() {
                 {/* Background graphique */}
                 <div className="absolute inset-0 opacity-20">
                   <GraphiqueComparatif
-                    title={dictionary.home.charts.comparatif.title}
-                    subtitle={dictionary.home.charts.comparatif.subtitle}
+                    title="Engagement quality"
+                    subtitle="SEO vs direct traffic"
                     data={[
-                      { label: dictionary.home.charts.comparatif.seo_label, value: 68.6, color: "#06B6D4" },
-                      { label: dictionary.home.charts.comparatif.direct_label, value: 44.6, color: "#6B7280" }
+                      { label: "SEO OSOM", value: 68.6, color: "#06B6D4" },
+                      { label: "Trafic direct", value: 44.6, color: "#6B7280" }
                     ]}
                     className="h-full border-0"
                   />
@@ -288,49 +288,53 @@ export default async function Home() {
                 <div className="relative z-10 p-16 bg-gradient-to-br from-black/80 to-black/60">
                   <div className="max-w-4xl mx-auto text-center">
                     <div className="flex items-center justify-center mb-8">
-                      <div className="w-16 h-16 bg-cyan-400 rounded-full mr-6 flex items-center justify-center">
-                        <div className="w-8 h-8 bg-black rounded-full"></div>
+                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-6 flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/>
+                          <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/>
+                        </svg>
                       </div>
                       <div>
-                        <div className="text-cyan-400 font-medium text-sm mb-2">{dictionary.home.force2.badge}</div>
+                        <div className="text-cyan-400 font-medium text-sm mb-2">FORCE 2 • DATA ANALYTICS & SEO</div>
                       </div>
                     </div>
                     
                     <AnimatedElement type="fadeIn" delay={0.4}>
                       <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        {dictionary.home.force2.title_line1} <span className="text-cyan-400 font-bold">{dictionary.home.force2.title_diagnostic}</span>.<br />
-                        {dictionary.home.force2.title_line2} <span className="text-cyan-400 font-bold">{dictionary.home.force2.title_intelligence}</span>.
+                        688 clients vs 49 concurrents : quand la <span className="text-cyan-400 font-bold">data</span><br />
+                        révèle l'<span className="text-cyan-400 font-bold">or caché</span>
                       </h3>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      {dictionary.home.force2.description}
+                      Pendant que vos concurrents achètent du trafic, nous récupérons 14,171 sessions "perdues" dans votre GA4. 
+                      Résultat : 14x plus de clients à budget égal.
                     </p>
                     
-                    {/* Arguments centrés sur 2 colonnes */}
+                    {/* Arguments Business Entrepreneur */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                       <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">{dictionary.home.force2.diagnostic.title}</div>
-                        <div className="text-gray-300 mb-4">{dictionary.home.force2.diagnostic.description}</div>
-                        <div className="text-cyan-400 text-sm">{dictionary.home.force2.diagnostic.subtitle}</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">Sessions invisibles récupérées</div>
+                        <div className="text-gray-300 mb-4">14,171 sessions "Unassigned" révélées dans GA4. ROI caché de CHF 47,000 découvert.</div>
+                        <div className="text-cyan-400 text-sm">Forensics data + attribution multi-canal</div>
                       </div>
                       
                       <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">{dictionary.home.force2.traffic.title}</div>
-                        <div className="text-gray-300 mb-4">{dictionary.home.force2.traffic.description}</div>
-                        <div className="text-cyan-400 text-sm">{dictionary.home.force2.traffic.subtitle}</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">Organique vs payant révélé</div>
+                        <div className="text-gray-300 mb-4">688 conversions organiques vs 49 payantes (Culture Peinture). Budget pub optimisé -70%.</div>
+                        <div className="text-cyan-400 text-sm">GA4 + Search Console + attribution</div>
                       </div>
                       
                       <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">{dictionary.home.force2.optimization.title}</div>
-                        <div className="text-gray-300 mb-4">{dictionary.home.force2.optimization.description}</div>
-                        <div className="text-cyan-400 text-sm">{dictionary.home.force2.optimization.subtitle}</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">SEO technique + contenu</div>
+                        <div className="text-gray-300 mb-4">68.6% engagement SEO vs 44.6% direct. Trafic qualifié qui convertit mieux.</div>
+                        <div className="text-cyan-400 text-sm">Stratégie long terme + ROI cumulé</div>
                       </div>
                       
                       <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">{dictionary.home.force2.roi.title}</div>
-                        <div className="text-gray-300 mb-4">{dictionary.home.force2.roi.description}</div>
-                        <div className="text-cyan-400 text-sm">{dictionary.home.force2.roi.subtitle}</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">Dashboard temps réel</div>
+                        <div className="text-gray-300 mb-4">Tracking précis + alertes automatiques. Pilotage business data-driven quotidien.</div>
+                        <div className="text-cyan-400 text-sm">Looker Studio + GA4 + automations</div>
                       </div>
                     </div>
                     
@@ -347,58 +351,61 @@ export default async function Home() {
               </div>
             </AnimatedElement>
             
-            {/* FORCE 3: Data-Driven Decision Making */}
+            {/* FORCE 3: Développement & IA Revolution pour Entrepreneurs */}
             <AnimatedElement type="slideUp" delay={0.5}>
-              <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group hover:scale-[1.02]">
+              <div className="backdrop-blur-sm border border-green-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-green-400/40 hover:shadow-2xl hover:shadow-green-400/10 transition-all duration-500 group hover:scale-[1.02]">
               {/* Layout asymétrique diagonal */}
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 h-full">
                 {/* Contenu principal - 3 colonnes */}
-                <div className="col-span-3 p-16 bg-gradient-to-br from-purple-900/20 to-black/60">
+                <div className="col-span-3 p-16 bg-gradient-to-br from-green-900/20 to-black/60">
                   <div className="max-w-3xl">
                     <div className="flex items-center mb-8">
-                      <div className="w-16 h-16 bg-purple-400 rounded-full mr-6 flex items-center justify-center">
-                        <div className="w-8 h-8 bg-black rounded-full"></div>
+                      <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full mr-6 flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                        </svg>
                       </div>
                       <div>
-                        <div className="text-purple-400 font-medium text-sm mb-2">{dictionary.home.force3.badge}</div>
+                        <div className="text-green-400 font-medium text-sm mb-2">FORCE 3 • DÉVELOPPEMENT & IA</div>
                       </div>
                     </div>
                     
                     <AnimatedElement type="slideRight" delay={0.4}>
                       <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        {dictionary.home.force3.title_line1} <span className="text-purple-400 font-bold">{dictionary.home.force3.title_data}</span>.<br />
-                        {dictionary.home.force3.title_line2} <span className="text-purple-400 font-bold">{dictionary.home.force3.title_science}</span>.
+                        Next.js 15 × Claude IA : votre <span className="text-green-400 font-bold">site</span><br />
+                        évolue pendant que vous <span className="text-green-400 font-bold">dormez</span>
                       </h3>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      {dictionary.home.force3.description}
+                      Fini les sites statiques qui vieillissent mal. Notre architecture IA s'adapte, s'optimise et 
+                      prédit les besoins de vos clients en temps réel.
                     </p>
                     
-                    {/* Arguments avec data forte */}
+                    {/* Arguments Business Entrepreneur */}
                     <div className="space-y-6 mb-10">
-                      <div className="bg-gradient-to-r from-purple-400/10 to-transparent rounded-lg p-6 border-l-4 border-purple-400">
+                      <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400">
                         <div className="flex justify-between items-start mb-3">
-                          <div className="font-semibold text-purple-400">{dictionary.home.force3.revolution.title}</div>
-                          <div className="text-purple-400 font-bold text-lg">{dictionary.home.force3.revolution.roi}</div>
+                          <div className="font-semibold text-green-400">Architecture évolutive garantie</div>
+                          <div className="text-green-400 font-bold text-lg">0 refonte en 5 ans</div>
                         </div>
-                        <div className="text-gray-300">{dictionary.home.force3.revolution.description}</div>
-                        <div className="text-purple-300 text-sm mt-2">{dictionary.home.force3.revolution.subtitle}</div>
+                        <div className="text-gray-300">Next.js 15 + TypeScript. Stack moderne qui grandit avec votre business. Migrations automatiques.</div>
+                        <div className="text-green-300 text-sm mt-2">Composants modulaires + API évolutives</div>
                       </div>
                       
-                      <div className="bg-gradient-to-r from-purple-400/10 to-transparent rounded-lg p-6 border-l-4 border-purple-400">
+                      <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400">
                         <div className="flex justify-between items-start mb-3">
-                          <div className="font-semibold text-purple-400">{dictionary.home.force3.cost.title}</div>
-                          <div className="text-purple-400 font-bold text-lg">{dictionary.home.force3.cost.reduction}</div>
+                          <div className="font-semibold text-green-400">Performance technique mesurée</div>
+                          <div className="text-green-400 font-bold text-lg">&lt; 2s chargement</div>
                         </div>
-                        <div className="text-gray-300">{dictionary.home.force3.cost.description}</div>
-                        <div className="text-purple-300 text-sm mt-2">{dictionary.home.force3.cost.subtitle}</div>
+                        <div className="text-gray-300">Core Web Vitals optimaux. SEO technique + vitesse = meilleur ranking Google automatique.</div>
+                        <div className="text-green-300 text-sm mt-2">Lighthouse 90+ score garanti</div>
                       </div>
                       
-                      <div className="bg-gradient-to-r from-purple-400/5 to-transparent rounded-lg p-6 border-l-4 border-purple-300">
-                        <div className="font-semibold text-purple-400 mb-3">{dictionary.home.force3.tracking.title}</div>
-                        <div className="text-gray-300">{dictionary.home.force3.tracking.description}</div>
-                        <div className="text-purple-300 text-sm mt-2">{dictionary.home.force3.tracking.subtitle}</div>
+                      <div className="bg-gradient-to-r from-green-400/5 to-transparent rounded-lg p-6 border-l-4 border-green-300">
+                        <div className="font-semibold text-green-400 mb-3">Collaboration humain × IA</div>
+                        <div className="text-gray-300">Claude IA génère le code, expert humain valide et optimise. Productivité +200%, qualité garantie.</div>
+                        <div className="text-green-300 text-sm mt-2">Première collaboration officielle agence × IA</div>
                       </div>
                     </div>
                     
