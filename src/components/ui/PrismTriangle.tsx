@@ -41,7 +41,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
   ]
 
   return (
-    <div className={`relative w-full max-w-4xl mx-auto h-96 ${className}`}>
+    <div className={`relative w-full max-w-6xl mx-auto h-[600px] ${className}`}>
       {/* Triangle Central - Prisme Effect */}
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
@@ -50,8 +50,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          {/* Triangle Principal avec effet 3D */}
-          <div className="relative w-64 h-56">
+          {/* Triangle Principal avec effet 3D - XL SIZE */}
+          <div className="relative w-96 h-80">
             {/* Face avant du prisme */}
             <motion.div
               className="absolute inset-0 triangle-shape bg-gradient-to-br from-black/80 via-gray-900/60 to-black/90 border border-yellow-400/30 backdrop-blur-sm"
@@ -71,10 +71,10 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
               className="absolute triangle-right bg-gradient-to-bl from-yellow-400/20 to-black/60 border-l border-yellow-400/20"
               style={{
                 clipPath: 'polygon(0% 100%, 50% 0%, 100% 85%, 50% 100%)',
-                right: '-20px',
-                top: '10px',
-                width: '140px',
-                height: '200px',
+                right: '-30px',
+                top: '15px',
+                width: '200px',
+                height: '280px',
                 transform: 'skewY(-10deg)'
               }}
               initial={{ opacity: 0, x: 20 }}
@@ -84,7 +84,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
             
             {/* Lumière centrale - effet Pink Floyd */}
             <motion.div
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-8 bg-white opacity-90"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-12 bg-white opacity-90"
               initial={{ scaleY: 0 }}
               animate={{ scaleY: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
@@ -99,8 +99,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
             <motion.div
               className="absolute w-1 bg-gradient-to-r from-white via-cyan-400 to-cyan-500 opacity-80"
               style={{
-                height: '120px',
-                top: '-60px',
+                height: '180px',
+                top: '-90px',
                 left: '50%',
                 transform: 'translateX(-50%) rotate(-15deg)',
                 transformOrigin: 'bottom',
@@ -115,8 +115,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
             <motion.div
               className="absolute w-1 bg-gradient-to-r from-white via-green-400 to-green-500 opacity-80"
               style={{
-                height: '120px',
-                bottom: '-60px',
+                height: '180px',
+                bottom: '-90px',
                 left: '20%',
                 transform: 'rotate(-135deg)',
                 transformOrigin: 'top',
@@ -131,8 +131,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
             <motion.div
               className="absolute w-1 bg-gradient-to-r from-white via-purple-400 to-pink-500 opacity-80"
               style={{
-                height: '120px',
-                bottom: '-60px',
+                height: '180px',
+                bottom: '-90px',
                 right: '20%',
                 transform: 'rotate(-45deg)',
                 transformOrigin: 'top',

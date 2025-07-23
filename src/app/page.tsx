@@ -186,15 +186,15 @@ export default async function Home() {
           
           <div className="space-y-20">
             
-            {/* FORCE 1: Design & Expérience Utilisateur */}
+            {/* FORCE 1: Design & UX/UI Revolution pour Entrepreneurs */}
             <AnimatedElement type="slideUp" delay={0.1}>
-              <div className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-yellow-400/40 hover:shadow-2xl hover:shadow-yellow-400/10 transition-all duration-500 group hover:scale-[1.02]">
+              <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group hover:scale-[1.02]">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 h-full">
                 {/* Graphique à gauche - Layout créatif */}
-                <div className="bg-gradient-to-br from-yellow-400/10 to-black/60 p-8 flex items-center">
+                <div className="bg-gradient-to-br from-purple-400/10 to-black/60 p-8 flex items-center">
                   <GraphiqueConversion
-                    title={dictionary.home.charts.conversion.title}
-                    subtitle={dictionary.home.charts.conversion.subtitle}
+                    title="Conversion rate"
+                    subtitle="OSOM vs industrie"
                     traditionalRate={2.5}
                     osomRate={11.3}
                     className="w-full border-0"
@@ -205,40 +205,43 @@ export default async function Home() {
                 <div className="col-span-2 p-16 bg-gradient-to-br from-black/60 to-black/30">
                   <div className="max-w-3xl">
                     <div className="flex items-center mb-8">
-                      <div className="w-16 h-16 bg-yellow-400 rounded-full mr-6 flex items-center justify-center">
-                        <div className="w-8 h-8 bg-black rounded-full"></div>
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mr-6 flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
                       </div>
                       <div>
-                        <div className="text-yellow-400 font-medium text-sm mb-2">{dictionary.home.force1.badge}</div>
+                        <div className="text-purple-400 font-medium text-sm mb-2">FORCE 1 • DESIGN & UX/UI</div>
                       </div>
                     </div>
                     
                     <AnimatedElement type="slideLeft" delay={0.3}>
                       <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        {dictionary.home.force1.title_line1} <span className="text-yellow-400 font-bold">{dictionary.home.force1.title_données}</span>.<br />
-                        {dictionary.home.force1.title_line2} <span className="text-yellow-400 font-bold">{dictionary.home.force1.title_science}</span>.
+                        11.3% de conversion : comment votre <span className="text-purple-400 font-bold">design</span><br />
+                        devient une <span className="text-purple-400 font-bold">machine à vendre</span>
                       </h3>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      {dictionary.home.force1.description}
+                      Votre concurrent attire autant de visiteurs que vous, mais convertit 4.5x moins. 
+                      La différence ? Chaque pixel de nos designs est optimisé pour vendre.
                     </p>
                     
-                    {/* Arguments renforcés */}
+                    {/* Arguments Business Entrepreneur */}
                     <div className="space-y-6 mb-10">
-                      <div className="bg-yellow-400/5 rounded-lg p-4 border-l-4 border-yellow-400">
-                        <div className="font-semibold text-yellow-400 mb-2">{dictionary.home.force1.architecture.title}</div>
-                        <div className="text-gray-300">{dictionary.home.force1.architecture.description}</div>
+                      <div className="bg-purple-400/5 rounded-lg p-4 border-l-4 border-purple-400">
+                        <div className="font-semibold text-purple-400 mb-2">Psychologie comportementale appliquée</div>
+                        <div className="text-gray-300">68.6% d'engagement vs 44.6% sites classiques. Eye-tracking + heatmaps = parcours optimal.</div>
                       </div>
                       
-                      <div className="bg-yellow-400/5 rounded-lg p-4 border-l-4 border-yellow-400">
-                        <div className="font-semibold text-yellow-400 mb-2">{dictionary.home.force1.performance.title}</div>
-                        <div className="text-gray-300">{dictionary.home.force1.performance.description}</div>
+                      <div className="bg-purple-400/5 rounded-lg p-4 border-l-4 border-purple-400">
+                        <div className="font-semibold text-purple-400 mb-2">ROI design mesurable</div>
+                        <div className="text-gray-300">+350% revenus à trafic égal. Chaque modification A/B testée sur données réelles.</div>
                       </div>
                       
-                      <div className="bg-yellow-400/5 rounded-lg p-4 border-l-4 border-yellow-400">
-                        <div className="font-semibold text-yellow-400 mb-2">{dictionary.home.force1.technologies.title}</div>
-                        <div className="text-gray-300">{dictionary.home.force1.technologies.description}</div>
+                      <div className="bg-purple-400/5 rounded-lg p-4 border-l-4 border-purple-400">
+                        <div className="font-semibold text-purple-400 mb-2">Mobile-first garanti</div>
+                        <div className="text-gray-300">77% de vos clients naviguent mobile. Interface tactile optimisée, chargement &lt; 2 secondes.</div>
                       </div>
                     </div>
                     
