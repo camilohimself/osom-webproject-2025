@@ -1,9 +1,5 @@
-'use client'
-
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
-
 export const metadata = {
   title: 'Agence Web Valais 140x Plus Performante - 688 Clients/6 Mois | OSOM',
   description: '688 clients générés en 6 mois pour Culture Peinture Genève. Agence web 140x plus performante que publicité payante. 2 places disponibles ce mois. 4500 CHF tout inclus.',
@@ -11,6 +7,10 @@ export const metadata = {
 }
 
 // VERSION ÉQUILIBRÉE - CEO + TECH GRANDIOSE + MÉTAPHORE MOTEURS
+'use client'
+
+import { useState } from 'react'
+
 export default function CreationSiteWebPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   
