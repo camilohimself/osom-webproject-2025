@@ -9,9 +9,9 @@ declare global {
   }
 }
 
-// GA4 Configuration
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX';
-export const HOTJAR_ID = process.env.NEXT_PUBLIC_HOTJAR_ID || '1234567';
+// GA4 Configuration - Safe defaults for development
+export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-DEVELOPMENT';
+export const HOTJAR_ID = process.env.NEXT_PUBLIC_HOTJAR_ID || '0000000';
 
 // Enhanced Event Tracking
 interface AnalyticsEvent {
@@ -36,8 +36,10 @@ export const trackPageView = (url: string, title: string) => {
       }
     });
 
-    // Hotjar Page Tracking
-    window.hj?.('stateChange', url);
+    // Hotjar Page Tracking - Safe call
+    if (window.hj && typeof window.hj === 'function') {
+      window.hj('stateChange', url);
+    }
   }
 };
 
@@ -54,8 +56,10 @@ export const trackEvent = ({ action, category, label, value, custom_parameters }
       ...custom_parameters
     });
 
-    // Hotjar Event Tracking
-    window.hj?.('event', action);
+    // Hotjar Event Tracking - Safe call
+    if (window.hj && typeof window.hj === 'function') {
+      window.hj('event', action);
+    }
   }
 };
 
@@ -114,11 +118,13 @@ export const trackLead = (leadData: LeadData) => {
     }
   });
 
-  // Hotjar Identify User
-  window.hj?.('identify', leadData.email, {
-    source: leadData.source,
-    intent_score: leadData.intent_score
-  });
+  // Hotjar Identify User - Safe call
+  if (window.hj && typeof window.hj === 'function') {
+    window.hj('identify', leadData.email, {
+      source: leadData.source,
+      intent_score: leadData.intent_score
+    });
+  }
 };
 
 // Interactive Element Tracking (Premium Components)
