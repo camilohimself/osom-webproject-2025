@@ -165,3 +165,14 @@ Site accessible: http://localhost:3000
 - ✅ **Stack traduit** : SEMrush + GA + Claude Code
 - ✅ **Sans emojis** : Clean & professionnel
 - ✅ **Thème jaune** : Yellow-400 (#FACC15) appliqué
+
+### VERSION CEO-FRIENDLY - Révolution UX
+- ✅ **Sauvegarde** : Composants magnifiques → page-advanced.tsx
+- ✅ **Simplification extrême** : 5 sections → 3 sections
+- ✅ **Psychologie décisionnelle** : Scan-Decide-Act (60 sec max)
+- ✅ **Hero 5 sec** : "688 clients en 6 mois" + urgence
+- ✅ **Social proof visuel** : Case study Culture Peinture simplifié
+- ✅ **CTA final** : "2 places restantes" + friction zéro
+- ✅ **Mobile-first radical** : Touch-friendly + loading < 2sec
+- ✅ **Réduction surcharge** : 60% contenu supprimé
+- ✅ **Focus business pur** : Métriques concrètes uniquement
