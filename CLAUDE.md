@@ -123,6 +123,11 @@
 - ✅ Case studies avec KPI réels intégrés
 - ✅ **Marketing ecosystem complet** : Acquisition + Content + Creative
 
+### Consignes Importantes
+**ANONYMAT OBLIGATOIRE** : Tous les exemples clients doivent être anonymisés à partir de maintenant. Utiliser "Client PME", "Entreprise locale", "Société B2B" au lieu de noms réels.
+
+**DEVISE OBLIGATOIRE** : Tous les montants sont systématiquement en CHF (francs suisses). Toujours préciser "CHF" après chaque prix, coût, économie, ROI, budget mentionné.
+
 ### Commandes Utiles
 ```bash
 npm run dev          # Serveur développement
