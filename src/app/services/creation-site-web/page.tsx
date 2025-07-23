@@ -187,7 +187,7 @@ export default function CreationSiteWebPage() {
                   </div>
                   
                   <div className="bg-black/60 rounded-xl p-4 font-mono text-sm overflow-hidden">
-                    <div className="text-green-400 mb-2">// Votre site web se construit...</div>
+                    <div className="text-green-400 mb-2">{/* Votre site web se construit... */}</div>
                     <div className="text-blue-400 inline">const </div>
                     <div className="text-yellow-400 inline">votreSite </div>
                     <div className="text-white inline">= &#123;</div>

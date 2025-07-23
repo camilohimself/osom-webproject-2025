@@ -175,7 +175,7 @@ export default function MarketingAutomationCRMPage() {
                   </div>
                   
                   <div className="bg-black/60 rounded-xl p-4 font-mono text-sm overflow-hidden">
-                    <div className="text-blue-400 mb-2">// Expert configure HubSpot</div>
+                    <div className="text-blue-400 mb-2">{/* Expert configure HubSpot */}</div>
                     <div className="text-green-400 inline">const </div>
                     <div className="text-yellow-400 inline">crmSetup </div>
                     <div className="text-white inline">= &#123;</div>

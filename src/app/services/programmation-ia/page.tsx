@@ -670,7 +670,7 @@ export default function ProgrammationIAPage() {
                   </div>
                   
                   <div className="bg-black/60 rounded-xl p-4 font-mono text-sm overflow-hidden">
-                    <div className="text-cyan-400 mb-2">// Vision créative Culture Peinture</div>
+                    <div className="text-cyan-400 mb-2">{/* Vision créative Culture Peinture */}</div>
                     <div className="text-green-400 inline">const </div>
                     <div className="text-yellow-400 inline">campagneVirale </div>
                     <div className="text-white inline">= &#123;</div>
@@ -738,26 +738,26 @@ export default function ProgrammationIAPage() {
                 <h3 className="text-2xl font-bold text-white text-center mb-8">Code Collaboratif Culture Peinture</h3>
                 
                 <div className="bg-black/60 rounded-xl p-6 font-mono text-sm">
-                  <div className="text-yellow-400 mb-4">// Fusion créativité humaine × optimisation Claude</div>
+                  <div className="text-yellow-400 mb-4">{/* Fusion créativité humaine × optimisation Claude */}</div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <div className="text-cyan-400 mb-2">/* Concept Humain */</div>
+                      <div className="text-cyan-400 mb-2">{/* Concept Humain */}</div>
                       <div className="text-green-400">function </div>
                       <div className="text-white inline">createViralContent() &#123;</div>
-                      <div className="ml-4 text-gray-300">// Emotion authentique</div>
-                      <div className="ml-4 text-gray-300">// Storytelling captivant</div>
-                      <div className="ml-4 text-gray-300">// Hook irrésistible</div>
+                      <div className="ml-4 text-gray-300">{/* Emotion authentique */}</div>
+                      <div className="ml-4 text-gray-300">{/* Storytelling captivant */}</div>
+                      <div className="ml-4 text-gray-300">{/* Hook irrésistible */}</div>
                       <div className="text-white">&#125;</div>
                     </div>
                     
                     <div>
-                      <div className="text-purple-400 mb-2">/* Optimisation Claude */</div>
+                      <div className="text-purple-400 mb-2">{/* Optimisation Claude */}</div>
                       <div className="text-green-400">function </div>
                       <div className="text-white inline">optimizePerformance() &#123;</div>
-                      <div className="ml-4 text-gray-300">// Prédiction viralité: 2.4M</div>
-                      <div className="ml-4 text-gray-300">// Tracking précis: 688</div>
-                      <div className="ml-4 text-gray-300">// ROI calculé: 140x</div>
+                      <div className="ml-4 text-gray-300">{/* Prédiction viralité: 2.4M */}</div>
+                      <div className="ml-4 text-gray-300">{/* Tracking précis: 688 */}</div>
+                      <div className="ml-4 text-gray-300">{/* ROI calculé: 140x */}</div>
                       <div className="text-white">&#125;</div>
                     </div>
                   </div>
