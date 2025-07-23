@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, type Locale } from '@/lib/i18n'
 import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImpact } from '@/components/ui'
+import PrismTriangle from '@/components/ui/PrismTriangle'
 import { cookies } from 'next/headers'
 import HeroPremium from '@/components/homepage/HeroPremium'
 import AnimatedElement from '@/components/ui/AnimatedElement'
@@ -166,12 +167,20 @@ export default async function Home() {
                 <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
                 <span className="text-yellow-400 text-sm font-medium tracking-wide">{dictionary.home.forces.badge}</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                {dictionary.home.forces.title} <span className="text-yellow-400 font-bold">{dictionary.home.forces.title_service}</span>
+              <h2 className="text-4xl md:text-6xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Comment OSOM utilise la <span className="text-yellow-400 font-bold">data</span><br />
+                <span className="text-2xl md:text-3xl text-gray-300">pour le bénéfice de votre entreprise ?</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                {dictionary.home.forces.subtitle}
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Notre expertise repose sur 3 piliers complémentaires. Chaque décision est guidée par la data pour maximiser votre retour sur investissement.
               </p>
+            </div>
+          </AnimatedElement>
+
+          {/* Triangle Prisme Magnifique - Pink Floyd Style */}
+          <AnimatedElement type="fadeIn" delay={0.5}>
+            <div className="mb-32">
+              <PrismTriangle className="mb-16" />
             </div>
           </AnimatedElement>
           
