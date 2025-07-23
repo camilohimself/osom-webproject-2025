@@ -1,191 +1,147 @@
-import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
-import RevolutionaryDashboardHero from '@/components/ui/RevolutionaryDashboardHero'
-import TechStackCarousel from '@/components/ui/TechStackCarousel'
-import DeveloperJourneyTimeline from '@/components/ui/DeveloperJourneyTimeline'
-import EngineChoice from '@/components/ui/EngineChoice'
-import { MetricsPulse, ComparisonChart, ProgressMeter } from '@/components/charts'
-import { GraphiqueLinear } from '@/components/ui'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Agence Web Valais 140x Plus Performante - 688 Clients/6 Mois | OSOM',
-  description: 'Site Web VALAIS révolutionnaire : 11.3% conversion vs 2-3% industrie. 1718 recherches/mois captées. Culture Peinture : 688 vs 49 conversions. 4500 CHF, 45 jours.',
+  description: '688 clients générés en 6 mois pour Culture Peinture Genève. Agence web 140x plus performante que publicité payante. 2 places disponibles ce mois. 4500 CHF tout inclus.',
   keywords: 'création site internet valais, création site web valais, création de site internet valais, site internet valais, agence web valais, développement web valais, site web valais, création site vitrine valais'
 }
 
+// VERSION CEO-FRIENDLY - OPTIMISÉE DÉCISION RAPIDE PDG PME
 export default function CreationSiteWebPage() {
-  // HERO RÉVOLUTIONNAIRE - PDG VALAIS NON-TECHNIQUE
-  const heroMetrics = [
-    {
-      value: "11.3%",
-      label: "Plus de Prospects Automatiquement",
-      description: "vs 2-3% sites traditionnels Valais",
-      animatedValue: 11.3,
-      suffix: "%",
-      tooltip: {
-        title: "Votre Site Travaille 24h/24",
-        details: "Chaque visiteur a 4x plus de chances de devenir client",
-        highlight: "Pendant que vous dormez, votre site vend"
-      }
-    },
-    {
-      value: "4500 CHF",
-      label: "Investissement Transparent",
-      description: "Site complet livré en 45 jours ouvrés",
-      animatedValue: 4500,
-      suffix: " CHF",
-      tooltip: {
-        title: "Tout Inclus - Aucun Frais Cachés",
-        details: "Design + Développement + SEO + Hébergement 1 an + Formation",
-        highlight: "Garantie satisfaction ou remboursement"
-      }
-    },
-    {
-      value: "140x",
-      label: "Plus Performant Que Concurrence",
-      description: "688 clients en 6 mois vs 49 publicité payante",
-      animatedValue: 140,
-      suffix: "x",
-      tooltip: {
-        title: "Résultat Client Réel - Culture Peinture Genève",
-        details: "200+ jours de données Google Analytics vérifiées",
-        highlight: "14x plus efficace que publicité payante traditionnelle"
-      }
-    }
-  ]
-
-  const proofContent = (
-    <div className="space-y-8">
-      {/* GraphiqueLinear - Conversion Performance */}
-      <GraphiqueLinear
-        title="Résultats Client Réel"
-        subtitle="Culture Peinture Genève - 200+ jours de données vérifiées"
-        primaryMetric={{
-          label: "Site Web OSOM",
-          value: "688 clients générés",
-          color: "#EAB308"
-        }}
-        secondaryMetric={{
-          label: "Publicité payante",
-          value: "49 conversions",
-          color: "#6B7280"
-        }}
-        improvement={{
-          label: "Performance Supérieure",
-          value: "14x plus efficace"
-        }}
-        backgroundColor="rgba(15, 23, 42, 0.8)"
-        className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
-      />
-
-      {/* Metrics with Dynamic Charts */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <MetricsPulse
-          value={11.3}
-          suffix="%"
-          label="Votre Site Génère Plus de Clients"
-          description="vs 2-3% sites traditionnels"
-          color="#ffd507"
-        />
-        <MetricsPulse
-          value={4693}
-          suffix="%"
-          label="Retour sur Investissement"
-          description="Culture Peinture - 688 clients générés"
-          color="#ffd507"
-        />
-      </div>
-
-      {/* Engagement Quality */}
-      <div className="pt-6 border-t border-gray-700">
-        <ProgressMeter
-          percentage={85}
-          label="Score Performance Global"
-          color="#ffd507"
-          comparison={{
-            label: "Sites standards",
-            percentage: 22
-          }}
-          description="PageSpeed + SEO + Conversions"
-        />
-      </div>
-    </div>
-  )
 
   return (
     <div className="min-h-screen bg-black">
-      {/* HÉRO RÉVOLUTIONNAIRE DASHBOARD */}
-      <RevolutionaryDashboardHero
-        title="Agence Web 140x Plus Performante"
-        subtitle="688 clients générés en 6 mois - 2 places disponibles ce mois"
-        description="Votre entreprise mérite plus de clients. Nous créons des sites web qui travaillent 24h/24 pour vous. Culture Peinture Genève : 688 clients générés automatiquement vs 49 avec publicité payante. Stack technique moderne : SEMrush + Google Analytics + Claude Code pour résultats mesurables."
-        metrics={heroMetrics}
-        ctaText="Réserver 1 des 2 Places Restantes"
-        color="#ffd507"
-      />
-
-      {/* TECH STACK CAROUSEL RÉVOLUTIONNAIRE */}
-      <TechStackCarousel
-        title="Outils Professionnels"
-        subtitle="Résultats Mesurables"
-        description="Nous utilisons les mêmes outils que Google et les grandes entreprises : SEMrush pour analyser votre marché, PageSpeed pour la vitesse, Google Analytics pour mesurer vos résultats. Plus de 1718 recherches/mois captées grâce à notre expertise technique."
-      />
-
-      {/* DEVELOPER JOURNEY TIMELINE RÉVOLUTIONNAIRE */}
-      <DeveloperJourneyTimeline
-        title="Processus Simple en 45 Jours"
-        subtitle="Semaines 1-2 : Stratégie + Design - Vous validez chaque étape. Semaines 3-4 : Développement + Tests - Transparence totale. Semaines 5-6 : SEO + Optimisation - Résultats mesurables. Semaine 7 : Formation + Lancement - Autonomie garantie."
-      />
-
-      {/* POURQUOI CES MOTEURS? - SIMPLIFICATION RÉVOLUTIONNAIRE */}
-      <EngineChoice
-        title="Pourquoi Nous Choisir ?"
-        subtitle="Sites 3x plus rapides = moins de visiteurs qui partent. Contenu optimisé IA = 1718 recherches captées automatiquement. Suivi transparent = vous voyez vos résultats en temps réel."
-      />
-
-      {/* SECTION PRICING */}
-      <section 
-        className="py-24 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, #ffd50705, transparent, #ffd50705)` }}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
-            Investissement <span className="font-bold text-yellow-400">Transparent</span>
-          </h2>
-          
-          <div className="bg-black/80 backdrop-blur-xl rounded-3xl p-12 border border-yellow-400/40 mb-12">
-            <div className="text-6xl font-light text-yellow-400 mb-4">
-              4500 CHF
+      {/* HERO SECTION - SCAN 5 SECONDES */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 via-transparent to-transparent" />
+        
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-block px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-400 text-sm font-medium mb-6">
+              Plus que 2 places disponibles ce mois
             </div>
-            <div className="text-2xl text-white mb-6">Service Complet</div>
-            <div className="text-gray-300 mb-8 text-lg">
-              Tout inclus, aucun frais caché. Votre site génère des prospects pendant que vous vous concentrez sur votre métier. Formation incluse pour que vous restiez autonome. Garantie satisfaction ou remboursement.
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mb-8">
-              {[
-                "Design qui convertit (11.3% vs 2-3%)",
-                "Mobile parfait (80% de vos clients)",
-                "Google vous trouve automatiquement",
-                "Résultats mesurables en temps réel", 
-                "Formation pour rester autonome",
-                "Livraison garantie 45 jours ouvrés"
-              ].map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <span className="text-green-400 text-lg">✓</span>
-                  <span className="text-gray-300">{feature}</span>
-                </div>
-              ))}
-            </div>
+            <h1 className="text-5xl md:text-7xl font-light text-white mb-6">
+              <span className="font-bold text-yellow-400">688 clients</span> générés<br />en 6 mois
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Culture Peinture Genève a généré 688 nouveaux clients avec leur site OSOM.<br />
+              <span className="text-yellow-400 font-semibold">140x plus efficace</span> que leur ancienne publicité payante.
+            </p>
           </div>
 
           <Link
             href="/contact"
-            className="inline-block px-12 py-5 rounded-2xl font-bold text-lg shadow-2xl text-black"
+            className="inline-block px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-12 transform hover:scale-105 transition-all duration-300"
             style={{ background: 'linear-gradient(135deg, #ffd507, #ffd507dd)' }}
           >
-            Réserver Mon Audit Gratuit →
+            Réserver Ma Place →
           </Link>
+
+          <div className="text-sm text-gray-400">
+            Audit gratuit • Sans engagement • Résultats garantis
+          </div>
+        </div>
+      </section>
+
+      {/* SOCIAL PROOF - CONFIANCE 30 SECONDES */}
+      <section className="py-24 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
+              Résultats <span className="font-bold text-yellow-400">Vérifiés</span>
+            </h2>
+          </div>
+
+          {/* Case Study Visuel Simple */}
+          <div className="bg-gray-900/50 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-yellow-400/20 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="text-yellow-400 font-semibold mb-2">CULTURE PEINTURE • GENÈVE</div>
+                <h3 className="text-3xl font-light text-white mb-6">
+                  "Mon site me génère plus de clients que toute ma publicité"
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center p-4 bg-black/40 rounded-xl">
+                    <span className="text-gray-300">Site OSOM</span>
+                    <span className="text-yellow-400 font-bold text-xl">688 clients</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-black/40 rounded-xl">
+                    <span className="text-gray-300">Publicité payante</span>
+                    <span className="text-gray-400 font-bold text-xl">49 clients</span>
+                  </div>
+                </div>
+                <div className="mt-6 text-sm text-gray-400">
+                  Données Google Analytics • 200+ jours vérifiés
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-6xl md:text-8xl font-light text-yellow-400 mb-4">
+                  140x
+                </div>
+                <div className="text-xl text-white">
+                  Plus performant
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Logos Entreprises Valais */}
+          <div className="text-center">
+            <div className="text-gray-400 mb-8">Ils nous font confiance en Valais</div>
+            <div className="flex justify-center items-center space-x-8 opacity-50">
+              <div className="text-white font-semibold">CULTURE PEINTURE</div>
+              <div className="text-white font-semibold">ARTISANE LUMIÈRE</div>
+              <div className="text-white font-semibold">+ 15 AUTRES</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA FINAL - ACTION 10 SECONDES */}
+      <section className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-400/5 to-transparent" />
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-black/80 backdrop-blur-xl rounded-3xl p-12 border border-yellow-400/40">
+            <div className="mb-8">
+              <div className="text-yellow-400 font-semibold mb-4">FORMULE TOUT INCLUS</div>
+              <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4">
+                4500 CHF
+              </div>
+              <div className="text-xl text-gray-300 mb-8">
+                Site qui génère des clients • Livré en 45 jours • Formation incluse
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <div className="text-center">
+                <div className="text-yellow-400 font-bold text-2xl mb-2">688</div>
+                <div className="text-gray-300">Clients générés en 6 mois</div>
+              </div>
+              <div className="text-center">
+                <div className="text-yellow-400 font-bold text-2xl mb-2">45</div>
+                <div className="text-gray-300">Jours de livraison</div>
+              </div>
+              <div className="text-center">
+                <div className="text-yellow-400 font-bold text-2xl mb-2">2</div>
+                <div className="text-gray-300">Places restantes ce mois</div>
+              </div>
+            </div>
+
+            <Link
+              href="/contact"
+              className="inline-block px-16 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-6 transform hover:scale-105 transition-all duration-300"
+              style={{ background: 'linear-gradient(135deg, #ffd507, #ffd507dd)' }}
+            >
+              Réserver Ma Place Maintenant
+            </Link>
+            
+            <div className="text-sm text-gray-400">
+              Audit gratuit 800 CHF offert • Call de 15min • Aucun engagement
+            </div>
+          </div>
         </div>
       </section>
     </div>
