@@ -188,12 +188,14 @@ export default function CreationSiteWebPage() {
                   
                   <div className="bg-black/60 rounded-xl p-4 font-mono text-sm overflow-hidden">
                     <div className="text-green-400 mb-2">// Votre site web se construit...</div>
-                    <div className="text-blue-400">const</div> <div className="text-yellow-400 inline">votreSite</div> <div className="text-white inline">= {</div>
-                    <div className="ml-4 text-white">vitesse: <span className="text-green-400">'0.8 secondes'</span>,</div>
-                    <div className="ml-4 text-white">conversion: <span className="text-green-400">'11.3%'</span>,</div>
-                    <div className="ml-4 text-white">position: <span className="text-green-400">'Top 3 Google'</span>,</div>
+                    <div className="text-blue-400 inline">const </div>
+                    <div className="text-yellow-400 inline">votreSite </div>
+                    <div className="text-white inline">= &#123;</div>
+                    <div className="ml-4 text-white">vitesse: <span className="text-green-400">&apos;0.8 secondes&apos;</span>,</div>
+                    <div className="ml-4 text-white">conversion: <span className="text-green-400">&apos;11.3%&apos;</span>,</div>
+                    <div className="ml-4 text-white">position: <span className="text-green-400">&apos;Top 3 Google&apos;</span>,</div>
                     <div className="ml-4 text-white">leads: <span className="text-green-400 animate-pulse">688</span></div>
-                    <div className="text-white">}</div>
+                    <div className="text-white">&#125;</div>
                     
                     <div className="mt-4 text-teal-400">✓ Site optimisé généré</div>
                     <div className="text-teal-400">✓ SEO configuré automatiquement</div>
