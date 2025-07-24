@@ -128,6 +128,8 @@
 
 **DEVISE OBLIGATOIRE** : Tous les montants sont systématiquement en CHF (francs suisses). Toujours préciser "CHF" après chaque prix, coût, économie, ROI, budget mentionné.
 
+**DESIGN OBLIGATOIRE** : JAMAIS d'emojis dans les projets OSOM. Interface clean et professionnelle uniquement.
+
 ### Commandes Utiles
 ```bash
 npm run dev          # Serveur développement
