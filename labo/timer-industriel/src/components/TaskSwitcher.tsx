@@ -68,10 +68,10 @@ export default function TaskSwitcher({
                       onClick={() => onTaskSelect(task)}
                       disabled={isActive}
                       className={`
-                        p-4 rounded-lg border-2 text-left transition-all duration-200
+                        p-5 rounded-lg border-2 text-left transition-all duration-200 min-h-20 touch-manipulation
                         ${isActive 
                           ? 'border-industrial-700 bg-industrial-100 opacity-50 cursor-not-allowed' 
-                          : `${getCategoryColor(task.category)} hover:border-opacity-100 hover:shadow-md active:scale-95`
+                          : `${getCategoryColor(task.category)} active:border-opacity-100 active:shadow-md active:scale-98`
                         }
                       `}
                     >

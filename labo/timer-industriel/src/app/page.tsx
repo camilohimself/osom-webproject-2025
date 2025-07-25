@@ -44,8 +44,8 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-industrial-100 p-4">
-      <div className="max-w-md mx-auto">
+    <div className="min-h-screen bg-industrial-100 p-3 mobile-safe-area">
+      <div className="max-w-sm mx-auto">
         {/* Header */}
         <header className="text-center mb-6">
           <h1 className="text-2xl font-bold text-industrial-800 mb-2">
@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="mb-6">
             <button
               onClick={handleStopTimer}
-              className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-xl min-h-16 touch-manipulation transition-colors"
+              className="w-full bg-red-600 active:bg-red-700 text-white font-bold py-6 px-6 rounded-lg text-lg min-h-20 touch-manipulation transition-colors"
             >
               Arrêter Timer
             </button>
@@ -80,23 +80,23 @@ export default function HomePage() {
 
         {/* Tabs */}
         <div className="mb-6">
-          <div className="flex bg-white rounded-lg p-1 shadow-sm">
+          <div className="flex bg-white rounded-lg p-2 shadow-sm">
             <button
               onClick={() => setActiveTab('scanner')}
-              className={`flex-1 py-3 px-4 rounded-md font-medium transition-colors ${
+              className={`flex-1 py-4 px-4 rounded-md font-medium transition-colors touch-target ${
                 activeTab === 'scanner'
                   ? 'bg-industrial-700 text-white'
-                  : 'text-industrial-600 hover:text-industrial-800'
+                  : 'text-industrial-600 active:text-industrial-800'
               }`}
             >
               Scanner QR
             </button>
             <button
               onClick={() => setActiveTab('manual')}
-              className={`flex-1 py-3 px-4 rounded-md font-medium transition-colors ${
+              className={`flex-1 py-4 px-4 rounded-md font-medium transition-colors touch-target ${
                 activeTab === 'manual'
                   ? 'bg-industrial-700 text-white'
-                  : 'text-industrial-600 hover:text-industrial-800'
+                  : 'text-industrial-600 active:text-industrial-800'
               }`}
             >
               Manuel

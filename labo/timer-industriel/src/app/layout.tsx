@@ -4,7 +4,13 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Timer Industriel - OSOM',
   description: 'Application de gestion du temps par QR code pour l\'industrie',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+  themeColor: '#334155',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Timer OSOM'
+  }
 }
 
 export default function RootLayout({

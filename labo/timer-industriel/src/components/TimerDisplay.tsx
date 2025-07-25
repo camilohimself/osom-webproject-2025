@@ -71,16 +71,16 @@ export default function TimerDisplay({
       </div>
 
       {/* Nom de la tâche */}
-      <h2 className="text-2xl font-bold text-industrial-800 mb-6 text-center">
+      <h2 className="text-xl font-bold text-industrial-800 mb-4 text-center">
         {currentTask.name}
       </h2>
 
       {/* Timer principal */}
-      <div className="text-center mb-6">
-        <div className="text-6xl font-mono font-bold text-industrial-900 mb-2">
+      <div className="text-center mb-4">
+        <div className="text-4xl font-mono font-bold text-industrial-900 mb-2">
           {formatTime(elapsedTime)}
         </div>
-        <p className="text-industrial-600">
+        <p className="text-industrial-600 text-sm">
           Temps écoulé
         </p>
       </div>

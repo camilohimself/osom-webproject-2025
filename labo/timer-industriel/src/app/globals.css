@@ -5,23 +5,59 @@
 @layer base {
   html {
     font-family: system-ui, sans-serif;
+    font-size: 16px;
   }
   
   body {
     @apply bg-industrial-100 text-industrial-900;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  input, textarea {
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
   }
 }
 
 @layer components {
   .btn-industrial {
-    @apply bg-industrial-700 hover:bg-industrial-800 text-white font-bold py-4 px-8 rounded-lg text-xl min-h-16 touch-manipulation;
+    @apply bg-industrial-700 active:bg-industrial-800 text-white font-bold py-5 px-6 rounded-lg text-lg min-h-20 touch-manipulation;
+    font-size: 18px;
+    line-height: 1.2;
+    transition: all 0.15s ease;
   }
   
   .btn-safety {
-    @apply bg-safety-500 hover:bg-safety-600 text-white font-bold py-4 px-8 rounded-lg text-xl min-h-16 touch-manipulation;
+    @apply bg-safety-500 active:bg-safety-600 text-white font-bold py-5 px-6 rounded-lg text-lg min-h-20 touch-manipulation;
+    font-size: 18px;
+    line-height: 1.2;
+    transition: all 0.15s ease;
   }
   
   .card-industrial {
-    @apply bg-white rounded-lg shadow-lg border border-industrial-200 p-6;
+    @apply bg-white rounded-lg shadow-lg border border-industrial-200 p-4;
+  }
+
+  .mobile-safe-area {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+    touch-action: manipulation;
   }
 }
