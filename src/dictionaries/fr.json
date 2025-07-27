@@ -19,18 +19,18 @@
   },
   "home": {
     "hero": {
-      "badge": "osom PERFORMANCE",
-      "title_line1": "Les autres",
-      "title_focus": "promettent",
-      "title_line2": "Nous le",
-      "title_impact": "prouvons",
-      "description": "25% de taux de clics vs 2-3% industrie. 1,500 CHF économisés mensuellement. Position Top 5 garantie sur mots-clés concurrentiels.",
-      "cta_primary": "Consultation gratuite",
-      "cta_secondary": "Voir nos résultats",
+      "badge": "VALAIS N°1 MARKETING IA",
+      "title_line1": "688 clients en 6 mois vs",
+      "title_focus": "49 concurrents",
+      "title_line2": "Votre marketing devient une",
+      "title_impact": "machine à profits",
+      "description": "Notre IA génère 14x plus de clients à budget égal. Résultats visibles sous 30 jours. 1,500 CHF économisés mensuellement ou remboursé.",
+      "cta_primary": "Audit gratuit - 2 places/mois",
+      "cta_secondary": "Voir preuves GA4",
       "trust_indicators": {
-        "conversions": "25% CTR vs 2-3% industrie",
-        "engagement": "68.6% vs 44.6% engagement (SEO)",
-        "roi": "1,500 CHF économisés mensuellement"
+        "conversions": "688 vs 49 conversions (même budget)",
+        "engagement": "1,500 CHF économisés/mois",
+        "roi": "Position #5 garantie mots-clés"
       }
     },
     "forces": {
@@ -137,8 +137,8 @@
       "cta_secondary": "Voir nos formulas",
       "trust_indicators": {
         "ga4": "688 vs 49 leads qualifiés",
-        "results": "68.6% ROI mesurable vs approximations",
-        "guarantee": "Performance < 2s garantie"
+        "results": "Résultats sous 30 jours garantis",
+        "guarantee": "Satisfaction ou remboursé"
       }
     },
     "services": {

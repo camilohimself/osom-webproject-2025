@@ -9,14 +9,14 @@ interface PrismTriangleProps {
 
 const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
   const [hoveredForce, setHoveredForce] = useState<number | null>(null)
-  const [triangleHovered, setTriangleHovered] = useState(false)
+  const [logoHovered, setLogoHovered] = useState(false)
   const [sequentialIndex, setSequentialIndex] = useState(0)
 
   const forces = [
     {
       id: 1,
       name: 'MARKETING + IA',
-      shortName: 'MARKETING + IA',
+      shortName: 'MARKETING IA',
       badge: 'NOTRE DIFFÉRENCE',
       color: 'purple',
       colorClass: 'text-purple-400',
@@ -26,14 +26,14 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       gradient: 'from-purple-400 to-violet-500',
       metrics: '25% CTR vs 2-3% industrie',
       impact: '1,500 CHF économisés mensuellement',
-      description: 'Agents IA marketing personnalisés. Prédiction ROI avant investissement.',
-      details: 'Vos concurrents font du marketing à l\'instinct, nous utilisons l\'IA pour transformer votre marketing en machine à prospects.',
-      position: { x: 50, y: 20 }, // Top center - Position prioritaire
-      angle: 0 // Upward
+      description: 'IA Marketing Automation. Prédiction ROI Marketing Digital.',
+      details: 'Notre IA marketing transforme vos campagnes en machine à économies pendant que vos concurrents dépensent sans optimisation.',
+      position: { x: 50, y: 15 }, // Top center
+      angle: 0
     },
     {
       id: 2,
-      name: 'DATA ANALYSIS',
+      name: 'DATA ANALYTICS',
       shortName: 'DATA',
       color: 'cyan',
       colorClass: 'text-cyan-400',
@@ -43,27 +43,27 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       gradient: 'from-cyan-400 to-blue-500',
       metrics: '14,171 sessions invisibles récupérées',
       impact: '68.6% engagement supérieur',
-      description: 'Audit comportemental avancé. Attribution multi-touch précise.',
-      details: 'Notre data science révèle les leviers cachés de votre croissance pendant que vos concurrents naviguent à vue.',
-      position: { x: 25, y: 75 }, // Bottom left
-      angle: -120 // Down-left
+      description: 'Analytics Data Valais. Attribution multi-touch précise.',
+      details: 'Notre analyse Google Analytics révèle 688 conversions cachées pendant que vos concurrents naviguent sans visibilité.',
+      position: { x: 20, y: 80 }, // Bottom left
+      angle: -120
     },
     {
       id: 3,
-      name: 'TECHNOLOGIE',
-      shortName: 'TECH',
-      color: 'yellow',
-      colorClass: 'text-yellow-400',
-      bgClass: 'bg-yellow-400',
-      borderClass: 'border-yellow-400/50',
-      shadowClass: 'shadow-yellow-400/30',
-      gradient: 'from-yellow-400 to-orange-500',
-      metrics: 'Position #5 mots-clés concurrentiels',
-      impact: 'Performance < 2s garantie',
-      description: 'Architecture Next.js + IA natives. Performance garantie mobile-first.',
-      details: 'Stack qui distance définitivement vos concurrents pendant qu\'ils utilisent WordPress obsolète.',
-      position: { x: 75, y: 75 }, // Bottom right
-      angle: 120 // Down-right
+      name: 'DÉVELOPPEMENT WEB',
+      shortName: 'DEV WEB',
+      color: 'green',
+      colorClass: 'text-green-400',
+      bgClass: 'bg-green-400',
+      borderClass: 'border-green-400/50',
+      shadowClass: 'shadow-green-400/30',
+      gradient: 'from-green-400 to-emerald-500',
+      metrics: 'Performance < 2s garantie',
+      impact: 'Architecture évolutive Valais',
+      description: 'Développement Next.js + IA. Performance technique optimale.',
+      details: 'Notre stack moderne distance vos concurrents avec architecture évolutive et référencement automatisé 24h/24.',
+      position: { x: 80, y: 80 }, // Bottom right
+      angle: 120
     }
   ]
 
@@ -71,7 +71,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setSequentialIndex((prev) => (prev + 1) % forces.length)
-    }, 2000)
+    }, 2500)
     return () => clearInterval(interval)
   }, [])
 
@@ -80,86 +80,114 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       {/* Container Responsive */}
       <div className="relative min-h-[500px] lg:min-h-[600px]">
         
-        {/* Version Desktop - Triangle */}
+        {/* Version Desktop - Logo OSOM Central */}
         <div className="hidden md:block">
-          {/* Triangle Central Parfait */}
+          {/* Logo OSOM Central avec Animation */}
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
               className="relative"
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
+              initial={{ scale: 0, rotate: -45, opacity: 0 }}
+              animate={{ scale: 1, rotate: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              onHoverStart={() => setTriangleHovered(true)}
-              onHoverEnd={() => setTriangleHovered(false)}
+              onHoverStart={() => setLogoHovered(true)}
+              onHoverEnd={() => setLogoHovered(false)}
             >
-              {/* Triangle Uniforme Sans Cassure */}
-              <svg 
-                width="280" 
-                height="240" 
-                viewBox="0 0 280 240" 
-                className="relative z-10"
+              {/* Logo OSOM Container */}
+              <motion.div
+                className="relative w-32 h-32 flex items-center justify-center"
+                animate={{
+                  scale: logoHovered ? 1.1 : 1,
+                  filter: logoHovered 
+                    ? "drop-shadow(0 20px 40px rgba(255, 221, 0, 0.4))" 
+                    : "drop-shadow(0 10px 20px rgba(255, 221, 0, 0.2))"
+                }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
               >
-                <defs>
-                  <linearGradient id="triangleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="rgba(75, 85, 99, 0.9)" />
-                    <stop offset="50%" stopColor="rgba(0, 0, 0, 0.8)" />
-                    <stop offset="100%" stopColor="rgba(75, 85, 99, 0.9)" />
-                  </linearGradient>
-                  <linearGradient id="lightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="rgba(255,255,255,1)" />
-                    <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-                  </linearGradient>
-                  <filter id="glowEffect">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge> 
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-                
-                {/* Triangle Principal */}
-                <motion.path
-                  d="M140 20 L40 200 L240 200 Z"
-                  fill="url(#triangleGradient)"
-                  stroke="rgba(255, 221, 0, 0.4)"
-                  strokeWidth="2"
-                  filter="url(#glowEffect)"
+                {/* Logo SVG intégré */}
+                <svg 
+                  width="120" 
+                  height="120" 
+                  viewBox="0 0 927.6 900" 
+                  className="relative z-10 filter drop-shadow-lg"
+                  style={{ filter: logoHovered ? 'brightness(1.1)' : 'brightness(1)' }}
+                >
+                  <defs>
+                    <filter id="logoGlow">
+                      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                      <feMerge> 
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  
+                  {/* Background removed for transparency */}
+                  <g>
+                    <g>
+                      <g>
+                        <polygon fill="#514747" points="548.6,617 548.6,617 430.3,594.3 430.3,594.3 430.2,594.2 430.2,666.7 548.6,666.7 548.6,617.1"/>
+                        <path fill="#514747" d="M779.7,261.1c-29.5-31.6-69.4-47.3-119.7-47.3c-59.6,0-107.9,20.8-144.7,62.3
+                          c-29.2-41.5-72.2-62.3-128.9-62.3c-51.5,0-92.4,16.1-122.8,48.2v-38.6H154.8V280l0,0L300,338.9c14-12.1,31.6-18.2,53.1-18.2
+                          c23.4,0,42.1,7.6,56.1,22.8c11.5,12.5,18.3,28.5,20.4,48l0,0l0,0c0,0,0,0,0-0.1l119,48.3l0.1,0v-37.6c0-24,7.5-43.6,22.4-58.8
+                          c14.9-15.2,34.1-22.8,57.4-22.8c23.4,0,42.1,7.6,56.1,22.8c14,15.2,21.1,35.7,21.1,61.4v76.7c0,0,65.3,16.8,76.3,20.3
+                          c20.1,5.5,34.1,14.8,42.1,25V388.2C824,335,809.3,292.6,779.7,261.1z"/>
+                      </g>
+                      <g>
+                        <polygon fill="#514747" points="154.8,541.2 154.8,666.7 273.2,666.7 273.2,564 222.2,554.2"/>
+                      </g>
+                    </g>
+                    {/* Point jaune OSOM - L'élément distinctif */}
+                    <motion.path 
+                      fill="#FFDD00" 
+                      d="M807.1,640.9c11.3-11.1,17-25.1,17-42c0-16.9-5.7-31-17-42.4c-11.3-11.4-25.5-17-42.5-17
+                        c-17.4,0-31.6,5.6-42.8,16.8c-11.2,11.2-16.7,25.4-16.7,42.6c0,16.9,5.6,30.9,16.7,42c11.2,11.1,25.4,16.6,42.8,16.6
+                        C781.6,657.5,795.8,652,807.1,640.9z"
+                      animate={{
+                        filter: logoHovered 
+                          ? "drop-shadow(0 0 20px #FFDD00) brightness(1.2)" 
+                          : "drop-shadow(0 0 10px #FFDD00) brightness(1)"
+                      }}
+                      transition={{ duration: 0.3 }}
+                    />
+                    <g>
+                      <path fill="#FFFFFF" d="M429.5,391.4c0.6,4.3,0.7,8.7,0.7,13.4v189.5L548.6,617V439.8L429.5,391.4z"/>
+                      <path fill="#FFFFFF" d="M154.8,280v80.9c0,0,0,0,0,0v157.7c0,0,0,0,0,0v22.5L273.3,564V404.8c0-25.7,7.3-46.1,21.9-61.4
+                        c1.5-1.7,3.2-3.2,4.8-4.5L154.8,280z"/>
+                    </g>
+                  </g>
+                </svg>
+
+                {/* Aura dorée autour du logo */}
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400/20 to-orange-400/20 blur-xl"
                   animate={{
-                    stroke: triangleHovered ? "rgba(255, 221, 0, 0.7)" : "rgba(255, 221, 0, 0.4)",
-                    filter: triangleHovered ? "url(#glowEffect) drop-shadow(0 20px 40px rgba(255, 221, 0, 0.3))" : "url(#glowEffect)"
+                    scale: logoHovered ? [1, 1.3, 1] : [1, 1.1, 1],
+                    opacity: logoHovered ? [0.3, 0.6, 0.3] : [0.2, 0.4, 0.2]
                   }}
-                  transition={{ duration: 0.4 }}
-                />
-                
-                {/* Lumière Centrale */}
-                <motion.line
-                  x1="140" y1="110" x2="140" y2="140"
-                  stroke="url(#lightGradient)"
-                  strokeWidth="4"
-                  initial={{ strokeWidth: 0, opacity: 0 }}
-                  animate={{ 
-                    strokeWidth: triangleHovered ? 6 : 4,
-                    opacity: triangleHovered ? 1 : 0.8
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
                   }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
                 />
-                
-              </svg>
+              </motion.div>
               
               {/* Guide d'interaction */}
               <AnimatePresence>
-                {triangleHovered && !hoveredForce && (
+                {logoHovered && !hoveredForce && (
                   <motion.div
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-6"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-8"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="bg-black/95 backdrop-blur-md border border-yellow-400/40 rounded-lg px-4 py-2 text-center">
-                      <div className="text-yellow-400 font-semibold text-sm tracking-wide">
-                        EXPLORER LES 3 FORCES
+                    <div className="bg-black/95 backdrop-blur-md border border-yellow-400/40 rounded-lg px-6 py-3 text-center">
+                      <div className="text-yellow-400 font-bold text-sm tracking-wide">
+                        OSOM • LES 3 FORCES DATA-DRIVEN
+                      </div>
+                      <div className="text-gray-300 text-xs mt-1">
+                        Explorez nos forces autour du logo
                       </div>
                     </div>
                   </motion.div>
@@ -169,8 +197,32 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
           </div>
         </div>
 
-        {/* Version Mobile - Stack Vertical */}
+        {/* Version Mobile - Stack Vertical avec Logo */}
         <div className="block md:hidden space-y-8 py-8">
+          {/* Logo Mobile */}
+          <motion.div
+            className="text-center mb-8"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="w-24 h-24 mx-auto mb-4">
+              <svg width="96" height="96" viewBox="0 0 927.6 900" className="filter drop-shadow-lg">
+                <g>
+                  <polygon fill="#514747" points="548.6,617 548.6,617 430.3,594.3 430.3,594.3 430.2,594.2 430.2,666.7 548.6,666.7 548.6,617.1"/>
+                  <path fill="#514747" d="M779.7,261.1c-29.5-31.6-69.4-47.3-119.7-47.3c-59.6,0-107.9,20.8-144.7,62.3c-29.2-41.5-72.2-62.3-128.9-62.3c-51.5,0-92.4,16.1-122.8,48.2v-38.6H154.8V280l0,0L300,338.9c14-12.1,31.6-18.2,53.1-18.2c23.4,0,42.1,7.6,56.1,22.8c11.5,12.5,18.3,28.5,20.4,48l0,0l0,0c0,0,0,0,0-0.1l119,48.3l0.1,0v-37.6c0-24,7.5-43.6,22.4-58.8c14.9-15.2,34.1-22.8,57.4-22.8c23.4,0,42.1,7.6,56.1,22.8c14,15.2,21.1,35.7,21.1,61.4v76.7c0,0,65.3,16.8,76.3,20.3c20.1,5.5,34.1,14.8,42.1,25V388.2C824,335,809.3,292.6,779.7,261.1z"/>
+                  <polygon fill="#514747" points="154.8,541.2 154.8,666.7 273.2,666.7 273.2,564 222.2,554.2"/>
+                  <path fill="#FFDD00" d="M807.1,640.9c11.3-11.1,17-25.1,17-42c0-16.9-5.7-31-17-42.4c-11.3-11.4-25.5-17-42.5-17c-17.4,0-31.6,5.6-42.8,16.8c-11.2,11.2-16.7,25.4-16.7,42.6c0,16.9,5.6,30.9,16.7,42c11.2,11.1,25.4,16.6,42.8,16.6C781.6,657.5,795.8,652,807.1,640.9z"/>
+                  <path fill="#FFFFFF" d="M429.5,391.4c0.6,4.3,0.7,8.7,0.7,13.4v189.5L548.6,617V439.8L429.5,391.4z"/>
+                  <path fill="#FFFFFF" d="M154.8,280v80.9c0,0,0,0,0,0v157.7c0,0,0,0,0,0v22.5L273.3,564V404.8c0-25.7,7.3-46.1,21.9-61.4c1.5-1.7,3.2-3.2,4.8-4.5L154.8,280z"/>
+                </g>
+              </svg>
+            </div>
+            <div className="text-yellow-400 font-bold text-lg">OSOM</div>
+            <div className="text-gray-300 text-sm">Les 3 Forces Data-Driven</div>
+          </motion.div>
+
+          {/* Forces Mobile */}
           {forces.map((force, index) => (
             <motion.div
               key={force.id}
@@ -199,7 +251,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
           ))}
         </div>
 
-        {/* Points de Force Desktop - Positionnés sur les Pointes */}
+        {/* Points de Force Desktop - Positionnés autour du Logo */}
         <div className="hidden md:block">
           {forces.map((force, index) => (
             <motion.div
@@ -216,7 +268,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                 opacity: 1,
               }}
               transition={{ 
-                delay: 1.4 + index * 0.2, 
+                delay: 1.4 + index * 0.3, 
                 duration: 0.6,
                 type: "spring",
                 stiffness: 200
@@ -224,16 +276,21 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
               onHoverStart={() => setHoveredForce(force.id)}
               onHoverEnd={() => setHoveredForce(null)}
             >
-              {/* Point Principal Centré sur Pointe */}
+              {/* Point Principal avec couleur harmonisée au jaune OSOM */}
               <motion.div
-                className={`relative w-14 h-14 rounded-full ${force.bgClass} border-3 border-white/40 shadow-lg flex items-center justify-center`}
+                className={`relative w-16 h-16 rounded-full ${force.bgClass} border-3 border-yellow-400/30 shadow-lg flex items-center justify-center`}
                 animate={{ 
                   scale: hoveredForce === force.id ? 1.4 : (sequentialIndex === index ? 1.2 : 1),
+                  borderColor: hoveredForce === force.id 
+                    ? '#FFDD00' 
+                    : sequentialIndex === index 
+                    ? 'rgba(255, 221, 0, 0.6)' 
+                    : 'rgba(255, 221, 0, 0.3)',
                   boxShadow: hoveredForce === force.id 
-                    ? `0 0 40px ${force.color === 'cyan' ? '#06B6D4' : force.color === 'purple' ? '#A855F7' : '#FACC15'}60`
+                    ? `0 0 40px ${force.color === 'cyan' ? '#06B6D4' : force.color === 'purple' ? '#A855F7' : '#10B981'}60, 0 0 60px rgba(255, 221, 0, 0.3)`
                     : sequentialIndex === index
-                    ? `0 0 25px ${force.color === 'cyan' ? '#06B6D4' : force.color === 'purple' ? '#A855F7' : '#FACC15'}40`
-                    : `0 0 15px ${force.color === 'cyan' ? '#06B6D4' : force.color === 'purple' ? '#A855F7' : '#FACC15'}30`
+                    ? `0 0 25px ${force.color === 'cyan' ? '#06B6D4' : force.color === 'purple' ? '#A855F7' : '#10B981'}40`
+                    : `0 0 15px ${force.color === 'cyan' ? '#06B6D4' : force.color === 'purple' ? '#A855F7' : '#10B981'}30`
                 }}
                 transition={{ duration: 0.3, type: "spring" }}
                 whileHover={{ scale: 1.5 }}
@@ -249,10 +306,10 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                   {force.id}
                 </motion.span>
 
-                {/* Badge "NOTRE DIFFÉRENCE" pour DEV+IA */}
+                {/* Badge pour la Force 1 */}
                 {force.badge && (
                   <motion.div
-                    className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-purple-500/90 px-2 py-1 rounded-full border border-purple-400/50"
+                    className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-purple-500/90 px-3 py-1 rounded-full border border-yellow-400/50"
                     initial={{ opacity: 0, scale: 0.8, y: 10 }}
                     animate={{ 
                       opacity: sequentialIndex === index || hoveredForce === force.id ? 1 : 0.8,
@@ -267,23 +324,24 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                   </motion.div>
                 )}
 
-                {/* Pulsation Séquentielle */}
+                {/* Pulsation Séquentielle harmonisée jaune */}
                 <motion.div
-                  className={`absolute inset-0 rounded-full ${force.bgClass} opacity-20`}
+                  className={`absolute inset-0 rounded-full ${force.bgClass} opacity-20 border border-yellow-400/20`}
                   animate={{
-                    scale: sequentialIndex === index ? [1, 2.2, 1] : 1,
-                    opacity: sequentialIndex === index ? [0.2, 0.05, 0.2] : 0.2
+                    scale: sequentialIndex === index ? [1, 2.5, 1] : 1,
+                    opacity: sequentialIndex === index ? [0.2, 0.05, 0.2] : 0.2,
+                    borderColor: sequentialIndex === index ? 'rgba(255, 221, 0, 0.4)' : 'rgba(255, 221, 0, 0.2)'
                   }}
                   transition={{
-                    duration: 1.8,
+                    duration: 2,
                     ease: "easeInOut"
                   }}
                 />
               </motion.div>
 
-              {/* Label de Force Optimisé */}
+              {/* Label de Force */}
               <motion.div
-                className={`absolute ${force.position.y < 50 ? 'top-full mt-4' : 'bottom-full mb-4'} left-1/2 transform -translate-x-1/2 text-center min-w-max`}
+                className={`absolute ${force.position.y < 50 ? 'top-full mt-6' : 'bottom-full mb-6'} left-1/2 transform -translate-x-1/2 text-center min-w-max`}
                 initial={{ opacity: 0, y: force.position.y < 50 ? -10 : 10 }}
                 animate={{ 
                   opacity: hoveredForce === force.id ? 1 : 0.8,
@@ -297,7 +355,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                 </div>
                 {hoveredForce === force.id && (
                   <motion.div
-                    className="text-gray-300 text-xs max-w-32"
+                    className="text-gray-300 text-xs max-w-36"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
@@ -320,8 +378,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
               left: `${forces.find(f => f.id === hoveredForce)?.position.x}%`,
               top: `${forces.find(f => f.id === hoveredForce)?.position.y}%`,
               transform: forces.find(f => f.id === hoveredForce)?.position.y! < 50 
-                ? 'translate(-50%, -140%)' 
-                : 'translate(-50%, 40%)'
+                ? 'translate(-50%, -150%)' 
+                : 'translate(-50%, 50%)'
             }}
             initial={{ 
               opacity: 0, 
@@ -349,7 +407,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
               
               return (
                 <div className={`relative bg-black/97 backdrop-blur-xl border-2 ${force.borderClass} rounded-xl p-6 min-w-[320px] max-w-[380px] shadow-2xl`}>
-                  {/* Header avec badge différenciation */}
+                  {/* Header avec badge */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
                       <div className={`w-4 h-4 rounded-full ${force.bgClass} mr-3 animate-pulse`} />
@@ -369,7 +427,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                     {force.name}
                   </h3>
 
-                  {/* Métriques avec micro-animation */}
+                  {/* Métriques */}
                   <motion.div 
                     className={`bg-gradient-to-r from-${force.color}-400/15 to-transparent rounded-lg p-4 mb-4 border-l-4 ${force.borderClass}`}
                     initial={{ x: -10, opacity: 0 }}
@@ -387,7 +445,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                     </div>
                   </motion.div>
 
-                  {/* Details expandés */}
+                  {/* Details */}
                   <motion.div 
                     className="text-gray-400 text-xs leading-relaxed border-t border-gray-700 pt-3"
                     initial={{ opacity: 0 }}
@@ -396,24 +454,6 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                   >
                     {force.details}
                   </motion.div>
-
-                  {/* Arrow pointer avec couleur dynamique */}
-                  <div 
-                    className={`absolute w-0 h-0 border-l-8 border-r-8 border-transparent`}
-                    style={{
-                      [forces.find(f => f.id === hoveredForce)?.position.y! < 50 ? 'top' : 'bottom']: '100%',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                      borderTopWidth: forces.find(f => f.id === hoveredForce)?.position.y! < 50 ? '10px' : '0',
-                      borderBottomWidth: forces.find(f => f.id === hoveredForce)?.position.y! >= 50 ? '10px' : '0',
-                      borderTopColor: forces.find(f => f.id === hoveredForce)?.position.y! < 50 
-                        ? (force.color === 'cyan' ? '#06B6D4' : force.color === 'purple' ? '#A855F7' : '#FACC15') 
-                        : 'transparent',
-                      borderBottomColor: forces.find(f => f.id === hoveredForce)?.position.y! >= 50 
-                        ? (force.color === 'cyan' ? '#06B6D4' : force.color === 'purple' ? '#A855F7' : '#FACC15')
-                        : 'transparent'
-                    }}
-                  />
                 </div>
               )
             })()}
@@ -421,43 +461,43 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
         )}
       </AnimatePresence>
 
-      {/* CTA Contextuel sous le bloc */}
+      {/* CTA avec branding OSOM renforcé */}
       <motion.div 
-        className="text-center mt-12"
+        className="text-center mt-16"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.5, duration: 0.6 }}
+        transition={{ delay: 2.8, duration: 0.6 }}
       >
         <motion.button
-          className="bg-gradient-to-r from-purple-600 to-yellow-500 text-black font-bold px-8 py-3 rounded-full hover:from-purple-500 hover:to-yellow-400 transition-all duration-300 transform"
-          whileHover={{ scale: 1.05, y: -2 }}
+          className="bg-gradient-to-r from-purple-600 via-yellow-400 to-green-500 text-black font-bold px-10 py-4 rounded-full hover:from-purple-500 hover:via-yellow-300 hover:to-green-400 transition-all duration-300 transform shadow-lg"
+          whileHover={{ scale: 1.05, y: -3 }}
           whileTap={{ scale: 0.98 }}
         >
-          DÉCOUVRIR NOTRE APPROCHE DIFFÉRENCIANTE
+          DÉCOUVRIR L'APPROCHE OSOM
         </motion.button>
-        <div className="text-gray-400 text-xs mt-2">
-          Technologies 2025 • Agents IA • Performance mesurable
+        <div className="text-gray-400 text-xs mt-3">
+          Marketing IA × Data Analytics × Développement web • Valais
         </div>
       </motion.div>
 
-      {/* Particules d'ambiance optimisées */}
-      {[...Array(6)].map((_, i) => (
+      {/* Particules dorées harmonisées avec le logo */}
+      {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-yellow-400/20 rounded-full pointer-events-none"
+          className="absolute w-1 h-1 bg-yellow-400/30 rounded-full pointer-events-none"
           style={{
             left: `${20 + Math.random() * 60}%`,
             top: `${20 + Math.random() * 60}%`,
           }}
           animate={{
-            y: [-4, 4, -4],
-            opacity: [0.2, 0.6, 0.2],
-            scale: [0.6, 1, 0.6]
+            y: [-6, 6, -6],
+            opacity: [0.3, 0.7, 0.3],
+            scale: [0.5, 1.2, 0.5]
           }}
           transition={{
-            duration: 4 + Math.random() * 2,
+            duration: 4 + Math.random() * 3,
             repeat: Infinity,
-            delay: Math.random() * 3
+            delay: Math.random() * 4
           }}
         />
       ))}
