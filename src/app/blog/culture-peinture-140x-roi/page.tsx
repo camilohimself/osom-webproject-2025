@@ -32,7 +32,7 @@ export default function CulturePeintureArticle() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Culture Peinture : <span className="text-green-400 font-bold">140x</span> plus efficace<br />
+              Culture Peinture : <span className="text-green-400 font-bold">14x</span> plus efficace<br />
               que la publicité payante
             </h1>
 
@@ -78,7 +78,7 @@ export default function CulturePeintureArticle() {
                 <div className="text-sm text-gray-400 mt-1">Facebook Ads</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-light text-yellow-400 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>140x</div>
+                <div className="text-4xl font-light text-yellow-400 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>14x</div>
                 <div className="text-gray-300 font-medium">Plus Efficace</div>
                 <div className="text-sm text-gray-400 mt-1">ROI Supérieur</div>
               </div>
@@ -228,7 +228,7 @@ export default function CulturePeintureArticle() {
             className="mt-16 backdrop-blur-sm border border-green-400/30 rounded-3xl p-8 bg-gradient-to-br from-green-400/10 to-black/60 text-center"
           >
             <h3 className="text-2xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Prêt pour votre transformation <span className="text-green-400 font-bold">140x</span> ?
+              Prêt pour votre transformation <span className="text-green-400 font-bold">14x</span> ?
             </h3>
             <p className="text-gray-300 mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
               Découvrez comment nous pouvons appliquer cette stratégie à votre entreprise.

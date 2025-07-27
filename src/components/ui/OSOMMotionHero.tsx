@@ -101,7 +101,7 @@ const OSOMMotionHero = () => {
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-tight" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-            <span className="text-yellow-400 font-bold">140x</span> Plus Performant
+            <span className="text-yellow-400 font-bold">14x</span> Plus Performant
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
             L'agence qui transforme vos investissements marketing en <span className="text-yellow-400 font-bold">machines à résultats</span>
@@ -157,7 +157,7 @@ const OSOMMotionHero = () => {
           >
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-light text-yellow-400 mb-4 group-hover:scale-110 transition-transform duration-300" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                140x
+                14x
               </div>
               <div className="text-lg font-bold text-white mb-2" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                 Plus Performant

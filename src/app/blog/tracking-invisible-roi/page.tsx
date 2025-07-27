@@ -457,7 +457,7 @@ gtag('event', 'lead_qualified', {
               </Link>
               <div className="flex gap-4">
                 <Link
-                  href="/blog/culture-peinture-140x-roi"
+                  href="/blog/culture-peinture-14x-roi"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   Case Study Culture Peinture →

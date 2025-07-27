@@ -7,8 +7,8 @@ import AnimatedCounter from '@/components/ui/AnimatedCounter'
 export default function BlogPage() {
   const articles = [
     {
-      id: 'culture-peinture-140x-roi',
-      title: 'Culture Peinture : 140x plus efficace que la publicité payante',
+      id: 'culture-peinture-14x-roi',
+      title: 'Culture Peinture : 8x plus efficace que la publicité payante',
       excerpt: 'Comment une stratégie organique sur Facebook a généré 688 conversions vs 49 en publicité payante sur la même période.',
       category: 'Case Study',
       readTime: '5 min',
@@ -19,7 +19,7 @@ export default function BlogPage() {
       featured: true,
       metrics: {
         conversions: 688,
-        roi: '140x',
+        roi: '14x',
         periode: '6 mois'
       }
     },

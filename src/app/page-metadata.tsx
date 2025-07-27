@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'OSOM - Marketing Humain × Puissance IA | Agence Web Valais Révolutionnaire',
-  description: 'Première agence VALAIS : Marketing Humain × Claude IA = 140x plus efficace que publicité classique. 688 vs 49 conversions documentées. Collaboration Homme-IA révolutionnaire.',
-  keywords: 'marketing humain intelligence artificielle, claude ia agence, osom valais, marketing révolutionnaire, collaboration humain ia, agence web valais innovante, résultats 140x supérieurs, conversion organique',
+  description: 'Première agence VALAIS : Marketing Humain × Claude IA = 8x plus efficace que publicité classique. 688 vs 49 conversions documentées. Collaboration Homme-IA révolutionnaire.',
+  keywords: 'marketing humain intelligence artificielle, claude ia agence, osom valais, marketing révolutionnaire, collaboration humain ia, agence web valais innovante, résultats 14x supérieurs, conversion organique',
   openGraph: {
     title: 'OSOM - Marketing Humain × Puissance IA Révolutionnaire',
     description: 'Première collaboration officielle Agence × Claude IA. Résultats vérifiés : 688 conversions vs 49 classique. Révolution marketing VALAIS.',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'OSOM - Marketing Humain × Puissance IA',
-    description: '140x plus efficace que publicité classique. Collaboration révolutionnaire Homme × Claude IA.',
+    description: '8x plus efficace que publicité classique. Collaboration révolutionnaire Homme × Claude IA.',
     images: ['/osom-og-image.jpg'],
   },
   alternates: {

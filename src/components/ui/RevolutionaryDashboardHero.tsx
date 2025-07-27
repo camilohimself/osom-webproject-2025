@@ -530,7 +530,7 @@ export default function RevolutionaryDashboardHero({
               }}
               transition={{ duration: 4, repeat: Infinity }}
             >
-              140x PERFORMANCE
+              14x PERFORMANCE
             </motion.div>
           </motion.div>
         </motion.div>

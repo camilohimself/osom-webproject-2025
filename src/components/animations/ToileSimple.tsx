@@ -130,7 +130,7 @@ const ToileSimple = () => {
         }`}
         style={{ left: '75%', top: '35%' }}
       >
-        Marketing 140x
+        Marketing 14x
       </div>
 
       {/* Particule de données animée */}

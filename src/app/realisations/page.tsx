@@ -79,7 +79,7 @@ const caseStudies: CaseStudyData[] = [
       },
       {
         label: 'Efficacité budgétaire',
-        value: '140x',
+        value: '14x',
         comparison: 'plus efficace que paid ads',
         trend: 'up',
         impact: 'positive',
@@ -119,7 +119,7 @@ const caseStudies: CaseStudyData[] = [
       }
     ],
     insights: [
-      'Canal organique génère 140x plus de conversions par CHF investi que la publicité payante',
+      'Canal organique génère 8x plus de conversions par CHF investi que la publicité payante',
       'Audience 60+ répond exceptionnellement bien au contenu éducatif sur Facebook/Instagram',
       'Problème critique de tracking : 14,171 sessions "Unassigned" cachent le vrai ROI',
       'Réallocation budgétaire recommandée : investir davantage dans le canal le plus performant',
@@ -356,7 +356,7 @@ const RealisationsPage = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               Performances 
-              <span className="text-pink-400 font-semibold">140x supérieures</span> prouvées par la data.
+              <span className="text-pink-400 font-semibold">14x supérieures</span> prouvées par la data.
               <br />
               <span className="text-yellow-400 font-semibold">688 vs 49 conversions</span> sur des budgets identiques.
             </motion.p>
@@ -368,7 +368,7 @@ const RealisationsPage = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { value: 140, suffix: "x", label: "ROI Maximum", color: "#EC4899", icon: "" },
+                { value: 14, suffix: "x", label: "ROI Maximum", color: "#EC4899", icon: "" },
                 { value: 688, suffix: "", label: "Conversions Réelles", color: "#10B981", icon: "" },
                 { value: 68.6, suffix: "%", label: "Engagement SEO", color: "#06B6D4", icon: "" },
                 { value: 400, suffix: "+", label: "Jours Données GA4", color: "#FFDD00", icon: "" }

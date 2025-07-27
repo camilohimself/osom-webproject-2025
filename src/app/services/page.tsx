@@ -30,7 +30,7 @@ export default async function ServicesPage() {
     },
     {
       title: "Marketing Data-Driven",
-      subtitle: "ROI 140x supérieur aux ads traditionnelles",
+      subtitle: "ROI 14x supérieur aux ads traditionnelles",
       description: "Stratégie organique Facebook/Instagram avec création de contenu performant pour audiences ciblées",
       pricing: "À partir de 1000 CHF/mois",
       timeline: "Résultats dès 3 mois",
@@ -40,7 +40,7 @@ export default async function ServicesPage() {
         "2.4M+ vues organiques",
         "688 conversions documentées"
       ],
-      caseStudy: "Culture Peinture : 140x plus efficace",
+      caseStudy: "Pure player Genève : 8x plus efficace",
       icon: "",
       realData: true
     },
@@ -136,7 +136,7 @@ export default async function ServicesPage() {
             {/* Stats Pills - Style Linear */}
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10">
-                <span className="text-yellow-400 font-bold">140x</span>
+                <span className="text-yellow-400 font-bold">14x</span>
                 <span className="text-gray-300 ml-2">plus performant</span>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10">
@@ -375,7 +375,7 @@ export default async function ServicesPage() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
                   <span className="text-gray-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Efficacité budgétaire</span>
-                  <span className="text-2xl font-light text-green-400">140x supérieur</span>
+                  <span className="text-2xl font-light text-green-400">14x supérieur</span>
                 </div>
                 <div className="flex items-center justify-between p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
                   <span className="text-gray-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Taux de conversion</span>

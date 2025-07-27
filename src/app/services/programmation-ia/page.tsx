@@ -296,7 +296,7 @@ export default function ProgrammationIAPage() {
             >
               <div className="text-yellow-400 mb-2"># Claude-Powered Analytics</div>
               <div className="text-gray-400">claude_analysis = &#123;</div>
-              <div className="text-white ml-4">"performance": "140x superior",</div>
+              <div className="text-white ml-4">"performance": "14x superior",</div>
               <div className="text-white ml-4">"conversions": "688 tracked",</div>
               <div className="text-purple-400 ml-4">"viral_potential": "2.4M views" 🚀</div>
               <div className="text-gray-400">&#125;</div>
@@ -757,7 +757,7 @@ export default function ProgrammationIAPage() {
                       <div className="text-white inline">optimizePerformance() &#123;</div>
                       <div className="ml-4 text-gray-300">{/* Prédiction viralité: 2.4M */}</div>
                       <div className="ml-4 text-gray-300">{/* Tracking précis: 688 */}</div>
-                      <div className="ml-4 text-gray-300">{/* ROI calculé: 140x */}</div>
+                      <div className="ml-4 text-gray-300">{/* ROI calculé: 14x */}</div>
                       <div className="text-white">&#125;</div>
                     </div>
                   </div>
@@ -840,7 +840,7 @@ export default function ProgrammationIAPage() {
               <div className="text-center">
                 <div className="mb-8">
                   <div className="text-8xl md:text-9xl font-black transition-all duration-2000 text-yellow-400">
-                    140x
+                    14x
                   </div>
                   <div className="text-2xl text-white mt-4">
                     Plus Performant
@@ -859,7 +859,7 @@ export default function ProgrammationIAPage() {
                   </div>
                   <div className="text-gray-400 text-sm">=</div>
                   <div className="bg-black/20 rounded-xl p-4">
-                    <div className="text-cyan-400 font-bold text-2xl">140x</div>
+                    <div className="text-cyan-400 font-bold text-2xl">14x</div>
                     <div className="text-gray-300">vs Publicité Payante</div>
                   </div>
                 </div>
@@ -983,7 +983,7 @@ export default function ProgrammationIAPage() {
             },
             {
               question: "15,000 CHF pour cette collaboration, comment justifiez-vous ce prix premium ?",
-              answer: "Prix justifié par exclusivité collaboration officielle Humain-Claude Code : premier développeur-créatif épaulé par IA la plus puissante au monde. Résultats prouvés Culture Peinture : 2.4M vues virales, 140x performance vs publicité payante, 688 conversions trackées. Duo unique marché : marketing humain authentique + puissance analytique Claude. Investment dans synergie révolutionnaire, pas simple prestation."
+              answer: "Prix justifié par exclusivité collaboration officielle Humain-Claude Code : premier développeur-créatif épaulé par IA la plus puissante au monde. Résultats prouvés Culture Peinture : 2.4M vues virales, 14x performance vs publicité payante, 688 conversions trackées. Duo unique marché : marketing humain authentique + puissance analytique Claude. Investment dans synergie révolutionnaire, pas simple prestation."
             },
             {
               question: "Après livraison, puis-je continuer à bénéficier de l'optimisation Claude ?",
@@ -991,7 +991,7 @@ export default function ProgrammationIAPage() {
             },
             {
               question: "Les résultats Culture Peinture sont-ils vraiment dus à cette collaboration Humain-Claude ?",
-              answer: "Résultats Culture Peinture 100% authentiques et vérifiables : 2.4M vues GA4 trackées, 688 conversions dashboard custom, 140x performance vs ads payantes documentée. Collaboration Humain-Claude démontrée : code Python optimisé par IA, stratégie contenu analysée et améliorée, tracking perfectionné par intelligence artificielle. Synergie créativité humaine + analyse IA = performance impossible en solo."
+              answer: "Résultats Culture Peinture 100% authentiques et vérifiables : 2.4M vues GA4 trackées, 688 conversions dashboard custom, 14x performance vs ads payantes documentée. Collaboration Humain-Claude démontrée : code Python optimisé par IA, stratégie contenu analysée et améliorée, tracking perfectionné par intelligence artificielle. Synergie créativité humaine + analyse IA = performance impossible en solo."
             },
             {
               question: "Cette approche Humain × IA est-elle reproductible sur d'autres projets ?",

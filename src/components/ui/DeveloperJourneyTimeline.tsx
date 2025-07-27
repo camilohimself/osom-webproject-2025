@@ -402,7 +402,7 @@ export default function DeveloperJourneyTimeline({
               Votre Projet Web VALAIS en <span className="text-yellow-400">10 Jours</span>
             </h3>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-              Architecture révolutionnaire + Performance 140x + SEO local maîtrisé = 
+              Architecture révolutionnaire + Performance 14x + SEO local maîtrisé = 
               <strong className="text-yellow-400"> Votre avantage concurrentiel VALAIS</strong>
             </p>
             

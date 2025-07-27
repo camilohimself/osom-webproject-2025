@@ -79,7 +79,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               
-              {/* Left: 140x GRAND */}
+              {/* Left: 14x GRAND */}
               <motion.div 
                 className="text-left"
                 initial={{ opacity: 0, x: -50 }}
@@ -87,7 +87,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
                 <div className="text-8xl md:text-9xl font-bold text-white mb-4">
-                  140x
+                  14x
                 </div>
                 <div className="text-2xl text-gray-300">
                   plus efficace

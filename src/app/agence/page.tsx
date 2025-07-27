@@ -22,7 +22,7 @@ export default function AgencePage() {
       icon: '',
       title: 'Transparence Totale',
       subtitle: 'ROI visible et mesurable',
-      description: '140x plus efficace que la publicité payante. Nos résultats parlent d\'eux-mêmes, preuves à l\'appui.',
+      description: '8x plus efficace que la publicité payante. Nos résultats parlent d\'eux-mêmes, preuves à l\'appui.',
       color: 'green',
       gradient: 'from-green-400/20 to-green-600/10'
     },
@@ -62,7 +62,7 @@ export default function AgencePage() {
     {
       year: '2024',
       title: 'Révolution ROI',
-      description: 'Culture Peinture : 140x plus efficace que les ads. Naissance de la méthodologie OSOM.',
+      description: 'Culture Peinture : 8x plus efficace que les ads. Naissance de la méthodologie OSOM.',
       icon: '',
       color: 'purple'
     },
@@ -77,7 +77,7 @@ export default function AgencePage() {
 
   const stats = [
     { number: '200+', label: 'Projets Réalisés', icon: '' },
-    { number: '140x', label: 'ROI Maximum', icon: '' },
+    { number: '14x', label: 'ROI Maximum', icon: '' },
     { number: '5+', label: 'Années d\'Expertise', icon: '' },
     { number: '400+', label: 'Jours de Données', icon: '' },
     { number: '100%', label: 'Satisfaction Client', icon: '' },
@@ -428,7 +428,7 @@ export default function AgencePage() {
             
             <h3 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
               Créons ensemble votre<br />
-              prochain <span className="text-yellow-400 font-bold">140x ROI</span>
+              prochain <span className="text-yellow-400 font-bold">14x ROI</span>
             </h3>
             
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>

@@ -37,7 +37,7 @@ export default function CreationSiteWebPage() {
       metric: "Génération Leads",
       ourResult: "688 clients",
       industry: "49 clients",
-      improvement: "14x plus performant",
+      improvement: "8x plus performant",
       color: "#ffd507"
     }
   ]
@@ -61,7 +61,7 @@ export default function CreationSiteWebPage() {
     },
     {
       question: "Pourquoi choisir une agence web spécialisée Valais ?",
-      answer: "Nous connaissons le marché local et avons généré 688 clients en 6 mois pour un client PME, soit 14x plus efficace que leur méthode traditionnelle. Expertise locale + résultats vérifiés."
+      answer: "Nous connaissons le marché local et avons généré 688 clients en 6 mois pour un pure player Genève domaine de l'art, soit 8x plus efficace que leur méthode traditionnelle. Expertise locale + résultats vérifiés."
     },
     {
       question: "Que comprend exactement votre service de création de site ?",
@@ -81,7 +81,7 @@ export default function CreationSiteWebPage() {
     },
     {
       question: "Puis-je voir des exemples de sites créés pour des entreprises valaisannes ?",
-      answer: "Notre client PME a généré 688 clients en 6 mois vs 49 avec méthode traditionnelle. Données Google Analytics certifiées sur 200+ jours. Résultats concrets et vérifiables."
+      answer: "Notre pure player Genève domaine de l'art a généré 688 clients en 6 mois vs 49 avec méthode traditionnelle. Données Google Analytics certifiées sur 200+ jours. Résultats concrets et vérifiables."
     }
   ]
 
@@ -127,7 +127,7 @@ export default function CreationSiteWebPage() {
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed mt-8">
               Notre technologie avancée transforme votre présence en ligne<br />
-              <span className="text-yellow-400 font-semibold">14x plus performant</span> que les solutions traditionnelles
+              <span className="text-yellow-400 font-semibold">8x plus performant</span> que les solutions traditionnelles
             </p>
           </div>
 

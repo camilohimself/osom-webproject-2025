@@ -85,7 +85,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
     conversions: {
       title: "Performance Révolutionnaire Vérifiée",
       details: "Culture Peinture Valais - Case Study Complet",
-      highlight: "140x Plus Efficace que la Publicité Payante",
+      highlight: "14x Plus Efficace que la Publicité Payante",
       metrics: {
         organic: 688,
         paid: 49,
@@ -144,27 +144,59 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
         >
           {/* Left: Content */}
           <div>
-            {/* Badge with elegant entrance */}
+            {/* Badge with urgency/scarcity */}
             <motion.div 
-              className="flex items-center mb-8"
+              className="flex flex-col sm:flex-row sm:items-center gap-3 mb-8"
               variants={badgeVariants}
               transition={{ duration: 0.6, ease: [0.25, 0.25, 0.25, 0.75] }}
             >
+              {/* Main badge */}
+              <div className="flex items-center">
+                <motion.div 
+                  className="w-2 h-2 rounded-full bg-yellow-400 mr-3"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.8, 1, 0.8]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                <span className="text-yellow-400 text-sm font-medium tracking-wide">
+                  {dictionary.hero.badge}
+                </span>
+              </div>
+              
+              {/* Urgency/Scarcity indicator */}
               <motion.div 
-                className="w-2 h-2 rounded-full bg-yellow-400 mr-3"
+                className="flex items-center bg-red-500/20 px-3 py-1 rounded-full border border-red-500/30"
                 animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.8, 1, 0.8]
+                  backgroundColor: ["rgba(239, 68, 68, 0.2)", "rgba(239, 68, 68, 0.3)", "rgba(239, 68, 68, 0.2)"]
                 }}
                 transition={{
-                  duration: 2,
+                  duration: 3,
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-              />
-              <span className="text-yellow-400 text-sm font-medium tracking-wide">
-                {dictionary.hero.badge}
-              </span>
+              >
+                <motion.div 
+                  className="w-1.5 h-1.5 rounded-full bg-red-500 mr-2"
+                  animate={{
+                    scale: [1, 1.3, 1],
+                    opacity: [0.8, 1, 0.8]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                <span className="text-red-400 text-xs font-semibold tracking-wide">
+                  PLUS QUE 2 PLACES CE MOIS
+                </span>
+              </motion.div>
             </motion.div>
             
             {/* Main Title with staggered animation */}
@@ -238,7 +270,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
               </MagneticButton>
               
               <MagneticButton
-                href="/projets"
+                href="/realisations"
                 variant="secondary"
                 className="w-full sm:w-auto text-lg px-8 py-4 min-h-[44px]"
               >

@@ -18,7 +18,7 @@ const CulturePeintureDashboard = ({ className = '', showFullDashboard = false }:
       comparison: 49,
       label: 'osom vs Paid Ads',
       color: '#FFDD00',
-      improvement: '140x supérieur'
+      improvement: '14x supérieur'
     },
     engagement: {
       title: 'Engagement Time',
@@ -190,7 +190,7 @@ const CulturePeintureDashboard = ({ className = '', showFullDashboard = false }:
                 <div className="pt-2 border-t border-gray-700/50">
                   <div className="flex justify-between">
                     <span className="text-white font-semibold">Performance vs Ads</span>
-                    <span className="text-yellow-400 font-bold">140x supérieur</span>
+                    <span className="text-yellow-400 font-bold">14x supérieur</span>
                   </div>
                 </div>
               </div>

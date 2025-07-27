@@ -134,7 +134,7 @@ const ToileUltraSimple = () => {
         }`}
         style={{ left: '75%', top: '35%', transitionDelay: '400ms' }}
       >
-        Marketing 140x
+        Marketing 14x
       </div>
 
       {/* Particule animée simple */}

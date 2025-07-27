@@ -173,7 +173,7 @@ export default function CalculatorPage() {
               Découvrez le potentiel de croissance de votre entreprise avec nos solutions digitales.
               <br />
               <span className="text-yellow-400 font-semibold">Projection personnalisée</span> basée sur nos 
-              <span className="text-green-400 font-semibold"> 688 vs 49 conversions</span> réelles.
+              <span className="text-green-400 font-semibold"> 688 vs 49 conversions</span> vérifiées.
             </motion.p>
             
             {/* Premium Animated Stats Pills */}
@@ -237,7 +237,7 @@ export default function CalculatorPage() {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                 />
-                <span>Culture Peinture: 140x ROI</span>
+                <span>Culture Peinture: 14x ROI</span>
               </div>
               <div className="flex items-center">
                 <motion.div 
@@ -362,7 +362,7 @@ export default function CalculatorPage() {
               Prêt à <span className="text-yellow-400 font-bold">transformer</span> vos résultats ?
             </h3>
             <p className="text-xl text-gray-300 mb-8">
-              Rejoignez les entreprises qui ont multiplié leur ROI par <strong className="text-green-400">140x</strong>
+              Rejoignez les entreprises qui ont multiplié leur ROI par <strong className="text-green-400">14x</strong>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

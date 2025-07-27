@@ -11,9 +11,9 @@
    - Case study Culture Peinture intégré
    - Couleur thème: Jaune (Yellow-400)
 
-2. **Identité & Design** (`/services/identite-design`)
-   - KPI: 2.4M vues organiques, 95K CHF asset value
-   - Focus sur la création de brand asset
+2. **Programmation & IA** (`/services/programmation-ia`)
+   - KPI: 140x plus efficace que solutions classiques
+   - Focus sur automatisation et intelligence artificielle
    - Couleur thème: Violet (Purple-400)
 
 3. **SEO & Marketing** (`/services/seo-content-marketing`)
@@ -130,6 +130,8 @@
 
 **DESIGN OBLIGATOIRE** : JAMAIS d'emojis dans les projets OSOM. Interface clean et professionnelle uniquement.
 
+**DONNÉES CRITIQUES** : Jusqu'au 25 juillet 2025, toutes les données analytiques (688 vs 49, 68.6%, 14,171 sessions, etc.) concernent l'ANCIEN site OSOM. Le projet `osom-webproject-2025` est la NOUVELLE version en développement qui n'a pas encore été testée en ligne. Les données GSC servent pour le build SEO mais ne représentent PAS les performances de la nouvelle version.
+
 ### Commandes Utiles
 ```bash
 npm run dev          # Serveur développement
@@ -138,6 +140,29 @@ npm run lint         # Vérification ESLint
 ```
 
 Site accessible: http://localhost:3000
+
+---
+
+## Session 27 Juillet 2025 - CRO & KPI Data Mining
+
+### Context Session
+- ✅ **CRO Page d'accueil** : Préparation optimisation conversion
+- ✅ **Data Mining complet** : Analyse /Users/camilorivera/OSOM-DATA-CLIENTS
+- ✅ **KPI Bank créée** : 25% CTR, 1,500 CHF économisés, Position #5, etc.
+- ✅ **Anonymisation** : Client PME, Entreprise locale, Société B2B
+
+### KPI Découverts (Données Anciennes Site)
+- **25% CTR** Client PME vs 2-3% industrie
+- **1,500 CHF/mois** économisés Google Ads  
+- **Position #5** mots-clés concurrentiels
+- **564 impressions** requêtes locales Valais
+- **LCP < 2.5s** optimisation technique
+
+### Prochaines Étapes
+1. Catégoriser KPI par service (SEO, Paid, Tracking, Sites)
+2. Créer banque social proof pour site
+3. Optimiser hero page d'accueil avec nouveaux KPI
+4. Journal "Camilo x Claude" fin session
 
 ---
 

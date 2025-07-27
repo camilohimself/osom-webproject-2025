@@ -22,7 +22,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       rayColor: 'from-white via-cyan-400 to-cyan-500',
       glowColor: 'cyan',
       metrics: '+688 conversions',
-      impact: '14x plus efficace',
+      impact: '8x plus efficace',
       description: 'Sessions invisibles récupérées. ROI caché révélé par forensics GA4.',
       details: 'Pendant que vos concurrents achètent du trafic, nous récupérons 14,171 sessions perdues.',
       rayAngle: -15,

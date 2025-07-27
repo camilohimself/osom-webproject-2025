@@ -90,7 +90,7 @@ interface ProjectMetrics {
     icon: '◆',
     color: '#ff6b35',
     description: 'Marketing Humain × IA',
-    power: 'RÉVOLUTION MARKETING: Analyse comportementale = 140x ROI. Content generation = 10x plus rapide. UX optimization = conversion 11.3% vs 2-3% industrie.',
+    power: 'RÉVOLUTION MARKETING: Analyse comportementale = 14x ROI. Content generation = 10x plus rapide. UX optimization = conversion 11.3% vs 2-3% industrie.',
     code: `// Claude: Marketing révolutionnaire
 const optimizeConversion = async (userData) => {
   const psychology = await claude.analyzeUser(userData)
@@ -98,7 +98,7 @@ const optimizeConversion = async (userData) => {
   return { roi: 140, conversion: 11.3 } // vs 2.3% standard
 }`,
     benefits: ['Content Gen', 'Code Review', 'UX Analysis'],
-    metrics: { before: '2.3% conversion', after: '11.3% conversion', improvement: '140x ROI' }
+    metrics: { before: '2.3% conversion', after: '11.3% conversion', improvement: '14x ROI' }
   }
 ]
 
@@ -396,7 +396,7 @@ export default function TechStackCarousel({
                 ease: "easeInOut" 
               }}
             >
-              ★ 140x PERFORMANCE
+              ★ 14x PERFORMANCE
             </motion.div>
           </motion.div>
         </div>

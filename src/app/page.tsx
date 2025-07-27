@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'OSOM - Marketing Humain × Puissance IA',
-    description: '140x plus efficace que publicité classique. Collaboration révolutionnaire Homme × Claude IA.',
+    description: '12x plus efficace que publicité classique. Collaboration révolutionnaire Homme × Claude IA.',
     images: ['/osom-og-image.jpg'],
   },
   alternates: {
@@ -81,7 +81,7 @@ export default async function Home() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'OSOM',
-    description: 'Première agence VALAIS spécialisée dans le Marketing Humain × Intelligence Artificielle. Résultats 140x supérieurs à la publicité classique.',
+    description: 'Première agence VALAIS spécialisée dans le Marketing Humain × Intelligence Artificielle. Résultats 12x supérieurs à la publicité classique.',
     url: 'https://osom.ch',
     logo: 'https://osom.ch/osom-logo.svg',
     contactPoint: {
@@ -308,7 +308,7 @@ export default async function Home() {
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                       Pendant que vos concurrents achètent du trafic, nous récupérons 14,171 sessions "perdues" dans votre GA4. 
-                      Résultat : 14x plus de clients à budget égal.
+                      Résultat : 12x plus de clients à budget égal.
                     </p>
                     
                     {/* Arguments Business Entrepreneur */}

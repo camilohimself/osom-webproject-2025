@@ -8,7 +8,7 @@ import { GraphiqueLinear } from '@/components/ui'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Agence Web Valais 140x Plus Performante - 688 Clients/6 Mois | OSOM',
+  title: 'Agence Web Valais 14x Plus Performante - 688 Clients/6 Mois | OSOM',
   description: 'Site Web VALAIS révolutionnaire : 11.3% conversion vs 2-3% industrie. 1718 recherches/mois captées. Culture Peinture : 688 vs 49 conversions. 4500 CHF, 45 jours.',
   keywords: 'création site internet valais, création site web valais, création de site internet valais, site internet valais, agence web valais, développement web valais, site web valais, création site vitrine valais'
 }
@@ -42,7 +42,7 @@ export default function CreationSiteWebAdvancedPage() {
       }
     },
     {
-      value: "140x",
+      value: "14x",
       label: "Plus Performant Que Concurrence",
       description: "688 clients en 6 mois vs 49 publicité payante",
       animatedValue: 140,
@@ -50,7 +50,7 @@ export default function CreationSiteWebAdvancedPage() {
       tooltip: {
         title: "Résultat Client Réel - Culture Peinture Genève",
         details: "200+ jours de données Google Analytics vérifiées",
-        highlight: "14x plus efficace que publicité payante traditionnelle"
+        highlight: "8x plus efficace que publicité payante traditionnelle"
       }
     }
   ]
@@ -73,7 +73,7 @@ export default function CreationSiteWebAdvancedPage() {
         }}
         improvement={{
           label: "Performance Supérieure",
-          value: "14x plus efficace"
+          value: "8x plus efficace"
         }}
         backgroundColor="rgba(15, 23, 42, 0.8)"
         className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
@@ -117,7 +117,7 @@ export default function CreationSiteWebAdvancedPage() {
     <div className="min-h-screen bg-black">
       {/* HÉRO RÉVOLUTIONNAIRE DASHBOARD */}
       <RevolutionaryDashboardHero
-        title="Agence Web 140x Plus Performante"
+        title="Agence Web 14x Plus Performante"
         subtitle="688 clients générés en 6 mois - 2 places disponibles ce mois"
         description="Votre entreprise mérite plus de clients. Nous créons des sites web qui travaillent 24h/24 pour vous. Culture Peinture Genève : 688 clients générés automatiquement vs 49 avec publicité payante. Stack technique moderne : SEMrush + Google Analytics + Claude Code pour résultats mesurables."
         metrics={heroMetrics}

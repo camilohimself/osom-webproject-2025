@@ -181,7 +181,7 @@ export default function JournalCollaborationPage() {
                 </p>
                 <div className="bg-black/50 p-4 rounded-lg border-l-4 border-cyan-400">
                   <p className="text-cyan-400 font-semibold">PRODUCTIVITY UNLOCK :</p>
-                  <p>Humain + Claude = 140x plus rapide (comme nos conversions 😉)</p>
+                  <p>Humain + Claude = 8x plus rapide (comme nos conversions 😉)</p>
                 </div>
               </div>
             </div>

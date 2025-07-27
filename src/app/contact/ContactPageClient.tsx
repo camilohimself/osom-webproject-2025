@@ -186,7 +186,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
-              {/* Left: Métrique 140x - SPECTACULAIRE */}
+              {/* Left: Métrique 14x - SPECTACULAIRE */}
               <motion.div 
                 className="text-left relative"
                 initial={{ opacity: 0, x: -50 }}

@@ -32,7 +32,7 @@ const engines = [
     name: 'Claude IA',
     icon: '◆',
     color: '#ff6b35', 
-    why: '140x plus performant que publicité',
+    why: '8x plus performant que publicité',
     because: 'Contenu optimisé pour votre marché local. Conversion 11.3% vs 2.3% industrie.',
     impact: 'ROI révolutionnaire mesuré'
   }

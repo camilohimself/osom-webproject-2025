@@ -8,7 +8,7 @@ export default function PaidMediaGrowthPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [animatedValue, setAnimatedValue] = useState(0)
   
-  // Animation du compteur 140x
+  // Animation du compteur 14x
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setAnimatedValue(140)
@@ -21,7 +21,7 @@ export default function PaidMediaGrowthPage() {
       metric: "Efficacité vs Paid",
       ourResult: "688 clients",
       industry: "49 clients",
-      improvement: "140x plus efficace",
+      improvement: "8x plus efficace",
       color: "#ffd507"
     },
     {
@@ -49,7 +49,7 @@ export default function PaidMediaGrowthPage() {
 
   const faqData = [
     {
-      question: "Pourquoi votre méthode est-elle 140x plus efficace que la publicité payante ?",
+      question: "Pourquoi votre méthode est-elle 8x plus efficace que la publicité payante ?",
       answer: "Notre client PME a généré 688 clients organiquement vs seulement 49 via publicité payante sur la même période. Raison : notre approche construit un actif durable (SEO + contenu) vs achat temporaire d'attention. Résultat mesurable sur 6 mois avec Google Analytics."
     },
     {
@@ -97,7 +97,7 @@ export default function PaidMediaGrowthPage() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* HERO SECTION - RÉVÉLATION 140x */}
+      {/* HERO SECTION - RÉVÉLATION 14x */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 via-orange-500/5 to-yellow-400/5" />
         
@@ -112,7 +112,7 @@ export default function PaidMediaGrowthPage() {
                 Paid Media Valais
               </h1>
               <h2 className="text-4xl md:text-6xl font-bold animate-fade-in-delay-1 text-yellow-400">
-                140x Moins Efficace
+                14x Moins Efficace
               </h2>
               <div className="text-8xl md:text-9xl font-black text-red-400 animate-bounce-slow">
                 688 vs 49
@@ -347,7 +347,7 @@ export default function PaidMediaGrowthPage() {
               <div className="text-center">
                 <div className="mb-8">
                   <div className="text-8xl md:text-9xl font-black transition-all duration-2000 text-yellow-400">
-                    140x
+                    14x
                   </div>
                   <div className="text-2xl text-white mt-4">
                     Plus Efficace
@@ -408,7 +408,7 @@ export default function PaidMediaGrowthPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="text-center p-4 bg-black/40 rounded-xl border border-yellow-400/20">
                 <div className="text-yellow-400 font-bold text-2xl mb-2">
-                  140x
+                  14x
                 </div>
                 <div className="text-gray-300">Plus efficace que paid</div>
               </div>

@@ -101,7 +101,7 @@ export default async function OutilsPage() {
               </h2>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                 Calculez le potentiel de croissance de votre site web avec notre méthodologie éprouvée. 
-                Basé sur nos case studies avec ROI 140x supérieur.
+                Basé sur nos case studies avec ROI 14x supérieur.
               </p>
             </div>
             
@@ -119,13 +119,13 @@ export default async function OutilsPage() {
                 <div className="bg-black/40 rounded-xl p-6 border border-green-500/20">
                   <div className="text-3xl font-bold text-green-400 mb-2">688</div>
                   <div className="text-white font-semibold">Conversions Organiques</div>
-                  <div className="text-gray-400 text-sm">vs 49 payantes - Culture Peinture</div>
+                  <div className="text-gray-400 text-sm">vs 49 payantes - Pure player Genève</div>
                 </div>
                 
                 <div className="bg-black/40 rounded-xl p-6 border border-cyan-400/20">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">68.6%</div>
                   <div className="text-white font-semibold">Engagement SEO</div>
-                  <div className="text-gray-400 text-sm">vs 44.6% direct - Artisane Lumière</div>
+                  <div className="text-gray-400 text-sm">vs 44.6% direct - Artisan Valais</div>
                 </div>
                 
                 <div className="bg-black/40 rounded-xl p-6 border border-purple-400/20">
