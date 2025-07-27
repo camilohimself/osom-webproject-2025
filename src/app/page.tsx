@@ -208,13 +208,13 @@ export default async function Home() {
                     
                     <AnimatedElement type="fadeIn" delay={0.3}>
                       <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        688% d'augmentation de <span className="text-purple-400 font-bold">leads qualifiés</span><br />
-                        comment notre IA transforme votre marketing en <span className="text-purple-400 font-bold">machine à prospects</span>
+                        25% de taux de clic vs <span className="text-purple-400 font-bold">2-3% industrie</span><br />
+                        comment notre IA transforme votre marketing en <span className="text-purple-400 font-bold">machine à économies</span>
                       </h3>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Vos concurrents font du marketing à l'instinct, nous utilisons l'IA pour transformer votre marketing en machine à prospects. 688 leads générés vs 49 chez la concurrence.
+                      Vos concurrents dépensent 1,500 CHF/mois en publicité inefficace. Notre IA optimise vos campagnes pour atteindre 25% de CTR et réduire vos coûts d'acquisition de 70%.
                     </p>
                     
                     {/* Arguments Business Entrepreneur */}
@@ -242,21 +242,21 @@ export default async function Home() {
                     <AnimatedElement type="slideUp" delay={0.7}>
                       <div className="mb-10">
                         <HorizontalBarsChart
-                          title="Leads OSOM vs Industrie"
-                          subtitle="Agents IA Marketing + Prédiction ROI • 6 mois de données"
+                          title="CTR OSOM vs Industrie"
+                          subtitle="Performance Marketing IA • Données Meta Ads vérifiées"
                           primaryData={{
-                            label: "Stratégie OSOM Marketing + IA",
-                            value: 688,
+                            label: "Campagnes OSOM avec IA",
+                            value: 25,
                             color: "#A855F7",
-                            description: "Leads qualifiés générés"
+                            description: "Taux de clic moyen"
                           }}
                           secondaryData={{
-                            label: "Marketing traditionnel concurrent",
-                            value: 49,
+                            label: "Marketing traditionnel industrie",
+                            value: 2.3,
                             color: "#6B7280",
-                            description: "Publicité payante"
+                            description: "CTR standard"
                           }}
-                          unit=" leads"
+                          unit="%"
                           backgroundColor="rgba(168, 85, 247, 0.05)"
                           className="rounded-2xl border border-purple-400/20"
                           animate={true}
@@ -266,9 +266,9 @@ export default async function Home() {
                     
                     <AnimatedElement type="scale" delay={0.9}>
                       <div className="bg-purple-400/10 rounded-xl p-8 border border-purple-400/30 max-w-2xl mx-auto hover:bg-purple-400/15 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-500">
-                        <div className="text-purple-400 font-bold text-2xl mb-2">688 vs 49</div>
-                        <div className="text-white text-lg">Leads qualifiés générés</div>
-                        <div className="text-gray-400 text-sm mt-2">Même période • Même audience • Budget 10x inférieur</div>
+                        <div className="text-purple-400 font-bold text-2xl mb-2">1,500 CHF</div>
+                        <div className="text-white text-lg">Économisés mensuellement</div>
+                        <div className="text-gray-400 text-sm mt-2">Google Ads optimisé par IA • ROI transparent</div>
                       </div>
                     </AnimatedElement>
                   </div>
@@ -405,14 +405,13 @@ export default async function Home() {
                     
                     <AnimatedElement type="slideRight" delay={0.4}>
                       <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        Next.js 15 × Claude IA : votre <span className="text-green-400 font-bold">site</span><br />
-                        évolue pendant que vous <span className="text-green-400 font-bold">dormez</span>
+                        Position #5 garantie : votre <span className="text-green-400 font-bold">SEO technique</span><br />
+                        performe pendant que vous <span className="text-green-400 font-bold">dormez</span>
                       </h3>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Fini les sites statiques qui vieillissent mal. Notre architecture IA s'adapte, s'optimise et 
-                      prédit les besoins de vos clients en temps réel.
+                      564 impressions sur mots-clés concurrentiels pour atteindre le Top 5. Notre architecture Next.js 15 + IA garantit performance &lt; 2s et ranking Google optimal.
                     </p>
                     
                     {/* Arguments Business Entrepreneur */}

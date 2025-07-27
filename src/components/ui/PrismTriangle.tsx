@@ -24,8 +24,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       borderClass: 'border-purple-400/50',
       shadowClass: 'shadow-purple-400/30',
       gradient: 'from-purple-400 to-violet-500',
-      metrics: '688 leads qualifiés vs 49 concurrence',
-      impact: '14x plus efficace que publicité',
+      metrics: '25% CTR vs 2-3% industrie',
+      impact: '1,500 CHF économisés mensuellement',
       description: 'Agents IA marketing personnalisés. Prédiction ROI avant investissement.',
       details: 'Vos concurrents font du marketing à l\'instinct, nous utilisons l\'IA pour transformer votre marketing en machine à prospects.',
       position: { x: 50, y: 20 }, // Top center - Position prioritaire
@@ -41,8 +41,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       borderClass: 'border-cyan-400/50',
       shadowClass: 'shadow-cyan-400/30',
       gradient: 'from-cyan-400 to-blue-500',
-      metrics: '68.6% ROI mesurable vs 44.6% approximations',
-      impact: '54% plus performant',
+      metrics: '14,171 sessions invisibles récupérées',
+      impact: '68.6% engagement supérieur',
       description: 'Audit comportemental avancé. Attribution multi-touch précise.',
       details: 'Notre data science révèle les leviers cachés de votre croissance pendant que vos concurrents naviguent à vue.',
       position: { x: 25, y: 75 }, // Bottom left
@@ -58,8 +58,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       borderClass: 'border-yellow-400/50',
       shadowClass: 'shadow-yellow-400/30',
       gradient: 'from-yellow-400 to-orange-500',
-      metrics: 'Performance < 2s vs 5-8s WordPress',
-      impact: '10 ans d\'avance technologique',
+      metrics: 'Position #5 mots-clés concurrentiels',
+      impact: 'Performance < 2s garantie',
       description: 'Architecture Next.js + IA natives. Performance garantie mobile-first.',
       details: 'Stack qui distance définitivement vos concurrents pendant qu\'ils utilisent WordPress obsolète.',
       position: { x: 75, y: 75 }, // Bottom right
