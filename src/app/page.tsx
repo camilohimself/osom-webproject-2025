@@ -171,11 +171,11 @@ export default async function Home() {
                 <span className="text-yellow-400 text-sm font-medium tracking-wide">{dictionary.home.forces.badge}</span>
               </div>
               <h2 className="text-4xl md:text-6xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Comment OSOM utilise la <span className="text-yellow-400 font-bold">data</span><br />
-                <span className="text-2xl md:text-3xl text-gray-300">pour le bénéfice de votre entreprise ?</span>
+                LES 3 FORCES osom : <span className="text-yellow-400 font-bold">Marketing Data-Driven</span><br />
+                <span className="text-2xl md:text-3xl text-gray-300">Comment OSOM transforme vos données en croissance mesurable pour votre entreprise ?</span>
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Notre expertise repose sur 3 piliers complémentaires. Chaque décision est guidée par la data pour maximiser votre retour sur investissement.
+                Notre méthodologie SEO Valais s'appuie sur 3 piliers data-driven complémentaires. Chaque stratégie marketing digital est mesurée et optimisée pour maximiser votre retour sur investissement.
               </p>
             </div>
           </AnimatedElement>
@@ -208,13 +208,13 @@ export default async function Home() {
                     
                     <AnimatedElement type="fadeIn" delay={0.3}>
                       <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        25% de taux de clic vs <span className="text-purple-400 font-bold">2-3% industrie</span><br />
-                        comment notre IA transforme votre marketing en <span className="text-purple-400 font-bold">machine à économies</span>
+                        Précision SEO Valais : Performance mobile <span className="text-purple-400 font-bold">2.77%</span> vs standards desktop <span className="text-purple-400 font-bold">0.42%</span><br />
+                        Notre expertise en référencement naturel Suisse délivre <span className="text-purple-400 font-bold">13.99% de CTR</span> sur recherches marque
                       </h3>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Vos concurrents dépensent 1,500 CHF/mois en publicité inefficace. Notre IA optimise vos campagnes pour atteindre 25% de CTR et réduire vos coûts d'acquisition de 70%.
+                      Données vérifiées, résultats mesurables. Notre approche technique SEO Valais génère des performances supérieures aux standards internationaux avec un focus mobile-first optimisé.
                     </p>
                     
                     {/* Arguments Business Entrepreneur */}
