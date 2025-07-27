@@ -3,6 +3,9 @@ import { Metadata } from 'next'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, type Locale } from '@/lib/i18n'
 import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImpact } from '@/components/ui'
+import HorizontalBarsChart from '@/components/ui/HorizontalBarsChart'
+import DataLineChart from '@/components/ui/DataLineChart'
+import GaugeChart from '@/components/ui/GaugeChart'
 import PrismTriangle from '@/components/ui/PrismTriangle'
 import { cookies } from 'next/headers'
 import HeroPremium from '@/components/homepage/HeroPremium'
@@ -245,6 +248,32 @@ export default async function Home() {
                       </div>
                     </div>
                     
+                    {/* Graphique barres horizontales Marketing + IA */}
+                    <AnimatedElement type="slideUp" delay={0.7}>
+                      <div className="mb-10">
+                        <HorizontalBarsChart
+                          title="Leads OSOM vs Industrie"
+                          subtitle="Agents IA Marketing + Prédiction ROI • 6 mois de données"
+                          primaryData={{
+                            label: "Stratégie OSOM Marketing + IA",
+                            value: 688,
+                            color: "#A855F7",
+                            description: "Leads qualifiés générés"
+                          }}
+                          secondaryData={{
+                            label: "Marketing traditionnel concurrent",
+                            value: 49,
+                            color: "#6B7280",
+                            description: "Publicité payante"
+                          }}
+                          unit=" leads"
+                          backgroundColor="rgba(168, 85, 247, 0.05)"
+                          className="rounded-2xl border border-purple-400/20"
+                          animate={true}
+                        />
+                      </div>
+                    </AnimatedElement>
+                    
                     <AnimatedElement type="slideUp" delay={0.8}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="p-6 bg-purple-400/10 rounded-xl border border-purple-400/30 hover:bg-purple-400/15 hover:border-purple-400/50 transition-all duration-300">
@@ -338,6 +367,29 @@ export default async function Home() {
                       </div>
                     </div>
                     
+                    {/* Graphique line chart Data Analysis */}
+                    <AnimatedElement type="slideUp" delay={0.8}>
+                      <div className="mb-10">
+                        <DataLineChart
+                          title="ROI Évolution OSOM vs Industrie"
+                          subtitle="Data science révèle leviers cachés • 6 mois comparatif"
+                          data={[
+                            { month: "Jan", osomValue: 44.6, industryValue: 35.2 },
+                            { month: "Fév", osomValue: 52.3, industryValue: 37.1 },
+                            { month: "Mar", osomValue: 58.7, industryValue: 39.5, annotation: "Optimisation prédictive" },
+                            { month: "Avr", osomValue: 62.4, industryValue: 41.2 },
+                            { month: "Mai", osomValue: 65.8, industryValue: 42.8 },
+                            { month: "Jun", osomValue: 68.6, industryValue: 44.6, annotation: "Attribution multi-touch" }
+                          ]}
+                          primaryColor="#06B6D4"
+                          secondaryColor="#6B7280"
+                          backgroundColor="rgba(6, 182, 212, 0.05)"
+                          className="rounded-2xl border border-cyan-400/20"
+                          animate={true}
+                        />
+                      </div>
+                    </AnimatedElement>
+                    
                     <AnimatedElement type="scale" delay={0.9}>
                       <div className="bg-cyan-400/10 rounded-xl p-8 border border-cyan-400/30 max-w-2xl mx-auto hover:bg-cyan-400/15 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/20 transition-all duration-500">
                         <div className="text-cyan-400 font-bold text-2xl mb-2">{dictionary.home.force2.engagement.title}</div>
@@ -419,16 +471,22 @@ export default async function Home() {
                   </div>
                 </div>
                 
-                {/* Graphique diagonal - 2 colonnes */}
-                <div className="col-span-2 bg-gradient-to-tl from-purple-900/30 to-black/80 flex items-center p-8">
-                  <GraphiqueImpact
-                    title={dictionary.home.charts.impact.title}
-                    subtitle={dictionary.home.charts.impact.subtitle}
-                    organicValue={688}
-                    paidValue={49}
-                    multiplier={140}
+                {/* Graphique gauge/speedometer - 2 colonnes */}
+                <div className="col-span-2 bg-gradient-to-tl from-green-900/30 to-black/80 flex items-center p-8">
+                  <GaugeChart
+                    title="< 2s vs 5-8s"
+                    subtitle="Performance temps chargement"
+                    primaryValue={1.8}
+                    secondaryValue={6.5}
+                    primaryLabel="OSOM Next.js + IA"
+                    secondaryLabel="WordPress Standard"
+                    unit="s"
+                    maxValue={10}
+                    primaryColor="#10B981"
+                    secondaryColor="#6B7280"
+                    backgroundColor="rgba(16, 185, 129, 0.05)"
                     className="w-full border-0"
-                    organicColor="#A855F7"
+                    animate={true}
                   />
                 </div>
               </div>
