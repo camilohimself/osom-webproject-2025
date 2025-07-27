@@ -132,6 +132,13 @@
 
 **DONNÉES CRITIQUES** : Jusqu'au 25 juillet 2025, toutes les données analytiques (688 vs 49, 68.6%, 14,171 sessions, etc.) concernent l'ANCIEN site OSOM. Le projet `osom-webproject-2025` est la NOUVELLE version en développement qui n'a pas encore été testée en ligne. Les données GSC servent pour le build SEO mais ne représentent PAS les performances de la nouvelle version.
 
+**REPOS DISTINCTS** : 
+- `osom-webproject-2025` = Site principal en production
+- `osom-lab` = Repo R&D de Camilo pour expérimentations et tests
+- JAMAIS confondre ou mélanger les deux contextes
+- Toujours bien identifier sur quel repo on travaille
+- Les deux repos peuvent avoir des commits similaires si Camilo synchronise
+
 ### Commandes Utiles
 ```bash
 npm run dev          # Serveur développement
