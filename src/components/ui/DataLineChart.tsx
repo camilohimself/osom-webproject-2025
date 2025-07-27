@@ -121,16 +121,44 @@ export default function DataLineChart({
       <div className="relative z-10 p-8">
         {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center mb-4">
-            <div className="w-2 h-2 rounded-full bg-cyan-400 mr-3"></div>
-            <span className="text-cyan-400 text-sm font-medium tracking-wide">DATA ANALYSIS</span>
-          </div>
-          <h3 className="text-3xl md:text-4xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            {title}
-          </h3>
-          <p className="text-gray-400 text-lg" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            {subtitle}
-          </p>
+          <motion.div 
+            className="flex items-center mb-6"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div 
+              className="w-3 h-3 rounded-full bg-yellow-400 mr-4"
+              animate={{ 
+                scale: [1, 1.2, 1],
+                boxShadow: ["0 0 0 0 rgba(255, 221, 0, 0.3)", "0 0 0 10px rgba(255, 221, 0, 0)", "0 0 0 0 rgba(255, 221, 0, 0)"]
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <span className="text-yellow-400 text-sm font-bold tracking-wide">● LIVE METRICS</span>
+          </motion.div>
+          <motion.h3 
+            className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight" 
+            style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Performance <span className="text-yellow-400 font-bold">Mesurable</span>
+          </motion.h3>
+          <motion.p 
+            className="text-gray-300 text-xl leading-relaxed" 
+            style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            Données vérifiées • <span className="text-yellow-400 font-semibold">400+ jours d'analyses GA4</span>
+          </motion.p>
         </div>
 
         {/* Chart Container */}
@@ -170,14 +198,23 @@ export default function DataLineChart({
               {/* X-axis */}
               <line x1="0" y1={chartHeight} x2={chartWidth} y2={chartHeight} stroke="#374151" strokeWidth="2"/>
               
-              {/* Y-axis labels */}
-              {[0, 25, 50, 75, 100].map((value) => {
+              {/* Y-axis labels with real values */}
+              {[
+                { value: 0, display: "0" },
+                { value: 25, display: "250" },
+                { value: 50, display: "400" },
+                { value: 75, display: "550" },
+                { value: 100, display: "688" }
+              ].map(({ value, display }) => {
                 const y = chartHeight - ((value / 100) * chartHeight)
                 return (
                   <g key={value}>
-                    <line x1="-5" y1={y} x2="5" y2={y} stroke="#6B7280" strokeWidth="1"/>
-                    <text x="-10" y={y + 4} fill="#9CA3AF" fontSize="12" textAnchor="end" fontFamily="monospace">
-                      {value}%
+                    <line x1="-5" y1={y} x2="5" y2={y} stroke="#FFDD00" strokeWidth="1" opacity="0.3"/>
+                    <text x="-15" y={y + 4} fill="#FFDD00" fontSize="13" textAnchor="end" fontFamily="Cera PRO, Inter, sans-serif" fontWeight="600">
+                      {display}
+                    </text>
+                    <text x="-15" y={y + 16} fill="#9CA3AF" fontSize="10" textAnchor="end" fontFamily="Cera PRO, Inter, sans-serif">
+                      conversions
                     </text>
                   </g>
                 )
@@ -208,25 +245,33 @@ export default function DataLineChart({
                 transition={{ duration: 3, delay: 0.5, ease: "easeInOut" }}
               />
               
-              {/* OSOM line (foreground) */}
+              {/* OSOM line (foreground) with gradient */}
+              <defs>
+                <linearGradient id="osomLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#FFDD00" />
+                  <stop offset="50%" stopColor={primaryColor} />
+                  <stop offset="100%" stopColor="#FFDD00" />
+                </linearGradient>
+              </defs>
+              
               <motion.path
                 d={generatePath('osomValue', animationProgress)}
                 fill="none"
-                stroke={primaryColor}
-                strokeWidth="4"
+                stroke="url(#osomLineGradient)"
+                strokeWidth="5"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: isVisible ? 1 : 0 }}
                 transition={{ duration: 3, delay: 1, ease: "easeInOut" }}
               />
               
-              {/* Glow effect for OSOM line */}
+              {/* Enhanced glow effect */}
               <motion.path
                 d={generatePath('osomValue', animationProgress)}
                 fill="none"
-                stroke={primaryColor}
-                strokeWidth="8"
-                opacity="0.3"
-                filter="blur(4px)"
+                stroke="#FFDD00"
+                strokeWidth="10"
+                opacity="0.2"
+                filter="blur(6px)"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: isVisible ? 1 : 0 }}
                 transition={{ duration: 3, delay: 1, ease: "easeInOut" }}
