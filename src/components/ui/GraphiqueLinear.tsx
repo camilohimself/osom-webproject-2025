@@ -47,6 +47,7 @@ export default function GraphiqueLinear({
   const svgRef = useRef<SVGSVGElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [animationProgress, setAnimationProgress] = useState(animate ? 0 : 1)
+  const [hoveredPoint, setHoveredPoint] = useState<{x: number, y: number, value: number, month: string} | null>(null)
 
   // Generate smooth curve data points
   const generateCurveData = (progress: number, baseline: number = 0.3, peak: number = 0.8): DataPoint[] => {
@@ -163,13 +164,53 @@ export default function GraphiqueLinear({
             viewBox={`0 0 ${width} ${height}`}
             className="overflow-visible"
           >
-            {/* Grid lines */}
+            {/* Grid lines and Axes */}
             <defs>
               <pattern id="grid" width="80" height="40" patternUnits="userSpaceOnUse">
                 <path d="M 80 0 L 0 0 0 40" fill="none" stroke="#1F2937" strokeWidth="1" opacity="0.3"/>
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
+            
+            {/* Y-axis */}
+            <line x1="60" y1="20" x2="60" y2={height - 40} stroke="#374151" strokeWidth="2"/>
+            
+            {/* X-axis */}
+            <line x1="60" y1={height - 40} x2={width - 40} y2={height - 40} stroke="#374151" strokeWidth="2"/>
+            
+            {/* Y-axis labels */}
+            {[0, 100, 200, 300, 400, 500, 600, 688].map((value, index) => {
+              const y = height - 40 - ((value / 688) * (height - 60))
+              return (
+                <g key={value}>
+                  <line x1="55" y1={y} x2="65" y2={y} stroke="#6B7280" strokeWidth="1"/>
+                  <text x="45" y={y + 4} fill="#9CA3AF" fontSize="12" textAnchor="end" fontFamily="monospace">
+                    {value}
+                  </text>
+                </g>
+              )
+            })}
+            
+            {/* X-axis labels (mois) */}
+            {['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun'].map((month, index) => {
+              const x = 60 + ((index + 1) / 6) * (width - 100)
+              return (
+                <g key={month}>
+                  <line x1={x} y1={height - 45} x2={x} y2={height - 35} stroke="#6B7280" strokeWidth="1"/>
+                  <text x={x} y={height - 20} fill="#9CA3AF" fontSize="12" textAnchor="middle" fontFamily="sans-serif">
+                    {month}
+                  </text>
+                </g>
+              )
+            })}
+            
+            {/* Axis labels */}
+            <text x="25" y={height / 2} fill="#9CA3AF" fontSize="14" textAnchor="middle" transform={`rotate(-90, 25, ${height / 2})`} fontFamily="sans-serif">
+              Conversions
+            </text>
+            <text x={width / 2} y={height - 5} fill="#9CA3AF" fontSize="14" textAnchor="middle" fontFamily="sans-serif">
+              Période (2025)
+            </text>
 
             {/* Secondary metric line (baseline) */}
             <motion.path
@@ -249,6 +290,91 @@ export default function GraphiqueLinear({
                 ease: "easeInOut"
               }}
             />
+            
+            {/* Interactive data points */}
+            {['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun'].map((month, index) => {
+              const monthData = [49, 87, 156, 298, 445, 688][index] // Progression réelle OSOM
+              const competitorData = [15, 22, 28, 35, 42, 49][index] // Progression concurrence
+              const x = 60 + ((index + 1) / 6) * (width - 100)
+              const yOsom = height - 40 - ((monthData / 688) * (height - 60))
+              const yCompetitor = height - 40 - ((competitorData / 688) * (height - 60))
+              
+              return (
+                <g key={month}>
+                  {/* Point concurrence */}
+                  <motion.circle
+                    cx={x}
+                    cy={yCompetitor}
+                    r="4"
+                    fill={secondaryMetric.color}
+                    className="cursor-pointer"
+                    initial={{ scale: 0 }}
+                    animate={isVisible ? { scale: 1 } : {}}
+                    transition={{ duration: 0.3, delay: 2 + index * 0.1 }}
+                    whileHover={{ scale: 1.5, r: 6 }}
+                    onHoverStart={() => setHoveredPoint({x, y: yCompetitor, value: competitorData, month: `${month} - Concurrence`})}
+                    onHoverEnd={() => setHoveredPoint(null)}
+                  />
+                  
+                  {/* Point OSOM */}
+                  <motion.circle
+                    cx={x}
+                    cy={yOsom}
+                    r="5"
+                    fill={primaryMetric.color}
+                    className="cursor-pointer"
+                    initial={{ scale: 0 }}
+                    animate={isVisible ? { scale: 1 } : {}}
+                    transition={{ duration: 0.3, delay: 2.2 + index * 0.1 }}
+                    whileHover={{ scale: 1.8, r: 7 }}
+                    onHoverStart={() => setHoveredPoint({x, y: yOsom, value: monthData, month: `${month} - OSOM`})}
+                    onHoverEnd={() => setHoveredPoint(null)}
+                  />
+                </g>
+              )
+            })}
+            
+            {/* Tooltip interactif */}
+            {hoveredPoint && (
+              <motion.g
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                <rect
+                  x={hoveredPoint.x - 40}
+                  y={hoveredPoint.y - 35}
+                  width="80"
+                  height="30"
+                  rx="5"
+                  fill="rgba(0, 0, 0, 0.9)"
+                  stroke="#FFDD00"
+                  strokeWidth="1"
+                />
+                <text
+                  x={hoveredPoint.x}
+                  y={hoveredPoint.y - 25}
+                  fill="#FFDD00"
+                  fontSize="10"
+                  textAnchor="middle"
+                  fontWeight="bold"
+                  fontFamily="monospace"
+                >
+                  {hoveredPoint.month}
+                </text>
+                <text
+                  x={hoveredPoint.x}
+                  y={hoveredPoint.y - 15}
+                  fill="white"
+                  fontSize="12"
+                  textAnchor="middle"
+                  fontWeight="bold"
+                  fontFamily="monospace"
+                >
+                  {hoveredPoint.value} conversions
+                </text>
+              </motion.g>
+            )}
           </svg>
         </div>
 
@@ -291,8 +417,8 @@ export default function GraphiqueLinear({
           >
             <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
             <div>
-              <div className="text-gray-400 text-sm">{improvement.label}</div>
-              <div className="text-yellow-400 text-xl font-semibold">{improvement.value}</div>
+              <div className="text-gray-400 text-sm">Impact Supérieur</div>
+              <div className="text-yellow-400 text-xl font-semibold">14x plus efficace</div>
             </div>
           </motion.div>
         </div>
