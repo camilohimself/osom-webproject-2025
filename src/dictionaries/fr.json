@@ -28,7 +28,9 @@
       "cta_primary": "Consultation gratuite",
       "cta_secondary": "Voir nos résultats",
       "trust_indicators": {
-        "conversions": "688 vs 49 conversions (GA4)"
+        "conversions": "688 vs 49 conversions (GA4)",
+        "engagement": "68.6% vs 44.6% engagement (SEO)",
+        "roi": "14x plus efficace que publicité"
       }
     },
     "forces": {
