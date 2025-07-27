@@ -247,14 +247,14 @@ export default async function Home() {
                     
                     <AnimatedElement type="slideUp" delay={0.8}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="p-6 bg-yellow-400/10 rounded-xl border border-yellow-400/30 hover:bg-yellow-400/15 hover:border-yellow-400/50 transition-all duration-300">
-                          <div className="text-yellow-400 font-bold text-lg mb-2">{dictionary.home.force1.formula.title}</div>
+                        <div className="p-6 bg-purple-400/10 rounded-xl border border-purple-400/30 hover:bg-purple-400/15 hover:border-purple-400/50 transition-all duration-300">
+                          <div className="text-purple-400 font-bold text-lg mb-2">{dictionary.home.force1.formula.title}</div>
                           <div className="text-white text-lg">{dictionary.home.force1.formula.price}</div>
                           <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.formula.subtitle}</div>
                         </div>
                         
-                        <div className="p-6 bg-yellow-400/5 rounded-xl border border-yellow-400/20 hover:bg-yellow-400/10 hover:border-yellow-400/40 transition-all duration-300">
-                          <div className="text-yellow-400 text-2xl font-light mb-2">{dictionary.home.force1.conversion.rate}</div>
+                        <div className="p-6 bg-purple-400/5 rounded-xl border border-purple-400/20 hover:bg-purple-400/10 hover:border-purple-400/40 transition-all duration-300">
+                          <div className="text-purple-400 text-2xl font-light mb-2">{dictionary.home.force1.conversion.rate}</div>
                           <div className="text-gray-300">{dictionary.home.force1.conversion.description}</div>
                           <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.conversion.subtitle}</div>
                         </div>
@@ -410,8 +410,8 @@ export default async function Home() {
                     </div>
                     
                     <AnimatedElement type="scale" delay={0.9}>
-                      <div className="bg-purple-400/10 rounded-xl p-8 border border-purple-400/30 hover:bg-purple-400/15 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-500">
-                        <div className="text-purple-400 font-bold text-2xl mb-2">{dictionary.home.force3.conversions.title}</div>
+                      <div className="bg-yellow-400/10 rounded-xl p-8 border border-yellow-400/30 hover:bg-yellow-400/15 hover:border-yellow-400/50 hover:shadow-lg hover:shadow-yellow-400/20 transition-all duration-500">
+                        <div className="text-yellow-400 font-bold text-2xl mb-2">{dictionary.home.force3.conversions.title}</div>
                         <div className="text-white text-lg">{dictionary.home.force3.conversions.description}</div>
                         <div className="text-gray-400 text-sm mt-2">{dictionary.home.force3.conversions.subtitle}</div>
                       </div>
@@ -446,8 +446,7 @@ export default async function Home() {
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            {dictionary.home.cta.title_line1}<br />
-            vos <span className="text-yellow-400 font-bold">{dictionary.home.cta.title_performances}</span> ?
+            {dictionary.home.cta.title_line1} <span className="text-yellow-400 font-bold">{dictionary.home.cta.title_performances}</span> ?
           </h2>
           <p className="text-xl text-gray-300 mb-12 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             {dictionary.home.cta.description}
@@ -473,15 +472,15 @@ export default async function Home() {
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center gap-8 text-gray-400 text-sm">
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
               <span>{dictionary.home.cta.trust_indicators.ga4}</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
               <span>{dictionary.home.cta.trust_indicators.results}</span>
             </div>
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+              <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
               <span>{dictionary.home.cta.trust_indicators.guarantee}</span>
             </div>
           </div>

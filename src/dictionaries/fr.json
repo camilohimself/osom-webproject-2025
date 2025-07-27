@@ -40,108 +40,105 @@
       "subtitle": "Notre expertise repose sur 3 piliers complémentaires. Chaque décision est guidée par la data pour maximiser votre retour sur investissement."
     },
     "force1": {
-      "badge": "FORCE #1 - DATA-DRIVEN DESIGN",
-      "title_line1": "Design avec",
-      "title_données": "données",
-      "title_line2": "Conversion par",
-      "title_science": "science",
-      "description": "Chaque pixel optimisé grâce à nos analyses comportementales. Nos sites convertissent 4x mieux car nous concevons avec la data utilisateur, pas l'intuition.",
-      "architecture": {
-        "title": "Architecture Conversion-Optimisée",
-        "description": "Parcours utilisateur testé sur 1000+ interactions. Chaque bouton, formulaire et CTA est positionné selon nos heatmaps comportementales."
+      "badge": "FORCE #1 - MARKETING + IA",
+      "title_line1": "688% d'augmentation de",
+      "title_leads": "leads qualifiés",
+      "title_line2": "comment notre IA transforme votre marketing en",
+      "title_machine": "machine à prospects",
+      "description": "Vos concurrents font du marketing à l'instinct, nous utilisons l'IA pour transformer votre marketing en machine à prospects. 688 leads générés vs 49 chez la concurrence.",
+      "agents": {
+        "title": "Agents IA marketing personnalisés",
+        "description": "Algorithmes propriétaires qui analysent comportements clients en temps réel. Personnalisation automatique des campagnes selon profil utilisateur et intention d'achat."
       },
-      "performance": {
-        "title": "Performance Mesurable",
-        "description": "Sites livrés avec PageSpeed 95+, temps de chargement < 2s. Impact direct sur le SEO et l'expérience utilisateur mesurée via GA4."
+      "prediction": {
+        "title": "Prédiction ROI avant investissement",
+        "description": "Modèles prédictifs basés sur 200+ projets analysés. Visibilité complète sur retour attendu avant même de lancer une campagne marketing."
       },
-      "technologies": {
-        "title": "Technologies Modernes",
-        "description": "Next.js, React, Tailwind. Stack technique choisie pour la performance, pas la tendance. ROI technique mesuré sur 200+ jours post-lancement."
+      "analytics": {
+        "title": "Analytics temps réel actionnable",
+        "description": "Dashboard en temps réel avec recommandations automatiques d'optimisation. Ajustements immédiats basés sur performance live des campagnes."
       },
       "formula": {
-        "title": "osom Web Formula",
-        "price": "1500 CHF • 10 jours • ROI garanti",
-        "subtitle": "Artisan peinture Valais (2024)"
+        "title": "osom Marketing IA Formula",
+        "price": "À partir de 2500 CHF • ROI prévisible",
+        "subtitle": "Pure player Genève domaine de l'art (2024)"
       },
       "conversion": {
-        "rate": "11.3% vs 2.5%",
-        "description": "Taux de conversion moyen",
-        "subtitle": "Basé sur analyses GA4 6 mois"
+        "rate": "688 vs 49",
+        "description": "Leads qualifiés générés",
+        "subtitle": "Même période • Même audience • Budget 10x inférieur"
       }
     },
     "force2": {
-      "badge": "FORCE #2 - TRAFIC QUALIFIÉ SUPÉRIEUR",
-      "title_line1": "SEO par",
-      "title_diagnostic": "diagnostic",
-      "title_line2": "Trafic par",
-      "title_intelligence": "intelligence",
-      "description": "Notre diagnostic externe révèle ce que vous ne voyez pas. Trafic qualifié 54% supérieur, engagement mesuré, résultats transparents.",
-      "diagnostic": {
-        "title": "Diagnostic Révélateur",
-        "description": "Audit externe sans accès GA4/GSC qui révèle les gaps invisibles même aux propriétaires. 397x potentiel découvert vs concurrents leaders.",
-        "subtitle": "Entreprise immobilier Genève (2024)"
+      "badge": "FORCE #2 - DATA ANALYSIS",
+      "title_line1": "68.6% de",
+      "title_roi": "ROI mesurable",
+      "title_line2": "notre data science révèle les leviers cachés de votre",
+      "title_croissance": "croissance",
+      "description": "Focus data-driven vs approximations. Notre data science révèle les leviers cachés de votre croissance pendant que vos concurrents naviguent à vue.",
+      "audit": {
+        "title": "Audit comportemental avancé",
+        "description": "Heat maps, eye-tracking et analyses comportementales poussées. Identification précise des points de friction et opportunités d'optimisation cachées."
       },
-      "traffic": {
-        "title": "Trafic Qualifié Prouvé",
-        "description": "68.6% engagement trafic SEO vs 44.6% direct. Chaque visiteur SEO osom génère 54% plus de valeur pour votre business.",
-        "subtitle": "Artisan lumière Valais (200+ jours GA4)"
+      "attribution": {
+        "title": "Attribution multi-touch précise",
+        "description": "Traçabilité complète du parcours client sur tous canaux. Attribution exacte de chaque conversion à sa source réelle, fin des approximations marketing."
       },
       "optimization": {
-        "title": "Optimisation Continue",
-        "description": "Suivi mensuel ROI transparent. Chaque action SEO est mesurée, chaque optimisation justifiée par les données de performance.",
-        "subtitle": "Méthode osom standardisée"
+        "title": "Optimisation prédictive continue",
+        "description": "Algorithmes d'optimisation automatique basés sur patterns comportementaux. Ajustements proactifs avant que les performances ne chutent."
       },
-      "roi": {
-        "title": "ROI Transparent",
-        "description": "Dashboard temps réel + rapports mensuels. Visibilité complète sur l'impact de chaque euro investi en SEO.",
-        "subtitle": "GA4 + Search Console intégrés"
+      "formula": {
+        "title": "osom Data Analysis Formula",
+        "price": "À partir de 3000 CHF • Insights garantis",
+        "subtitle": "Artisan, Valais (200+ jours GA4)"
       },
       "engagement": {
-        "title": "+54% Engagement Supérieur",
-        "description": "Trafic SEO osom vs trafic direct standard",
-        "subtitle": "Analyse comparative sur 6 mois • Données vérifiables"
+        "title": "68.6% vs 44.6%",
+        "description": "ROI mesurable vs approximations",
+        "subtitle": "Analyse comparative • Données vérifiables GA4"
       }
     },
     "force3": {
-      "badge": "FORCE #3 - DÉCISIONS BASÉES SUR LA DATA",
-      "title_line1": "Décisions par",
-      "title_data": "data",
-      "title_line2": "Performance par",
-      "title_science": "science",
-      "description": "Nous révélons le ROI invisible de vos actions marketing. 140x plus efficace que la publicité payante, stratégies guidées par l'analyse, pas l'intuition.",
-      "revolution": {
-        "title": "Révolution Organique",
-        "roi": "140x ROI",
-        "description": "688 conversions organiques vs 49 payantes. Même audience, même période, budget 10x inférieur. La data ne ment jamais.",
-        "subtitle": "PME formation Valais • 6 mois GA4 + Meta Business"
+      "badge": "FORCE #3 - TECHNOLOGIE",
+      "title_line1": "Architecture Next.js +",
+      "title_ia": "IA",
+      "title_line2": "la stack qui distance définitivement vos",
+      "title_concurrents": "concurrents",
+      "description": "Différenciation technique vs WordPress et solutions basiques. Stack qui distance définitivement vos concurrents pendant qu'ils utilisent WordPress obsolète.",
+      "performance": {
+        "title": "Performance garantie sous 2 secondes",
+        "description": "Sites livrés avec PageSpeed 95+, temps de chargement garanti sous 2s. Performance mesurée et optimisée en continu vs 5-8s WordPress standard."
       },
-      "cost": {
-        "title": "Coût d'Acquisition",
-        "reduction": "-99.3%",
-        "description": "Réduction massive du CPA grâce à la stratégie organique. Chaque franc investi génère 140x plus de conversions qu'en publicité payante.",
-        "subtitle": "Comparatif Meta Ads vs Organique • ROI vérifiable"
+      "integrations": {
+        "title": "Intégrations IA natives",
+        "description": "Agents IA intégrés nativement dans l'architecture. Fonctionnalités d'intelligence artificielle évolutives sans refonte technique complète."
       },
-      "tracking": {
-        "title": "Tracking Transparent",
-        "description": "Dashboard temps réel, attribution complète, ROI par canal. Vous savez exactement d'où viennent vos résultats et pourquoi.",
-        "subtitle": "GA4 + Data Studio + Rapports mensuels"
+      "mobile": {
+        "title": "Mobile-first + PWA",
+        "description": "Architecture mobile-first avec Progressive Web App. Expérience utilisateur premium sur tous appareils, installation possible comme app native."
+      },
+      "formula": {
+        "title": "osom Tech Formula",
+        "price": "À partir de 4500 CHF • Performance garantie",
+        "subtitle": "PME Magasin construction, Conthey (2024)"
       },
       "conversions": {
-        "title": "688 vs 49 Conversions",
-        "description": "Stratégie organique vs publicité payante",
-        "subtitle": "Période identique • Audience identique • Budget 10x inférieur"
+        "title": "< 2s vs 5-8s",
+        "description": "Temps de chargement WordPress",
+        "subtitle": "Performance mesurée • PageSpeed 95+ garanti"
       }
     },
     "cta": {
-      "title_line1": "Prêt à transformer",
-      "title_performances": "performances",
-      "description": "Discutons de votre projet et découvrons comment nous pouvons multiplier votre ROI avec une approche data-driven.",
-      "cta_primary": "Consultation gratuite",
-      "cta_secondary": "Calculer mon ROI",
+      "title_line1": "Prêt à rendre vos concurrents",
+      "title_performances": "obsolètes",
+      "description": "Discutons de votre projet et découvrons comment notre approche Marketing + IA + Data peut multiplier votre ROI de façon mesurable.",
+      "cta_primary": "Audit gratuit",
+      "cta_secondary": "Voir nos formulas",
       "trust_indicators": {
-        "ga4": "Données vérifiables GA4",
-        "results": "Résultats 140x supérieurs",
-        "guarantee": "Performance garantie"
+        "ga4": "688 vs 49 leads qualifiés",
+        "results": "68.6% ROI mesurable vs approximations",
+        "guarantee": "Performance < 2s garantie"
       }
     },
     "services": {
@@ -177,7 +174,7 @@
         },
         "improvement": {
           "label": "Impact Supérieur",
-          "value": "140x plus efficace"
+          "value": "14x plus efficace"
         }
       },
       "conversion": {
