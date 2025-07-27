@@ -189,62 +189,52 @@ export default async function Home() {
           
           <div className="space-y-20">
             
-            {/* FORCE 1: Design & UX/UI Revolution pour Entrepreneurs */}
+            {/* FORCE 1: MARKETING + IA Revolution pour Entrepreneurs */}
             <AnimatedElement type="slideUp" delay={0.1}>
               <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group hover:scale-[1.02]">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 h-full">
-                {/* Graphique à gauche - Layout créatif */}
-                <div className="bg-gradient-to-br from-purple-400/10 to-black/60 p-8 flex items-center">
-                  <GraphiqueConversion
-                    title="Conversion rate"
-                    subtitle="OSOM vs industrie"
-                    traditionalRate={2.5}
-                    osomRate={11.3}
-                    className="w-full border-0"
-                  />
-                </div>
-                
-                {/* Contenu principal - Plus d'espace */}
-                <div className="col-span-2 p-16 bg-gradient-to-br from-black/60 to-black/30">
-                  <div className="max-w-3xl">
-                    <div className="flex items-center mb-8">
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mr-6 flex items-center justify-center">
+                {/* Layout centré avec graphique intégré */}
+                <div className="p-16 bg-gradient-to-br from-purple-900/20 to-black/60">
+                  <div className="max-w-4xl mx-auto">
+                    <div className="flex items-center justify-center mb-8">
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full mr-6 flex items-center justify-center">
                         <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                       </div>
                       <div>
-                        <div className="text-purple-400 font-medium text-sm mb-2">FORCE 1 • DESIGN & UX/UI</div>
+                        <div className="text-purple-400 font-medium text-sm mb-2">FORCE #1 - MARKETING + IA</div>
                       </div>
                     </div>
                     
-                    <AnimatedElement type="slideLeft" delay={0.3}>
-                      <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        11.3% de conversion : comment votre <span className="text-purple-400 font-bold">design</span><br />
-                        devient une <span className="text-purple-400 font-bold">machine à vendre</span>
+                    <AnimatedElement type="fadeIn" delay={0.3}>
+                      <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                        688% d'augmentation de <span className="text-purple-400 font-bold">leads qualifiés</span><br />
+                        comment notre IA transforme votre marketing en <span className="text-purple-400 font-bold">machine à prospects</span>
                       </h3>
                     </AnimatedElement>
                     
-                    <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Votre concurrent attire autant de visiteurs que vous, mais convertit 4.5x moins. 
-                      La différence ? Chaque pixel de nos designs est optimisé pour vendre.
+                    <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                      Vos concurrents font du marketing à l'instinct, nous utilisons l'IA pour transformer votre marketing en machine à prospects. 688 leads générés vs 49 chez la concurrence.
                     </p>
                     
                     {/* Arguments Business Entrepreneur */}
-                    <div className="space-y-6 mb-10">
-                      <div className="bg-purple-400/5 rounded-lg p-4 border-l-4 border-purple-400">
-                        <div className="font-semibold text-purple-400 mb-2">Psychologie comportementale appliquée</div>
-                        <div className="text-gray-300">68.6% d'engagement vs 44.6% sites classiques. Eye-tracking + heatmaps = parcours optimal.</div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                      <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30">
+                        <div className="text-purple-400 font-bold text-lg mb-4">Agents IA marketing personnalisés</div>
+                        <div className="text-gray-300 mb-4">Algorithmes propriétaires qui analysent comportements clients en temps réel. Personnalisation automatique des campagnes selon profil utilisateur et intention d'achat.</div>
+                        <div className="text-purple-400 text-sm">Algorithmes propriétaires</div>
                       </div>
                       
-                      <div className="bg-purple-400/5 rounded-lg p-4 border-l-4 border-purple-400">
-                        <div className="font-semibold text-purple-400 mb-2">ROI design mesurable</div>
-                        <div className="text-gray-300">+350% revenus à trafic égal. Chaque modification A/B testée sur données réelles.</div>
+                      <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30">
+                        <div className="text-purple-400 font-bold text-lg mb-4">Prédiction ROI avant investissement</div>
+                        <div className="text-gray-300 mb-4">Modèles prédictifs basés sur 200+ projets analysés. Visibilité complète sur retour attendu avant même de lancer une campagne marketing.</div>
+                        <div className="text-purple-400 text-sm">200+ projets analysés</div>
                       </div>
                       
-                      <div className="bg-purple-400/5 rounded-lg p-4 border-l-4 border-purple-400">
-                        <div className="font-semibold text-purple-400 mb-2">Mobile-first garanti</div>
-                        <div className="text-gray-300">77% de vos clients naviguent mobile. Interface tactile optimisée, chargement &lt; 2 secondes.</div>
+                      <div className="bg-purple-400/5 rounded-xl p-6 border border-purple-400/20">
+                        <div className="text-purple-400 font-bold text-lg mb-4">Analytics temps réel actionnable</div>
+                        <div className="text-gray-300 mb-4">Dashboard en temps réel avec recommandations automatiques d'optimisation. Ajustements immédiats basés sur performance live des campagnes.</div>
+                        <div className="text-purple-400 text-sm">Dashboard temps réel</div>
                       </div>
                     </div>
                     
@@ -274,24 +264,15 @@ export default async function Home() {
                       </div>
                     </AnimatedElement>
                     
-                    <AnimatedElement type="slideUp" delay={0.8}>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="p-6 bg-purple-400/10 rounded-xl border border-purple-400/30 hover:bg-purple-400/15 hover:border-purple-400/50 transition-all duration-300">
-                          <div className="text-purple-400 font-bold text-lg mb-2">{dictionary.home.force1.formula.title}</div>
-                          <div className="text-white text-lg">{dictionary.home.force1.formula.price}</div>
-                          <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.formula.subtitle}</div>
-                        </div>
-                        
-                        <div className="p-6 bg-purple-400/5 rounded-xl border border-purple-400/20 hover:bg-purple-400/10 hover:border-purple-400/40 transition-all duration-300">
-                          <div className="text-purple-400 text-2xl font-light mb-2">{dictionary.home.force1.conversion.rate}</div>
-                          <div className="text-gray-300">{dictionary.home.force1.conversion.description}</div>
-                          <div className="text-gray-400 text-sm mt-2">{dictionary.home.force1.conversion.subtitle}</div>
-                        </div>
+                    <AnimatedElement type="scale" delay={0.9}>
+                      <div className="bg-purple-400/10 rounded-xl p-8 border border-purple-400/30 max-w-2xl mx-auto hover:bg-purple-400/15 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-400/20 transition-all duration-500">
+                        <div className="text-purple-400 font-bold text-2xl mb-2">688 vs 49</div>
+                        <div className="text-white text-lg">Leads qualifiés générés</div>
+                        <div className="text-gray-400 text-sm mt-2">Même période • Même audience • Budget 10x inférieur</div>
                       </div>
                     </AnimatedElement>
                   </div>
                 </div>
-              </div>
               </div>
             </AnimatedElement>
             
@@ -462,8 +443,8 @@ export default async function Home() {
                     </div>
                     
                     <AnimatedElement type="scale" delay={0.9}>
-                      <div className="bg-yellow-400/10 rounded-xl p-8 border border-yellow-400/30 hover:bg-yellow-400/15 hover:border-yellow-400/50 hover:shadow-lg hover:shadow-yellow-400/20 transition-all duration-500">
-                        <div className="text-yellow-400 font-bold text-2xl mb-2">{dictionary.home.force3.conversions.title}</div>
+                      <div className="bg-green-400/10 rounded-xl p-8 border border-green-400/30 hover:bg-green-400/15 hover:border-green-400/50 hover:shadow-lg hover:shadow-green-400/20 transition-all duration-500">
+                        <div className="text-green-400 font-bold text-2xl mb-2">{dictionary.home.force3.conversions.title}</div>
                         <div className="text-white text-lg">{dictionary.home.force3.conversions.description}</div>
                         <div className="text-gray-400 text-sm mt-2">{dictionary.home.force3.conversions.subtitle}</div>
                       </div>

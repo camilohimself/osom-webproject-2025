@@ -266,7 +266,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                 variant="primary"
                 className="w-full sm:w-auto text-lg px-8 py-4 min-h-[44px]"
               >
-                CONTACTEZ OSOM
+                {dictionary.hero.cta_primary}
               </MagneticButton>
               
               <MagneticButton
@@ -274,13 +274,13 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                 variant="secondary"
                 className="w-full sm:w-auto text-lg px-8 py-4 min-h-[44px]"
               >
-                PROJETS OSOM
+                {dictionary.hero.cta_secondary}
               </MagneticButton>
             </motion.div>
             
             {/* Trust Indicators with Tooltips */}
             <motion.div 
-              className="flex flex-wrap gap-8 text-gray-400 text-sm"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-gray-400 text-sm"
               variants={itemVariants}
             >
               {Object.entries(dictionary.hero.trust_indicators).map(([key, text], index) => (
@@ -313,7 +313,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                   {/* Ultra-Premium Tooltip with Animated Counters */}
                   {hoveredMetric === key && metricTooltips[key as keyof typeof metricTooltips] && (
                     <motion.div
-                      className="absolute bottom-full left-0 mb-3 p-6 bg-gradient-to-br from-black/95 to-gray-900/95 backdrop-blur-md rounded-2xl border border-yellow-400/40 shadow-2xl min-w-96 z-20"
+                      className="absolute bottom-full left-0 mb-3 p-4 sm:p-6 bg-gradient-to-br from-black/95 to-gray-900/95 backdrop-blur-md rounded-2xl border border-yellow-400/40 shadow-2xl min-w-72 sm:min-w-96 max-w-sm sm:max-w-none z-20"
                       initial={{ opacity: 0, y: 15, scale: 0.85 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{ 

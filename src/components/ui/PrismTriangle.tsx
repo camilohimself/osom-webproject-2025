@@ -105,6 +105,10 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                     <stop offset="50%" stopColor="rgba(0, 0, 0, 0.8)" />
                     <stop offset="100%" stopColor="rgba(75, 85, 99, 0.9)" />
                   </linearGradient>
+                  <linearGradient id="lightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="rgba(255,255,255,1)" />
+                    <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+                  </linearGradient>
                   <filter id="glowEffect">
                     <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
                     <feMerge> 
@@ -141,12 +145,6 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                   transition={{ delay: 0.8, duration: 0.6 }}
                 />
                 
-                <defs>
-                  <linearGradient id="lightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="rgba(255,255,255,1)" />
-                    <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-                  </linearGradient>
-                </defs>
               </svg>
               
               {/* Guide d'interaction */}
@@ -189,8 +187,8 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
                   {force.shortName}
                 </div>
                 {force.badge && (
-                  <div className="bg-purple-500/20 px-3 py-1 rounded-full border border-purple-500/30 mb-2">
-                    <span className="text-purple-400 text-xs font-bold">{force.badge}</span>
+                  <div className={`bg-${force.color}-500/20 px-3 py-1 rounded-full border border-${force.color}-500/30 mb-2`}>
+                    <span className={`${force.colorClass} text-xs font-bold`}>{force.badge}</span>
                   </div>
                 )}
                 <div className="text-gray-300 text-sm text-center max-w-xs">
