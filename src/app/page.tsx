@@ -311,37 +311,37 @@ export default async function Home() {
                     
                     <AnimatedElement type="fadeIn" delay={0.4}>
                       <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        Analytics Data Valais : <span className="text-cyan-400 font-bold">688 conversions</span> vs <span className="text-cyan-400 font-bold">49 concurrents</span><br />
+                        Analytics SEO Valais : <span className="text-cyan-400 font-bold">688 conversions</span> vs <span className="text-cyan-400 font-bold">49 concurrents</span><br />
                         Quand l'analyse de données révèle votre <span className="text-cyan-400 font-bold">potentiel caché</span>
                       </h3>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Audit référencement approfondi : Pendant que vos concurrents achètent du trafic payant, notre analyse Google Analytics révèle 14'171 sessions organiques "perdues". Résultat : 12x plus de conversions à budget marketing égal.
+                      Audit SEO approfondi : Pendant que vos concurrents achètent du trafic payant, notre analyse Google Analytics révèle 14'171 sessions organiques "perdues". Résultat : 12x plus de conversions à budget marketing égal.
                     </p>
                     
                     {/* Arguments Business Entrepreneur */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                       <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Audit Sessions Perdues</div>
-                        <div className="text-gray-300 mb-4">Audit technique approfondi : 14'171 sessions "Unassigned" révélées dans Google Analytics. ROI caché de CHF 47'000 découvert.</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">Audit SEO Sessions Perdues</div>
+                        <div className="text-gray-300 mb-4">Audit technique SEO : 14'171 sessions "Unassigned" révélées dans Google Analytics. ROI caché de CHF 47'000 découvert.</div>
                         <div className="text-cyan-400 text-sm">Forensics data + attribution multi-canal</div>
                       </div>
                       
                       <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Référencement vs SEA Performance</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">SEO vs SEA Performance Audit</div>
                         <div className="text-gray-300 mb-4">688 conversions référencement naturel vs 49 publicité payante (étude Entreprise PME). Optimisation budget marketing -70%.</div>
                         <div className="text-cyan-400 text-sm">GA4 + Search Console + attribution</div>
                       </div>
                       
                       <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Optimisation technique + contenu Valais</div>
-                        <div className="text-gray-300 mb-4">68.6% engagement référencement naturel vs 44.6% trafic direct. Optimisation technique + stratégie de contenu qui génère du trafic qualifié convertissant.</div>
-                        <div className="text-cyan-400 text-sm">Stratégie référencement long terme + ROI cumulé</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">SEO technique + contenu Valais</div>
+                        <div className="text-gray-300 mb-4">68.6% engagement référencement naturel vs 44.6% trafic direct. Optimisation SEO technique + stratégie de contenu qui génère du trafic qualifié convertissant.</div>
+                        <div className="text-cyan-400 text-sm">Stratégie SEO long terme + ROI cumulé</div>
                       </div>
                       
                       <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Dashboard Analytics temps réel</div>
+                        <div className="text-cyan-400 font-bold text-lg mb-4">Dashboard SEO temps réel</div>
                         <div className="text-gray-300 mb-4">Monitoring SEO précis + alertes automatiques de performance. Pilotage business data-driven quotidien pour optimisation continue.</div>
                         <div className="text-cyan-400 text-sm">Google Analytics + Search Console + automations</div>
                       </div>
@@ -404,20 +404,20 @@ export default async function Home() {
                     
                     <AnimatedElement type="slideRight" delay={0.4}>
                       <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        Développement web Valais : <span className="text-green-400 font-bold">Stratégie Top 5</span><br />
-                        Votre référencement automatisé performe <span className="text-green-400 font-bold">24h/24</span>
+                        Développement web SEO Valais : <span className="text-green-400 font-bold">Stratégie Top 5</span><br />
+                        Votre SEO technique automatisé performe <span className="text-green-400 font-bold">24h/24</span>
                       </h3>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      564 impressions ciblées sur mots-clés concurrentiels pour viser le Top 5 Google. Notre développement Next.js 15 + IA optimise sites web avec performance &lt; 2s et référencement naturel continu.
+                      Agence web Valais : 564 impressions ciblées sur mots-clés concurrentiels pour viser le Top 5 Google. Notre développement Next.js 15 + IA optimise sites web avec performance &lt; 2s et référencement naturel continu.
                     </p>
                     
                     {/* Arguments Business Entrepreneur */}
                     <div className="space-y-6 mb-10">
                       <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400">
                         <div className="flex justify-between items-start mb-3">
-                          <div className="font-semibold text-green-400">Architecture évolutive Valais</div>
+                          <div className="font-semibold text-green-400">Développement web évolutif Valais</div>
                           <div className="text-green-400 font-bold text-lg">0 refonte en 5 ans</div>
                         </div>
                         <div className="text-gray-300">Next.js 15 + TypeScript. Stack moderne qui évolue avec votre business digital. Migrations automatiques pour sites web pérennes.</div>
@@ -426,10 +426,10 @@ export default async function Home() {
                       
                       <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400">
                         <div className="flex justify-between items-start mb-3">
-                          <div className="font-semibold text-green-400">Performance technique</div>
+                          <div className="font-semibold text-green-400">Optimisation SEO technique</div>
                           <div className="text-green-400 font-bold text-lg">&lt; 2s chargement</div>
                         </div>
-                        <div className="text-gray-300">Core Web Vitals optimaux. Performance + vitesse = meilleur référencement Google automatique.</div>
+                        <div className="text-gray-300">Core Web Vitals optimaux. SEO technique + vitesse = meilleur référencement Google automatique.</div>
                         <div className="text-green-300 text-sm mt-2">Lighthouse 90+ score visé</div>
                       </div>
                       
