@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion'
 import { MagneticButton } from '@/components/ui'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
+import EmailModal from '@/components/contact/EmailModal'
 
 interface ContactDictionary {
   title: string
@@ -26,6 +27,7 @@ interface ContactPageClientProps {
 
 const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
   const [showCalendly, setShowCalendly] = useState(false)
+  const [showEmailModal, setShowEmailModal] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -744,7 +746,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                 <motion.div
                   className="bg-cyan-400/5 border border-cyan-400/30 rounded-2xl p-12 hover:bg-cyan-400/10 hover:border-cyan-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
                   whileHover={{ scale: 1.01, y: -8 }}
-                  onClick={() => window.location.href = 'mailto:contact@osom.ch?subject=Consultation stratégie digitale&body=Bonjour OSOM,%0D%0A%0D%0AJe souhaite discuter de mon projet...'}
+                  onClick={() => setShowEmailModal(true)}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
@@ -754,12 +756,11 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                       className="text-3xl font-light text-white mb-6 leading-tight"
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      Contact par email
+                      Kit de contact
                     </motion.h3>
                     
                     <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
-                      Votre message part instantanément pour formations, masterclasses et cours particuliers.
-                      Réponse garantie sous 48h.
+                      Recevez instantanément toutes les informations nécessaires : questionnaire, Calendly, exemples de résultats.
                     </p>
                   </div>
                   
@@ -769,7 +770,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                       whileHover={{ scale: 1.02 }}
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      Envoyer un email
+                      Recevoir mon kit
                     </motion.div>
                   </div>
                 </motion.div>
@@ -936,6 +937,12 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
 
         </div>
       </div>
+
+      {/* Email Modal */}
+      <EmailModal 
+        isOpen={showEmailModal} 
+        onClose={() => setShowEmailModal(false)} 
+      />
     </div>
   )
 }
