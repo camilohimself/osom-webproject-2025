@@ -14,6 +14,7 @@ interface HeaderProps {
 export default function Header({ currentLocale, dictionary }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false)
+  const [servicesMenuTimeout, setServicesMenuTimeout] = useState<NodeJS.Timeout | null>(null)
 
   // Liste des services avec les vraies pages
   const services = [
@@ -61,8 +62,19 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                 {item.hasDropdown ? (
                   <div
                     className="relative"
-                    onMouseEnter={() => setIsServicesMenuOpen(true)}
-                    onMouseLeave={() => setIsServicesMenuOpen(false)}
+                    onMouseEnter={() => {
+                      if (servicesMenuTimeout) {
+                        clearTimeout(servicesMenuTimeout)
+                        setServicesMenuTimeout(null)
+                      }
+                      setIsServicesMenuOpen(true)
+                    }}
+                    onMouseLeave={() => {
+                      const timeout = setTimeout(() => {
+                        setIsServicesMenuOpen(false)
+                      }, 800)
+                      setServicesMenuTimeout(timeout)
+                    }}
                   >
                     <Link
                       href={item.href}
@@ -78,7 +90,21 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                     
                     {/* Menu déroulant Services */}
                     {isServicesMenuOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-[520px] bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-yellow-400/20 z-50">
+                      <div 
+                        className="absolute top-full left-0 mt-2 w-[520px] bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-yellow-400/20 z-50"
+                        onMouseEnter={() => {
+                          if (servicesMenuTimeout) {
+                            clearTimeout(servicesMenuTimeout)
+                            setServicesMenuTimeout(null)
+                          }
+                        }}
+                        onMouseLeave={() => {
+                          const timeout = setTimeout(() => {
+                            setIsServicesMenuOpen(false)
+                          }, 800)
+                          setServicesMenuTimeout(timeout)
+                        }}
+                      >
                         <div className="p-6">
                           <div className="grid grid-cols-2 gap-8">
                             {/* Services Digitaux */}
