@@ -40,32 +40,11 @@ export default function CreationSiteWebPage() {
     }
   ]
 
-  // GARANTIES BUSINESS CONCRÈTES  
-  const guarantees = [
-    {
-      icon: "📈",
-      title: "Résultats mesurés en 30 jours",
-      detail: "Dashboard GA4 partagé + rapport mensuel",
-      proof: "Ou remboursé intégral"
-    },
-    {
-      icon: "⚡",
-      title: "Site livré en 45 jours max",
-      detail: "Planning transparent + jalons validés",
-      proof: "Pénalités si retard"
-    },
-    {
-      icon: "🎯", 
-      title: "ROI minimum x3 garanti",
-      detail: "Pour 4,500 CHF → minimum 13,500 CHF retour",
-      proof: "Contrat performance"
-    },
-    {
-      icon: "🛡️",
-      title: "Support illimité 1ère année",
-      detail: "Hotline directe + optimisations incluses",
-      proof: "Dans le contrat"
-    }
+  // PREUVES ANONYMISÉES SIMPLES
+  const businessProofs = [
+    "Site performant (< 2s chargement) structuré SEO",
+    "Positionnement local + suivi positions Google", 
+    "Reporting GA4 transparent + point mensuel"
   ]
   
   // Animation compteur
@@ -86,20 +65,32 @@ export default function CreationSiteWebPage() {
 
   const faqData = [
     {
-      question: "Délais ?",
-      answer: "Premiers signaux en 1–3 mois selon la concurrence ; progrès continus."
+      question: "Combien coûte la création d'un site internet professionnel en Valais ?",
+      answer: "Nos forfaits de création de site web débutent à 4,500 CHF tout inclus pour un site vitrine professionnel avec SEO local. Ce prix comprend la conception, le développement, l'optimisation pour Google, la configuration GA4 et le support première année. Contrairement aux solutions low-cost, nos sites sont optimisés pour générer des clients et garantir un ROI mesurable."
     },
     {
-      question: "Garanties ?",
-      answer: "Pas de garantie de position ; méthode transparente + reporting GA4."
+      question: "Quels sont les délais pour créer un site web en Suisse romande ?",
+      answer: "La création de votre site web prend maximum 45 jours ouvrés avec notre méthode éprouvée. Les premiers résultats SEO apparaissent généralement entre 1 et 3 mois selon votre secteur d'activité et la concurrence locale. Nous livrons un planning détaillé avec jalons validés pour assurer une transparence totale du projet."
     },
     {
-      question: "Tarifs ?",
-      answer: "Forfaits clairs en CHF, selon secteur et taille."
+      question: "Comment améliorer le référencement naturel de mon cabinet médical ?",
+      answer: "Le SEO local pour cabinets médicaux nécessite une approche spécialisée : optimisation des fiches Google Business, création de contenus santé conformes, ciblage de mots-clés locaux comme 'docteur Sion' ou 'consultation médicale Valais'. Nous créons des pages localisées et suivons vos positions sur Google Search Console pour mesurer les progrès."
     },
     {
-      question: "Livrables ?",
-      answer: "Site rapide, plan SEO, dashboard simple, point mensuel."
+      question: "Quelle différence entre agence web locale et freelance pour mon entreprise ?",
+      answer: "Une agence web locale comme OSOM vous garantit continuité, expertise multiple (design, développement, SEO, marketing) et suivi long terme. Contrairement à un freelance, nous disposons d'une équipe complète, de procédures éprouvées et d'un support client dédié. Basés en Valais, nous comprenons le marché local et les spécificités des entreprises suisses."
+    },
+    {
+      question: "Mes concurrents apparaissent avant moi sur Google, comment faire ?",
+      answer: "L'analyse concurrentielle SEO est cruciale pour dépasser vos concurrents sur Google. Nous analysons leurs stratégies de mots-clés, leur maillage interne, leurs backlinks et leur présence locale. Ensuite, nous créons une stratégie SEO supérieure avec du contenu optimisé, des pages localisées et un suivi des positions pour mesurer vos progrès face à la concurrence."
+    },
+    {
+      question: "Comment mesurer le retour sur investissement de mon site web ?",
+      answer: "Nous configurons Google Analytics 4 et Search Console pour tracker précisément vos conversions : formulaires de contact, appels téléphoniques, prises de rendez-vous. Chaque mois, vous recevez un rapport détaillé montrant le nombre de prospects générés, leur source (SEO, réseaux sociaux, direct) et le ROI calculé. Notre objectif : démontrer que votre site web génère plus de revenus qu'il ne coûte."
+    },
+    {
+      question: "Puis-je modifier mon site web moi-même après la livraison ?",
+      answer: "Absolument ! Nous développons vos sites avec des CMS intuitifs permettant de modifier facilement textes, images et pages. Une formation personnalisée est incluse dans nos forfaits. Pour les modifications techniques complexes ou l'ajout de nouvelles fonctionnalités, notre support première année inclus prend le relais. L'objectif : votre autonomie maximale avec notre expertise en backup."
     }
   ]
 
@@ -149,15 +140,15 @@ export default function CreationSiteWebPage() {
               <div className="space-y-3 mb-8">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-300">Garanti sur contrat ou remboursé</span>
+                  <span className="text-gray-300">Site performant (&lt; 2s chargement) structuré SEO</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                  <span className="text-gray-300">Résultats mesurés dès 30 jours</span>
+                  <span className="text-gray-300">Positionnement local + suivi positions Google</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                  <span className="text-gray-300">4,500 CHF tout inclus, zéro surprise</span>
+                  <span className="text-gray-300">Reporting GA4 transparent + point mensuel</span>
                 </div>
               </div>
 
@@ -171,11 +162,11 @@ export default function CreationSiteWebPage() {
                   Parler à un expert
                 </Link>
                 <Link
-                  href="/questionnaire"
+                  href="/realisations"
                   className="inline-flex items-center px-8 py-4 rounded-xl border border-purple-400/40 text-purple-400 hover:bg-purple-400/10 transition-all duration-300"
                   style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                 >
-                  Obtenir un audit gratuit
+                  Voir nos démos
                 </Link>
               </div>
             </div>
@@ -267,7 +258,7 @@ export default function CreationSiteWebPage() {
                 <li>Structure prête pour le SEO</li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link href="/services/seo-content-marketing" className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 block">
               <h3 className="text-white font-bold text-lg mb-3" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                 SEO & Contenus
               </h3>
@@ -275,8 +266,8 @@ export default function CreationSiteWebPage() {
                 <li>Ciblage mots-clés local</li>
                 <li>Pages piliers/locales, suivi des positions</li>
               </ul>
-            </div>
-            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            </Link>
+            <Link href="/services/tracking-data" className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 block">
               <h3 className="text-white font-bold text-lg mb-3" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                 Data & CRM
               </h3>
@@ -284,7 +275,7 @@ export default function CreationSiteWebPage() {
                 <li>GA4 + Search Console configurés</li>
                 <li>Tableaux de bord simples, automatisations</li>
               </ul>
-            </div>
+            </Link>
           </div>
 
           {/* OBJECTION HANDLING - "TROP CHER" */}
@@ -449,13 +440,13 @@ export default function CreationSiteWebPage() {
             
             <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 text-center">
               <div className="text-6xl md:text-7xl font-black text-teal-400 mb-4">
-                688
+                14x
               </div>
               <h3 className="text-white font-bold text-xl mb-2" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                Clients générés
+                Plus efficace
               </h3>
               <p className="text-gray-300 text-sm">
-                en 6 mois vs 49 méthode classique
+                <Link href="/realisations" className="text-teal-400 hover:underline">que méthodes traditionnelles</Link>
               </p>
             </div>
             
@@ -518,7 +509,7 @@ export default function CreationSiteWebPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Nouveaux clients/an</span>
-                    <span className="text-green-400 font-bold text-2xl">688</span>
+                    <span className="text-green-400 font-bold text-2xl"><Link href="/realisations" className="hover:underline">Résultats clients</Link></span>
                   </div>
                 </div>
               </div>
@@ -706,6 +697,29 @@ export default function CreationSiteWebPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Création Site Web OSOM",
+            "provider": {
+              "@type": "Organization", 
+              "name": "OSOM",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Valais",
+                "addressCountry": "CH"
+              }
+            },
+            "areaServed": "Valais",
+            "serviceType": "Création site web",
+            "description": "Agence web spécialisée création sites performants et SEO local pour cabinets et services B2B en Valais"
+          })
+        }}
       />
       </div>
     </>

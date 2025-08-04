@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'SEO Valais 68.6% Engagement vs 44.6% - 1718 Recherches | OSOM',
-  description: 'SEO Valais révolutionnaire : 68.6% engagement quality vs 44.6% industrie. 1718 recherches/mois captées. Top 3 Google garanti. Artisane Lumière case study.',
+  title: 'SEO Valais - Référencement Naturel Local | OSOM',
+  description: 'Agence SEO Valais: référencement naturel local pour cabinets B2B. Content marketing + suivi positions Google. Audit gratuit.',
   keywords: 'seo valais, référencement valais, seo content marketing, agence seo valais, référencement naturel valais, marketing de contenu valais, seo local valais'
 }
 

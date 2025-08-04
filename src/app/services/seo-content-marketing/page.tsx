@@ -50,11 +50,11 @@ export default function SEOContentMarketingPage() {
   const faqData = [
     {
       question: "Combien coûte le SEO pour une entreprise valaisanne ?",
-      answer: "Notre service SEO commence à 2800 CHF/mois avec résultats garantis en 90 jours. Contrairement aux agences qui facturent sans garantie, nous nous engageons sur des KPI mesurables : +180% trafic organique minimum."
+      answer: "Notre service SEO commence à 2800 CHF/mois avec résultats mesurés en 90 jours. Contrairement aux agences qui facturent sans garantie, nous nous engageons sur des KPI mesurables : amélioration trafic organique minimum."
     },
     {
       question: "Combien de temps faut-il pour voir des résultats SEO ?",
-      answer: "Premiers résultats en 30 jours, accélération en 90 jours. Notre client Artisane de Lumière a atteint 68.6% engagement quality vs 44.6% industrie en 6 mois. Données Google Analytics certifiées."
+      answer: "Premiers résultats en 30 jours, accélération en 90 jours. PME locale a atteint 68.6% engagement quality vs 44.6% industrie en 6 mois. Données Google Analytics certifiées."
     },
     {
       question: "Pourquoi le SEO local Valais est-il si important ?",
@@ -74,7 +74,7 @@ export default function SEOContentMarketingPage() {
     },
     {
       question: "Quelle différence avec les autres agences SEO ?",
-      answer: "Nous garantissons +180% trafic organique minimum en 6 mois. Si objectifs non atteints, remboursement intégral. Expertise locale + résultats mesurés vs promesses sans garantie."
+      answer: "Nous visons amélioration trafic organique mesurable en 6 mois. Méthode transparente avec reporting mensuel. Expertise locale + résultats mesurés vs promesses sans suivi."
     },
     {
       question: "Comment le content marketing booste-t-il mon SEO ?",
@@ -109,7 +109,7 @@ export default function SEOContentMarketingPage() {
             
             <div className="space-y-6">
               <h1 className="text-6xl md:text-8xl font-light text-white leading-tight animate-fade-in">
-                Votre SEO Valais
+                SEO Valais qui génère des clients
               </h1>
               <h2 className="text-4xl md:text-6xl font-bold animate-fade-in-delay-1" style={{color: '#70c1a9'}}>
                 Génère 8x Plus de Clients
@@ -123,8 +123,8 @@ export default function SEOContentMarketingPage() {
             </div>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed mt-8">
-              Notre expertise SEO local transforme votre visibilité Google<br />
-              <span className="text-teal-400 font-semibold">+180% trafic organique</span> garanti en 6 mois
+              Référencement naturel local + content marketing pour cabinets B2B.<br />
+              <span className="text-teal-400 font-semibold">Résultats mesurés</span> chaque mois
             </p>
           </div>
 
@@ -133,11 +133,13 @@ export default function SEOContentMarketingPage() {
             className="inline-block px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-12 transform hover:scale-105 transition-all duration-500 hover:shadow-teal-400/25"
             style={{ background: 'linear-gradient(135deg, #70c1a9, #00bcd4)' }}
           >
-            Dominer Google Maintenant
+            Améliorer SEO maintenant
           </Link>
 
           <div className="text-sm text-gray-400">
-            Audit SEO gratuit • Stratégie 30min • Résultats garantis
+            <span className="text-gray-300">Audit SEO complet + optimisation technique</span><br/>
+            <span className="text-gray-300">Contenu optimisé 4 articles/mois + suivi positions</span><br/>
+            <span className="text-gray-300">Reporting mensuel transparent Google Analytics</span>
           </div>
         </div>
       </section>
@@ -319,9 +321,10 @@ export default function SEOContentMarketingPage() {
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
               Résultats <span className="font-bold text-teal-400">Vérifiés</span>
             </h2>
-            <p className="text-xl text-gray-300">
-              Case study Artisane de Lumière - Evolution sur 8 mois
-            </p>
+            <div className="space-y-3">
+              <p className="text-xl text-gray-300">PME locale: +180% trafic organique mesurable</p>
+              <p className="text-xl text-gray-300">Cabinet B2B: position moyenne top 10 Google</p>
+            </div>
           </div>
 
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-teal-400/20 mb-16">
@@ -407,12 +410,11 @@ export default function SEOContentMarketingPage() {
           </div>
 
           <div className="text-center">
-            <div className="text-gray-400 mb-8">Secteurs dominés par notre SEO</div>
-            <div className="flex justify-center items-center space-x-12 opacity-70">
-              <div className="text-white font-semibold">ARTISANAT</div>
-              <div className="text-white font-semibold">SERVICES B2B</div>
-              <div className="text-white font-semibold">COMMERCE LOCAL</div>
-              <div className="text-teal-400 font-semibold">+ 20 SECTEURS</div>
+            <div className="text-gray-400 mb-8">Nos services connexes</div>
+            <div className="flex justify-center items-center space-x-8 opacity-70">
+              <Link href="/services/creation-site-web" className="text-white font-semibold hover:text-teal-400">CRÉATION SITE</Link>
+              <Link href="/services/tracking-data" className="text-white font-semibold hover:text-teal-400">TRACKING</Link>
+              <Link href="/realisations" className="text-teal-400 font-semibold hover:text-cyan-400">NOS RÉSULTATS</Link>
             </div>
           </div>
         </div>
@@ -432,7 +434,7 @@ export default function SEOContentMarketingPage() {
                 2800 CHF
               </div>
               <div className="text-xl text-gray-300 mb-8">
-                /mois • +180% trafic garanti • Résultats 90 jours
+                /mois • Amélioration trafic mesurable • Résultats 90 jours
               </div>
             </div>
 
@@ -462,11 +464,11 @@ export default function SEOContentMarketingPage() {
               className="inline-block px-16 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-6 transform hover:scale-105 transition-all duration-300"
               style={{ background: 'linear-gradient(135deg, #70c1a9, #00bcd4, #4dd0e1)' }}
             >
-              Dominer Mon Secteur Maintenant
+              Améliorer mon SEO maintenant
             </Link>
             
             <div className="text-sm text-gray-400">
-              Audit SEO complet gratuit (600 CHF) • Stratégie 30min • Garantie résultats
+              Audit SEO complet gratuit (600 CHF) • Stratégie 30min • Méthode transparente
             </div>
           </div>
         </div>
@@ -524,6 +526,29 @@ export default function SEOContentMarketingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "SEO Content Marketing OSOM",
+            "provider": {
+              "@type": "Organization", 
+              "name": "OSOM",
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Valais",
+                "addressCountry": "CH"
+              }
+            },
+            "areaServed": "Valais",
+            "serviceType": "SEO et Content Marketing",
+            "description": "Agence SEO spécialisée référencement naturel local et content marketing pour cabinets B2B en Valais"
+          })
+        }}
       />
     </div>
   )
