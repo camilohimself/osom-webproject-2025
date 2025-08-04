@@ -28,7 +28,7 @@ export default function MarketingAutomationCRMPage() {
       metric: "Temps Manuel",
       ourResult: "-65%",
       industry: "100% manuel",
-      improvement: "Efficacité révolutionnaire",
+      improvement: "Efficacité optimisée",
       color: "#10B981"
     },
     {
@@ -49,28 +49,28 @@ export default function MarketingAutomationCRMPage() {
 
   const faqData = [
     {
-      question: "Comment l'expertise CRM humaine se combine-t-elle concrètement avec l'intelligence Claude pour garantir +78% conversions ?",
-      answer: "Collaboration révolutionnaire unique : Expert humain configure triggers HubSpot/Pipedrive/ActiveCampaign + Claude analyse comportements, optimise sequences, prédit conversions. Humain = expertise technique setup parfait, Claude = intelligence comportementale continue. +78% conversions = setup expert amplifié IA pour triggers précis + sequences Claude-optimisées + scoring intelligence artificielle. Pas d'IA seule, pas d'humain seul : collaboration symbiotique révolutionnaire."
+      question: "Comment l'automatisation marketing améliore-t-elle concrètement le taux de conversion de +78% pour les PME valaisannes ?",
+      answer: "Méthodologie éprouvée : Expert certifié configure triggers HubSpot/Pipedrive/ActiveCampaign + analyse comportements clients, optimise séquences emails, crée scoring personnalisé. +78% conversions grâce à : triggers précis basés données clients + séquences optimisées timing + scoring comportemental avancé. Pas d'automatisation générique : personnalisation complète selon votre secteur et clientele."
     },
     {
-      question: "Claude peut-il vraiment améliorer la configuration HubSpot, Pipedrive, ActiveCampaign ou c'est du marketing IA ?",
-      answer: "Claude ne configure pas directement les outils, mais révolutionne la stratégie : analyse comportements prospects, optimise timing sequences, prédit scoring effectiveness, suggère trigger improvements. Expert humain = maîtrise technique complète + certifications CRM, Claude = intelligence comportementale + pattern recognition + optimization suggestions. Demo révolutionnaire : on montre setup avant/après Claude optimization sur votre funnel réel."
+      question: "Quels outils CRM et automatisation utilisez-vous pour les entreprises suisses ?",
+      answer: "Stack complet certifié : HubSpot (partner certifié), Pipedrive (expert), ActiveCampaign (spécialiste), Mailchimp pro. Configuration avancée : triggers comportementaux, sequences multi-touch, scoring personnalisé, attribution revenus. Expert certifié : maîtrise technique complète + optimisation continue. Demo concrète : setup avant/après sur votre funnel réel avec métriques mesurables."
     },
     {
-      question: "8900 CHF pour Expert CRM × Claude, quelle est la différence réelle versus setup CRM classique à 3000 CHF ?",
-      answer: "Différence révolutionnaire : Setup classique = configuration basique statique. Expert CRM × Claude = configuration experte + intelligence comportementale continue + optimisation IA permanente. 8900 CHF inclus : audit expert + Claude analysis, setup révolutionnaire, sequences Claude-optimized, scoring IA, formation collaboration humain-machine, support 6 mois. ROI récupéré 2-3 mois via efficacité révolutionnaire. Investissement transformation vs dépense configuration."
+      question: "8900 CHF pour Expert CRM, quelle est la différence réelle versus setup CRM classique à 3000 CHF ?",
+      answer: "Différence maîtrise experte : Setup classique = configuration basique statique. Expert CRM OSOM = configuration avancée + optimisation comportementale continue + analyse performance permanente. 8900 CHF inclus : audit expert complet, setup personnalisé, séquences optimisées, scoring sur-mesure, formation équipes, support 6 mois. ROI récupéré 2-3 mois via efficacité mesurable. Investissement transformation vs dépense configuration basique."
     },
     {
-      question: "Après setup Expert CRM × Claude, mon équipe peut-elle gérer sans dépendance à l'IA ou expertise technique ?",
-      answer: "Objectif révolutionnaire : autonomie équipe amplifiée intelligence. Formation incluse : maîtrise interface CRM + compréhension insights Claude + interprétation recommendations IA. Équipe gère quotidien en autonomie, Claude provides ongoing behavioral insights, expert available pour évolutions stratégiques. Indépendance progressive : 80% autonomie mois 3, 95% mois 6. Support révolutionnaire : humain + IA accessible selon besoins."
+      question: "Après setup Expert CRM, mon équipe peut-elle gérer en autonomie sans dépendance technique ?",
+      answer: "Objectif : autonomie équipe complète. Formation incluse : maîtrise interface CRM + compréhension métriques + interprétation performances. Équipe gère quotidien en autonomie, dashboards intuitifs, expert disponible pour évolutions stratégiques. Indépendance progressive : 80% autonomie mois 3, 95% mois 6. Support : expert humain accessible selon besoins + documentation complète."
     },
     {
-      question: "Comment mesurez-vous concrètement les résultats de la collaboration Expert CRM × Claude ?",
-      answer: "Mesure révolutionnaire multicouche : Analytics expert (conversion rates, attribution multi-touch, LTV tracking) + Claude behavioral analysis (engagement patterns, prediction accuracy, optimization impact). Dashboard révolutionnaire : métriques expert + insights IA + recommendations Claude + ROI collaboration humain-machine. Reporting mensuel : performance before/after, Claude optimization impact, expert adjustments effectiveness. Transparence totale révolutionnaire collaboration."
+      question: "Comment mesurez-vous concrètement les résultats du setup Expert CRM Business ?",
+      answer: "Mesure business multicouche : Analytics expert (conversion rates, attribution multi-touch, LTV tracking) + analyse comportementale avancée (engagement patterns, prédiction accuracy, optimization impact). Dashboard complet : métriques business + insights comportementaux + recommandations automatisées + ROI mesurable. Reporting mensuel : performance before/after, impact optimisations, ajustements effectiveness. Transparence totale métrique business."
     },
     {
-      question: "La collaboration Expert CRM × Claude est-elle évolutive avec la croissance de mon business ?",
-      answer: "Architecture révolutionnaire scalable : setup expert extensible + Claude learning continu + intelligence adaptive. Croissance business = plus de data pour Claude optimization + insights plus précis + recommendations évolutives. Expert maintient structure technique, Claude améliore intelligence comportementale. Évolutivité révolutionnaire : collaboration humain-IA grandit avec business, pas de refonte nécessaire, que expansion intelligente du système révolutionnaire existant."
+      question: "Le setup Expert CRM Business est-il évolutif avec la croissance de mon entreprise ?",
+      answer: "Architecture business scalable : setup expert extensible + analyse learning continue + optimisation adaptive. Croissance business = plus de data pour optimisation + insights plus précis + recommandations évolutives. Expert maintient structure technique, système améliore analyse comportementale. Évolutivité business : setup grandit avec entreprise, pas de refonte nécessaire, expansion intelligente du système existant optimisé."
     }
   ]
 
@@ -96,27 +96,27 @@ export default function MarketingAutomationCRMPage() {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-block px-4 py-2 bg-green-400/20 rounded-full text-green-400 text-sm font-medium mb-6">
-              Plus que 3 setups Expert × Claude ce mois
+              Plus que 3 setups CRM Expert ce mois
             </div>
             
             <div className="space-y-6">
               <h1 className="text-6xl md:text-8xl font-light text-white leading-tight animate-fade-in">
-                CRM Automation
+                CRM Qui Convertit +78%
               </h1>
               <h2 className="text-4xl md:text-6xl font-bold animate-fade-in-delay-1" style={{color: '#10B981'}}>
-                Expert × Claude IA
+                Marketing Automation Expert
               </h2>
               <div className="text-8xl md:text-9xl font-black text-green-400 animate-bounce-slow">
                 +78%
               </div>
               <p className="text-2xl md:text-3xl text-gray-300 font-light animate-fade-in-delay-2">
-                conversions via collaboration révolutionnaire
+                taux conversion via automation experte
               </p>
             </div>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed mt-8">
-              Expert CRM humain épaulé par intelligence Claude<br />
-              <span className="text-green-400 font-semibold">-65% temps manuel</span> + automatisation parfaite
+              Expert CRM business avec automation avancée<br />
+              <span className="text-green-400 font-semibold">-65% temps manuel</span> + processus optimisés
             </p>
           </div>
 
@@ -125,11 +125,11 @@ export default function MarketingAutomationCRMPage() {
             className="inline-block px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-12 transform hover:scale-105 transition-all duration-500 hover:shadow-green-400/25"
             style={{ background: 'linear-gradient(135deg, #10B981, #70c1a9)' }}
           >
-            Setup Expert × Claude
+            Setup CRM Expert
           </Link>
 
           <div className="text-sm text-gray-400">
-            Audit gratuit • Demo live HubSpot × Claude • ROI garanti
+            Audit gratuit • Demo HubSpot business • ROI mesurable
           </div>
         </div>
       </section>
@@ -141,13 +141,13 @@ export default function MarketingAutomationCRMPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block px-6 py-3 bg-green-400/20 rounded-full text-green-400 text-lg font-bold mb-6">
-              Demo révolutionnaire live
+              Demo business live
             </div>
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
-              Setup CRM <span className="font-bold" style={{color: '#10B981'}}>Expert × Claude en action</span>
+              Setup CRM <span className="font-bold" style={{color: '#10B981'}}>Expert Business en action</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Regardez l'expert configurer HubSpot pendant que Claude optimise les workflows
+              Configuration experte HubSpot avec workflows optimisés et automation avancée
             </p>
           </div>
 
@@ -158,7 +158,7 @@ export default function MarketingAutomationCRMPage() {
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <div className="ml-4 text-gray-300 text-sm font-mono">OSOM Expert CRM × Claude Console</div>
+                <div className="ml-4 text-gray-300 text-sm font-mono">OSOM Expert CRM Business Console</div>
               </div>
             </div>
             
@@ -188,13 +188,13 @@ export default function MarketingAutomationCRMPage() {
                     <div className="mt-4 text-blue-400">✓ HubSpot API connecté</div>
                     <div className="text-blue-400">✓ Workflows créés expertement</div>
                     <div className="text-blue-400">✓ Lead scoring configuré</div>
-                    <div className="text-blue-400 animate-pulse">⚡ Attente optimisation Claude...</div>
+                    <div className="text-blue-400 animate-pulse">⚡ Optimisation en cours...</div>
                   </div>
                 </div>
                 
                 {/* CLAUDE INTELLIGENCE OPTIMIZATION */}
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Claude Intelligence Optimization</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Business Intelligence Optimization</h3>
                   
                   <div className="space-y-6">
                     <div className="bg-black/40 rounded-xl p-4">
@@ -205,7 +205,7 @@ export default function MarketingAutomationCRMPage() {
                       <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-green-400 to-teal-400 rounded-full transition-all duration-3000 ease-out" style={{width: `${animatedValue}%`}}></div>
                       </div>
-                      <div className="text-xs text-gray-400 mt-1">Claude optimise continuellement</div>
+                      <div className="text-xs text-gray-400 mt-1">Optimisation continue automatisée</div>
                     </div>
                     
                     <div className="bg-black/40 rounded-xl p-4">
@@ -216,7 +216,7 @@ export default function MarketingAutomationCRMPage() {
                       <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-green-400 to-emerald-400 rounded-full transition-all duration-4000 ease-out" style={{width: '65%'}}></div>
                       </div>
-                      <div className="text-xs text-gray-400 mt-1">Automation intelligence Claude</div>
+                      <div className="text-xs text-gray-400 mt-1">Automation business intelligente</div>
                     </div>
                     
                     <div className="bg-black/40 rounded-xl p-4">
@@ -224,13 +224,13 @@ export default function MarketingAutomationCRMPage() {
                         <span className="text-white">Email Open Rate</span>
                         <span className="text-green-400 font-bold text-2xl animate-pulse">92%</span>
                       </div>
-                      <div className="text-xs text-gray-400">Séquences Claude-optimisées</div>
+                      <div className="text-xs text-gray-400">Séquences business-optimisées</div>
                     </div>
                     
                     <div className="bg-gradient-to-r from-green-400/20 to-teal-400/20 rounded-xl p-4 border border-green-400/30">
                       <div className="flex items-center space-x-2">
                         <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
-                        <span className="text-white font-semibold">Expert × Claude synchronisés</span>
+                        <span className="text-white font-semibold">Expert & Automation synchronisés</span>
                       </div>
                       <div className="text-sm text-gray-300 mt-1">Collaboration parfaite en temps réel</div>
                     </div>
@@ -240,7 +240,7 @@ export default function MarketingAutomationCRMPage() {
               
               {/* COMPARAISON AVANT/APRÈS SETUP */}
               <div className="mt-12 pt-8 border-t border-gray-700/50">
-                <h3 className="text-2xl font-bold text-white text-center mb-8">Setup Expert × Claude vs CRM Classique</h3>
+                <h3 className="text-2xl font-bold text-white text-center mb-8">Setup Expert Business vs CRM Classique</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="text-center">
@@ -269,7 +269,7 @@ export default function MarketingAutomationCRMPage() {
                   
                   <div className="text-center">
                     <div className="bg-green-400/20 rounded-xl p-6 border border-green-400/30">
-                      <h4 className="text-green-400 font-bold mb-4">Expert × Claude</h4>
+                      <h4 className="text-green-400 font-bold mb-4">Expert Business</h4>
                       <div className="space-y-3">
                         <div className="flex justify-between">
                           <span className="text-gray-300">Conversion</span>
@@ -285,7 +285,7 @@ export default function MarketingAutomationCRMPage() {
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-300">Intelligence</span>
-                          <span className="text-green-400 font-bold">Claude IA</span>
+                          <span className="text-green-400 font-bold">Business Intelligence</span>
                         </div>
                       </div>
                     </div>
@@ -295,7 +295,7 @@ export default function MarketingAutomationCRMPage() {
                 <div className="text-center mt-8">
                   <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-400/20 to-teal-400/20 rounded-full border border-green-400/30">
                     <span className="text-2xl font-bold text-green-400">3.5x</span>
-                    <span className="text-white ml-2">plus performant collaboration humain-IA</span>
+                    <span className="text-white ml-2">plus performant setup business expert</span>
                   </div>
                 </div>
               </div>
@@ -312,7 +312,7 @@ export default function MarketingAutomationCRMPage() {
               Transformation <span className="font-bold text-green-400">Client PME</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Evolution CRM : Setup classique → Expert × Claude en 6 mois
+              Evolution CRM : Setup classique → Expert Business en 6 mois
             </p>
           </div>
 
@@ -341,7 +341,7 @@ export default function MarketingAutomationCRMPage() {
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between mb-2">
-                      <span className="text-white">Optimisation Claude</span>
+                      <span className="text-white">Optimisation Business</span>
                       <span className="text-green-400 font-bold">+58% conversion</span>
                     </div>
                     <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
@@ -393,13 +393,13 @@ export default function MarketingAutomationCRMPage() {
             
             <div className="mt-8 text-center">
               <div className="text-sm text-gray-400">
-                Données CRM vérifiées • 180+ jours collaboration Expert × Claude
+                Données CRM vérifiées • 180+ jours optimisation Expert Business
               </div>
             </div>
           </div>
 
           <div className="text-center">
-            <div className="text-gray-400 mb-8">PME transformées par Expert × Claude</div>
+            <div className="text-gray-400 mb-8">Entreprises B2B transformées par Expert Business</div>
             <div className="flex justify-center items-center space-x-12 opacity-70">
               <div className="text-white font-semibold">SERVICES B2B</div>
               <div className="text-white font-semibold">E-COMMERCE</div>
@@ -424,7 +424,7 @@ export default function MarketingAutomationCRMPage() {
                 8900 CHF
               </div>
               <div className="text-xl text-gray-300 mb-8">
-                Setup révolutionnaire + Intelligence artificielle + Formation 6 mois
+                Setup business expert + Automation avancée + Formation 6 mois
               </div>
             </div>
 
@@ -445,7 +445,7 @@ export default function MarketingAutomationCRMPage() {
                 <div className="text-emerald-400 font-bold text-2xl mb-2">
                   6
                 </div>
-                <div className="text-gray-300">Mois support Expert × Claude</div>
+                <div className="text-gray-300">Mois support Expert Business</div>
               </div>
             </div>
 
@@ -454,11 +454,11 @@ export default function MarketingAutomationCRMPage() {
               className="inline-block px-16 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-6 transform hover:scale-105 transition-all duration-300"
               style={{ background: 'linear-gradient(135deg, #10B981, #70c1a9)' }}
             >
-              Révolutionner Mon CRM avec Claude
+              Optimiser Mon CRM Business
             </Link>
             
             <div className="text-sm text-gray-400">
-              Demo HubSpot × Claude gratuite • Setup sur mesure • ROI récupéré 2-3 mois
+              Demo HubSpot business gratuite • Setup sur mesure • ROI récupéré 2-3 mois
             </div>
           </div>
         </div>
@@ -469,10 +469,10 @@ export default function MarketingAutomationCRMPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
-              Questions <span className="font-bold text-green-400">Expert × Claude</span>
+              Questions <span className="font-bold text-green-400">Expert Business CRM</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Tout sur la collaboration révolutionnaire CRM
+              Tout sur l'optimisation business CRM avancée
             </p>
           </div>
 
@@ -506,7 +506,7 @@ export default function MarketingAutomationCRMPage() {
               href="/contact"
               className="inline-block px-8 py-4 rounded-xl border border-green-400/40 text-green-400 hover:bg-green-400/10 transition-colors duration-300"
             >
-              Demo Expert × Claude Gratuite
+              Demo Expert Business Gratuite
             </Link>
           </div>
         </div>

@@ -104,27 +104,27 @@ export default function PaidMediaGrowthPage() {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-block px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-400 text-sm font-medium mb-6">
-              Révélation choquante verified
+              Performance mesurée et vérifiée
             </div>
             
             <div className="space-y-6">
               <h1 className="text-6xl md:text-8xl font-light text-white leading-tight animate-fade-in">
-                Paid Media Valais
+                Croissance Organique PME
               </h1>
               <h2 className="text-4xl md:text-6xl font-bold animate-fade-in-delay-1 text-yellow-400">
-                14x Moins Efficace
+                14x Plus Rentable
               </h2>
-              <div className="text-8xl md:text-9xl font-black text-red-400 animate-bounce-slow">
+              <div className="text-8xl md:text-9xl font-black text-yellow-400 animate-bounce-slow">
                 688 vs 49
               </div>
               <p className="text-2xl md:text-3xl text-gray-300 font-light animate-fade-in-delay-2">
-                clients générés même période, même budget
+                clients acquis même période, coût d'acquisition zéro
               </p>
             </div>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed mt-8">
-              Notre client PME a découvert la vérité brutale<br />
-              <span className="text-yellow-400 font-semibold">Publicité = gaspillage organisé</span> vs méthode organique
+              Entreprise B2B a optimisé sa stratégie d'acquisition<br />
+              <span className="text-yellow-400 font-semibold">Organic Growth = ROI supérieur</span> vs paid media coûteux
             </p>
           </div>
 
@@ -133,11 +133,11 @@ export default function PaidMediaGrowthPage() {
             className="inline-block px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-12 transform hover:scale-105 transition-all duration-500 hover:shadow-yellow-400/25"
             style={{ background: 'linear-gradient(135deg, #ffd507, #f59e0b)' }}
           >
-            Arrêter le Gaspillage Maintenant
+            Optimiser Ma Croissance
           </Link>
 
           <div className="text-sm text-gray-400">
-            Audit gratuit • Révélation garantie • Économies immédiates
+            Audit gratuit • Analyse ROI • Stratégie personnalisée
           </div>
         </div>
       </section>
@@ -149,13 +149,13 @@ export default function PaidMediaGrowthPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block px-6 py-3 bg-yellow-400/20 rounded-full text-yellow-400 text-lg font-bold mb-6">
-              Données Google Analytics vérifiées
+              Données GA4 certifiées et mesurables
             </div>
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
-              La Vérité <span className="font-bold text-yellow-400">Que Personne N'Ose Dire</span>
+              Comparaison <span className="font-bold text-yellow-400">Organic vs Paid Media</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comparaison impitoyable : même PME, même période, même budget total
+              Analyse performance : entreprise B2B, même période, budget comparable
             </p>
           </div>
 
@@ -166,7 +166,7 @@ export default function PaidMediaGrowthPage() {
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <div className="ml-4 text-gray-300 text-sm font-mono">OSOM Truth Analytics</div>
+                <div className="ml-4 text-gray-300 text-sm font-mono">OSOM Performance Analytics</div>
               </div>
             </div>
             
@@ -175,7 +175,7 @@ export default function PaidMediaGrowthPage() {
                 {/* MÉTHODE ORGANIQUE - GAGNANTE */}
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">Méthode Organique OSOM</h3>
+                    <h3 className="text-xl font-bold text-white">Croissance Organique OSOM</h3>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
                       <span className="text-green-400 text-sm">Winner</span>

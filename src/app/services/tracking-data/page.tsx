@@ -49,28 +49,32 @@ export default function TrackingDataPage() {
 
   const faqData = [
     {
-      question: "Comment avez-vous récupéré exactement 14,171 sessions avec Claude et que représente cette collaboration révolutionnaire ?",
-      answer: "Investigation forensics × Claude révolutionnaire : Audit technique humain approfondi + Claude pattern recognition pour analyse GA4 configuration, GTM debugging IA, attribution gaps intelligence artificielle. 14,171 sessions = trafic réel révélé collaboration humain-Claude. Investigation révèle sources via Claude : email campaigns mal trackées détectées IA, social media links sans UTM identifiés Claude, redirections cassées découvertes intelligence artificielle. Récupération setup révolutionnaire Claude-powered."
+      question: "Comment le tracking avancé révèle-t-il le ROI invisible de mon entreprise valaisanne ?",
+      answer: "Notre audit technique détecte les sources de revenus non trackées : email campaigns sans UTM, trafic social mal attribué, conversions offline non connectées. Setup GA4 server-side + Google Tag Manager expert révèle chaque point de contact client. Résultat : vision complète du parcours client et attribution précise de chaque CHF généré."
     },
     {
-      question: "Claude peut-il vraiment améliorer GA4, GTM, Data Studio ou c'est du marketing intelligence artificielle ?",
-      answer: "Claude révolutionne l'analyse, pas la configuration directe : Pattern recognition advanced pour GA4 enhanced ecommerce + behaviour analysis pour GTM triggers + intelligent insights pour Data Studio blended data. Humain = maîtrise technique certifiée + configuration experte, Claude = intelligence comportementale + anomaly detection + optimization recommendations révolutionnaires. Demo technique Claude live : analyse before/after intelligence IA sur vos données réelles."
+      question: "Quels outils utilisez-vous pour mesurer la performance marketing en Suisse romande ?",
+      answer: "Stack technique complet : Google Analytics 4 configuration avancée, Google Tag Manager expert, Data Studio dashboards executifs, Google Search Console, Meta Business Manager. Compliance RGPD Suisse avec Cookiebot, server-side tracking pour iOS14+. Attribution multicannale first-party data pour précision maximale."
     },
     {
-      question: "7500 CHF pour Forensics × Claude, justification versus audit data automatique 1500 CHF ?",
-      answer: "Différence révolutionnaire : Audit automatique = surface scanning statique. Forensics × Claude = investigation manuelle obsessionnelle + intelligence comportementale IA + pattern recognition révolutionnaire. 7500 CHF inclus : audit forensics 40h + Claude behavioral analysis, setup expert + IA optimization, dashboards custom + Claude insights, formation révolutionnaire. 14,171 sessions = valeur client potentiel énorme Claude-revealed. ROI récupéré révolutionnaire 1-2 mois."
+      question: "Combien coûte l'implémentation tracking complet pour PME valaisanne ?",
+      answer: "Forfait Tracking Pro à partir de 4,500 CHF incluant : audit technique complet 20h, setup GA4 + GTM expert, création dashboards executifs sur-mesure, formation équipes 4h, suivi performance 3 mois. Comparativement à audit basique 1,500 CHF, notre approche révèle 10x plus de données actionables."
     },
     {
-      question: "Après setup Forensics × Claude, mes équipes interprètent-elles données sans dépendance intelligence artificielle ?",
-      answer: "Objectif révolutionnaire : autonomie data amplifiée Claude intelligence. Formation incluse : lecture dashboards + compréhension Claude insights + interprétation recommendations IA + prise décision basée intelligence artificielle. Setup conçu user-friendly : dashboards intuitifs + Claude recommendations highlighted + alertes automatiques IA. Équipe autonomous pour optimisations quotidiennes + Claude insights disponibles + nous pour évolutions révolutionnaires complexes."
+      question: "Mes équipes peuvent-elles utiliser vos dashboards sans formation technique avancée ?",
+      answer: "Absolument ! Dashboards conçus user-friendly avec KPIs executifs : chiffre d'affaires par canal, coût acquisition client, ROI campagnes, conversion funnel. Formation incluse 4h : lecture métriques, interprétation tendances, prise décision data-driven. Interface intuitive + alertes automatiques pour anomalies importantes."
     },
     {
-      question: "Comment garantissez-vous précision données avec GDPR, iOS14 et intelligence Claude ?",
-      answer: "Approche compliance × Claude révolutionnaire : server-side tracking Google Cloud + Claude privacy intelligence + consent management Cookiebot + IA compliance + first-party data strategy Claude + iOS14 SKAdNetwork intelligent. Privacy-first setup + Claude analysis : data anonymization IA + IP masking Claude + storage EU intelligent + retention policies IA. Testing rigoureux + Claude validation : cross-browser IA + cross-device Claude + privacy modes intelligent. 98% data accuracy révolutionnaire Claude-maintained."
+      question: "Comment assurez-vous la conformité RGPD avec le tracking avancé en Suisse ?",
+      answer: "Setup privacy-first complet : server-side tracking Google Cloud EU, consent management Cookiebot certifié, anonymisation IP, stockage données UE, politiques retention conformes. Configuration iOS14+ SKAdNetwork, first-party data strategy, cookies essentiels uniquement. Tests rigoureux cross-browser et conformité légale suisse."
     },
     {
-      question: "Vos dashboards × Claude sont-ils évolutifs avec croissance business et nouveaux besoins intelligence ?",
-      answer: "Architecture × Claude révolutionnaire scalable : structure modulaire + Claude learning continu + métriques extensibles IA + sources data multiples Claude-intégrables. Dashboards évolutifs + Claude intelligence : nouveaux KPIs ajoutables IA + segmentations affinables Claude + périodes comparables intelligentes. Croissance business = data plus riches + Claude insights plus précis + ROI mieux attribué IA. Expansion révolutionnaire intelligente système Claude-powered existant."
+      question: "Vos solutions tracking sont-elles évolutives avec la croissance de mon cabinet ?",
+      answer: "Architecture modulaire scalable : ajout nouveaux KPIs selon croissance, intégration CRM (Salesforce, HubSpot), connexion outils métier spécifiques. Dashboards évolutifs : segmentations clients affinées, périodes comparaison personnalisables, métriques sectorielles. Expansion simple sans refonte complète du système existant."
+    },
+    {
+      question: "Combien de temps faut-il pour voir les premiers résultats du tracking optimisé ?",
+      answer: "Phase 1 (7 jours) : Setup technique GA4 + GTM, premiers insights disponibles. Phase 2 (30 jours) : Dashboards complets opérationnels, formations équipes terminées. Phase 3 (90 jours) : Optimisations basées données, ROI amélioré mesurable. Données fiables dès J+1, optimisations stratégiques dès M+3."
     }
   ]
 
@@ -101,10 +105,10 @@ export default function TrackingDataPage() {
             
             <div className="space-y-6">
               <h1 className="text-6xl md:text-8xl font-light text-white leading-tight animate-fade-in">
-                Data Forensics
+                Tracking & Data qui révèle votre ROI
               </h1>
               <h2 className="text-4xl md:text-6xl font-bold animate-fade-in-delay-1" style={{color: '#8B5CF6'}}>
-                ROI Invisible Révélé
+                Chaque CHF de retour mesuré
               </h2>
               <div className="text-8xl md:text-9xl font-black text-purple-400 animate-bounce-slow">
                 14,171
@@ -115,8 +119,8 @@ export default function TrackingDataPage() {
             </div>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed mt-8">
-              Investigation forensics × Claude Intelligence révèle chaque CHF perdu<br />
-              <span className="text-purple-400 font-semibold">47,000 CHF de ROI invisible</span> découvert pour Client PME
+              Analytics avancées + attribution multicannale pour cabinets B2B<br />
+              <span className="text-purple-400 font-semibold">Chaque source de revenus identifiée</span> et mesurée
             </p>
           </div>
 
@@ -129,7 +133,9 @@ export default function TrackingDataPage() {
           </Link>
 
           <div className="text-sm text-gray-400">
-            Investigation complète • GA4 × Claude • ROI révélé garanti
+            <span className="text-gray-300">Setup Google Analytics 4 + Google Tag Manager expert</span><br/>
+            <span className="text-gray-300">Attribution multicannale + dashboards executifs</span><br/>
+            <span className="text-gray-300">Formations équipes + suivi mensuel performance</span>
           </div>
         </div>
       </section>
@@ -144,10 +150,10 @@ export default function TrackingDataPage() {
               Console forensics live
             </div>
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
-              GA4 × Claude <span className="font-bold" style={{color: '#8B5CF6'}}>révèle vos données cachées</span>
+              Analytics <span className="font-bold" style={{color: '#8B5CF6'}}>avancées révèlent votre ROI</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Regardez Claude analyser vos données pendant que l'expert forensics récupère chaque session invisible
+              Setup technique expert GA4 + attribution multicannale pour récupérer chaque session invisible
             </p>
           </div>
 
@@ -158,7 +164,7 @@ export default function TrackingDataPage() {
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <div className="ml-4 text-gray-300 text-sm font-mono">OSOM Forensics × Claude Investigation</div>
+                <div className="ml-4 text-gray-300 text-sm font-mono">OSOM Analytics Dashboard Pro</div>
               </div>
             </div>
             
@@ -167,7 +173,7 @@ export default function TrackingDataPage() {
                 {/* INVESTIGATION FORENSICS HUMAINE */}
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">Investigation Forensics Expert</h3>
+                    <h3 className="text-xl font-bold text-white">Audit Technique Expert</h3>
                     <div className="flex items-center space-x-2">
                       <div className="w-2 h-2 rounded-full bg-red-400 animate-pulse"></div>
                       <span className="text-red-400 text-sm">Scanning Deep</span>
@@ -188,13 +194,13 @@ export default function TrackingDataPage() {
                     <div className="mt-4 text-red-400">✗ GTM triggers mal configurés</div>
                     <div className="text-red-400">✗ Attribution multi-touch cassée</div>
                     <div className="text-red-400">✗ Sessions "Unassigned" massives</div>
-                    <div className="text-red-400 animate-pulse">🔍 Analyse Claude en cours...</div>
+                    <div className="text-red-400 animate-pulse">🔍 Investigation technique en cours...</div>
                   </div>
                 </div>
                 
                 {/* CLAUDE INTELLIGENCE RECOVERY */}
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Claude Intelligence Recovery</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Récupération Données Avancée</h3>
                   
                   <div className="space-y-6">
                     <div className="bg-black/40 rounded-xl p-4">
@@ -205,7 +211,7 @@ export default function TrackingDataPage() {
                       <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-3000 ease-out" style={{width: animatedValue > 0 ? '100%' : '0%'}}></div>
                       </div>
-                      <div className="text-xs text-gray-400 mt-1">Claude pattern recognition active</div>
+                      <div className="text-xs text-gray-400 mt-1">Attribution multicannale active</div>
                     </div>
                     
                     <div className="bg-black/40 rounded-xl p-4">
@@ -224,13 +230,13 @@ export default function TrackingDataPage() {
                         <span className="text-white">Attribution Précision</span>
                         <span className="text-purple-400 font-bold text-2xl animate-pulse">94%</span>
                       </div>
-                      <div className="text-xs text-gray-400">Multi-touch Claude-powered</div>
+                      <div className="text-xs text-gray-400">Multi-touch attribution avancée</div>
                     </div>
                     
                     <div className="bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-xl p-4 border border-purple-400/30">
                       <div className="flex items-center space-x-2">
                         <div className="w-3 h-3 rounded-full bg-purple-400 animate-pulse"></div>
-                        <span className="text-white font-semibold">Forensics × Claude synchronisés</span>
+                        <span className="text-white font-semibold">Setup technique optimisé</span>
                       </div>
                       <div className="text-sm text-gray-300 mt-1">Révélation ROI invisible en temps réel</div>
                     </div>
