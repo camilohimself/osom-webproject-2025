@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 interface ImageUploaderProps {
   title: string
@@ -131,10 +132,12 @@ export default function ImageUploader({ title, description, maxFiles, onFilesUpl
                 exit={{ opacity: 0, scale: 0.8 }}
                 className="relative group aspect-square bg-gray-800 rounded-lg overflow-hidden"
               >
-                <img
+                <Image
                   src={preview}
                   alt={`Preview ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  unoptimized={true}
                 />
                 
                 {/* Overlay avec infos */}

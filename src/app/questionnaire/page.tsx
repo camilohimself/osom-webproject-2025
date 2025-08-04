@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 
 interface FormData {
@@ -169,12 +170,18 @@ const QuestionnairePage = () => {
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3 group">
-              <motion.img 
-                src="/logo-white.jpg" 
-                alt="OSOM" 
+              <motion.div 
                 className="h-8 w-auto transition-transform group-hover:scale-105" 
                 whileHover={{ scale: 1.05 }}
-              />
+              >
+                <Image 
+                  src="/logo-white.jpg" 
+                  alt="OSOM" 
+                  width={120}
+                  height={32}
+                  className="h-8 w-auto"
+                />
+              </motion.div>
             </Link>
             <motion.div className="text-white text-sm font-medium">
               {currentStep + 1} / {questions.length}
