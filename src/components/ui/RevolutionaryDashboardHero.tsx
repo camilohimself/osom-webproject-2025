@@ -113,7 +113,7 @@ export default function RevolutionaryDashboardHero({
       clearInterval(typingInterval)
       clearInterval(mainInterval)
     }
-  }, [isInView]) // REMOVED currentCodeIndex dependency!
+  }, [isInView]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Magnetic button effect
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {

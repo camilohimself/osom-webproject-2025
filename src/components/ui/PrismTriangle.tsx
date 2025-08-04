@@ -1,7 +1,7 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 
 interface PrismTriangleProps {
   className?: string
@@ -12,7 +12,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
   const [logoHovered, setLogoHovered] = useState(false)
   const [sequentialIndex, setSequentialIndex] = useState(0)
 
-  const forces = [
+  const forces = useMemo(() => [
     {
       id: 1,
       name: 'MARKETING + IA',
@@ -65,7 +65,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       position: { x: 80, y: 80 }, // Bottom right
       angle: 120
     }
-  ]
+  ], [])
 
   // Sequential pulsing animation
   useEffect(() => {
@@ -73,7 +73,7 @@ const PrismTriangle: React.FC<PrismTriangleProps> = ({ className = '' }) => {
       setSequentialIndex((prev) => (prev + 1) % forces.length)
     }, 2500)
     return () => clearInterval(interval)
-  }, [])
+  }, [forces])
 
   return (
     <div className={`relative w-full max-w-6xl mx-auto ${className}`}>

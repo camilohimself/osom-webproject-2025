@@ -1,6 +1,6 @@
 'use client'
 
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useAnalytics } from '@/hooks/useAnalytics'
 
@@ -141,36 +141,19 @@ export const ABTestProvider: React.FC<ABTestProviderProps> = ({ children }) => {
   const pathname = usePathname()
   const { trackABTest } = useAnalytics()
 
-  // Initialize user variants
-  useEffect(() => {
-    const initializeVariants = () => {
-      const stored = localStorage.getItem('osom_ab_variants')
-      let variants = stored ? JSON.parse(stored) : {}
-      
-      activeTests.forEach(test => {
-        // Check if user should participate
-        if (!shouldParticipate(test)) return
-        
-        // If no variant assigned, assign one
-        if (!variants[test.testId]) {
-          variants[test.testId] = selectVariant(test)
-          
-          // Track participation
-          trackABTest(test.testId, variants[test.testId], false)
-        }
-      })
-
-      setUserVariants(variants)
-      localStorage.setItem('osom_ab_variants', JSON.stringify(variants))
-    }
-
-    if (typeof window !== 'undefined') {
-      initializeVariants()
-    }
-  }, [pathname, trackABTest])
+  // Get user hash for consistent assignment
+  const getUserHash = useCallback((): number => {
+    const userAgent = navigator.userAgent
+    const timestamp = Date.now().toString().slice(-4)
+    const combined = userAgent + timestamp + pathname
+    
+    return combined.split('').reduce((hash, char) => {
+      return ((hash << 5) - hash) + char.charCodeAt(0)
+    }, 0) >>> 0 // Ensure positive number
+  }, [pathname])
 
   // Check if user should participate in test
-  const shouldParticipate = (test: ABTestConfig): boolean => {
+  const shouldParticipate = useCallback((test: ABTestConfig): boolean => {
     // Check page targeting
     if (test.audience?.pages && !test.audience.pages.some(page => 
       page === '/' ? pathname === '/' : pathname.startsWith(page)
@@ -185,7 +168,37 @@ export const ABTestProvider: React.FC<ABTestProviderProps> = ({ children }) => {
     }
 
     return true
-  }
+  }, [pathname, getUserHash])
+
+  // Initialize user variants
+  const initializeVariants = useCallback(() => {
+    const stored = localStorage.getItem('osom_ab_variants')
+    let variants = stored ? JSON.parse(stored) : {}
+    
+    activeTests.forEach(test => {
+      // Check if user should participate
+      if (!shouldParticipate(test)) return
+      
+      // If no variant assigned, assign one
+      if (!variants[test.testId]) {
+        variants[test.testId] = selectVariant(test)
+        
+        // Track participation
+        trackABTest(test.testId, variants[test.testId], false)
+      }
+    })
+
+    setUserVariants(variants)
+    localStorage.setItem('osom_ab_variants', JSON.stringify(variants))
+  }, [shouldParticipate, trackABTest])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      initializeVariants()
+    }
+  }, [initializeVariants])
+
+  // shouldParticipate moved above
 
   // Select variant based on weights
   const selectVariant = (test: ABTestConfig): string => {
@@ -203,16 +216,7 @@ export const ABTestProvider: React.FC<ABTestProviderProps> = ({ children }) => {
     return test.variants[0].id
   }
 
-  // Get user hash for consistent assignment
-  const getUserHash = (): number => {
-    const userAgent = navigator.userAgent
-    const timestamp = Date.now().toString().slice(-4)
-    const combined = userAgent + timestamp + pathname
-    
-    return combined.split('').reduce((hash, char) => {
-      return ((hash << 5) - hash) + char.charCodeAt(0)
-    }, 0) >>> 0 // Ensure positive number
-  }
+  // getUserHash moved above shouldParticipate
 
   // Get variant configuration
   const getVariant = (testId: string) => {

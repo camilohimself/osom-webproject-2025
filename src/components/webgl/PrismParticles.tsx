@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, useCallback } from 'react'
 import { motion } from 'framer-motion'
 
 interface Particle {
@@ -50,7 +50,7 @@ export default function PrismParticles({
   }
 
   // Crée une nouvelle particule
-  const createParticle = (colors: string[]): Particle => {
+  const createParticle = useCallback((colors: string[]): Particle => {
     const angle = (rayAngle * Math.PI) / 180
     const speed = 0.5 + Math.random() * 1.5
     const spread = 0.2 // Dispersion du rayon
@@ -66,10 +66,10 @@ export default function PrismParticles({
       life: 0,
       maxLife: 60 + Math.random() * 40
     }
-  }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Animation loop
-  const animate = () => {
+  const animate = useCallback(() => {
     if (!canvasRef.current || !isActive) return
 
     const canvas = canvasRef.current
@@ -136,7 +136,7 @@ export default function PrismParticles({
     if (isActive) {
       animationFrameRef.current = requestAnimationFrame(animate)
     }
-  }
+  }, [isActive, rayColor, createParticle]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Configuration canvas
   useEffect(() => {
@@ -180,7 +180,7 @@ export default function PrismParticles({
         cancelAnimationFrame(animationFrameRef.current)
       }
     }
-  }, [isActive, isSupported])
+  }, [isActive, isSupported, animate])
 
   if (!isSupported) {
     // Fallback CSS pour appareils non supportés
