@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
+import { SimpleLineChart } from '@/components/ui'
 
 export default function SEOContentMarketingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -325,6 +326,24 @@ export default function SEOContentMarketingPage() {
               <p className="text-xl text-gray-300">PME locale: +180% trafic organique mesurable</p>
               <p className="text-xl text-gray-300">Cabinet B2B: position moyenne top 10 Google</p>
             </div>
+          </div>
+
+          {/* GRAPHIQUE ENGAGEMENT EVOLUTION */}
+          <div className="mb-16 flex justify-center">
+            <SimpleLineChart
+              data={[
+                { label: 'M1', value: 44.6 },
+                { label: 'M3', value: 52.1 },
+                { label: 'M5', value: 62.3 },
+                { label: 'M8', value: 68.6 }
+              ]}
+              title="Évolution Engagement Quality"
+              subtitle="PME Locale - Progression SEO sur 8 mois"
+              color="#70C1A9"
+              width={400}
+              height={250}
+              className="border border-teal-400/30"
+            />
           </div>
 
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-teal-400/20 mb-16">

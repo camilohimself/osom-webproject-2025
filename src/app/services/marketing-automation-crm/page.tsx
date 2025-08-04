@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
+import { SimpleGroupedBarChart } from '@/components/ui'
 
 export default function MarketingAutomationCRMPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -314,6 +315,40 @@ export default function MarketingAutomationCRMPage() {
             <p className="text-xl text-gray-300">
               Evolution CRM : Setup classique → Expert Business en 6 mois
             </p>
+          </div>
+
+          {/* GRAPHIQUE COMPARAISON CRM */}
+          <div className="mb-16 flex justify-center">
+            <SimpleGroupedBarChart
+              data={[
+                {
+                  label: 'Conversion Rate',
+                  values: [
+                    { label: 'Classique', value: 22, color: '#EF4444' },
+                    { label: 'Expert', value: 78, color: '#10B981' }
+                  ]
+                },
+                {
+                  label: 'Email Open Rate',
+                  values: [
+                    { label: 'Standard', value: 21, color: '#EF4444' },
+                    { label: 'Optimisé', value: 92, color: '#10B981' }
+                  ]
+                },
+                {
+                  label: 'Temps Manuel (h/semaine)',
+                  values: [
+                    { label: 'Manuel', value: 15, color: '#EF4444' },
+                    { label: 'Automatisé', value: 5, color: '#10B981' }
+                  ]
+                }
+              ]}
+              title="CRM Classique vs Expert Business"
+              subtitle="Comparaison performance après 6 mois"
+              width={520}
+              height={300}
+              className="border border-green-400/30"
+            />
           </div>
 
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-green-400/20 mb-16">

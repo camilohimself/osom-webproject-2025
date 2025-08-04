@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import ServicePageTemplatePremium from '@/components/templates/ServicePageTemplatePremium'
 import { AssetValueCounter, MetricsPulse, ProgressMeter, ComparisonChart } from '@/components/charts'
-import { GraphiqueLinear } from '@/components/ui'
+import { GraphiqueLinear, SimpleLineChart } from '@/components/ui'
 
 export default function ProgrammationBusinessPage() {
   // Custom Hero Section - Développement Business Premium
@@ -784,6 +784,24 @@ export default function ProgrammationBusinessPage() {
             <p className="text-xl text-gray-300">
               Excellence technique business OSOM - Performance certifiée et mesurable
             </p>
+          </div>
+
+          {/* GRAPHIQUE VUES VIRALES */}
+          <div className="mb-16 flex justify-center">
+            <SimpleLineChart
+              data={[
+                { label: 'J1', value: 156 },
+                { label: 'J2', value: 847 },
+                { label: 'J3', value: 2400 }
+              ]}
+              title="Évolution Vues Culture Peinture"
+              subtitle="Collaboration Humain × Business - Performance virale"
+              color="#FACC15"
+              width={400}
+              height={250}
+              maxValue={2500}
+              className="border border-yellow-400/30"
+            />
           </div>
 
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-yellow-400/20 mb-16">

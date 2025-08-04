@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
+import { SimpleAreaChart } from '@/components/ui'
 
 export default function TrackingDataPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -320,6 +321,23 @@ export default function TrackingDataPage() {
             <p className="text-xl text-gray-300">
               Discovery ROI : 0 CHF visible → 47,000 CHF révélé en 3 mois
             </p>
+          </div>
+
+          {/* GRAPHIQUE SESSIONS RÉCUPÉRÉES */}
+          <div className="mb-16 flex justify-center">
+            <SimpleAreaChart
+              data={[
+                { label: 'M1', value: 2156 },
+                { label: 'M2', value: 6847 },
+                { label: 'M3', value: 14171 }
+              ]}
+              title="Sessions Récupérées - Investigation Forensics"
+              subtitle="PME Locale - Révélation ROI invisible"
+              color="#8B5CF6"
+              width={400}
+              height={250}
+              className="border border-purple-400/30"
+            />
           </div>
 
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-400/20 mb-16">

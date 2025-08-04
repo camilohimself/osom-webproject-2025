@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
+import { SimpleBarChart } from '@/components/ui'
 
 export default function PaidMediaGrowthPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -288,6 +289,23 @@ export default function PaidMediaGrowthPage() {
             <p className="text-xl text-gray-300">
               Evolution sur 12 mois - De l'échec publicitaire au succès organique
             </p>
+          </div>
+
+          {/* GRAPHIQUE COMPARAISON CANAUX */}
+          <div className="mb-16 flex justify-center">
+            <SimpleBarChart
+              data={[
+                { label: 'Paid Media', value: 49, color: '#EF4444' },
+                { label: 'SEO Organique', value: 237, color: '#F59E0B' },
+                { label: 'Content Marketing', value: 156, color: '#8B5CF6' },
+                { label: 'Social Organic', value: 295, color: '#10B981' }
+              ]}
+              title="Leads par Canal - Client PME"
+              subtitle="Comparaison performance 12 mois"
+              width={450}
+              height={280}
+              className="border border-yellow-400/30"
+            />
           </div>
 
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-yellow-400/20 mb-16">

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import React from 'react'
 import Head from 'next/head'
+import { SimpleGroupedBarChart } from '@/components/ui'
 
 // VERSION UX WRITER/CRO - DESIGN-SAFE
 export default function CreationSiteWebPage() {
@@ -461,6 +462,40 @@ export default function CreationSiteWebPage() {
                 délai garanti ou pénalités
               </p>
             </div>
+          </div>
+
+          {/* GRAPHIQUE PERFORMANCE AVANT/APRÈS */}
+          <div className="mb-16 flex justify-center">
+            <SimpleGroupedBarChart
+              data={[
+                {
+                  label: 'Performance Site',
+                  values: [
+                    { label: 'Avant', value: 2.3, color: '#EF4444' },
+                    { label: 'Après OSOM', value: 11.3, color: '#FACC15' }
+                  ]
+                },
+                {
+                  label: 'Conversions/An',
+                  values: [
+                    { label: 'Traditionnelle', value: 49, color: '#EF4444' },
+                    { label: 'OSOM', value: 688, color: '#14B8A6' }
+                  ]
+                },
+                {
+                  label: 'Temps Chargement',
+                  values: [
+                    { label: 'Standard', value: 3.2, color: '#EF4444' },
+                    { label: 'Optimisé', value: 0.8, color: '#8B5CF6' }
+                  ]
+                }
+              ]}
+              title="Performance Sites Web - Avant vs Après OSOM"
+              subtitle="Données clients PME • Mesures Google Analytics certifiées"
+              width={500}
+              height={280}
+              className="border border-yellow-400/30"
+            />
           </div>
 
           {/* BEFORE/AFTER FINAL */}
