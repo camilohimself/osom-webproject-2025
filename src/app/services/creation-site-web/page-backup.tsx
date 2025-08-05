@@ -112,15 +112,15 @@ export default function CreationSiteWebPage() {
             {/* GAUCHE - MESSAGE STORYTELLING */}
             <div className="text-left">
               <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-8" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                Votre site devient un <span className="text-yellow-400 font-bold">système d'acquisition</span> de clients
+                Votre site devient un <span className="text-yellow-400 font-bold">moteur de croissance</span>
               </h1>
               
               <h2 className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                Optimisez votre funnel de conversion et générez une croissance de chiffre d'affaires mesurable grâce à un site conçu pour les dirigeants de PME romandes.
+                Attirez, séduisez et convertissez vos futurs clients grâce à un site rapide, crédible et pensé pour les PME romandes.
               </h2>
 
               <p className="text-lg text-gray-400 mb-10 leading-relaxed">
-                Basés à Sion et Lausanne, nous développons des solutions digitales qui transforment votre présence en ligne en véritable levier commercial. <strong className="text-white">Plus de 50 dirigeants nous font confiance.</strong>
+                Basés à Sion et Lausanne, nous concevons des sites qui racontent l'histoire de votre entreprise et transforment les visiteurs en clients.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -154,27 +154,27 @@ export default function CreationSiteWebPage() {
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                    CEO Solutions Industrielles
+                    Dirigeants Valaisans
                   </h3>
                   
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    "Notre chiffre d'affaires a progressé de 280% en 6 mois. OSOM a créé un véritable système d'acquisition qui travaille pour nous 24h/24."
+                    "Depuis que notre site reflète vraiment notre expertise, nos clients nous font plus confiance et nos demandes ont triplé."
                   </p>
                   
                   <div className="flex items-center justify-center space-x-4">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-yellow-400">280%</div>
-                      <div className="text-xs text-gray-400">Croissance CA</div>
+                      <div className="text-2xl font-bold text-yellow-400">3x</div>
+                      <div className="text-xs text-gray-400">Plus de demandes</div>
                     </div>
                     <div className="w-px h-8 bg-gray-600"></div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-teal-400">600+</div>
-                      <div className="text-xs text-gray-400">Leads/an</div>
+                      <div className="text-2xl font-bold text-teal-400">&lt;2s</div>
+                      <div className="text-xs text-gray-400">Chargement</div>
                     </div>
                     <div className="w-px h-8 bg-gray-600"></div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-400">6 mois</div>
-                      <div className="text-xs text-gray-400">ROI</div>
+                      <div className="text-2xl font-bold text-purple-400">Top 3</div>
+                      <div className="text-xs text-gray-400">Google</div>
                     </div>
                   </div>
                 </div>
@@ -651,15 +651,15 @@ export default function CreationSiteWebPage() {
             
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-light text-white mb-6" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                Prêts à discuter de <br/><span className="font-bold text-yellow-400">votre potentiel de croissance ?</span>
+                Prêts à transformer <br/><span className="font-bold text-yellow-400">votre visibilité en ligne ?</span>
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Nous prenons quelques projets par mois pour garantir un suivi personnalisé. Parlons de vos objectifs et voyons si nous sommes le bon partenaire pour votre transformation digitale.
+                Nos créneaux sont limités pour garantir un service personnalisé. Réservez un entretien gratuit de 15 minutes pour discuter de votre projet.
               </p>
               
               <div className="inline-block px-6 py-3 bg-yellow-400/20 rounded-full text-yellow-400 text-sm font-medium mb-8">
-                Accompagnement premium • Proximité garantie • Résultats mesurés
+                Nous prenons seulement quelques projets par mois pour garantir la qualité
               </div>
             </div>
 
@@ -714,7 +714,7 @@ export default function CreationSiteWebPage() {
                     style={{ background: 'linear-gradient(135deg, #ffd507, #70c1a9)', fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'cta_click', {location: 'footer', page: 'creation-site-web'})}
                   >
-                    Discutons de votre potentiel
+                    Réserver mon entretien
                   </Link>
                   
                   <Link
