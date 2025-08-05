@@ -153,7 +153,7 @@ export default function CreationSiteWebPage() {
       </Head>
       <div className="min-h-screen bg-black">
       {/* HERO STORYTELLING - SECTION 1 */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/10 via-purple-500/5 to-teal-400/5" />
         
         <div className="relative z-10 max-w-6xl mx-auto">

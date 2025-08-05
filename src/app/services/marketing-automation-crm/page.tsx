@@ -91,7 +91,7 @@ export default function MarketingAutomationCRMPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* HERO SECTION - L'AUTOMATION QUI LIBÈRE VOS ÉQUIPES */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="absolute inset-0 bg-gradient-to-b from-green-400/10 via-teal-500/5 to-green-400/5" />
         
         <div className="relative z-10 max-w-4xl mx-auto text-center">

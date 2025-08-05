@@ -107,7 +107,7 @@ export default function ProgrammationIAPage() {
     <div className="min-h-screen bg-black text-white overflow-hidden">
       
       {/* HERO SECTION - INNOVATION NARRATIVE */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-16">
         
         {/* Background Effects */}
         <div className="absolute inset-0">

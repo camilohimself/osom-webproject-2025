@@ -162,32 +162,117 @@ export default function BlogPage() {
               </span>
             </motion.div>
             
-            {/* Premium Title with Word-by-Word Animation */}
-            <motion.h1 
-              className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight tracking-tight" 
+            {/* TITRE CRÉATIF AUDACIEUX - Jeux Typographiques Blog */}
+            <motion.div 
+              className="mb-12 leading-tight" 
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               variants={itemVariants}
               transition={{ duration: 1, ease: [0.25, 0.25, 0.25, 0.75] }}
             >
-              {'Blog OSOM Insights'.split(' ').map((word, index) => {
-                const isHighlight = word === 'OSOM' || word === 'Insights'
-                return (
-                  <motion.span
-                    key={index}
-                    className={isHighlight ? 'text-cyan-400 font-bold' : ''}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ 
-                      duration: 0.8, 
-                      delay: index * 0.2 + 0.3,
-                      ease: [0.25, 0.25, 0.25, 0.75]
+              {/* Ligne 1: "Nos" - petite taille */}
+              <motion.div
+                className="text-xl md:text-2xl font-light text-gray-300 mb-2"
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Nos
+              </motion.div>
+              
+              {/* Ligne 2: "INSIGHTS" - très grande taille cyan */}
+              <motion.div
+                className="text-7xl md:text-9xl font-black text-cyan-400 leading-none mb-4 relative"
+                initial={{ opacity: 0, scale: 0.7 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  textShadow: "0 0 30px rgba(6, 182, 212, 0.5)"
+                }}
+              >
+                INSIGHTS
+                {/* Effet de brillance */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "200%" }}
+                  transition={{ 
+                    duration: 2, 
+                    delay: 2,
+                    repeat: Infinity, 
+                    repeatDelay: 8 
+                  }}
+                />
+              </motion.div>
+              
+              {/* Ligne 3: "transforment vos" - taille moyenne */}
+              <motion.div
+                className="text-3xl md:text-4xl font-light text-white mb-2"
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                transforment vos
+              </motion.div>
+              
+              {/* Ligne 4: "STRATÉGIES" - grande taille verte avec animation */}
+              <motion.div
+                className="text-6xl md:text-8xl font-bold text-green-400 leading-none relative"
+                initial={{ opacity: 0, rotateX: 90 }}
+                animate={{ opacity: 1, rotateX: 0 }}
+                transition={{ duration: 1.2, delay: 0.8 }}
+                whileHover={{ 
+                  scale: 1.02,
+                  color: "#10B981",
+                  textShadow: "0 0 40px rgba(16, 185, 129, 0.6)"
+                }}
+              >
+                STRATÉGIES
+                {/* Particules créatives */}
+                {[...Array(4)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-green-400 rounded-full"
+                    style={{
+                      left: `${15 + i * 20}%`,
+                      top: `${30 + (i % 2) * 40}%`
                     }}
-                  >
-                    {word}{' '}
-                  </motion.span>
-                )
-              })}
-            </motion.h1>
+                    animate={{
+                      y: [-5, -25, -5],
+                      opacity: [0.3, 0.9, 0.3],
+                      scale: [0.5, 1.2, 0.5]
+                    }}
+                    transition={{
+                      duration: 3 + i * 0.5,
+                      repeat: Infinity,
+                      delay: 1.2 + i * 0.3
+                    }}
+                  />
+                ))}
+              </motion.div>
+              
+              {/* Signature créative */}
+              <motion.div
+                className="text-sm md:text-base text-purple-400 font-medium mt-8 flex items-center justify-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.4 }}
+              >
+                <motion.div 
+                  className="w-8 h-0.5 bg-purple-400 mr-3"
+                  initial={{ width: 0 }}
+                  animate={{ width: 32 }}
+                  transition={{ duration: 1, delay: 1.6 }}
+                />
+                Data-Driven Stories × Real Impact
+                <motion.div 
+                  className="w-8 h-0.5 bg-purple-400 ml-3"
+                  initial={{ width: 0 }}
+                  animate={{ width: 32 }}
+                  transition={{ duration: 1, delay: 1.8 }}
+                />
+              </motion.div>
+            </motion.div>
             
             {/* Enhanced Description */}
             <motion.p 

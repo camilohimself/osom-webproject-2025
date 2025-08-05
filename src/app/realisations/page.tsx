@@ -321,32 +321,24 @@ const RealisationsPage = () => {
               </span>
             </motion.div>
             
-            {/* Premium Title with Word-by-Word Animation */}
-            <motion.h1 
-              className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight tracking-tight" 
-              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-              variants={itemVariants}
-              transition={{ duration: 1, ease: [0.25, 0.25, 0.25, 0.75] }}
-            >
-              {'Réalisations Data-Driven'.split(' ').map((word, index) => {
-                const isHighlight = word.includes('Data-Driven')
-                return (
-                  <motion.span
-                    key={index}
-                    className={isHighlight ? 'text-pink-500 font-bold' : ''}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ 
-                      duration: 0.8, 
-                      delay: index * 0.2 + 0.3,
-                      ease: [0.25, 0.25, 0.25, 0.75]
-                    }}
-                  >
-                    {word}{' '}
-                  </motion.span>
-                )
-              })}
-            </motion.h1>
+            {/* TITRE CRÉATIF PORTFOLIO */}
+            <motion.div className="mb-12 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              <motion.div className="text-2xl font-light text-gray-300 mb-2"
+                initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+                Nos
+              </motion.div>
+              
+              <motion.div className="text-8xl md:text-9xl font-black text-yellow-400 leading-none mb-4"
+                initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.4 }}
+                whileHover={{ scale: 1.05, textShadow: "0 0 30px rgba(251, 191, 36, 0.5)" }}>
+                RÉALISATIONS
+              </motion.div>
+              
+              <motion.div className="text-3xl font-light text-white"
+                initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
+                parlent d'elles-mêmes
+              </motion.div>
+            </motion.div>
             
             {/* Enhanced Description */}
             <motion.p 

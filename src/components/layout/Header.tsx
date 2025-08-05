@@ -16,6 +16,15 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false)
   const [servicesMenuTimeout, setServicesMenuTimeout] = useState<NodeJS.Timeout | null>(null)
 
+  // Fonction pour fermer immédiatement le menu services au clic
+  const closeServicesMenu = () => {
+    if (servicesMenuTimeout) {
+      clearTimeout(servicesMenuTimeout)
+      setServicesMenuTimeout(null)
+    }
+    setIsServicesMenuOpen(false)
+  }
+
   // Liste des services avec les vraies pages
   const services = [
     { name: 'Création Sites Web', href: '/services/creation-site-web' },
@@ -118,6 +127,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                   href="/services/creation-site-web"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                                  onClick={closeServicesMenu}
                                 >
                                   Création Site Web
                                 </Link>
@@ -125,6 +135,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                   href="/services/programmation-ia"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                                  onClick={closeServicesMenu}
                                 >
                                   Programmation & IA
                                 </Link>
@@ -132,6 +143,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                   href="/services/seo-content-marketing"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                                  onClick={closeServicesMenu}
                                 >
                                   SEO & Content Marketing
                                 </Link>
@@ -149,6 +161,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                   href="/services/paid-media-growth"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                                  onClick={closeServicesMenu}
                                 >
                                   Paid Media & Growth
                                 </Link>
@@ -156,6 +169,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                   href="/services/marketing-automation-crm"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                                  onClick={closeServicesMenu}
                                 >
                                   Marketing Automation & CRM
                                 </Link>
@@ -163,6 +177,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                   href="/services/tracking-data"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                                  onClick={closeServicesMenu}
                                 >
                                   Tracking & Data
                                 </Link>
@@ -241,7 +256,10 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                               key={service.href}
                               href={service.href}
                               className="block px-4 py-2 text-gray-400 hover:text-yellow-400 hover:bg-white/5 transition-colors text-sm rounded-lg"
-                              onClick={() => setIsMenuOpen(false)}
+                              onClick={() => {
+                                setIsMenuOpen(false)
+                                setIsServicesMenuOpen(false)
+                              }}
                             >
                               {service.name}
                             </Link>

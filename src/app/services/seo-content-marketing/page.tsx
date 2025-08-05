@@ -208,7 +208,7 @@ export default function SEOContentMarketingPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* HERO SECTION - VISUEL MÉTAPHORIQUE + STORYTELLING */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         {/* VISUEL MÉTAPHORIQUE - PHARE/AIMANT EN ARRIÈRE-PLAN */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-teal-400/10 via-teal-500/5 to-cyan-400/5" />
