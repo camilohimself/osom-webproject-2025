@@ -198,6 +198,64 @@
   },
   "contact": {
     "hero": {
+      "title": "30 Minuten, um Ihr",
+      "title_highlight": "digitales Wachstumspotenzial zu entdecken",
+      "subtitle": "Lassen Sie uns über Ihre Geschäftsherausforderungen sprechen und gemeinsam entdecken, wie unser Know-how Ihre Online-Präsenz in eine echte Lead-Maschine verwandeln kann.",
+      "visual_alt": "Gemeinsame Beratung zwischen OSOM-Experte und KMU-Leiter"
+    },
+    "process": {
+      "title": "Unser Beratungsprozess",
+      "step1": {
+        "title": "Quantitative Diagnose",
+        "description": "Wir tauchen in Ihre GA4- und Search Console-Daten ein, um versteckte Chancen und Konversionslecks zu identifizieren, die Ihr Wachstum bremsen."
+      },
+      "step2": {
+        "title": "Personalisierte Strategie", 
+        "description": "Basierend auf ROI-Prioritäten und Ihren Ressourcen entwickeln wir gemeinsam einen maßgeschneiderten Aktionsplan, der sich an Ihre Geschäftsrealität anpasst."
+      },
+      "step3": {
+        "title": "Messbare Leistung",
+        "description": "Wir verfolgen Ihre KPIs in Echtzeit und passen Maßnahmen an, um Ergebnisse zu maximieren, mit vollständiger Transparenz über jeden investierten Euro."
+      }
+    },
+    "case_study": {
+      "title": "Walliser KMU-Erfolgsgeschichte",
+      "company": "B2B-Dienstleistungs-KMU, Wallis",
+      "before": "Vor OSOM: 2 Anfragen pro Woche, begrenzte Sichtbarkeit",
+      "after": "Nach 6 Monaten: 15 qualifizierte Anfragen pro Woche",
+      "testimonial": "Unser Umsatz hat sich dank der OSOM-Strategie verdoppelt. Wir lehnen jetzt Kunden ab, weil wir nicht verfügbar sind.",
+      "author": "Direktor B2B-Dienstleistungs-KMU, Wallis"
+    },
+    "options": {
+      "title": "Wählen Sie Ihren Ansatz",
+      "direct": {
+        "title": "Direkter Terminbuchung",
+        "description": "30-Minuten-Slot mit einem OSOM-Experten für eine personalisierte Diagnose Ihrer aktuellen Situation."
+      },
+      "kit": {
+        "title": "Kontakt-Kit",
+        "description": "Vorbereitungsdokumente, Reporting-Beispiele und Checkliste zur Optimierung unserer Beratung."
+      },
+      "questionnaire": {
+        "title": "Automatischer Fragebogen",
+        "description": "Unser KI-Tool sammelt Ihre Geschäftsinformationen, um eine ultra-personalisierte Beratung vorzubereiten."
+      }
+    },
+    "title": "Sprechen wir über Ihr Projekt",
+    "subtitle": "Kostenlose Beratung zur Entdeckung Ihres Wachstumspotenzials",
+    "cta_schedule": "Beratung buchen",
+    "cta_questionnaire": "Fragebogen starten",
+    "form_name": "Vollständiger Name",
+    "form_email": "Professionelle E-Mail",
+    "form_phone": "Telefon",
+    "form_company": "Unternehmen",
+    "step_of": "Schritt {current} von {total}",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "submit": "Meine Beratung reservieren"
+  },
+  "contact_old": {
+    "hero": {
       "title": "Bereit, Ihr Unternehmen zu transformieren?",
       "subtitle": "Professionelle Beratung für Gesundheitswesen, Anwaltskanzleien und Dienstleistungsunternehmen",
       "description": "Erhalten Sie umsetzbare Erkenntnisse und einen strategischen Fahrplan für Ihre Branche."

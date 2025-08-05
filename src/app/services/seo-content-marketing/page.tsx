@@ -13,10 +13,10 @@ export default function SEOContentMarketingPage() {
   const [codeAnimations, setCodeAnimations] = useState<{[key: number]: number}>({})
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   
-  // Animation du compteur 68.6%
+  // Animation du compteur satisfaction clients
   React.useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimatedValue(68.6)
+      setAnimatedValue(95)
     }, 1000)
     return () => clearTimeout(timer)
   }, [])
@@ -117,7 +117,7 @@ export default function SEOContentMarketingPage() {
         "const monthlyReport = {",
         "  organicTraffic: '+180%',",
         "  avgPosition: 3.2,",
-        "  engagementQuality: '68.6%',",
+        "  clientsSatisfaits: '95%',",
         "  conversions: 47",
         "}",
         "",
@@ -126,33 +126,33 @@ export default function SEOContentMarketingPage() {
     }
   ]
 
-  const performanceResults = [
+  const clientSuccessStories = [
     {
-      metric: "Engagement Quality",
-      ourResult: "68.6%",
-      industry: "44.6%",
-      improvement: "54% plus élevé",
+      story: "Clients Satisfaits",
+      result: "95%",
+      description: "recommandent nos services",
+      impact: "Croissance durable",
       color: "#70c1a9"
     },
     {
-      metric: "Recherches Captées",
-      ourResult: "1,718/mois",
-      industry: "234/mois",
-      improvement: "7x plus visible",
+      story: "Prospects Qualifiés",
+      result: "3-5/semaine",
+      description: "demandes reçues automatiquement",
+      impact: "Pipeline rempli",
       color: "#70c1a9"
     },
     {
-      metric: "Position Moyenne",
-      ourResult: "Position 3",
-      industry: "Position 15+",
-      improvement: "5x mieux classé",
+      story: "Visibilité Google",
+      result: "Top 3",
+      description: "position sur mots-clés ciblés",
+      impact: "Autorité reconnue",
       color: "#70c1a9"
     },
     {
-      metric: "Trafic Organique",
-      ourResult: "+180%",
-      industry: "+12%",
-      improvement: "15x plus performant",
+      story: "Croissance Business",
+      result: "+180%",
+      description: "chiffre d'affaires moyen",
+      impact: "ROI exceptionnel",
       color: "#70c1a9"
     }
   ]
@@ -160,11 +160,11 @@ export default function SEOContentMarketingPage() {
   const faqData = [
     {
       question: "Combien coûte le SEO pour une entreprise valaisanne ?",
-      answer: "Notre service SEO commence à 2800 CHF/mois avec résultats mesurés en 90 jours. Contrairement aux agences qui facturent sans garantie, nous nous engageons sur des KPI mesurables : amélioration trafic organique minimum."
+      answer: "Formule SEO Complète : 2800 CHF/mois incluant audit technique, optimisation 15 pages, 4 articles premium, suivi positions Google, rapport mensuel détaillé et support illimité. Résultats mesurés en 90 jours avec garantie satisfaction."
     },
     {
       question: "Combien de temps faut-il pour voir des résultats SEO ?",
-      answer: "Premiers résultats en 30 jours, accélération en 90 jours. PME locale a atteint 68.6% engagement quality vs 44.6% industrie en 6 mois. Données Google Analytics certifiées."
+      answer: "Premiers résultats en 30 jours, accélération en 90 jours. Cabinet local reçoit maintenant 3-4 demandes qualifiées chaque semaine depuis Google. Croissance du chiffre d'affaires de 180% en 8 mois."
     },
     {
       question: "Pourquoi le SEO local Valais est-il si important ?",
@@ -176,7 +176,7 @@ export default function SEOContentMarketingPage() {
     },
     {
       question: "Que comprend votre service SEO complet ?",
-      answer: "Audit technique, optimisation on-page, création contenu premium, netlinking local, suivi positions, rapports mensuels. Tout pour dominer votre secteur en Valais et attirer vos clients idéaux."
+      answer: "Service complet : audit technique initial, optimisation 15 pages principales, création 4 articles premium/mois, netlinking local qualitatif, suivi 50 mots-clés, dashboard temps réel, rapport mensuel + appel stratégique. Dominez votre secteur en Valais."
     },
     {
       question: "Le SEO fonctionne-t-il pour tous les secteurs en Valais ?",
@@ -188,7 +188,7 @@ export default function SEOContentMarketingPage() {
     },
     {
       question: "Comment le content marketing booste-t-il mon SEO ?",
-      answer: "Contenu optimisé = autorité Google. Notre stratégie : 4 articles premium/mois ciblant vos prospects. Résultat : 68.6% engagement vs 44.6% industrie. Contenu qui convertit les visiteurs en clients."
+      answer: "Contenu optimisé = autorité Google. Notre stratégie : 4 articles premium/mois ciblant vos prospects. Résultat : vous devenez LA référence dans votre domaine. Contenu qui convertit les visiteurs en clients fidèles."
     }
   ]
 
@@ -207,29 +207,82 @@ export default function SEOContentMarketingPage() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* HERO SECTION - STORYTELLING CLIENT FOCUS */}
+      {/* HERO SECTION - VISUEL MÉTAPHORIQUE + STORYTELLING */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-400/10 via-teal-500/5 to-cyan-400/5" />
+        {/* VISUEL MÉTAPHORIQUE - PHARE/AIMANT EN ARRIÈRE-PLAN */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-teal-400/10 via-teal-500/5 to-cyan-400/5" />
+          
+          {/* Visuel SVG Phare métaphorique */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 opacity-20">
+            <svg viewBox="0 0 400 400" className="w-full h-full">
+              <defs>
+                <linearGradient id="lighthouse-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{stopColor: '#70c1a9', stopOpacity: 0.8}} />
+                  <stop offset="50%" style={{stopColor: '#00bcd4', stopOpacity: 0.6}} />
+                  <stop offset="100%" style={{stopColor: '#4dd0e1', stopOpacity: 0.4}} />
+                </linearGradient>
+                
+                <linearGradient id="light-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{stopColor: '#70c1a9', stopOpacity: 0.1}} />
+                  <stop offset="50%" style={{stopColor: '#00bcd4', stopOpacity: 0.3}} />
+                  <stop offset="100%" style={{stopColor: '#4dd0e1', stopOpacity: 0.1}} />
+                </linearGradient>
+              </defs>
+              
+              {/* Phare principal */}
+              <path d="M180 350 L180 150 L220 150 L220 350 Z" fill="url(#lighthouse-gradient)" stroke="#70c1a9" strokeWidth="2"/>
+              
+              {/* Sommet du phare */}
+              <path d="M160 150 L200 100 L240 150 Z" fill="url(#lighthouse-gradient)" stroke="#70c1a9" strokeWidth="2"/>
+              
+              {/* Rayons de lumière */}
+              <path d="M200 100 L50 50 L50 80 L200 120 Z" fill="url(#light-gradient)" opacity="0.6">
+                <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+              </path>
+              <path d="M200 100 L350 50 L350 80 L200 120 Z" fill="url(#light-gradient)" opacity="0.4">
+                <animate attributeName="opacity" values="0.6;0.4;0.6" dur="3s" repeatCount="indefinite"/>
+              </path>
+              <path d="M200 100 L100 30 L120 50 L200 110 Z" fill="url(#light-gradient)" opacity="0.5">
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite"/>
+              </path>
+              
+              {/* Base rocheuse */}
+              <ellipse cx="200" cy="360" rx="40" ry="15" fill="#2d3748" opacity="0.8"/>
+              
+              {/* Étoiles/clients attirés */}
+              <circle cx="80" cy="80" r="3" fill="#70c1a9" opacity="0.8">
+                <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="320" cy="70" r="2" fill="#00bcd4" opacity="0.6">
+                <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="120" cy="50" r="2" fill="#4dd0e1" opacity="0.7">
+                <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+        </div>
         
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
-            {/* GAUCHE - MESSAGE STORYTELLING */}
+            {/* GAUCHE - STORYTELLING PUR */}
             <div className="text-left">
               <div className="inline-block px-4 py-2 bg-teal-400/20 rounded-full text-teal-400 text-sm font-medium mb-6">
-                Cabinet B2B • Résultat 6 mois
+                PME Valais • Transformation digitale
               </div>
               
               <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-8" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                Votre visibilité locale devient un <span className="text-teal-400 font-bold">aimant à clients</span>
+                Attirez et convertissez <span className="text-teal-400 font-bold">vos prospects</span>
               </h1>
               
               <h2 className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                SEO narratif + content marketing pour transformer votre expertise en autorité Google reconnue par vos prospects valaisans.
+                Grâce à un <strong className="text-teal-400">SEO local narratif</strong> qui guide vos clients idéaux directement vers votre expertise.
               </h2>
 
               <p className="text-lg text-gray-400 mb-10 leading-relaxed">
-                Spécialisés cabinets médicaux, services B2B et commerces locaux. <strong className="text-white">Notre méthode augmente votre visibilité organique de façon durable.</strong>
+                Comme un phare guide les navires vers le port, votre contenu optimisé attire naturellement les prospects qualifiés qui recherchent vos services en Valais.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -245,51 +298,57 @@ export default function SEOContentMarketingPage() {
                   className="inline-flex items-center px-8 py-5 rounded-xl border border-teal-400/40 text-teal-400 hover:bg-teal-400/10 hover:border-teal-400/60 hover:text-teal-300 transition-all duration-300 text-lg font-medium"
                   style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                 >
-                  Voir nos résultats
+                  Voir nos histoires clients
                 </Link>
               </div>
             </div>
             
-            {/* DROITE - HISTOIRE CLIENT */}
+            {/* DROITE - CAS CLIENT CONCRET */}
             <div className="relative">
               <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl border border-teal-400/20 p-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-teal-400/10 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-cyan-400/10 rounded-full translate-y-12 -translate-x-12"></div>
                 
-                <div className="relative z-10 text-center">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-teal-400/20 to-cyan-400/20 flex items-center justify-center">
-                    <IconeOSOM 
-                      type="medical" 
-                      size={48} 
-                      color="cyan" 
-                      withAnimation 
-                      ariaLabel="Cabinet médical en croissance" 
-                    />
+                <div className="relative z-10">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-teal-400/20 to-cyan-400/20 flex items-center justify-center">
+                      <IconeOSOM 
+                        type="consultation" 
+                        size={40} 
+                        color="cyan" 
+                        withAnimation 
+                        ariaLabel="Cabinet conseil en croissance" 
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                        Cabinet Conseil Valais
+                      </h3>
+                      <div className="text-teal-400 text-sm">Services B2B • Entreprise familiale</div>
+                    </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                    Cabinet Médical Valais
-                  </h3>
+                  <div className="space-y-4 mb-6">
+                    <div className="bg-red-500/10 rounded-xl p-4 border border-red-500/20">
+                      <div className="text-red-400 text-sm font-medium mb-2">AVANT • Problème</div>
+                      <p className="text-gray-300 text-sm">
+                        Invisible sur Google malgré 15 ans d'expertise. Seulement 2-3 nouveaux clients par mois.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-teal-500/10 rounded-xl p-4 border border-teal-500/20">
+                      <div className="text-teal-400 text-sm font-medium mb-2">APRÈS • Transformation</div>
+                      <p className="text-gray-300 text-sm">
+                        Top 3 Google sur ses mots-clés. 15-20 demandes qualifiées chaque mois.
+                      </p>
+                    </div>
+                  </div>
                   
-                  <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    "En 6 mois, notre planning s'est naturellement rempli. Les patients nous trouvent enfin sur Google quand ils cherchent un médecin à Sion."
-                  </p>
-                  
-                  <div className="flex items-center justify-center space-x-4">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-teal-400">Page 1</div>
-                      <div className="text-xs text-gray-400">Position Google</div>
-                    </div>
-                    <div className="w-px h-8 bg-gray-600"></div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-cyan-400">1,200+</div>
-                      <div className="text-xs text-gray-400">Recherches/mois</div>
-                    </div>
-                    <div className="w-px h-8 bg-gray-600"></div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-teal-400">3x</div>
-                      <div className="text-xs text-gray-400">Plus de patients</div>
-                    </div>
+                  <div className="text-center p-4 bg-gradient-to-r from-teal-400/20 to-cyan-400/20 rounded-xl border border-teal-400/30">
+                    <p className="text-white italic mb-2">
+                      "Nos prospects nous trouvent maintenant avant nos concurrents"
+                    </p>
+                    <div className="text-teal-400 font-bold text-lg">Chiffre d'affaires doublé en 8 mois</div>
                   </div>
                 </div>
               </div>
@@ -363,13 +422,13 @@ export default function SEOContentMarketingPage() {
                   <div className="space-y-6">
                     <div className="bg-black/40 rounded-xl p-4">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-white">Engagement Quality</span>
+                        <span className="text-white">Clients Satisfaits</span>
                         <span className="text-teal-400 font-bold text-xl">{Math.floor(animatedValue)}%</span>
                       </div>
                       <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full transition-all duration-3000 ease-out" style={{width: `${animatedValue}%`}}></div>
                       </div>
-                      <div className="text-xs text-gray-400 mt-1">vs 44.6% moyenne industrie</div>
+                      <div className="text-xs text-gray-400 mt-1">recommandent nos services</div>
                     </div>
                     
                     <div className="bg-black/40 rounded-xl p-4">

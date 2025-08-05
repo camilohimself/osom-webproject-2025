@@ -197,6 +197,50 @@
     }
   },
   "contact": {
+    "hero": {
+      "title": "30 minutes to discover your",
+      "title_highlight": "digital growth potential",
+      "subtitle": "Let's discuss your business challenges and discover together how our expertise can transform your online presence into a real lead generation machine.",
+      "visual_alt": "Collaborative consultation between OSOM expert and SME leader"
+    },
+    "process": {
+      "title": "Our Consultation Process",
+      "step1": {
+        "title": "Quantitative diagnostic",
+        "description": "We dive into your GA4 and Search Console data to identify hidden opportunities and conversion leaks that are slowing your growth."
+      },
+      "step2": {
+        "title": "Personalized strategy", 
+        "description": "Based on ROI priorities and your resources, we develop together a custom action plan that adapts to your business reality."
+      },
+      "step3": {
+        "title": "Measurable performance",
+        "description": "We track your KPIs in real time and adjust actions to maximize results, with total transparency on every euro invested."
+      }
+    },
+    "case_study": {
+      "title": "Valais SME Success Story",
+      "company": "B2B Services SME, Valais",
+      "before": "Before OSOM: 2 requests per week, limited visibility",
+      "after": "After 6 months: 15 qualified requests per week",
+      "testimonial": "Our turnover doubled thanks to OSOM strategy. We now refuse clients due to lack of availability.",
+      "author": "Director B2B Services SME, Valais"
+    },
+    "options": {
+      "title": "Choose Your Approach",
+      "direct": {
+        "title": "Book direct appointment",
+        "description": "30-minute slot with an OSOM expert for a personalized diagnosis of your current situation."
+      },
+      "kit": {
+        "title": "Contact kit",
+        "description": "Preparation documents, reporting examples and checklist to optimize our consultation."
+      },
+      "questionnaire": {
+        "title": "Automatic questionnaire",
+        "description": "Our AI tool collects your business information to prepare an ultra-personalized consultation."
+      }
+    },
     "title": "Let's Talk About Your Project",
     "subtitle": "Free consultation to discover your growth potential",
     "cta_schedule": "Book my consultation",

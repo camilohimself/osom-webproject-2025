@@ -7,6 +7,32 @@ import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import EmailModal from '@/components/contact/EmailModal'
 
 interface ContactDictionary {
+  hero?: {
+    title: string
+    title_highlight: string
+    subtitle: string
+    visual_alt: string
+  }
+  process?: {
+    title: string
+    step1: { title: string; description: string }
+    step2: { title: string; description: string }
+    step3: { title: string; description: string }
+  }
+  case_study?: {
+    title: string
+    company: string
+    before: string
+    after: string
+    testimonial: string
+    author: string
+  }
+  options?: {
+    title: string
+    direct: { title: string; description: string }
+    kit: { title: string; description: string }
+    questionnaire: { title: string; description: string }
+  }
   title: string
   subtitle: string
   cta_schedule: string
@@ -188,189 +214,141 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
-              {/* Left: Métrique 14x - SPECTACULAIRE */}
+              {/* Left: Visuel Métaphorique Consultation */}
               <motion.div 
                 className="text-left relative"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                {/* Binary Rain Background */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  {[...Array(8)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute text-yellow-400/20 text-xs font-mono"
-                      style={{
-                        left: `${i * 15}%`,
-                        top: 0,
-                      }}
-                      animate={{
-                        y: ['0%', '200%'],
-                        opacity: [0, 0.6, 0],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        delay: i * 0.3,
-                        ease: 'linear',
-                      }}
-                    >
-                      {Array.from({ length: 20 }, () => Math.random() > 0.5 ? '1' : '0').join('')}
-                    </motion.div>
-                  ))}
-                </div>
+                {/* Visuel SVG Consultation Collaborative */}
+                <div className="relative w-full h-96 flex items-center justify-center">
+                  <svg viewBox="0 0 400 300" className="w-full h-full">
+                    <defs>
+                      <linearGradient id="consultation-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style={{stopColor: '#FFDD00', stopOpacity: 0.8}} />
+                        <stop offset="50%" style={{stopColor: '#00ffff', stopOpacity: 0.6}} />
+                        <stop offset="100%" style={{stopColor: '#ff00ff', stopOpacity: 0.4}} />
+                      </linearGradient>
+                      
+                      <radialGradient id="meeting-light" cx="50%" cy="50%">
+                        <stop offset="0%" style={{stopColor: '#ffffff', stopOpacity: 0.3}} />
+                        <stop offset="100%" style={{stopColor: 'transparent', stopOpacity: 0}} />
+                      </radialGradient>
+                    </defs>
 
-                {/* Main Counter Container */}
-                <div className="relative z-10">
-                  <motion.div 
-                    className="text-8xl md:text-9xl font-bold mb-4 relative"
-                    style={{
-                      fontFamily: 'Cera PRO, Inter, sans-serif',
-                    }}
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 1, type: 'spring', stiffness: 100 }}
-                  >
-                    {/* Glowing Background Effect */}
-                    <motion.div
-                      className="absolute inset-0 blur-3xl opacity-40"
-                      style={{
-                        background: 'linear-gradient(135deg, #FFDD00, #00ffff, #ff00ff)',
-                      }}
-                      animate={{
-                        scale: [1, 1.2, 1],
-                        rotate: [0, 180, 360],
-                      }}
-                      transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: 'easeInOut',
-                      }}
-                    />
+                    {/* Table de réunion */}
+                    <ellipse cx="200" cy="200" rx="120" ry="40" fill="url(#consultation-gradient)" opacity="0.6" />
                     
-                    {/* Counter with Spectacular Animation */}
-                    <motion.span
-                      style={{
-                        background: 'linear-gradient(135deg, #FFDD00 0%, #ffffff 50%, #00ffff 100%)',
-                        backgroundSize: '300% 300%',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        color: 'transparent',
-                        filter: 'drop-shadow(0 0 30px rgba(255,221,0,0.5)) drop-shadow(0 0 60px rgba(0,255,255,0.3))',
-                      }}
-                      animate={{
-                        backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-                      }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: 'easeInOut',
-                      }}
-                    >
-                      <AnimatedCounter
-                        from={0}
-                        to={14}
-                        duration={3}
-                        delay={1}
-                        suffix="x"
-                      />
-                    </motion.span>
+                    {/* Personnes en consultation */}
+                    <g transform="translate(150, 120)">
+                      {/* Expert OSOM */}
+                      <circle cx="0" cy="0" r="25" fill="#FFDD00" opacity="0.8" />
+                      <text x="0" y="5" textAnchor="middle" fill="#000" fontSize="12" fontWeight="bold">OSOM</text>
+                    </g>
                     
-                    {/* Orbit Effects */}
-                    <motion.div
-                      className="absolute -inset-4 pointer-events-none"
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                    >
-                      <div className="absolute top-0 left-1/2 w-3 h-3 bg-yellow-400 rounded-full opacity-60 blur-sm" />
-                      <div className="absolute bottom-0 right-1/4 w-2 h-2 bg-cyan-400 rounded-full opacity-80 blur-sm" />
-                      <div className="absolute left-0 top-1/3 w-4 h-4 bg-white rounded-full opacity-40 blur-md" />
-                    </motion.div>
-                  </motion.div>
-                  
-                  <motion.div 
-                    className="text-2xl mb-4 font-light"
-                    style={{ 
-                      fontFamily: 'Cera PRO, Inter, sans-serif',
-                      background: 'linear-gradient(90deg, #ffffff 0%, #ffdd00 50%, #ffffff 100%)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      color: 'transparent',
-                      filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))',
-                    }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.5, duration: 0.8 }}
-                  >
-                    plus efficace
-                  </motion.div>
-                  
-                  {/* Stats Box with Pulse */}
-                  <motion.div 
-                    className="bg-yellow-400/10 rounded-xl p-4 border border-yellow-400/30 backdrop-blur-sm"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 2, duration: 0.6 }}
-                    whileHover={{ 
-                      borderColor: 'rgba(255,221,0,0.6)',
-                      backgroundColor: 'rgba(255,221,0,0.15)',
-                      scale: 1.02,
-                    }}
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-white font-bold">Culture Peinture</span>
-                      <motion.div
-                        className="w-2 h-2 bg-green-500 rounded-full"
-                        animate={{
-                          scale: [1, 1.3, 1],
-                          opacity: [0.7, 1, 0.7],
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          ease: 'easeInOut',
-                        }}
-                      />
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div className="text-center">
-                        <div className="text-yellow-400 font-bold text-lg">
-                          <AnimatedCounter from={0} to={688} duration={2} delay={2.5} />
-                        </div>
-                        <div className="text-gray-300 text-xs">Conversions SEO</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-gray-400 font-bold text-lg">
-                          <AnimatedCounter from={0} to={49} duration={2} delay={2.7} />
-                        </div>
-                        <div className="text-gray-300 text-xs">Conversions Payantes</div>
-                      </div>
-                    </div>
-                    <div className="text-center mt-3 pt-3 border-t border-yellow-400/20">
-                      <div className="text-yellow-400 text-xs font-medium">✓ Données GA4 vérifiées • 6 mois</div>
-                    </div>
-                  </motion.div>
+                    <g transform="translate(250, 120)">
+                      {/* Dirigeant PME */}
+                      <circle cx="0" cy="0" r="25" fill="#00ffff" opacity="0.8" />
+                      <text x="0" y="5" textAnchor="middle" fill="#000" fontSize="12" fontWeight="bold">CEO</text>
+                    </g>
+
+                    {/* Écrans/Documents partagés */}
+                    <rect x="170" y="160" width="60" height="35" fill="url(#meeting-light)" rx="4" />
+                    <text x="200" y="180" textAnchor="middle" fill="#FFDD00" fontSize="8">GA4 Data</text>
+                    
+                    {/* Lignes de connection/dialogue */}
+                    <path d="M175,145 Q200,135 225,145" stroke="#FFDD00" strokeWidth="2" fill="none" opacity="0.6">
+                      <animate attributeName="stroke-dasharray" values="0,20;10,20;20,20" dur="3s" repeatCount="indefinite"/>
+                    </path>
+                    
+                    {/* Bulles d'idées animées */}
+                    <circle cx="180" cy="100" r="6" fill="#00ffff" opacity="0.5">
+                      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="220" cy="95" r="4" fill="#FFDD00" opacity="0.6">
+                      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="200" cy="85" r="5" fill="#ff00ff" opacity="0.4">
+                      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+
+                    {/* Texte descriptif */}
+                    <text x="200" y="270" textAnchor="middle" fill="#ffffff" fontSize="12" opacity="0.8">
+                      Consultation collaborative personnalisée
+                    </text>
+                  </svg>
                 </div>
               </motion.div>
               
-              {/* Right: Titre + CTA */}
+              {/* Right: Contenu Narratif */}
               <motion.div
-                className="text-left"
+                className="text-left space-y-6"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                <h1 className="text-4xl md:text-6xl font-light lowercase text-white mb-6 leading-tight" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                  consultation stratégie
+                <h1 className="text-4xl md:text-6xl font-light text-white mb-6 leading-tight" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                  {dictionary.hero?.title || 'Parlons de votre projet'}
                   <span className="block text-yellow-400 font-bold">
-                    digitale gratuite
+                    {dictionary.hero?.title_highlight || 'digital'}
                   </span>
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                  30 minutes pour révéler votre potentiel de croissance data-driven
+                  {dictionary.hero?.subtitle || dictionary.subtitle}
                 </p>
+
+                {/* Mini Case Study Card */}
+                <motion.div 
+                  className="bg-yellow-400/10 rounded-xl p-6 border border-yellow-400/30 backdrop-blur-sm mb-8"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                  whileHover={{ 
+                    borderColor: 'rgba(255,221,0,0.6)',
+                    backgroundColor: 'rgba(255,221,0,0.15)',
+                    scale: 1.02,
+                  }}
+                >
+                  {dictionary.case_study && (
+                    <>
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-white font-bold">{dictionary.case_study.company}</span>
+                        <motion.div
+                          className="w-2 h-2 bg-green-500 rounded-full"
+                          animate={{
+                            scale: [1, 1.3, 1],
+                            opacity: [0.7, 1, 0.7],
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                          }}
+                        />
+                      </div>
+                      
+                      <div className="space-y-3 text-sm">
+                        <div className="text-red-300">
+                          <strong>Avant :</strong> {dictionary.case_study.before}
+                        </div>
+                        <div className="text-green-300">
+                          <strong>Après :</strong> {dictionary.case_study.after}
+                        </div>
+                      </div>
+                      
+                      <div className="mt-4 pt-4 border-t border-yellow-400/20">
+                        <div className="text-yellow-400 text-sm italic">
+                          "{dictionary.case_study.testimonial}"
+                        </div>
+                        <div className="text-gray-400 text-xs mt-2">
+                          — {dictionary.case_study.author}
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </motion.div>
 
                 <motion.button
                   onClick={() => setShowCalendly(true)}
@@ -394,13 +372,13 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                     ease: 'easeInOut'
                   }}
                 >
-                  Réserver ma consultation
+                  {dictionary.cta_schedule}
                 </motion.button>
               </motion.div>
             </div>
           </motion.section>
 
-          {/* DATA-DRIVEN FUNNEL - Style Homepage */}
+          {/* PROCESSUS CONSULTATION - Mini-récits */}
           <motion.section 
             className="mb-20"
             initial={{ opacity: 0, y: 50 }}
@@ -411,165 +389,96 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
               <div className="text-center mb-16">
                 <div className="flex items-center justify-center mb-4">
                   <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-                  <span className="text-yellow-400 text-sm font-medium tracking-wide">PROCESSUS DATA-DRIVEN</span>
+                  <span className="text-yellow-400 text-sm font-medium tracking-wide">NOTRE MÉTHODE</span>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                  De l'analyse à la <span className="text-yellow-400 font-bold">performance</span>
+                  {dictionary.process?.title || 'Notre Processus de Consultation'}
                 </h2>
               </div>
               
               <div className="space-y-8">
-                {/* Étape 1: Diagnostic */}
+                {/* Étape 1: Diagnostic quantitatif */}
                 <motion.div
                   className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl p-8 hover:border-cyan-400/40 transition-all duration-500 relative overflow-hidden"
                   whileHover={{ scale: 1.01 }}
                 >
-                  {/* Binary Background Effect */}
-                  <div className="absolute top-4 right-4 opacity-10 pointer-events-none">
-                    <motion.div
-                      className="text-cyan-400 text-xs font-mono"
-                      animate={{
-                        opacity: [0.1, 0.3, 0.1],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: 'easeInOut',
-                      }}
-                    >
-                      {Array.from({ length: 50 }, () => Math.random() > 0.5 ? '1' : '0').join(' ')}
-                    </motion.div>
-                  </div>
-                  
                   <div className="flex items-center mb-4 relative z-10">
                     <div className="w-12 h-12 bg-cyan-400 rounded-full mr-4 flex items-center justify-center">
                       <span className="text-black font-bold text-lg">01</span>
                     </div>
                     <h3 className="text-2xl font-light text-white" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                      Diagnostic <span className="text-cyan-400 font-bold">quantitatif</span>
+                      {dictionary.process?.step1.title || 'Diagnostic quantitatif'}
                     </h3>
                   </div>
                   <div className="ml-16 relative">
                     <p className="text-gray-300 leading-relaxed mb-4">
-                      Analyse technique GA4, Search Console, performances actuelles. 
-                      Identification des fuites de conversions et opportunités cachées.
+                      {dictionary.process?.step1.description || 'Analyse de vos données pour identifier les opportunités.'}
                     </p>
                     <div className="flex gap-4 text-xs">
                       <div className="bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/30">
-                        <span className="text-cyan-400">✓ GA4 Deep Dive</span>
+                        <span className="text-cyan-400">✓ Audit GA4</span>
                       </div>
                       <div className="bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/30">
                         <span className="text-cyan-400">✓ Search Console</span>
                       </div>
                       <div className="bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/30">
-                        <span className="text-cyan-400">✓ Conversion Audit</span>
+                        <span className="text-cyan-400">✓ Opportunités cachées</span>
                       </div>
                     </div>
                   </div>
                 </motion.div>
 
-                {/* Étape 2: Stratégie */}
+                {/* Étape 2: Stratégie personnalisée */}
                 <motion.div
                   className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl p-8 hover:border-yellow-400/40 transition-all duration-500 ml-8 relative overflow-hidden"
                   whileHover={{ scale: 1.01 }}
                 >
-                  {/* Data Visualization Effect */}
-                  <div className="absolute top-4 right-4 opacity-15 pointer-events-none">
-                    <motion.div className="grid grid-cols-6 gap-1">
-                      {[...Array(24)].map((_, i) => (
-                        <motion.div
-                          key={i}
-                          className="w-2 h-2 bg-yellow-400 rounded-sm"
-                          animate={{
-                            opacity: [0.1, 1, 0.1],
-                            scale: [0.5, 1, 0.5],
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            delay: i * 0.1,
-                            ease: 'easeInOut',
-                          }}
-                        />
-                      ))}
-                    </motion.div>
-                  </div>
-                  
                   <div className="flex items-center mb-4 relative z-10">
                     <div className="w-12 h-12 bg-yellow-400 rounded-full mr-4 flex items-center justify-center">
                       <span className="text-black font-bold text-lg">02</span>
                     </div>
                     <h3 className="text-2xl font-light text-white" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                      Stratégie <span className="text-yellow-400 font-bold">personnalisée</span>
+                      {dictionary.process?.step2.title || 'Stratégie personnalisée'}
                     </h3>
                   </div>
                   <div className="ml-16 relative">
                     <p className="text-gray-300 leading-relaxed mb-4">
-                      Plan d'action basé sur vos métriques spécifiques. 
-                      Priorisations par impact ROI et faisabilité technique.
+                      {dictionary.process?.step2.description || 'Plan d\'action adapté à votre situation.'}
                     </p>
                     <div className="flex gap-4 text-xs">
                       <div className="bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/30">
-                        <span className="text-yellow-400">✓ ROI Prioritization</span>
+                        <span className="text-yellow-400">✓ Priorités ROI</span>
                       </div>
                       <div className="bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/30">
-                        <span className="text-yellow-400">✓ Technical Roadmap</span>
+                        <span className="text-yellow-400">✓ Plan sur-mesure</span>
                       </div>
                     </div>
                   </div>
                 </motion.div>
 
-                {/* Étape 3: Performance */}
+                {/* Étape 3: Performance mesurable */}
                 <motion.div
-                  className="backdrop-blur-sm border border-purple-400/20 rounded-3xl p-8 hover:border-purple-400/40 transition-all duration-500 ml-16 relative overflow-hidden"
+                  className="backdrop-blur-sm border border-green-400/20 rounded-3xl p-8 hover:border-green-400/40 transition-all duration-500 ml-16 relative overflow-hidden"
                   whileHover={{ scale: 1.01 }}
                 >
-                  {/* Performance Metrics Animation */}
-                  <div className="absolute top-4 right-4 opacity-15 pointer-events-none">
-                    <motion.div className="text-purple-400 text-xs font-mono">
-                      {['+11.3%', '+68.6%', '+14x', 'ROI+'].map((metric, i) => (
-                        <motion.div
-                          key={i}
-                          className="mb-1"
-                          animate={{
-                            opacity: [0.1, 1, 0.1],
-                            x: [0, 5, 0],
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            delay: i * 0.5,
-                            ease: 'easeInOut',
-                          }}
-                        >
-                          {metric}
-                        </motion.div>
-                      ))}
-                    </motion.div>
-                  </div>
-                  
                   <div className="flex items-center mb-4 relative z-10">
-                    <div className="w-12 h-12 bg-purple-400 rounded-full mr-4 flex items-center justify-center">
+                    <div className="w-12 h-12 bg-green-400 rounded-full mr-4 flex items-center justify-center">
                       <span className="text-black font-bold text-lg">03</span>
                     </div>
                     <h3 className="text-2xl font-light text-white" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                      Performance <span className="text-purple-400 font-bold">mesurable</span>
+                      {dictionary.process?.step3.title || 'Performance mesurable'}
                     </h3>
                   </div>
                   <div className="ml-16 relative">
                     <p className="text-gray-300 leading-relaxed mb-4">
-                      Résultats trackés en temps réel. Optimisations continues 
-                      basées sur les données de performance.
+                      {dictionary.process?.step3.description || 'Suivi des résultats en temps réel.'}
                     </p>
                     <div className="flex gap-4 text-xs">
-                      <div className="bg-purple-400/10 px-3 py-1 rounded-full border border-purple-400/30">
-                        <span className="text-purple-400">✓ Real-time Dashboard</span>
+                      <div className="bg-green-400/10 px-3 py-1 rounded-full border border-green-400/30">
+                        <span className="text-green-400">✓ Dashboard temps réel</span>
                       </div>
-                      <div className="bg-purple-400/10 px-3 py-1 rounded-full border border-purple-400/30">
-                        <span className="text-purple-400">✓ KPI Tracking</span>
-                      </div>
-                      <div className="bg-purple-400/10 px-3 py-1 rounded-full border border-purple-400/30">
-                        <span className="text-purple-400">✓ Continuous Optimization</span>
+                      <div className="bg-green-400/10 px-3 py-1 rounded-full border border-green-400/30">
+                        <span className="text-green-400">✓ Transparence totale</span>
                       </div>
                     </div>
                   </div>
@@ -722,12 +631,11 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                       className="text-3xl font-light text-white mb-6 leading-tight"
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      Réserver sur le calendrier
+                      {dictionary.options?.direct.title || 'Prendre rendez-vous direct'}
                     </motion.h3>
                     
                     <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
-                      Cliquez sur une date pour réserver un concert, récital ou direction chorale. 
-                      Visualisez les créneaux disponibles en temps réel.
+                      {dictionary.options?.direct.description || 'Consultation directe avec un expert.'}
                     </p>
                   </div>
                   
@@ -756,11 +664,11 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                       className="text-3xl font-light text-white mb-6 leading-tight"
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      Kit de contact
+                      {dictionary.options?.kit.title || 'Kit de contact'}
                     </motion.h3>
                     
                     <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
-                      Recevez instantanément toutes les informations nécessaires : questionnaire, Calendly, exemples de résultats.
+                      {dictionary.options?.kit.description || 'Documents et ressources pour préparer notre rencontre.'}
                     </p>
                   </div>
                   
@@ -789,12 +697,11 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                       className="text-3xl font-light text-white mb-6 leading-tight"
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      Questionnaire automatique
+                      {dictionary.options?.questionnaire.title || 'Questionnaire automatique'}
                     </motion.h3>
                     
                     <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
-                      Intelligence artificielle qui analyse vos besoins en 3 minutes.
-                      Recommandations personnalisées et devis automatique.
+                      {dictionary.options?.questionnaire.description || 'Outil IA pour analyser vos besoins en quelques minutes.'}
                     </p>
                   </div>
                   

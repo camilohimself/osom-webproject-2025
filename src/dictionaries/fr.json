@@ -19,18 +19,18 @@
   },
   "home": {
     "hero": {
-      "badge": "VALAIS N°1 MARKETING IA",
-      "title_line1": "Les autres",
-      "title_focus": "promettent",
-      "title_line2": "Nous le",
-      "title_impact": "prouvons",
-      "description": "25% de taux de clics vs 2-3% industrie. 1,500 CHF économisés mensuellement. Position Top 5 garantie sur mots-clés concurrentiels.",
-      "cta_primary": "Audit gratuit - 2 places/mois",
-      "cta_secondary": "Voir preuves GA4",
+      "badge": "VALAIS • MARKETING IA HUMAIN",
+      "title_line1": "Votre vitrine digitale devient un",
+      "title_focus": "écosystème de croissance",
+      "title_line2": "marketing IA, data science et développement web orchestrés pour attirer, séduire et convertir vos clients en",
+      "title_impact": "Suisse romande",
+      "description": "Notre expertise unique combine trois pôles complémentaires : marketing intelligent par IA, analytics avancées, et développement web évolutif. Découvrez comment nous transformons votre présence digitale en véritable machine à prospects.",
+      "cta_primary": "Découvrir notre approche",
+      "cta_secondary": "Voir nos services",
       "trust_indicators": {
-        "conversions": "688 vs 49 conversions (même budget)",
-        "engagement": "1,500 CHF économisés/mois",
-        "roi": "Position #5 garantie mots-clés"
+        "conversions": "Accompagnement humain continu",
+        "engagement": "Méthodologie transparente basée sur les données",
+        "roi": "Investissement rentable et mesurable"
       }
     },
     "forces": {
@@ -41,104 +41,104 @@
     },
     "force1": {
       "badge": "FORCE #1 - MARKETING + IA",
-      "title_line1": "688% d'augmentation de",
-      "title_leads": "leads qualifiés",
-      "title_line2": "comment notre IA transforme votre marketing en",
-      "title_machine": "machine à prospects",
-      "description": "Vos concurrents font du marketing à l'instinct, nous utilisons l'IA pour transformer votre marketing en machine à prospects. 688 leads générés vs 49 chez la concurrence.",
+      "title_line1": "Nos algorithmes propriétaires optimisent vos campagnes et réduisent vos coûts d'acquisition pendant que vos",
+      "title_leads": "concurrents gaspillent leur budget",
+      "title_line2": "découvrez comment l'IA transforme votre marketing en",
+      "title_machine": "machine à économies",
+      "description": "Plus de 200 projets analysés nous ont appris ce qui fonctionne vraiment. Notre IA identifie automatiquement vos prospects les plus qualifiés et optimise chaque euro investi.",
       "agents": {
-        "title": "Agents IA marketing personnalisés",
-        "description": "Algorithmes propriétaires qui analysent comportements clients en temps réel. Personnalisation automatique des campagnes selon profil utilisateur et intention d'achat."
+        "title": "IA Marketing Automation Valais",
+        "description": "Nos algorithmes analysent le comportement de vos visiteurs en temps réel pour personnaliser automatiquement chaque interaction selon leur profil et intention d'achat."
       },
       "prediction": {
-        "title": "Prédiction ROI avant investissement",
-        "description": "Modèles prédictifs basés sur 200+ projets analysés. Visibilité complète sur retour attendu avant même de lancer une campagne marketing."
+        "title": "Prédiction ROI Marketing Digital",
+        "description": "Grâce à l'analyse de centaines de projets similaires, nous prédisons avec précision le retour sur investissement de chaque campagne avant même son lancement."
       },
       "analytics": {
-        "title": "Analytics temps réel actionnable",
-        "description": "Dashboard en temps réel avec recommandations automatiques d'optimisation. Ajustements immédiats basés sur performance live des campagnes."
+        "title": "Analytics Marketing Temps Réel",
+        "description": "Votre dashboard personnel vous guide en continu avec des recommandations d'optimisation automatiques pour maximiser l'impact de chaque action."
       },
       "formula": {
-        "title": "osom Marketing IA Formula",
+        "title": "OSOM Marketing IA Formula",
         "price": "À partir de 2500 CHF • ROI prévisible",
-        "subtitle": "Pure player Genève domaine de l'art (2024)"
+        "subtitle": "PME Genève - Transformation digitale 2024"
       },
       "conversion": {
-        "rate": "688 vs 49",
-        "description": "Leads qualifiés générés",
-        "subtitle": "Même période • Même audience • Budget 10x inférieur"
+        "rate": "Machine à prospects",
+        "description": "Marketing automatisé et optimisé",
+        "subtitle": "Économies garanties • Performance mesurée"
       }
     },
     "force2": {
-      "badge": "FORCE #2 - DATA ANALYSIS",
-      "title_line1": "68.6% de",
-      "title_roi": "ROI mesurable",
-      "title_line2": "notre data science révèle les leviers cachés de votre",
+      "badge": "FORCE #2 - DATA SCIENCE",
+      "title_line1": "Une PME valaisanne a découvert 47'000 CHF de ROI caché grâce à l'analyse GA4 et aux",
+      "title_roi": "tableaux de bord",
+      "title_line2": "notre data science révèle les opportunités invisibles de votre",
       "title_croissance": "croissance",
-      "description": "Focus data-driven vs approximations. Notre data science révèle les leviers cachés de votre croissance pendant que vos concurrents naviguent à vue.",
+      "description": "Pendant que vos concurrents naviguent à l'instinct, nous analysons chaque donnée pour révéler les leviers cachés qui transformeront votre business. Fini les approximations, place aux décisions éclairées.",
       "audit": {
-        "title": "Audit comportemental avancé",
-        "description": "Heat maps, eye-tracking et analyses comportementales poussées. Identification précise des points de friction et opportunités d'optimisation cachées."
+        "title": "Audit Comportemental Avancé",
+        "description": "Nous analysons précisément comment vos visiteurs interagissent avec votre site pour identifier les points de friction et révéler les opportunités d'optimisation cachées."
       },
       "attribution": {
-        "title": "Attribution multi-touch précise",
-        "description": "Traçabilité complète du parcours client sur tous canaux. Attribution exacte de chaque conversion à sa source réelle, fin des approximations marketing."
+        "title": "Attribution Multi-Touch Précise",
+        "description": "Découvrez enfin d'où viennent vraiment vos clients. Notre système trace le parcours complet de chaque visiteur pour attribuer chaque conversion à sa source réelle."
       },
       "optimization": {
-        "title": "Optimisation prédictive continue",
-        "description": "Algorithmes d'optimisation automatique basés sur patterns comportementaux. Ajustements proactifs avant que les performances ne chutent."
+        "title": "Optimisation Prédictive Continue",
+        "description": "Nos algorithmes détectent les tendances avant qu'elles n'impactent vos performances, permettant des ajustements proactifs pour maintenir votre croissance."
       },
       "formula": {
-        "title": "osom Data Analysis Formula",
+        "title": "OSOM Data Science Formula",
         "price": "À partir de 3000 CHF • Insights garantis",
-        "subtitle": "Artisan, Valais (200+ jours GA4)"
+        "subtitle": "PME Valais - Analyse 400+ jours GA4"
       },
       "engagement": {
-        "title": "68.6% vs 44.6%",
-        "description": "ROI mesurable vs approximations",
-        "subtitle": "Analyse comparative • Données vérifiables GA4"
+        "title": "ROI caché révélé",
+        "description": "Opportunités business découvertes",
+        "subtitle": "Analyse approfondie • Recommandations actionables"
       }
     },
     "force3": {
-      "badge": "FORCE #3 - TECHNOLOGIE",
-      "title_line1": "Architecture Next.js +",
-      "title_ia": "IA",
-      "title_line2": "la stack qui distance définitivement vos",
-      "title_concurrents": "concurrents",
-      "description": "Différenciation technique vs WordPress et solutions basiques. Stack qui distance définitivement vos concurrents pendant qu'ils utilisent WordPress obsolète.",
+      "badge": "FORCE #3 - DÉVELOPPEMENT WEB ÉVOLUTIF",
+      "title_line1": "Votre site se charge instantanément et renforce la confiance de vos clients avec une architecture",
+      "title_ia": "modulaire évolutive",
+      "title_line2": "l'utilisation de Next.js et IA assure un",
+      "title_concurrents": "chargement quasi instantané",
+      "description": "OSOM est l'une des premières agences en Valais à intégrer l'IA pour accélérer le développement. Votre site évoluera sans refonte pendant 5 ans, contrairement aux solutions classiques qui deviennent obsolètes.",
       "performance": {
-        "title": "Performance garantie sous 2 secondes",
-        "description": "Sites livrés avec PageSpeed 95+, temps de chargement garanti sous 2s. Performance mesurée et optimisée en continu vs 5-8s WordPress standard."
+        "title": "Chargement en moins de 2 secondes",
+        "description": "L'architecture SSR + ISR garantit une expérience utilisateur premium avec une note Lighthouse supérieure à 90. Vos visiteurs ne quittent plus votre site par impatience."
       },
       "integrations": {
-        "title": "Intégrations IA natives",
-        "description": "Agents IA intégrés nativement dans l'architecture. Fonctionnalités d'intelligence artificielle évolutives sans refonte technique complète."
+        "title": "Compatibilité PWA et Mobile First",
+        "description": "Votre site s'adapte parfaitement à tous les appareils et peut même être installé comme une application mobile native sur le téléphone de vos clients."
       },
       "mobile": {
-        "title": "Mobile-first + PWA",
-        "description": "Architecture mobile-first avec Progressive Web App. Expérience utilisateur premium sur tous appareils, installation possible comme app native."
+        "title": "Maintenance Simplifiée et Évolutive",
+        "description": "Architecture modulable qui grandit avec votre business. Ajout de nouvelles fonctionnalités sans refonte complète, économisant temps et budget sur le long terme."
       },
       "formula": {
-        "title": "osom Tech Formula",
+        "title": "OSOM Web Formula",
         "price": "À partir de 4500 CHF • Performance garantie",
-        "subtitle": "PME Magasin construction, Conthey (2024)"
+        "subtitle": "PME Construction, Conthey - Site évolutif 2024"
       },
       "conversions": {
-        "title": "< 2s vs 5-8s",
-        "description": "Temps de chargement WordPress",
-        "subtitle": "Performance mesurée • PageSpeed 95+ garanti"
+        "title": "Chargement instantané",
+        "description": "vs chargement lent > 6s",
+        "subtitle": "Expérience utilisateur premium • PWA compatible"
       }
     },
     "cta": {
-      "title_line1": "Prêt à rendre vos concurrents",
-      "title_performances": "obsolètes",
-      "description": "Discutons de votre projet et découvrons comment notre approche Marketing + IA + Data peut multiplier votre ROI de façon mesurable.",
-      "cta_primary": "Audit gratuit",
-      "cta_secondary": "Voir nos formulas",
+      "title_line1": "Prêt·e à donner un coup d'accélérateur à votre",
+      "title_performances": "entreprise",
+      "description": "Notre équipe écoute vos besoins et bâtit un plan personnalisé. Découvrez comment notre écosystème Marketing IA + Data Science + Web peut transformer votre croissance de façon mesurable.",
+      "cta_primary": "Audit gratuit - 30 min",
+      "cta_secondary": "Voir nos services",
       "trust_indicators": {
-        "ga4": "688 vs 49 leads qualifiés",
-        "results": "Résultats sous 30 jours garantis",
-        "guarantee": "Satisfaction ou remboursé"
+        "ga4": "Accompagnement humain en continu",
+        "results": "Méthodologie transparente et basée sur les données",
+        "guarantee": "Investissement rentable et mesurable"
       }
     },
     "services": {
@@ -162,19 +162,19 @@
     },
     "charts": {
       "performance": {
-        "title": "Performance Mesurable",
-        "subtitle": "Données vérifiées • 400+ jours d'analyses GA4",
+        "title": "Progression Client Type",
+        "subtitle": "Plus de 400 jours d'analyses client - Courbe jaune : amélioration progressive des conversions",
         "primary_metric": {
-          "label": "Stratégie osom",
-          "value": "688 conversions"
+          "label": "Avec stratégie OSOM",
+          "value": "+400 conversions en 6 mois"
         },
         "secondary_metric": {
-          "label": "Publicité payante",
-          "value": "49 conversions"
+          "label": "Approche traditionnelle",
+          "value": "Croissance stagnante"
         },
         "improvement": {
-          "label": "Impact Supérieur",
-          "value": "14x plus efficace"
+          "label": "Résultat des actions menées",
+          "value": "+50% ROI vs approche classique"
         }
       },
       "conversion": {
@@ -194,10 +194,54 @@
     }
   },
   "contact": {
+    "hero": {
+      "title": "30 minutes pour découvrir votre",
+      "title_highlight": "potentiel de croissance digitale",
+      "subtitle": "Échangeons sur vos défis business et découvrons ensemble comment notre expertise peut transformer votre présence en ligne en véritable machine à prospects.",
+      "visual_alt": "Consultation collaborative entre expert OSOM et dirigeant PME"
+    },
+    "process": {
+      "title": "Notre Processus de Consultation",
+      "step1": {
+        "title": "Diagnostic quantitatif",
+        "description": "Nous plongeons dans vos données GA4 et Search Console pour identifier les opportunités cachées et les fuites de conversion qui freinent votre croissance."
+      },
+      "step2": {
+        "title": "Stratégie personnalisée", 
+        "description": "En fonction des priorités ROI et de vos ressources, nous élaborons ensemble un plan d'action sur-mesure qui s'adapte à votre réalité business."
+      },
+      "step3": {
+        "title": "Performance mesurable",
+        "description": "Nous suivons vos KPI en temps réel et ajustons les actions pour maximiser les résultats, avec transparence totale sur chaque euro investi."
+      }
+    },
+    "case_study": {
+      "title": "Histoire de Succès PME Valaisanne",
+      "company": "PME Services B2B, Valais",
+      "before": "Avant OSOM : 2 demandes par semaine, visibilité limitée",
+      "after": "Après 6 mois : 15 demandes qualifiées par semaine",
+      "testimonial": "Notre chiffre d'affaires a doublé grâce à la stratégie OSOM. Nous refusons maintenant des clients par manque de disponibilité.",
+      "author": "Directeur PME Services B2B, Valais"
+    },
+    "options": {
+      "title": "Choisissez Votre Approche",
+      "direct": {
+        "title": "Prendre rendez-vous direct",
+        "description": "Créneau de 30 minutes avec un expert OSOM pour un diagnostic personnalisé de votre situation actuelle."
+      },
+      "kit": {
+        "title": "Kit de contact",
+        "description": "Documents de préparation, exemples de reporting et checklist pour optimiser notre consultation."
+      },
+      "questionnaire": {
+        "title": "Questionnaire automatique",
+        "description": "Notre outil IA collecte vos informations business pour préparer une consultation ultra-personnalisée."
+      }
+    },
     "title": "Parlons de Votre Projet",
     "subtitle": "Consultation gratuite pour découvrir votre potentiel de croissance",
-    "cta_schedule": "Réserver ma consultation",
-    "cta_questionnaire": "Commencer le questionnaire",
+    "cta_schedule": "Prendre rendez-vous",
+    "cta_questionnaire": "Questionnaire IA",
     "form_name": "Nom complet",
     "form_email": "Email professionnel",
     "form_phone": "Téléphone",
@@ -205,7 +249,7 @@
     "step_of": "Étape {current} sur {total}",
     "next": "Suivant",
     "previous": "Précédent",
-    "submit": "Envoyer ma demande"
+    "submit": "Réserver ma consultation"
   },
   "contact_old": {
     "hero": {

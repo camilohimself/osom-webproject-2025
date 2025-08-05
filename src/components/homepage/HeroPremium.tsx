@@ -80,46 +80,46 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
     visible: { opacity: 1, x: 0, scale: 1 }
   }
 
-  // Enhanced tooltip data for metrics
+  // Enhanced tooltip data for benefits
   const metricTooltips = {
     conversions: {
-      title: "Performance Révolutionnaire Vérifiée",
-      details: "Culture Peinture Valais - Case Study Complet",
-      highlight: "14x Plus Efficace que la Publicité Payante",
-      metrics: {
-        organic: 688,
-        paid: 49,
-        period: "6 mois",
-        budget_ratio: "10x moins cher"
+      title: "Accompagnement Humain Continu",
+      details: "Relation de confiance • Expertise locale",
+      highlight: "Votre Success Manager Dédié",
+      benefits: {
+        support: "Support personnel",
+        expertise: "Expertise locale",
+        transparency: "Communication transparente",
+        availability: "Disponibilité garantie"
       },
-      context: "Stratégie organique basée sur SEO technique + contenu optimisé",
-      proof: "Données GA4 + Meta Business Manager vérifiables"
+      context: "Un interlocuteur unique qui comprend vos enjeux business et vous accompagne à chaque étape",
+      proof: "Satisfaction client • Relation long terme"
     },
     engagement: {
-      title: "Engagement Supérieur Mesuré",
-      details: "Artisane de Lumière - Étude 200+ jours",
-      highlight: "54% Plus de Valeur par Visiteur SEO",
-      metrics: {
-        seo_engagement: 68.6,
-        direct_engagement: 44.6,
-        improvement: "+54%",
-        sessions_recovered: "14,171"
+      title: "Méthodologie Basée sur les Données",
+      details: "Décisions éclairées • Résultats mesurables",
+      highlight: "Chaque Action Justifiée par la Data",
+      benefits: {
+        analysis: "Analyse approfondie",
+        strategy: "Stratégie data-driven",
+        optimization: "Optimisation continue",
+        reporting: "Reporting transparent"
       },
-      context: "Trafic SEO OSOM génère plus d'interactions, temps de session et conversions",
-      proof: "Analytics GA4 comparatif sur période identique"
+      context: "Fini les approximations : chaque recommandation s'appuie sur l'analyse de vos données réelles",
+      proof: "Dashboard temps réel • Méthodes éprouvées"
     },
     roi: {
-      title: "ROI Transparent & Traçable",
-      details: "Méthodologie OSOM standardisée",
-      highlight: "Visibilité Complète sur Chaque Euro Investi",
-      metrics: {
-        attribution: "100%",
-        reporting: "Temps réel",
-        channels: "Multi-canal",
-        transparency: "Données client"
+      title: "Investissement Rentable & Mesurable",
+      details: "ROI transparent • Croissance durable",
+      highlight: "Visibilité Complète sur Votre Retour",
+      benefits: {
+        transparency: "Transparence totale",
+        measurement: "Mesure précise",
+        growth: "Croissance durable",
+        value: "Valeur ajoutée"
       },
-      context: "Dashboard temps réel + rapports mensuels avec attribution complète par source",
-      proof: "GA4 + Search Console + Data Studio intégrés"
+      context: "Investissement justifié avec suivi précis des résultats et impact mesurable sur votre croissance",
+      proof: "Rapports détaillés • Métriques business"
     }
   }
 
@@ -340,34 +340,27 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                           {metricTooltips[key as keyof typeof metricTooltips].highlight}
                         </div>
 
-                        {/* Animated Metrics */}
+                        {/* Benefits Display */}
                         {key === 'conversions' && (
                           <div className="grid grid-cols-2 gap-4 mb-4 p-4 bg-gradient-to-r from-green-400/10 to-yellow-400/10 rounded-xl">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-green-400">
-                                <AnimatedCounter 
-                                  from={0} 
-                                  to={metricTooltips.conversions.metrics.organic}
-                                  duration={1.5}
-                                  delay={0.2}
-                                />
+                            <div className="space-y-2">
+                              <div className="flex items-center text-green-400">
+                                <div className="w-2 h-2 rounded-full bg-green-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.conversions.benefits.support}</div>
                               </div>
-                              <div className="text-xs text-gray-300">Conversions Organiques</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-gray-400">
-                                <AnimatedCounter 
-                                  from={0} 
-                                  to={metricTooltips.conversions.metrics.paid}
-                                  duration={1.5}
-                                  delay={0.4}
-                                />
+                              <div className="flex items-center text-green-400">
+                                <div className="w-2 h-2 rounded-full bg-green-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.conversions.benefits.expertise}</div>
                               </div>
-                              <div className="text-xs text-gray-300">Conversions Payantes</div>
                             </div>
-                            <div className="col-span-2 text-center mt-2">
-                              <div className="text-yellow-400 font-bold">
-                                = {metricTooltips.conversions.metrics.budget_ratio}
+                            <div className="space-y-2">
+                              <div className="flex items-center text-yellow-400">
+                                <div className="w-2 h-2 rounded-full bg-yellow-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.conversions.benefits.transparency}</div>
+                              </div>
+                              <div className="flex items-center text-yellow-400">
+                                <div className="w-2 h-2 rounded-full bg-yellow-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.conversions.benefits.availability}</div>
                               </div>
                             </div>
                           </div>
@@ -375,60 +368,50 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
 
                         {key === 'engagement' && (
                           <div className="grid grid-cols-2 gap-4 mb-4 p-4 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 rounded-xl">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-cyan-400">
-                                <AnimatedCounter 
-                                  from={0} 
-                                  to={metricTooltips.engagement.metrics.seo_engagement}
-                                  duration={1.5}
-                                  delay={0.2}
-                                  suffix="%"
-                                />
+                            <div className="space-y-2">
+                              <div className="flex items-center text-cyan-400">
+                                <div className="w-2 h-2 rounded-full bg-cyan-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.engagement.benefits.analysis}</div>
                               </div>
-                              <div className="text-xs text-gray-300">Engagement SEO OSOM</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-gray-400">
-                                <AnimatedCounter 
-                                  from={0} 
-                                  to={metricTooltips.engagement.metrics.direct_engagement}
-                                  duration={1.5}
-                                  delay={0.4}
-                                  suffix="%"
-                                />
+                              <div className="flex items-center text-cyan-400">
+                                <div className="w-2 h-2 rounded-full bg-cyan-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.engagement.benefits.strategy}</div>
                               </div>
-                              <div className="text-xs text-gray-300">Engagement Direct</div>
                             </div>
-                            <div className="col-span-2 text-center mt-2">
-                              <div className="text-cyan-400 font-bold">
-                                Sessions récupérées: <AnimatedCounter 
-                                  from={0} 
-                                  to={14171}
-                                  duration={2}
-                                  delay={0.6}
-                                />
+                            <div className="space-y-2">
+                              <div className="flex items-center text-blue-400">
+                                <div className="w-2 h-2 rounded-full bg-blue-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.engagement.benefits.optimization}</div>
+                              </div>
+                              <div className="flex items-center text-blue-400">
+                                <div className="w-2 h-2 rounded-full bg-blue-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.engagement.benefits.reporting}</div>
                               </div>
                             </div>
                           </div>
                         )}
 
                         {key === 'roi' && (
-                          <div className="grid grid-cols-2 gap-3 mb-4 p-4 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-xl">
-                            <div className="text-center">
-                              <div className="text-lg font-bold text-yellow-400">
-                                <AnimatedCounter 
-                                  from={0} 
-                                  to={100}
-                                  duration={1.5}
-                                  delay={0.2}
-                                  suffix="%"
-                                />
+                          <div className="grid grid-cols-2 gap-4 mb-4 p-4 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded-xl">
+                            <div className="space-y-2">
+                              <div className="flex items-center text-yellow-400">
+                                <div className="w-2 h-2 rounded-full bg-yellow-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.roi.benefits.transparency}</div>
                               </div>
-                              <div className="text-xs text-gray-300">Attribution</div>
+                              <div className="flex items-center text-yellow-400">
+                                <div className="w-2 h-2 rounded-full bg-yellow-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.roi.benefits.measurement}</div>
+                              </div>
                             </div>
-                            <div className="text-center">
-                              <div className="text-lg font-bold text-yellow-400">24/7</div>
-                              <div className="text-xs text-gray-300">Reporting</div>
+                            <div className="space-y-2">
+                              <div className="flex items-center text-orange-400">
+                                <div className="w-2 h-2 rounded-full bg-orange-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.roi.benefits.growth}</div>
+                              </div>
+                              <div className="flex items-center text-orange-400">
+                                <div className="w-2 h-2 rounded-full bg-orange-400 mr-2"></div>
+                                <div className="text-sm font-medium">{metricTooltips.roi.benefits.value}</div>
+                              </div>
                             </div>
                           </div>
                         )}
@@ -459,7 +442,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
             </motion.div>
           </div>
           
-          {/* Right: Animated Chart */}
+          {/* Right: Metaphorical Visual - Alpine Digital Ecosystem */}
           <motion.div
             variants={chartVariants}
             transition={{ duration: 1.2, ease: [0.25, 0.25, 0.25, 0.75], delay: 0.5 }}
@@ -469,28 +452,151 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 1 }}
+              className="relative w-full h-96 flex items-center justify-center"
             >
-              <GraphiqueLinear
-                title={dictionary.charts.performance.title}
-                subtitle={dictionary.charts.performance.subtitle}
-                primaryMetric={{
-                  label: dictionary.charts.performance.primary_metric.label,
-                  value: dictionary.charts.performance.primary_metric.value,
-                  color: "#EAB308"
-                }}
-                secondaryMetric={{
-                  label: dictionary.charts.performance.secondary_metric.label,
-                  value: dictionary.charts.performance.secondary_metric.value,
-                  color: "#6B7280"
-                }}
-                improvement={{
-                  label: dictionary.charts.performance.improvement.label,
-                  value: dictionary.charts.performance.improvement.value
-                }}
-                backgroundColor="rgba(0,0,0,0.4)"
-                className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl"
-                animate={true} // This prop will trigger progressive drawing
-              />
+              {/* Visuel SVG Écosystème Alpin Connecté */}
+              <svg viewBox="0 0 500 400" className="w-full h-full">
+                <defs>
+                  {/* Gradients pour l'écosystème */}
+                  <linearGradient id="mountain-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{stopColor: '#374151', stopOpacity: 0.9}} />
+                    <stop offset="50%" style={{stopColor: '#1f2937', stopOpacity: 0.7}} />
+                    <stop offset="100%" style={{stopColor: '#111827', stopOpacity: 0.8}} />
+                  </linearGradient>
+                  
+                  <radialGradient id="digital-light" cx="50%" cy="30%">
+                    <stop offset="0%" style={{stopColor: '#fbbf24', stopOpacity: 0.9}} />
+                    <stop offset="50%" style={{stopColor: '#f59e0b', stopOpacity: 0.6}} />
+                    <stop offset="100%" style={{stopColor: '#d97706', stopOpacity: 0.2}} />
+                  </radialGradient>
+
+                  <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 0.8}} />
+                    <stop offset="50%" style={{stopColor: '#06d6a0', stopOpacity: 0.6}} />
+                    <stop offset="100%" style={{stopColor: '#8b5cf6', stopOpacity: 0.4}} />
+                  </linearGradient>
+                </defs>
+
+                {/* Chaîne alpine en arrière-plan */}
+                <path 
+                  d="M0,280 L100,200 L180,240 L250,180 L320,220 L420,160 L500,200 L500,400 L0,400 Z" 
+                  fill="url(#mountain-gradient)" 
+                  opacity="0.7"
+                />
+                
+                {/* Sommets secondaires */}
+                <path 
+                  d="M50,250 L120,190 L200,230 L270,170 L350,210 L450,150 L500,180" 
+                  fill="none" 
+                  stroke="#374151" 
+                  strokeWidth="2" 
+                  opacity="0.5"
+                />
+
+                {/* Phare Digital Central */}
+                <g transform="translate(220, 120)">
+                  <rect x="0" y="40" width="20" height="60" fill="url(#digital-light)" rx="2" />
+                  <rect x="-5" y="30" width="30" height="15" fill="#fbbf24" rx="4" />
+                  <polygon points="-10,30 10,10 30,30" fill="#f59e0b" />
+                  
+                  {/* Rayonnement Digital Animé */}
+                  <g opacity="0.8">
+                    <path d="M10,25 L-30,5 L-25,0 L10,20 Z" fill="url(#digital-light)">
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        values="0 10 25; 360 10 25"
+                        dur="12s"
+                        repeatCount="indefinite"
+                      />
+                    </path>
+                    <path d="M10,25 L50,5 L45,0 L10,20 Z" fill="url(#digital-light)" opacity="0.6">
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        values="90 10 25; 450 10 25"
+                        dur="12s"
+                        repeatCount="indefinite"
+                      />
+                    </path>
+                  </g>
+                </g>
+
+                {/* Réseau de connexions IA */}
+                <g opacity="0.6">
+                  {/* Nœuds connectés représentant l'écosystème */}
+                  <circle cx="120" cy="250" r="4" fill="#10b981">
+                    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="180" cy="200" r="3" fill="#06d6a0">
+                    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="300" cy="240" r="4" fill="#8b5cf6">
+                    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="350" cy="180" r="3" fill="#06d6a0">
+                    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/>
+                  </circle>
+
+                  {/* Lignes de connexion animées */}
+                  <path d="M230,145 Q120,200 120,250" fill="none" stroke="url(#connection-gradient)" strokeWidth="2" opacity="0.5">
+                    <animate attributeName="stroke-dasharray" values="0,100;50,100;100,100" dur="4s" repeatCount="indefinite"/>
+                  </path>
+                  <path d="M230,145 Q180,170 180,200" fill="none" stroke="url(#connection-gradient)" strokeWidth="2" opacity="0.4">
+                    <animate attributeName="stroke-dasharray" values="0,80;40,80;80,80" dur="3s" repeatCount="indefinite"/>
+                  </path>
+                  <path d="M230,145 Q300,190 300,240" fill="none" stroke="url(#connection-gradient)" strokeWidth="2" opacity="0.6">
+                    <animate attributeName="stroke-dasharray" values="0,120;60,120;120,120" dur="5s" repeatCount="indefinite"/>
+                  </path>
+                  <path d="M230,145 Q350,160 350,180" fill="none" stroke="url(#connection-gradient)" strokeWidth="2" opacity="0.4">
+                    <animate attributeName="stroke-dasharray" values="0,90;45,90;90,90" dur="3.5s" repeatCount="indefinite"/>
+                  </path>
+                </g>
+
+                {/* Éléments Data flottants */}
+                <g opacity="0.7">
+                  <rect x="80" y="280" width="12" height="8" fill="#fbbf24" rx="2">
+                    <animateTransform
+                      attributeName="transform" 
+                      type="translate"
+                      values="0,0; 0,-20; 0,0"
+                      dur="6s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                  <rect x="320" y="290" width="10" height="6" fill="#10b981" rx="1">
+                    <animateTransform
+                      attributeName="transform" 
+                      type="translate"
+                      values="0,0; 0,-15; 0,0"
+                      dur="4s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                  <rect x="380" y="270" width="8" height="5" fill="#8b5cf6" rx="1">
+                    <animateTransform
+                      attributeName="transform" 
+                      type="translate"
+                      values="0,0; 0,-25; 0,0"
+                      dur="7s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                </g>
+
+                {/* Labels écosystème */}
+                <text x="120" y="270" fill="#10b981" fontSize="8" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">MARKETING IA</text>
+                <text x="180" y="220" fill="#06d6a0" fontSize="8" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">DATA SCIENCE</text>
+                <text x="300" y="260" fill="#8b5cf6" fontSize="8" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">DEV WEB</text>
+                <text x="350" y="200" fill="#06d6a0" fontSize="8" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">AUTOMATION</text>
+              </svg>
+              
+              {/* Texte explicatif sous le visuel */}
+              <div className="absolute bottom-0 left-0 right-0 text-center">
+                <p className="text-sm text-gray-400 bg-black/60 backdrop-blur-sm rounded-lg px-4 py-2 mx-4">
+                  Écosystème digital intégré guidant vos prospects vers votre expertise
+                </p>
+              </div>
             </motion.div>
             
             {/* Floating accent elements */}
