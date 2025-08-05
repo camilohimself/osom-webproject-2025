@@ -850,6 +850,113 @@ export default function CreationSiteWebPage() {
         </div>
       </section>
 
+      {/* SECTION TECHNIQUE - SOUS LE CAPOT */}
+      <section className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-400/5 to-transparent" />
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full mb-6">
+              <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-yellow-400 text-sm font-medium">EXPERTISE TECHNIQUE</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-6" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+              Sous le <span className="font-bold text-yellow-400">capot</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              La technologie qui transforme votre vitrine en machine à prospects
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Gauche - Stack Technique Visuel */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-black/95 to-gray-900/95 backdrop-blur-xl rounded-3xl p-8 border border-yellow-400/30">
+                
+                {/* Stack Architecture */}
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between p-4 bg-yellow-400/10 rounded-xl border border-yellow-400/20">
+                    <div className="flex items-center space-x-3">
+                      <IconeOSOM type="code" size={24} color="yellow" ariaLabel="Next.js Framework" />
+                      <span className="text-white font-medium">Next.js 14</span>
+                    </div>
+                    <span className="text-yellow-400 text-sm">Framework React</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-cyan-400/10 rounded-xl border border-cyan-400/20">
+                    <div className="flex items-center space-x-3">
+                      <IconeOSOM type="code" size={24} color="cyan" ariaLabel="TypeScript Language" />
+                      <span className="text-white font-medium">TypeScript</span>
+                    </div>
+                    <span className="text-cyan-400 text-sm">Type Safety</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-green-400/10 rounded-xl border border-green-400/20">
+                    <div className="flex items-center space-x-3">
+                      <IconeOSOM type="clock" size={24} color="green" ariaLabel="Performance Speed" />
+                      <span className="text-white font-medium">SSR + ISR</span>
+                    </div>
+                    <span className="text-green-400 text-sm">&lt; 2s chargement</span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-purple-400/10 rounded-xl border border-purple-400/20">
+                    <div className="flex items-center space-x-3">
+                      <IconeOSOM type="target" size={24} color="purple" ariaLabel="Analytics Tracking" />
+                      <span className="text-white font-medium">Analytics</span>
+                    </div>
+                    <span className="text-purple-400 text-sm">GA4 + Tracking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Droite - Bénéfices Business */}
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <IconeOSOM type="clock" size={20} color="yellow" ariaLabel="Performance Speed" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Performance Lighthouse 95+</h3>
+                  <p className="text-gray-300">Votre site se charge instantanément. Vos visiteurs ne partent plus par impatience, votre taux de conversion augmente naturellement.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-cyan-400/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <IconeOSOM type="mobile" size={20} color="cyan" ariaLabel="Mobile First Design" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Mobile-First PWA Ready</h3>
+                  <p className="text-gray-300">Expérience premium sur tous appareils. Votre site peut même être "installé" comme une app native sur les téléphones.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-green-400/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <IconeOSOM type="rocket" size={20} color="green" ariaLabel="Growth Evolution" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Architecture Évolutive</h3>
+                  <p className="text-gray-300">Votre site grandit avec votre business. Ajout de nouvelles fonctions sans refonte, économisant temps et budget sur 5 ans.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-purple-400/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <IconeOSOM type="target" size={20} color="purple" ariaLabel="Analytics Tracking" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Tracking Précis Intégré</h3>
+                  <p className="text-gray-300">Chaque action est mesurée. Vous savez exactement d'où viennent vos clients et quelles pages convertissent le mieux.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* APPEL À L'ACTION FINAL - SECTION 8 */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-400/5 to-transparent" />
