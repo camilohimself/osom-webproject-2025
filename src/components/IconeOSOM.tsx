@@ -20,9 +20,11 @@ export interface IconeOSOMProps {
     | 'palette' | 'monitor' | 'mobile' | 'code' | 'tools'
     // Medical & Sectors
     | 'medical' | 'engineering' | 'retail' | 'industry' | 'legal'
+    // Problem-Specific Icons (Avant/Après)
+    | 'hourglass' | 'snail' | 'old-monitor' | 'empty-inbox' | 'eye-blocked'
   size?: number
   className?: string
-  color?: 'yellow' | 'green' | 'purple' | 'cyan' | 'pink' | 'red' | 'gray' | 'white'
+  color?: 'yellow' | 'green' | 'purple' | 'cyan' | 'pink' | 'red' | 'orange' | 'gray' | 'white'
   withAnimation?: boolean
   ariaLabel: string
 }
@@ -68,7 +70,14 @@ const ICON_SVGS = {
   'engineering': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.828 14.828a4 4 0 0 1-5.656 0M9 10h1l4 4 4-4h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1l-4 4-4-4H9a2 2 0 0 1-2-2v-1c0-1.1.9-2 2-2z"/></svg>`,
   'retail': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>`,
   'industry': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
-  'legal': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`
+  'legal': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+
+  // PROBLEM-SPECIFIC ICONS (Avant/Après)
+  'hourglass': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v6s0 1-1 2-1 1-1 1-1 0-1 1-1 2-1 2h2s1 0 1 1-1 2-1 2h-2s0 1 1 2 1 1 1 1 0 1-1 2-1 1-1 1H6V2z"/><path d="M6 7h12"/><path d="M12 10v4"/></svg>`,
+  'snail': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0"/><circle cx="10" cy="13" r="8"/><path d="M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6"/><path d="M18 3 19.1 5.2 21.4 3.8l-1.3 2.7L22 7l-2.9.4L18.5 10 17 7.5l-2.9-.4L16 6l-1.3-2.7L16.9 4.2 18 2"/></svg>`,
+  'old-monitor': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="12" rx="2"/><path d="M8 16h8"/><circle cx="16" cy="8" r="2"/><path d="M18 6L16 8l-2-2"/><line x1="6" y1="8" x2="10" y2="8"/><line x1="6" y1="10" x2="8" y2="10"/></svg>`,
+  'empty-inbox': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><circle cx="12" cy="13" r="3"/><path d="M12 10v6"/><path d="M9 13h6"/></svg>`,
+  'eye-blocked': `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`
 }
 
 const COLOR_CLASSES = {
@@ -78,6 +87,7 @@ const COLOR_CLASSES = {
   cyan: 'text-cyan-400',
   pink: 'text-pink-400',
   red: 'text-red-400',
+  orange: 'text-orange-400',
   gray: 'text-gray-400',
   white: 'text-white'
 }
@@ -96,7 +106,7 @@ export default function IconeOSOM({
   const baseClasses = [
     colorClass,
     className,
-    withAnimation ? 'transition-all duration-300 hover:scale-110' : ''
+    withAnimation ? 'transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 hover:brightness-110' : ''
   ].filter(Boolean).join(' ')
 
   if (!svg) {

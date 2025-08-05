@@ -176,7 +176,7 @@ export default function CreationSiteWebPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-block px-10 py-5 rounded-xl font-bold text-xl text-black transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="inline-block px-10 py-5 rounded-xl font-bold text-xl text-black transition-all duration-300 hover:scale-105 hover:shadow-xl hover:brightness-110"
                   style={{ background: 'linear-gradient(135deg, #ffd507, #70c1a9)', fontFamily: 'Cera PRO, Inter, sans-serif' }}
                   onClick={() => typeof window !== 'undefined' && window.gtag && window.gtag('event', 'cta_click', {location: 'hero', page: 'creation-site-web'})}
                 >
@@ -184,7 +184,7 @@ export default function CreationSiteWebPage() {
                 </Link>
                 <Link
                   href="/realisations" 
-                  className="inline-flex items-center px-8 py-5 rounded-xl border border-purple-400/40 text-purple-400 hover:bg-purple-400/10 transition-all duration-300 text-lg font-medium"
+                  className="inline-flex items-center px-8 py-5 rounded-xl border border-purple-400/40 text-purple-400 hover:bg-purple-400/10 hover:border-purple-400/60 hover:text-purple-300 transition-all duration-300 text-lg font-medium"
                   style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                 >
                   Voir nos réalisations
@@ -256,10 +256,12 @@ export default function CreationSiteWebPage() {
 
           {/* 3 PILIERS APPROCHE */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 group">
+            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-yellow-400/20 hover:border-yellow-400/40 hover:shadow-xl hover:shadow-yellow-400/10 transition-all duration-300 group">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <IconeOSOM type="lightning" size={32} color="yellow" ariaLabel="Performance rapide" />
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-yellow-400/30 transition-all duration-300">
+                  <div className="transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1">
+                    <IconeOSOM type="lightning" size={32} color="yellow" ariaLabel="Performance rapide" />
+                  </div>
                 </div>
                 <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Architecture de conversion
@@ -270,10 +272,12 @@ export default function CreationSiteWebPage() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 transition-all duration-300 group">
+            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 hover:shadow-xl hover:shadow-teal-400/10 transition-all duration-300 group">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-teal-400/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <IconeOSOM type="target" size={32} color="cyan" ariaLabel="Ciblage SEO" />
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-teal-400/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-teal-400/30 transition-all duration-300">
+                  <div className="transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1">
+                    <IconeOSOM type="target" size={32} color="cyan" ariaLabel="Ciblage SEO" />
+                  </div>
                 </div>
                 <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   SEO local & contenu
@@ -284,10 +288,12 @@ export default function CreationSiteWebPage() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 group">
+            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-400/10 transition-all duration-300 group">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-400/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <IconeOSOM type="chart" size={32} color="purple" ariaLabel="Analyses et données" />
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-400/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-purple-400/30 transition-all duration-300">
+                  <div className="transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-1">
+                    <IconeOSOM type="chart" size={32} color="purple" ariaLabel="Analyses et données" />
+                  </div>
                 </div>
                 <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Analyse & CRM
@@ -403,9 +409,9 @@ export default function CreationSiteWebPage() {
             <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 via-teal-400 via-purple-400 to-green-400 hidden md:block"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 group">
+              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-yellow-400/20 hover:border-yellow-400/40 hover:shadow-lg hover:shadow-yellow-400/10 hover:-translate-y-1 transition-all duration-300 group">
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-yellow-400 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full bg-yellow-400 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:bg-yellow-300 transition-all duration-300">
                     <span className="text-black font-bold text-xl">1</span>
                   </div>
                   <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
@@ -417,9 +423,9 @@ export default function CreationSiteWebPage() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 transition-all duration-300 group">
+              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 hover:shadow-lg hover:shadow-teal-400/10 hover:-translate-y-1 transition-all duration-300 group">
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-teal-400 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full bg-teal-400 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:bg-teal-300 transition-all duration-300">
                     <span className="text-black font-bold text-xl">2</span>
                   </div>
                   <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
@@ -431,9 +437,9 @@ export default function CreationSiteWebPage() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 group">
+              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/40 hover:shadow-lg hover:shadow-purple-400/10 hover:-translate-y-1 transition-all duration-300 group">
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-purple-400 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full bg-purple-400 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:bg-purple-300 transition-all duration-300">
                     <span className="text-black font-bold text-xl">3</span>
                   </div>
                   <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
@@ -445,9 +451,9 @@ export default function CreationSiteWebPage() {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-green-400/20 hover:border-green-400/40 transition-all duration-300 group">
+              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-green-400/20 hover:border-green-400/40 hover:shadow-lg hover:shadow-green-400/10 hover:-translate-y-1 transition-all duration-300 group">
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-green-400 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full bg-green-400 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 group-hover:bg-green-300 transition-all duration-300">
                     <span className="text-black font-bold text-xl">4</span>
                   </div>
                   <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
@@ -479,8 +485,8 @@ export default function CreationSiteWebPage() {
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-10 border border-gray-400/20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-400/20 flex items-center justify-center">
-                  <IconeOSOM type="clock" size={40} color="cyan" ariaLabel="Temps précieux" />
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-400/20 flex items-center justify-center hover:bg-blue-400/30 hover:scale-105 transition-all duration-300">
+                  <IconeOSOM type="clock" size={40} color="cyan" ariaLabel="Temps précieux" withAnimation />
                 </div>
                 <h3 className="text-blue-400 font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Votre temps précieux
@@ -491,8 +497,8 @@ export default function CreationSiteWebPage() {
               </div>
               
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-teal-400/20 flex items-center justify-center">
-                  <IconeOSOM type="star" size={40} color="cyan" ariaLabel="Expertise reconnue" />
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-teal-400/20 flex items-center justify-center hover:bg-teal-400/30 hover:scale-105 transition-all duration-300">
+                  <IconeOSOM type="star" size={40} color="cyan" ariaLabel="Expertise reconnue" withAnimation />
                 </div>
                 <h3 className="text-teal-400 font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Notre expertise
@@ -503,8 +509,8 @@ export default function CreationSiteWebPage() {
               </div>
               
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-400/20 flex items-center justify-center">
-                  <IconeOSOM type="rocket" size={40} color="green" ariaLabel="Résultats obtenus" />
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-400/20 flex items-center justify-center hover:bg-green-400/30 hover:scale-105 transition-all duration-300">
+                  <IconeOSOM type="rocket" size={40} color="green" ariaLabel="Résultats obtenus" withAnimation />
                 </div>
                 <h3 className="text-green-400 font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Votre résultat
@@ -661,20 +667,28 @@ export default function CreationSiteWebPage() {
               <div className="bg-red-500/10 rounded-2xl p-8 border border-red-500/20">
                 <h3 className="text-red-400 font-bold text-2xl mb-6 text-center">AVANT</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <IconeOSOM type="cross" size={20} color="red" ariaLabel="Site lent problématique" />
+                  <div className="flex items-center space-x-3 group">
+                    <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+                      <IconeOSOM type="snail" size={20} color="red" ariaLabel="Site très lent" />
+                    </div>
                     <p className="text-gray-300">Site lent qui fait fuir les prospects</p>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <IconeOSOM type="cross" size={20} color="red" ariaLabel="Design obsolète" />
+                  <div className="flex items-center space-x-3 group">
+                    <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+                      <IconeOSOM type="old-monitor" size={20} color="red" ariaLabel="Design obsolète" />
+                    </div>
                     <p className="text-gray-300">Design daté qui nuit à la crédibilité</p>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <IconeOSOM type="cross" size={20} color="red" ariaLabel="Peu de demandes" />
+                  <div className="flex items-center space-x-3 group">
+                    <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+                      <IconeOSOM type="empty-inbox" size={20} color="red" ariaLabel="Pas de demandes" />
+                    </div>
                     <p className="text-gray-300">Peu de demandes qualifiées</p>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <IconeOSOM type="cross" size={20} color="red" ariaLabel="Référencement invisible" />
+                  <div className="flex items-center space-x-3 group">
+                    <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+                      <IconeOSOM type="eye-blocked" size={20} color="red" ariaLabel="Site invisible sur Google" />
+                    </div>
                     <p className="text-gray-300">Référencement Google invisible</p>
                   </div>
                 </div>
@@ -683,20 +697,28 @@ export default function CreationSiteWebPage() {
               <div className="bg-green-500/10 rounded-2xl p-8 border border-green-500/20">
                 <h3 className="text-green-400 font-bold text-2xl mb-6 text-center">OSOM</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <IconeOSOM type="check" size={20} color="green" ariaLabel="Site accéléré" />
+                  <div className="flex items-center space-x-3 group">
+                    <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+                      <IconeOSOM type="check" size={20} color="green" ariaLabel="Site accéléré" />
+                    </div>
                     <p className="text-gray-300">Accélérer le site (&lt; 2s) pour retenir les visiteurs</p>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <IconeOSOM type="check" size={20} color="green" ariaLabel="Design modernisé" />
+                  <div className="flex items-center space-x-3 group">
+                    <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+                      <IconeOSOM type="check" size={20} color="green" ariaLabel="Design modernisé" />
+                    </div>
                     <p className="text-gray-300">Moderniser le design pour inspirer confiance</p>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <IconeOSOM type="check" size={20} color="green" ariaLabel="Conversions augmentées" />
+                  <div className="flex items-center space-x-3 group">
+                    <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+                      <IconeOSOM type="check" size={20} color="green" ariaLabel="Conversions augmentées" />
+                    </div>
                     <p className="text-gray-300">Augmenter les demandes via conversion optimisée</p>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <IconeOSOM type="check" size={20} color="green" ariaLabel="SEO renforcé" />
+                  <div className="flex items-center space-x-3 group">
+                    <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:brightness-110">
+                      <IconeOSOM type="check" size={20} color="green" ariaLabel="SEO renforcé" />
+                    </div>
                     <p className="text-gray-300">Renforcer la visibilité locale avec SEO premium</p>
                   </div>
                 </div>
@@ -783,7 +805,7 @@ export default function CreationSiteWebPage() {
             </h3>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {sectorsExpertise.map((sector, index) => (
-                <div key={index} className="inline-flex items-center space-x-2 bg-black/40 rounded-full px-4 py-2 border border-gray-700/50 hover:border-teal-400/40 transition-colors duration-300">
+                <div key={index} className="inline-flex items-center space-x-2 bg-black/40 rounded-full px-4 py-2 border border-gray-700/50 hover:border-teal-400/40 hover:bg-teal-400/5 hover:scale-105 transition-all duration-300">
                   <IconeOSOM 
                     type={sector.icon} 
                     size={20} 
@@ -791,7 +813,7 @@ export default function CreationSiteWebPage() {
                     ariaLabel={`Secteur ${sector.name}`} 
                     withAnimation 
                   />
-                  <div className="text-gray-300 text-sm">{sector.name}</div>
+                  <div className="text-gray-300 text-sm hover:text-teal-300 transition-colors duration-300">{sector.name}</div>
                 </div>
               ))}
             </div>
@@ -923,24 +945,24 @@ export default function CreationSiteWebPage() {
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="text-center">
-                      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center">
-                        <IconeOSOM type="star" size={24} color="yellow" ariaLabel="Accompagnement premium" />
+                      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center hover:bg-yellow-400/30 hover:scale-110 transition-all duration-300">
+                        <IconeOSOM type="star" size={24} color="yellow" ariaLabel="Accompagnement premium" withAnimation />
                       </div>
                       <h5 className="text-yellow-400 font-bold mb-2">Accompagnement premium</h5>
                       <p className="text-gray-300 text-sm">Proximité, suivi mensuel, reporting exécutif clair</p>
                     </div>
                     
                     <div className="text-center">
-                      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-teal-400/20 flex items-center justify-center">
-                        <IconeOSOM type="shield" size={24} color="cyan" ariaLabel="Expertise sécurisée" />
+                      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-teal-400/20 flex items-center justify-center hover:bg-teal-400/30 hover:scale-110 transition-all duration-300">
+                        <IconeOSOM type="shield" size={24} color="cyan" ariaLabel="Expertise sécurisée" withAnimation />
                       </div>
                       <h5 className="text-teal-400 font-bold mb-2">Expertise reconnue</h5>
                       <p className="text-gray-300 text-sm">Design premium, SEO stratégique, marketing digital</p>
                     </div>
                     
                     <div className="text-center">
-                      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-green-400/20 flex items-center justify-center">
-                        <IconeOSOM type="chart" size={24} color="green" ariaLabel="Investissement rentable" />
+                      <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-green-400/20 flex items-center justify-center hover:bg-green-400/30 hover:scale-110 transition-all duration-300">
+                        <IconeOSOM type="chart" size={24} color="green" ariaLabel="Investissement rentable" withAnimation />
                       </div>
                       <h5 className="text-green-400 font-bold mb-2">Investissement rentable</h5>
                       <p className="text-gray-300 text-sm">ROI rapide, tarification transparente, aucun engagement</p>
