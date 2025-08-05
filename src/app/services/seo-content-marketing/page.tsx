@@ -207,49 +207,93 @@ export default function SEOContentMarketingPage() {
 
   return (
     <div className="min-h-screen bg-black">
-      {/* HERO SECTION - ENGAGEMENT QUALITY FOCUS */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      {/* HERO SECTION - STORYTELLING CLIENT FOCUS */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
         <div className="absolute inset-0 bg-gradient-to-b from-teal-400/10 via-teal-500/5 to-cyan-400/5" />
         
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-block px-4 py-2 bg-teal-400/20 rounded-full text-teal-400 text-sm font-medium mb-6">
-              1,718 recherches/mois non captées
-            </div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
-            <div className="space-y-6">
-              <h1 className="text-6xl md:text-8xl font-light text-white leading-tight animate-fade-in">
-                SEO Valais qui génère des clients
-              </h1>
-              <h2 className="text-4xl md:text-6xl font-bold animate-fade-in-delay-1" style={{color: '#70c1a9'}}>
-                Génère 8x Plus de Clients
-              </h2>
-              <div className="text-8xl md:text-9xl font-black text-teal-400 animate-bounce-slow">
-                68.6%
+            {/* GAUCHE - MESSAGE STORYTELLING */}
+            <div className="text-left">
+              <div className="inline-block px-4 py-2 bg-teal-400/20 rounded-full text-teal-400 text-sm font-medium mb-6">
+                Cabinet B2B • Résultat 6 mois
               </div>
-              <p className="text-2xl md:text-3xl text-gray-300 font-light animate-fade-in-delay-2">
-                engagement quality vs 44.6% industrie
+              
+              <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-8" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                Votre visibilité locale devient un <span className="text-teal-400 font-bold">aimant à clients</span>
+              </h1>
+              
+              <h2 className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                SEO narratif + content marketing pour transformer votre expertise en autorité Google reconnue par vos prospects valaisans.
+              </h2>
+
+              <p className="text-lg text-gray-400 mb-10 leading-relaxed">
+                Spécialisés cabinets médicaux, services B2B et commerces locaux. <strong className="text-white">Notre méthode augmente votre visibilité organique de façon durable.</strong>
               </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-block px-10 py-5 rounded-xl font-bold text-xl text-black transition-all duration-300 hover:scale-105 hover:shadow-xl hover:brightness-110"
+                  style={{ background: 'linear-gradient(135deg, #70c1a9, #00bcd4)', fontFamily: 'Cera PRO, Inter, sans-serif' }}
+                >
+                  Audit SEO gratuit
+                </Link>
+                <Link
+                  href="/realisations" 
+                  className="inline-flex items-center px-8 py-5 rounded-xl border border-teal-400/40 text-teal-400 hover:bg-teal-400/10 hover:border-teal-400/60 hover:text-teal-300 transition-all duration-300 text-lg font-medium"
+                  style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
+                >
+                  Voir nos résultats
+                </Link>
+              </div>
             </div>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed mt-8">
-              Référencement naturel local + content marketing pour cabinets B2B.<br />
-              <span className="text-teal-400 font-semibold">Résultats mesurés</span> chaque mois
-            </p>
-          </div>
-
-          <Link
-            href="/contact"
-            className="inline-block px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-12 transform hover:scale-105 transition-all duration-500 hover:shadow-teal-400/25"
-            style={{ background: 'linear-gradient(135deg, #70c1a9, #00bcd4)' }}
-          >
-            Améliorer SEO maintenant
-          </Link>
-
-          <div className="text-sm text-gray-400">
-            <span className="text-gray-300">Audit SEO complet + optimisation technique</span><br/>
-            <span className="text-gray-300">Contenu optimisé 4 articles/mois + suivi positions</span><br/>
-            <span className="text-gray-300">Reporting mensuel transparent Google Analytics</span>
+            {/* DROITE - HISTOIRE CLIENT */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl border border-teal-400/20 p-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-teal-400/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-cyan-400/10 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10 text-center">
+                  <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-teal-400/20 to-cyan-400/20 flex items-center justify-center">
+                    <IconeOSOM 
+                      type="medical" 
+                      size={48} 
+                      color="cyan" 
+                      withAnimation 
+                      ariaLabel="Cabinet médical en croissance" 
+                    />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                    Cabinet Médical Valais
+                  </h3>
+                  
+                  <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                    "En 6 mois, notre planning s'est naturellement rempli. Les patients nous trouvent enfin sur Google quand ils cherchent un médecin à Sion."
+                  </p>
+                  
+                  <div className="flex items-center justify-center space-x-4">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-teal-400">Page 1</div>
+                      <div className="text-xs text-gray-400">Position Google</div>
+                    </div>
+                    <div className="w-px h-8 bg-gray-600"></div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-cyan-400">1,200+</div>
+                      <div className="text-xs text-gray-400">Recherches/mois</div>
+                    </div>
+                    <div className="w-px h-8 bg-gray-600"></div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-teal-400">3x</div>
+                      <div className="text-xs text-gray-400">Plus de patients</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -358,64 +402,98 @@ export default function SEOContentMarketingPage() {
                 </div>
               </div>
               
-              {/* COMPARAISON AVANT/APRÈS */}
+              {/* CAS D'USAGE PME AVANT/APRÈS */}
               <div className="mt-12 pt-8 border-t border-gray-700/50">
-                <h3 className="text-2xl font-bold text-white text-center mb-8">Transformation SEO mesurée</h3>
+                <h3 className="text-2xl font-bold text-white text-center mb-8">L'histoire d'une PME valaisanne</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="text-center">
-                    <div className="bg-red-500/20 rounded-xl p-6 border border-red-500/30">
-                      <h4 className="text-red-400 font-bold mb-4">SEO traditionnel</h4>
-                      <div className="space-y-3">
-                        <div className="flex justify-between">
-                          <span className="text-gray-400">Engagement</span>
-                          <span className="text-red-400">44.6%</span>
+                  {/* AVANT */}
+                  <div className="bg-red-500/10 rounded-2xl p-8 border border-red-500/20">
+                    <h4 className="text-red-400 font-bold text-xl mb-6 text-center">AVANT OSOM</h4>
+                    <div className="space-y-4">
+                      <div className="flex items-center space-x-3 group">
+                        <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                          <IconeOSOM type="eye-blocked" size={20} color="red" ariaLabel="Site invisible sur Google" />
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-400">Recherches</span>
-                          <span className="text-red-400">234/mois</span>
+                        <p className="text-gray-300">Invisible sur Google malgré 15 ans d'expertise</p>
+                      </div>
+                      <div className="flex items-center space-x-3 group">
+                        <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                          <IconeOSOM type="empty-inbox" size={20} color="red" ariaLabel="Peu de demandes" />
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-400">Position</span>
-                          <span className="text-red-400">Page 2+</span>
+                        <p className="text-gray-300">Seulement 2-3 demandes par mois via le site</p>
+                      </div>
+                      <div className="flex items-center space-x-3 group">
+                        <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                          <IconeOSOM type="phone" size={20} color="red" ariaLabel="Dépendance bouche-à-oreille" />
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-400">Trafic</span>
-                          <span className="text-red-400">+12%</span>
+                        <p className="text-gray-300">100% dépendant du bouche-à-oreille</p>
+                      </div>
+                      <div className="flex items-center space-x-3 group">
+                        <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                          <IconeOSOM type="clock" size={20} color="red" ariaLabel="Croissance lente" />
                         </div>
+                        <p className="text-gray-300">Croissance limitée et imprévisible</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 p-4 bg-black/40 rounded-xl">
+                      <div className="text-center">
+                        <div className="text-red-400 text-sm">Situation initiale</div>
+                        <div className="text-2xl font-bold text-red-400 mt-2">Page 3+ Google</div>
+                        <div className="text-gray-400 text-sm">Invisible pour les prospects</div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="bg-teal-400/20 rounded-xl p-6 border border-teal-400/30">
-                      <h4 className="text-teal-400 font-bold mb-4">SEO OSOM</h4>
-                      <div className="space-y-3">
-                        <div className="flex justify-between">
-                          <span className="text-gray-300">Engagement</span>
-                          <span className="text-teal-400 font-bold">68.6%</span>
+                  {/* APRÈS */}
+                  <div className="bg-teal-500/10 rounded-2xl p-8 border border-teal-500/20">
+                    <h4 className="text-teal-400 font-bold text-xl mb-6 text-center">APRÈS 6 MOIS</h4>
+                    <div className="space-y-4">
+                      <div className="flex items-center space-x-3 group">
+                        <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                          <IconeOSOM type="search" size={20} color="green" ariaLabel="Première page Google" />
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-300">Recherches</span>
-                          <span className="text-teal-400 font-bold">1,718/mois</span>
+                        <p className="text-gray-300">Première page Google sur ses mots-clés cibles</p>
+                      </div>
+                      <div className="flex items-center space-x-3 group">
+                        <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                          <IconeOSOM type="email" size={20} color="green" ariaLabel="Demandes qualifiées" />
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-300">Position</span>
-                          <span className="text-teal-400 font-bold">Top 3</span>
+                        <p className="text-gray-300">15-20 demandes qualifiées chaque mois</p>
+                      </div>
+                      <div className="flex items-center space-x-3 group">
+                        <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                          <IconeOSOM type="star" size={20} color="green" ariaLabel="Autorité reconnue" />
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-300">Trafic</span>
-                          <span className="text-teal-400 font-bold">+180%</span>
+                        <p className="text-gray-300">Reconnue comme autorité locale dans son domaine</p>
+                      </div>
+                      <div className="flex items-center space-x-3 group">
+                        <div className="transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                          <IconeOSOM type="rocket" size={20} color="green" ariaLabel="Croissance prévisible" />
                         </div>
+                        <p className="text-gray-300">Croissance prévisible et pipeline rempli</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 p-4 bg-gradient-to-r from-teal-400/20 to-cyan-400/20 rounded-xl border border-teal-400/30">
+                      <div className="text-center">
+                        <div className="text-teal-400 text-sm">Résultat obtenu</div>
+                        <div className="text-2xl font-bold text-teal-400 mt-2">Top 3 Google</div>
+                        <div className="text-gray-300 text-sm">7x plus de clients qualifiés</div>
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="text-center mt-8">
-                  <div className="inline-block px-6 py-3 bg-gradient-to-r from-teal-400/20 to-cyan-400/20 rounded-full border border-teal-400/30">
-                    <span className="text-2xl font-bold text-teal-400">8x</span>
-                    <span className="text-white ml-2">plus de clients générés</span>
+                  <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-teal-400/20 max-w-2xl mx-auto">
+                    <p className="text-gray-300 text-lg mb-4">
+                      <strong className="text-teal-400">"En 6 mois, notre chiffre d'affaires a doublé</strong> grâce à la visibilité Google. Nous refusons maintenant des clients par manque de disponibilité."
+                    </p>
+                    <div className="text-gray-400 text-sm">
+                      — Directeur PME Services B2B, Valais
+                    </div>
                   </div>
                 </div>
               </div>
@@ -569,116 +647,141 @@ export default function SEOContentMarketingPage() {
         </div>
       </section>
 
-      {/* SOCIAL PROOF - PERFORMANCE MESURÉE */}
+      {/* PROGRESSION CLIENT - RÉCIT NARRATIF */}
       <section className="py-24 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
-              Résultats <span className="font-bold text-teal-400">Vérifiés</span>
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+              La transformation d'une <span className="font-bold text-teal-400">PME locale</span>
             </h2>
-            <div className="space-y-3">
-              <p className="text-xl text-gray-300">PME locale: +180% trafic organique mesurable</p>
-              <p className="text-xl text-gray-300">Cabinet B2B: position moyenne top 10 Google</p>
-            </div>
-          </div>
-
-          {/* GRAPHIQUE ENGAGEMENT EVOLUTION */}
-          <div className="mb-16 flex justify-center">
-            <SimpleLineChart
-              data={[
-                { label: 'M1', value: 44.6 },
-                { label: 'M3', value: 52.1 },
-                { label: 'M5', value: 62.3 },
-                { label: 'M8', value: 68.6 }
-              ]}
-              title="Évolution Engagement Quality"
-              subtitle="PME Locale - Progression SEO sur 8 mois"
-              color="#70C1A9"
-              width={400}
-              height={250}
-              className="border border-teal-400/30"
-            />
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comment une entreprise familiale a multiplié ses clients en 8 mois grâce au SEO narratif
+            </p>
           </div>
 
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-teal-400/20 mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Timeline progression */}
-              <div className="space-y-8">
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center">
-                    <span className="text-white font-bold">M2</span>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex justify-between mb-2">
-                      <span className="text-white">Mois 2</span>
-                      <span className="text-teal-400 font-bold">48% engagement</span>
-                    </div>
-                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-teal-400 rounded-full" style={{width: '30%'}} />
-                    </div>
-                  </div>
+              
+              {/* RÉCIT NARRATIF */}
+              <div>
+                <div className="inline-block px-4 py-2 bg-teal-400/20 rounded-full text-teal-400 text-sm font-medium mb-6">
+                  Cabinet de conseil • Entreprise familiale
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-teal-600 flex items-center justify-center">
-                    <span className="text-white font-bold">M5</span>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex justify-between mb-2">
-                      <span className="text-white">Mois 5</span>
-                      <span className="text-teal-400 font-bold">62% engagement</span>
-                    </div>
-                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-teal-400 rounded-full" style={{width: '65%'}} />
-                    </div>
-                  </div>
+                <h3 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                  De l'invisibilité au leadership local
+                </h3>
+                
+                <div className="space-y-6 text-gray-300 leading-relaxed">
+                  <p>
+                    <strong className="text-white">Le défi :</strong> Malgré 15 ans d'expertise et une excellente réputation, cette PME valaisanne restait invisible sur Google. Résultat : seulement 2-3 nouveaux clients par mois via le digital.
+                  </p>
+                  
+                  <p>
+                    <strong className="text-white">La transformation :</strong> En 8 mois, nous avons construit sa présence Google de zéro. Articles d'expertise, optimisations techniques, présence locale renforcée.
+                  </p>
+                  
+                  <p>
+                    <strong className="text-teal-400">Le résultat :</strong> Aujourd'hui, elle reçoit 15-20 demandes qualifiées par mois et doit refuser des clients par manque de disponibilité. Son chiffre d'affaires a doublé.
+                  </p>
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-cyan-500 flex items-center justify-center">
-                    <span className="text-black font-bold">M8</span>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex justify-between mb-2">
-                      <span className="text-white">Mois 8</span>
-                      <span className="text-teal-400 font-bold">68.6% engagement</span>
-                    </div>
-                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full transition-all duration-3000 ease-out" style={{width: '100%'}} />
-                    </div>
+                <div className="mt-8 p-6 bg-gradient-to-r from-teal-400/20 to-cyan-400/20 rounded-2xl border border-teal-400/30">
+                  <div className="text-center">
+                    <div className="text-teal-400 text-sm mb-2">Citation directe</div>
+                    <p className="text-white italic text-lg">
+                      "Nos prospects nous trouvent maintenant avant nos concurrents. C'est un game-changer total."
+                    </p>
+                    <div className="text-gray-400 text-sm mt-3">— Directeur, PME Services B2B</div>
                   </div>
                 </div>
               </div>
               
-              {/* Résultat final */}
-              <div className="text-center">
-                <div className="mb-8">
-                  <div className="text-8xl md:text-9xl font-black transition-all duration-2000 text-teal-400">
-                    8x
+              {/* COURBE DE PROGRESSION */}
+              <div>
+                <h4 className="text-xl font-bold text-white mb-8 text-center">Évolution mensuelle des demandes clients</h4>
+                
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center">
+                      <span className="text-red-400 font-bold text-sm">M0</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex justify-between mb-2">
+                        <span className="text-gray-300">Avant OSOM</span>
+                        <span className="text-red-400 font-bold">2-3 clients/mois</span>
+                      </div>
+                      <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-red-400 rounded-full" style={{width: '15%'}} />
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-2xl text-white mt-4">
-                    Plus de Clients
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-yellow-500/20 border border-yellow-500/30 flex items-center justify-center">
+                      <span className="text-yellow-400 font-bold text-sm">M3</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex justify-between mb-2">
+                        <span className="text-gray-300">Premiers résultats</span>
+                        <span className="text-yellow-400 font-bold">8 clients/mois</span>
+                      </div>
+                      <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-yellow-400 rounded-full" style={{width: '45%'}} />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-teal-500/20 border border-teal-500/30 flex items-center justify-center">
+                      <span className="text-teal-400 font-bold text-sm">M6</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex justify-between mb-2">
+                        <span className="text-gray-300">Accélération</span>
+                        <span className="text-teal-400 font-bold">15 clients/mois</span>
+                      </div>
+                      <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-teal-400 rounded-full" style={{width: '75%'}} />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-cyan-400 flex items-center justify-center">
+                      <span className="text-black font-bold text-sm">M8</span>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex justify-between mb-2">
+                        <span className="text-gray-300">Leadership local</span>
+                        <span className="text-cyan-400 font-bold">20+ clients/mois</span>
+                      </div>
+                      <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full" style={{width: '100%'}} />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="space-y-4">
-                  <div className="bg-black/40 rounded-xl p-4">
-                    <div className="text-teal-400 font-bold text-2xl">68.6%</div>
-                    <div className="text-gray-300">Engagement Quality</div>
-                  </div>
-                  <div className="text-gray-400 text-sm">vs</div>
-                  <div className="bg-black/20 rounded-xl p-4">
-                    <div className="text-gray-400 font-bold text-2xl">44.6%</div>
-                    <div className="text-gray-400">Moyenne industrie</div>
-                  </div>
+                {/* Résultat final */}
+                <div className="mt-8 p-6 bg-black/40 rounded-2xl text-center">
+                  <div className="text-4xl font-black text-cyan-400 mb-2">x7</div>
+                  <div className="text-white font-semibold">Plus de clients qualifiés</div>
+                  <div className="text-gray-400 text-sm mt-2">Croissance organique durable</div>
                 </div>
               </div>
             </div>
             
-            <div className="mt-8 text-center">
-              <div className="text-sm text-gray-400">
-                Données Google Analytics certifiées • 240+ jours de mesures
+            <div className="mt-12 text-center">
+              <div className="text-sm text-gray-400 mb-4">
+                Données Google Analytics vérifiées • Suivi sur 240+ jours
               </div>
+              <Link
+                href="/realisations"
+                className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300 font-medium"
+              >
+                Voir plus de cas clients →
+              </Link>
             </div>
           </div>
 
@@ -693,56 +796,266 @@ export default function SEOContentMarketingPage() {
         </div>
       </section>
 
-      {/* CTA + PRICING */}
+      {/* FORMULE SEO - LIVRABLES CONCRETS */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal-400/5 to-transparent" />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-black/80 backdrop-blur-xl rounded-3xl p-12 border border-teal-400/40">
-            <div className="mb-8">
-              <div className="text-teal-400 font-semibold mb-4">
-                FORMULE SEO DOMINANTE
-              </div>
-              <div className="text-5xl md:text-6xl font-light text-teal-400 mb-4">
-                2800 CHF
-              </div>
-              <div className="text-xl text-gray-300 mb-8">
-                /mois • Amélioration trafic mesurable • Résultats 90 jours
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="text-center p-4 bg-black/40 rounded-xl border border-teal-400/20">
-                <div className="text-teal-400 font-bold text-2xl mb-2">
-                  68.6%
-                </div>
-                <div className="text-gray-300">Engagement Quality</div>
-              </div>
-              <div className="text-center p-4 bg-black/40 rounded-xl border border-cyan-400/20">
-                <div className="text-cyan-400 font-bold text-2xl mb-2">
-                  1,718
-                </div>
-                <div className="text-gray-300">Recherches/mois captées</div>
-              </div>
-              <div className="text-center p-4 bg-black/40 rounded-xl border border-teal-400/20">
-                <div className="text-teal-400 font-bold text-2xl mb-2">
-                  90
-                </div>
-                <div className="text-gray-300">Jours pour résultats</div>
-              </div>
-            </div>
-
-            <Link
-              href="/contact"
-              className="inline-block px-16 py-6 rounded-2xl font-bold text-xl shadow-2xl text-black mb-6 transform hover:scale-105 transition-all duration-300"
-              style={{ background: 'linear-gradient(135deg, #70c1a9, #00bcd4, #4dd0e1)' }}
-            >
-              Améliorer mon SEO maintenant
-            </Link>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-br from-black/95 to-gray-900/95 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-teal-400/40 relative overflow-hidden">
             
-            <div className="text-sm text-gray-400">
-              Audit SEO complet gratuit (600 CHF) • Stratégie 30min • Méthode transparente
+            <div className="text-center mb-12">
+              <div className="text-teal-400 font-semibold mb-4 text-lg">
+                FORMULE SEO CROISSANCE
+              </div>
+              <h2 className="text-3xl md:text-5xl font-light text-white mb-6" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                Votre visibilité Google <span className="font-bold text-teal-400">clé en main</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Accompagnement complet pour dominer votre marché local et attirer vos clients idéaux
+              </p>
             </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              
+              {/* LIVRABLES CONCRETS */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-8" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+                  Ce que vous recevez chaque mois
+                </h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-teal-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <IconeOSOM type="search" size={24} color="cyan" ariaLabel="Audit mensuel" withAnimation />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Audit technique complet</h4>
+                      <p className="text-gray-300 text-sm">Analyse mensuelle de votre site + recommandations prioritaires</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-yellow-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <IconeOSOM type="document" size={24} color="yellow" ariaLabel="Articles optimisés" withAnimation />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">4 articles d'expertise SEO</h4>
+                      <p className="text-gray-300 text-sm">Contenus optimisés qui démontrent votre savoir-faire à vos prospects</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-purple-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <IconeOSOM type="tools" size={24} color="purple" ariaLabel="Optimisations techniques" withAnimation />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Optimisations techniques</h4>
+                      <p className="text-gray-300 text-sm">Vitesse, mobile, maillage interne : tout est optimisé pour Google</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-green-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <IconeOSOM type="chart" size={24} color="green" ariaLabel="Reporting mensuel" withAnimation />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Reporting mensuel exécutif</h4>
+                      <p className="text-gray-300 text-sm">Dashboard GA4 + Search Console + évolution positions Google</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 rounded-full bg-cyan-400/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <IconeOSOM type="phone" size={24} color="cyan" ariaLabel="Support dédié" withAnimation />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Support stratégique</h4>
+                      <p className="text-gray-300 text-sm">Point mensuel + support réactif pour toutes vos questions SEO</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* PRIX ET GARANTIES */}
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-teal-400/10 to-cyan-400/10 rounded-2xl p-8 border border-teal-400/30 mb-8">
+                  <div className="text-teal-400 font-bold text-lg mb-2">INVESTISSEMENT MENSUEL</div>
+                  <div className="text-5xl md:text-6xl font-black text-teal-400 mb-2">
+                    2,800 CHF
+                  </div>
+                  <div className="text-gray-300 text-lg mb-6">
+                    Tout inclus • Sans engagement
+                  </div>
+                  
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-center justify-center space-x-3">
+                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <span className="text-gray-300 text-sm">Premiers résultats sous 90 jours</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-3">
+                      <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
+                      <span className="text-gray-300 text-sm">ROI moyen 300% en 12 mois</span>
+                    </div>
+                    <div className="flex items-center justify-center space-x-3">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <span className="text-gray-300 text-sm">Arrêt possible à tout moment</span>
+                    </div>
+                  </div>
+                  
+                  <Link
+                    href="/contact"
+                    className="block w-full px-8 py-4 rounded-xl font-bold text-xl text-black transition-all duration-300 hover:scale-105 hover:shadow-xl mb-4"
+                    style={{ background: 'linear-gradient(135deg, #70c1a9, #00bcd4)', fontFamily: 'Cera PRO, Inter, sans-serif' }}
+                  >
+                    Démarrer mon SEO
+                  </Link>
+                  
+                  <Link
+                    href="/contact"
+                    className="block w-full px-6 py-3 rounded-xl border border-teal-400/40 text-teal-400 hover:bg-teal-400/10 transition-all duration-300 text-sm"
+                  >
+                    Audit gratuit (valeur 800 CHF)
+                  </Link>
+                </div>
+                
+                <div className="bg-black/40 rounded-xl p-6">
+                  <h4 className="text-white font-semibold mb-4">Garantie résultats</h4>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-cyan-400 mb-1">90 jours</div>
+                    <div className="text-gray-300 text-sm">pour voir vos premières positions Google s'améliorer</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-12 pt-8 border-t border-gray-700/50 text-center">
+              <div className="text-gray-400">
+                Formule adaptée aux PME valaisannes • Spécialistes cabinets médicaux et services B2B
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TÉMOIGNAGES CLIENTS */}
+      <section className="py-24 relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
+              Ce que disent <span className="font-bold text-teal-400">nos clients</span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-6">
+              Dirigeants de PME qui ont transformé leur visibilité Google avec OSOM
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* Témoignage 1 - Cabinet Médical */}
+            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 transition-all duration-300">
+              <div className="flex items-start mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-400/20 to-cyan-400/20 flex items-center justify-center mr-4">
+                  <IconeOSOM type="medical" size={32} color="cyan" ariaLabel="Cabinet médical" withAnimation />
+                </div>
+                <div className="flex-1">
+                  <div className="text-white font-bold">Dr. Sarah M.</div>
+                  <div className="text-gray-400 text-sm">Médecin généraliste</div>
+                  <div className="text-teal-400 text-xs mt-1">Cabinet Médical Sion</div>
+                  <div className="inline-block px-2 py-1 bg-teal-400/20 rounded text-xs text-teal-400 mt-2">Santé</div>
+                </div>
+              </div>
+              <p className="text-gray-300 italic leading-relaxed mb-6">
+                "En 6 mois, notre planning s'est naturellement rempli. Les patients nous trouvent maintenant en première page Google quand ils cherchent un médecin à Sion."
+              </p>
+              <div className="flex justify-between items-center">
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <div key={i} className="text-yellow-400 text-lg">★</div>
+                  ))}
+                </div>
+                <div className="text-teal-400 font-bold">3x plus de patients</div>
+              </div>
+            </div>
+
+            {/* Témoignage 2 - Services B2B */}
+            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 transition-all duration-300">
+              <div className="flex items-start mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-400/20 to-cyan-400/20 flex items-center justify-center mr-4">
+                  <IconeOSOM type="engineering" size={32} color="cyan" ariaLabel="Services B2B" withAnimation />
+                </div>
+                <div className="flex-1">
+                  <div className="text-white font-bold">Marc R.</div>
+                  <div className="text-gray-400 text-sm">Directeur Commercial</div>
+                  <div className="text-teal-400 text-xs mt-1">Entreprise Services B2B</div>
+                  <div className="inline-block px-2 py-1 bg-teal-400/20 rounded text-xs text-teal-400 mt-2">B2B</div>
+                </div>
+              </div>
+              <p className="text-gray-300 italic leading-relaxed mb-6">
+                "Notre chiffre d'affaires a doublé en 8 mois. OSOM a transformé notre invisibilité Google en véritable aimant à prospects qualifiés."
+              </p>
+              <div className="flex justify-between items-center">
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <div key={i} className="text-yellow-400 text-lg">★</div>
+                  ))}
+                </div>
+                <div className="text-teal-400 font-bold">CA x2 en 8 mois</div>
+              </div>
+            </div>
+
+            {/* Témoignage 3 - Commerce Local */}
+            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 transition-all duration-300">
+              <div className="flex items-start mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-400/20 to-cyan-400/20 flex items-center justify-center mr-4">
+                  <IconeOSOM type="retail" size={32} color="cyan" ariaLabel="Commerce local" withAnimation />
+                </div>
+                <div className="flex-1">
+                  <div className="text-white font-bold">Claudine F.</div>
+                  <div className="text-gray-400 text-sm">Propriétaire</div>
+                  <div className="text-teal-400 text-xs mt-1">Commerce Local Valais</div>
+                  <div className="inline-block px-2 py-1 bg-teal-400/20 rounded text-xs text-teal-400 mt-2">Commerce</div>
+                </div>
+              </div>
+              <p className="text-gray-300 italic leading-relaxed mb-6">
+                "Nous refusons maintenant des clients par manque de disponibilité. Notre présence Google attire exactement les clients que nous voulons."
+              </p>
+              <div className="flex justify-between items-center">
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <div key={i} className="text-yellow-400 text-lg">★</div>
+                  ))}
+                </div>
+                <div className="text-teal-400 font-bold">Top 3 Google local</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Social Proof Stats */}
+          <div className="text-center mb-8">
+            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-8 border border-teal-400/20 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-teal-400 mb-2">25+</div>
+                  <div className="text-gray-300">Entreprises accompagnées</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">4.9/5</div>
+                  <div className="text-gray-300">Satisfaction client</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-teal-400 mb-2">90%</div>
+                  <div className="text-gray-300">Renouvellent leur abonnement</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/realisations"
+              className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300 font-medium"
+            >
+              Voir tous nos témoignages et cas clients →
+            </Link>
           </div>
         </div>
       </section>
