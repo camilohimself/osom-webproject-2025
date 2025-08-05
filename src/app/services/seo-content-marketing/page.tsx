@@ -1,13 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import React from 'react'
 import { SimpleLineChart } from '@/components/ui'
+import IconeOSOM from '@/components/IconeOSOM'
 
 export default function SEOContentMarketingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [animatedValue, setAnimatedValue] = useState(0)
+  const [visibleCards, setVisibleCards] = useState<number[]>([])
+  const [codeAnimations, setCodeAnimations] = useState<{[key: number]: number}>({})
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   
   // Animation du compteur 68.6%
   React.useEffect(() => {
@@ -16,6 +20,111 @@ export default function SEOContentMarketingPage() {
     }, 1000)
     return () => clearTimeout(timer)
   }, [])
+
+  // IntersectionObserver pour les cartes techniques
+  useEffect(() => {
+    const observers: IntersectionObserver[] = []
+    
+    cardRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setVisibleCards(prev => [...prev, index])
+                // Démarrer l'animation du code
+                setTimeout(() => {
+                  setCodeAnimations(prev => ({ ...prev, [index]: 1 }))
+                }, 500)
+              }
+            })
+          },
+          { threshold: 0.3 }
+        )
+        observer.observe(ref)
+        observers.push(observer)
+      }
+    })
+    
+    return () => {
+      observers.forEach(observer => observer.disconnect())
+    }
+  }, [])
+
+  // Données techniques SEO
+  const technicalSkills = [
+    {
+      id: 0,
+      title: "Audit & Analyse",
+      description: "Nous identifions ce qui bloque votre visibilité et découvrons les opportunités cachées de votre secteur.",
+      icon: "search" as const,
+      color: "cyan" as const,
+      code: [
+        "// Audit SEO profond",
+        "crawlSite('votre-site.ch')",
+        "  .analyzeKeywords(['valais', 'médecin', 'conseil'])",
+        "  .findBrokenLinks()",
+        "  .checkCompetitors()",
+        "  .generateReport()",
+        "",
+        "console.log('Opportunités trouvées:', opportunities)"
+      ]
+    },
+    {
+      id: 1, 
+      title: "Copywriting & On-Page",
+      description: "Nous réécrivons vos pages pour qu'elles plaisent aux moteurs de recherche et séduisent vos prospects.",
+      icon: "document" as const,
+      color: "yellow" as const,
+      code: [
+        "// Optimisation contenu",
+        "const pageOptimization = {",
+        "  title: 'Cabinet Médical Sion | Dr. Martin',",
+        "  meta: 'Consultation médicale Valais...',",
+        "  h1: 'Votre santé entre de bonnes mains',",
+        "  keywords: ['médecin sion', 'consultation']",
+        "}",
+        "",
+        "optimizePage(pageOptimization)"
+      ]
+    },
+    {
+      id: 2,
+      title: "Optimisation Technique", 
+      description: "Nous accélérons votre site, améliorons le maillage interne et optimisons chaque détail technique.",
+      icon: "tools" as const,
+      color: "purple" as const,
+      code: [
+        "// Performance technique",
+        "const siteOptimization = {",
+        "  loadingTime: '< 2 secondes',",
+        "  mobileScore: 95,",
+        "  internalLinks: optimizeStructure(),",
+        "  sitemap: generateXML()",
+        "}",
+        "",
+        "console.log('Site optimisé:', siteOptimization)"
+      ]
+    },
+    {
+      id: 3,
+      title: "Reporting & Data",
+      description: "Nous créons vos tableaux de bord GA4 et Search Console pour suivre chaque progression en temps réel.",
+      icon: "chart" as const,
+      color: "green" as const,
+      code: [
+        "// Tableau de bord SEO",
+        "const monthlyReport = {",
+        "  organicTraffic: '+180%',",
+        "  avgPosition: 3.2,",
+        "  engagementQuality: '68.6%',",
+        "  conversions: 47",
+        "}",
+        "",
+        "sendReport(client, monthlyReport)"
+      ]
+    }
+  ]
 
   const performanceResults = [
     {
@@ -308,6 +417,151 @@ export default function SEOContentMarketingPage() {
                     <span className="text-2xl font-bold text-teal-400">8x</span>
                     <span className="text-white ml-2">plus de clients générés</span>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION TECHNIQUE - SOUS LE CAPOT */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400/5 to-transparent" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block px-6 py-3 bg-purple-400/20 rounded-full text-purple-400 text-lg font-bold mb-6">
+              Sous le capot
+            </div>
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
+              Ce que nous faisons <span className="font-bold text-teal-400">pour vous</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Derrière chaque stratégie SEO se cachent des analyses et optimisations pointues réalisées par nos experts. Découvrez notre savoir-faire en action.
+            </p>
+          </div>
+
+          {/* CARTES TECHNIQUES INTERACTIVES */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {technicalSkills.map((skill, index) => (
+              <div
+                key={skill.id}
+                ref={el => { cardRefs.current[index] = el }}
+                className={`bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border transition-all duration-700 transform hover:scale-105 hover:shadow-xl ${
+                  skill.color === 'cyan' ? 'border-cyan-400/20 hover:border-cyan-400/40 hover:shadow-cyan-400/10' :
+                  skill.color === 'yellow' ? 'border-yellow-400/20 hover:border-yellow-400/40 hover:shadow-yellow-400/10' :
+                  skill.color === 'purple' ? 'border-purple-400/20 hover:border-purple-400/40 hover:shadow-purple-400/10' :
+                  'border-green-400/20 hover:border-green-400/40 hover:shadow-green-400/10'
+                } ${visibleCards.includes(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                {/* HEADER CARTE */}
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    skill.color === 'cyan' ? 'bg-cyan-400/20' :
+                    skill.color === 'yellow' ? 'bg-yellow-400/20' :
+                    skill.color === 'purple' ? 'bg-purple-400/20' :
+                    'bg-green-400/20'
+                  } hover:scale-110`}>
+                    <IconeOSOM 
+                      type={skill.icon} 
+                      size={32} 
+                      color={skill.color} 
+                      ariaLabel={`Icône ${skill.title}`}
+                      withAnimation 
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{skill.title}</h3>
+                    <p className="text-gray-300 leading-relaxed">{skill.description}</p>
+                  </div>
+                </div>
+
+                {/* CODE ANIMÉ */}
+                <div className="bg-black/60 rounded-xl p-6 border border-gray-700/50 overflow-hidden">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div className="text-xs text-gray-400 font-mono">OSOM-SEO.js</div>
+                  </div>
+                  
+                  <div className="font-mono text-sm space-y-1">
+                    {skill.code.map((line, lineIndex) => (
+                      <div
+                        key={lineIndex}
+                        className={`transition-all duration-500 ${
+                          codeAnimations[index] && lineIndex < (codeAnimations[index] * skill.code.length) 
+                            ? 'opacity-100 translate-x-0' 
+                            : 'opacity-30 translate-x-2'
+                        } ${
+                          line.startsWith('//') ? 'text-green-400' :
+                          line.includes('const') || line.includes('console') ? 'text-blue-400' :
+                          line.includes(':') && line.includes("'") ? 'text-yellow-400' :
+                          line.includes('[') || line.includes(']') ? 'text-purple-400' :
+                          'text-gray-300'
+                        }`}
+                        style={{ 
+                          transitionDelay: codeAnimations[index] ? `${lineIndex * 200}ms` : '0ms'
+                        }}
+                      >
+                        {line === '' ? '\u00A0' : line}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* INDICATEUR D'EXÉCUTION */}
+                  {codeAnimations[index] && (
+                    <div className="mt-4 pt-4 border-t border-gray-700/50">
+                      <div className="flex items-center space-x-2">
+                        <div className={`w-2 h-2 rounded-full animate-pulse ${
+                          skill.color === 'cyan' ? 'bg-cyan-400' :
+                          skill.color === 'yellow' ? 'bg-yellow-400' :
+                          skill.color === 'purple' ? 'bg-purple-400' :
+                          'bg-green-400'
+                        }`}></div>
+                        <span className={`text-sm font-medium ${
+                          skill.color === 'cyan' ? 'text-cyan-400' :
+                          skill.color === 'yellow' ? 'text-yellow-400' :
+                          skill.color === 'purple' ? 'text-purple-400' :
+                          'text-green-400'
+                        }`}>
+                          Optimisation en cours...
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Résumé textuel pour l'accessibilité */}
+                  <div className="sr-only">
+                    Code technique pour {skill.title}: {skill.description}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* RÉSUMÉ IMPACT */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Résultat de notre expertise technique</h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">97%</div>
+                  <div className="text-gray-300 text-sm">Score technique</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">&lt; 2s</div>
+                  <div className="text-gray-300 text-sm">Temps chargement</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">Top 3</div>
+                  <div className="text-gray-300 text-sm">Position Google</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                  <div className="text-gray-300 text-sm">Monitoring actif</div>
                 </div>
               </div>
             </div>
