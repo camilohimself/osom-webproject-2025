@@ -4,10 +4,12 @@ import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
 import { SimpleGroupedBarChart } from '@/components/ui'
+import { motion } from 'framer-motion'
 
 export default function MarketingAutomationCRMPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [animatedValue, setAnimatedValue] = useState(0)
+  const [scrollY, setScrollY] = useState(0)
   
   // Animation du compteur +78%
   React.useEffect(() => {
@@ -15,6 +17,13 @@ export default function MarketingAutomationCRMPage() {
       setAnimatedValue(78)
     }, 1000)
     return () => clearTimeout(timer)
+  }, [])
+
+  // Scroll tracking pour animations réactives
+  React.useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const performanceResults = [
@@ -89,7 +98,467 @@ export default function MarketingAutomationCRMPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      
+      {/* RIVIÈRE D'AUTOMATION OSOM - Logos flottants créatifs sur toute la page */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        
+        {/* Logo 1: Petit icon qui pulse - Top Left */}
+        <motion.div
+          className="absolute top-20 left-8"
+          animate={{
+            y: [0, -15, 0],
+            rotate: [0, 5, -5, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <div className="w-12 h-12 opacity-20 hover:opacity-40 transition-all duration-500">
+            <svg viewBox="0 0 927.6 900" className="w-full h-full">
+              <defs>
+                <linearGradient id="autoLogo1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#10B981" stopOpacity="0.6"/>
+                  <stop offset="100%" stopColor="#059669" stopOpacity="0.4"/>
+                </linearGradient>
+              </defs>
+              <path fill="url(#autoLogo1)" d="M779.7,261.1c-29.5-31.6-69.4-47.3-119.7-47.3c-59.6,0-107.9,20.8-144.7,62.3c-29.2-41.5-72.2-62.3-128.9-62.3c-51.5,0-92.4,16.1-122.8,48.2v-38.6H154.8V280l0,0L300,338.9c14-12.1,31.6-18.2,53.1-18.2c23.4,0,42.1,7.6,56.1,22.8c11.5,12.5,18.3,28.5,20.4,48l0,0l0,0c0,0,0,0,0-0.1l119,48.3l0.1,0v-37.6c0-24,7.5-43.6,22.4-58.8c14.9-15.2,34.1-22.8,57.4-22.8c23.4,0,42.1,7.6,56.1,22.8c14,15.2,21.1,35.7,21.1,61.4v76.7c0,0,65.3,16.8,76.3,20.3c20.1,5.5,34.1,14.8,42.1,25V388.2C824,335,809.3,292.6,779.7,261.1z"/>
+            </svg>
+          </div>
+        </motion.div>
+
+        {/* Logo 2: Moyen complet - Center Right avec trail */}
+        <motion.div
+          className="absolute top-1/3 right-12"
+          animate={{
+            y: [0, 20, 0],
+            x: [0, -10, 0],
+            rotate: [0, -3, 3, 0]
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        >
+          <div className="w-20 h-10 opacity-25 hover:opacity-50 transition-all duration-700">
+            <svg viewBox="0 0 2150 1080" className="w-full h-full">
+              <defs>
+                <linearGradient id="autoLogo2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#34D399" stopOpacity="0.7"/>
+                  <stop offset="50%" stopColor="#10B981" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#059669" stopOpacity="0.5"/>
+                </linearGradient>
+                <filter id="glow2">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge> 
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <g fill="url(#autoLogo2)" filter="url(#glow2)">
+                <path d="M366,772.7c15.2,0,28.4,7.2,35.7,18.5l-7.6,6c-6.6-9.5-16.1-15.1-28-15.1c-19.4,0-34.2,15.1-34.2,35s14.8,35,34.2,35c11.8,0,21.4-5.6,28-15.1l7.6,6c-7.2,11.3-20.4,18.5-35.7,18.5c-24.3,0.4-45.2-19.8-44.7-44.4C320.8,792.4,341.6,772.3,366,772.7z"/>
+                <path d="M1984.7,646.2c11.3-11.1,17-25.1,17-42c0-16.9-5.7-31-17-42.4c-11.3-11.4-25.5-17-42.5-17c-17.4,0-31.6,5.6-42.8,16.8c-11.2,11.2-16.7,25.4-16.7,42.6c0,16.9,5.6,30.9,16.7,42c11.2,11.1,25.4,16.6,42.8,16.6C1959.2,662.8,1973.4,657.3,1984.7,646.2z"/>
+              </g>
+            </svg>
+          </div>
+          
+          {/* Trail de particules d'automation */}
+          {[...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-green-400 rounded-full"
+              style={{
+                left: `${-20 - i * 8}px`,
+                top: `${10 + (i % 2) * 15}px`
+              }}
+              animate={{
+                x: [0, -30, -60],
+                opacity: [0.8, 0.4, 0],
+                scale: [1, 0.5, 0]
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                delay: i * 0.4 + 2
+              }}
+            />
+          ))}
+        </motion.div>
+
+        {/* Logo 3: Grand événement - Left Center avec orbites */}
+        <motion.div
+          className="absolute left-6 top-2/3"
+          animate={{
+            y: [0, -25, 0],
+            scale: [1, 1.05, 1],
+            rotate: [0, 2, -2, 0]
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 4
+          }}
+        >
+          <div className="w-16 h-16 opacity-30 hover:opacity-60 transition-all duration-700">
+            <svg viewBox="0 0 2900 900" className="w-full h-full">
+              <defs>
+                <radialGradient id="autoLogo3" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#6EE7B7" stopOpacity="0.8"/>
+                  <stop offset="50%" stopColor="#10B981" stopOpacity="0.6"/>
+                  <stop offset="100%" stopColor="#047857" stopOpacity="0.4"/>
+                </radialGradient>
+              </defs>
+              <circle cx="1450" cy="450" r="300" fill="url(#autoLogo3)"/>
+              <path fill="#34D399" fillOpacity="0.5" d="M2019.4,650.4c11.3-11.1,17-25.1,17-42c0-16.9-5.7-31-17-42.4c-11.3-11.4-25.5-17-42.5-17c-17.4,0-31.6,5.6-42.8,16.8c-11.2,11.2-16.7,25.4-16.7,42.6c0,16.9,5.6,30.9,16.7,42c11.2,11.1,25.4,16.6,42.8,16.6C1993.9,667,2008.1,661.5,2019.4,650.4z"/>
+            </svg>
+          </div>
+          
+          {/* Orbites d'automation autour */}
+          {[...Array(3)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute inset-0 border border-green-400/10 rounded-full"
+              style={{
+                width: `${120 + i * 30}%`,
+                height: `${120 + i * 30}%`,
+                left: `${-10 - i * 15}%`,
+                top: `${-10 - i * 15}%`
+              }}
+              animate={{
+                rotate: 360,
+                scale: [1, 1.1, 1]
+              }}
+              transition={{
+                rotate: { duration: 20 + i * 5, repeat: Infinity, ease: "linear" },
+                scale: { duration: 8, repeat: Infinity, delay: i * 2 }
+              }}
+            />
+          ))}
+        </motion.div>
+
+        {/* Logo 4: Flottant bottom right avec data stream */}
+        <motion.div
+          className="absolute bottom-32 right-16"
+          animate={{
+            y: [0, 15, 0],
+            x: [0, 8, 0],
+            rotate: [0, -1, 1, 0]
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 6
+          }}
+        >
+          <div className="w-14 h-14 opacity-25 hover:opacity-45 transition-all duration-500">
+            <svg viewBox="0 0 927.6 900" className="w-full h-full">
+              <defs>
+                <linearGradient id="autoLogo4" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#A7F3D0" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#065F46" stopOpacity="0.5"/>
+                </linearGradient>
+              </defs>
+              <g fill="url(#autoLogo4)">
+                <polygon points="548.6,617 548.6,617 430.3,594.3 430.3,594.3 430.2,594.2 430.2,666.7 548.6,666.7 548.6,617.1"/>
+                <path d="M807.1,640.9c11.3-11.1,17-25.1,17-42c0-16.9-5.7-31-17-42.4c-11.3-11.4-25.5-17-42.5-17c-17.4,0-31.6,5.6-42.8,16.8c-11.2,11.2-16.7,25.4-16.7,42.6c0,16.9,5.6,30.9,16.7,42c11.2,11.1,25.4,16.6,42.8,16.6C781.6,657.5,795.8,652,807.1,640.9z"/>
+              </g>
+            </svg>
+          </div>
+          
+          {/* Data stream vers le haut */}
+          {[...Array(8)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-0.5 h-2 bg-green-400/40 rounded-full"
+              style={{
+                left: "50%",
+                bottom: `${100 + i * 12}%`,
+                transform: "translateX(-50%)"
+              }}
+              animate={{
+                y: [0, -40, -80],
+                opacity: [0, 0.8, 0],
+                scaleY: [1, 0.5, 0]
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                delay: i * 0.2 + 6
+              }}
+            />
+          ))}
+        </motion.div>
+
+        {/* Logo 5: Micro mobile top center avec effect ripple */}
+        <motion.div
+          className="absolute top-1/4 left-1/2 transform -translate-x-1/2"
+          animate={{
+            y: [0, 10, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 8
+          }}
+        >
+          <div className="w-8 h-8 opacity-20 hover:opacity-40 transition-all duration-500">
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <defs>
+                <radialGradient id="autoLogo5" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#22D3EE" stopOpacity="0.6"/>
+                  <stop offset="100%" stopColor="#10B981" stopOpacity="0.4"/>
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="40" fill="url(#autoLogo5)"/>
+            </svg>
+          </div>
+          
+          {/* Ripple effects */}
+          {[...Array(3)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute inset-0 border border-teal-400/20 rounded-full"
+              style={{
+                width: `${150 + i * 50}%`,
+                height: `${150 + i * 50}%`,
+                left: `${-25 - i * 25}%`,
+                top: `${-25 - i * 25}%`
+              }}
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.3, 0.1, 0.3]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                delay: i * 1.3 + 8
+              }}
+            />
+          ))}
+        </motion.div>
+
+        {/* Logo 6: Grand central bottom avec connexions */}
+        <motion.div
+          className="absolute bottom-1/4 left-1/3"
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 1, -1, 0],
+            scale: [1, 1.08, 1]
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 10
+          }}
+        >
+          <div className="w-24 h-12 opacity-35 hover:opacity-65 transition-all duration-700">
+            <svg viewBox="0 0 2150 1080" className="w-full h-full">
+              <defs>
+                <linearGradient id="autoLogo6" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#6EE7B7" stopOpacity="0.8"/>
+                  <stop offset="25%" stopColor="#34D399" stopOpacity="0.7"/>
+                  <stop offset="75%" stopColor="#10B981" stopOpacity="0.6"/>
+                  <stop offset="100%" stopColor="#047857" stopOpacity="0.4"/>
+                </linearGradient>
+                <filter id="glow6">
+                  <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                  <feMerge> 
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <g fill="url(#autoLogo6)" filter="url(#glow6)">
+                <path d="M614.1,445.3c0.2-13-0.6-25.6-2.4-37.8l-135.3-26c11.1,18.7,16.6,40.2,16.6,64.7c0,33.9-10.7,62-32,84.2c-21.3,22.2-48.1,33.3-80.2,33.3c-32.8,0-59.6-11.1-80.7-33.3c-21.1-22.2-31.6-50.3-31.6-84.2c0-34.5,10.5-63,31.6-85.5c3.7-4,7.6-7.6,11.7-10.8l-129.3-24.9c1.1-1.7,2.3-3.5,3.5-5.2c-25.9,37-38.5,78.9-37.6,125.5c-1.2,62,21.2,115.6,67.1,160.9c45.9,45.3,100.7,67.4,164.4,66.2c63.7,1.2,119-20.9,165.8-66.2C592.5,560.9,615.3,507.3,614.1,445.3z"/>
+                <path d="M1984.7,646.2c11.3-11.1,17-25.1,17-42c0-16.9-5.7-31-17-42.4c-11.3-11.4-25.5-17-42.5-17c-17.4,0-31.6,5.6-42.8,16.8c-11.2,11.2-16.7,25.4-16.7,42.6c0,16.9,5.6,30.9,16.7,42c11.2,11.1,25.4,16.6,42.8,16.6C1959.2,662.8,1973.4,657.3,1984.7,646.2z"/>
+              </g>
+            </svg>
+          </div>
+          
+          {/* Lignes de connexion vers autres logos */}
+          <motion.div
+            className="absolute top-1/2 left-full w-20 h-px bg-gradient-to-r from-green-400/30 to-transparent"
+            animate={{
+              scaleX: [0, 1, 0],
+              opacity: [0, 0.6, 0]
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              delay: 10
+            }}
+          />
+          <motion.div
+            className="absolute top-full left-1/2 w-px h-16 bg-gradient-to-b from-green-400/30 to-transparent"
+            animate={{
+              scaleY: [0, 1, 0],
+              opacity: [0, 0.6, 0]
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              delay: 12
+            }}
+          />
+        </motion.div>
+
+        {/* LOGOS SCROLL-RÉACTIFS - Apparaissent pendant le scroll */}
+        
+        {/* Logo scroll-réactif 1: Top droit avec progress bar */}
+        <motion.div
+          className="absolute top-96 right-4"
+          style={{
+            opacity: Math.min(scrollY / 500, 0.6),
+            scale: 1 + (scrollY / 2000) * 0.3
+          }}
+        >
+          <div className="w-10 h-10">
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <defs>
+                <radialGradient id="scrollLogo1" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#A7F3D0" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#047857" stopOpacity="0.4"/>
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="35" fill="url(#scrollLogo1)"/>
+              <text x="50" y="55" textAnchor="middle" fill="#034C44" fontSize="20" fontWeight="bold">O</text>
+            </svg>
+          </div>
+          
+          {/* Progress bar qui suit le scroll */}
+          <div className="mt-2 w-20 h-1 bg-gray-800 rounded-full overflow-hidden">
+            <motion.div 
+              className="h-full bg-green-400 rounded-full"
+              style={{
+                width: `${Math.min((scrollY / 3000) * 100, 100)}%`
+              }}
+            />
+          </div>
+        </motion.div>
+
+        {/* Logo scroll-réactif 2: Left center avec rotation suivant scroll */}
+        <motion.div
+          className="absolute left-4 top-1/2"
+          style={{
+            opacity: Math.min((scrollY - 200) / 600, 0.5),
+            rotate: (scrollY / 10) % 360
+          }}
+        >
+          <div className="w-14 h-14">
+            <svg viewBox="0 0 927.6 900" className="w-full h-full">
+              <defs>
+                <linearGradient id="scrollLogo2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#6EE7B7" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#065F46" stopOpacity="0.5"/>
+                </linearGradient>
+              </defs>
+              <g fill="url(#scrollLogo2)">
+                <polygon points="548.6,617 548.6,617 430.3,594.3 430.3,594.3 430.2,594.2 430.2,666.7 548.6,666.7 548.6,617.1"/>
+              </g>
+            </svg>
+          </div>
+        </motion.div>
+
+        {/* Logo scroll-réactif 3: Bottom center avec scale progressif */}
+        <motion.div
+          className="absolute bottom-40 left-1/2 transform -translate-x-1/2"
+          style={{
+            opacity: Math.min((scrollY - 800) / 800, 0.7),
+            scale: 0.5 + Math.min((scrollY - 800) / 1600, 0.8)
+          }}
+        >
+          <div className="w-18 h-9">
+            <svg viewBox="0 0 2150 1080" className="w-full h-full">
+              <defs>
+                <linearGradient id="scrollLogo3" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#A7F3D0" stopOpacity="0.9"/>
+                  <stop offset="25%" stopColor="#6EE7B7" stopOpacity="0.8"/>
+                  <stop offset="75%" stopColor="#34D399" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#10B981" stopOpacity="0.6"/>
+                </linearGradient>
+              </defs>
+              <g fill="url(#scrollLogo3)">
+                <path d="M366,772.7c15.2,0,28.4,7.2,35.7,18.5l-7.6,6c-6.6-9.5-16.1-15.1-28-15.1c-19.4,0-34.2,15.1-34.2,35s14.8,35,34.2,35c11.8,0,21.4-5.6,28-15.1l7.6,6c-7.2,11.3-20.4,18.5-35.7,18.5c-24.3,0.4-45.2-19.8-44.7-44.4C320.8,792.4,341.6,772.3,366,772.7z"/>
+                <text x="1200" y="700" fill="#047857" fontSize="200" fontWeight="bold">AUTOMATION</text>
+              </g>
+            </svg>
+          </div>
+          
+          {/* Connexions dynamiques qui s'étendent avec le scroll */}
+          <motion.div
+            className="absolute top-1/2 left-full w-0 h-px bg-green-400/40"
+            style={{
+              width: Math.min((scrollY - 1000) / 20, 100)
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 right-full w-0 h-px bg-green-400/40"
+            style={{
+              width: Math.min((scrollY - 1000) / 20, 100)
+            }}
+          />
+        </motion.div>
+
+        {/* Logo scroll-réactif 4: Mobile top avec "follow scroll" */}
+        <motion.div
+          className="absolute right-8"
+          style={{
+            top: 100 + (scrollY * 0.3),
+            opacity: Math.min((scrollY - 400) / 400, 0.4),
+          }}
+        >
+          <div className="w-8 h-8">
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <defs>
+                <linearGradient id="scrollLogo4" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#ECFDF5" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#10B981" stopOpacity="0.6"/>
+                </linearGradient>
+              </defs>
+              <rect x="20" y="20" width="60" height="60" rx="30" fill="url(#scrollLogo4)"/>
+              <circle cx="50" cy="50" r="15" fill="#059669"/>
+            </svg>
+          </div>
+        </motion.div>
+
+        {/* Constellation de micro-logos réactifs au scroll */}
+        {[...Array(12)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-3 h-3"
+            style={{
+              left: `${10 + (i * 80) % 1200}px`,
+              top: `${200 + (i * 150)}px`,
+              opacity: Math.max(0, Math.min((scrollY - (i * 100)) / 300, 0.3)),
+              scale: 0.5 + Math.min((scrollY - (i * 100)) / 1000, 0.5)
+            }}
+            animate={{
+              rotate: [0, 360],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{
+              rotate: { duration: 10 + i * 2, repeat: Infinity, ease: "linear" },
+              scale: { duration: 3 + i * 0.5, repeat: Infinity, delay: i * 0.2 }
+            }}
+          >
+            <svg viewBox="0 0 20 20" className="w-full h-full">
+              <circle cx="10" cy="10" r="8" fill={`hsl(${142 + i * 10}, 70%, ${60 + i * 3}%)`} fillOpacity="0.6"/>
+            </svg>
+          </motion.div>
+        ))}
+
+      </div>
       {/* HERO SECTION - L'AUTOMATION QUI LIBÈRE VOS ÉQUIPES */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="absolute inset-0 bg-gradient-to-b from-green-400/10 via-teal-500/5 to-green-400/5" />
@@ -134,6 +603,259 @@ export default function MarketingAutomationCRMPage() {
           <div className="text-sm text-gray-400">
             Consultation gratuite • CRM adapté à votre métier • Équipe formée et autonome
           </div>
+        </div>
+      </section>
+
+      {/* TRANSITION CRÉATIVE LOGOS - Rivière d'automation */}
+      <section className="py-16 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Message de transition */}
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.p 
+              className="text-gray-400 text-lg font-light"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              animate={{ 
+                opacity: [0.6, 1, 0.6],
+              }}
+              transition={{ duration: 4, repeat: Infinity }}
+            >
+              L'automation OSOM en action
+            </motion.p>
+          </motion.div>
+          
+          {/* Rivière de logos automation créative */}
+          <div className="flex justify-center items-center space-x-12 md:space-x-20">
+            
+            {/* Logo automation 1: Flottant avec workflow */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.2 }}
+              animate={{
+                y: [0, -12, 0],
+                rotate: [0, 3, -3, 0]
+              }}
+              style={{
+                animationDuration: '6s',
+                animationIterationCount: 'infinite'
+              }}
+              whileHover={{ scale: 1.2, y: -20 }}
+            >
+              <div className="w-16 h-16 opacity-70 hover:opacity-100 transition-all duration-500">
+                <svg viewBox="0 0 927.6 900" className="w-full h-full">
+                  <defs>
+                    <linearGradient id="workflowLogo1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#10B981" stopOpacity="0.8"/>
+                      <stop offset="100%" stopColor="#059669" stopOpacity="0.6"/>
+                    </linearGradient>
+                    <filter id="workflowGlow1">
+                      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                      <feMerge> 
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <g fill="url(#workflowLogo1)" filter="url(#workflowGlow1)">
+                    <path d="M779.7,261.1c-29.5-31.6-69.4-47.3-119.7-47.3c-59.6,0-107.9,20.8-144.7,62.3c-29.2-41.5-72.2-62.3-128.9-62.3c-51.5,0-92.4,16.1-122.8,48.2v-38.6H154.8V280l0,0L300,338.9c14-12.1,31.6-18.2,53.1-18.2c23.4,0,42.1,7.6,56.1,22.8c11.5,12.5,18.3,28.5,20.4,48l0,0l0,0c0,0,0,0,0-0.1l119,48.3l0.1,0v-37.6c0-24,7.5-43.6,22.4-58.8c14.9-15.2,34.1-22.8,57.4-22.8c23.4,0,42.1,7.6,56.1,22.8c14,15.2,21.1,35.7,21.1,61.4v76.7c0,0,65.3,16.8,76.3,20.3c20.1,5.5,34.1,14.8,42.1,25V388.2C824,335,809.3,292.6,779.7,261.1z"/>
+                  </g>
+                </svg>
+              </div>
+              
+              {/* Workflow flèches */}
+              <motion.div 
+                className="absolute -bottom-10 left-1/2 transform -translate-x-1/2"
+                animate={{ 
+                  y: [0, 6, 0],
+                  opacity: [0.5, 1, 0.5]
+                }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+              >
+                <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 3v10l-3-3m6 0l-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </motion.div>
+            </motion.div>
+            
+            {/* Logo automation 2: Central massif avec pulsations */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, scale: 0.7 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, delay: 0.4 }}
+              animate={{
+                y: [0, -18, 0],
+                scale: [1, 1.1, 1]
+              }}
+              style={{
+                animationDuration: '8s',
+                animationIterationCount: 'infinite'
+              }}
+              whileHover={{ scale: 1.25, y: -25 }}
+            >
+              <div className="w-28 h-14 opacity-80 hover:opacity-100 transition-all duration-700">
+                <svg viewBox="0 0 2150 1080" className="w-full h-full">
+                  <defs>
+                    <linearGradient id="workflowLogo2" x1="0%" y1="0%" x2="100%" y2="50%">
+                      <stop offset="0%" stopColor="#34D399" stopOpacity="0.9"/>
+                      <stop offset="30%" stopColor="#10B981" stopOpacity="0.8"/>
+                      <stop offset="70%" stopColor="#059669" stopOpacity="0.7"/>
+                      <stop offset="100%" stopColor="#047857" stopOpacity="0.6"/>
+                    </linearGradient>
+                    <filter id="workflowGlow2">
+                      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                      <feMerge> 
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <g fill="url(#workflowLogo2)" filter="url(#workflowGlow2)">
+                    <path d="M366,772.7c15.2,0,28.4,7.2,35.7,18.5l-7.6,6c-6.6-9.5-16.1-15.1-28-15.1c-19.4,0-34.2,15.1-34.2,35s14.8,35,34.2,35c11.8,0,21.4-5.6,28-15.1l7.6,6c-7.2,11.3-20.4,18.5-35.7,18.5c-24.3,0.4-45.2-19.8-44.7-44.4C320.8,792.4,341.6,772.3,366,772.7z"/>
+                    <path d="M1984.7,646.2c11.3-11.1,17-25.1,17-42c0-16.9-5.7-31-17-42.4c-11.3-11.4-25.5-17-42.5-17c-17.4,0-31.6,5.6-42.8,16.8c-11.2,11.2-16.7,25.4-16.7,42.6c0,16.9,5.6,30.9,16.7,42c11.2,11.1,25.4,16.6,42.8,16.6C1959.2,662.8,1973.4,657.3,1984.7,646.2z"/>
+                    <text x="1075" y="900" fill="#047857" fontSize="120" fontWeight="bold" opacity="0.7">AUTOMATION</text>
+                  </g>
+                </svg>
+              </div>
+              
+              {/* Pulsations énergétiques */}
+              {[...Array(4)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute inset-0 border border-green-400/20 rounded-full"
+                  style={{
+                    width: `${130 + i * 25}%`,
+                    height: `${130 + i * 25}%`,
+                    left: `${-15 - i * 12.5}%`,
+                    top: `${-15 - i * 12.5}%`
+                  }}
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.3, 0.1, 0.3]
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    delay: i * 1.2
+                  }}
+                />
+              ))}
+              
+              {/* Flèche centrale puissante */}
+              <motion.div 
+                className="absolute -bottom-12 left-1/2 transform -translate-x-1/2"
+                animate={{ 
+                  y: [0, 10, 0],
+                  opacity: [0.7, 1, 0.7],
+                  scale: [1, 1.3, 1]
+                }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+              >
+                <svg className="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2l8 8-8 8-2-2 6-6-6-6z" transform="rotate(90 10 10)"/>
+                </svg>
+              </motion.div>
+            </motion.div>
+            
+            {/* Logo automation 3: Rapide avec trails */}
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.6 }}
+              animate={{
+                y: [0, -8, 0],
+                x: [0, 4, -4, 0],
+                rotate: [0, 1, -1, 0]
+              }}
+              style={{
+                animationDuration: '5s',
+                animationIterationCount: 'infinite'
+              }}
+              whileHover={{ scale: 1.15, y: -15 }}
+            >
+              <div className="w-12 h-12 opacity-60 hover:opacity-90 transition-all duration-500">
+                <svg viewBox="0 0 100 100" className="w-full h-full">
+                  <defs>
+                    <radialGradient id="workflowLogo3" cx="50%" cy="50%" r="60%">
+                      <stop offset="0%" stopColor="#6EE7B7" stopOpacity="0.9"/>
+                      <stop offset="50%" stopColor="#34D399" stopOpacity="0.7"/>
+                      <stop offset="100%" stopColor="#10B981" stopOpacity="0.5"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="40" fill="url(#workflowLogo3)"/>
+                  <path d="M30 50 L50 35 L50 45 L70 45 L70 55 L50 55 L50 65 Z" fill="#047857"/>
+                </svg>
+              </div>
+              
+              {/* Speed trails */}
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-0.5 bg-green-400/50 rounded-full"
+                  style={{
+                    right: `${100 + i * 8}%`,
+                    top: `${45 + (i % 2) * 10}%`
+                  }}
+                  animate={{
+                    x: [0, -25, -50],
+                    opacity: [0.8, 0.4, 0],
+                    scaleX: [1, 0.5, 0]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: i * 0.2
+                  }}
+                />
+              ))}
+            </motion.div>
+          </div>
+          
+          {/* Message encourageant le scroll */}
+          <motion.div 
+            className="text-center mt-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 1.2 }}
+          >
+            <motion.div
+              className="inline-flex items-center space-x-3 text-gray-500 text-sm font-light"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              animate={{
+                y: [0, 5, 0]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <span>Découvrez comment nos équipes sont libérées</span>
+              <motion.svg 
+                className="w-5 h-5" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+                animate={{ y: [0, 4, 0] }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </motion.svg>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
