@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import React from 'react'
 import Head from 'next/head'
+import IconeOSOM from '@/components/IconeOSOM'
 
 // VERSION STORYTELLING & CONVERSION - ALLÉGÉE
 export default function CreationSiteWebPage() {
@@ -90,31 +91,11 @@ export default function CreationSiteWebPage() {
 
   // SECTEURS D'EXPERTISE PREMIUM
   const sectorsExpertise = [
-    { 
-      name: "Cabinets médicaux", 
-      icon: "medical",
-      svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`
-    },
-    { 
-      name: "Services B2B", 
-      icon: "business",
-      svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`
-    }, 
-    { 
-      name: "Commerces locaux", 
-      icon: "retail",
-      svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6z"/></svg>`
-    },
-    { 
-      name: "Cabinets conseil", 
-      icon: "consulting",
-      svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.828 14.828a4 4 0 0 1-5.656 0M9 10h1l4 4 4-4h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1l-4 4-4-4H9a2 2 0 0 1-2-2v-1c0-1.1.9-2 2-2z"/></svg>`
-    },
-    { 
-      name: "PME industrielles", 
-      icon: "industry",
-      svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
-    }
+    { name: "Cabinets médicaux", icon: "medical" as const },
+    { name: "Services B2B", icon: "consultation" as const }, 
+    { name: "Commerces locaux", icon: "retail" as const },
+    { name: "Cabinets conseil", icon: "engineering" as const },
+    { name: "PME industrielles", icon: "industry" as const }
   ]
 
   const faqData = [
@@ -219,7 +200,13 @@ export default function CreationSiteWebPage() {
                 
                 <div className="relative z-10 text-center">
                   <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-yellow-400/20 to-teal-400/20 flex items-center justify-center">
-                    <div className="text-4xl">🏢</div>
+                    <IconeOSOM 
+                      type="business-growth" 
+                      size={48} 
+                      color="yellow" 
+                      withAnimation 
+                      ariaLabel="Entreprise en croissance" 
+                    />
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
@@ -272,7 +259,7 @@ export default function CreationSiteWebPage() {
             <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300 group">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <div className="text-yellow-400" dangerouslySetInnerHTML={{__html: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`}} />
+                  <IconeOSOM type="lightning" size={32} color="yellow" ariaLabel="Performance rapide" />
                 </div>
                 <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Architecture de conversion
@@ -286,7 +273,7 @@ export default function CreationSiteWebPage() {
             <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 transition-all duration-300 group">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-teal-400/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <div className="text-teal-400" dangerouslySetInnerHTML={{__html: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76a6 6 0 0 1-8.49 8.49m0-8.49a6 6 0 0 1 8.49 8.49"/></svg>`}} />
+                  <IconeOSOM type="target" size={32} color="cyan" ariaLabel="Ciblage SEO" />
                 </div>
                 <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   SEO local & contenu
@@ -300,7 +287,7 @@ export default function CreationSiteWebPage() {
             <div className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 group">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-400/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <div className="text-purple-400" dangerouslySetInnerHTML={{__html: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>`}} />
+                  <IconeOSOM type="chart" size={32} color="purple" ariaLabel="Analyses et données" />
                 </div>
                 <h3 className="text-white font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Analyse & CRM
@@ -493,7 +480,7 @@ export default function CreationSiteWebPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-400/20 flex items-center justify-center">
-                  <div className="text-blue-400" dangerouslySetInnerHTML={{__html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>`}} />
+                  <IconeOSOM type="clock" size={40} color="cyan" ariaLabel="Temps précieux" />
                 </div>
                 <h3 className="text-blue-400 font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Votre temps précieux
@@ -505,7 +492,7 @@ export default function CreationSiteWebPage() {
               
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-teal-400/20 flex items-center justify-center">
-                  <div className="text-teal-400" dangerouslySetInnerHTML={{__html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`}} />
+                  <IconeOSOM type="star" size={40} color="cyan" ariaLabel="Expertise reconnue" />
                 </div>
                 <h3 className="text-teal-400 font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Notre expertise
@@ -517,7 +504,7 @@ export default function CreationSiteWebPage() {
               
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-400/20 flex items-center justify-center">
-                  <div className="text-green-400" dangerouslySetInnerHTML={{__html: `<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9s10.3-3.9 14.2 0 3.9 10.3 0 14.2-10.3 3.9-14.2 0z"/><path d="M13.5 10.5L19 5"/><path d="M10.5 13.5L16 19"/><path d="M16 8L8 16"/></svg>`}} />
+                  <IconeOSOM type="rocket" size={40} color="green" ariaLabel="Résultats obtenus" />
                 </div>
                 <h3 className="text-green-400 font-bold text-xl mb-4" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                   Votre résultat
@@ -549,7 +536,13 @@ export default function CreationSiteWebPage() {
               <div key={index} className="bg-gradient-to-br from-black/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-teal-400/20 hover:border-teal-400/40 transition-all duration-300 group">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-teal-400/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-teal-400" dangerouslySetInnerHTML={{__html: story.svg}} />
+                    <IconeOSOM 
+                      type={story.icon as any} 
+                      size={32} 
+                      color="cyan" 
+                      ariaLabel={`Icône ${story.type}`} 
+                      withAnimation 
+                    />
                   </div>
                   <h3 className="text-teal-400 font-bold text-lg mb-2" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
                     {story.type}
@@ -669,19 +662,19 @@ export default function CreationSiteWebPage() {
                 <h3 className="text-red-400 font-bold text-2xl mb-6 text-center">AVANT</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="text-red-400">❌</div>
+                    <IconeOSOM type="cross" size={20} color="red" ariaLabel="Site lent problématique" />
                     <p className="text-gray-300">Site lent qui fait fuir les prospects</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="text-red-400">❌</div>
+                    <IconeOSOM type="cross" size={20} color="red" ariaLabel="Design obsolète" />
                     <p className="text-gray-300">Design daté qui nuit à la crédibilité</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="text-red-400">❌</div>
+                    <IconeOSOM type="cross" size={20} color="red" ariaLabel="Peu de demandes" />
                     <p className="text-gray-300">Peu de demandes qualifiées</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="text-red-400">❌</div>
+                    <IconeOSOM type="cross" size={20} color="red" ariaLabel="Référencement invisible" />
                     <p className="text-gray-300">Référencement Google invisible</p>
                   </div>
                 </div>
@@ -691,19 +684,19 @@ export default function CreationSiteWebPage() {
                 <h3 className="text-green-400 font-bold text-2xl mb-6 text-center">OSOM</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="text-green-400">✅</div>
+                    <IconeOSOM type="check" size={20} color="green" ariaLabel="Site accéléré" />
                     <p className="text-gray-300">Accélérer le site (&lt; 2s) pour retenir les visiteurs</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="text-green-400">✅</div>
+                    <IconeOSOM type="check" size={20} color="green" ariaLabel="Design modernisé" />
                     <p className="text-gray-300">Moderniser le design pour inspirer confiance</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="text-green-400">✅</div>
+                    <IconeOSOM type="check" size={20} color="green" ariaLabel="Conversions augmentées" />
                     <p className="text-gray-300">Augmenter les demandes via conversion optimisée</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="text-green-400">✅</div>
+                    <IconeOSOM type="check" size={20} color="green" ariaLabel="SEO renforcé" />
                     <p className="text-gray-300">Renforcer la visibilité locale avec SEO premium</p>
                   </div>
                 </div>
@@ -791,7 +784,13 @@ export default function CreationSiteWebPage() {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {sectorsExpertise.map((sector, index) => (
                 <div key={index} className="inline-flex items-center space-x-2 bg-black/40 rounded-full px-4 py-2 border border-gray-700/50 hover:border-teal-400/40 transition-colors duration-300">
-                  <div className="text-teal-400" dangerouslySetInnerHTML={{__html: sector.svg}} />
+                  <IconeOSOM 
+                    type={sector.icon} 
+                    size={20} 
+                    color="cyan" 
+                    ariaLabel={`Secteur ${sector.name}`} 
+                    withAnimation 
+                  />
                   <div className="text-gray-300 text-sm">{sector.name}</div>
                 </div>
               ))}
@@ -925,7 +924,7 @@ export default function CreationSiteWebPage() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="text-center">
                       <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-yellow-400/20 flex items-center justify-center">
-                        <div className="text-yellow-400" dangerouslySetInnerHTML={{__html: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`}} />
+                        <IconeOSOM type="star" size={24} color="yellow" ariaLabel="Accompagnement premium" />
                       </div>
                       <h5 className="text-yellow-400 font-bold mb-2">Accompagnement premium</h5>
                       <p className="text-gray-300 text-sm">Proximité, suivi mensuel, reporting exécutif clair</p>
@@ -933,7 +932,7 @@ export default function CreationSiteWebPage() {
                     
                     <div className="text-center">
                       <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-teal-400/20 flex items-center justify-center">
-                        <div className="text-teal-400" dangerouslySetInnerHTML={{__html: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="2" y="9" width="20" height="11" rx="2" ry="2"/><circle cx="12" cy="15" r="1"/></svg>`}} />
+                        <IconeOSOM type="shield" size={24} color="cyan" ariaLabel="Expertise sécurisée" />
                       </div>
                       <h5 className="text-teal-400 font-bold mb-2">Expertise reconnue</h5>
                       <p className="text-gray-300 text-sm">Design premium, SEO stratégique, marketing digital</p>
@@ -941,7 +940,7 @@ export default function CreationSiteWebPage() {
                     
                     <div className="text-center">
                       <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-green-400/20 flex items-center justify-center">
-                        <div className="text-green-400" dangerouslySetInnerHTML={{__html: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>`}} />
+                        <IconeOSOM type="chart" size={24} color="green" ariaLabel="Investissement rentable" />
                       </div>
                       <h5 className="text-green-400 font-bold mb-2">Investissement rentable</h5>
                       <p className="text-gray-300 text-sm">ROI rapide, tarification transparente, aucun engagement</p>
@@ -1042,9 +1041,10 @@ export default function CreationSiteWebPage() {
                 </Link>
                 <Link
                   href="/blog/tracking-invisible-roi"
-                  className="block text-center text-teal-400 hover:text-teal-300 transition-colors duration-300 text-sm"
+                  className="inline-flex items-center justify-center space-x-2 text-teal-400 hover:text-teal-300 transition-colors duration-300 text-sm"
                 >
-                  📚 Comment optimiser le référencement d'un cabinet médical →
+                  <IconeOSOM type="document" size={16} color="cyan" ariaLabel="Guide référencement" />
+                  <span>Comment optimiser le référencement d'un cabinet médical →</span>
                 </Link>
               </div>
             </div>
