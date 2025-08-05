@@ -199,61 +199,161 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
               </motion.div>
             </motion.div>
             
-            {/* Main Title with staggered animation */}
-            <motion.h1 
-              className="text-5xl md:text-6xl font-bold lowercase text-white mb-8 leading-tight" 
+            {/* HERO CRÉATIF AUDACIEUX - Jeux Typographiques Dynamiques */}
+            <motion.div 
+              className="mb-8 leading-tight" 
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               variants={titleVariants}
               transition={{ duration: 1, ease: [0.25, 0.25, 0.25, 0.75] }}
             >
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+              {/* Ligne 1: "Nous ne faisons pas que du" - petite taille */}
+              <motion.div
+                className="text-xl md:text-2xl font-light text-gray-300 mb-2"
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                {dictionary.hero.title_line1}{' '}
-              </motion.span>
-              <motion.span 
-                className="text-yellow-400 font-bold"
-                initial={{ opacity: 0, scale: 0.8 }}
+                Nous ne faisons pas que du
+              </motion.div>
+              
+              {/* Ligne 2: "MARKETING" - très grande taille */}
+              <motion.div
+                className="text-7xl md:text-9xl font-black text-yellow-400 leading-none mb-4"
+                initial={{ opacity: 0, scale: 0.7 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  textShadow: "0 0 30px rgba(251, 191, 36, 0.5)"
+                }}
               >
-                {dictionary.hero.title_focus}
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                MARKETING
+              </motion.div>
+              
+              {/* Ligne 3: "nous créons des" - taille moyenne */}
+              <motion.div
+                className="text-3xl md:text-4xl font-light text-white mb-2"
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                .<br />
-                {dictionary.hero.title_line2}{' '}
-              </motion.span>
-              <motion.span 
-                className="text-yellow-400 font-bold"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                nous créons des
+              </motion.div>
+              
+              {/* Ligne 4: "HISTOIRES" - grande taille avec effet */}
+              <motion.div
+                className="text-6xl md:text-8xl font-bold text-white leading-none mb-3 relative"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.8 }}
               >
-                {dictionary.hero.title_impact}
-              </motion.span>
-              <motion.span
+                <span className="relative">
+                  HISTOIRES
+                  {/* Effet de brillance */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
+                    initial={{ x: "-100%" }}
+                    animate={{ x: "200%" }}
+                    transition={{ 
+                      duration: 2, 
+                      delay: 2,
+                      repeat: Infinity, 
+                      repeatDelay: 5 
+                    }}
+                  />
+                </span>
+              </motion.div>
+              
+              {/* Ligne 5: "qui" - petite taille italique */}
+              <motion.div
+                className="text-lg md:text-xl font-light text-gray-400 italic mb-1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
+              >
+                qui
+              </motion.div>
+              
+              {/* Ligne 6: "VENDENT" - très grande taille avec animation */}
+              <motion.div
+                className="text-8xl md:text-9xl font-black text-green-400 leading-none relative"
+                initial={{ opacity: 0, rotateX: 90 }}
+                animate={{ opacity: 1, rotateX: 0 }}
+                transition={{ duration: 1.2, delay: 1.2 }}
+                whileHover={{ 
+                  scale: 1.02,
+                  color: "#10B981",
+                  textShadow: "0 0 40px rgba(16, 185, 129, 0.6)"
+                }}
+              >
+                VENDENT
+                {/* Particules flottantes autour du mot */}
+                {[...Array(6)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-green-400 rounded-full"
+                    style={{
+                      left: `${10 + i * 15}%`,
+                      top: `${20 + (i % 2) * 60}%`
+                    }}
+                    animate={{
+                      y: [-10, -30, -10],
+                      opacity: [0.3, 0.8, 0.3],
+                      scale: [0.5, 1, 0.5]
+                    }}
+                    transition={{
+                      duration: 3 + i * 0.5,
+                      repeat: Infinity,
+                      delay: 1.5 + i * 0.2
+                    }}
+                  />
+                ))}
+              </motion.div>
+              
+              {/* Signature créative en bas */}
+              <motion.div
+                className="text-sm md:text-base text-purple-400 font-medium mt-6 flex items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.0 }}
+                transition={{ duration: 0.8, delay: 1.8 }}
               >
-                .
-              </motion.span>
-            </motion.h1>
+                <motion.div 
+                  className="w-8 h-0.5 bg-purple-400 mr-3"
+                  initial={{ width: 0 }}
+                  animate={{ width: 32 }}
+                  transition={{ duration: 1, delay: 2 }}
+                />
+                Agence Créative × Intelligence Artificielle
+                <motion.div 
+                  className="w-8 h-0.5 bg-purple-400 ml-3"
+                  initial={{ width: 0 }}
+                  animate={{ width: 32 }}
+                  transition={{ duration: 1, delay: 2.2 }}
+                />
+              </motion.div>
+            </motion.div>
             
-            {/* Description */}
-            <motion.p 
-              className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl" 
+            {/* Description Créative */}
+            <motion.div 
+              className="mb-12 max-w-2xl" 
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               variants={itemVariants}
             >
-              {dictionary.hero.description}
-            </motion.p>
+              <p className="text-xl text-gray-300 leading-relaxed mb-4">
+                <span className="text-yellow-400 font-semibold">25% de taux de clic</span> vs <span className="line-through text-gray-500">2-3% industrie</span> ? 
+                <br />Parce que nos <span className="text-green-400 font-semibold">histoires captivantes</span> touchent l'émotion 
+                avant de convaincre par la logique.
+              </p>
+              
+              <motion.div 
+                className="text-lg text-gray-400 italic pl-4 border-l-2 border-purple-400/30"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 2.5, duration: 0.8 }}
+              >
+                "L'IA amplifie notre créativité, l'humain guide l'âme de vos projets"
+              </motion.div>
+            </motion.div>
             
             {/* CTA Buttons */}
             <motion.div 

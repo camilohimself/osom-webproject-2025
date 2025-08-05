@@ -13,6 +13,7 @@ import AnimatedElement from '@/components/ui/AnimatedElement'
 import InteractiveBackground from '@/components/ui/InteractiveBackground'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 import MagneticButton from '@/components/ui/MagneticButton'
+import IconeOSOM from '@/components/IconeOSOM'
 
 export const metadata: Metadata = {
   title: 'Agence Web Valais OSOM | Marketing IA × Création Site Internet',
@@ -154,28 +155,56 @@ export default async function Home() {
       {/* Hero Premium Section */}
       <HeroPremium dictionary={dictionary.home} />
 
-      {/* Les 3 Forces OSOM - Design System Linear */}
+      {/* Les 3 Forces Créatives OSOM - Vision Narrative */}
       <section className="py-32 bg-black relative overflow-hidden">
-        {/* Background Pattern */}
+        {/* Background Pattern Créatif */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.15'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
           }} />
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedElement type="fadeIn" delay={0.2}>
             <div className="text-center mb-24">
-              <div className="flex items-center justify-center mb-4">
+              <div className="flex items-center justify-center mb-6">
                 <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-                <span className="text-yellow-400 text-sm font-medium tracking-wide">{dictionary.home.forces.badge}</span>
+                <span className="text-yellow-400 text-sm font-medium tracking-wide">LES 3 DIMENSIONS CRÉATIVES</span>
               </div>
-              <h2 className="text-4xl md:text-6xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Comment OSOM utilise la <span className="text-yellow-400 font-bold">data</span><br />
-                <span className="text-2xl md:text-3xl text-gray-300">pour le bénéfice de votre entreprise ?</span>
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Notre méthodologie SEO Valais s'appuie sur 3 piliers data-driven complémentaires. Chaque stratégie marketing digital est mesurée et optimisée pour maximiser votre retour sur investissement.
+              
+              {/* Titre avec jeux typographiques créatifs */}
+              <div className="mb-12 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                {/* Ligne 1: "Nous transformons vos" - taille moyenne */}
+                <div className="text-2xl md:text-3xl font-light text-gray-300 mb-2">
+                  Nous transformons vos
+                </div>
+                
+                {/* Ligne 2: "IDÉES" - grande taille avec animation */}
+                <div className="text-6xl md:text-8xl font-black text-yellow-400 leading-none mb-4 relative">
+                  IDÉES
+                  {/* Effet de brillance */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 opacity-0 animate-pulse" />
+                </div>
+                
+                {/* Ligne 3: "en" - petite taille italique */}
+                <div className="text-lg md:text-xl font-light text-gray-400 italic mb-2">
+                  en
+                </div>
+                
+                {/* Ligne 4: "EXPÉRIENCES" - très grande taille */}
+                <div className="text-7xl md:text-9xl font-black text-green-400 leading-none mb-3">
+                  EXPÉRIENCES
+                </div>
+                
+                {/* Ligne 5: "qui marquent les esprits" - taille moyenne */}
+                <div className="text-2xl md:text-3xl font-light text-white">
+                  qui marquent les esprits
+                </div>
+              </div>
+              
+              <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Trois forces créatives s'allient pour donner vie à vos projets : la <span className="text-yellow-400 font-semibold">créativité amplifiée par l'IA</span>, 
+                les <span className="text-cyan-400 font-semibold">insights qui inspirent</span>, et le <span className="text-green-400 font-semibold">code qui raconte</span> votre histoire unique.
               </p>
             </div>
           </AnimatedElement>
@@ -189,7 +218,7 @@ export default async function Home() {
           
           <div className="space-y-20">
             
-            {/* FORCE 1: MARKETING + IA Revolution pour Entrepreneurs */}
+            {/* FORCE 1: CRÉATIVITÉ AMPLIFIÉE PAR L'IA */}
             <AnimatedElement type="slideUp" delay={0.1}>
               <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group">
                 {/* Layout centré avec graphique intégré */}
@@ -197,44 +226,60 @@ export default async function Home() {
                   <div className="max-w-4xl mx-auto">
                     <div className="flex items-center justify-center mb-8">
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full mr-6 flex items-center justify-center">
-                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                        <IconeOSOM type="palette" size={32} color="white" ariaLabel="Créativité amplifiée" />
                       </div>
                       <div>
-                        <div className="text-purple-400 font-medium text-sm mb-2">FORCE #1 - MARKETING + IA</div>
+                        <div className="text-purple-400 font-medium text-sm mb-2">FORCE #1 - CRÉATIVITÉ AMPLIFIÉE PAR L'IA</div>
                       </div>
                     </div>
                     
                     <AnimatedElement type="fadeIn" delay={0.3}>
-                      <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        25% de taux de clic vs <span className="text-purple-400 font-bold">2-3% industrie</span><br />
-                        comment notre IA transforme votre marketing en <span className="text-purple-400 font-bold">machine à économies</span>
-                      </h3>
+                      <div className="text-center mb-10">
+                        {/* Titre créatif avec jeux typographiques */}
+                        <div className="text-3xl md:text-4xl font-light text-white mb-4">
+                          Quand l'IA devient votre
+                        </div>
+                        <div className="text-6xl md:text-7xl font-black text-purple-400 leading-none mb-4">
+                          MUSE CRÉATIVE
+                        </div>
+                        <div className="text-2xl md:text-3xl font-light text-gray-300">
+                          25% de taux de clic vs 2-3% industrie
+                        </div>
+                      </div>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Vos concurrents dépensent 1,500 CHF/mois en publicité inefficace. Notre IA optimise vos campagnes pour atteindre 25% de CTR et réduire vos coûts d'acquisition de 70%.
+                      L'intelligence artificielle ne remplace pas votre créativité, elle la <span className="text-purple-400 font-semibold">démultiplie</span>. 
+                      Chaque campagne devient une œuvre d'art data-driven qui touche l'émotion et génère des résultats exceptionnels.
                     </p>
                     
-                    {/* Arguments Business Entrepreneur */}
+                    {/* Histoire créative avec métaphores */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                      <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30">
-                        <div className="text-purple-400 font-bold text-lg mb-4">IA Marketing Automation Valais</div>
-                        <div className="text-gray-300 mb-4">Algorithmes propriétaires qui analysent comportements clients en temps réel. Personnalisation automatique des campagnes selon profil utilisateur et intention d'achat.</div>
-                        <div className="text-purple-400 text-sm">Algorithmes propriétaires</div>
+                      <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30 hover:bg-purple-400/15 transition-all duration-300">
+                        <div className="flex items-center mb-4">
+                          <IconeOSOM type="lightning" size={24} color="purple" ariaLabel="Idéation éclair" />
+                          <div className="text-purple-400 font-bold text-lg ml-3">L'Idéation Éclair</div>
+                        </div>
+                        <div className="text-gray-300 mb-4">En 30 secondes, notre IA génère 50 concepts créatifs basés sur l'analyse comportementale de votre audience. L'inspiration jaillit à la demande.</div>
+                        <div className="text-purple-400 text-sm italic">"De l'idée au concept en un éclair"</div>
                       </div>
                       
-                      <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30">
-                        <div className="text-purple-400 font-bold text-lg mb-4">Prédiction ROI Marketing Digital</div>
-                        <div className="text-gray-300 mb-4">Modèles prédictifs basés sur 200+ projets analysés. Visibilité complète sur retour attendu avant même de lancer une campagne marketing.</div>
-                        <div className="text-purple-400 text-sm">200+ projets analysés</div>
+                      <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30 hover:bg-purple-400/15 transition-all duration-300">
+                        <div className="flex items-center mb-4">
+                          <IconeOSOM type="target" size={24} color="purple" ariaLabel="Personnalisation émotionnelle" />
+                          <div className="text-purple-400 font-bold text-lg ml-3">L'Émotion Sur-Mesure</div>
+                        </div>
+                        <div className="text-gray-300 mb-4">Chaque message s'adapte à la personnalité de votre prospect. L'IA analyse et personnalise le ton, les mots, les couleurs pour créer une connexion authentique.</div>
+                        <div className="text-purple-400 text-sm italic">"Une histoire unique pour chaque cœur"</div>
                       </div>
                       
-                      <div className="bg-purple-400/5 rounded-xl p-6 border border-purple-400/20">
-                        <div className="text-purple-400 font-bold text-lg mb-4">Analytics Marketing Temps Réel</div>
-                        <div className="text-gray-300 mb-4">Dashboard en temps réel avec recommandations automatiques d'optimisation. Ajustements immédiats basés sur performance live des campagnes.</div>
-                        <div className="text-purple-400 text-sm">Dashboard temps réel</div>
+                      <div className="bg-purple-400/5 rounded-xl p-6 border border-purple-400/20 hover:bg-purple-400/10 transition-all duration-300">
+                        <div className="flex items-center mb-4">
+                          <IconeOSOM type="star" size={24} color="purple" ariaLabel="Optimisation créative" />
+                          <div className="text-purple-400 font-bold text-lg ml-3">L'Optimisation Artistique</div>
+                        </div>
+                        <div className="text-gray-300 mb-4">Votre créativité évolue en temps réel. L'IA apprend de chaque interaction pour affiner vos prochaines créations et maximiser leur impact émotionnel.</div>
+                        <div className="text-purple-400 text-sm italic">"L'art qui s'améliore avec le temps"</div>
                       </div>
                     </div>
                     
@@ -276,7 +321,7 @@ export default async function Home() {
               </div>
             </AnimatedElement>
             
-            {/* FORCE 2: Data Analytics & SEO Revolution pour Entrepreneurs */}
+            {/* FORCE 2: INSIGHTS QUI INSPIRENT */}
             <AnimatedElement type="slideUp" delay={0.3}>
               <div className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/10 transition-all duration-500 group">
               {/* Layout centré avec background graphique */}
@@ -299,51 +344,69 @@ export default async function Home() {
                   <div className="max-w-4xl mx-auto text-center">
                     <div className="flex items-center justify-center mb-8">
                       <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-6 flex items-center justify-center">
-                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/>
-                          <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/>
-                        </svg>
+                        <IconeOSOM type="search" size={32} color="white" ariaLabel="Insights inspirants" />
                       </div>
                       <div>
-                        <div className="text-cyan-400 font-medium text-sm mb-2">FORCE 2 • DATA ANALYTICS & SEO</div>
+                        <div className="text-cyan-400 font-medium text-sm mb-2">FORCE #2 - INSIGHTS QUI INSPIRENT</div>
                       </div>
                     </div>
                     
                     <AnimatedElement type="fadeIn" delay={0.4}>
-                      <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        Analytics SEO Valais : <span className="text-cyan-400 font-bold">688 conversions</span> vs <span className="text-cyan-400 font-bold">49 concurrents</span><br />
-                        Quand l'analyse de données révèle votre <span className="text-cyan-400 font-bold">potentiel caché</span>
-                      </h3>
+                      <div className="text-center mb-10">
+                        {/* Titre créatif avec jeux typographiques */}
+                        <div className="text-3xl md:text-4xl font-light text-white mb-4">
+                          Vos données cachent des
+                        </div>
+                        <div className="text-6xl md:text-7xl font-black text-cyan-400 leading-none mb-4">
+                          TRÉSORS D'INSPIRATION
+                        </div>
+                        <div className="text-2xl md:text-3xl font-light text-gray-300">
+                          688 conversions vs 49 traditionnelles
+                        </div>
+                      </div>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Audit SEO approfondi : Pendant que vos concurrents achètent du trafic payant, notre analyse Google Analytics révèle 14'171 sessions organiques "perdues". Résultat : 12x plus de conversions à budget marketing égal.
+                      Chaque clic raconte une histoire. Chaque session révèle un désir. Nous transformons vos données brutes en 
+                      <span className="text-cyan-400 font-semibold"> insights créatifs</span> qui inspirent vos prochaines campagnes et révèlent des opportunités insoupçonnées.
                     </p>
                     
-                    {/* Arguments Business Entrepreneur */}
+                    {/* Histoire créative avec métaphores */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                      <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Audit SEO Sessions Perdues</div>
-                        <div className="text-gray-300 mb-4">Audit technique SEO : 14'171 sessions "Unassigned" révélées dans Google Analytics. ROI caché de CHF 47'000 découvert.</div>
-                        <div className="text-cyan-400 text-sm">Forensics data + attribution multi-canal</div>
+                      <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30 hover:bg-cyan-400/15 transition-all duration-300">
+                        <div className="flex items-center mb-4">
+                          <IconeOSOM type="search" size={24} color="cyan" ariaLabel="Détective des données" />
+                          <div className="text-cyan-400 font-bold text-lg ml-3">Le Détective des Données</div>
+                        </div>
+                        <div className="text-gray-300 mb-4">14'171 sessions "fantômes" découvertes dans vos analytics. Comme un détective numérique, nous révélons les traces invisibles de vos prospects et transformons l'inexpliqué en opportunités.</div>
+                        <div className="text-cyan-400 text-sm italic">"Chaque indice mène à une découverte"</div>
                       </div>
                       
-                      <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">SEO vs SEA Performance Audit</div>
-                        <div className="text-gray-300 mb-4">688 conversions référencement naturel vs 49 publicité payante (étude Entreprise PME). Optimisation budget marketing -70%.</div>
-                        <div className="text-cyan-400 text-sm">GA4 + Search Console + attribution</div>
+                      <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30 hover:bg-cyan-400/15 transition-all duration-300">
+                        <div className="flex items-center mb-4">
+                          <IconeOSOM type="target" size={24} color="cyan" ariaLabel="Cartographe des comportements" />
+                          <div className="text-cyan-400 font-bold text-lg ml-3">Le Cartographe des Désirs</div>
+                        </div>
+                        <div className="text-gray-300 mb-4">688 conversions vs 49 ? Nous cartographions les chemins secrets de vos clients. Chaque parcours devient une histoire qui inspire vos futures stratégies créatives.</div>
+                        <div className="text-cyan-400 text-sm italic">"Dessiner la carte du succès"</div>
                       </div>
                       
-                      <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">SEO technique + contenu Valais</div>
-                        <div className="text-gray-300 mb-4">68.6% engagement référencement naturel vs 44.6% trafic direct. Optimisation SEO technique + stratégie de contenu qui génère du trafic qualifié convertissant.</div>
-                        <div className="text-cyan-400 text-sm">Stratégie SEO long terme + ROI cumulé</div>
+                      <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20 hover:bg-cyan-400/10 transition-all duration-300">
+                        <div className="flex items-center mb-4">
+                          <IconeOSOM type="chart" size={24} color="cyan" ariaLabel="Prophète des tendances" />
+                          <div className="text-cyan-400 font-bold text-lg ml-3">Le Prophète des Tendances</div>
+                        </div>
+                        <div className="text-gray-300 mb-4">68.6% d'engagement ? Nous prédisons les désirs avant qu'ils ne se manifestent. Vos données deviennent boule de cristal pour anticiper les besoins de votre marché.</div>
+                        <div className="text-cyan-400 text-sm italic">"Voir l'avenir dans les données présentes"</div>
                       </div>
                       
-                      <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20">
-                        <div className="text-cyan-400 font-bold text-lg mb-4">Dashboard SEO temps réel</div>
-                        <div className="text-gray-300 mb-4">Monitoring SEO précis + alertes automatiques de performance. Pilotage business data-driven quotidien pour optimisation continue.</div>
-                        <div className="text-cyan-400 text-sm">Google Analytics + Search Console + automations</div>
+                      <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20 hover:bg-cyan-400/10 transition-all duration-300">
+                        <div className="flex items-center mb-4">
+                          <IconeOSOM type="lightning" size={24} color="cyan" ariaLabel="Alchimiste des insights" />
+                          <div className="text-cyan-400 font-bold text-lg ml-3">L'Alchimiste des Insights</div>
+                        </div>
+                        <div className="text-gray-300 mb-4">Transformateur de plomb en or : nous métamorphosons vos métriques froides en insights chauds qui nourrissent votre créativité et inspirent vos équipes.</div>
+                        <div className="text-cyan-400 text-sm italic">"L'art de transformer les chiffres en inspiration"</div>
                       </div>
                     </div>
                     
@@ -383,7 +446,7 @@ export default async function Home() {
               </div>
             </AnimatedElement>
             
-            {/* FORCE 3: Développement & IA Revolution pour Entrepreneurs */}
+            {/* FORCE 3: CODE QUI RACONTE */}
             <AnimatedElement type="slideUp" delay={0.5}>
               <div className="backdrop-blur-sm border border-green-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-green-400/40 hover:shadow-2xl hover:shadow-green-400/10 transition-all duration-500 group">
               {/* Layout asymétrique diagonal */}
@@ -393,50 +456,66 @@ export default async function Home() {
                   <div className="max-w-3xl">
                     <div className="flex items-center mb-8">
                       <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full mr-6 flex items-center justify-center">
-                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                        </svg>
+                        <IconeOSOM type="code" size={32} color="white" ariaLabel="Code qui raconte" />
                       </div>
                       <div>
-                        <div className="text-green-400 font-medium text-sm mb-2">FORCE 3 • DÉVELOPPEMENT WEB & IA VALAIS</div>
+                        <div className="text-green-400 font-medium text-sm mb-2">FORCE #3 - CODE QUI RACONTE</div>
                       </div>
                     </div>
                     
                     <AnimatedElement type="slideRight" delay={0.4}>
-                      <h3 className="text-4xl md:text-5xl font-light text-white mb-10 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        Développement web SEO Valais : <span className="text-green-400 font-bold">Stratégie Top 5</span><br />
-                        Votre SEO technique automatisé performe <span className="text-green-400 font-bold">24h/24</span>
-                      </h3>
+                      <div className="mb-10">
+                        {/* Titre créatif avec jeux typographiques */}
+                        <div className="text-3xl md:text-4xl font-light text-white mb-4">
+                          Votre code devient
+                        </div>
+                        <div className="text-5xl md:text-6xl font-black text-green-400 leading-none mb-4">
+                          CONTEUR DIGITAL
+                        </div>
+                        <div className="text-2xl md:text-3xl font-light text-gray-300">
+                          Performance &lt; 2s • Stratégie Top 5 Google
+                        </div>
+                      </div>
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Agence web Valais : 564 impressions ciblées sur mots-clés concurrentiels pour viser le Top 5 Google. Notre développement Next.js 15 + IA optimise sites web avec performance &lt; 2s et référencement naturel continu.
+                      Chaque ligne de code raconte un chapitre de votre histoire. Notre développement ne se contente pas de fonctionner : 
+                      il <span className="text-green-400 font-semibold">enchante</span>, <span className="text-green-400 font-semibold">émeut</span> et <span className="text-green-400 font-semibold">convertit</span> vos visiteurs en ambassadeurs passionnés.
                     </p>
                     
-                    {/* Arguments Business Entrepreneur */}
+                    {/* Histoire créative avec métaphores */}
                     <div className="space-y-6 mb-10">
-                      <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400">
+                      <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400 hover:from-green-400/15 transition-all duration-300">
                         <div className="flex justify-between items-start mb-3">
-                          <div className="font-semibold text-green-400">Développement web évolutif Valais</div>
+                          <div className="flex items-center">
+                            <IconeOSOM type="tools" size={20} color="green" ariaLabel="Architecte digital" />
+                            <div className="font-semibold text-green-400 ml-2">L'Architecte de Rêves Numériques</div>
+                          </div>
                           <div className="text-green-400 font-bold text-lg">0 refonte en 5 ans</div>
                         </div>
-                        <div className="text-gray-300">Next.js 15 + TypeScript. Stack moderne qui évolue avec votre business digital. Migrations automatiques pour sites web pérennes.</div>
-                        <div className="text-green-300 text-sm mt-2">Composants modulaires + API évolutives</div>
+                        <div className="text-gray-300">Comme un architecte visionnaire, nous bâtissons des fondations qui évoluent avec vos ambitions. Votre site grandit avec vous, s'adapte, se transforme sans jamais perdre son âme.</div>
+                        <div className="text-green-300 text-sm mt-2 italic">"Construire pour l'éternité numérique"</div>
                       </div>
                       
-                      <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400">
+                      <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400 hover:from-green-400/15 transition-all duration-300">
                         <div className="flex justify-between items-start mb-3">
-                          <div className="font-semibold text-green-400">Optimisation SEO technique</div>
+                          <div className="flex items-center">
+                            <IconeOSOM type="lightning" size={20} color="green" ariaLabel="Virtuose de la vitesse" />
+                            <div className="font-semibold text-green-400 ml-2">Le Virtuose de la Vitesse</div>
+                          </div>
                           <div className="text-green-400 font-bold text-lg">&lt; 2s chargement</div>
                         </div>
-                        <div className="text-gray-300">Core Web Vitals optimaux. SEO technique + vitesse = meilleur référencement Google automatique.</div>
-                        <div className="text-green-300 text-sm mt-2">Lighthouse 90+ score visé</div>
+                        <div className="text-gray-300">La patience n'existe plus à l'ère digitale. Nos sites s'affichent plus vite qu'un battement de cœur, créant cette magie du "tout de suite" qui transforme l'attente en émerveillement.</div>
+                        <div className="text-green-300 text-sm mt-2 italic">"L'art de ne jamais faire attendre"</div>
                       </div>
                       
-                      <div className="bg-gradient-to-r from-green-400/5 to-transparent rounded-lg p-6 border-l-4 border-green-300">
-                        <div className="font-semibold text-green-400 mb-3">Développement assisté par IA</div>
-                        <div className="text-gray-300">IA génère le code, expert humain valide et optimise. Productivité développement +200%, qualité sites web assurée.</div>
-                        <div className="text-green-300 text-sm mt-2">Première agence web Valais × IA</div>
+                      <div className="bg-gradient-to-r from-green-400/5 to-transparent rounded-lg p-6 border-l-4 border-green-300 hover:from-green-400/10 transition-all duration-300">
+                        <div className="flex items-center mb-3">
+                          <IconeOSOM type="rocket" size={20} color="green" ariaLabel="Symphoniste de l'innovation" />
+                          <div className="font-semibold text-green-400 ml-2">Le Symphoniste de l'Innovation</div>
+                        </div>
+                        <div className="text-gray-300">L'IA compose, l'humain dirige l'orchestre. Chaque fonctionnalité devient une note parfaite dans la symphonie de votre expérience utilisateur. Créativité et technologie en parfaite harmonie.</div>
+                        <div className="text-green-300 text-sm mt-2 italic">"Quand la technologie danse avec l'émotion"</div>
                       </div>
                     </div>
                     
@@ -476,49 +555,93 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-black relative overflow-hidden">
-        {/* Background Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-transparent to-purple-500/5"></div>
+      {/* CTA Section - Agence Créative Premium */}
+      <section className="py-32 bg-black relative overflow-hidden">
+        {/* Background Gradient Créatif */}
+        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/8 via-purple-500/5 to-green-400/8"></div>
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.1'%3E%3Cpath d='m0 0h120v120H0z'/%3E%3Cpath d='m30 30h60v60H30z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            {dictionary.home.cta.title_line1} <span className="text-yellow-400 font-bold">{dictionary.home.cta.title_performances}</span> ?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            {dictionary.home.cta.description}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          {/* Titre créatif avec typographie audacieuse */}
+          <div className="mb-12 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            {/* Ligne 1: "Prêt à transformer" - taille moyenne */}
+            <div className="text-2xl md:text-3xl font-light text-gray-300 mb-2">
+              Prêt à transformer vos
+            </div>
+            
+            {/* Ligne 2: "IDÉES" - grande taille jaune */}
+            <div className="text-7xl md:text-8xl font-black text-yellow-400 leading-none mb-4">
+              IDÉES
+            </div>
+            
+            {/* Ligne 3: "en" - petite taille */}
+            <div className="text-lg md:text-xl font-light text-gray-400 italic mb-2">
+              en
+            </div>
+            
+            {/* Ligne 4: "SUCCÈS DIGITAL" - très grande taille verte */}
+            <div className="text-6xl md:text-7xl font-black text-green-400 leading-none mb-6">
+              SUCCÈS DIGITAL
+            </div>
+            
+            {/* Ligne 5: Question créative */}
+            <div className="text-2xl md:text-3xl font-light text-white">
+              qui marquent vraiment ?
+            </div>
+          </div>
+          
+          <p className="text-xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            Nous ne créons pas que des campagnes marketing : nous orchestrons des <span className="text-yellow-400 font-semibold">expériences émotionnelles</span> 
+            qui transforment vos prospects en ambassadeurs passionnés. <span className="text-green-400 font-semibold">L'IA amplifie votre créativité</span>, 
+            l'humain guide l'âme de vos projets.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <MagneticButton
               href="/contact"
               variant="primary"
-              className="text-lg px-10 py-5"
+              className="text-xl px-12 py-6 relative overflow-hidden group"
             >
-              {dictionary.home.cta.cta_primary}
+              <span className="relative z-10">Créons Votre Histoire</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </MagneticButton>
             <MagneticButton
-              href="/calculator"
+              href="/realisations"
               variant="secondary"
-              className="text-lg px-10 py-5"
+              className="text-xl px-12 py-6 border-2 border-gray-600 hover:border-purple-400 transition-all duration-300"
             >
-              {dictionary.home.cta.cta_secondary}
+              Voir Nos Créations
             </MagneticButton>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-8 text-gray-400 text-sm">
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-              <span>{dictionary.home.cta.trust_indicators.ga4}</span>
+          {/* Trust Indicators Créatifs */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300">
+              <div className="flex items-center justify-center mb-3">
+                <IconeOSOM type="star" size={24} color="purple" ariaLabel="Excellence créative" />
+                <span className="text-purple-400 font-semibold ml-2">Excellence Créative</span>
+              </div>
+              <p className="text-gray-300 text-sm">25% CTR vs 2-3% industrie</p>
             </div>
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
-              <span>{dictionary.home.cta.trust_indicators.results}</span>
+            
+            <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
+              <div className="flex items-center justify-center mb-3">
+                <IconeOSOM type="chart" size={24} color="cyan" ariaLabel="Résultats mesurables" />
+                <span className="text-cyan-400 font-semibold ml-2">Résultats Mesurables</span>
+              </div>
+              <p className="text-gray-300 text-sm">688 conversions vs 49 traditionnelles</p>
             </div>
-            <div className="flex items-center">
-              <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-              <span>{dictionary.home.cta.trust_indicators.guarantee}</span>
+            
+            <div className="bg-yellow-400/10 rounded-xl p-6 border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300">
+              <div className="flex items-center justify-center mb-3">
+                <IconeOSOM type="shield" size={24} color="yellow" ariaLabel="Engagement qualité" />
+                <span className="text-yellow-400 font-semibold ml-2">Engagement Qualité</span>
+              </div>
+              <p className="text-gray-300 text-sm">68.6% vs 44.6% trafic standard</p>
             </div>
           </div>
         </div>
