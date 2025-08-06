@@ -224,79 +224,15 @@ export default function AgencePage() {
             )}
           </div>
           
-          {/* Overlay gradient optimisé */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
-          {/* Twist Effect: Overlay dynamique avec vagues de couleur */}
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-transparent to-purple-400/5"
-            animate={{
-              background: [
-                "linear-gradient(90deg, rgba(255, 221, 0, 0.05), transparent, rgba(168, 85, 247, 0.05))",
-                "linear-gradient(135deg, rgba(168, 85, 247, 0.08), transparent, rgba(16, 185, 129, 0.05))",
-                "linear-gradient(180deg, rgba(16, 185, 129, 0.05), transparent, rgba(255, 221, 0, 0.08))",
-                "linear-gradient(225deg, rgba(255, 221, 0, 0.05), transparent, rgba(168, 85, 247, 0.05))",
-                "linear-gradient(270deg, rgba(168, 85, 247, 0.05), transparent, rgba(255, 221, 0, 0.05))"
-              ]
-            }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          />
+          {/* Overlay gradient simple et net */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80 z-1" />
           
-          {/* Twist Effect: Particules magnétiques qui suivent la vidéo - Optimisées */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={`video-particle-${i}`}
-                className="absolute w-1.5 h-1.5 bg-yellow-400/40 rounded-full"
-                style={{
-                  left: `${25 + (i * 10)}%`,
-                  top: `${35 + (i * 6)}%`,
-                }}
-                animate={{
-                  x: [0, 15, -10, 8, 0],
-                  y: [0, -20, 12, -8, 0],
-                  opacity: [0.2, 0.6, 0.3, 0.7, 0.2],
-                  scale: [1, 1.3, 0.9, 1.1, 1]
-                }}
-                transition={{
-                  duration: 6 + (i * 0.4),
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: i * 0.6
-                }}
-              />
-            ))}
-          </div>
         </motion.div>
 
-        {/* PARTICULES INTERACTIVES AVANCÉES - Réduites et contrôlées */}
-        <div className="absolute inset-0 z-5 pointer-events-none overflow-hidden">
-          {[...Array(25)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-yellow-400 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                x: (mousePosition.x - 960) * 0.01 * (i % 5),
-                y: (mousePosition.y - 540) * 0.01 * (i % 3),
-                opacity: [0.2, 0.8, 0.2],
-                scale: [1, 1.5, 1]
-              }}
-              transition={{
-                x: { type: "spring", stiffness: 50, damping: 50 },
-                y: { type: "spring", stiffness: 50, damping: 50 },
-                opacity: { duration: 3 + (i % 3), repeat: Infinity },
-                scale: { duration: 2 + (i % 2), repeat: Infinity, delay: i * 0.1 }
-              }}
-            />
-          ))}
-        </div>
 
         {/* TYPOGRAPHY CINÉMATOGRAPHIQUE PARALLAX */}
         <motion.div 
-          className="absolute inset-0 z-15 flex items-center justify-center"
+          className="absolute inset-0 z-10 flex items-center justify-center"
           style={{ 
             scale: heroScale,
             opacity: heroOpacity,
@@ -341,7 +277,7 @@ export default function AgencePage() {
               className="mb-8"
             >
               <motion.h1 
-                className="text-8xl md:text-9xl lg:text-[12rem] font-light leading-none"
+                className="text-6xl md:text-8xl lg:text-9xl font-light leading-none"
                 style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 whileHover={{ 
                   scale: 1.05,
@@ -457,7 +393,7 @@ export default function AgencePage() {
 
         {/* SCROLL INDICATOR CRÉATIF */}
         <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-25"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
