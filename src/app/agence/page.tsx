@@ -145,20 +145,20 @@ export default function AgencePage() {
   return (
     <div ref={containerRef} className="min-h-screen bg-black relative overflow-hidden">
       
-      {/* CURSEUR MAGNÉTIQUE CRÉATIF */}
+      {/* CURSEUR MAGNÉTIQUE CRÉATIF - Z-index réduit pour éviter masquage */}
       <motion.div
-        className="fixed w-8 h-8 pointer-events-none z-50 mix-blend-difference"
+        className="fixed w-6 h-6 pointer-events-none z-30 mix-blend-difference"
         style={{
-          left: mousePosition.x - 16,
-          top: mousePosition.y - 16,
+          left: mousePosition.x - 12,
+          top: mousePosition.y - 12,
         }}
         animate={{
-          scale: hoveredCard ? 2 : 1,
+          scale: hoveredCard ? 1.5 : 1,
           backgroundColor: hoveredCard ? "#FFDD00" : "#FFFFFF"
         }}
         transition={{ type: "spring", stiffness: 500, damping: 28 }}
       >
-        <div className="w-full h-full rounded-full bg-white opacity-80" />
+        <div className="w-full h-full rounded-full bg-white opacity-60" />
       </motion.div>
       
       {/* HERO CINÉMATOGRAPHIQUE RÉVOLUTIONNAIRE */}
@@ -197,13 +197,15 @@ export default function AgencePage() {
               <source src="/osom-motion.MP4" type="video/mp4" />
             </motion.video>
             
-            {/* Fallback pour navigateurs non compatibles */}
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-purple-400/10 to-black flex items-center justify-center">
-              <div className="text-white text-center max-w-md">
-                <h2 className="text-4xl font-bold mb-4">OSOM</h2>
-                <p className="text-lg opacity-80">Agence digitale premium</p>
+            {/* Fallback pour navigateurs non compatibles - Visible uniquement si vidéo échoue */}
+            {!videoLoaded && (
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-purple-400/10 to-black flex items-center justify-center">
+                <div className="text-white text-center max-w-md">
+                  <h2 className="text-4xl font-bold mb-4">OSOM</h2>
+                  <p className="text-lg opacity-80">Agence digitale premium</p>
+                </div>
               </div>
-            </div>
+            )}
             
             {/* Loading indicator stylé */}
             {!videoLoaded && (
@@ -239,36 +241,36 @@ export default function AgencePage() {
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           />
           
-          {/* Twist Effect: Particules magnétiques qui suivent la vidéo */}
-          <div className="absolute inset-0 pointer-events-none">
-            {[...Array(8)].map((_, i) => (
+          {/* Twist Effect: Particules magnétiques qui suivent la vidéo - Optimisées */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {[...Array(6)].map((_, i) => (
               <motion.div
                 key={`video-particle-${i}`}
-                className="absolute w-2 h-2 bg-yellow-400/60 rounded-full"
+                className="absolute w-1.5 h-1.5 bg-yellow-400/40 rounded-full"
                 style={{
-                  left: `${20 + (i * 12)}%`,
-                  top: `${30 + (i * 8)}%`,
+                  left: `${25 + (i * 10)}%`,
+                  top: `${35 + (i * 6)}%`,
                 }}
                 animate={{
-                  x: [0, 20, -15, 10, 0],
-                  y: [0, -25, 15, -10, 0],
-                  opacity: [0.3, 0.8, 0.4, 0.9, 0.3],
-                  scale: [1, 1.5, 0.8, 1.2, 1]
+                  x: [0, 15, -10, 8, 0],
+                  y: [0, -20, 12, -8, 0],
+                  opacity: [0.2, 0.6, 0.3, 0.7, 0.2],
+                  scale: [1, 1.3, 0.9, 1.1, 1]
                 }}
                 transition={{
-                  duration: 8 + (i * 0.5),
+                  duration: 6 + (i * 0.4),
                   repeat: Infinity,
                   ease: "easeInOut",
-                  delay: i * 0.8
+                  delay: i * 0.6
                 }}
               />
             ))}
           </div>
         </motion.div>
 
-        {/* PARTICULES INTERACTIVES AVANCÉES */}
-        <div className="absolute inset-0 z-10 pointer-events-none">
-          {[...Array(50)].map((_, i) => (
+        {/* PARTICULES INTERACTIVES AVANCÉES - Réduites et contrôlées */}
+        <div className="absolute inset-0 z-5 pointer-events-none overflow-hidden">
+          {[...Array(25)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-yellow-400 rounded-full"
@@ -294,7 +296,7 @@ export default function AgencePage() {
 
         {/* TYPOGRAPHY CINÉMATOGRAPHIQUE PARALLAX */}
         <motion.div 
-          className="absolute inset-0 z-20 flex items-center justify-center"
+          className="absolute inset-0 z-15 flex items-center justify-center"
           style={{ 
             scale: heroScale,
             opacity: heroOpacity,
@@ -455,7 +457,7 @@ export default function AgencePage() {
 
         {/* SCROLL INDICATOR CRÉATIF */}
         <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-25"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -481,7 +483,7 @@ export default function AgencePage() {
 
       {/* SECTION VIDEO SHOWCASE IMMERSIVE */}
       <section id="video-showcase" className="py-32 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           
           {/* Header avec animation révélatrice */}
           <motion.div
@@ -772,7 +774,7 @@ export default function AgencePage() {
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
           
           {/* Header avec morphing text */}
           <motion.div
@@ -1057,7 +1059,7 @@ export default function AgencePage() {
 
       {/* Timeline Section - Notre Histoire */}
       <section className="py-32 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -1125,7 +1127,7 @@ export default function AgencePage() {
           }} />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -1238,7 +1240,7 @@ export default function AgencePage() {
       <section className="py-32 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-green-400/5 to-purple-400/5"></div>
         
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-50">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
