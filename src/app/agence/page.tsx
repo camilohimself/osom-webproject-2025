@@ -8,7 +8,6 @@ export default function AgencePage() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   
   const containerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -22,14 +21,6 @@ export default function AgencePage() {
   const videoScale = useTransform(scrollYProgress, [0, 0.8], [1, 0.8])
   const videoRotate = useTransform(scrollYProgress, [0, 1], [0, 5])
   
-  // Mouse tracking pour interactions premium
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
   
   // Auto-play vidéo avec gestion d'état améliorée
   useEffect(() => {
@@ -145,21 +136,6 @@ export default function AgencePage() {
   return (
     <div ref={containerRef} className="min-h-screen bg-black relative overflow-hidden">
       
-      {/* CURSEUR MAGNÉTIQUE CRÉATIF - Z-index réduit pour éviter masquage */}
-      <motion.div
-        className="fixed w-6 h-6 pointer-events-none z-30 mix-blend-difference"
-        style={{
-          left: mousePosition.x - 12,
-          top: mousePosition.y - 12,
-        }}
-        animate={{
-          scale: hoveredCard ? 1.5 : 1,
-          backgroundColor: hoveredCard ? "#FFDD00" : "#FFFFFF"
-        }}
-        transition={{ type: "spring", stiffness: 500, damping: 28 }}
-      >
-        <div className="w-full h-full rounded-full bg-white opacity-60" />
-      </motion.div>
       
       {/* HERO CINÉMATOGRAPHIQUE RÉVOLUTIONNAIRE */}
       <section className="h-screen relative overflow-hidden">
@@ -248,25 +224,11 @@ export default function AgencePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <motion.div 
-                className="w-3 h-3 rounded-full bg-yellow-400 mr-4"
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0.5, 1, 0.5]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
+              <div className="w-3 h-3 rounded-full bg-yellow-400 mr-4" />
               <span className="text-yellow-400 text-sm font-medium tracking-[0.2em] uppercase">
                 CINEMATIC AGENCY EXPERIENCE
               </span>
-              <motion.div 
-                className="w-3 h-3 rounded-full bg-yellow-400 ml-4"
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0.5, 1, 0.5]
-                }}
-                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-              />
+              <div className="w-3 h-3 rounded-full bg-yellow-400 ml-4" />
             </motion.div>
             
             {/* Titre OSOM dramatique */}
@@ -391,29 +353,15 @@ export default function AgencePage() {
           </div>
         </motion.div>
 
-        {/* SCROLL INDICATOR CRÉATIF */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
+        {/* SCROLL INDICATOR STATIQUE */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
           <div className="flex flex-col items-center space-y-2">
             <span className="text-white/60 text-sm tracking-wider">SCROLL TO EXPLORE</span>
-            <motion.div 
-              className="w-6 h-10 border-2 border-white/40 rounded-full relative"
-              whileHover={{ borderColor: "#FFDD00" }}
-            >
-              <motion.div
-                className="w-1 h-3 bg-yellow-400 rounded-full absolute left-1/2 top-2 transform -translate-x-1/2"
-                animate={{ 
-                  y: [0, 16, 0],
-                  opacity: [1, 0, 1]
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </motion.div>
+            <div className="w-6 h-10 border-2 border-white/40 rounded-full relative">
+              <div className="w-1 h-3 bg-yellow-400 rounded-full absolute left-1/2 top-2 transform -translate-x-1/2" />
+            </div>
           </div>
-        </motion.div>
+        </div>
 
       </section>
 
