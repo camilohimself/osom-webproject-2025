@@ -31,12 +31,39 @@ export default function AgencePage() {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
   
-  // Auto-play vidéo avec gestion de l'état
+  // Auto-play vidéo avec gestion d'état améliorée
   useEffect(() => {
-    if (videoRef.current && videoLoaded) {
-      videoRef.current.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false))
+    if (videoRef.current) {
+      const video = videoRef.current
+      
+      // Configuration optimale pour la compatibilité
+      video.muted = true
+      video.playsInline = true
+      video.autoplay = true
+      video.loop = true
+      
+      // Tentative de lecture avec gestion d'erreur robuste
+      const attemptPlay = async () => {
+        try {
+          await video.play()
+          setIsPlaying(true)
+          setVideoLoaded(true)
+        } catch (error) {
+          console.log('Video autoplay blocked, will play on user interaction')
+          setIsPlaying(false)
+        }
+      }
+      
+      // Écouter l'événement canplay pour s'assurer que la vidéo est prête
+      video.addEventListener('canplay', attemptPlay)
+      video.addEventListener('loadeddata', () => setVideoLoaded(true))
+      
+      return () => {
+        video.removeEventListener('canplay', attemptPlay)
+        video.removeEventListener('loadeddata', () => setVideoLoaded(true))
+      }
     }
-  }, [videoLoaded])
+  }, [])
 
   const valeurs = [
     {
@@ -137,7 +164,7 @@ export default function AgencePage() {
       {/* HERO CINÉMATOGRAPHIQUE RÉVOLUTIONNAIRE */}
       <section className="h-screen relative overflow-hidden">
         
-        {/* VIDÉO OSOM MOTION - Background Cinématographique */}
+        {/* VIDÉO OSOM MOTION - Integration Directe Optimisée */}
         <motion.div 
           className="absolute inset-0 z-0"
           style={{ 
@@ -145,24 +172,98 @@ export default function AgencePage() {
             rotateX: videoRotate 
           }}
         >
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            onLoadedData={() => setVideoLoaded(true)}
-            className="w-full h-full object-cover"
-            style={{ 
-              filter: "brightness(0.4) contrast(1.2) saturate(1.1)",
-            }}
-          >
-            <source src="/assets/videos/osom-motion.MP4" type="video/mp4" />
-          </video>
+          {/* Container vidéo avec fallback */}
+          <div className="relative w-full h-full bg-black">
+            <motion.video
+              ref={videoRef}
+              className="w-full h-full object-cover"
+              style={{ 
+                filter: "brightness(0.6) contrast(1.1) saturate(1.05)",
+                transition: "filter 0.3s ease"
+              }}
+              animate={{
+                // Twist Effect: Léger mouvement de rotation et zoom cyclique
+                scale: [1, 1.03, 1],
+                rotateZ: [0, 0.5, 0, -0.5, 0]
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              preload="metadata"
+              webkit-playsinline="true"
+            >
+              <source src="/osom-motion.MP4" type="video/mp4" />
+            </motion.video>
+            
+            {/* Fallback pour navigateurs non compatibles */}
+            <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-purple-400/10 to-black flex items-center justify-center">
+              <div className="text-white text-center max-w-md">
+                <h2 className="text-4xl font-bold mb-4">OSOM</h2>
+                <p className="text-lg opacity-80">Agence digitale premium</p>
+              </div>
+            </div>
+            
+            {/* Loading indicator stylé */}
+            {!videoLoaded && (
+              <motion.div 
+                className="absolute inset-0 bg-black flex items-center justify-center"
+                initial={{ opacity: 1 }}
+                animate={{ opacity: videoLoaded ? 0 : 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <motion.div
+                  className="w-16 h-16 border-4 border-yellow-400/30 border-t-yellow-400 rounded-full"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                />
+              </motion.div>
+            )}
+          </div>
           
-          {/* Overlay gradient créatif */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 via-transparent to-purple-400/10" />
+          {/* Overlay gradient optimisé */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/70" />
+          {/* Twist Effect: Overlay dynamique avec vagues de couleur */}
+          <motion.div 
+            className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-transparent to-purple-400/5"
+            animate={{
+              background: [
+                "linear-gradient(90deg, rgba(255, 221, 0, 0.05), transparent, rgba(168, 85, 247, 0.05))",
+                "linear-gradient(135deg, rgba(168, 85, 247, 0.08), transparent, rgba(16, 185, 129, 0.05))",
+                "linear-gradient(180deg, rgba(16, 185, 129, 0.05), transparent, rgba(255, 221, 0, 0.08))",
+                "linear-gradient(225deg, rgba(255, 221, 0, 0.05), transparent, rgba(168, 85, 247, 0.05))",
+                "linear-gradient(270deg, rgba(168, 85, 247, 0.05), transparent, rgba(255, 221, 0, 0.05))"
+              ]
+            }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
+          
+          {/* Twist Effect: Particules magnétiques qui suivent la vidéo */}
+          <div className="absolute inset-0 pointer-events-none">
+            {[...Array(8)].map((_, i) => (
+              <motion.div
+                key={`video-particle-${i}`}
+                className="absolute w-2 h-2 bg-yellow-400/60 rounded-full"
+                style={{
+                  left: `${20 + (i * 12)}%`,
+                  top: `${30 + (i * 8)}%`,
+                }}
+                animate={{
+                  x: [0, 20, -15, 10, 0],
+                  y: [0, -25, 15, -10, 0],
+                  opacity: [0.3, 0.8, 0.4, 0.9, 0.3],
+                  scale: [1, 1.5, 0.8, 1.2, 1]
+                }}
+                transition={{
+                  duration: 8 + (i * 0.5),
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.8
+                }}
+              />
+            ))}
+          </div>
         </motion.div>
 
         {/* PARTICULES INTERACTIVES AVANCÉES */}
@@ -459,122 +560,131 @@ export default function AgencePage() {
             </motion.h2>
           </motion.div>
 
-          {/* Video Player Premium avec Sticky Effect */}
+          {/* Showcase Video Directement Intégré */}
           <motion.div
             className="relative mb-20"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.2, type: "spring", stiffness: 100 }}
+            transition={{ duration: 1 }}
           >
-            {/* Container 3D avec perspective */}
+            {/* Video Showcase avec effet morphing */}
             <motion.div
-              className="relative perspective-1000"
-              whileHover={{ rotateY: 2, rotateX: 1 }}
+              className="relative group cursor-pointer"
+              whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              onMouseEnter={() => setHoveredCard('video-player')}
+              onMouseEnter={() => setHoveredCard('video-showcase')}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              {/* Frame décoratif animé */}
+              {/* Éclairage dynamique */}
               <motion.div
-                className="absolute -inset-4 bg-gradient-to-r from-purple-400/20 via-yellow-400/20 to-green-400/20 rounded-3xl blur-xl"
+                className="absolute -inset-8 bg-gradient-to-r from-purple-400/10 via-yellow-400/15 to-green-400/10 rounded-3xl blur-2xl"
                 animate={{
-                  background: [
-                    "linear-gradient(90deg, rgba(168, 85, 247, 0.2), rgba(255, 221, 0, 0.2), rgba(16, 185, 129, 0.2))",
-                    "linear-gradient(180deg, rgba(255, 221, 0, 0.2), rgba(16, 185, 129, 0.2), rgba(168, 85, 247, 0.2))",
-                    "linear-gradient(270deg, rgba(16, 185, 129, 0.2), rgba(168, 85, 247, 0.2), rgba(255, 221, 0, 0.2))",
-                    "linear-gradient(360deg, rgba(168, 85, 247, 0.2), rgba(255, 221, 0, 0.2), rgba(16, 185, 129, 0.2))"
-                  ]
+                  opacity: hoveredCard === 'video-showcase' ? 0.8 : 0.3,
+                  scale: hoveredCard === 'video-showcase' ? 1.1 : 1
                 }}
-                transition={{ duration: 8, repeat: Infinity }}
+                transition={{ duration: 0.5 }}
               />
               
-              {/* Video Container principal */}
-              <div className="relative bg-black rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+              {/* Container principal minimaliste */}
+              <div className="relative bg-black/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
                 
-                {/* Video Element avec overlay interactif */}
+                {/* Video direct et centré */}
                 <div className="relative aspect-video">
-                  <video
+                  <motion.video
                     className="w-full h-full object-cover"
                     autoPlay
                     muted
                     loop
                     playsInline
+                    preload="metadata"
                     style={{ 
-                      filter: hoveredCard === 'video-player' 
-                        ? "brightness(1.1) contrast(1.1) saturate(1.2)" 
-                        : "brightness(0.9) contrast(1.0) saturate(1.0)"
+                      filter: hoveredCard === 'video-showcase'
+                        ? "brightness(1.2) contrast(1.15) saturate(1.1) hue-rotate(10deg)" 
+                        : "brightness(1.0) contrast(1.05) saturate(1.0)"
+                    }}
+                    animate={{
+                      scale: hoveredCard === 'video-showcase' ? 1.08 : 1.02,
+                      // Twist Effect: Rotation subtile continue
+                      rotateZ: hoveredCard === 'video-showcase' ? [0, 1, -1, 0] : [0, 0.3, 0],
+                      // Twist Effect: Léger effet de perspective
+                      rotateY: hoveredCard === 'video-showcase' ? [0, 2, -2, 0] : 0
+                    }}
+                    transition={{ 
+                      scale: { duration: 0.3 },
+                      rotateZ: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                      rotateY: { duration: 6, repeat: Infinity, ease: "easeInOut" }
                     }}
                   >
-                    <source src="/assets/videos/osom-motion.MP4" type="video/mp4" />
-                  </video>
+                    <source src="/osom-motion.MP4" type="video/mp4" />
+                  </motion.video>
                   
-                  {/* Overlay gradient interactif */}
+                  {/* Twist Effect: Overlay interactif avec vagues de lumière */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100"
-                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0"
+                    animate={{
+                      background: hoveredCard === 'video-showcase' ? [
+                        "radial-gradient(circle at 30% 40%, rgba(255, 221, 0, 0.15), transparent 50%)",
+                        "radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.15), transparent 50%)",
+                        "radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.15), transparent 50%)",
+                        "radial-gradient(circle at 30% 40%, rgba(255, 221, 0, 0.15), transparent 50%)"
+                      ] : [
+                        "radial-gradient(circle at 50% 50%, rgba(255, 221, 0, 0.05), transparent 70%)"
+                      ]
+                    }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   />
                   
-                  {/* Controls créatifs */}
+                  {/* Twist Effect: Scan laser animé */}
                   <motion.div
-                    className="absolute bottom-6 left-6 right-6"
+                    className="absolute inset-0 opacity-30"
+                    style={{
+                      background: "linear-gradient(90deg, transparent, rgba(255, 221, 0, 0.3), transparent)",
+                      width: "2px"
+                    }}
+                    animate={{
+                      x: ["-10px", "100vw"],
+                      opacity: hoveredCard === 'video-showcase' ? [0, 1, 0] : 0
+                    }}
+                    transition={{
+                      x: { duration: 2, repeat: Infinity, ease: "linear" },
+                      opacity: { duration: 0.3 }
+                    }}
+                  />
+                  
+                  {/* Badge flottant minimaliste */}
+                  <motion.div
+                    className="absolute top-6 right-6"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.5 }}
+                  >
+                    <div className="px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-yellow-400/30">
+                      <span className="text-yellow-400 text-xs font-medium tracking-wider">
+                        VISION DIRECTE
+                      </span>
+                    </div>
+                  </motion.div>
+                  
+                  {/* Titre intégré dans la vidéo */}
+                  <motion.div
+                    className="absolute bottom-8 left-8 right-8"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
                     transition={{ delay: 0.8 }}
                   >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
-                        <motion.button
-                          className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-yellow-400 hover:text-black transition-all duration-300"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.95 }}
-                          onClick={() => setIsPlaying(!isPlaying)}
-                        >
-                          {isPlaying ? '⏸' : '▶'}
-                        </motion.button>
-                        
-                        <div className="text-white text-sm">
-                          <div className="font-medium">OSOM Motion Reel</div>
-                          <div className="text-white/60">Créativité en mouvement</div>
-                        </div>
-                      </div>
-                      
-                      <motion.div
-                        className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white text-xs font-medium"
-                        animate={{
-                          boxShadow: [
-                            "0 0 0 0 rgba(255, 221, 0, 0)",
-                            "0 0 0 8px rgba(255, 221, 0, 0.1)",
-                            "0 0 0 0 rgba(255, 221, 0, 0)"
-                          ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        LIVE DEMO
-                      </motion.div>
+                    <div className="bg-black/40 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                      <h3 className="text-2xl font-light text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                        OSOM en Mouvement
+                      </h3>
+                      <p className="text-white/80 text-sm" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                        Notre créativité, votre succès - directement visible
+                      </p>
                     </div>
                   </motion.div>
                 </div>
               </div>
               
-              {/* Effets décoratifs flottants */}
-              <motion.div
-                className="absolute -top-8 -left-8 w-16 h-16 bg-purple-400/30 rounded-full blur-xl"
-                animate={{
-                  y: [0, -20, 0],
-                  scale: [1, 1.2, 1]
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-8 -right-8 w-20 h-20 bg-yellow-400/30 rounded-full blur-xl"
-                animate={{
-                  y: [0, 20, 0],
-                  scale: [1, 1.3, 1]
-                }}
-                transition={{ duration: 5, repeat: Infinity, delay: 2 }}
-              />
             </motion.div>
           </motion.div>
 
