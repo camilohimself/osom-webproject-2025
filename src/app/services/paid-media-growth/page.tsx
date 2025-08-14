@@ -362,51 +362,6 @@ export default function PaidMediaGrowthPage() {
         </div>
       </section>
 
-      {/* SUCCESS STORIES MAD MEN */}
-      <section className="py-24 relative">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-              Nos <span className="text-yellow-400 font-bold">victoires</span>
-            </h2>
-            <p className="text-xl text-gray-400">
-              Pas de théorie. Que des résultats.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {successStories.map((story, index) => (
-              <div key={index} className="bg-gradient-to-br from-black/90 to-gray-900/90 rounded-3xl p-8 border border-yellow-400/20">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
-                  <div>
-                    <div className="text-yellow-400 font-bold text-sm mb-1">CLIENT</div>
-                    <div className="text-white font-medium">{story.sector}</div>
-                  </div>
-                  <div>
-                    <div className="text-red-400 font-bold text-sm mb-1">PROBLÈME</div>
-                    <div className="text-gray-300 text-sm">{story.challenge}</div>
-                  </div>
-                  <div>
-                    <div className="text-blue-400 font-bold text-sm mb-1">SOLUTION</div>
-                    <div className="text-gray-300 text-sm">{story.solution}</div>
-                  </div>
-                  <div>
-                    <div className="text-green-400 font-bold text-sm mb-1">RÉSULTAT</div>
-                    <div className="text-green-400 font-medium text-sm">{story.result}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-400 italic">
-              "Nous ne travaillons qu'avec des clients qui veulent gagner. 
-              Les autres, on les laisse à la concurrence."
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* PRICING DIRECT */}
       <section className="py-24 relative">

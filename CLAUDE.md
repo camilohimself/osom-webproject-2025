@@ -34,10 +34,12 @@
 6. **TARGET** : Réduire de 1,200+ lignes → ~700 lignes (-40%)
 
 #### 🚨 URGENT - PROCHAINES PAGES À LIFTER
-**PRIORITÉ 1** : `/services/creation-site-web` (1,244 lignes → CRITIQUE)
-**PRIORITÉ 2** : `/services/seo-content-marketing`  
-**PRIORITÉ 3** : Page contact
-**PRIORITÉ 4** : Autres pages services
+**PRIORITÉ 1** : Page contact  
+**PRIORITÉ 2** : Autres pages services
+**PRIORITÉ 3** : **PAGE PAID MEDIA** - Retravailler contenu central
+  - Phrase à intégrer discrètement : "Nous ne travaillons qu'avec des clients qui veulent gagner. Les autres, on les laisse à la concurrence."
+  - Section entre "arsenal growth" et "pricing" manque de contenu
+  - Voir pour repositionning subtil de la phrase
 
 **CONSIGNES TECHNIQUES** :
 - Maintenir couleurs thème par service (Yellow-400, Purple-400, etc.)

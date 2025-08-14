@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { GraphiqueLinear } from '@/components/ui'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
@@ -47,6 +47,119 @@ interface HeroPremiumProps {
 
 const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
   const [hoveredMetric, setHoveredMetric] = useState<string | null>(null)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [isLoupeActive, setIsLoupeActive] = useState(false)
+  const [focusedService, setFocusedService] = useState<string | null>(null)
+  const [isDesktop, setIsDesktop] = useState(false)
+  const svgRef = useRef<HTMLDivElement>(null)
+
+  // Loupe premium settings
+  const loupeSize = 180
+  const zoomLevel = 2.8
+
+  // Services data with business KPIs
+  const services = {
+    'marketing': { 
+      x: 120, y: 250, 
+      name: 'MARKETING IA', 
+      subtitle: 'Claude × Analytics',
+      kpi: '25% CTR',
+      detail: 'vs 2-3% industrie',
+      color: '#10b981',
+      description: 'Intelligence artificielle pour campagnes qui convertissent'
+    },
+    'data': { 
+      x: 180, y: 200, 
+      name: 'DATA SCIENCE', 
+      subtitle: 'Insights × ROI',
+      kpi: '688 conversions',
+      detail: 'révélées en 6 mois',
+      color: '#06d6a0',
+      description: 'Transformation des données en opportunités business'
+    },
+    'dev': { 
+      x: 300, y: 240, 
+      name: 'DEV WEB', 
+      subtitle: 'Next.js × Performance',
+      kpi: '< 2s loading',
+      detail: 'garantie performance',
+      color: '#8b5cf6',
+      description: 'Sites web haute performance qui ne ralentissent jamais'
+    },
+    'automation': { 
+      x: 350, y: 180, 
+      name: 'AUTOMATION', 
+      subtitle: 'CRM × Workflow',
+      kpi: '+78% efficacité',
+      detail: '24h/24 sans pause',
+      color: '#06d6a0',
+      description: 'Automatisation intelligente de vos processus business'
+    }
+  }
+
+  // Détecter desktop
+  useEffect(() => {
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024)
+    }
+    
+    checkDesktop()
+    window.addEventListener('resize', checkDesktop)
+    
+    return () => window.removeEventListener('resize', checkDesktop)
+  }, [])
+
+  // Gérer le mouvement de la souris
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    if (!svgRef.current || !isDesktop) return
+    
+    const rect = svgRef.current.getBoundingClientRect()
+    
+    setMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    })
+
+    // Détecter survol d'un service
+    const tolerance = 25
+    let hoveredService = null
+    
+    Object.entries(services).forEach(([key, service]) => {
+      const serviceX = (service.x / 500) * rect.width
+      const serviceY = (service.y / 400) * rect.height
+      const distance = Math.sqrt(
+        Math.pow(e.clientX - rect.left - serviceX, 2) + 
+        Math.pow(e.clientY - rect.top - serviceY, 2)
+      )
+      
+      if (distance < tolerance) {
+        hoveredService = key
+      }
+    })
+    
+    setFocusedService(hoveredService)
+  }, [isDesktop])
+
+  const handleSvgMouseEnter = () => {
+    if (isDesktop) {
+      setIsLoupeActive(true)
+    }
+  }
+
+  const handleSvgMouseLeave = () => {
+    setIsLoupeActive(false)
+    setFocusedService(null)
+  }
+
+  useEffect(() => {
+    if (isLoupeActive) {
+      document.addEventListener('mousemove', handleMouseMove)
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [isLoupeActive, handleMouseMove])
 
   // Animation variants
   const containerVariants = {
@@ -458,189 +571,375 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
             </motion.div>
           </div>
           
-          {/* Right: Metaphorical Visual - Alpine Digital Ecosystem */}
+          {/* Right: Alpine Digital Explorer - Interactive Ecosystem */}
           <motion.div
             variants={chartVariants}
             transition={{ duration: 1.2, ease: [0.25, 0.25, 0.25, 0.75], delay: 0.5 }}
             className="relative"
           >
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1 }}
-              className="relative w-full h-96 flex items-center justify-center"
+            <div 
+              ref={svgRef}
+              className="relative w-full h-96 rounded-2xl overflow-visible"
+              onMouseEnter={handleSvgMouseEnter}
+              onMouseLeave={handleSvgMouseLeave}
+              style={{
+                cursor: isDesktop && isLoupeActive ? 'none' : 'default'
+              }}
             >
-              {/* Visuel SVG Écosystème Alpin Connecté */}
+              {/* Alpine SVG Ecosystem */}
               <svg viewBox="0 0 500 400" className="w-full h-full">
                 <defs>
-                  {/* Gradients pour l'écosystème */}
-                  <linearGradient id="mountain-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  {/* Gradients Premium */}
+                  <linearGradient id="mountain-premium" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" style={{stopColor: '#374151', stopOpacity: 0.9}} />
                     <stop offset="50%" style={{stopColor: '#1f2937', stopOpacity: 0.7}} />
                     <stop offset="100%" style={{stopColor: '#111827', stopOpacity: 0.8}} />
                   </linearGradient>
                   
-                  <radialGradient id="digital-light" cx="50%" cy="30%">
-                    <stop offset="0%" style={{stopColor: '#fbbf24', stopOpacity: 0.9}} />
-                    <stop offset="50%" style={{stopColor: '#f59e0b', stopOpacity: 0.6}} />
-                    <stop offset="100%" style={{stopColor: '#d97706', stopOpacity: 0.2}} />
+                  <radialGradient id="digital-beacon" cx="50%" cy="30%">
+                    <stop offset="0%" style={{stopColor: '#fbbf24', stopOpacity: 1}} />
+                    <stop offset="50%" style={{stopColor: '#f59e0b', stopOpacity: 0.8}} />
+                    <stop offset="100%" style={{stopColor: '#d97706', stopOpacity: 0.4}} />
                   </radialGradient>
 
-                  <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 0.8}} />
-                    <stop offset="50%" style={{stopColor: '#06d6a0', stopOpacity: 0.6}} />
-                    <stop offset="100%" style={{stopColor: '#8b5cf6', stopOpacity: 0.4}} />
+                  <linearGradient id="connection-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 0.9}} />
+                    <stop offset="50%" style={{stopColor: '#06d6a0', stopOpacity: 0.7}} />
+                    <stop offset="100%" style={{stopColor: '#8b5cf6', stopOpacity: 0.5}} />
                   </linearGradient>
+
+                  {/* Service Glows */}
+                  <filter id="service-glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge> 
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
                 </defs>
 
-                {/* Chaîne alpine en arrière-plan */}
+                {/* Alpine Background */}
                 <path 
                   d="M0,280 L100,200 L180,240 L250,180 L320,220 L420,160 L500,200 L500,400 L0,400 Z" 
-                  fill="url(#mountain-gradient)" 
-                  opacity="0.7"
+                  fill="url(#mountain-premium)" 
+                  opacity="0.8"
                 />
                 
-                {/* Sommets secondaires */}
+                {/* Secondary peaks */}
                 <path 
                   d="M50,250 L120,190 L200,230 L270,170 L350,210 L450,150 L500,180" 
                   fill="none" 
                   stroke="#374151" 
                   strokeWidth="2" 
-                  opacity="0.5"
+                  opacity="0.6"
                 />
 
-                {/* Phare Digital Central */}
+                {/* Central Digital Beacon - Enhanced */}
                 <g transform="translate(220, 120)">
-                  <rect x="0" y="40" width="20" height="60" fill="url(#digital-light)" rx="2" />
+                  <rect x="0" y="40" width="20" height="60" fill="url(#digital-beacon)" rx="2" />
                   <rect x="-5" y="30" width="30" height="15" fill="#fbbf24" rx="4" />
                   <polygon points="-10,30 10,10 30,30" fill="#f59e0b" />
                   
-                  {/* Rayonnement Digital Animé */}
-                  <g opacity="0.8">
-                    <path d="M10,25 L-30,5 L-25,0 L10,20 Z" fill="url(#digital-light)">
+                  {/* Beacon Pulse */}
+                  <circle cx="10" cy="25" r="5" fill="#fbbf24" opacity="0.6">
+                    <animate attributeName="r" values="5;15;5" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/>
+                  </circle>
+                  
+                  {/* Rotating Light Beams */}
+                  <g opacity="0.7">
+                    <path d="M10,25 L-40,5 L-35,0 L10,20 Z" fill="url(#digital-beacon)">
                       <animateTransform
                         attributeName="transform"
                         type="rotate"
                         values="0 10 25; 360 10 25"
-                        dur="12s"
+                        dur="15s"
                         repeatCount="indefinite"
                       />
                     </path>
-                    <path d="M10,25 L50,5 L45,0 L10,20 Z" fill="url(#digital-light)" opacity="0.6">
+                    <path d="M10,25 L60,5 L55,0 L10,20 Z" fill="url(#digital-beacon)" opacity="0.8">
                       <animateTransform
                         attributeName="transform"
                         type="rotate"
                         values="90 10 25; 450 10 25"
-                        dur="12s"
+                        dur="15s"
                         repeatCount="indefinite"
                       />
                     </path>
                   </g>
                 </g>
 
-                {/* Réseau de connexions IA */}
-                <g opacity="0.6">
-                  {/* Nœuds connectés représentant l'écosystème */}
-                  <circle cx="120" cy="250" r="4" fill="#10b981">
-                    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="180" cy="200" r="3" fill="#06d6a0">
-                    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="300" cy="240" r="4" fill="#8b5cf6">
-                    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="350" cy="180" r="3" fill="#06d6a0">
-                    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/>
-                  </circle>
-
-                  {/* Lignes de connexion animées */}
-                  <path d="M230,145 Q120,200 120,250" fill="none" stroke="url(#connection-gradient)" strokeWidth="2" opacity="0.5">
-                    <animate attributeName="stroke-dasharray" values="0,100;50,100;100,100" dur="4s" repeatCount="indefinite"/>
-                  </path>
-                  <path d="M230,145 Q180,170 180,200" fill="none" stroke="url(#connection-gradient)" strokeWidth="2" opacity="0.4">
-                    <animate attributeName="stroke-dasharray" values="0,80;40,80;80,80" dur="3s" repeatCount="indefinite"/>
-                  </path>
-                  <path d="M230,145 Q300,190 300,240" fill="none" stroke="url(#connection-gradient)" strokeWidth="2" opacity="0.6">
-                    <animate attributeName="stroke-dasharray" values="0,120;60,120;120,120" dur="5s" repeatCount="indefinite"/>
-                  </path>
-                  <path d="M230,145 Q350,160 350,180" fill="none" stroke="url(#connection-gradient)" strokeWidth="2" opacity="0.4">
-                    <animate attributeName="stroke-dasharray" values="0,90;45,90;90,90" dur="3.5s" repeatCount="indefinite"/>
-                  </path>
+                {/* Data Flow Connections - Animated */}
+                <g opacity="0.8">
+                  {Object.entries(services).map(([key, service]) => (
+                    <g key={key}>
+                      <path 
+                        d={`M230,145 Q${service.x-20},${service.y-30} ${service.x},${service.y}`} 
+                        fill="none" 
+                        stroke="url(#connection-flow)" 
+                        strokeWidth="3"
+                        opacity={focusedService === key ? "1" : "0.6"}
+                      >
+                        <animate 
+                          attributeName="stroke-dasharray" 
+                          values="0,100;50,100;100,100" 
+                          dur="4s" 
+                          repeatCount="indefinite"
+                        />
+                      </path>
+                      
+                      {/* Data Particles flowing */}
+                      <circle r="2" fill="#fbbf24">
+                        <animateMotion dur="3s" repeatCount="indefinite">
+                          <path d={`M230,145 Q${service.x-20},${service.y-30} ${service.x},${service.y}`}/>
+                        </animateMotion>
+                        <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+                      </circle>
+                    </g>
+                  ))}
                 </g>
 
-                {/* Éléments Data flottants */}
-                <g opacity="0.7">
-                  <rect x="80" y="280" width="12" height="8" fill="#fbbf24" rx="2">
-                    <animateTransform
-                      attributeName="transform" 
-                      type="translate"
-                      values="0,0; 0,-20; 0,0"
-                      dur="6s"
-                      repeatCount="indefinite"
-                    />
-                  </rect>
-                  <rect x="320" y="290" width="10" height="6" fill="#10b981" rx="1">
-                    <animateTransform
-                      attributeName="transform" 
-                      type="translate"
-                      values="0,0; 0,-15; 0,0"
-                      dur="4s"
-                      repeatCount="indefinite"
-                    />
-                  </rect>
-                  <rect x="380" y="270" width="8" height="5" fill="#8b5cf6" rx="1">
-                    <animateTransform
-                      attributeName="transform" 
-                      type="translate"
-                      values="0,0; 0,-25; 0,0"
-                      dur="7s"
-                      repeatCount="indefinite"
-                    />
-                  </rect>
-                </g>
-
-                {/* Labels écosystème */}
-                <text x="120" y="270" fill="#10b981" fontSize="8" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">MARKETING IA</text>
-                <text x="180" y="220" fill="#06d6a0" fontSize="8" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">DATA SCIENCE</text>
-                <text x="300" y="260" fill="#8b5cf6" fontSize="8" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">DEV WEB</text>
-                <text x="350" y="200" fill="#06d6a0" fontSize="8" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">AUTOMATION</text>
-              </svg>
-              
-              {/* Texte explicatif sous le visuel */}
-              <div className="absolute bottom-0 left-0 right-0 text-center">
-                <p className="text-sm text-gray-400 bg-black/60 backdrop-blur-sm rounded-lg px-4 py-2 mx-4">
+                {/* Service Nodes - Enhanced */}
+                {Object.entries(services).map(([key, service]) => (
+                  <g key={key}>
+                    {/* Glow effect when focused */}
+                    {focusedService === key && (
+                      <circle 
+                        cx={service.x} 
+                        cy={service.y} 
+                        r="20" 
+                        fill={service.color} 
+                        opacity="0.2"
+                        filter="url(#service-glow)"
+                      >
+                        <animate attributeName="r" values="20;25;20" dur="2s" repeatCount="indefinite"/>
+                      </circle>
+                    )}
+                    
+                    {/* Main Service Node */}
+                    <circle 
+                      cx={service.x} 
+                      cy={service.y} 
+                      r="8" 
+                      fill={service.color} 
+                      stroke={focusedService === key ? "#ffffff" : service.color} 
+                      strokeWidth="2"
+                      style={{
+                        filter: focusedService === key ? 'brightness(1.3)' : 'none',
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      <animate 
+                        attributeName="opacity" 
+                        values="0.7;1;0.7" 
+                        dur="3s" 
+                        repeatCount="indefinite"
+                      />
+                    </circle>
+                    
+                    {/* Service Label */}
+                    <text 
+                      x={service.x} 
+                      y={service.y + 25} 
+                      fill={service.color} 
+                      fontSize="10" 
+                      fontFamily="Cera PRO" 
+                      textAnchor="middle" 
+                      fontWeight="700"
+                      style={{
+                        filter: focusedService === key ? 'brightness(1.3)' : 'none'
+                      }}
+                    >
+                      {service.name}
+                    </text>
+                    
+                    {/* Service Subtitle */}
+                    <text 
+                      x={service.x} 
+                      y={service.y + 37} 
+                      fill={service.color} 
+                      fontSize="7" 
+                      fontFamily="Cera PRO" 
+                      textAnchor="middle" 
+                      opacity="0.8"
+                    >
+                      {service.subtitle}
+                    </text>
+                  </g>
+                ))}
+                
+                {/* Caption */}
+                <text x="250" y="385" fill="#9ca3af" fontSize="12" fontFamily="Cera PRO" textAnchor="middle" opacity="0.8">
                   Écosystème digital intégré guidant vos prospects vers votre expertise
-                </p>
-              </div>
-            </motion.div>
-            
-            {/* Floating accent elements */}
-            <motion.div
-              className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-yellow-400/20 blur-sm"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.6, 0.3]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <motion.div
-              className="absolute -bottom-6 -left-6 w-12 h-12 rounded-full bg-cyan-400/10 blur-md"
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.2, 0.4, 0.2]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-            />
+                </text>
+              </svg>
+
+              {/* ALPINE MAGNIFIER PREMIUM */}
+              <AnimatePresence>
+                {isLoupeActive && isDesktop && (
+                  <motion.div
+                    className="fixed pointer-events-none z-50"
+                    style={{
+                      left: (svgRef.current?.getBoundingClientRect().left || 0) + mousePosition.x - loupeSize / 2,
+                      top: (svgRef.current?.getBoundingClientRect().top || 0) + mousePosition.y - loupeSize / 2,
+                      width: loupeSize,
+                      height: loupeSize,
+                    }}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 0.95, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                  >
+                    {/* Swiss Premium Glass Effect */}
+                    <div 
+                      className="absolute inset-0 rounded-full overflow-hidden"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.6) 100%)',
+                        backdropFilter: 'blur(0.5px)',
+                        border: '3px solid rgba(255, 221, 0, 0.8)',
+                        boxShadow: `
+                          0 0 20px rgba(255, 221, 0, 0.4),
+                          inset 0 0 20px rgba(255, 255, 255, 0.1)
+                        `
+                      }}
+                    >
+                      {/* Magnified SVG Content */}
+                      <svg 
+                        viewBox={`${(mousePosition.x / (svgRef.current?.offsetWidth || 1)) * 500 - 60} ${(mousePosition.y / (svgRef.current?.offsetHeight || 1)) * 400 - 48} 120 96`}
+                        className="w-full h-full"
+                        style={{ 
+                          filter: 'brightness(1.4) contrast(1.3) saturate(1.2)',
+                          transform: `scale(${zoomLevel})`,
+                          transformOrigin: 'center'
+                        }}
+                      >
+                        {/* Magnified content with same structure */}
+                        <defs>
+                          <linearGradient id="mountain-zoom" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style={{stopColor: '#374151', stopOpacity: 0.9}} />
+                            <stop offset="50%" style={{stopColor: '#1f2937', stopOpacity: 0.7}} />
+                            <stop offset="100%" style={{stopColor: '#111827', stopOpacity: 0.8}} />
+                          </linearGradient>
+                          
+                          <radialGradient id="beacon-zoom" cx="50%" cy="30%">
+                            <stop offset="0%" style={{stopColor: '#fbbf24', stopOpacity: 1}} />
+                            <stop offset="50%" style={{stopColor: '#f59e0b', stopOpacity: 0.8}} />
+                            <stop offset="100%" style={{stopColor: '#d97706', stopOpacity: 0.4}} />
+                          </radialGradient>
+
+                          <linearGradient id="flow-zoom" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 0.9}} />
+                            <stop offset="50%" style={{stopColor: '#06d6a0', stopOpacity: 0.7}} />
+                            <stop offset="100%" style={{stopColor: '#8b5cf6', stopOpacity: 0.5}} />
+                          </linearGradient>
+                        </defs>
+
+                        <path d="M0,280 L100,200 L180,240 L250,180 L320,220 L420,160 L500,200 L500,400 L0,400 Z" fill="url(#mountain-zoom)" opacity="0.8"/>
+                        
+                        <g transform="translate(220, 120)">
+                          <rect x="0" y="40" width="20" height="60" fill="url(#beacon-zoom)" rx="2" />
+                          <rect x="-5" y="30" width="30" height="15" fill="#fbbf24" rx="4" />
+                          <polygon points="-10,30 10,10 30,30" fill="#f59e0b" />
+                        </g>
+
+                        {Object.entries(services).map(([key, service]) => (
+                          <g key={`zoom-${key}`}>
+                            <path 
+                              d={`M230,145 Q${service.x-20},${service.y-30} ${service.x},${service.y}`} 
+                              fill="none" 
+                              stroke="url(#flow-zoom)" 
+                              strokeWidth="4"
+                            />
+                            <circle cx={service.x} cy={service.y} r="10" fill={service.color} stroke="#ffffff" strokeWidth="2"/>
+                            <text x={service.x} y={service.y + 28} fill={service.color} fontSize="12" fontFamily="Cera PRO" textAnchor="middle" fontWeight="700">
+                              {service.name}
+                            </text>
+                            <text x={service.x} y={service.y + 42} fill={service.color} fontSize="8" fontFamily="Cera PRO" textAnchor="middle">
+                              {service.subtitle}
+                            </text>
+                          </g>
+                        ))}
+                      </svg>
+                    </div>
+                    
+                    {/* Premium Glass Reflection */}
+                    <div 
+                      className="absolute top-2 left-2 right-8 bottom-8 rounded-full"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 30%, transparent 60%)',
+                        pointerEvents: 'none'
+                      }}
+                    />
+                    
+                    {/* Swiss Precision Crosshair */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-4 h-px bg-yellow-400 opacity-80"></div>
+                      <div className="absolute w-px h-4 bg-yellow-400 opacity-80"></div>
+                      <div className="absolute w-1 h-1 bg-yellow-400 rounded-full opacity-60"></div>
+                    </div>
+
+                    {/* Service Info dans la loupe */}
+                    {focusedService && (
+                      <motion.div
+                        className="absolute bottom-2 left-2 right-2 bg-black/90 backdrop-blur-sm rounded-lg p-2 text-center"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <div className="text-yellow-400 font-bold text-xs mb-1">
+                          {services[focusedService as keyof typeof services].name}
+                        </div>
+                        <div className="text-green-400 font-bold text-sm">
+                          {services[focusedService as keyof typeof services].kpi}
+                        </div>
+                        <div className="text-gray-400 text-xs">
+                          {services[focusedService as keyof typeof services].detail}
+                        </div>
+                      </motion.div>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Service Focus Tooltip - Hors loupe uniquement */}
+              <AnimatePresence>
+                {focusedService && isDesktop && !isLoupeActive && (
+                  <motion.div
+                    className="fixed pointer-events-none z-40 bg-black/95 backdrop-blur-md rounded-xl border border-yellow-400/50 p-4 shadow-2xl"
+                    style={{
+                      left: (svgRef.current?.getBoundingClientRect().left || 0) + mousePosition.x + 30,
+                      top: (svgRef.current?.getBoundingClientRect().top || 0) + mousePosition.y - 80,
+                      maxWidth: '280px'
+                    }}
+                    initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="text-yellow-400 font-bold text-lg mb-2">
+                      {services[focusedService as keyof typeof services].name}
+                    </div>
+                    <div className="text-white text-sm mb-3">
+                      {services[focusedService as keyof typeof services].description}
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-green-400 font-bold text-xl">
+                          {services[focusedService as keyof typeof services].kpi}
+                        </div>
+                        <div className="text-gray-400 text-xs">
+                          {services[focusedService as keyof typeof services].detail}
+                        </div>
+                      </div>
+                      <div 
+                        className="w-4 h-4 rounded-full"
+                        style={{ backgroundColor: services[focusedService as keyof typeof services].color }}
+                      />
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </motion.div>
         </motion.div>
       </div>
