@@ -77,20 +77,44 @@ export default function CreationSiteWebPage() {
 
   const faqData = [
     {
-      question: "Comment choisir entre les différents packs ?",
-      answer: "Le pack ESSENTIEL convient parfaitement pour établir une première présence professionnelle en ligne. Le pack CROISSANCE est idéal si vous souhaitez développer activement votre acquisition client. Le SUR MESURE s'adresse aux projets avec des besoins techniques spécifiques. Nous pouvons en discuter ensemble pour identifier la meilleure option."
+      question: "Combien coûte un site web professionnel en Suisse ?",
+      answer: "Les prix varient selon vos besoins : notre pack ESSENTIEL à 1,990 CHF convient pour une présence professionnelle de base, tandis que le pack CROISSANCE à 4,990 CHF inclut le SEO avancé et l'acquisition client. En Suisse, un site professionnel coûte généralement entre 2,000 et 15,000 CHF. Nos tarifs incluent l'hébergement, la sécurité SSL et la conformité RGPD."
     },
     {
-      question: "En combien de temps puis-je espérer des résultats ?",
-      answer: "Les améliorations techniques sont immédiates dès la mise en ligne. Pour le référencement naturel, les premiers résultats apparaissent généralement entre 2 et 4 mois. L'acquisition client se développe progressivement selon votre secteur et votre implication dans la stratégie digitale."
+      question: "Quelle est la meilleure agence création site web en Valais ?",
+      answer: "OSOM est spécialisée dans la création de sites web performants en Valais depuis plusieurs années. Nous servons Sion, Martigny, Monthey et tout le canton. Notre approche combine intelligence artificielle et expertise humaine pour des résultats mesurables. Nos clients valaisans obtiennent en moyenne 25% de taux de clic vs 2-3% industrie."
     },
     {
-      question: "Pourrai-je gérer mon site de manière autonome ?",
-      answer: "Absolument. Nous formons systématiquement nos clients à l'utilisation de leur site. Vous pourrez modifier textes et images facilement. Pour les aspects techniques, notre support reste disponible selon votre formule."
+      question: "Comment créer un site web qui attire vraiment des clients ?",
+      answer: "Un site qui convertit combine 3 éléments : performance technique (chargement < 2 secondes), SEO local optimisé (apparaître sur Google Valais), et design orienté conversion. Notre méthode OSOM intègre l'IA pour analyser le comportement des visiteurs et optimiser automatiquement les taux de conversion. Résultat : 688 conversions vs 49 méthodes traditionnelles."
     },
     {
-      question: "Quelles garanties proposez-vous ?",
-      answer: "Nous garantissons un site performant techniquement avec un score de performance élevé. Satisfaction ou ajustements gratuits pendant 30 jours. Le support technique est inclus selon votre pack. Nous restons à vos côtés pour assurer le succès de votre projet digital."
+      question: "Référencement Google : combien de temps pour être en première page ?",
+      answer: "Pour le référencement local en Valais, les premiers résultats apparaissent en 2-4 mois. Les améliorations techniques sont immédiates. Notre stratégie SEO Valais cible les recherches locales ('entreprise Sion', 'service Martigny') où la concurrence est moins forte. Nous utilisons l'IA pour identifier les mots-clés les plus rentables pour votre secteur."
+    },
+    {
+      question: "WordPress ou site sur mesure : que choisir en 2025 ?",
+      answer: "WordPress convient pour 70% des projets mais limite la personnalisation. Un site sur mesure (Next.js + IA) offre des performances supérieures et une évolutivité totale. Notre pack CROISSANCE utilise des technologies modernes pour des sites 5x plus rapides que WordPress. L'IA intégrée optimise automatiquement les conversions."
+    },
+    {
+      question: "Mon site n'attire pas de clients, que faire ?",
+      answer: "Les causes principales : mauvais référencement local, design non-optimisé conversion, ou contenu inadapté. Notre audit gratuit identifie les blocages et propose des solutions concrètes. En Valais, nous aidons les entreprises à passer de 0 à 50+ leads qualifiés par mois grâce à notre approche IA + humain."
+    },
+    {
+      question: "Site web avec intelligence artificielle : quels avantages ?",
+      answer: "L'IA révolutionne la création web en 2025 : optimisation automatique des conversions, personnalisation du contenu selon le visiteur, et analyse prédictive des tendances. Nos sites IA obtiennent 10.9x plus de conversions que les sites traditionnels. L'IA gère aussi le SEO automatique et l'A/B testing continu."
+    },
+    {
+      question: "Délai de création site web professionnel Valais ?",
+      answer: "Délais réalistes : pack ESSENTIEL en 3 semaines, pack CROISSANCE en 6 semaines maximum. Notre processus agile permet des ajustements en temps réel. Nous respectons toujours les délais annoncés. Pour les projets urgents en Valais, nous proposons un accompagnement accéléré avec livraison express possible."
+    },
+    {
+      question: "Maintenance site web : combien ça coûte par mois en Suisse ?",
+      answer: "La maintenance incluse varie selon le pack : 3 mois pour ESSENTIEL, 12 mois pour CROISSANCE. Ensuite, comptez 150-300 CHF/mois selon la complexité. Notre maintenance IA surveille automatiquement la performance, sécurité et référencement. Support prioritaire pour tous nos clients valaisans."
+    },
+    {
+      question: "Comment mesurer le ROI de mon site web ?",
+      answer: "Nous installons un tracking complet : Google Analytics 4, pixels de conversion, et dashboards personnalisés. Nos clients valaisans voient en moyenne leurs leads augmenter de 280% dans les 6 premiers mois. L'IA analyse automatiquement vos métriques et suggère des optimisations pour maximiser le retour sur investissement."
     }
   ]
 
@@ -123,8 +147,90 @@ export default function CreationSiteWebPage() {
     }
   ]
 
+  // JSON-LD structured data pour FAQ rich snippets
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  }
+
+  // JSON-LD structured data pour service
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Création Site Web Professionnel Valais",
+    "description": "Agence création site web en Valais avec intelligence artificielle. Sites performants, SEO optimisé, 25% CTR vs 2-3% industrie. Sion, Martigny, Monthey.",
+    "provider": {
+      "@type": "Organization",
+      "name": "OSOM",
+      "url": "https://osom.ch",
+      "logo": "https://osom.ch/osom-logo.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Valais",
+        "addressCountry": "CH"
+      },
+      "telephone": "+41791289549",
+      "priceRange": "1990-4990 CHF"
+    },
+    "areaServed": [
+      {
+        "@type": "State",
+        "name": "Valais"
+      },
+      {
+        "@type": "City", 
+        "name": "Sion"
+      },
+      {
+        "@type": "City",
+        "name": "Martigny" 
+      }
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Pack Essentiel",
+        "price": "1990",
+        "priceCurrency": "CHF",
+        "description": "Site 5 pages responsive, SEO technique, Google Analytics"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Pack Croissance",
+        "price": "4990",
+        "priceCurrency": "CHF",
+        "description": "Solution complète SEO + IA, pages illimitées, accompagnement 12 mois"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "50"
+    }
+  }
+
   return (
     <div className="min-h-screen bg-black">
+      
+      {/* JSON-LD FAQ structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      
+      {/* JSON-LD Service structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       
       {/* HERO STORYTELLING MODÉRÉ */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16">
