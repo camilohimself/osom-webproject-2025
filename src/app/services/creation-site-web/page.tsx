@@ -3,11 +3,15 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import IconeOSOM from '@/components/IconeOSOM'
+import EmailModal from '@/components/contact/EmailModal'
 
 export default function CreationSiteWebPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [selectedTier, setSelectedTier] = useState<'tier2'>('tier2')
+  const [showContactModal, setShowContactModal] = useState(false)
+  const [showEmailModal, setShowEmailModal] = useState(false)
   
   // PRICING TIERS SAAS STYLE - MODÉRÉ
   const pricingTiers = [
@@ -87,6 +91,35 @@ export default function CreationSiteWebPage() {
     {
       question: "Quelles garanties proposez-vous ?",
       answer: "Nous garantissons un site performant techniquement avec un score de performance élevé. Satisfaction ou ajustements gratuits pendant 30 jours. Le support technique est inclus selon votre pack. Nous restons à vos côtés pour assurer le succès de votre projet digital."
+    }
+  ]
+
+  const contactOptions = [
+    {
+      title: "Contact WhatsApp Direct",
+      subtitle: "Échangez directement avec nous sur WhatsApp pour une réponse rapide et personnalisée.",
+      phone: "+41 79 128 95 49",
+      hours: "Réponse en 1h selon horaires d'ouverture",
+      action: "OUVRIR WHATSAPP",
+      color: "green",
+      icon: "whatsapp",
+      onClick: () => window.open('https://wa.me/41791289549', '_blank')
+    },
+    {
+      title: "Kit de Contact",
+      subtitle: "Documents et ressources pour préparer efficacement notre rencontre stratégique.",
+      action: "RECEVOIR MON KIT",
+      color: "cyan",
+      icon: "download",
+      onClick: () => setShowEmailModal(true)
+    },
+    {
+      title: "Questionnaire intelligent",
+      subtitle: "Outil avancé pour analyser vos besoins digitaux en quelques minutes seulement.",
+      action: "DÉMARRER LE DIAGNOSTIC",
+      color: "purple",
+      icon: "chart",
+      onClick: () => window.open('/questionnaire', '_blank')
     }
   ]
 
@@ -266,16 +299,29 @@ export default function CreationSiteWebPage() {
                   ))}
                 </ul>
 
-                <Link
-                  href={tier.id === 'tier3' ? '/contact' : `/contact?pack=${tier.id}`}
-                  className={`block w-full text-center py-4 rounded-xl font-bold transition-all duration-300 ${
-                    tier.popular
-                      ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-black hover:brightness-110'
-                      : 'border border-gray-600 text-gray-300 hover:bg-gray-800'
-                  }`}
-                >
-                  {tier.cta}
-                </Link>
+                {tier.id === 'tier2' ? (
+                  <button
+                    onClick={() => setShowContactModal(true)}
+                    className={`block w-full text-center py-4 rounded-xl font-bold transition-all duration-300 ${
+                      tier.popular
+                        ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-black hover:brightness-110'
+                        : 'border border-gray-600 text-gray-300 hover:bg-gray-800'
+                    }`}
+                  >
+                    {tier.cta}
+                  </button>
+                ) : (
+                  <Link
+                    href={tier.id === 'tier3' ? '/contact' : `/contact?pack=${tier.id}`}
+                    className={`block w-full text-center py-4 rounded-xl font-bold transition-all duration-300 ${
+                      tier.popular
+                        ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-black hover:brightness-110'
+                        : 'border border-gray-600 text-gray-300 hover:bg-gray-800'
+                    }`}
+                  >
+                    {tier.cta}
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -484,6 +530,73 @@ export default function CreationSiteWebPage() {
           </div>
         </div>
       </section>
+
+      {/* Modal Contact Options - Tier 2 */}
+      <AnimatePresence>
+        {showContactModal && (
+          <motion.div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowContactModal(false)}
+          >
+            <motion.div
+              className="bg-gray-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center mb-8">
+                <h3 className="text-2xl font-bold text-white">Démarrons votre projet</h3>
+                <button
+                  onClick={() => setShowContactModal(false)}
+                  className="text-gray-400 hover:text-white text-2xl"
+                >
+                  ×
+                </button>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {contactOptions.map((option, index) => (
+                  <motion.div
+                    key={index}
+                    className={`bg-gradient-to-br from-${option.color}-900/20 to-black border border-${option.color}-400/30 rounded-xl p-6 hover:border-${option.color}-400/50 transition-all duration-300 cursor-pointer group`}
+                    initial={{ y: 30, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.1 * index }}
+                    onClick={option.onClick}
+                  >
+                    <div className="text-center mb-6">
+                      <div className={`w-16 h-16 bg-${option.color}-400 rounded-full mx-auto mb-4 flex items-center justify-center`}>
+                        <IconeOSOM type={option.icon as any} size={32} color="white" ariaLabel={option.title} />
+                      </div>
+                      <h4 className="text-white font-semibold text-lg mb-2">{option.title}</h4>
+                      <p className="text-gray-400 text-sm mb-4">{option.subtitle}</p>
+                      {option.phone && (
+                        <div className={`bg-${option.color}-400/20 rounded-lg p-3 mb-4`}>
+                          <div className={`text-${option.color}-400 font-bold text-lg`}>{option.phone}</div>
+                          <div className="text-gray-400 text-xs">{option.hours}</div>
+                        </div>
+                      )}
+                    </div>
+                    <button className={`w-full bg-${option.color}-400 hover:bg-${option.color}-300 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300`}>
+                      {option.action}
+                    </button>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* EmailModal for Kit Contact */}
+      <EmailModal 
+        isOpen={showEmailModal} 
+        onClose={() => setShowEmailModal(false)} 
+      />
 
     </div>
   )
