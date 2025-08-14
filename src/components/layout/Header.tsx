@@ -50,17 +50,17 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
+          <Link href="/" className="flex items-center group">
             <div className="relative">
               <Image 
-                src="/osom-logo.svg" 
-                alt="osom" 
-                width={48} 
-                height={48} 
-                className="group-hover:scale-110 transition-transform duration-300"
+                src="/osom-logo-full.svg" 
+                alt="OSOM - Agence digitale Valais" 
+                width={95} 
+                height={32} 
+                className="group-hover:scale-105 transition-transform duration-300 filter group-hover:brightness-110"
+                priority
               />
             </div>
-            <span className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>osom</span>
           </Link>
 
           {/* Desktop Navigation */}
