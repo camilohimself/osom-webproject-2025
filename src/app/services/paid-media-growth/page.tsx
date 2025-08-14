@@ -167,7 +167,7 @@ export default function PaidMediaGrowthPage() {
                         animatedText.includes('briller') && index >= animatedText.indexOf('briller') ? 
                         'text-yellow-400 drop-shadow-lg' : 'text-gray-300'
                       } ${
-                        animatedText.includes("l'ombre") && index >= animatedText.indexOf("l'ombre") && index < animatedText.indexOf("l'ombre") + 6 ? 
+                        animatedText.includes("l'ombre") && index >= animatedText.indexOf("l'ombre") && index < animatedText.indexOf("l'ombre") + 7 ? 
                         'text-gray-600' : ''
                       }`}
                       style={{
@@ -226,10 +226,10 @@ export default function PaidMediaGrowthPage() {
           {/* Métriques avec effet de brillance */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
-              { value: "20K+", label: "CHF déployés/jour", color: "yellow", icon: "💰" },
-              { value: "4.2x", label: "ROAS garanti", color: "green", icon: "📈" },
-              { value: "24h", label: "Time to launch", color: "blue", icon: "⚡" },
-              { value: "100%", label: "Satisfaction", color: "purple", icon: "🎯" }
+              { value: "20K+", label: "CHF déployés/jour", color: "yellow", icon: "money" },
+              { value: "4.2x", label: "ROAS garanti", color: "green", icon: "chart" },
+              { value: "24h", label: "Time to launch", color: "blue", icon: "lightning" },
+              { value: "100%", label: "Satisfaction", color: "purple", icon: "target" }
             ].map((metric, index) => (
               <div 
                 key={index}
@@ -245,7 +245,28 @@ export default function PaidMediaGrowthPage() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 
                 <div className="relative z-10 text-center">
-                  <div className="text-4xl mb-4">{metric.icon}</div>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/10 flex items-center justify-center">
+                    {metric.icon === 'money' && (
+                      <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                      </svg>
+                    )}
+                    {metric.icon === 'chart' && (
+                      <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                    )}
+                    {metric.icon === 'lightning' && (
+                      <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    )}
+                    {metric.icon === 'target' && (
+                      <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                  </div>
                   <div className={`text-5xl font-bold mb-3 ${
                     metric.color === 'yellow' ? 'text-yellow-400' :
                     metric.color === 'green' ? 'text-green-400' :
