@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { InteractiveCaseStudy } from '@/components/portfolio'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
+import IconeOSOM from '@/components/IconeOSOM'
 
 interface CaseStudyData {
   id: string
@@ -217,6 +218,53 @@ const caseStudies: CaseStudyData[] = [
 
 const RealisationsPage = () => {
   const [expandedCase, setExpandedCase] = useState<string | null>(null)
+  const [isUnlocked, setIsUnlocked] = useState(false)
+  const [showEmailModal, setShowEmailModal] = useState(false)
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Fonction pour valider email et débloquer les case studies
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email || !email.includes('@')) return
+    
+    setIsSubmitting(true)
+    
+    // Simulation validation email (remplace par vraie API)
+    await new Promise(resolve => setTimeout(resolve, 1500))
+    
+    setIsUnlocked(true)
+    setShowEmailModal(false)
+    setIsSubmitting(false)
+    
+    // Ici tu peux ajouter l'envoi vers ton CRM
+    console.log('Nouveau lead case studies:', email)
+  }
+
+  // Versions censurées des case studies
+  const getCensoredCaseStudy = (caseStudy: CaseStudyData) => {
+    if (isUnlocked) return caseStudy
+    
+    return {
+      ...caseStudy,
+      client: caseStudy.id === 'culture-peinture' ? 'Client Formation Professionnelle' : 'Client Artisanat Décoratif',
+      challenge: 'Accès aux détails complets après validation email → [DÉBLOQUER]',
+      solution: 'Stratégie et résultats détaillés disponibles → [DÉBLOQUER]',
+      results: {
+        conversions: { osom: 0, competitor: 0 },
+        roi: { osom: 0, competitor: 0 },
+        sessions: { osom: 0, competitor: 0 }
+      },
+      metrics: caseStudy.metrics.map(metric => ({
+        ...metric,
+        value: '***',
+        comparison: 'Données sensibles protégées',
+        tooltip: 'Débloquez avec votre email professionnel'
+      })),
+      insights: ['Insights complets disponibles après validation email'],
+      dataSource: 'Sources et métriques vérifiées disponibles après déblocage'
+    }
+  }
 
   // Premium animation variants (homepage level)
   const containerVariants = {
@@ -467,6 +515,29 @@ const RealisationsPage = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
+            {!isUnlocked && (
+              <motion.div
+                className="bg-gradient-to-br from-orange-900/20 to-black border border-orange-400/30 rounded-2xl p-8 mb-8 text-center"
+                variants={itemVariants}
+                transition={{ delay: 0.1 }}
+              >
+                <div className="flex items-center justify-center mb-4">
+                  <IconeOSOM type="shield" size={32} color="orange" ariaLabel="Protection données" />
+                  <h3 className="text-orange-400 font-bold text-xl ml-3">Case Studies Protégés</h3>
+                </div>
+                <p className="text-gray-300 mb-6">
+                  Nos clients nous font confiance avec des données sensibles. 
+                  Validez votre email professionnel pour accéder aux métriques complètes.
+                </p>
+                <button
+                  onClick={() => setShowEmailModal(true)}
+                  className="bg-orange-400 hover:bg-orange-300 text-black font-bold py-3 px-8 rounded-lg transition-all duration-300"
+                >
+                  Débloquer les Case Studies
+                </button>
+              </motion.div>
+            )}
+
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
@@ -476,7 +547,7 @@ const RealisationsPage = () => {
                 className="transition-all duration-500"
               >
                 <InteractiveCaseStudy
-                  data={study}
+                  data={getCensoredCaseStudy(study)}
                   isExpanded={expandedCase === study.id}
                   onToggle={() => setExpandedCase(
                     expandedCase === study.id ? null : study.id
@@ -664,6 +735,84 @@ const RealisationsPage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Email Modal for Case Studies Access */}
+      <AnimatePresence>
+        {showEmailModal && (
+          <motion.div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowEmailModal(false)}
+          >
+            <motion.div
+              className="bg-gray-900 rounded-3xl p-8 max-w-md w-full"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-xl font-bold text-white flex items-center">
+                  <IconeOSOM type="shield" size={24} color="orange" ariaLabel="Protection" />
+                  <span className="ml-3">Accès Case Studies</span>
+                </h3>
+                <button
+                  onClick={() => setShowEmailModal(false)}
+                  className="text-gray-400 hover:text-white text-2xl"
+                >
+                  ×
+                </button>
+              </div>
+
+              <p className="text-gray-300 mb-6 text-sm">
+                Pour protéger la confidentialité de nos clients, veuillez valider votre email professionnel 
+                pour accéder aux métriques détaillées.
+              </p>
+
+              <form onSubmit={handleEmailSubmit}>
+                <div className="mb-6">
+                  <label className="block text-white text-sm font-medium mb-2">
+                    Email professionnel
+                  </label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="votre@entreprise.ch"
+                    className="w-full px-4 py-3 bg-black/50 border border-orange-400/30 rounded-lg text-white placeholder-gray-500 focus:border-orange-400 focus:outline-none"
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting || !email}
+                  className="w-full bg-orange-400 hover:bg-orange-300 disabled:bg-gray-600 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <motion.div
+                        className="w-4 h-4 border-2 border-black border-t-transparent rounded-full mr-2"
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                      />
+                      Validation...
+                    </>
+                  ) : (
+                    'Débloquer les Case Studies'
+                  )}
+                </button>
+              </form>
+
+              <p className="text-gray-500 text-xs mt-4 text-center">
+                Vos données sont protégées. Aucun spam, utilisation unique pour ce contenu.
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
