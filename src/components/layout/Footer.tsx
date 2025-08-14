@@ -140,7 +140,7 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-brand-light hover:text-brand-primary transition-colors"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors"
                   aria-label={social.name}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
