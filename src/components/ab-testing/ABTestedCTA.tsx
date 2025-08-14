@@ -37,7 +37,7 @@ const ABTestedCTA: React.FC<ABTestedCTAProps> = ({
           {defaultPrimary}
         </MagneticButton>
         <MagneticButton 
-          href="/calculator" 
+          href="/outils" 
           variant="secondary" 
           className="text-lg px-10 py-5"
         >
@@ -135,7 +135,7 @@ const ABTestedCTA: React.FC<ABTestedCTAProps> = ({
       {/* Secondary CTA */}
       <div className="relative">
         <MagneticButton
-          href="/calculator"
+          href="/outils"
           variant="secondary"
           className={`text-lg px-10 py-5 ${
             config.color_scheme !== 'yellow' ? getColorClasses(config.color_scheme, false) : ''

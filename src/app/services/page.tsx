@@ -305,7 +305,7 @@ export default async function ServicesPage() {
                   Consultation gratuite
                 </Link>
                 <Link
-                  href="/calculator"
+                  href="/outils"
                   className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 >
@@ -675,7 +675,7 @@ export default async function ServicesPage() {
               Réserver mon audit gratuit
             </Link>
             <Link
-              href="/calculator"
+              href="/outils"
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >

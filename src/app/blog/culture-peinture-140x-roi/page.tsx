@@ -242,7 +242,7 @@ export default function CulturePeintureArticle() {
                 Démarrer mon projet
               </Link>
               <Link
-                href="/calculator"
+                href="/outils"
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium"
                 style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               >

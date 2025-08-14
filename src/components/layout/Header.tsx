@@ -39,7 +39,6 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
     { name: dictionary.navigation.services, href: '/services', hasDropdown: true },
     { name: dictionary.navigation.portfolio, href: '/realisations' },
     { name: 'Outils', href: '/outils' },
-    { name: dictionary.navigation.calculator, href: '/calculator' },
     { name: dictionary.navigation.blog, href: '/blog' },
     { name: dictionary.navigation.agency, href: '/agence' },
     { name: dictionary.navigation.contact, href: '/contact' },

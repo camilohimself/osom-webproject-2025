@@ -882,7 +882,7 @@ export default function BlogPage() {
               </motion.a>
               
               <motion.a
-                href="/calculator"
+                href="/outils"
                 className="border-2 border-cyan-400/60 text-cyan-400 px-10 py-4 rounded-xl font-medium text-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 backdrop-blur-sm"
                 style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 whileHover={{ scale: 1.05 }}

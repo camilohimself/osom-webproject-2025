@@ -422,7 +422,7 @@ gtag('event', 'lead_qualified', {
                   Audit Attribution Gratuit
                 </Link>
                 <Link
-                  href="/calculator"
+                  href="/outils"
                   className="border-2 border-pink-500/60 text-pink-400 px-8 py-4 rounded-xl font-medium hover:bg-pink-500 hover:text-white transition-all duration-300"
                 >
                   Calculer Votre ROI Invisible

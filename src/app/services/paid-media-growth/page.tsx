@@ -444,7 +444,7 @@ export default function PaidMediaGrowthPage() {
                 Audit gratuit maintenant
               </Link>
               <Link
-                href="/calculator"
+                href="/outils"
                 className="inline-block px-8 py-5 rounded-xl border border-green-400/40 text-green-400 hover:bg-green-400/10 transition-all duration-300 text-lg"
               >
                 Calculer mon potentiel

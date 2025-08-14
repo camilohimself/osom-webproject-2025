@@ -1156,7 +1156,7 @@ export default function AgencePage() {
                 Démarrons votre projet
               </Link>
               <Link
-                href="/calculator"
+                href="/outils"
                 className="border-2 border-white/30 text-white px-10 py-5 rounded-lg hover:bg-white hover:text-black transition-all duration-300 font-medium backdrop-blur-sm text-lg"
                 style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               >
