@@ -634,11 +634,20 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                   opacity="0.6"
                 />
 
-                {/* Central Digital Beacon - Enhanced */}
+                {/* Central Digital Beacon - Enhanced with OSOM Logo */}
                 <g transform="translate(220, 120)">
                   <rect x="0" y="40" width="20" height="60" fill="url(#digital-beacon)" rx="2" />
                   <rect x="-5" y="30" width="30" height="15" fill="#fbbf24" rx="4" />
-                  <polygon points="-10,30 10,10 30,30" fill="#f59e0b" />
+                  
+                  {/* OSOM "O" stylisé au sommet */}
+                  <g transform="translate(10, 15)">
+                    {/* Cercle extérieur OSOM */}
+                    <circle cx="0" cy="0" r="8" fill="#FFDD00" stroke="#514747" strokeWidth="1.5" />
+                    {/* Point central caractéristique */}
+                    <circle cx="0" cy="0" r="3" fill="#514747" />
+                    {/* Petit accent blanc */}
+                    <circle cx="-2" cy="-2" r="1" fill="#FFFFFF" opacity="0.8" />
+                  </g>
                   
                   {/* Beacon Pulse */}
                   <circle cx="10" cy="25" r="5" fill="#fbbf24" opacity="0.6">

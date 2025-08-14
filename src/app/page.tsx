@@ -9,6 +9,9 @@ import dynamic from 'next/dynamic'
 const HorizontalBarsChart = dynamic(() => import('@/components/ui/HorizontalBarsChart'), {
   loading: () => <div className="h-32 bg-purple-400/5 rounded-2xl animate-pulse" />
 })
+const CTRCircularChart = dynamic(() => import('@/components/ui/CTRCircularChart'), {
+  loading: () => <div className="h-64 bg-purple-400/5 rounded-2xl animate-pulse" />
+})
 const DataLineChart = dynamic(() => import('@/components/ui/DataLineChart'), {
   loading: () => <div className="h-32 bg-cyan-400/5 rounded-2xl animate-pulse" />
 })
@@ -223,28 +226,13 @@ export default async function Home() {
                       </div>
                     </div>
                     
-                    {/* Graphique barres horizontales Marketing + IA */}
+                    {/* Graphique CTR circulaire avec hover effect */}
                     <AnimatedElement type="slideUp" delay={0.7}>
                       <div className="mb-10">
-                        <HorizontalBarsChart
+                        <CTRCircularChart
                           title="CTR OSOM vs Industrie"
                           subtitle="Performance Marketing IA • Données Meta Ads vérifiées"
-                          primaryData={{
-                            label: "Campagnes OSOM avec IA",
-                            value: 25,
-                            color: "#A855F7",
-                            description: "Taux de clic moyen"
-                          }}
-                          secondaryData={{
-                            label: "Marketing traditionnel industrie",
-                            value: 2.3,
-                            color: "#6B7280",
-                            description: "CTR standard"
-                          }}
-                          unit="%"
-                          backgroundColor="rgba(168, 85, 247, 0.05)"
-                          className="rounded-2xl border border-purple-400/20"
-                          animate={true}
+                          className="rounded-2xl border border-purple-400/20 bg-purple-400/5"
                         />
                       </div>
                     </AnimatedElement>
