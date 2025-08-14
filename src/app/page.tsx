@@ -6,7 +6,6 @@ import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImp
 import HorizontalBarsChart from '@/components/ui/HorizontalBarsChart'
 import DataLineChart from '@/components/ui/DataLineChart'
 import GaugeChart from '@/components/ui/GaugeChart'
-import PrismTriangle from '@/components/ui/PrismTriangle'
 import { cookies } from 'next/headers'
 import HeroPremium from '@/components/homepage/HeroPremium'
 import AnimatedElement from '@/components/ui/AnimatedElement'
@@ -209,12 +208,6 @@ export default async function Home() {
             </div>
           </AnimatedElement>
 
-          {/* Triangle Prisme Magnifique - Pink Floyd Style */}
-          <AnimatedElement type="fadeIn" delay={0.5}>
-            <div className="mb-32">
-              <PrismTriangle className="mb-16" />
-            </div>
-          </AnimatedElement>
           
           <div className="space-y-20">
             
@@ -249,12 +242,11 @@ export default async function Home() {
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      L'intelligence artificielle ne remplace pas votre créativité, elle la <span className="text-purple-400 font-semibold">démultiplie</span>. 
-                      Chaque campagne devient une œuvre d'art data-driven qui touche l'émotion et génère des résultats exceptionnels.
+                      <span className="text-purple-400 font-semibold">25% de taux de clic vs 2-3% industrie.</span> L'IA transforme vos campagnes en machine à conversions mesurables.
                     </p>
                     
-                    {/* Histoire créative avec métaphores */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    {/* Cartes business réduites */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                       <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30 hover:bg-purple-400/15 transition-all duration-300">
                         <div className="flex items-center mb-4">
                           <IconeOSOM type="lightning" size={24} color="purple" ariaLabel="Idéation éclair" />
@@ -262,15 +254,6 @@ export default async function Home() {
                         </div>
                         <div className="text-gray-300 mb-4">En 30 secondes, notre IA génère 50 concepts créatifs basés sur l'analyse comportementale de votre audience. L'inspiration jaillit à la demande.</div>
                         <div className="text-purple-400 text-sm italic">"De l'idée au concept en un éclair"</div>
-                      </div>
-                      
-                      <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30 hover:bg-purple-400/15 transition-all duration-300">
-                        <div className="flex items-center mb-4">
-                          <IconeOSOM type="target" size={24} color="purple" ariaLabel="Personnalisation émotionnelle" />
-                          <div className="text-purple-400 font-bold text-lg ml-3">L'Émotion Sur-Mesure</div>
-                        </div>
-                        <div className="text-gray-300 mb-4">Chaque message s'adapte à la personnalité de votre prospect. L'IA analyse et personnalise le ton, les mots, les couleurs pour créer une connexion authentique.</div>
-                        <div className="text-purple-400 text-sm italic">"Une histoire unique pour chaque cœur"</div>
                       </div>
                       
                       <div className="bg-purple-400/5 rounded-xl p-6 border border-purple-400/20 hover:bg-purple-400/10 transition-all duration-300">
@@ -367,8 +350,7 @@ export default async function Home() {
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Chaque clic raconte une histoire. Chaque session révèle un désir. Nous transformons vos données brutes en 
-                      <span className="text-cyan-400 font-semibold"> insights créatifs</span> qui inspirent vos prochaines campagnes et révèlent des opportunités insoupçonnées.
+                      <span className="text-cyan-400 font-semibold">Vos données cachent 688 conversions.</span> Nous révélons le ROI invisible et transformons chaque métrique en profit concret.
                     </p>
                     
                     {/* Histoire créative avec métaphores */}
@@ -391,23 +373,6 @@ export default async function Home() {
                         <div className="text-cyan-400 text-sm italic">"Dessiner la carte du succès"</div>
                       </div>
                       
-                      <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20 hover:bg-cyan-400/10 transition-all duration-300">
-                        <div className="flex items-center mb-4">
-                          <IconeOSOM type="chart" size={24} color="cyan" ariaLabel="Prophète des tendances" />
-                          <div className="text-cyan-400 font-bold text-lg ml-3">Le Prophète des Tendances</div>
-                        </div>
-                        <div className="text-gray-300 mb-4">68.6% d'engagement ? Nous prédisons les désirs avant qu'ils ne se manifestent. Vos données deviennent boule de cristal pour anticiper les besoins de votre marché.</div>
-                        <div className="text-cyan-400 text-sm italic">"Voir l'avenir dans les données présentes"</div>
-                      </div>
-                      
-                      <div className="bg-cyan-400/5 rounded-xl p-6 border border-cyan-400/20 hover:bg-cyan-400/10 transition-all duration-300">
-                        <div className="flex items-center mb-4">
-                          <IconeOSOM type="lightning" size={24} color="cyan" ariaLabel="Alchimiste des insights" />
-                          <div className="text-cyan-400 font-bold text-lg ml-3">L'Alchimiste des Insights</div>
-                        </div>
-                        <div className="text-gray-300 mb-4">Transformateur de plomb en or : nous métamorphosons vos métriques froides en insights chauds qui nourrissent votre créativité et inspirent vos équipes.</div>
-                        <div className="text-cyan-400 text-sm italic">"L'art de transformer les chiffres en inspiration"</div>
-                      </div>
                     </div>
                     
                     {/* Graphique line chart Data Analysis */}
@@ -479,8 +444,7 @@ export default async function Home() {
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      Chaque ligne de code raconte un chapitre de votre histoire. Notre développement ne se contente pas de fonctionner : 
-                      il <span className="text-green-400 font-semibold">enchante</span>, <span className="text-green-400 font-semibold">émeut</span> et <span className="text-green-400 font-semibold">convertit</span> vos visiteurs en ambassadeurs passionnés.
+                      <span className="text-green-400 font-semibold">Performance < 2 secondes garantie.</span> Votre site devient une machine à convertir 24h/24 sans temps d'arrêt.
                     </p>
                     
                     {/* Histoire créative avec métaphores */}
@@ -509,14 +473,6 @@ export default async function Home() {
                         <div className="text-green-300 text-sm mt-2 italic">"L'art de ne jamais faire attendre"</div>
                       </div>
                       
-                      <div className="bg-gradient-to-r from-green-400/5 to-transparent rounded-lg p-6 border-l-4 border-green-300 hover:from-green-400/10 transition-all duration-300">
-                        <div className="flex items-center mb-3">
-                          <IconeOSOM type="rocket" size={20} color="green" ariaLabel="Symphoniste de l'innovation" />
-                          <div className="font-semibold text-green-400 ml-2">Le Symphoniste de l'Innovation</div>
-                        </div>
-                        <div className="text-gray-300">L'IA compose, l'humain dirige l'orchestre. Chaque fonctionnalité devient une note parfaite dans la symphonie de votre expérience utilisateur. Créativité et technologie en parfaite harmonie.</div>
-                        <div className="text-green-300 text-sm mt-2 italic">"Quand la technologie danse avec l'émotion"</div>
-                      </div>
                     </div>
                     
                     <AnimatedElement type="scale" delay={0.9}>

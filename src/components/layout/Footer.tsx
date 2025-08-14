@@ -34,10 +34,11 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
   ]
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/osom-agency', icon: 'linkedin' },
-    { name: 'Instagram', href: 'https://instagram.com/osom.agency', icon: 'instagram' },
-    { name: 'Twitter', href: 'https://twitter.com/osom_agency', icon: 'twitter' },
-    { name: 'Facebook', href: 'https://facebook.com/osom.agency', icon: 'facebook' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/osom-ch/posts/?feedView=all', icon: 'linkedin' },
+    { name: 'Instagram', href: 'https://www.instagram.com/osom.ch/', icon: 'instagram' },
+    { name: 'TikTok', href: 'https://www.tiktok.com/@osom.ch', icon: 'tiktok' },
+    { name: 'X', href: 'http://x.com/osom_ch', icon: 'twitter' },
+    { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61562483814741', icon: 'facebook' },
   ]
 
   return (
@@ -65,7 +66,7 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>+41 XX XXX XX XX</span>
+                <span>+41 79 128 95 49</span>
               </p>
               <p className="flex items-center space-x-2">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
