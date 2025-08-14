@@ -2,11 +2,21 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, type Locale } from '@/lib/i18n'
-import { GraphiqueLinear, GraphiqueConversion, GraphiqueComparatif, GraphiqueImpact } from '@/components/ui'
-import HorizontalBarsChart from '@/components/ui/HorizontalBarsChart'
-import DataLineChart from '@/components/ui/DataLineChart'
-import GaugeChart from '@/components/ui/GaugeChart'
+import { GraphiqueComparatif } from '@/components/ui'
+import dynamic from 'next/dynamic'
+
+// Lazy loading pour optimiser la fluidité
+const HorizontalBarsChart = dynamic(() => import('@/components/ui/HorizontalBarsChart'), {
+  loading: () => <div className="h-32 bg-purple-400/5 rounded-2xl animate-pulse" />
+})
+const DataLineChart = dynamic(() => import('@/components/ui/DataLineChart'), {
+  loading: () => <div className="h-32 bg-cyan-400/5 rounded-2xl animate-pulse" />
+})
+const GaugeChart = dynamic(() => import('@/components/ui/GaugeChart'), {
+  loading: () => <div className="h-32 bg-green-400/5 rounded-2xl animate-pulse" />
+})
 import { cookies } from 'next/headers'
+import { getHomepageStructuredData } from '@/lib/structured-data'
 import HeroPremium from '@/components/homepage/HeroPremium'
 import AnimatedElement from '@/components/ui/AnimatedElement'
 import InteractiveBackground from '@/components/ui/InteractiveBackground'
@@ -78,66 +88,7 @@ export default async function Home() {
   }
 
   const dictionary = await getDictionary(currentLocale)
-
-  // Structured Data for SEO
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'OSOM',
-    description: 'Première agence VALAIS spécialisée dans le Marketing Humain × Intelligence Artificielle. Résultats 12x supérieurs à la publicité classique.',
-    url: 'https://osom.ch',
-    logo: 'https://osom.ch/osom-logo.svg',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+41-XX-XXX-XX-XX',
-      contactType: 'Customer Service',
-      areaServed: 'CH-VS',
-      availableLanguage: ['French', 'German', 'English']
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressRegion: 'Valais',
-      addressCountry: 'Switzerland'
-    },
-    sameAs: [
-      'https://linkedin.com/company/osom-ch',
-      'https://instagram.com/osom.ch'
-    ],
-    serviceArea: {
-      '@type': 'State',
-      name: 'Valais'
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Services Marketing IA',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Création Site Web IA',
-            description: '11.3% conversion vs 2-3% industrie'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'SEO & Marketing IA',
-            description: '68.6% vs 44.6% engagement quality'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Tracking & Data IA',
-            description: '14,171 sessions récupérées'
-          }
-        }
-      ]
-    }
-  }
+  const jsonLd = getHomepageStructuredData()
 
   return (
     <>
@@ -164,7 +115,7 @@ export default async function Home() {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <AnimatedElement type="fadeIn" delay={0.2}>
+          <AnimatedElement type="fadeIn" delay={0.1}>
             <div className="text-center mb-24">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
@@ -212,7 +163,7 @@ export default async function Home() {
           <div className="space-y-20">
             
             {/* FORCE 1: CRÉATIVITÉ AMPLIFIÉE PAR L'IA */}
-            <AnimatedElement type="slideUp" delay={0.1}>
+            <AnimatedElement type="slideUp" delay={0.2}>
               <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group">
                 {/* Layout centré avec graphique intégré */}
                 <div className="p-16 bg-gradient-to-br from-purple-900/20 to-black/60">
@@ -305,7 +256,7 @@ export default async function Home() {
             </AnimatedElement>
             
             {/* FORCE 2: INSIGHTS QUI INSPIRENT */}
-            <AnimatedElement type="slideUp" delay={0.3}>
+            <AnimatedElement type="slideUp" delay={0.4}>
               <div className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/10 transition-all duration-500 group">
               {/* Layout centré avec background graphique */}
               <div className="relative">
@@ -412,7 +363,7 @@ export default async function Home() {
             </AnimatedElement>
             
             {/* FORCE 3: CODE QUI RACONTE */}
-            <AnimatedElement type="slideUp" delay={0.5}>
+            <AnimatedElement type="slideUp" delay={0.6}>
               <div className="backdrop-blur-sm border border-green-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-green-400/40 hover:shadow-2xl hover:shadow-green-400/10 transition-all duration-500 group">
               {/* Layout asymétrique diagonal */}
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 h-full">
