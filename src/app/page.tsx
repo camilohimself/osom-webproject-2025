@@ -444,7 +444,7 @@ export default async function Home() {
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      <span className="text-green-400 font-semibold">Performance < 2 secondes garantie.</span> Votre site devient une machine à convertir 24h/24 sans temps d'arrêt.
+                      <span className="text-green-400 font-semibold">Performance &lt; 2 secondes garantie.</span> Votre site devient une machine à convertir 24h/24 sans temps d'arrêt.
                     </p>
                     
                     {/* Histoire créative avec métaphores */}
@@ -488,7 +488,7 @@ export default async function Home() {
                 {/* Graphique gauge/speedometer - 2 colonnes */}
                 <div className="col-span-2 bg-gradient-to-tl from-green-900/30 to-black/80 flex items-center p-8">
                   <GaugeChart
-                    title="< 2s vs 5-8s"
+                    title="&lt; 2s vs 5-8s"
                     subtitle="Performance temps chargement"
                     primaryValue={1.8}
                     secondaryValue={6.5}
