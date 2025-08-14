@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion'
+import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from 'framer-motion'
 import { MagneticButton } from '@/components/ui'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import EmailModal from '@/components/contact/EmailModal'
@@ -60,6 +60,36 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
     phone: '',
     company: ''
   })
+
+  // Timeline state
+  const timelineRef = useRef<HTMLDivElement>(null)
+  const [currentTimelineStep, setCurrentTimelineStep] = useState(0)
+  
+  const timelineSteps = [
+    { title: "Audit & Stratégie", time: "Semaine 1", value: "Analyse complète", color: "yellow", description: "Diagnostic approfondi de votre écosystème digital actuel" },
+    { title: "Optimisation Tech", time: "Semaine 2-3", value: "Site + Analytics", color: "white", description: "Mise en place des fondations techniques solides" },
+    { title: "Campagnes Lancées", time: "Semaine 4", value: "SEO + Ads", color: "yellow", description: "Déploiement des premières actions marketing" },
+    { title: "Premiers Résultats", time: "Mois 2", value: "+150% leads", color: "white", description: "Métriques positives et ajustements en temps réel" },
+    { title: "Scaling & Growth", time: "Mois 3+", value: "ROI optimisé", color: "yellow", description: "Accélération et expansion vers de nouveaux canaux" }
+  ]
+
+  // Simple scroll tracking for timeline
+  useEffect(() => {
+    const timeline = timelineRef.current
+    if (!timeline) return
+
+    const handleScroll = () => {
+      const scrollTop = timeline.scrollTop
+      const scrollHeight = timeline.scrollHeight - timeline.clientHeight
+      const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0
+      
+      const newStep = Math.floor((progress / 100) * timelineSteps.length)
+      setCurrentTimelineStep(Math.min(newStep, timelineSteps.length - 1))
+    }
+
+    timeline.addEventListener('scroll', handleScroll)
+    return () => timeline.removeEventListener('scroll', handleScroll)
+  }, [timelineSteps.length])
 
   // LIQUID CHROME PHYSICS ⚡
   const containerRef = useRef<HTMLDivElement>(null)
@@ -214,70 +244,124 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
-              {/* Left: Visuel Métaphorique Consultation */}
+              {/* Left: Timeline Interactive */}
               <motion.div 
                 className="text-left relative"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                {/* Visuel SVG Consultation Collaborative */}
-                <div className="relative w-full h-96 flex items-center justify-center">
-                  <svg viewBox="0 0 400 300" className="w-full h-full">
-                    <defs>
-                      <linearGradient id="consultation-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style={{stopColor: '#FFDD00', stopOpacity: 0.8}} />
-                        <stop offset="50%" style={{stopColor: '#00ffff', stopOpacity: 0.6}} />
-                        <stop offset="100%" style={{stopColor: '#ff00ff', stopOpacity: 0.4}} />
-                      </linearGradient>
-                      
-                      <radialGradient id="meeting-light" cx="50%" cy="50%">
-                        <stop offset="0%" style={{stopColor: '#ffffff', stopOpacity: 0.3}} />
-                        <stop offset="100%" style={{stopColor: 'transparent', stopOpacity: 0}} />
-                      </radialGradient>
-                    </defs>
-
-                    {/* Table de réunion */}
-                    <ellipse cx="200" cy="200" rx="120" ry="40" fill="url(#consultation-gradient)" opacity="0.6" />
+                {/* Timeline Component */}
+                <div className="relative w-full bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-3xl p-8 border border-green-500/20 h-96 overflow-y-auto scrollbar-hide"
+                  style={{
+                    scrollbarWidth: 'none',
+                    msOverflowStyle: 'none',
+                  }}
+                  ref={timelineRef}
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-green-400 font-bold text-lg">Votre Parcours Growth</h3>
+                  </div>
+                  
+                  {/* Timeline Container */}
+                  <div className="relative">
+                    {/* Timeline Line - OSOM Colors */}
+                    <motion.div 
+                      className="absolute left-4 top-0 w-1 rounded-full overflow-hidden bg-black/60 border border-gray-700/20"
+                      initial={{ height: 0 }}
+                      animate={{ height: '280px' }}
+                      transition={{ duration: 1, ease: "easeOut" }}
+                    >
+                      {/* Progression OSOM Jaune */}
+                      <motion.div 
+                        className="w-full bg-gradient-to-b from-yellow-400 via-yellow-300 to-white rounded-full"
+                        initial={{ height: '0%' }}
+                        style={{
+                          height: `${((currentTimelineStep + 1) / timelineSteps.length) * 100}%`,
+                          boxShadow: '0 0 15px rgba(255, 221, 0, 0.8), 0 0 30px rgba(255, 221, 0, 0.4)'
+                        }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                      />
+                    </motion.div>
                     
-                    {/* Personnes en consultation */}
-                    <g transform="translate(150, 120)">
-                      {/* Expert OSOM */}
-                      <circle cx="0" cy="0" r="25" fill="#FFDD00" opacity="0.8" />
-                      <text x="0" y="5" textAnchor="middle" fill="#000" fontSize="12" fontWeight="bold">OSOM</text>
-                    </g>
-                    
-                    <g transform="translate(250, 120)">
-                      {/* Dirigeant PME */}
-                      <circle cx="0" cy="0" r="25" fill="#00ffff" opacity="0.8" />
-                      <text x="0" y="5" textAnchor="middle" fill="#000" fontSize="12" fontWeight="bold">CEO</text>
-                    </g>
-
-                    {/* Écrans/Documents partagés */}
-                    <rect x="170" y="160" width="60" height="35" fill="url(#meeting-light)" rx="4" />
-                    <text x="200" y="180" textAnchor="middle" fill="#FFDD00" fontSize="8">GA4 Data</text>
-                    
-                    {/* Lignes de connection/dialogue */}
-                    <path d="M175,145 Q200,135 225,145" stroke="#FFDD00" strokeWidth="2" fill="none" opacity="0.6">
-                      <animate attributeName="stroke-dasharray" values="0,20;10,20;20,20" dur="3s" repeatCount="indefinite"/>
-                    </path>
-                    
-                    {/* Bulles d'idées animées */}
-                    <circle cx="180" cy="100" r="6" fill="#00ffff" opacity="0.5">
-                      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="220" cy="95" r="4" fill="#FFDD00" opacity="0.6">
-                      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="200" cy="85" r="5" fill="#ff00ff" opacity="0.4">
-                      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/>
-                    </circle>
-
-                    {/* Texte descriptif */}
-                    <text x="200" y="270" textAnchor="middle" fill="#ffffff" fontSize="12" opacity="0.8">
-                      Consultation collaborative personnalisée
-                    </text>
-                  </svg>
+                    {/* Timeline Steps */}
+                    <div className="space-y-6">
+                      {timelineSteps.map((step, i) => (
+                        <motion.div
+                          key={i}
+                          className="relative flex items-center"
+                          initial={{ opacity: 0, x: -30 }}
+                          animate={{ 
+                            opacity: i <= currentTimelineStep ? 1 : 0.3, 
+                            x: 0,
+                            scale: i === currentTimelineStep ? 1.05 : 1
+                          }}
+                          transition={{ 
+                            opacity: { duration: 0.5 },
+                            x: { delay: i * 0.2, duration: 0.6 },
+                            scale: { duration: 0.3 }
+                          }}
+                        >
+                          {/* Step Circle */}
+                          <motion.div 
+                            className={`w-8 h-8 rounded-full flex items-center justify-center text-black font-bold text-sm z-10 border-2 ${
+                              step.color === 'yellow' 
+                                ? 'bg-yellow-400 border-yellow-300'
+                                : 'bg-white border-gray-200'
+                            } ${
+                              i === currentTimelineStep 
+                                ? step.color === 'yellow'
+                                  ? 'shadow-lg shadow-yellow-400/50'
+                                  : 'shadow-lg shadow-white/50'
+                                : ''
+                            }`}
+                            initial={{ scale: 0 }}
+                            animate={{ 
+                              scale: 1,
+                            }}
+                            transition={{ 
+                              scale: { delay: i * 0.2 + 0.2, duration: 0.4, type: "spring" },
+                            }}
+                          >
+                            {i < currentTimelineStep ? '✓' : i + 1}
+                          </motion.div>
+                          
+                          {/* Step Content */}
+                          <motion.div 
+                            className={`ml-4 bg-black/20 rounded-lg p-4 flex-1 border border-gray-700/30 ${
+                              i === currentTimelineStep 
+                                ? step.color === 'yellow' 
+                                  ? 'border-yellow-400/50 bg-yellow-400/5' 
+                                  : 'border-white/50 bg-white/5'
+                                : ''
+                            }`}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <div className="text-white font-semibold text-lg">{step.title}</div>
+                            <div className="text-gray-300 text-sm mb-2">{step.time}</div>
+                            <div className={`${step.color === 'yellow' ? 'text-yellow-400' : 'text-white'} text-sm font-mono mb-2`}>
+                              {step.value}
+                            </div>
+                            
+                            {/* Description visible sur étape active */}
+                            <AnimatePresence>
+                              {i === currentTimelineStep && (
+                                <motion.div
+                                  initial={{ opacity: 0, height: 0 }}
+                                  animate={{ opacity: 1, height: 'auto' }}
+                                  exit={{ opacity: 0, height: 0 }}
+                                  transition={{ duration: 0.3 }}
+                                  className="text-gray-300 text-sm italic border-t border-gray-600/30 pt-2 mt-2"
+                                >
+                                  {step.description}
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </motion.div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </motion.div>
               
@@ -289,66 +373,17 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 <h1 className="text-4xl md:text-6xl font-light text-white mb-6 leading-tight" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                  {dictionary.hero?.title || 'Parlons de votre projet'}
+                  30 minutes pour découvrir votre
                   <span className="block text-yellow-400 font-bold">
-                    {dictionary.hero?.title_highlight || 'digital'}
+                    potentiel de croissance digitale
                   </span>
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                  {dictionary.hero?.subtitle || dictionary.subtitle}
+                  Échangeons sur vos défis business et découvrons ensemble 
+                  comment notre expertise peut transformer votre présence en ligne en véritable machine à prospects.
                 </p>
 
-                {/* Mini Case Study Card */}
-                <motion.div 
-                  className="bg-yellow-400/10 rounded-xl p-6 border border-yellow-400/30 backdrop-blur-sm mb-8"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.6, duration: 0.6 }}
-                  whileHover={{ 
-                    borderColor: 'rgba(255,221,0,0.6)',
-                    backgroundColor: 'rgba(255,221,0,0.15)',
-                    scale: 1.02,
-                  }}
-                >
-                  {dictionary.case_study && (
-                    <>
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-white font-bold">{dictionary.case_study.company}</span>
-                        <motion.div
-                          className="w-2 h-2 bg-green-500 rounded-full"
-                          animate={{
-                            scale: [1, 1.3, 1],
-                            opacity: [0.7, 1, 0.7],
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            ease: 'easeInOut',
-                          }}
-                        />
-                      </div>
-                      
-                      <div className="space-y-3 text-sm">
-                        <div className="text-red-300">
-                          <strong>Avant :</strong> {dictionary.case_study.before}
-                        </div>
-                        <div className="text-green-300">
-                          <strong>Après :</strong> {dictionary.case_study.after}
-                        </div>
-                      </div>
-                      
-                      <div className="mt-4 pt-4 border-t border-yellow-400/20">
-                        <div className="text-yellow-400 text-sm italic">
-                          "{dictionary.case_study.testimonial}"
-                        </div>
-                        <div className="text-gray-400 text-xs mt-2">
-                          — {dictionary.case_study.author}
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </motion.div>
 
                 <motion.button
                   onClick={() => setShowCalendly(true)}
@@ -378,114 +413,6 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
             </div>
           </motion.section>
 
-          {/* PROCESSUS CONSULTATION - Mini-récits */}
-          <motion.section 
-            className="mb-20"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <div className="flex items-center justify-center mb-4">
-                  <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-                  <span className="text-yellow-400 text-sm font-medium tracking-wide">NOTRE MÉTHODE</span>
-                </div>
-                <h2 className="text-4xl md:text-5xl font-light text-white mb-8" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                  {dictionary.process?.title || 'Notre Processus de Consultation'}
-                </h2>
-              </div>
-              
-              <div className="space-y-8">
-                {/* Étape 1: Diagnostic quantitatif */}
-                <motion.div
-                  className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl p-8 hover:border-cyan-400/40 transition-all duration-500 relative overflow-hidden"
-                  whileHover={{ scale: 1.01 }}
-                >
-                  <div className="flex items-center mb-4 relative z-10">
-                    <div className="w-12 h-12 bg-cyan-400 rounded-full mr-4 flex items-center justify-center">
-                      <span className="text-black font-bold text-lg">01</span>
-                    </div>
-                    <h3 className="text-2xl font-light text-white" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                      {dictionary.process?.step1.title || 'Diagnostic quantitatif'}
-                    </h3>
-                  </div>
-                  <div className="ml-16 relative">
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      {dictionary.process?.step1.description || 'Analyse de vos données pour identifier les opportunités.'}
-                    </p>
-                    <div className="flex gap-4 text-xs">
-                      <div className="bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/30">
-                        <span className="text-cyan-400">✓ Audit GA4</span>
-                      </div>
-                      <div className="bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/30">
-                        <span className="text-cyan-400">✓ Search Console</span>
-                      </div>
-                      <div className="bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/30">
-                        <span className="text-cyan-400">✓ Opportunités cachées</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Étape 2: Stratégie personnalisée */}
-                <motion.div
-                  className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl p-8 hover:border-yellow-400/40 transition-all duration-500 ml-8 relative overflow-hidden"
-                  whileHover={{ scale: 1.01 }}
-                >
-                  <div className="flex items-center mb-4 relative z-10">
-                    <div className="w-12 h-12 bg-yellow-400 rounded-full mr-4 flex items-center justify-center">
-                      <span className="text-black font-bold text-lg">02</span>
-                    </div>
-                    <h3 className="text-2xl font-light text-white" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                      {dictionary.process?.step2.title || 'Stratégie personnalisée'}
-                    </h3>
-                  </div>
-                  <div className="ml-16 relative">
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      {dictionary.process?.step2.description || 'Plan d\'action adapté à votre situation.'}
-                    </p>
-                    <div className="flex gap-4 text-xs">
-                      <div className="bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/30">
-                        <span className="text-yellow-400">✓ Priorités ROI</span>
-                      </div>
-                      <div className="bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-400/30">
-                        <span className="text-yellow-400">✓ Plan sur-mesure</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Étape 3: Performance mesurable */}
-                <motion.div
-                  className="backdrop-blur-sm border border-green-400/20 rounded-3xl p-8 hover:border-green-400/40 transition-all duration-500 ml-16 relative overflow-hidden"
-                  whileHover={{ scale: 1.01 }}
-                >
-                  <div className="flex items-center mb-4 relative z-10">
-                    <div className="w-12 h-12 bg-green-400 rounded-full mr-4 flex items-center justify-center">
-                      <span className="text-black font-bold text-lg">03</span>
-                    </div>
-                    <h3 className="text-2xl font-light text-white" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                      {dictionary.process?.step3.title || 'Performance mesurable'}
-                    </h3>
-                  </div>
-                  <div className="ml-16 relative">
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      {dictionary.process?.step3.description || 'Suivi des résultats en temps réel.'}
-                    </p>
-                    <div className="flex gap-4 text-xs">
-                      <div className="bg-green-400/10 px-3 py-1 rounded-full border border-green-400/30">
-                        <span className="text-green-400">✓ Dashboard temps réel</span>
-                      </div>
-                      <div className="bg-green-400/10 px-3 py-1 rounded-full border border-green-400/30">
-                        <span className="text-green-400">✓ Transparence totale</span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </motion.section>
 
           {/* CONTACT OPTIONS - Style Homepage Cards */}
           <motion.section 
@@ -617,64 +544,90 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 
-                {/* Carte 1: Réserver sur le calendrier - MINIMALISME TOTAL */}
+                {/* Carte 1: Contact WhatsApp Direct */}
                 <motion.div
-                  className="bg-yellow-400/5 border border-yellow-400/30 rounded-2xl p-12 hover:bg-yellow-400/10 hover:border-yellow-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
-                  whileHover={{ scale: 1.01, y: -8 }}
-                  onClick={() => setShowCalendly(true)}
+                  className="bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-400/40 rounded-2xl p-8 hover:border-green-400/60 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  onClick={() => window.open('https://wa.me/41791289549', '_blank')}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
                 >
                   <div className="flex-1 flex flex-col justify-center text-center">
+                    {/* WhatsApp Icon */}
+                    <div className="flex justify-center mb-6">
+                      <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+                        </svg>
+                      </div>
+                    </div>
+                    
                     <motion.h3 
-                      className="text-3xl font-light text-white mb-6 leading-tight"
+                      className="text-2xl font-light text-white mb-4"
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      {dictionary.options?.direct.title || 'Prendre rendez-vous direct'}
+                      Contact WhatsApp Direct
                     </motion.h3>
                     
-                    <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
-                      {dictionary.options?.direct.description || 'Consultation directe avec un expert.'}
+                    <p className="text-gray-300 text-base leading-relaxed mb-6 max-w-md mx-auto">
+                      Échangez directement avec nous sur WhatsApp pour une réponse rapide et personnalisée.
                     </p>
+                    
+                    <div className="bg-green-500/20 rounded-lg p-3 mb-4">
+                      <p className="text-green-400 font-mono text-lg">
+                        +41 79 128 95 49
+                      </p>
+                      <p className="text-green-300/70 text-xs mt-1">
+                        Réponse en 1h selon horaires d'ouverture
+                      </p>
+                    </div>
                   </div>
                   
                   <div className="text-center">
                     <motion.div 
-                      className="text-yellow-400 font-semibold text-lg tracking-wide uppercase"
+                      className="text-green-400 font-semibold text-sm tracking-wide uppercase"
                       whileHover={{ scale: 1.02 }}
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      Voir le calendrier
+                      Ouvrir WhatsApp
                     </motion.div>
                   </div>
                 </motion.div>
                 
-                {/* Carte 2: Contact par email - MINIMALISME TOTAL */}
+                {/* Carte 2: Kit de Contact */}
                 <motion.div
-                  className="bg-cyan-400/5 border border-cyan-400/30 rounded-2xl p-12 hover:bg-cyan-400/10 hover:border-cyan-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
-                  whileHover={{ scale: 1.01, y: -8 }}
+                  className="bg-cyan-400/5 border border-cyan-400/30 rounded-2xl p-8 hover:bg-cyan-400/10 hover:border-cyan-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
+                  whileHover={{ scale: 1.02, y: -5 }}
                   onClick={() => setShowEmailModal(true)}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
                 >
                   <div className="flex-1 flex flex-col justify-center text-center">
+                    <div className="flex justify-center mb-6">
+                      <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
+                      </div>
+                    </div>
+                    
                     <motion.h3 
-                      className="text-3xl font-light text-white mb-6 leading-tight"
+                      className="text-2xl font-light text-white mb-4"
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      {dictionary.options?.kit.title || 'Kit de contact'}
+                      Kit de Contact
                     </motion.h3>
                     
-                    <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
-                      {dictionary.options?.kit.description || 'Documents et ressources pour préparer notre rencontre.'}
+                    <p className="text-gray-300 text-base leading-relaxed mb-6 max-w-md mx-auto">
+                      Documents et ressources pour préparer efficacement notre rencontre stratégique.
                     </p>
                   </div>
                   
                   <div className="text-center">
                     <motion.div 
-                      className="text-cyan-400 font-semibold text-lg tracking-wide uppercase"
+                      className="text-cyan-400 font-semibold text-sm tracking-wide uppercase"
                       whileHover={{ scale: 1.02 }}
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
@@ -683,31 +636,39 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                   </div>
                 </motion.div>
                 
-                {/* Carte 3: Diagnostic automatique - MINIMALISME TOTAL */}
+                {/* Carte 3: Questionnaire intelligent */}
                 <motion.div
-                  className="bg-purple-400/5 border border-purple-400/30 rounded-2xl p-12 hover:bg-purple-400/10 hover:border-purple-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
-                  whileHover={{ scale: 1.01, y: -8 }}
+                  className="bg-purple-400/5 border border-purple-400/30 rounded-2xl p-8 hover:bg-purple-400/10 hover:border-purple-400/50 transition-all duration-500 cursor-pointer group min-h-[400px] flex flex-col justify-between"
+                  whileHover={{ scale: 1.02, y: -5 }}
                   onClick={() => window.open('/questionnaire', '_blank')}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6, duration: 0.6 }}
                 >
                   <div className="flex-1 flex flex-col justify-center text-center">
+                    <div className="flex justify-center mb-6">
+                      <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                      </div>
+                    </div>
+                    
                     <motion.h3 
-                      className="text-3xl font-light text-white mb-6 leading-tight"
+                      className="text-2xl font-light text-white mb-4"
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
-                      {dictionary.options?.questionnaire.title || 'Questionnaire automatique'}
+                      Questionnaire intelligent
                     </motion.h3>
                     
-                    <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md mx-auto">
-                      {dictionary.options?.questionnaire.description || 'Outil IA pour analyser vos besoins en quelques minutes.'}
+                    <p className="text-gray-300 text-base leading-relaxed mb-6 max-w-md mx-auto">
+                      Outil avancé pour analyser vos besoins digitaux en quelques minutes seulement.
                     </p>
                   </div>
                   
                   <div className="text-center">
                     <motion.div 
-                      className="text-purple-400 font-semibold text-lg tracking-wide uppercase"
+                      className="text-purple-400 font-semibold text-sm tracking-wide uppercase"
                       whileHover={{ scale: 1.02 }}
                       style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                     >
