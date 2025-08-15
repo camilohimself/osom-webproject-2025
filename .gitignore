@@ -40,3 +40,7 @@ yarn-error.log*
 # Logs
 logs
 *.logdashboard-*
+
+# Journal privé Camilo × Claude - NE JAMAIS PUSHER
+docs/CAMILO-X-CLAUDE/
+/docs/CAMILO-X-CLAUDE/**
