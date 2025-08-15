@@ -224,7 +224,7 @@ const OSOMMotionHero = () => {
             className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm hover:scale-105 transform duration-300"
             style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
           >
-            Voir nos réalisations
+            Voir nos projets
           </Link>
         </motion.div>
       </div>

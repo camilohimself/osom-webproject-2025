@@ -89,19 +89,6 @@
       ]
     },
     {
-      "name": "Calculateur ROI",
-      "short_name": "ROI Calc",
-      "description": "Calculez le potentiel de votre site",
-      "url": "/outils?tool=roi-calculator",
-      "icons": [
-        {
-          "src": "icons/icon-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
       "name": "Nos Réalisations",
       "short_name": "Portfolio",
       "description": "Découvrez nos case studies",

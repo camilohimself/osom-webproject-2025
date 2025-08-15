@@ -2,12 +2,11 @@
   "navigation": {
     "home": "Accueil",
     "services": "Services",
-    "portfolio": "Réalisations",
+    "portfolio": "Projets",
     "blog": "Blog",
     "agency": "Agence",
     "contact": "Contact",
-    "local": "Local",
-    "calculator": "Calculateur ROI"
+    "local": "Local"
   },
   "services": {
     "web-development": "Création Site Web",

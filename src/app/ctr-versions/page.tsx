@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function CTRVersionsPage() {
   return (
@@ -225,12 +226,12 @@ export default function CTRVersionsPage() {
 
         {/* Navigation */}
         <div className="text-center mt-16">
-          <a 
+          <Link 
             href="/" 
             className="inline-block bg-purple-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-purple-300 transition-colors"
           >
             ← Retour à l'accueil
-          </a>
+          </Link>
         </div>
 
       </div>

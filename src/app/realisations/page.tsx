@@ -365,7 +365,7 @@ const RealisationsPage = () => {
                 }}
               />
               <span className="text-pink-400 text-sm font-medium tracking-wide">
-                CASE STUDIES VÉRIFIÉS • DATA TRANSPARENTE
+                PROJETS OSOM • TRANSFORMATIONS MESURABLES
               </span>
             </motion.div>
             
@@ -379,12 +379,12 @@ const RealisationsPage = () => {
               <motion.div className="text-8xl md:text-9xl font-black text-yellow-400 leading-none mb-4"
                 initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.4 }}
                 whileHover={{ scale: 1.05, textShadow: "0 0 30px rgba(251, 191, 36, 0.5)" }}>
-                RÉALISATIONS
+                PROJETS
               </motion.div>
               
               <motion.div className="text-3xl font-light text-white"
                 initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
-                parlent d'elles-mêmes
+                parlent d'eux-mêmes
               </motion.div>
             </motion.div>
             
@@ -395,10 +395,12 @@ const RealisationsPage = () => {
               variants={itemVariants}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Performances 
-              <span className="text-pink-400 font-semibold">14x supérieures</span> prouvées par la data.
+              Transformations digitales complètes où 
+              <span className="text-pink-400 font-semibold"> stratégie + IA + data</span> génèrent des performances 
+              <span className="text-yellow-400 font-semibold"> 14x supérieures</span> aux solutions classiques.
               <br />
-              <span className="text-yellow-400 font-semibold">688 vs 49 conversions</span> sur des budgets identiques.
+              Un projet OSOM = <span className="text-pink-400 font-semibold"> partenariat stratégique</span> 
+              avec <span className="text-yellow-400 font-semibold"> ROI mesurable</span> et résultats concrets.
             </motion.p>
             
             {/* Premium Animated Metrics Grid */}
@@ -408,10 +410,10 @@ const RealisationsPage = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               {[
-                { value: 14, suffix: "x", label: "ROI Maximum", color: "#EC4899", icon: "" },
-                { value: 688, suffix: "", label: "Conversions Réelles", color: "#10B981", icon: "" },
-                { value: 68.6, suffix: "%", label: "Engagement SEO", color: "#06B6D4", icon: "" },
-                { value: 400, suffix: "+", label: "Jours Données GA4", color: "#FFDD00", icon: "" }
+                { value: 14, suffix: "x", label: "Efficacité vs Concurrence", color: "#EC4899", icon: "" },
+                { value: 688, suffix: "", label: "Conversions Générées", color: "#10B981", icon: "" },
+                { value: 68.6, suffix: "%", label: "Engagement Qualifié", color: "#06B6D4", icon: "" },
+                { value: 200, suffix: "+", label: "Jours d'Analyse", color: "#FFDD00", icon: "" }
               ].map((metric, index) => (
                 <motion.div
                   key={index}
@@ -467,6 +469,57 @@ const RealisationsPage = () => {
         </div>
       </section>
 
+      {/* Section Philosophie Projet OSOM */}
+      <section className="py-20 bg-gradient-to-br from-gray-900/50 to-black">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-light text-white mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Qu'est-ce qu'un <span className="text-pink-500 font-bold">Projet OSOM</span> ?
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8 text-left">
+              <motion.div 
+                className="bg-white/5 p-6 rounded-2xl border border-pink-500/20"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <h3 className="text-pink-400 font-bold text-lg mb-3">Transformation Complète</h3>
+                <p className="text-gray-300">Pas juste un site web, mais une révolution digitale de votre business avec IA intégrée.</p>
+              </motion.div>
+              
+              <motion.div 
+                className="bg-white/5 p-6 rounded-2xl border border-yellow-400/20"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                <h3 className="text-yellow-400 font-bold text-lg mb-3">Partenariat Stratégique</h3>
+                <p className="text-gray-300">Accompagnement long-terme avec optimisation continue basée sur vos données réelles.</p>
+              </motion.div>
+              
+              <motion.div 
+                className="bg-white/5 p-6 rounded-2xl border border-cyan-400/20"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
+                <h3 className="text-cyan-400 font-bold text-lg mb-3">ROI Mesurable</h3>
+                <p className="text-gray-300">Chaque action justifiée par la data, chaque investissement avec retour quantifiable.</p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Premium Case Studies Section */}
       <section className="py-32 bg-gradient-to-br from-white/5 via-black to-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -502,8 +555,10 @@ const RealisationsPage = () => {
             </h2>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Chaque métrique est <span className="text-pink-400 font-semibold">vérifiable dans GA4</span>. 
-              Chaque recommandation est <span className="text-yellow-400 font-semibold">justifiée par les performances</span>.
+              Chaque projet OSOM combine <span className="text-pink-400 font-semibold">intelligence artificielle</span>, 
+              expertise humaine et <span className="text-yellow-400 font-semibold">analyse data avancée</span> pour maximiser votre ROI.
+              <br />
+              <span className="text-cyan-400 font-semibold">Méthodologie éprouvée :</span> Diagnostic → Stratégie → Implémentation → Optimisation continue.
             </p>
           </motion.div>
 
@@ -567,10 +622,10 @@ const RealisationsPage = () => {
           >
             <div className="flex flex-wrap justify-center gap-8">
               {[
-                { label: "Données GA4 vérifiées", color: "#10B981", icon: "" },
-                { label: "Meta Business validé", color: "#06B6D4", icon: "" },
-                { label: "200+ jours d'analyse", color: "#FFDD00", icon: "" },
-                { label: "Métriques reproductibles", color: "#EC4899", icon: "" }
+                { label: "Analytics GA4 configurés", color: "#10B981", icon: "" },
+                { label: "Tracking multi-plateformes", color: "#06B6D4", icon: "" },
+                { label: "Suivi performance 24/7", color: "#FFDD00", icon: "" },
+                { label: "ROI transparents", color: "#EC4899", icon: "" }
               ].map((item, index) => (
                 <motion.div 
                   key={index}
@@ -661,13 +716,14 @@ const RealisationsPage = () => {
             </div>
             
             <h2 className="text-4xl md:text-6xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Prêt à <span className="text-pink-500 font-bold">multiplier</span>
-              <br />vos performances ?
+              Prêt pour votre <span className="text-pink-500 font-bold">transformation</span>
+              <br />digitale OSOM ?
             </h2>
             
             <p className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Découvrez comment OSOM peut transformer votre ROI avec une 
-              <span className="text-pink-400 font-semibold"> stratégie data-driven</span> personnalisée.
+              Démarrez votre projet OSOM : <span className="text-pink-400 font-semibold">transformation complète</span> 
+              de votre présence digitale avec <span className="text-yellow-400 font-semibold">résultats mesurables</span> 
+              et <span className="text-cyan-400 font-semibold">ROI garanti</span>.
             </p>
             
             {/* Premium Stats Showcase */}

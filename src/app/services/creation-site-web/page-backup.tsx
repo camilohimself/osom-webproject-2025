@@ -137,7 +137,7 @@ export default function CreationSiteWebPage() {
                   className="inline-flex items-center px-8 py-5 rounded-xl border border-purple-400/40 text-purple-400 hover:bg-purple-400/10 transition-all duration-300 text-lg font-medium"
                   style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                 >
-                  Voir nos réalisations
+                  Voir nos projets
                 </Link>
               </div>
             </div>
