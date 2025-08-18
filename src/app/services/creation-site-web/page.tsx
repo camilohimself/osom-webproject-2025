@@ -238,18 +238,15 @@ export default function CreationSiteWebPage() {
         
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-8">
-            Un site web qui travaille <br/>
-            <span className="text-yellow-400 font-bold">pour votre entreprise</span>
+            Le site vitrine qui <span className="text-yellow-400 font-bold">génère des RDV</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            Nous concevons des sites qui reflètent votre expertise 
-            et facilitent le contact avec vos futurs clients.
+            <span className="text-yellow-400 font-semibold">Objectif</span> : 1) être trouvé (SEO local), 2) être choisi (UX claire), 3) être contacté (CTA efficaces).
           </p>
 
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            Basés en Valais, nous accompagnons les entreprises romandes 
-            dans leur développement digital avec une approche pragmatique et mesurée.
+            Performance &lt; 2s, pages piliers locales, tracking GA4, formation éditeur.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -271,16 +268,16 @@ export default function CreationSiteWebPage() {
           {/* POINTS CLÉS MODÉRÉS */}
           <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-400">Transparence</div>
-              <div className="text-sm text-gray-400">Prix fixes, sans surprise</div>
+              <div className="text-2xl font-bold text-yellow-400">&lt; 2s</div>
+              <div className="text-sm text-gray-400">Chargement garanti</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-teal-400">Proximité</div>
-              <div className="text-sm text-gray-400">Équipe locale disponible</div>
+              <div className="text-2xl font-bold text-teal-400">CHF 1'990</div>
+              <div className="text-sm text-gray-400">Formule Essentiel</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-green-400">Résultats</div>
-              <div className="text-sm text-gray-400">Suivi mensuel inclus</div>
+              <div className="text-2xl font-bold text-green-400">3-6 sem</div>
+              <div className="text-sm text-gray-400">Délai réaliste</div>
             </div>
           </div>
         </div>
@@ -291,11 +288,12 @@ export default function CreationSiteWebPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-              Nous comprenons vos défis
+              <span className="text-yellow-400 font-bold">Formules</span> claires
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Beaucoup d'entreprises ont un site qui ne génère pas de contacts. 
-              C'est frustrant d'investir sans voir de retour concret.
+              <span className="text-cyan-400 font-semibold">Essentiel</span> (CHF 1'990) pour exister proprement.<br />
+              <span className="text-yellow-400 font-semibold">Croissance</span> (CHF 4'990) pour performer (stratégie & contenu).<br />
+              <span className="text-purple-400 font-semibold">Sur-mesure</span> si intégrations ou multi-langues.
             </p>
           </div>
 
@@ -303,36 +301,30 @@ export default function CreationSiteWebPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-light text-white mb-6">
-                  <span className="text-yellow-400">L'histoire</span> de nombreux dirigeants
+                  <span className="text-yellow-400">Cap sur le ROI</span>
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  "Mon site actuel ne m'apporte aucun client. Les visiteurs ne me contactent pas. 
-                  Je sais qu'il faut le refaire mais je ne sais pas par où commencer."
+                  <span className="text-yellow-400 font-semibold">Délai réaliste</span> : 3–6 semaines selon périmètre.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Cette situation vous parle ? Vous n'êtes pas seul. 
-                  La plupart des sites d'entreprise sont conçus comme des brochures digitales 
-                  plutôt que comme des outils d'acquisition.
+                  <span className="text-cyan-400 font-semibold">Gains mesurés</span> : taux de contact et positions Google.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Notre approche : transformer votre site en point de contact naturel 
-                  entre votre expertise et les besoins de vos clients.
+                  <span className="text-green-400 font-semibold">Charge client limitée</span> : brief initial 2h, points courts.
                 </p>
               </div>
               
               <div className="space-y-4">
                 <div className="bg-black/40 rounded-xl p-6 border border-teal-400/20">
-                  <div className="text-teal-400 font-medium mb-2">Notre différence</div>
+                  <div className="text-teal-400 font-medium mb-2">Livrables concrets</div>
                   <p className="text-gray-300">
-                    Nous ne créons pas juste de beaux sites. Nous construisons 
-                    des parcours qui guident naturellement vos visiteurs vers la prise de contact.
+                    Performance &lt; 2s, pages piliers locales, tracking GA4 configuré, formation éditeur incluse.
                   </p>
                 </div>
                 <div className="bg-black/40 rounded-xl p-6 border border-purple-400/20">
-                  <div className="text-purple-400 font-medium mb-2">Votre implication</div>
+                  <div className="text-purple-400 font-medium mb-2">Méthode OSOM</div>
                   <p className="text-gray-300">
-                    Un brief initial de 2 heures et quelques validations. 
-                    Nous gérons le reste pendant que vous vous concentrez sur votre métier.
+                    Audit initial, KPI définis, déploiement par sprints, optimisation continue.
                   </p>
                 </div>
               </div>
@@ -445,10 +437,10 @@ export default function CreationSiteWebPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-              Un processus <span className="text-yellow-400 font-bold">clair et maîtrisé</span>
+              Process <span className="text-yellow-400 font-bold">structuré</span>
             </h2>
             <p className="text-xl text-gray-400">
-              De notre première discussion à la mise en ligne
+              Découverte → Conception → Réalisation → Lancement
             </p>
           </div>
 
@@ -565,12 +557,11 @@ export default function CreationSiteWebPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-yellow-400/10 to-teal-400/10 rounded-3xl p-12 border border-yellow-400/30 text-center">
             <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-              Parlons de <span className="font-bold text-yellow-400">votre projet</span>
+              Prêt à <span className="font-bold text-yellow-400">structurer votre acquisition</span> ?
             </h2>
             
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Un échange sans engagement pour comprendre vos besoins 
-              et voir comment nous pourrions vous accompagner.
+              Parlons objectifs, délais, KPI — puis livrons.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

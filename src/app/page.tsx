@@ -122,7 +122,7 @@ export default async function Home() {
             <div className="text-center mb-24">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-                <span className="text-yellow-400 text-sm font-medium tracking-wide">LES 3 DIMENSIONS CRÉATIVES</span>
+                <span className="text-yellow-400 text-sm font-medium tracking-wide">NOTRE MÉTHODE EN 3 PILIERS</span>
               </div>
               
               {/* Titre avec jeux typographiques créatifs */}
@@ -132,9 +132,9 @@ export default async function Home() {
                   Nous transformons vos
                 </div>
                 
-                {/* Ligne 2: "IDÉES" - grande taille avec animation */}
+                {/* Ligne 2: "DONNÉES VÉRIFIÉES" - grande taille avec animation */}
                 <div className="text-6xl md:text-8xl font-black text-yellow-400 leading-none mb-4 relative">
-                  IDÉES
+                  DONNÉES VÉRIFIÉES
                   {/* Effet de brillance */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 opacity-0 animate-pulse" />
                 </div>
@@ -144,20 +144,21 @@ export default async function Home() {
                   en
                 </div>
                 
-                {/* Ligne 4: "EXPÉRIENCES" - très grande taille */}
+                {/* Ligne 4: "RÉSULTATS COMMERCIAUX" - très grande taille */}
                 <div className="text-7xl md:text-9xl font-black text-green-400 leading-none mb-3">
-                  EXPÉRIENCES
+                  RÉSULTATS COMMERCIAUX
                 </div>
                 
                 {/* Ligne 5: "qui marquent les esprits" - taille moyenne */}
                 <div className="text-2xl md:text-3xl font-light text-white">
-                  qui marquent les esprits
+                  mesurables et durables
                 </div>
               </div>
               
               <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Trois forces créatives s'allient pour donner vie à vos projets : la <span className="text-yellow-400 font-semibold">créativité amplifiée par l'IA</span>, 
-                les <span className="text-cyan-400 font-semibold">insights qui inspirent</span>, et le <span className="text-green-400 font-semibold">code qui raconte</span> votre histoire unique.
+                <span className="text-yellow-400 font-semibold">Création augmentée</span> (contenus qui émeuvent et convertissent), 
+                <span className="text-cyan-400 font-semibold">Insights actionnables</span> (décisions guidées par GA4), 
+                <span className="text-green-400 font-semibold">Tech supérieure</span> (Core Web Vitals 95+).
               </p>
             </div>
           </AnimatedElement>
@@ -176,7 +177,7 @@ export default async function Home() {
                         <IconeOSOM type="palette" size={32} color="white" ariaLabel="Créativité amplifiée" />
                       </div>
                       <div>
-                        <div className="text-purple-400 font-medium text-sm mb-2">FORCE #1 - CRÉATIVITÉ AMPLIFIÉE PAR L'IA</div>
+                        <div className="text-purple-400 font-medium text-sm mb-2">PILIER #1 - CRÉATION AUGMENTÉE</div>
                       </div>
                     </div>
                     
@@ -196,7 +197,7 @@ export default async function Home() {
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      <span className="text-purple-400 font-semibold">Technologies à jour, IA sur mesure.</span> Développement agile avec itérations rapides pour des solutions orientées client.
+                      <span className="text-purple-400 font-semibold">L'IA accélère, l'expertise dirige.</span> Contenus qui émeuvent et convertissent. Développement agile par sprints.
                     </p>
                     
                     {/* Cartes business réduites */}
@@ -269,7 +270,7 @@ export default async function Home() {
                         <IconeOSOM type="search" size={32} color="white" ariaLabel="Insights inspirants" />
                       </div>
                       <div>
-                        <div className="text-cyan-400 font-medium text-sm mb-2">FORCE #2 - INSIGHTS QUI INSPIRENT</div>
+                        <div className="text-cyan-400 font-medium text-sm mb-2">PILIER #2 - INSIGHTS ACTIONNABLES</div>
                       </div>
                     </div>
                     
@@ -289,7 +290,7 @@ export default async function Home() {
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      <span className="text-cyan-400 font-semibold">Vos données cachent 688 conversions.</span> Nous révélons le ROI invisible et transformons chaque métrique en profit concret.
+                      <span className="text-cyan-400 font-semibold">Décisions guidées par GA4.</span> Nous révélons le ROI invisible et transformons chaque métrique en profit concret.
                     </p>
                     
                     {/* Histoire créative avec métaphores */}
@@ -363,7 +364,7 @@ export default async function Home() {
                         <IconeOSOM type="code" size={32} color="white" ariaLabel="Code qui raconte" />
                       </div>
                       <div>
-                        <div className="text-green-400 font-medium text-sm mb-2">FORCE #3 - CODE QUI RACONTE</div>
+                        <div className="text-green-400 font-medium text-sm mb-2">PILIER #3 - TECH SUPÉRIEURE</div>
                       </div>
                     </div>
                     
@@ -383,7 +384,7 @@ export default async function Home() {
                     </AnimatedElement>
                     
                     <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      <span className="text-green-400 font-semibold">Performance &lt; 2 secondes garantie.</span> Votre site devient une machine à convertir 24h/24 sans temps d'arrêt.
+                      <span className="text-green-400 font-semibold">Core Web Vitals 95+.</span> Chargement &lt; 2s, KPI suivis en temps réel, gains mesurables.
                     </p>
                     
                     {/* Histoire créative avec métaphores */}
@@ -463,36 +464,37 @@ export default async function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           {/* Titre créatif avec typographie audacieuse */}
           <div className="mb-12 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            {/* Ligne 1: "Prêt à transformer" - taille moyenne */}
+            {/* Ligne 1: "Prêt à structurer" - taille moyenne */}
             <div className="text-2xl md:text-3xl font-light text-gray-300 mb-2">
-              Prêt à transformer vos
+              Prêt à structurer votre
             </div>
             
-            {/* Ligne 2: "IDÉES" - grande taille jaune */}
+            {/* Ligne 2: "ACQUISITION" - grande taille jaune */}
             <div className="text-7xl md:text-8xl font-black text-yellow-400 leading-none mb-4">
-              IDÉES
+              ACQUISITION
             </div>
             
-            {/* Ligne 3: "en" - petite taille */}
+            {/* Ligne 3: "avec" - petite taille */}
             <div className="text-lg md:text-xl font-light text-gray-400 italic mb-2">
-              en
+              avec
             </div>
             
-            {/* Ligne 4: "SUCCÈS DIGITAL" - très grande taille verte */}
+            {/* Ligne 4: "MÉTHODE OSOM" - très grande taille verte */}
             <div className="text-6xl md:text-7xl font-black text-green-400 leading-none mb-6">
-              SUCCÈS DIGITAL
+              MÉTHODE OSOM
             </div>
             
             {/* Ligne 5: Question créative */}
             <div className="text-2xl md:text-3xl font-light text-white">
-              qui marquent vraiment ?
+              mesurable et durable ?
             </div>
           </div>
           
           <p className="text-xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Nous ne créons pas que des campagnes marketing : nous orchestrons des <span className="text-yellow-400 font-semibold">expériences émotionnelles</span> 
-            qui transforment vos prospects en ambassadeurs passionnés. <span className="text-green-400 font-semibold">L'IA amplifie votre créativité</span>, 
-            l'humain guide l'âme de vos projets.
+            <span className="text-yellow-400 font-semibold">Visibilité locale</span>, 
+            <span className="text-cyan-400 font-semibold">leads qualifiés</span>, 
+            <span className="text-green-400 font-semibold">reporting GA4 clair</span>. 
+            Parlons objectifs, délais, KPI — puis livrons.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -501,7 +503,7 @@ export default async function Home() {
               variant="primary"
               className="text-xl px-12 py-6 relative overflow-hidden group"
             >
-              <span className="relative z-10">Créons Votre Histoire</span>
+              <span className="relative z-10">Consultation 30 min offerte</span>
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </MagneticButton>
             <MagneticButton
@@ -509,7 +511,7 @@ export default async function Home() {
               variant="secondary"
               className="text-xl px-12 py-6 border-2 border-gray-600 hover:border-purple-400 transition-all duration-300"
             >
-              Voir Nos Créations
+              Voir Nos Résultats
             </MagneticButton>
           </div>
 

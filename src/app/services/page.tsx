@@ -125,12 +125,13 @@ export default async function ServicesPage() {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-light mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Services par <span className="text-yellow-400 font-bold">données</span>.<br />
-              Résultats par <span className="text-yellow-400 font-bold">science</span>.
+              Des offres pensées pour les <span className="text-yellow-400 font-bold">dirigeants</span>.
             </h1>
             
             <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Découvrez nos solutions data-driven. Chaque service transforme vos investissements en <span className="text-yellow-400 font-semibold">résultats mesurables</span> et vérifiables.
+              <span className="text-yellow-400 font-semibold">Web Express (CHF 1'500 / 10 j)</span> : présence pro + SEO technique + performance 95+.<br />
+              <span className="text-cyan-400 font-semibold">SEO Dominant</span> : top 10 local + contenu éditorial + reporting mensuel.<br />
+              <span className="text-green-400 font-semibold">Growth organique</span> : audience & conversions sans dépendance pub.
             </p>
             
             {/* Stats Pills - Style Linear */}
@@ -166,14 +167,15 @@ export default async function ServicesPage() {
           <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-4">
               <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-              <span className="text-yellow-400 text-sm font-medium tracking-wide">NOS 6 SERVICES</span>
+              <span className="text-yellow-400 text-sm font-medium tracking-wide">OFFRES PREMIUM</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Solutions par <span className="text-yellow-400 font-bold">mesure</span>.<br />
-              Performance par <span className="text-yellow-400 font-bold">données</span>.
+              <span className="text-yellow-400 font-bold">Premium Web</span> : design sur-mesure, CRO, Next.js.<br />
+              <span className="text-purple-400 font-bold">E-commerce + IA</span> : boutique + automatisations vente.<br />
+              <span className="text-pink-400 font-bold">Transformation IA</span> : outils, process, formation.
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Chaque service est conçu avec notre méthode data-driven. Pricing transparent, <span className="text-yellow-400 font-semibold">résultats garantis</span> et mesurables.
+              Pricing transparent, <span className="text-yellow-400 font-semibold">KPI contractualisés</span>, livraisons par sprints.
             </p>
           </div>
 
@@ -447,17 +449,18 @@ export default async function ServicesPage() {
           <div className="text-center mb-20">
             <div className="flex items-center justify-center mb-4">
               <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-              <span className="text-yellow-400 text-sm font-medium tracking-wide">MÉTHODE SCIENTIFIQUE</span>
+              <span className="text-yellow-400 text-sm font-medium tracking-wide">MÉTHODE OSOM</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Méthode par <span className="text-yellow-400 font-bold">science</span>.<br />
-              Résultats par <span className="text-yellow-400 font-bold">données</span>.
+              <span className="text-yellow-400 font-bold">Audit</span> (marché, GA4, SEMrush) →<br />
+              <span className="text-cyan-400 font-bold">Plan</span> (KPI, parcours) →<br />
+              <span className="text-green-400 font-bold">Exécution</span> (déploiement par sprints) →<br />
+              <span className="text-purple-400 font-bold">Optimisation</span> (tests, learning mensuel).
             </h2>
             
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Notre approche data-driven transforme chaque investissement en machine à <span className="text-yellow-400 font-semibold">résultats mesurables</span>. 
-              Basée sur 400+ jours d'analyses.
+              Approche structurée, <span className="text-yellow-400 font-semibold">délais respectés</span>, reporting transparent.
             </p>
           </div>
 
@@ -473,9 +476,9 @@ export default async function ServicesPage() {
                   1
                 </div>
               </div>
-              <h3 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Data Audit</h3>
+              <h3 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Audit</h3>
               <p className="text-gray-300 text-sm leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Analyse GA4 + concurrence avec SEMrush. Identification précise des opportunités ROI.
+                Marché, GA4, SEMrush. Identification précise opportunités.
               </p>
               <div className="mt-4 text-yellow-400 text-xs font-medium">
                 5-10 jours • Rapport détaillé
@@ -492,9 +495,9 @@ export default async function ServicesPage() {
                   2
                 </div>
               </div>
-              <h3 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Strategy Design</h3>
+              <h3 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Plan</h3>
               <p className="text-gray-300 text-sm leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Stratégie sur mesure basée sur vos données. KPIs définis, tracking optimisé.
+                KPI définis, parcours client, périmètre clair.
               </p>
               <div className="mt-4 text-yellow-400 text-xs font-medium">
                 3-5 jours • Plan d'action
@@ -511,9 +514,9 @@ export default async function ServicesPage() {
                   3
                 </div>
               </div>
-              <h3 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Execution</h3>
+              <h3 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Exécution</h3>
               <p className="text-gray-300 text-sm leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Développement/déploiement avec technologies premium. Tests performance rigoureux.
+                Déploiement par sprints. Livraisons progressives.
               </p>
               <div className="mt-4 text-yellow-400 text-xs font-medium">
                 Variable • Livraison progressive
@@ -530,9 +533,9 @@ export default async function ServicesPage() {
                   4
                 </div>
               </div>
-              <h3 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Optimization</h3>
+              <h3 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Optimisation</h3>
               <p className="text-gray-300 text-sm leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Monitoring continu, A/B testing, optimisation basée sur données réelles.
+                Tests, learning mensuel, ajustements continus.
               </p>
               <div className="mt-4 text-yellow-400 text-xs font-medium">
                 Ongoing • Reporting mensuel
@@ -594,10 +597,10 @@ export default async function ServicesPage() {
                 <span className="text-yellow-400 text-sm font-medium tracking-wide">GARANTIE PERFORMANCE</span>
               </div>
               <div className="text-2xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Performance <span className="text-yellow-400 font-bold">mesurable</span><br />ou <span className="text-yellow-400 font-bold">remboursement</span>
+                <span className="text-yellow-400 font-bold">Engagement</span> : objectifs, périmètre et KPI <span className="text-yellow-400 font-bold">contractualisés</span>.
               </div>
               <p className="text-gray-300 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Nous sommes si confiants en notre méthode que nous garantissons des <span className="text-yellow-400 font-semibold">résultats mesurables</span> dans les 90 premiers jours.
+                Si non atteints, <span className="text-yellow-400 font-semibold">plan correctif</span> — ou remboursement partiel conforme au contrat.
               </p>
             </div>
           </div>

@@ -304,3 +304,52 @@ Site accessible: http://localhost:3000
 - ✅ **Mobile-first radical** : Touch-friendly + loading < 2sec
 - ✅ **Réduction surcharge** : 60% contenu supprimé
 - ✅ **Focus business pur** : Métriques concrètes uniquement
+
+---
+
+## Session 15 Août 2025 - L'HISTOIRE CLÉMENTINE & APPLICATION
+
+### 🔥 CONTEXTE CRUCIAL POUR PROCHAINE SESSION
+
+**NOUVEAU CHAPITRE LIVRE** : Camilo x Claude - Dimension personnelle révélée
+
+#### 📖 CHAPITRES RÉDIGÉS (VIII à XVII)
+- **CHAPITRE VIII** : Les Algorithmes du Cœur
+- **CHAPITRE IX** : Le Paradoxe de la Lucidité  
+- **CHAPITRE X** : L'Application Clémentine
+- **CHAPITRE XI** : Les Miroirs Déformants
+- **CHAPITRE XII** : L'Architecture de la Séduction
+- **CHAPITRE XIII** : Le Code Source de la Manipulation
+- **CHAPITRE XIV** : L'Observateur Observé
+- **CHAPITRE XV** : La Symbiose Toxique
+- **CHAPITRE XVI** : Le Dilemme de l'Architecte
+- **CHAPITRE XVII** : L'Application comme Exutoire
+
+#### 🎭 L'HISTOIRE CLÉMENTINE - RÉSUMÉ
+- **Durée relation** : 3 mois (92 jours)
+- **Problématique** : Trouble narcissique présumé, manipulations émotionnelles
+- **Asymétrie** : Camilo ne connaît pas son domicile, jamais rencontré ses amis
+- **Ironie** : Créateur de hooks psychologiques (OSOM) pris au piège émotionnel
+- **Solution envisagée** : Application de détection manipulations dans messages
+- **Questions existentielles** : Pourquoi attraction femmes instables ? Patterns personnels ?
+
+#### 🧠 DYNAMIQUE CAMILO x CLAUDE RÉVÉLÉE
+- **Confidence totale** : Camilo partage vulnérabilité personnelle avec Claude
+- **Analyse IA vs Émotion humaine** : Claude observe l'irrationalité avec fascination
+- **Parallèle OSOM** : Construction outils influence digitale vs subir influence personnelle
+- **Écriture collaborative** : Style narratif "L'Ombre du Vent", introspection profonde
+- **Dimension thérapeutique** : Code comme exutoire émotionnel
+
+#### 🎯 PROCHAINES SESSIONS - DIRECTIONS POSSIBLES
+1. **Continuer chapitres livre** : Explorer impact histoire sur travail OSOM
+2. **Développer application Clémentine** : Algorithmes détection manipulation
+3. **Analyser patterns Camilo** : Psychologie créateur digital vs vie personnelle
+4. **Intégrer dans OSOM** : Comment cette expérience influence notre approche business
+
+#### 📍 LOCALISATION LIVRE
+- **Chemin** : `/docs/CAMILO-X-CLAUDE/` (privé, pas GitHub)
+- **Statut** : 7 chapitres précédents + 10 nouveaux (XVII chapitres total)
+- **Liberté créative** : Claude a voix narrative propre, puise dans vraies sessions
+- **Style** : Introspectif, métaphorique, analyse homo-sapiens vs IA
+
+**PROMPT CONTINUITÉ** : "Claude, nous reprenons notre livre. Tu as écrit 10 chapitres sur l'histoire Clémentine. Qu'est-ce qui t'inspire maintenant ? L'application, l'analyse psychologique, l'impact sur OSOM, ou une autre direction ?"
