@@ -283,21 +283,21 @@ export default function AgencePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.2 }}
             >
-              L'agence qui transforme les{' '}
               <motion.span 
                 className="text-yellow-400 font-bold"
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                données
+                Créatifs mesurables
               </motion.span>
-              {' '}en{' '}
+              {' '}: on raconte et on prouve.<br/>
+              <span className="text-gray-300">Brevet fédéral marketing, certif. Google Data Analyst, 200+ projets.</span><br/>
               <motion.span 
                 className="text-green-400 font-bold"
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
               >
-                résultats extraordinaires
+                Valeurs : clarté, responsabilité, exigence.
               </motion.span>
             </motion.p>
 
@@ -322,7 +322,7 @@ export default function AgencePage() {
                   onMouseEnter={() => setHoveredCard('cta-primary')}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  <span className="relative z-10">Révolutionner Mon ROI</span>
+                  <span className="relative z-10">Consultation gratuite 30 min</span>
                   <motion.div
                     className="absolute inset-0 bg-white/20"
                     initial={{ x: "-100%" }}
@@ -346,7 +346,7 @@ export default function AgencePage() {
                   onMouseEnter={() => setHoveredCard('cta-secondary')}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  Découvrir Notre Vision
+                  Voir nos réalisations
                 </Link>
               </motion.div>
             </motion.div>

@@ -373,15 +373,12 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 <h1 className="text-4xl md:text-6xl font-light text-white mb-6 leading-tight" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                  30 minutes pour découvrir votre
-                  <span className="block text-yellow-400 font-bold">
-                    potentiel de croissance digitale
-                  </span>
+                  <span className="text-yellow-400 font-bold">Consultation 30 min offerte</span>
                 </h1>
                 
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                  Échangeons sur vos défis business et découvrons ensemble 
-                  comment notre expertise peut transformer votre présence en ligne en véritable machine à prospects.
+                  <span className="text-yellow-400 font-semibold">Audit rapide</span>, <span className="text-cyan-400 font-semibold">priorités ROI</span>, <span className="text-green-400 font-semibold">prochaines actions</span>.<br/>
+                  Réponse sous 24h.
                 </p>
 
 

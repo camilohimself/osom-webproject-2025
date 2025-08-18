@@ -186,21 +186,18 @@ export default function ProgrammationIAPage() {
                   }}
                 />
                 <span className="text-purple-400 text-sm font-medium tracking-wide">
-                  VALAIS • INNOVATION IA SUR-MESURE
+                  VALAIS • DÉVELOPPEMENT UTILE
                 </span>
               </div>
               
               {/* Titre Principal */}
               <h1 className="text-5xl md:text-7xl font-light text-white mb-8 leading-tight" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                L'IA qui transforme votre
-                <span className="block font-bold text-purple-400">
-                  vision en réalité
-                </span>
+                <span className="font-bold text-purple-400">Développement utile</span>, pas gadget.
               </h1>
               
               <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl">
-                Nous créons des solutions d'intelligence artificielle sur-mesure qui révolutionnent votre quotidien business. 
-                Automatisation intelligente, prédiction précise, personnalisation avancée.
+                <span className="text-purple-400 font-semibold">Ce qu'on fait</span> : automatisations Claude/GPT, micro-outils métier, dashboards et connecteurs (HubSpot, GA4, S. Console).<br/>
+                <span className="text-cyan-400 font-semibold">Ce que ça change</span> : moins de tâches manuelles, des décisions plus rapides, zéro dépendance opaque.
               </p>
               
               {/* Mini Success Story */}
@@ -211,7 +208,7 @@ export default function ProgrammationIAPage() {
                 transition={{ delay: 0.6, duration: 0.6 }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-white font-bold">PME Manufacturing, Valais</span>
+                  <span className="text-white font-bold">Promesse sobre</span>
                   <motion.div
                     className="w-2 h-2 bg-green-500 rounded-full"
                     animate={{
@@ -227,20 +224,20 @@ export default function ProgrammationIAPage() {
                 </div>
                 
                 <div className="space-y-3 text-sm">
-                  <div className="text-red-300">
-                    <strong>Défi :</strong> Processus manuels chronophages, erreurs récurrentes
+                  <div className="text-gray-300">
+                    <strong>Prototypes :</strong> en jours
                   </div>
-                  <div className="text-green-300">
-                    <strong>Résultat :</strong> Temps de traitement divisé par 4, zéro erreur, croissance +180%
+                  <div className="text-gray-300">
+                    <strong>Déploiement :</strong> en semaines
+                  </div>
+                  <div className="text-gray-300">
+                    <strong>Méthode :</strong> tests A/B, journal de décisions
                   </div>
                 </div>
                 
                 <div className="mt-4 pt-4 border-t border-purple-400/20">
-                  <div className="text-purple-400 text-sm italic">
-                    "L'IA a révolutionné notre façon de travailler. Notre équipe se concentre enfin sur l'innovation."
-                  </div>
-                  <div className="text-gray-400 text-xs mt-2">
-                    — Directeur PME Manufacturing, Valais
+                  <div className="text-purple-400 text-sm">
+                    Chiffres communiqués uniquement s'ils sont vérifiables (GA4, logs).
                   </div>
                 </div>
               </motion.div>
@@ -252,14 +249,14 @@ export default function ProgrammationIAPage() {
                   className="inline-flex items-center justify-center px-8 py-4 bg-purple-400 hover:bg-purple-300 text-black font-semibold text-lg rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-400/20"
                   style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                 >
-                  Découvrir votre potentiel IA
+                  Consultation gratuite 30 min
                 </Link>
                 <Link 
                   href="/realisations"
                   className="inline-flex items-center justify-center px-8 py-4 border border-purple-400/50 text-purple-400 hover:text-white hover:bg-purple-400/10 font-semibold text-lg rounded-xl transition-all duration-300"
                   style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
                 >
-                  Voir nos innovations
+                  Voir nos réalisations
                 </Link>
               </motion.div>
             </motion.div>

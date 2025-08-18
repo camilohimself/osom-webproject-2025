@@ -76,18 +76,16 @@ export default function SEOContentMarketingPage() {
         
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-8">
-            Être trouvé par <br/>
-            <span className="text-cyan-400 font-bold">vos futurs clients</span>
+            <span className="text-cyan-400 font-bold">SEO local</span> orienté prise de contact
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            Nous développons votre visibilité sur Google de manière 
-            progressive et durable, sans promesses irréalistes.
+            <span className="text-cyan-400 font-semibold">En 90 jours</span> : base technique propre, clusters éditoriaux, pages locales, maillage.<br/>
+            <span className="text-purple-400 font-semibold">Tableau de bord</span> partagé.
           </p>
 
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            Le SEO est un marathon, pas un sprint. Nous vous accompagnons 
-            avec transparence pour construire une présence solide.
+            Forfait dès CHF 2'800 / mois : rédaction continue (4 contenus/mois), netlinking propre, suivi positions et opportunités.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -96,13 +94,13 @@ export default function SEOContentMarketingPage() {
               className="inline-block px-10 py-5 rounded-xl font-bold text-xl text-black transition-all duration-300 hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #06b6d4, #a855f7)' }}
             >
-              Analyser mon potentiel
+              Consultation gratuite 30 min
             </Link>
             <Link
               href="#services" 
               className="inline-flex items-center px-8 py-5 rounded-xl border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 text-lg font-medium"
             >
-              Découvrir l'approche
+              Voir notre méthode
             </Link>
           </div>
 
@@ -129,11 +127,11 @@ export default function SEOContentMarketingPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-              Le défi de la visibilité en ligne
+              <span className="text-cyan-400 font-bold">Transparence</span> totale
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              "Mes clients potentiels ne me trouvent pas sur Google. 
-              Mes concurrents apparaissent avant moi."
+              KPIs utiles : leads, prises de RDV, positions, pages d'entrée.<br/>
+              <span className="text-cyan-400 font-semibold">Pas de vanity metrics</span>.
             </p>
           </div>
 

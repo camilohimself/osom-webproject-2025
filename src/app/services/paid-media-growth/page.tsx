@@ -10,7 +10,7 @@ export default function PaidMediaGrowthPage() {
   
   // Animation VERSION 2 - Typewriter
   useEffect(() => {
-    const fullText = "Nous travaillons dans l'ombre pour vous faire briller"
+    const fullText = "Nous ne travaillons qu'avec des clients qui veulent gagner. Les autres, on les laisse à la concurrence."
     let currentIndex = 0
     
     const typeWriter = setInterval(() => {
@@ -140,18 +140,13 @@ export default function PaidMediaGrowthPage() {
           {/* Badge avec pulsation */}
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-full mb-12 border border-yellow-400/40">
             <div className="w-3 h-3 bg-yellow-400 rounded-full mr-4 animate-ping"></div>
-            <span className="text-yellow-400 font-bold text-lg tracking-wider">STRATÉGIE GROWTH INTENSIVE</span>
+            <span className="text-yellow-400 font-bold text-lg tracking-wider">PUBLICITÉ AVEC INTENTION</span>
           </div>
           
           {/* Titre principal avec effet de gradient */}
           <div className="mb-12">
-            <h1 className="text-7xl md:text-9xl font-extralight text-white leading-tight mb-6">
-              <span className="block bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                METTRE LE
-              </span>
-              <span className="block bg-gradient-to-r from-yellow-400 via-green-400 to-yellow-400 bg-clip-text text-transparent font-bold animate-pulse">
-                PAQUET
-              </span>
+            <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-6">
+              <span className="text-yellow-400 font-bold">Publicité avec intention</span>
             </h1>
             
             {/* Slogan avec effet typewriter */}
