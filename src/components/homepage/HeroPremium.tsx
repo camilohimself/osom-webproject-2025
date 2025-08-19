@@ -138,7 +138,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
     })
     
     setFocusedService(hoveredService)
-  }, [isDesktop])
+  }, [isDesktop, services])
 
   const handleSvgMouseEnter = () => {
     if (isDesktop) {
@@ -326,7 +326,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
-                Nous sommes <span className="text-yellow-400 font-black">OSOM, l'agence créative</span> qui transforme vos données en <span className="text-yellow-400 font-black">pixels qui vendent</span>.
+                <span className="text-yellow-400 font-black">L'agence créative</span> qui transforme vos données en <span className="text-yellow-400 font-black">pixels qui vendent</span>.
               </motion.div>
               
               {/* Message secondaire plus petit */}

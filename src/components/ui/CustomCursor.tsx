@@ -9,7 +9,7 @@ interface CustomCursorProps {
 
 export default function CustomCursor({ isActive = false }: CustomCursorProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [cursorVariant, setCursorVariant] = useState<'default' | 'prism' | 'force'>('default')
+  const [cursorVariant, setCursorVariant] = useState<'default' | 'danger' | 'solution' | 'data' | 'interactive' | 'prism' | 'force'>('default')
   const [hoverText, setHoverText] = useState('')
   const [isVisible, setIsVisible] = useState(false)
 
@@ -25,16 +25,54 @@ export default function CustomCursor({ isActive = false }: CustomCursorProps) {
       setIsVisible(false)
     }
 
-    // Détecte les zones spéciales du prisme
+    // Détecte les zones spéciales - Blog IA + Prisme
     const handleMouseEnter = (e: MouseEvent) => {
       const target = e.target as HTMLElement
+      const textContent = target.textContent?.toLowerCase() || ''
       
-      // Zone prisme principal
-      if (target.closest('[data-prism="triangle"]')) {
+      // Blog IA - Détection dangers
+      if (target.closest('.text-red-400') || 
+          textContent.includes('danger') || 
+          textContent.includes('risque') ||
+          textContent.includes('alerte') ||
+          target.closest('[data-cursor="danger"]')) {
+        setCursorVariant('danger')
+        setHoverText('⚠️ DANGER')
+      }
+      // Blog IA - Solutions
+      else if (target.closest('.text-green-400') || 
+               textContent.includes('solution') || 
+               textContent.includes('libération') ||
+               textContent.includes('success') ||
+               target.closest('[data-cursor="solution"]')) {
+        setCursorVariant('solution')
+        setHoverText('✨ SOLUTION')
+      }
+      // Blog IA - Data/Métriques
+      else if (target.closest('.text-purple-400') || 
+               target.closest('.text-cyan-400') ||
+               /\d+%/.test(textContent) ||
+               /\d+\s?chf/i.test(textContent) ||
+               /\d+h/.test(textContent) ||
+               target.closest('[data-cursor="data"]')) {
+        setCursorVariant('data')
+        setHoverText('📊 DATA')
+      }
+      // Éléments interactifs
+      else if (target.closest('a') || 
+               target.closest('button') || 
+               target.closest('.group') ||
+               target.closest('[role="button"]') ||
+               target.closest('[data-cursor="interactive"]')) {
+        setCursorVariant('interactive')
+        setHoverText('👆 CLIC')
+      }
+      // Zone prisme principal (legacy)
+      else if (target.closest('[data-prism="triangle"]')) {
         setCursorVariant('prism')
         setHoverText('DÉCOUVRIR')
       }
-      // Zones des forces
+      // Zones des forces (legacy)
       else if (target.closest('[data-force="data"]')) {
         setCursorVariant('force')
         setHoverText('DATA POWER')
@@ -70,17 +108,44 @@ export default function CustomCursor({ isActive = false }: CustomCursorProps) {
     default: {
       scale: 1,
       backgroundColor: 'rgba(255, 221, 0, 0.8)',
-      border: '2px solid rgba(255, 221, 0, 0.4)'
+      border: '2px solid rgba(255, 221, 0, 0.4)',
+      rotate: 0
+    },
+    danger: {
+      scale: 1.8,
+      backgroundColor: 'rgba(239, 68, 68, 0.9)',
+      border: '3px solid rgba(239, 68, 68, 1)',
+      rotate: [0, 5, -5, 0]
+    },
+    solution: {
+      scale: 1.4,
+      backgroundColor: 'rgba(34, 197, 94, 0.8)',
+      border: '2px solid rgba(34, 197, 94, 1)',
+      rotate: 0
+    },
+    data: {
+      scale: 1.3,
+      backgroundColor: 'rgba(168, 85, 247, 0.8)',
+      border: '2px solid rgba(168, 85, 247, 1)',
+      rotate: 0
+    },
+    interactive: {
+      scale: 1.2,
+      backgroundColor: 'rgba(6, 182, 212, 0.8)',
+      border: '2px solid rgba(6, 182, 212, 1)',
+      rotate: 0
     },
     prism: {
       scale: 1.5,
       backgroundColor: 'rgba(255, 255, 255, 0.9)',
-      border: '3px solid rgba(255, 221, 0, 0.8)'
+      border: '3px solid rgba(255, 221, 0, 0.8)',
+      rotate: 0
     },
     force: {
       scale: 1.2,
       backgroundColor: 'rgba(0, 255, 255, 0.7)',
-      border: '2px solid rgba(0, 255, 255, 0.9)'
+      border: '2px solid rgba(0, 255, 255, 0.9)',
+      rotate: 0
     }
   }
 
@@ -121,7 +186,116 @@ export default function CustomCursor({ isActive = false }: CustomCursorProps) {
             </motion.div>
           )}
 
-          {/* Particules qui suivent le cursor dans les zones prisme */}
+          {/* Particules spéciales par type de cursor */}
+          
+          {/* Danger: Ondes d'alerte */}
+          {cursorVariant === 'danger' && (
+            <div className="fixed pointer-events-none z-[9998]">
+              {[...Array(3)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute border-2 border-red-400 rounded-full"
+                  style={{
+                    left: mousePosition.x - 20 - i * 10,
+                    top: mousePosition.y - 20 - i * 10,
+                    width: 40 + i * 20,
+                    height: 40 + i * 20
+                  }}
+                  animate={{
+                    scale: [0.8, 1.3, 0.8],
+                    opacity: [0.8, 0.2, 0.8]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    delay: i * 0.2,
+                    ease: 'easeInOut'
+                  }}
+                />
+              ))}
+            </div>
+          )}
+          
+          {/* Solution: Particules de succès */}
+          {cursorVariant === 'solution' && (
+            <div className="fixed pointer-events-none z-[9998]">
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-2 h-2 bg-green-400 rounded-full"
+                  style={{
+                    left: mousePosition.x,
+                    top: mousePosition.y
+                  }}
+                  animate={{
+                    x: [0, Math.cos(i * Math.PI / 3) * 25],
+                    y: [0, Math.sin(i * Math.PI / 3) * 25],
+                    opacity: [1, 0],
+                    scale: [0.5, 1, 0]
+                  }}
+                  transition={{
+                    duration: 1.2,
+                    repeat: Infinity,
+                    delay: i * 0.15,
+                    ease: 'easeOut'
+                  }}
+                />
+              ))}
+            </div>
+          )}
+          
+          {/* Data: Flux de données */}
+          {cursorVariant === 'data' && (
+            <div className="fixed pointer-events-none z-[9998]">
+              {[...Array(4)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-6 bg-purple-400 rounded-full opacity-70"
+                  style={{
+                    left: mousePosition.x - 2 + i * 4,
+                    top: mousePosition.y - 15
+                  }}
+                  animate={{
+                    height: [6, 12, 6],
+                    y: [0, -5, 0],
+                    opacity: [0.4, 0.9, 0.4]
+                  }}
+                  transition={{
+                    duration: 0.8,
+                    repeat: Infinity,
+                    delay: i * 0.1,
+                    ease: 'easeInOut'
+                  }}
+                />
+              ))}
+            </div>
+          )}
+          
+          {/* Interactive: Pulse de clic */}
+          {cursorVariant === 'interactive' && (
+            <div className="fixed pointer-events-none z-[9998]">
+              <motion.div
+                className="absolute border-2 border-cyan-400 rounded-full"
+                style={{
+                  left: mousePosition.x - 15,
+                  top: mousePosition.y - 15,
+                  width: 30,
+                  height: 30
+                }}
+                animate={{
+                  scale: [0.8, 1.2, 0.8],
+                  opacity: [0.6, 0.2, 0.6]
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
+                }}
+              />
+            </div>
+          )}
+          
+          {/* Prisme: Particules (legacy) */}
           {cursorVariant === 'prism' && (
             <div className="fixed pointer-events-none z-[9998]">
               {[...Array(6)].map((_, i) => (
