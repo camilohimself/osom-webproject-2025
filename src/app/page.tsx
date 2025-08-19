@@ -20,7 +20,15 @@ const GaugeChart = dynamic(() => import('@/components/ui/GaugeChart'), {
 })
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData } from '@/lib/structured-data'
-import HeroPremium from '@/components/homepage/HeroPremium'
+import HeroSwissOSOM from '@/components/homepage/HeroSwissOSOM'
+
+// Lazy loading pour les Piliers Swiss (composants client)
+const PilierSwiss2 = dynamic(() => import('@/components/homepage/PilierSwiss2'), {
+  loading: () => <div className="h-96 bg-cyan-400/5 rounded-2xl animate-pulse" />
+})
+const PilierSwiss3 = dynamic(() => import('@/components/homepage/PilierSwiss3'), {
+  loading: () => <div className="h-96 bg-green-400/5 rounded-2xl animate-pulse" />
+})
 import AnimatedElement from '@/components/ui/AnimatedElement'
 import InteractiveBackground from '@/components/ui/InteractiveBackground'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
@@ -105,12 +113,10 @@ export default async function Home() {
       
       {/* Scroll Progress Indicator */}
       <ScrollProgressIndicator />
-      {/* Hero Premium Section */}
-      <HeroPremium dictionary={dictionary.home} />
+      {/* Hero Swiss OSOM Section */}
+      <HeroSwissOSOM dictionary={dictionary.home} />
 
-      {/* Les 3 Forces Créatives OSOM - Vision Narrative */}
       <section className="py-32 bg-black relative overflow-hidden">
-        {/* Background Pattern Créatif */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.15'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
@@ -125,31 +131,20 @@ export default async function Home() {
                 <span className="text-yellow-400 text-sm font-medium tracking-wide">NOTRE MÉTHODE EN 3 PILIERS</span>
               </div>
               
-              {/* Titre avec jeux typographiques créatifs */}
               <div className="mb-12 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                {/* Ligne 1: "Nous transformons vos" - taille moyenne */}
                 <div className="text-2xl md:text-3xl font-light text-gray-300 mb-2">
                   Nous transformons vos
                 </div>
-                
-                {/* Ligne 2: "DONNÉES VÉRIFIÉES" - grande taille avec animation */}
                 <div className="text-6xl md:text-8xl font-black text-yellow-400 leading-none mb-4 relative">
                   DONNÉES VÉRIFIÉES
-                  {/* Effet de brillance */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 opacity-0 animate-pulse" />
                 </div>
-                
-                {/* Ligne 3: "en" - petite taille italique */}
                 <div className="text-lg md:text-xl font-light text-gray-400 italic mb-2">
                   en
                 </div>
-                
-                {/* Ligne 4: "RÉSULTATS COMMERCIAUX" - très grande taille */}
                 <div className="text-7xl md:text-9xl font-black text-green-400 leading-none mb-3">
                   RÉSULTATS COMMERCIAUX
                 </div>
-                
-                {/* Ligne 5: "qui marquent les esprits" - taille moyenne */}
                 <div className="text-2xl md:text-3xl font-light text-white">
                   mesurables et durables
                 </div>
@@ -163,13 +158,10 @@ export default async function Home() {
             </div>
           </AnimatedElement>
 
-          
           <div className="space-y-20">
             
-            {/* FORCE 1: CRÉATIVITÉ AMPLIFIÉE PAR L'IA */}
             <AnimatedElement type="slideUp" delay={0.2}>
               <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group">
-                {/* Layout centré avec graphique intégré */}
                 <div className="p-16 bg-gradient-to-br from-purple-900/20 to-black/60">
                   <div className="max-w-4xl mx-auto">
                     <div className="flex items-center justify-center mb-8">
@@ -183,7 +175,6 @@ export default async function Home() {
                     
                     <AnimatedElement type="fadeIn" delay={0.3}>
                       <div className="text-center mb-10">
-                        {/* Titre créatif avec jeux typographiques */}
                         <div className="text-3xl md:text-4xl font-light text-white mb-4">
                           Créativité augmentée, guidée par l'humain
                         </div>
@@ -200,7 +191,6 @@ export default async function Home() {
                       <span className="text-purple-400 font-semibold">L'IA accélère, l'expertise dirige.</span> Contenus qui émeuvent et convertissent. Développement agile par sprints.
                     </p>
                     
-                    {/* Cartes business réduites */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                       <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30 hover:bg-purple-400/15 transition-all duration-300">
                         <div className="flex items-center mb-4">
@@ -227,7 +217,6 @@ export default async function Home() {
                       </div>
                     </div>
                     
-                    {/* Graphique CTR circulaire avec hover effect */}
                     <AnimatedElement type="slideUp" delay={0.7}>
                       <div className="mb-10">
                         <CTRCircularChart
@@ -237,216 +226,22 @@ export default async function Home() {
                         />
                       </div>
                     </AnimatedElement>
-                    
-                    {/* Stats block masqué selon instructions */}
                   </div>
                 </div>
               </div>
             </AnimatedElement>
             
-            {/* FORCE 2: INSIGHTS QUI INSPIRENT */}
             <AnimatedElement type="slideUp" delay={0.4}>
-              <div className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/10 transition-all duration-500 group">
-              {/* Layout centré avec background graphique */}
-              <div className="relative">
-                {/* Background graphique */}
-                <div className="absolute inset-0 opacity-20">
-                  <GraphiqueComparatif
-                    title="Engagement quality"
-                    subtitle="SEO vs direct traffic"
-                    data={[
-                      { label: "SEO OSOM", value: 68.6, color: "#06B6D4" },
-                      { label: "Trafic direct", value: 44.6, color: "#6B7280" }
-                    ]}
-                    className="h-full border-0"
-                  />
-                </div>
-                
-                {/* Contenu au premier plan */}
-                <div className="relative z-10 p-16 bg-gradient-to-br from-black/80 to-black/60">
-                  <div className="max-w-4xl mx-auto text-center">
-                    <div className="flex items-center justify-center mb-8">
-                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-6 flex items-center justify-center">
-                        <IconeOSOM type="search" size={32} color="white" ariaLabel="Insights inspirants" />
-                      </div>
-                      <div>
-                        <div className="text-cyan-400 font-medium text-sm mb-2">PILIER #2 - INSIGHTS ACTIONNABLES</div>
-                      </div>
-                    </div>
-                    
-                    <AnimatedElement type="fadeIn" delay={0.4}>
-                      <div className="text-center mb-10">
-                        {/* Titre créatif avec jeux typographiques */}
-                        <div className="text-3xl md:text-4xl font-light text-white mb-4">
-                          Vos données cachent des
-                        </div>
-                        <div className="text-6xl md:text-7xl font-black text-cyan-400 leading-none mb-4">
-                          TRÉSORS D'INSPIRATION
-                        </div>
-                        <div className="text-2xl md:text-3xl font-light text-gray-300">
-                          688 conversions vs 49 traditionnelles
-                        </div>
-                      </div>
-                    </AnimatedElement>
-                    
-                    <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      <span className="text-cyan-400 font-semibold">Décisions guidées par GA4.</span> Nous révélons le ROI invisible et transformons chaque métrique en profit concret.
-                    </p>
-                    
-                    {/* Histoire créative avec métaphores */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                      <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30 hover:bg-cyan-400/15 transition-all duration-300">
-                        <div className="flex items-center mb-4">
-                          <IconeOSOM type="search" size={24} color="cyan" ariaLabel="Détective des données" />
-                          <div className="text-cyan-400 font-bold text-lg ml-3">Le Détective des Données</div>
-                        </div>
-                        <div className="text-gray-300 mb-4">14'171 sessions "fantômes" découvertes dans vos analytics. Comme un détective numérique, nous révélons les traces invisibles de vos prospects et transformons l'inexpliqué en opportunités.</div>
-                        <div className="text-cyan-400 text-sm italic">"Chaque indice mène à une découverte"</div>
-                      </div>
-                      
-                      <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/30 hover:bg-cyan-400/15 transition-all duration-300">
-                        <div className="flex items-center mb-4">
-                          <IconeOSOM type="target" size={24} color="cyan" ariaLabel="Cartographe des comportements" />
-                          <div className="text-cyan-400 font-bold text-lg ml-3">Le Cartographe des Désirs</div>
-                        </div>
-                        <div className="text-gray-300 mb-4">688 conversions vs 49 ? Nous cartographions les chemins secrets de vos clients. Chaque parcours devient une histoire qui inspire vos futures stratégies créatives.</div>
-                        <div className="text-cyan-400 text-sm italic">"Dessiner la carte du succès"</div>
-                      </div>
-                      
-                    </div>
-                    
-                    {/* Graphique line chart Data Analysis */}
-                    <AnimatedElement type="slideUp" delay={0.8}>
-                      <div className="mb-10">
-                        <DataLineChart
-                          title="ROI Évolution OSOM vs Industrie"
-                          subtitle="Data science révèle leviers cachés • 6 mois comparatif"
-                          data={[
-                            { month: "Jan", osomValue: 44.6, industryValue: 35.2 },
-                            { month: "Fév", osomValue: 52.3, industryValue: 37.1 },
-                            { month: "Mar", osomValue: 58.7, industryValue: 39.5, annotation: "Optimisation prédictive" },
-                            { month: "Avr", osomValue: 62.4, industryValue: 41.2 },
-                            { month: "Mai", osomValue: 65.8, industryValue: 42.8 },
-                            { month: "Jun", osomValue: 68.6, industryValue: 44.6, annotation: "Attribution multi-touch" }
-                          ]}
-                          primaryColor="#06B6D4"
-                          secondaryColor="#6B7280"
-                          backgroundColor="rgba(6, 182, 212, 0.05)"
-                          className="rounded-2xl border border-cyan-400/20"
-                          animate={true}
-                        />
-                      </div>
-                    </AnimatedElement>
-                    
-                    <AnimatedElement type="scale" delay={0.9}>
-                      <div className="bg-cyan-400/10 rounded-xl p-8 border border-cyan-400/30 max-w-2xl mx-auto hover:bg-cyan-400/15 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/20 transition-all duration-500">
-                        <div className="text-cyan-400 font-bold text-2xl mb-2">{dictionary.home.force2.engagement.title}</div>
-                        <div className="text-white text-lg">{dictionary.home.force2.engagement.description}</div>
-                        <div className="text-gray-400 text-sm mt-2">{dictionary.home.force2.engagement.subtitle}</div>
-                      </div>
-                    </AnimatedElement>
-                  </div>
-                </div>
-              </div>
+              <div className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl overflow-hidden min-h-[800px] hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/10 transition-all duration-500 group">
+                <PilierSwiss2 />
               </div>
             </AnimatedElement>
             
-            {/* FORCE 3: CODE QUI RACONTE */}
             <AnimatedElement type="slideUp" delay={0.6}>
               <div className="backdrop-blur-sm border border-green-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-green-400/40 hover:shadow-2xl hover:shadow-green-400/10 transition-all duration-500 group">
-              {/* Layout asymétrique diagonal */}
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 h-full">
-                {/* Contenu principal - 3 colonnes */}
-                <div className="col-span-3 p-16 bg-gradient-to-br from-green-900/20 to-black/60">
-                  <div className="max-w-3xl">
-                    <div className="flex items-center mb-8">
-                      <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full mr-6 flex items-center justify-center">
-                        <IconeOSOM type="code" size={32} color="white" ariaLabel="Code qui raconte" />
-                      </div>
-                      <div>
-                        <div className="text-green-400 font-medium text-sm mb-2">PILIER #3 - TECH SUPÉRIEURE</div>
-                      </div>
-                    </div>
-                    
-                    <AnimatedElement type="slideRight" delay={0.4}>
-                      <div className="mb-10">
-                        {/* Titre créatif avec jeux typographiques */}
-                        <div className="text-3xl md:text-4xl font-light text-white mb-4">
-                          Votre code devient
-                        </div>
-                        <div className="text-5xl md:text-6xl font-black text-green-400 leading-none mb-4">
-                          CONTEUR DIGITAL
-                        </div>
-                        <div className="text-2xl md:text-3xl font-light text-gray-300">
-                          Performance &lt; 2s • Stratégie Top 5 Google
-                        </div>
-                      </div>
-                    </AnimatedElement>
-                    
-                    <p className="text-xl text-gray-300 leading-relaxed mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      <span className="text-green-400 font-semibold">Core Web Vitals 95+.</span> Chargement &lt; 2s, KPI suivis en temps réel, gains mesurables.
-                    </p>
-                    
-                    {/* Histoire créative avec métaphores */}
-                    <div className="space-y-6 mb-10">
-                      <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400 hover:from-green-400/15 transition-all duration-300">
-                        <div className="flex justify-between items-start mb-3">
-                          <div className="flex items-center">
-                            <IconeOSOM type="tools" size={20} color="green" ariaLabel="Architecte digital" />
-                            <div className="font-semibold text-green-400 ml-2">L'Architecte de Rêves Numériques</div>
-                          </div>
-                          <div className="text-green-400 font-bold text-lg">0 refonte en 5 ans</div>
-                        </div>
-                        <div className="text-gray-300">Comme un architecte visionnaire, nous bâtissons des fondations qui évoluent avec vos ambitions. Votre site grandit avec vous, s'adapte, se transforme sans jamais perdre son âme.</div>
-                        <div className="text-green-300 text-sm mt-2 italic">"Construire pour l'éternité numérique"</div>
-                      </div>
-                      
-                      <div className="bg-gradient-to-r from-green-400/10 to-transparent rounded-lg p-6 border-l-4 border-green-400 hover:from-green-400/15 transition-all duration-300">
-                        <div className="flex justify-between items-start mb-3">
-                          <div className="flex items-center">
-                            <IconeOSOM type="lightning" size={20} color="green" ariaLabel="Virtuose de la vitesse" />
-                            <div className="font-semibold text-green-400 ml-2">Le Virtuose de la Vitesse</div>
-                          </div>
-                          <div className="text-green-400 font-bold text-lg">&lt; 2s chargement</div>
-                        </div>
-                        <div className="text-gray-300">La patience n'existe plus à l'ère digitale. Nos sites s'affichent plus vite qu'un battement de cœur, créant cette magie du "tout de suite" qui transforme l'attente en émerveillement.</div>
-                        <div className="text-green-300 text-sm mt-2 italic">"L'art de ne jamais faire attendre"</div>
-                      </div>
-                      
-                    </div>
-                    
-                    <AnimatedElement type="scale" delay={0.9}>
-                      <div className="bg-green-400/10 rounded-xl p-8 border border-green-400/30 hover:bg-green-400/15 hover:border-green-400/50 hover:shadow-lg hover:shadow-green-400/20 transition-all duration-500">
-                        <div className="text-green-400 font-bold text-2xl mb-2">{dictionary.home.force3.conversions.title}</div>
-                        <div className="text-white text-lg">{dictionary.home.force3.conversions.description}</div>
-                        <div className="text-gray-400 text-sm mt-2">{dictionary.home.force3.conversions.subtitle}</div>
-                      </div>
-                    </AnimatedElement>
-                  </div>
-                </div>
-                
-                {/* Graphique gauge/speedometer - 2 colonnes */}
-                <div className="col-span-2 bg-gradient-to-tl from-green-900/30 to-black/80 flex items-center p-8">
-                  <GaugeChart
-                    title="&lt; 2s vs 5-8s"
-                    subtitle="Performance temps chargement"
-                    primaryValue={1.8}
-                    secondaryValue={6.5}
-                    primaryLabel="OSOM Next.js + IA"
-                    secondaryLabel="Solutions Standard"
-                    unit="s"
-                    maxValue={10}
-                    primaryColor="#10B981"
-                    secondaryColor="#6B7280"
-                    backgroundColor="rgba(16, 185, 129, 0.05)"
-                    className="w-full border-0"
-                    animate={true}
-                  />
-                </div>
-              </div>
+                <PilierSwiss3 />
               </div>
             </AnimatedElement>
-            
           </div>
         </div>
       </section>

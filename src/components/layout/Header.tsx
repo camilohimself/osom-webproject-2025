@@ -53,10 +53,10 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
           <Link href="/" className="flex items-center group">
             <div className="relative">
               <Image 
-                src="/chrome-logo.svg" 
+                src="/osom-logo.svg" 
                 alt="OSOM - Agence digitale Valais" 
-                width={40} 
-                height={40} 
+                width={60} 
+                height={60} 
                 className="group-hover:scale-105 transition-transform duration-300 filter group-hover:brightness-110"
                 priority
               />

@@ -257,60 +257,6 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
         >
           {/* Left: Content */}
           <div>
-            {/* Badge with urgency/scarcity */}
-            <motion.div 
-              className="flex flex-col sm:flex-row sm:items-center gap-3 mb-8"
-              variants={badgeVariants}
-              transition={{ duration: 0.6, ease: [0.25, 0.25, 0.25, 0.75] }}
-            >
-              {/* Main badge */}
-              <div className="flex items-center">
-                <motion.div 
-                  className="w-2 h-2 rounded-full bg-yellow-400 mr-3"
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.8, 1, 0.8]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-                <span className="text-yellow-400 text-sm font-medium tracking-wide">
-                  {dictionary.hero.badge}
-                </span>
-              </div>
-              
-              {/* Urgency/Scarcity indicator */}
-              <motion.div 
-                className="flex items-center bg-red-500/20 px-3 py-1 rounded-full border border-red-500/30"
-                animate={{
-                  backgroundColor: ["rgba(239, 68, 68, 0.2)", "rgba(239, 68, 68, 0.3)", "rgba(239, 68, 68, 0.2)"]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <motion.div 
-                  className="w-1.5 h-1.5 rounded-full bg-red-500 mr-2"
-                  animate={{
-                    scale: [1, 1.3, 1],
-                    opacity: [0.8, 1, 0.8]
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-                <span className="text-red-400 text-xs font-semibold tracking-wide">
-                  PLUS QUE 2 PLACES CE MOIS
-                </span>
-              </motion.div>
-            </motion.div>
             
             {/* HERO CRÉATIF AUDACIEUX - Jeux Typographiques Dynamiques */}
             <motion.div 
@@ -329,38 +275,8 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                 <span className="text-yellow-400 font-black">L'agence créative</span> qui transforme vos données en <span className="text-yellow-400 font-black">pixels qui vendent</span>.
               </motion.div>
               
-              {/* Message secondaire plus petit */}
-              <motion.div
-                className="text-xl md:text-2xl font-light text-gray-300 leading-relaxed mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                Assistés par l'intelligence artificielle, chaque métrique devient conversion.
-              </motion.div>
             </motion.div>
               
-            {/* Signature créative en bas */}
-            <motion.div
-              className="text-sm md:text-base text-purple-400 font-medium mt-6 flex items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.8 }}
-            >
-              <motion.div 
-                className="w-8 h-0.5 bg-purple-400 mr-3"
-                initial={{ width: 0 }}
-                animate={{ width: 32 }}
-                transition={{ duration: 1, delay: 2 }}
-              />
-              Agence Créative × Intelligence Artificielle
-              <motion.div 
-                className="w-8 h-0.5 bg-purple-400 ml-3"
-                initial={{ width: 0 }}
-                animate={{ width: 32 }}
-                transition={{ duration: 1, delay: 2.2 }}
-              />
-            </motion.div>
             
             {/* Description Créative */}
             <motion.div 
@@ -368,20 +284,6 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
               variants={itemVariants}
             >
-              <p className="text-xl text-gray-300 leading-relaxed mb-4">
-                <span className="text-yellow-400 font-semibold">25% de taux de clic</span> vs <span className="line-through text-gray-500">2-3% industrie</span> ? 
-                <br />Parce que nos <span className="text-green-400 font-semibold">histoires captivantes</span> touchent l'émotion 
-                avant de convaincre par la logique.
-              </p>
-              
-              <motion.div 
-                className="text-lg text-gray-400 italic pl-4 border-l-2 border-purple-400/30"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 2.5, duration: 0.8 }}
-              >
-                "L'IA amplifie notre créativité, l'humain guide l'âme de vos projets"
-              </motion.div>
             </motion.div>
             
             {/* CTA Buttons */}
