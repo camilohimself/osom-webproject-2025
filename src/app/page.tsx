@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import { Metadata } from 'next'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, type Locale } from '@/lib/i18n'
-import { GraphiqueComparatif } from '@/components/ui'
 import dynamic from 'next/dynamic'
 
 // Lazy loading pour optimiser la fluidité
@@ -134,7 +132,7 @@ export default async function Home() {
                 <span className="text-yellow-400 text-sm font-medium tracking-wide">NOTRE MÉTHODE EN 3 PILIERS</span>
               </div>
               
-              <div className="mb-12 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              <div className="mb-12 leading-tight font-sans">
                 <div className="text-2xl md:text-3xl font-light text-gray-300 mb-2">
                   Nous transformons vos
                 </div>
@@ -153,7 +151,7 @@ export default async function Home() {
                 </div>
               </div>
               
-              <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed font-sans">
                 <span className="text-yellow-400 font-semibold">Création augmentée</span> (contenus qui émeuvent et convertissent), 
                 <span className="text-cyan-400 font-semibold">Insights actionnables</span> (décisions guidées par GA4), 
                 <span className="text-green-400 font-semibold">Tech supérieure</span> (Core Web Vitals 95+).
@@ -195,35 +193,29 @@ export default async function Home() {
         </div>
         
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          {/* Titre créatif avec typographie audacieuse */}
-          <div className="mb-12 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            {/* Ligne 1: "Prêt à structurer" - taille moyenne */}
+          <div className="mb-12 leading-tight font-sans">
             <div className="text-2xl md:text-3xl font-light text-gray-300 mb-2">
               Prêt à structurer votre
             </div>
             
-            {/* Ligne 2: "ACQUISITION" - grande taille jaune */}
             <div className="text-7xl md:text-8xl font-black text-yellow-400 leading-none mb-4">
               ACQUISITION
             </div>
             
-            {/* Ligne 3: "avec" - petite taille */}
             <div className="text-lg md:text-xl font-light text-gray-400 italic mb-2">
               avec
             </div>
             
-            {/* Ligne 4: "MÉTHODE OSOM" - très grande taille verte */}
             <div className="text-6xl md:text-7xl font-black text-green-400 leading-none mb-6">
               MÉTHODE OSOM
             </div>
             
-            {/* Ligne 5: Question créative */}
             <div className="text-2xl md:text-3xl font-light text-white">
               mesurable et durable ?
             </div>
           </div>
           
-          <p className="text-xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+          <p className="text-xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto font-sans">
             <span className="text-yellow-400 font-semibold">Visibilité locale</span>, 
             <span className="text-cyan-400 font-semibold">leads qualifiés</span>, 
             <span className="text-green-400 font-semibold">reporting GA4 clair</span>. 
