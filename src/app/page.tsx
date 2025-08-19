@@ -23,6 +23,9 @@ import { getHomepageStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOM from '@/components/homepage/HeroSwissOSOM'
 
 // Lazy loading pour les Piliers Swiss (composants client)
+const PilierSwiss1 = dynamic(() => import('@/components/homepage/PilierSwiss1'), {
+  loading: () => <div className="h-96 bg-purple-400/5 rounded-2xl animate-pulse" />
+})
 const PilierSwiss2 = dynamic(() => import('@/components/homepage/PilierSwiss2'), {
   loading: () => <div className="h-96 bg-cyan-400/5 rounded-2xl animate-pulse" />
 })
@@ -162,72 +165,7 @@ export default async function Home() {
             
             <AnimatedElement type="slideUp" delay={0.2}>
               <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group">
-                <div className="p-16 bg-gradient-to-br from-purple-900/20 to-black/60">
-                  <div className="max-w-4xl mx-auto">
-                    <div className="flex items-center justify-center mb-8">
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full mr-6 flex items-center justify-center">
-                        <IconeOSOM type="palette" size={32} color="white" ariaLabel="Créativité amplifiée" />
-                      </div>
-                      <div>
-                        <div className="text-purple-400 font-medium text-sm mb-2">PILIER #1 - CRÉATION AUGMENTÉE</div>
-                      </div>
-                    </div>
-                    
-                    <AnimatedElement type="fadeIn" delay={0.3}>
-                      <div className="text-center mb-10">
-                        <div className="text-3xl md:text-4xl font-light text-white mb-4">
-                          Créativité augmentée, guidée par l'humain
-                        </div>
-                        <div className="text-6xl md:text-7xl font-black text-purple-400 leading-none mb-4">
-                          TECHNOLOGIES MAÎTRISÉES
-                        </div>
-                        <div className="text-2xl md:text-3xl font-light text-gray-300">
-                          IA sur mesure — rapide, utile, orienté client.
-                        </div>
-                      </div>
-                    </AnimatedElement>
-                    
-                    <p className="text-xl text-gray-300 leading-relaxed mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                      <span className="text-purple-400 font-semibold">L'IA accélère, l'expertise dirige.</span> Contenus qui émeuvent et convertissent. Développement agile par sprints.
-                    </p>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                      <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/30 hover:bg-purple-400/15 transition-all duration-300">
-                        <div className="flex items-center mb-4">
-                          <IconeOSOM type="lightning" size={24} color="purple" ariaLabel="Veille technologique" />
-                          <div className="text-purple-400 font-bold text-lg ml-3">Veille & Mise à Jour</div>
-                        </div>
-                        <div className="text-gray-300 mb-4">Technologies constamment actualisées, formation continue et adaptation aux nouveautés du marché digital.</div>
-                      </div>
-                      
-                      <div className="bg-purple-400/5 rounded-xl p-6 border border-purple-400/20 hover:bg-purple-400/10 transition-all duration-300">
-                        <div className="flex items-center mb-4">
-                          <IconeOSOM type="star" size={24} color="purple" ariaLabel="IA sur mesure" />
-                          <div className="text-purple-400 font-bold text-lg ml-3">IA Sur Mesure</div>
-                        </div>
-                        <div className="text-gray-300 mb-4">Solutions d'intelligence artificielle personnalisées selon vos besoins spécifiques et votre secteur d'activité.</div>
-                      </div>
-                      
-                      <div className="bg-purple-400/5 rounded-xl p-6 border border-purple-400/20 hover:bg-purple-400/10 transition-all duration-300">
-                        <div className="flex items-center mb-4">
-                          <IconeOSOM type="tools" size={24} color="purple" ariaLabel="Itérations rapides" />
-                          <div className="text-purple-400 font-bold text-lg ml-3">Itérations Rapides</div>
-                        </div>
-                        <div className="text-gray-300 mb-4">Développement agile avec feedback continu, ajustements en temps réel et livraisons fréquentes.</div>
-                      </div>
-                    </div>
-                    
-                    <AnimatedElement type="slideUp" delay={0.7}>
-                      <div className="mb-10">
-                        <CTRCircularChart
-                          title="CTR OSOM vs Industrie"
-                          subtitle="Performance Marketing IA • Données Meta Ads vérifiées"
-                          className="rounded-2xl border border-purple-400/20 bg-purple-400/5"
-                        />
-                      </div>
-                    </AnimatedElement>
-                  </div>
-                </div>
+                <PilierSwiss1 />
               </div>
             </AnimatedElement>
             
