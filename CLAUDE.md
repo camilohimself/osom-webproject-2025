@@ -1,5 +1,90 @@
 # Journal de Développement OSOM
 
+## Session 19 Août 2025 - 3 VERSIONS "COMMENT OSOM MARCHE"
+
+### 🎯 CONTEXTE SESSION
+
+**OBJECTIF** : Remplacer la section lourde "NOTRE MÉTHODE EN 3 PILIERS" par une version simplifiée pour expliquer "Comment OSOM marche ?"
+
+**SECTION CIBLÉE** : Entre Hero et 1er Pilier (lignes 128-160 page.tsx)
+- Suppression du bloc verbeux "Nous transformons vos DONNÉES VÉRIFIÉES en RÉSULTATS COMMERCIAUX"
+- Remplacement par approche directe et accessible
+
+### ✅ TRAVAUX RÉALISÉS
+
+#### 🔧 NETTOYAGE PRÉALABLE CODE
+- ✅ **Imports inutilisés** : Supprimé `Link` + `GraphiqueComparatif`
+- ✅ **Styles inline** : Harmonisé `font-sans` partout
+- ✅ **Commentaires superflus** : Nettoyage structure
+- ✅ **Build** : Compilation réussie, code production-ready
+
+#### 🎨 CRÉATION 3 VERSIONS COMPLÈTES
+
+**VERSION 1 : KISS (Keep It Simple Stupid)**
+```jsx
+"Comment OSOM marche ?"
+- 3 cartes ultra simples
+- Gros chiffres colorés (1, 2, 3)
+- "Analyse" → "Création" → "Résultats"
+- "Vous vendez plus" (direct et cash)
+```
+
+**VERSION 2 : SUBTILE/DRÔLE/COMIQUE** 🎭
+```jsx
+"C'est pas sorcier 🧙‍♂️"
+- Ton décalé et humour
+- "On espionne vos concurrents (légalement)"
+- "Claude (mon pote IA) et moi on bosse"
+- Format console avec emojis
+- Cards avec STEP_01.exe, STEP_02.exe, STEP_03.exe
+```
+
+**VERSION 3 : ÉCONOMIQUE PME** 💼
+```jsx
+"Méthode éprouvée pour PME suisses. ROI visible en 30 jours."
+- Focus business pur : "0 CHF", "2 sem", "280% ROI"
+- Métriques concrètes PME
+- Cards premium avec gradients
+- "Audit gratuit", "Formation équipe incluse", "Garantie satisfaction"
+```
+
+### 🚨 PROBLÈME TECHNIQUE IDENTIFIÉ
+
+**ERREUR RUNTIME** : `ChunkLoadError`
+- Écran noir complet sur localhost:3001
+- Build compilation OK, mais runtime fail
+- Problème récurrent déjà observé
+- **CAUSE PROBABLE** : Problème Next.js avec dynamic imports ou lazy loading
+
+**STATUS FINAL SESSION** :
+- ✅ 3 versions créées et codées
+- ✅ Code compilé sans erreur
+- ❌ Runtime ChunkLoadError bloque affichage
+- 🔄 **À RÉSOUDRE DEMAIN** : Debug ChunkLoadError + test des 3 versions
+
+### 📋 NEXT SESSION TODO
+
+**PRIORITÉ 1** : Résoudre ChunkLoadError
+1. Investiguer erreur runtime Next.js
+2. Vérifier dynamic imports des Piliers Swiss
+3. Tester les 3 versions "Comment OSOM marche"
+4. Choix final version avec Camilo
+
+**PRIORITÉ 2** : Si tout OK, passer aux autres pages
+- Application méthodologie lifting sur autres pages services
+- Page contact optimisation
+
+**FICHIERS MODIFIÉS** :
+- `/src/app/page.tsx` → Section remplacée, 3 versions testées
+- Code propre et optimisé, prêt pour test
+
+**APPROCHE CRÉATIVE VALIDÉE** :
+Carte blanche totale accordée par Camilo sur cette section. Les 3 versions explorent des approches radicalement différentes du simple au comique au business pur.
+
+**COMMIT FINAL** : `8c9c9e0` - Nettoyage code avant versions multiples
+
+---
+
 ## Session 14 Août 2025 - MVP LIFTING MÉTHODOLOGIE
 
 ### 🎯 LIFTING MVP HOMEPAGE COMPLÉTÉ
