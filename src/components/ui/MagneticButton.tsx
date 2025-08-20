@@ -13,6 +13,7 @@ interface MagneticButtonProps {
   variant?: 'primary' | 'secondary'
   style?: React.CSSProperties
   analyticsId?: string
+  target?: string
 }
 
 const MagneticButton = ({ 
@@ -22,7 +23,8 @@ const MagneticButton = ({
   className = '', 
   variant = 'primary',
   style = {},
-  analyticsId
+  analyticsId,
+  target
 }: MagneticButtonProps) => {
   const ref = useRef<HTMLAnchorElement | HTMLButtonElement>(null)
   const [isHovered, setIsHovered] = useState(false)
@@ -245,7 +247,7 @@ const MagneticButton = ({
       whileTap={{ scale: 0.95 }}
     >
       {href ? (
-        <Link {...buttonProps} href={href}>
+        <Link {...buttonProps} href={href} target={target}>
           {ButtonContent}
         </Link>
       ) : (

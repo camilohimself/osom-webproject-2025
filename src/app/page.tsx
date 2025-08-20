@@ -218,7 +218,8 @@ export default async function Home() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <MagneticButton
-              onClick={() => window.open('/contact', '_blank')}
+              href="/contact"
+              target="_blank"
               variant="primary"
               className="text-xl px-12 py-6 relative overflow-hidden group"
             >
@@ -226,7 +227,8 @@ export default async function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </MagneticButton>
             <MagneticButton
-              onClick={() => window.open('/realisations', '_blank')}
+              href="/realisations"
+              target="_blank"
               variant="secondary"
               className="text-xl px-12 py-6 border-2 border-gray-600 hover:border-purple-400 transition-all duration-300"
             >
