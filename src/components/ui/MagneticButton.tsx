@@ -6,7 +6,8 @@ import Link from 'next/link'
 import { useAnalytics } from '@/hooks/useAnalytics'
 
 interface MagneticButtonProps {
-  href: string
+  href?: string
+  onClick?: () => void
   children: React.ReactNode
   className?: string
   variant?: 'primary' | 'secondary'
@@ -16,13 +17,14 @@ interface MagneticButtonProps {
 
 const MagneticButton = ({ 
   href, 
+  onClick,
   children, 
   className = '', 
   variant = 'primary',
   style = {},
   analyticsId
 }: MagneticButtonProps) => {
-  const ref = useRef<HTMLAnchorElement>(null)
+  const ref = useRef<HTMLAnchorElement | HTMLButtonElement>(null)
   const [isHovered, setIsHovered] = useState(false)
   const [isTouched, setIsTouched] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -57,7 +59,7 @@ const MagneticButton = ({
     return isActive ? baseScale + Math.sqrt(x * x + y * y) * (isMobile ? 0.05 : 0.1) : 1
   })
 
-  const handlePointerMove = (e: React.PointerEvent<HTMLAnchorElement>) => {
+  const handlePointerMove = (e: React.PointerEvent) => {
     if (!ref.current || isMobile) return
     
     const rect = ref.current.getBoundingClientRect()
@@ -95,27 +97,141 @@ const MagneticButton = ({
     y.set(0)
   }
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
     // Track magnetic button interaction
     if (analyticsId) {
       trackInteraction('magnetic_button', analyticsId, 'click')
     }
 
     // Track service interest if it's a service-related link
-    if (href.includes('/services/')) {
+    if (href && href.includes('/services/')) {
       const serviceName = href.split('/services/')[1]
       trackServiceInterest(serviceName, href.includes('/contact') ? 'contact' : 'view')
     }
 
     // Track CTA clicks
-    if (href.includes('/contact') || href.includes('/calculator')) {
+    if (href && (href.includes('/contact') || href.includes('/calculator'))) {
       trackServiceInterest('general', href.includes('/contact') ? 'contact' : 'calculator')
+    }
+
+    // Execute custom onClick if provided
+    if (onClick) {
+      e.preventDefault()
+      onClick()
     }
   }
 
   const baseClasses = variant === 'primary' 
     ? 'bg-yellow-400 text-black hover:bg-yellow-500'
     : 'border-2 border-white/30 text-white hover:bg-white hover:text-black backdrop-blur-sm'
+
+  const buttonProps = {
+    ref: ref as any,
+    className: `
+      relative px-8 py-4 rounded-lg font-bold shadow-lg transition-all duration-300 
+      flex items-center justify-center overflow-hidden group select-none cursor-pointer
+      ${isMobile ? 'active:scale-95' : ''} ${baseClasses} ${className}
+    `,
+    style,
+    onClick: handleClick,
+    onPointerMove: handlePointerMove,
+    onPointerLeave: handlePointerLeave,
+    onPointerEnter: handlePointerEnter,
+    onTouchStart: handleTouchStart,
+    onTouchEnd: handleTouchEnd,
+  }
+
+  const ButtonContent = (
+    <>
+      {/* Glowing background on hover */}
+      {!isMobile && (
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0"
+          initial={{ x: '-100%' }}
+          animate={isHovered ? { x: '100%' } : { x: '-100%' }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+        />
+      )}
+      
+      {/* Ripple effect - optimized for mobile */}
+      <motion.div
+        className="absolute inset-0 rounded-lg"
+        style={{
+          background: isMobile 
+            ? 'rgba(255, 221, 0, 0.1)' 
+            : 'radial-gradient(circle at center, rgba(255, 221, 0, 0.1) 0%, transparent 70%)',
+        }}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={(isHovered || isTouched) ? { scale: isMobile ? 1.1 : 2, opacity: 1 } : { scale: 0, opacity: 0 }}
+        transition={{ 
+          duration: isMobile ? 0.2 : 0.4,
+          ease: isMobile ? "easeOut" : "easeInOut"
+        }}
+      />
+
+      {/* Content */}
+      <motion.span 
+        className="relative z-10 flex items-center gap-2"
+        style={{
+          transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)',
+        }}
+      >
+        {children}
+        
+        {/* Arrow animation */}
+        <motion.svg
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          animate={isHovered ? { x: 5 } : { x: 0 }}
+          transition={{ type: "spring", stiffness: 400, damping: 25 }}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+          />
+        </motion.svg>
+      </motion.span>
+
+      {/* Particles on hover - reduced for mobile performance */}
+      {!isMobile && [...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 bg-yellow-400 rounded-full"
+          style={{
+            left: `${20 + i * 10}%`,
+            top: `${30 + Math.sin(i) * 20}%`,
+          }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={isHovered ? {
+            scale: [0, 1, 0],
+            opacity: [0, 1, 0],
+            y: [-20, 20],
+            x: [0, Math.cos(i) * 30],
+          } : {}}
+          transition={{
+            duration: 1,
+            delay: i * 0.1,
+            repeat: isHovered ? Infinity : 0,
+            repeatDelay: 2
+          }}
+        />
+      ))}
+      
+      {/* Mobile-specific touch feedback */}
+      {isMobile && isTouched && (
+        <motion.div
+          className="absolute inset-0 bg-yellow-400/20 rounded-lg"
+          initial={{ scale: 1 }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 0.2 }}
+        />
+      )}
+    </>
+  )
 
   return (
     <motion.div
@@ -128,110 +244,15 @@ const MagneticButton = ({
       }}
       whileTap={{ scale: 0.95 }}
     >
-      <Link
-        ref={ref}
-        href={href}
-        className={`
-          relative px-8 py-4 rounded-lg font-bold shadow-lg transition-all duration-300 
-          flex items-center justify-center overflow-hidden group select-none
-          ${isMobile ? 'active:scale-95' : ''} ${baseClasses} ${className}
-        `}
-        style={style}
-        onClick={handleClick}
-        onPointerMove={handlePointerMove}
-        onPointerLeave={handlePointerLeave}
-        onPointerEnter={handlePointerEnter}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-      >
-        {/* Glowing background on hover */}
-        {!isMobile && (
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0"
-            initial={{ x: '-100%' }}
-            animate={isHovered ? { x: '100%' } : { x: '-100%' }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-          />
-        )}
-        
-        {/* Ripple effect - optimized for mobile */}
-        <motion.div
-          className="absolute inset-0 rounded-lg"
-          style={{
-            background: isMobile 
-              ? 'rgba(255, 221, 0, 0.1)' 
-              : 'radial-gradient(circle at center, rgba(255, 221, 0, 0.1) 0%, transparent 70%)',
-          }}
-          initial={{ scale: 0, opacity: 0 }}
-          animate={(isHovered || isTouched) ? { scale: isMobile ? 1.1 : 2, opacity: 1 } : { scale: 0, opacity: 0 }}
-          transition={{ 
-            duration: isMobile ? 0.2 : 0.4,
-            ease: isMobile ? "easeOut" : "easeInOut"
-          }}
-        />
-
-        {/* Content */}
-        <motion.span 
-          className="relative z-10 flex items-center gap-2"
-          style={{
-            transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)',
-          }}
-        >
-          {children}
-          
-          {/* Arrow animation */}
-          <motion.svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            animate={isHovered ? { x: 5 } : { x: 0 }}
-            transition={{ type: "spring", stiffness: 400, damping: 25 }}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </motion.svg>
-        </motion.span>
-
-        {/* Particles on hover - reduced for mobile performance */}
-        {!isMobile && [...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-yellow-400 rounded-full"
-            style={{
-              left: `${20 + i * 10}%`,
-              top: `${30 + Math.sin(i) * 20}%`,
-            }}
-            initial={{ scale: 0, opacity: 0 }}
-            animate={isHovered ? {
-              scale: [0, 1, 0],
-              opacity: [0, 1, 0],
-              y: [-20, 20],
-              x: [0, Math.cos(i) * 30],
-            } : {}}
-            transition={{
-              duration: 1,
-              delay: i * 0.1,
-              repeat: isHovered ? Infinity : 0,
-              repeatDelay: 2
-            }}
-          />
-        ))}
-        
-        {/* Mobile-specific touch feedback */}
-        {isMobile && isTouched && (
-          <motion.div
-            className="absolute inset-0 bg-yellow-400/20 rounded-lg"
-            initial={{ scale: 1 }}
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ duration: 0.2 }}
-          />
-        )}
-      </Link>
+      {href ? (
+        <Link {...buttonProps} href={href}>
+          {ButtonContent}
+        </Link>
+      ) : (
+        <button {...buttonProps}>
+          {ButtonContent}
+        </button>
+      )}
     </motion.div>
   )
 }

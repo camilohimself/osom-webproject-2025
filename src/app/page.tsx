@@ -127,35 +127,29 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedElement type="fadeIn" delay={0.1}>
             <div className="text-center mb-24">
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-                <span className="text-yellow-400 text-sm font-medium tracking-wide">NOTRE MÉTHODE EN 3 PILIERS</span>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-8">
+                Comment OSOM marche ?
               </div>
               
-              <div className="mb-12 leading-tight font-sans">
-                <div className="text-2xl md:text-3xl font-light text-gray-300 mb-2">
-                  Nous transformons vos
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="p-6">
+                  <div className="text-6xl font-black text-yellow-400 mb-4">1</div>
+                  <div className="text-xl font-semibold text-white mb-2">Analyse</div>
+                  <div className="text-gray-400">On regarde vos données</div>
                 </div>
-                <div className="text-6xl md:text-8xl font-black text-yellow-400 leading-none mb-4 relative">
-                  DONNÉES VÉRIFIÉES
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 opacity-0 animate-pulse" />
+                
+                <div className="p-6">
+                  <div className="text-6xl font-black text-cyan-400 mb-4">2</div>
+                  <div className="text-xl font-semibold text-white mb-2">Création</div>
+                  <div className="text-gray-400">On crée du contenu qui marche</div>
                 </div>
-                <div className="text-lg md:text-xl font-light text-gray-400 italic mb-2">
-                  en
-                </div>
-                <div className="text-7xl md:text-9xl font-black text-green-400 leading-none mb-3">
-                  RÉSULTATS COMMERCIAUX
-                </div>
-                <div className="text-2xl md:text-3xl font-light text-white">
-                  mesurables et durables
+                
+                <div className="p-6">
+                  <div className="text-6xl font-black text-green-400 mb-4">3</div>
+                  <div className="text-xl font-semibold text-white mb-2">Résultats</div>
+                  <div className="text-gray-400">Vous vendez plus</div>
                 </div>
               </div>
-              
-              <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed font-sans">
-                <span className="text-yellow-400 font-semibold">Création augmentée</span> (contenus qui émeuvent et convertissent), 
-                <span className="text-cyan-400 font-semibold">Insights actionnables</span> (décisions guidées par GA4), 
-                <span className="text-green-400 font-semibold">Tech supérieure</span> (Core Web Vitals 95+).
-              </p>
             </div>
           </AnimatedElement>
 
@@ -224,7 +218,7 @@ export default async function Home() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <MagneticButton
-              href="/contact"
+              onClick={() => window.open('/contact', '_blank')}
               variant="primary"
               className="text-xl px-12 py-6 relative overflow-hidden group"
             >
@@ -232,7 +226,7 @@ export default async function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </MagneticButton>
             <MagneticButton
-              href="/realisations"
+              onClick={() => window.open('/realisations', '_blank')}
               variant="secondary"
               className="text-xl px-12 py-6 border-2 border-gray-600 hover:border-purple-400 transition-all duration-300"
             >
