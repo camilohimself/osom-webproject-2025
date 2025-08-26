@@ -272,7 +272,7 @@ const HeroPremium = ({ dictionary }: HeroPremiumProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
-                <span className="text-yellow-400 font-black">L'agence créative</span> qui transforme vos données en <span className="text-yellow-400 font-black">pixels qui vendent</span>.
+                Soyez à l'heure pour <span className="text-yellow-400 font-black">L'INTERNET</span> de <span className="text-yellow-400 font-black">DEMAIN</span>
               </motion.div>
               
             </motion.div>
