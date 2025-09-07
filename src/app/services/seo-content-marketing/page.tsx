@@ -51,19 +51,31 @@ export default function SEOContentMarketingPage() {
   const faqData = [
     {
       question: "Combien de temps pour améliorer mon référencement ?",
-      answer: "Le SEO est un investissement progressif. Les premières améliorations techniques sont immédiates. Les résultats de positionnement apparaissent généralement entre 3 et 6 mois selon la concurrence de votre secteur. Nous suivons vos progrès mensuellement avec des rapports détaillés."
+      answer: "Les résultats SEO apparaissent entre 3 et 6 mois selon la concurrence. Nous suivons vos progrès mensuellement avec des rapports détaillés."
     },
     {
       question: "Quelle différence entre SEO et publicité payante ?",
-      answer: "Le SEO construit une visibilité durable qui continue après l'investissement initial. La publicité génère du trafic immédiat mais s'arrête dès que vous cessez de payer. Nous recommandons souvent une approche combinée selon vos objectifs."
+      answer: "Le SEO construit une visibilité durable qui continue après l'investissement. La publicité génère du trafic immédiat mais s'arrête dès l'arrêt des paiements."
     },
     {
       question: "Comment mesurer les résultats SEO ?",
-      answer: "Nous suivons plusieurs indicateurs : positions sur mots-clés stratégiques, trafic organique, taux de conversion, nombre de leads générés. Un tableau de bord mensuel vous permet de visualiser votre progression."
+      answer: "Positions sur mots-clés stratégiques, trafic organique, leads générés. Tableau de bord mensuel pour visualiser la progression."
     },
     {
       question: "Mon secteur est très concurrentiel, est-ce possible ?",
-      answer: "Absolument. Dans les secteurs concurrentiels, nous adoptons une stratégie de niche en ciblant des mots-clés longue traîne et en développant une expertise thématique. Chaque entreprise a ses angles différenciants à exploiter."
+      answer: "Oui. Nous adoptons une stratégie de niche avec des mots-clés longue traîne et développons votre expertise thématique."
+    },
+    {
+      question: "SEO local Valais : quels avantages ?",
+      answer: "Visibilité renforcée sur Google My Business, citations locales, pages géolocalisées. Captez les clients qui cherchent près de chez eux."
+    },
+    {
+      question: "Peut-on faire du SEO sans refonte complète ?",
+      answer: "Absolument. Nous optimisons votre site existant : structure technique, contenus, maillage interne sans tout recommencer."
+    },
+    {
+      question: "Audit SEO gratuit : que contient-il exactement ?",
+      answer: "Analyse technique complète, opportunités de mots-clés, audit concurrentiel, plan d'action priorisé. 30 minutes d'échanges incluses."
     }
   ]
 
@@ -122,60 +134,6 @@ export default function SEOContentMarketingPage() {
         </div>
       </section>
 
-      {/* PROBLÈME/SOLUTION STORYTELLING */}
-      <section className="py-24 relative">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-              <span className="text-cyan-400 font-bold">Transparence</span> totale
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              KPIs utiles : leads, prises de RDV, positions, pages d'entrée.<br/>
-              <span className="text-cyan-400 font-semibold">Pas de vanity metrics</span>.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-black/60 to-gray-900/60 rounded-3xl p-8 border border-cyan-400/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-light text-white mb-6">
-                  Une <span className="text-cyan-400">réalité partagée</span>
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  La plupart des entreprises locales sont invisibles en ligne. 
-                  Pourtant, vos clients cherchent vos services sur Google chaque jour.
-                </p>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Le SEO n'est pas de la magie. C'est un travail méthodique 
-                  qui demande expertise et patience. Les résultats arrivent 
-                  progressivement mais durablement.
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Notre rôle : vous rendre visible là où vos clients vous cherchent, 
-                  avec une approche transparente et des attentes réalistes.
-                </p>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="bg-black/40 rounded-xl p-6 border border-cyan-400/20">
-                  <div className="text-cyan-400 font-medium mb-2">Approche honnête</div>
-                  <p className="text-gray-300">
-                    Pas de promesses de "première position garantie". 
-                    Nous visons une croissance stable et mesurable.
-                  </p>
-                </div>
-                <div className="bg-black/40 rounded-xl p-6 border border-purple-400/20">
-                  <div className="text-purple-400 font-medium mb-2">Travail de fond</div>
-                  <p className="text-gray-300">
-                    Contenus de qualité, optimisations techniques, 
-                    autorité construite mois après mois.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* SERVICES SEO */}
       <section id="services" className="py-24 relative">
@@ -249,68 +207,6 @@ export default function SEOContentMarketingPage() {
         </div>
       </section>
 
-      {/* EXEMPLE CONCRET */}
-      <section className="py-24 relative">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-              Un exemple <span className="text-cyan-400 font-bold">concret</span>
-            </h2>
-          </div>
-
-          <div className="bg-gradient-to-br from-black/90 to-gray-900/90 rounded-3xl p-8 border border-cyan-400/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="text-cyan-400 font-medium mb-4">Étude de cas</div>
-                <h3 className="text-2xl font-light text-white mb-4">
-                  Entreprise artisanale locale
-                </h3>
-                <div className="space-y-4 text-gray-300">
-                  <p>
-                    <strong>Situation initiale :</strong> Site invisible, aucun trafic organique, 
-                    dépendance totale au bouche-à-oreille.
-                  </p>
-                  <p>
-                    <strong>Actions menées :</strong> Refonte technique, création de pages locales, 
-                    contenus sur le savoir-faire, optimisation Google My Business.
-                  </p>
-                  <p>
-                    <strong>Résultats après 6 mois :</strong> Apparition sur recherches locales, 
-                    augmentation progressive des demandes de devis, développement de la notoriété.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-black/40 rounded-2xl p-6 border border-gray-700/50">
-                <div className="text-center mb-6">
-                  <div className="text-cyan-400 font-medium mb-2">Évolution observée</div>
-                  <p className="text-gray-400 text-sm">Progression typique sur 6 mois</p>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400">Trafic organique</span>
-                    <span className="text-green-400">↗ Croissance régulière</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400">Positions Google</span>
-                    <span className="text-green-400">↗ Top 10 progressif</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400">Demandes qualifiées</span>
-                    <span className="text-green-400">↗ Augmentation stable</span>
-                  </div>
-                </div>
-                <div className="mt-6 pt-6 border-t border-gray-700/50 text-center">
-                  <p className="text-gray-400 text-sm">
-                    Chaque projet est unique. Les résultats dépendent 
-                    de nombreux facteurs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* TARIFICATION SIMPLE */}
       <section className="py-24 relative">

@@ -275,8 +275,10 @@ Transformer chaque page en version "Netlify-style" : **Minimal + Impact + Authen
 #### FILTRE 4 : AUTHENTICITÉ ABSOLUE
 - ❌ JAMAIS mentir ou exagérer
 - ❌ Métriques inventées ou non-vérifiables
-- ✅ Présenter capacités techniques sans survendre ROI
-- ✅ "Sites Next.js sur-mesure" vs "300% ROI garanti"
+- ❌ SUPPRESSION CHIFFRES/KPIs : Pas de "ROI 14x", "11.3% conversion", etc. 
+- ✅ Focus sur cas d'usage réels et portfolio concret
+- ✅ "Sites Next.js sur-mesure" vs promesses chiffrées
+- ✅ Crédibilité par la démonstration, pas les statistiques
 
 ### 🚀 STRATÉGIE ÉVOLUTIVE
 
@@ -489,6 +491,8 @@ Tous les 3 partagent : **méfiance agences + besoin crédibilité + peur prix**
 **DESIGN OBLIGATOIRE** : JAMAIS d'emojis dans les projets OSOM. Interface clean et professionnelle uniquement.
 
 **DONNÉES CRITIQUES** : Jusqu'au 25 juillet 2025, toutes les données analytiques (688 vs 49, 68.6%, 14,171 sessions, etc.) concernent l'ANCIEN site OSOM. Le projet `osom-webproject-2025` est la NOUVELLE version en développement qui n'a pas encore été testée en ligne. Les données GSC servent pour le build SEO mais ne représentent PAS les performances de la nouvelle version.
+
+**POLITIQUE CHIFFRES** : SUPPRESSION TOTALE des KPIs/métriques chiffrées sur le nouveau site. Les "ROI 14x", "11.3% conversion", etc. créent de la méfiance. Focus sur cas d'usage réels et portfolio démonstrable uniquement.
 
 **REPOS DISTINCTS** : 
 - `osom-webproject-2025` = Site principal en production
