@@ -50,186 +50,153 @@ export default function TrackingDataPage() {
 
   const faqData = [
     {
-      question: "Pourquoi Google Analytics me montre-t-il 70% de trafic direct alors que personne ne tape mon URL ?",
-      answer: "C'est le problème classique de l'attribution manquée. Vos visiteurs viennent d'emails, réseaux sociaux, ou cliquent sur des liens sans UTM. Google Analytics classe tout ça en 'direct' par défaut. Nous réparons cette attribution pour révéler vos vraies sources de trafic."
+      question: "Pourquoi Google Analytics me montre 70% de trafic direct ?",
+      answer: "Vos visiteurs viennent d'emails, réseaux sociaux, liens sans UTM. GA classe tout en 'direct'. Nous révélons vos vraies sources."
     },
     {
-      question: "Comment savoir combien me coûte réellement chaque client acquis ?",
-      answer: "Le coût d'acquisition client (CAC) nécessite un tracking multi-canal précis. Nous connectons vos dépenses publicitaires, temps équipe, coûts outils marketing avec les conversions réelles. Vous obtenez le vrai coût par client, pas juste le CPC Google Ads."
+      question: "Comment savoir combien me coûte chaque client acquis ?",
+      answer: "Nous connectons dépenses marketing avec conversions réelles. Vrai coût par client, pas juste le CPC Google Ads."
     },
     {
       question: "Mes rapports analytics sont incompréhensibles, comment simplifier ?",
-      answer: "Nous créons des dashboards sur mesure selon votre rôle: le dirigeant voit chiffre d'affaires et tendances, le marketing voit conversions par canal, le commercial voit origine des leads. Finies les données noyées dans les métriques inutiles."
-    },
-    {
-      question: "Peut-on tracker les clients qui appellent après avoir vu le site ?",
-      answer: "Absolument. Nous utilisons le call tracking dynamique qui affiche un numéro unique par source de trafic. Vous savez si l'appel vient de Google, Facebook, ou un email. Plus de 'j'ai vu votre site' sans savoir d'où exactement."
+      answer: "Dashboards sur mesure : dirigeant voit CA, marketing voit conversions, commercial voit origine leads."
     },
     {
       question: "Google Analytics 4 est trop compliqué, y a-t-il une alternative ?",
-      answer: "GA4 est effectivement complexe mais reste incontournable pour l'écosystème Google. Nous le configurons correctement ET ajoutons des outils complémentaires comme Hotjar pour le comportement utilisateur ou des dashboards Looker Studio simplifiés."
+      answer: "GA4 reste incontournable. Nous le configurons + dashboards Looker Studio simplifiés."
     },
     {
-      question: "Comment mesurer l'impact de mes posts LinkedIn sur les ventes ?",
-      answer: "Nous mettons en place un système d'UTM automatiques et de pixel de conversion. Chaque post LinkedIn tracké nous montre: clics → visites site → demandes de contact → ventes fermées. Vous verrez enfin le ROI de votre personal branding."
+      question: "Combien coûte un setup analytics complet PME ?",
+      answer: "Setup complet 2,890 CHF : GA4, GTM, dashboards, formation. Accompagnement 590 CHF/mois."
     },
     {
-      question: "Faut-il installer Google Tag Manager ou c'est trop technique ?",
-      answer: "GTM est indispensable pour un tracking professionnel mais effectivement technique. Nous l'installons, le configurons et formons votre équipe aux modifications simples. Vous gardez le contrôle sans risquer de casser votre tracking."
+      question: "Comment mesurer l'impact de mes posts LinkedIn ?",
+      answer: "UTM automatiques + pixel conversion : clics → visites → contacts → ventes. ROI visible."
     },
     {
-      question: "Combien coûte un setup analytics complet pour une PME ?",
-      answer: "Notre setup complet démarre à 2,890 CHF: installation GA4, GTM, dashboards, formation équipe. L'accompagnement mensuel est à 590 CHF. C'est un investissement qui se rentabilise dès le premier budget marketing mieux alloué."
-    },
-    {
-      question: "Peut-on tracker les visiteurs qui reviennent sans cookies ?",
-      answer: "Avec les nouvelles réglementations RGPD et la fin des cookies tiers, nous utilisons le tracking server-side et l'identification probabiliste. Vous continuez à suivre vos visiteurs récurrents même sans leur consentement cookies."
-    },
-    {
-      question: "Comment prouver que mon site génère vraiment du business ?",
-      answer: "Nous connectons vos données web avec votre CRM/facturation. Tracking complet: visite → lead → devis → vente → facturation. Vous voyez enfin la contribution exacte du digital à votre chiffre d'affaires, pas juste les 'j'ai vu votre site'."
+      question: "Comment prouver que mon site génère du business ?",
+      answer: "Connexion web + CRM : visite → lead → devis → vente. Contribution digitale claire."
     }
   ]
 
   return (
     <div className="min-h-screen bg-black">
       
-      {/* HERO STORYTELLING MODÉRÉ */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-400/10 via-pink-500/5 to-transparent" />
-        
-        <div className="relative z-10 max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-8">
-            Comprendre d'où viennent <br/>
-            <span className="text-purple-400 font-bold">vos clients</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-6 max-w-3xl mx-auto">
-            Nous révélons la partie invisible de votre performance 
-            avec un tracking précis et des rapports clairs.
-          </p>
-
-          <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            Fini les zones d'ombre dans vos données. Découvrez enfin 
-            quelles actions marketing génèrent vraiment des résultats.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              href="/contact"
-              className="inline-block px-10 py-5 rounded-xl font-bold text-xl text-black transition-all duration-300 hover:scale-105"
-              style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899)' }}
-            >
-              Auditer mon tracking
-            </Link>
-            <Link
-              href="#services" 
-              className="inline-flex items-center px-8 py-5 rounded-xl border border-purple-400/40 text-purple-400 hover:bg-purple-400/10 transition-all duration-300 text-lg font-medium"
-            >
-              Voir les solutions
-            </Link>
-          </div>
-
-          {/* POINTS CLÉS AMÉLIORÉS */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-purple-400/10 to-purple-600/5 rounded-2xl p-6 border border-purple-400/20 text-center hover:border-purple-400/40 transition-all duration-300">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-white font-bold text-lg mb-2">Données complètes</h3>
-              <p className="text-gray-400 text-sm">Captez 100% de votre performance réelle</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-400/10 to-pink-600/5 rounded-2xl p-6 border border-pink-400/20 text-center hover:border-pink-400/40 transition-all duration-300">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 className="text-white font-bold text-lg mb-2">Attribution précise</h3>
-              <p className="text-gray-400 text-sm">Sachez quel canal génère chaque client</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-400/10 to-cyan-600/5 rounded-2xl p-6 border border-cyan-400/20 text-center hover:border-cyan-400/40 transition-all duration-300">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 className="text-white font-bold text-lg mb-2">Rapports clairs</h3>
-              <p className="text-gray-400 text-sm">Tableaux de bord adaptés à votre équipe</p>
-            </div>
-          </div>
+      {/* HERO "OR DIGITAL" - WAR ROOM STYLE */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16 overflow-hidden">
+        {/* Background Matrix Effect */}
+        <div className="absolute inset-0 bg-black" />
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent animate-pulse" />
+          <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-pink-400 to-transparent animate-pulse delay-1000" />
+          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
         </div>
-      </section>
-
-      {/* PROBLÈME/SOLUTION STORYTELLING */}
-      <section className="py-24 relative">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-              Le défi de la mesure
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              "Je sais que mes actions marketing fonctionnent, 
-              mais je ne sais pas lesquelles exactement."
-            </p>
+        
+        <div className="relative z-10 max-w-7xl mx-auto">
+          
+          {/* Pre-Header Mystérieux */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-400/10 border border-purple-400/20 text-purple-400 text-sm font-medium mb-6">
+              <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse mr-2"></div>
+              Salle de contrôle digitale OSOM
+            </div>
           </div>
 
-          <div className="bg-gradient-to-br from-black/60 to-gray-900/60 rounded-3xl p-8 border border-purple-400/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-light text-white mb-6">
-                  Un <span className="text-purple-400">problème universel</span>
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  La plupart des entrepreneurs constatent des résultats 
-                  mais ne savent pas précisément quels canaux les génèrent.
-                </p>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Trafic direct mal attribué, parcours clients complexes, 
-                  conversions offline invisibles... Une partie importante 
-                  de votre performance reste dans l'ombre.
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Notre mission : éclairer ces zones d'ombre pour que vous 
-                  investissiez vos efforts au bon endroit.
-                </p>
+          <div className="text-center">
+            <h1 className="text-4xl md:text-8xl font-light text-white leading-tight mb-8">
+              Pendant que vos concurrents <br/>
+              <span className="text-purple-400 font-bold">devinent</span>,<br/>
+              <span className="text-pink-400 font-bold">vous SAVEZ</span>
+            </h1>
+            
+            <p className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto font-light">
+              Chaque clic révèle un indice sur votre prochain client.<br/>
+              <span className="text-purple-400">L'or digital</span> caché dans vos données.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-12 py-6 rounded-2xl font-bold text-xl text-black transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-400/20"
+                style={{ background: 'linear-gradient(135deg, #a855f7, #ec4899, #f59e0b)' }}
+              >
+                <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Révéler mes données cachées
+              </Link>
+            </div>
+          </div>
+
+          {/* RÉVÉLATIONS DRAMATIQUES */}
+          <div className="max-w-6xl mx-auto mt-20">
+            <div className="text-center mb-12">
+              <p className="text-xl text-gray-400 mb-8">
+                Combien de clients perdez-vous <span className="text-pink-400">sans le savoir</span> ?
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Révélation 1 */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-black/80 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/30 hover:border-purple-400/50 transition-all duration-300">
+                  <div className="text-center">
+                    <div className="text-6xl font-light text-purple-400 mb-4">73%</div>
+                    <h3 className="text-xl text-white font-medium mb-3">Trafic "Fantôme"</h3>
+                    <p className="text-gray-400 text-sm">
+                      de votre trafic est marqué "Direct" alors qu'il vient 
+                      de vos emails, réseaux sociaux, bouche-à-oreille...
+                    </p>
+                  </div>
+                </div>
               </div>
               
-              <div className="space-y-4">
-                <div className="bg-black/40 rounded-xl p-6 border border-purple-400/20">
-                  <div className="text-purple-400 font-medium mb-2">Diagnostic honnête</div>
-                  <p className="text-gray-300">
-                    Nous identifions vos angles morts actuels 
-                    et les opportunités d'amélioration concrètes.
-                  </p>
+              {/* Révélation 2 */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-400/20 to-orange-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-black/80 backdrop-blur-sm rounded-3xl p-8 border border-pink-400/30 hover:border-pink-400/50 transition-all duration-300">
+                  <div className="text-center">
+                    <div className="text-6xl font-light text-pink-400 mb-4">?</div>
+                    <h3 className="text-xl text-white font-medium mb-3">ROI Invisible</h3>
+                    <p className="text-gray-400 text-sm">
+                      Impossible de calculer le vrai retour sur investissement 
+                      de vos actions marketing sans tracking complet
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-black/40 rounded-xl p-6 border border-pink-400/20">
-                  <div className="text-pink-400 font-medium mb-2">Setup progressif</div>
-                  <p className="text-gray-300">
-                    Installation méthodique d'un système de tracking 
-                    qui grandit avec votre business.
-                  </p>
+              </div>
+              
+              {/* Révélation 3 */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-yellow-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative bg-black/80 backdrop-blur-sm rounded-3xl p-8 border border-orange-400/30 hover:border-orange-400/50 transition-all duration-300">
+                  <div className="text-center">
+                    <div className="text-6xl font-light text-orange-400 mb-4">∞</div>
+                    <h3 className="text-xl text-white font-medium mb-3">Opportunités Perdues</h3>
+                    <p className="text-gray-400 text-sm">
+                      Vos concurrents qui trackent tout optimisent là 
+                      où vous investissez à l'aveugle
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* SERVICES TRACKING */}
       <section id="services" className="py-24 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-              Notre approche <span className="text-purple-400 font-bold">tracking</span>
+            <h2 className="text-5xl md:text-7xl font-light text-white mb-6">
+              <span className="text-purple-400 font-bold">3 missions</span><br/>
+              pour révéler l'invisible
             </h2>
-            <p className="text-xl text-gray-400">
-              Trois étapes pour révéler votre performance réelle
+            <p className="text-2xl text-gray-400 max-w-4xl mx-auto">
+              Transformation de vos données en <span className="text-pink-400">or digital</span>
             </p>
           </div>
 
@@ -255,67 +222,6 @@ export default function TrackingDataPage() {
         </div>
       </section>
 
-      {/* EXEMPLE CONCRET - MODÉRÉ */}
-      <section className="py-24 relative bg-gradient-to-b from-transparent via-purple-400/5 to-transparent">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-              Un exemple <span className="text-purple-400 font-bold">concret</span>
-            </h2>
-          </div>
-
-          <div className="bg-gradient-to-br from-black/90 to-gray-900/90 rounded-3xl p-8 border border-purple-400/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="text-purple-400 font-medium mb-4">Cas d'usage</div>
-                <h3 className="text-2xl font-light text-white mb-4">
-                  Entreprise de services B2B
-                </h3>
-                <div className="space-y-4 text-gray-300">
-                  <p>
-                    <strong>Problème initial :</strong> 70% du trafic affiché comme "direct" 
-                    sans pouvoir identifier les vraies sources d'acquisition.
-                  </p>
-                  <p>
-                    <strong>Actions menées :</strong> Setup GA4 avancé, UTM systématiques, 
-                    tracking offline, attribution multi-canal.
-                  </p>
-                  <p>
-                    <strong>Résultat :</strong> Révélation des vrais canaux performants, 
-                    réallocation budget marketing, amélioration ROI global.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-black/40 rounded-2xl p-6 border border-gray-700/50">
-                <div className="text-center mb-6">
-                  <div className="text-purple-400 font-medium mb-2">Avant/Après</div>
-                  <p className="text-gray-400 text-sm">Visibilité sur les sources</p>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400">Sessions attribuées</span>
-                    <span className="text-red-400">30% → <span className="text-green-400">85%</span></span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400">ROI marketing visible</span>
-                    <span className="text-red-400">Partiel → <span className="text-green-400">Complet</span></span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400">Décisions data-driven</span>
-                    <span className="text-red-400">Intuition → <span className="text-green-400">Factuel</span></span>
-                  </div>
-                </div>
-                <div className="mt-6 pt-6 border-t border-gray-700/50 text-center">
-                  <p className="text-gray-400 text-sm">
-                    Résultats observés sur 4 mois d'implémentation
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* TARIFICATION TRACKING */}
       <section className="py-24 relative">

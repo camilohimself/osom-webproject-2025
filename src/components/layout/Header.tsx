@@ -30,7 +30,6 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
     { name: 'Création Sites Web', href: '/services/creation-site-web' },
     { name: 'Programmation & IA', href: '/services/programmation-ia' },
     { name: 'SEO & Marketing', href: '/services/seo-content-marketing' },
-    { name: 'Paid Media & Growth', href: '/services/paid-media-growth' },
     { name: 'Marketing Automation', href: '/services/marketing-automation-crm' },
     { name: 'Tracking & Data', href: '/services/tracking-data' },
   ]
@@ -156,14 +155,6 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                 <p className="text-xs text-gray-400" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Acquisition client & optimisation ROI</p>
                               </div>
                               <div className="space-y-1">
-                                <Link
-                                  href="/services/paid-media-growth"
-                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
-                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                                  onClick={closeServicesMenu}
-                                >
-                                  Paid Media & Growth
-                                </Link>
                                 <Link
                                   href="/services/marketing-automation-crm"
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"

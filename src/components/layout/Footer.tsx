@@ -12,7 +12,6 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
     { name: dictionary.services['web-development'], href: '/services/creation-site-web' },
     { name: 'Programmation & IA', href: '/services/programmation-ia' },
     { name: dictionary.services['seo-marketing'], href: '/services/seo-content-marketing' },
-    { name: dictionary.services['paid-media'], href: '/services/paid-media-growth' },
     { name: dictionary.services['marketing-automation'], href: '/services/marketing-automation-crm' },
     { name: dictionary.services['tracking-data'], href: '/services/tracking-data' },
   ]

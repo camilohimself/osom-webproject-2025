@@ -25,11 +25,6 @@ export const pathnames = {
     en: '/services/seo-content-marketing',
     de: '/dienstleistungen/seo-content-marketing'
   },
-  '/services/paid-media-growth': {
-    fr: '/services/paid-media-growth',
-    en: '/services/paid-media-growth',
-    de: '/dienstleistungen/paid-media-growth'
-  },
   '/services/marketing-automation-crm': {
     fr: '/services/marketing-automation-crm',
     en: '/services/marketing-automation-crm',

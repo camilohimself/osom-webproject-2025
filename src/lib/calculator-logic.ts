@@ -226,7 +226,7 @@ function generateRecommendations(
 
   // Timeline recommendations
   if (inputs.timeline === '3months') {
-    recommendations.push('Résultats rapides avec du paid media et optimisation CRO')
+    recommendations.push('Résultats rapides avec du marketing digital et optimisation CRO')
   } else if (inputs.timeline === '24months') {
     recommendations.push('Stratégie long-terme avec focus sur l\'autorité de domaine')
   }

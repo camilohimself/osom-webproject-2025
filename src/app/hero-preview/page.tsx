@@ -57,8 +57,8 @@ export default function HeroPreviewPage() {
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-xl border-b border-gray-800 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-white font-bold text-xl">PREVIEW HERO VERSIONS</h1>
-          <Link href="/services/paid-media-growth" className="text-yellow-400 hover:text-yellow-300 transition-colors">
-            ← Retour à Paid Media
+          <Link href="/services" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+            ← Retour aux Services
           </Link>
         </div>
       </header>

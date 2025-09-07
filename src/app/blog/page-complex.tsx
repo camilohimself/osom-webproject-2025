@@ -87,7 +87,7 @@ export default function BlogEditorialPage() {
     {
       id: 'culture-peinture-14x-roi',
       title: 'The Organic Revolution: How We Generated 688 Conversions Without Ads',
-      subtitle: 'A Deep Dive Into The Strategy That Outperformed Paid Media By 1,400%',
+      subtitle: 'A Deep Dive Into The Strategy That Outperformed Paid Advertising By 1,400%',
       excerpt: 'In six months, we proved that organic growth isn\'t dead. It\'s just been done wrong. Here\'s how Culture Peinture rewrote the rules of digital acquisition.',
       category: 'case studies',
       readTime: '5 min read',
