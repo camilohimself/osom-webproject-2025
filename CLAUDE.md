@@ -218,6 +218,98 @@ Carte blanche totale accordée par Camilo sur cette section. Les 3 versions expl
   - Section entre "arsenal growth" et "pricing" manque de contenu
   - Voir pour repositionning subtil de la phrase
 
+## 🎯 PERSONAS MARKETING OSOM
+
+### PERSONA 1 : Georges Bonvin - "Le PME Sceptique"
+- 45 ans, Directeur Bonvin Constructions SA (Sierre)
+- 30 employés, CA 8M CHF
+- iPhone 11 (pas besoin du dernier)
+- "Mon neveu peut faire un site pour 500.-"
+- **Déclencher** : ROI concret, cas clients similaires
+- **Frein** : "Internet c'est compliqué"
+- **Besoin réel** : Crédibilité digitale face aux concurrents romands
+
+### PERSONA 2 : Marie Dubuis - "L'Artiste Ambitieuse"
+- 32 ans, Violoniste/Directrice artistique émergente
+- Festival de musique baroque en création
+- Budget serré mais vision claire
+- Instagram 3k followers, veut passer pro
+- **Déclencher** : Portfolio culturel, process rapide
+- **Frein** : Budget limité
+- **Besoin réel** : Paraître établie pour obtenir des subventions
+
+### PERSONA 3 : Dr. Sarah Meier - "La Professionnelle Exigeante"
+- 38 ans, Médecin spécialiste, nouvelle clinique privée
+- Lausanne → Sion, ouvre son cabinet
+- Habituée au premium (Mercedes, Rolex discrète)
+- Zéro patience pour l'amateurisme
+- **Déclencher** : Process clair, réactivité, références premium
+- **Frein** : Timing (veut pour hier)
+- **Besoin réel** : Site qui reflète son standing sans paraître ostentatoire
+
+## 🤖 AGENT LIFTING MINIMALISTE OSOM
+
+### 🎯 MISSION DE L'AGENT
+Transformer chaque page en version "Netlify-style" : **Minimal + Impact + Authenticité**
+
+### 📏 RÈGLES DE L'AGENT LIFTING
+
+#### FILTRE 1 : MESSAGE UNIQUE PAR PAGE
+- "Voici ce qu'on fait, voici la preuve, voici le prix"
+- 1 phrase hero maximum
+- Éliminer tout ce qui fait "peur" par surcharge d'info
+
+#### FILTRE 2 : SWISS TRUST MARKETING
+- Portfolio AVANT promesses
+- Montrer, ne pas raconter
+- Projets réels : jdwaeber.ch, delhasse-cardiologue.ch, Maitrise cathédrale
+- Logos "nous font confiance" ajoutés progressivement
+
+#### FILTRE 3 : STRUCTURE MINIMALISTE
+- **Hero** : 1 phrase + 1 preuve + 1 CTA
+- **Preuve** : 1 vrai projet client
+- **Process** : 3 étapes maximum
+- **Pricing** : Prix transparent + délai
+- **Contact** : Zéro friction
+
+#### FILTRE 4 : AUTHENTICITÉ ABSOLUE
+- ❌ JAMAIS mentir ou exagérer
+- ❌ Métriques inventées ou non-vérifiables
+- ✅ Présenter capacités techniques sans survendre ROI
+- ✅ "Sites Next.js sur-mesure" vs "300% ROI garanti"
+
+### 🚀 STRATÉGIE ÉVOLUTIVE
+
+#### VERSION 1.0 - LAUNCH PRUDENTE (Immediate)
+- Focus **qualité technique** : "Sites Next.js, fonctionnalités custom"
+- Projets récents sans promettre métriques impossibles
+- Message : "Voici notre dernier projet : jdwaeber.ch"
+
+#### VERSION 1.1+ - ÉVOLUTION PROGRESSIVE
+- V1.1 → + Logos clients qui font confiance
+- V1.2 → + Nouveaux projets au fur et mesure  
+- V1.3 → + Vraies métriques quand disponibles
+
+### 🎨 INSPIRATION DESIGN
+**Modèles** : Stripe, Vercel, Netlify, Notion
+- Vendre **l'état final** plutôt que nos compétences
+- "Après OSOM, le client peut..." 
+- 1 ligne = impact maximum
+
+### 📋 TEMPLATE TRANSFORMATION
+```
+AVANT : [Texte actuel long et technique]
+APRÈS : 
+- Résultat client concret
+- Preuve visitable (site réel)
+- Prix + délai transparent
+- CTA étape logique suivante
+```
+
+### 🎯 PERSONAS ALIGNÉS
+Tous les 3 partagent : **méfiance agences + besoin crédibilité + peur prix**
+**Solution universelle** : Transparence totale + portfolio accessible
+
 **CONSIGNES TECHNIQUES** :
 - Maintenir couleurs thème par service (Yellow-400, Purple-400, etc.)
 - Préserver animations Framer Motion existantes
