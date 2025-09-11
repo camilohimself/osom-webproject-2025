@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import React from 'react'
 
 export default function HeroPreviewPage() {
@@ -10,10 +10,10 @@ export default function HeroPreviewPage() {
   const [currentPhase1, setCurrentPhase1] = useState(0)
   const [currentPhase2, setCurrentPhase2] = useState(0)
   
-  const textPhases = [
+  const textPhases = useMemo(() => [
     "Nous travaillons dans l'ombre",
     "Nous travaillons dans l'ombre pour vous faire briller"
-  ]
+  ], [])
   
   // Animation VERSION 1 - Progressive
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function HeroPreviewPage() {
       clearTimeout(timer1)
       clearTimeout(timer2)
     }
-  }, [])
+  }, [textPhases])
 
   // Animation VERSION 2 - Typewriter
   useEffect(() => {

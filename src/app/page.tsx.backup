@@ -18,9 +18,7 @@ const GaugeChart = dynamic(() => import('@/components/ui/GaugeChart'), {
 })
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData } from '@/lib/structured-data'
-import HeroCEO from '@/components/homepage/HeroCEO'
-import WhyNextJS from '@/components/homepage/WhyNextJS'
-import TrustSignalsB2B from '@/components/homepage/TrustSignalsB2B'
+import HeroSwissOSOM from '@/components/homepage/HeroSwissOSOM'
 
 // Lazy loading pour les Piliers Swiss (composants client)
 const PilierSwiss1 = dynamic(() => import('@/components/homepage/PilierSwiss1'), {
@@ -116,14 +114,8 @@ export default async function Home() {
       
       {/* Scroll Progress Indicator */}
       <ScrollProgressIndicator />
-      {/* Hero CEO Section */}
-      <HeroCEO dictionary={dictionary.home} />
-      
-      {/* Section Valorisation Next.js */}
-      <WhyNextJS />
-      
-      {/* Trust Signals B2B */}
-      <TrustSignalsB2B />
+      {/* Hero Swiss OSOM Section */}
+      <HeroSwissOSOM dictionary={dictionary.home} />
 
       <section className="py-32 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -135,44 +127,28 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedElement type="fadeIn" delay={0.1}>
             <div className="text-center mb-24">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Notre méthode <span className="text-yellow-400">Next.js</span>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-8">
+                Comment OSOM marche ?
               </div>
               
-              <div className="text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
-                3 étapes simples pour transformer votre présence digitale
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
-                <div className="bg-yellow-400/5 border border-yellow-400/20 rounded-3xl p-8 hover:border-yellow-400/40 transition-all duration-300">
-                  <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">1</div>
-                  <div className="text-2xl font-bold text-white mb-4">Brief 30 min</div>
-                  <div className="text-gray-300 mb-4">Nous analysons votre métier et vos besoins</div>
-                  <div className="text-yellow-400 text-sm font-semibold">✓ Audit technique gratuit</div>
-                  <div className="text-yellow-400 text-sm font-semibold">✓ Analyse concurrentielle</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div className="p-6">
+                  <div className="text-6xl font-black text-yellow-400 mb-4">1</div>
+                  <div className="text-xl font-semibold text-white mb-2">Analyse</div>
+                  <div className="text-gray-400">On regarde vos données</div>
                 </div>
                 
-                <div className="bg-cyan-400/5 border border-cyan-400/20 rounded-3xl p-8 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className="w-20 h-20 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">2</div>
-                  <div className="text-2xl font-bold text-white mb-4">Développement</div>
-                  <div className="text-gray-300 mb-4">Site Next.js développé avec validation continue</div>
-                  <div className="text-cyan-400 text-sm font-semibold">✓ Architecture moderne</div>
-                  <div className="text-cyan-400 text-sm font-semibold">✓ Performance garantie</div>
+                <div className="p-6">
+                  <div className="text-6xl font-black text-cyan-400 mb-4">2</div>
+                  <div className="text-xl font-semibold text-white mb-2">Création</div>
+                  <div className="text-gray-400">On crée du contenu qui marche</div>
                 </div>
                 
-                <div className="bg-green-400/5 border border-green-400/20 rounded-3xl p-8 hover:border-green-400/40 transition-all duration-300">
-                  <div className="w-20 h-20 bg-green-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">3</div>
-                  <div className="text-2xl font-bold text-white mb-4">Formation</div>
-                  <div className="text-gray-300 mb-4">2h pour devenir autonome sur votre site</div>
-                  <div className="text-green-400 text-sm font-semibold">✓ Support 30 jours</div>
-                  <div className="text-green-400 text-sm font-semibold">✓ Maintenance incluse</div>
+                <div className="p-6">
+                  <div className="text-6xl font-black text-green-400 mb-4">3</div>
+                  <div className="text-xl font-semibold text-white mb-2">Résultats</div>
+                  <div className="text-gray-400">Vous vendez plus</div>
                 </div>
-              </div>
-
-              <div className="mt-16 text-center">
-                <div className="text-lg text-gray-400 mb-4">Délai total</div>
-                <div className="text-4xl font-bold text-yellow-400 mb-2">15-45 jours</div>
-                <div className="text-gray-400">selon la complexité du projet</div>
               </div>
             </div>
           </AnimatedElement>
@@ -260,30 +236,30 @@ export default async function Home() {
             </MagneticButton>
           </div>
 
-          {/* Trust Indicators B2B */}
+          {/* Trust Indicators Créatifs */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
-              <div className="flex items-center justify-center mb-3">
-                <IconeOSOM type="star" size={24} color="cyan" ariaLabel="Next.js Expert" />
-                <span className="text-cyan-400 font-semibold ml-2">Next.js Expert</span>
-              </div>
-              <p className="text-gray-300 text-sm">Architecture moderne garantie</p>
-            </div>
-            
             <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300">
               <div className="flex items-center justify-center mb-3">
-                <IconeOSOM type="chart" size={24} color="purple" ariaLabel="Claude IA Integration" />
-                <span className="text-purple-400 font-semibold ml-2">Claude IA Intégré</span>
+                <IconeOSOM type="star" size={24} color="purple" ariaLabel="Excellence créative" />
+                <span className="text-purple-400 font-semibold ml-2">Excellence Créative</span>
               </div>
-              <p className="text-gray-300 text-sm">Contenu optimisé automatiquement</p>
+              <p className="text-gray-300 text-sm">25% CTR vs 2-3% industrie</p>
             </div>
             
-            <div className="bg-green-400/10 rounded-xl p-6 border border-green-400/20 hover:border-green-400/40 transition-all duration-300">
+            <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
               <div className="flex items-center justify-center mb-3">
-                <IconeOSOM type="shield" size={24} color="green" ariaLabel="Performance Garantie" />
-                <span className="text-green-400 font-semibold ml-2">Performance &lt; 2s</span>
+                <IconeOSOM type="chart" size={24} color="cyan" ariaLabel="Résultats mesurables" />
+                <span className="text-cyan-400 font-semibold ml-2">Résultats Mesurables</span>
               </div>
-              <p className="text-gray-300 text-sm">Chargement garanti ou remboursé</p>
+              <p className="text-gray-300 text-sm">688 conversions vs 49 traditionnelles</p>
+            </div>
+            
+            <div className="bg-yellow-400/10 rounded-xl p-6 border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300">
+              <div className="flex items-center justify-center mb-3">
+                <IconeOSOM type="shield" size={24} color="yellow" ariaLabel="Engagement qualité" />
+                <span className="text-yellow-400 font-semibold ml-2">Engagement Qualité</span>
+              </div>
+              <p className="text-gray-300 text-sm">68.6% vs 44.6% trafic standard</p>
             </div>
           </div>
         </div>

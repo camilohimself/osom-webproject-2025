@@ -28,7 +28,7 @@ export default function PhrasePreviewPage() {
     })
     
     return () => clearTimeout(timer)
-  }, [])
+  }, [words])
 
   return (
     <div className="min-h-screen bg-black">
