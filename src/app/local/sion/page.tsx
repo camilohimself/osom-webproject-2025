@@ -7,7 +7,7 @@ const cityData = getCityPageData('sion')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital sion, agence web sion, SEO sion, création site internet sion, marketing digital capitale valais, osom sion',
+  keywords: 'agence web sion, création site web sion capitale, développeur sion valais, site internet professionnel sion, SEO services sion, marketing digital institution sion, commerce local sion, osom sion',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,

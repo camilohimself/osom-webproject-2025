@@ -7,7 +7,7 @@ const cityData = getCityPageData('fribourg')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital fribourg, agence web fribourg, SEO fribourg, création site internet fribourg, marketing digital bilingue, gruyère digital, osom fribourg',
+  keywords: 'agence web fribourg bilingue, création site agroalimentaire fribourg, e-commerce bio gruyère, site internet producteur local, SEO terroir AOC, marketing digital FR DE, web agency circuits courts, osom fribourg',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,

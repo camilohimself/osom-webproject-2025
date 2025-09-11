@@ -248,7 +248,7 @@ export default function CityPageTemplate({
                   className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-all duration-300 font-bold shadow-lg hover:scale-105"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                 >
-                  📞 Rendez-vous {cityData.name}
+                  Rendez-vous {cityData.name}
                 </Link>
                 
                 <a
@@ -426,7 +426,7 @@ export default function CityPageTemplate({
                     href={`tel:${contactInfo.phone}`}
                     className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-medium"
                   >
-                    📞 {contactInfo.phone}
+                    {contactInfo.phone}
                   </a>
                 </div>
 
@@ -437,7 +437,7 @@ export default function CityPageTemplate({
                     href="/contact"
                     className="inline-block border-2 border-yellow-400 text-yellow-400 px-6 py-3 rounded-lg hover:bg-yellow-400 hover:text-black transition-all duration-300"
                   >
-                    📅 Planifier
+                    Planifier Rendez-vous
                   </Link>
                 </div>
               </div>

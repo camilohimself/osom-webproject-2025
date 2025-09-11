@@ -7,7 +7,7 @@ const cityData = getCityPageData('geneve')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital genève, agence web genève, SEO genève, création site internet genève, marketing digital luxury geneva, finance geneva, osom genève',
+  keywords: 'agence web genève premium, création site luxury genève, développement web banque privée, site internet wealth management, SEO finance genève, marketing digital UHNW geneva, web agency international geneva, osom genève',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,

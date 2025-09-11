@@ -7,7 +7,7 @@ const cityData = getCityPageData('neuchatel')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital neuchâtel, agence web neuchâtel, SEO neuchâtel, création site internet neuchâtel, marketing digital horlogerie, microtechnique digital, osom neuchâtel',
+  keywords: 'agence web neuchâtel horlogerie, création site microtechnique, développement web arc horloger, site internet swiss made, SEO industrie précision, marketing B2B horlogerie, web agency innovation neuchâtel, osom neuchâtel',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,

@@ -7,7 +7,7 @@ const cityData = getCityPageData('valais')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital valais, agence web valais, SEO valais, création site internet valais, marketing digital sion, osom valais',
+  keywords: 'agence web valais, création site web valais, développeur valais, SEO tourisme alpin, e-commerce vins valais, site internet artisanat valais, marketing digital sion martigny, osom valais',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,

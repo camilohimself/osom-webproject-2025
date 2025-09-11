@@ -7,7 +7,7 @@ const cityData = getCityPageData('lausanne')
 export const metadata: Metadata = {
   title: cityData.metaTitle,
   description: cityData.metaDescription,
-  keywords: 'agence marketing digital lausanne, agence web lausanne, SEO lausanne, création site internet lausanne, marketing digital vaud, startup lausanne, osom lausanne',
+  keywords: 'agence web lausanne, développement web startup lausanne, création site SaaS lausanne, SEO tech léman, site internet EPFL, marketing digital fintech vaud, web agency innovation park, osom lausanne',
   openGraph: {
     title: cityData.metaTitle,
     description: cityData.metaDescription,

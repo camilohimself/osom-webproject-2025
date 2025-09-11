@@ -67,43 +67,43 @@ export const swissCitiesData: Record<string, SwissCityData> = {
   }
 }
 
-// Local metrics per city (realistic but optimized data)
+// Local trust signals per city (credible data without inflated KPIs)
 export const localMetricsData: Record<string, LocalMetrics> = {
   valais: {
     localClients: 47,
-    averageROI: "+4693%",
+    averageROI: "Sites Next.js",
     projectsCompleted: 89,
-    marketShare: "Leader"
+    marketShare: "Expert Local"
   },
   sion: {
     localClients: 23,
-    averageROI: "+3847%", 
+    averageROI: "Portfolio Réel", 
     projectsCompleted: 45,
-    marketShare: "#1 Local"
+    marketShare: "Basé Sion"
   },
   lausanne: {
     localClients: 18,
-    averageROI: "+5201%",
+    averageROI: "Clients Actifs",
     projectsCompleted: 31,
-    marketShare: "Top 3"
+    marketShare: "Tech Focus"
   },
   geneve: {
     localClients: 15,
-    averageROI: "+6103%",
+    averageROI: "Discrétion +",
     projectsCompleted: 28,
-    marketShare: "Premium"
+    marketShare: "Premium Only"
   },
   fribourg: {
     localClients: 12,
-    averageROI: "+4156%",
+    averageROI: "Terroir Digital",
     projectsCompleted: 19,
-    marketShare: "#2 Local"
+    marketShare: "Bio Spécialiste"
   },
   neuchatel: {
     localClients: 9,
-    averageROI: "+3924%",
+    averageROI: "Précision Swiss",
     projectsCompleted: 16,
-    marketShare: "Leader"
+    marketShare: "Horlogerie +"
   }
 }
 
@@ -117,22 +117,22 @@ export const localCaseStudies = {
     solution: "Stratégie SEO géolocalisée Valais, refonte site responsive, campagne Google Ads ciblée tourisme alpin, et marketing automation pour fidélisation client.",
     results: [
       {
-        metric: "Conversions mensuelles",
-        before: "49 leads",
-        after: "688 leads", 
-        improvement: "+1304%"
+        metric: "Site Web Performance",
+        before: "Site vitrine basique",
+        after: "Site Next.js optimisé", 
+        improvement: "Moderne & Rapide"
       },
       {
-        metric: "ROI campagnes payantes",
-        before: "187% ROI",
-        after: "4693% ROI",
-        improvement: "140x plus efficace"
+        metric: "Présence Digitale",
+        before: "Invisible en ligne",
+        after: "Référencé Google",
+        improvement: "Visibilité Locale"
       },
       {
-        metric: "Visibilité locale Valais",
-        before: "Position 47",
-        after: "Position 2", 
-        improvement: "Top 3 garanti"
+        metric: "Process Client",
+        before: "Contact téléphone uniquement",
+        after: "Formulaires & automation", 
+        improvement: "24/7 Accessible"
       }
     ]
   },
@@ -145,22 +145,22 @@ export const localCaseStudies = {
     solution: "Content marketing technique, SEO local Sion, partenariats avec architectes valaisans, et showcase projets patrimoniaux (châteaux, hôtels de luxe).",
     results: [
       {
-        metric: "Engagement qualité SEO",
-        before: "44.6% engagement", 
-        after: "68.6% engagement",
-        improvement: "+53% qualité trafic"
+        metric: "Portfolio Digitalisé",
+        before: "Brochures papier uniquement", 
+        after: "Galerie interactive en ligne",
+        improvement: "Showcase 24/7"
       },
       {
-        metric: "Projets haut de gamme",
-        before: "2 projets/mois",
-        after: "9 projets/mois",
-        improvement: "+350% portfolio"
+        metric: "Processus Devis",
+        before: "Rendez-vous obligatoire",
+        after: "Pré-qualification digitale",
+        improvement: "Efficacité +"
       },
       {
-        metric: "CA annuel",
-        before: "180K CHF",
-        after: "520K CHF", 
-        improvement: "+189% croissance"
+        metric: "Références Clients",
+        before: "Bouche-à-oreille local",
+        after: "Témoignages en ligne", 
+        improvement: "Crédibilité Renforcée"
       }
     ]
   },
@@ -173,22 +173,22 @@ export const localCaseStudies = {
     solution: "Inbound marketing tech-focused, SEO B2B Suisse romande, content hubs, automation Hubspot, et stratégie LinkedIn targeting décideurs.",
     results: [
       {
-        metric: "Leads qualifiés MQL",
-        before: "23 MQL/mois",
-        after: "156 MQL/mois",
-        improvement: "+578% pipeline"  
+        metric: "Platform B2B",
+        before: "Site vitrine statique",
+        after: "SaaS platform interactive",
+        improvement: "Tech Crédible"  
       },
       {
-        metric: "Closing rate B2B",
-        before: "12% closing",
-        after: "31% closing",
-        improvement: "+158% efficacité"
+        metric: "Lead Qualification",
+        before: "Contacts non-qualifiés",
+        after: "Formulaires intelligents",
+        improvement: "Qualité Focus"
       },
       {
-        metric: "ARR (Annual Recurring)",
-        before: "420K CHF", 
-        after: "1.8M CHF",
-        improvement: "+329% croissance"
+        metric: "Écosystème Tech",
+        before: "Invisible startup scene", 
+        after: "Présent événements EPFL",
+        improvement: "Network Actif"
       }
     ]
   },
@@ -201,22 +201,22 @@ export const localCaseStudies = {
     solution: "SEO luxury keywords, stratégie content discrétion suisse, targeting géographique premium, et automation de lead nurturing personnalisé.",
     results: [
       {
-        metric: "Leads premium qualifiés",
-        before: "12 leads/mois",
-        after: "67 leads/mois", 
-        improvement: "+458% qualité"
+        metric: "Discrétion Premium",
+        before: "Site web trop visible",
+        after: "Présence digitale élégante", 
+        improvement: "Swiss Discret"
       },
       {
-        metric: "Panier moyen client",
-        before: "85K CHF",
-        after: "247K CHF",
-        improvement: "+191% valeur"
+        metric: "Clientèle UHNW",
+        before: "Positionnement généraliste",
+        after: "Services ultra-premium",
+        improvement: "Luxury Focus"
       },
       {
-        metric: "Retention clientèle",
-        before: "73% rétention",
-        after: "94% rétention",
-        improvement: "+29% fidélité"
+        metric: "Confiance Client",
+        before: "Références non-vérifiables",
+        after: "Portfolio confidentiel solide",
+        improvement: "Trust Swiss+"
       }
     ]
   },
@@ -229,22 +229,22 @@ export const localCaseStudies = {
     solution: "E-commerce local, SEO \"bio Fribourg\", marketing territorial gruyérien, automation seasonal, et stratégie social media authentique.",
     results: [
       {
-        metric: "Ventes directes online",
-        before: "8K CHF/mois",
-        after: "47K CHF/mois",
-        improvement: "+488% e-commerce"
+        metric: "E-commerce Local",
+        before: "Vente marché uniquement",
+        after: "Boutique en ligne 24/7",
+        improvement: "Circuits Courts+"
       },
       {
-        metric: "Part vente directe", 
-        before: "23% direct",
-        after: "67% direct",
-        improvement: "+191% marge"
+        metric: "Valorisation Terroir", 
+        before: "Produits génériques",
+        after: "AOC Gruyère mis en avant",
+        improvement: "Premium Local"
       },
       {
-        metric: "Rayonnement régional",
-        before: "Canton uniquement",
-        after: "Suisse romande",
-        improvement: "4x territoire"
+        metric: "Relation Client",
+        before: "Vente impersonnelle",
+        after: "Histoire producteur visible",
+        improvement: "Authenticité+"
       }
     ]
   },
@@ -257,22 +257,22 @@ export const localCaseStudies = {
     solution: "Content marketing technique, SEO B2B horlogerie, showcase innovation, lead generation industrie 4.0, et positioning expertise pointe.",
     results: [
       {
-        metric: "Nouveaux clients B2B",
-        before: "3 clients/an",
-        after: "18 clients/an", 
-        improvement: "+500% acquisition"
+        metric: "Showcase Innovation",
+        before: "Références confidentielles",
+        after: "Portfolio tech visible", 
+        improvement: "Crédibilité B2B"
       },
       {
-        metric: "CA diversification",
-        before: "15% hors horlogerie",
-        after: "43% hors horlogerie",
-        improvement: "+187% diversification"
+        metric: "Diversification Clients",
+        before: "Dépendance horlogerie",
+        after: "Secteurs multiples actifs",
+        improvement: "Risque Réduit"
       },
       {
-        metric: "Visibilité innovation",
-        before: "Local uniquement",
-        after: "Rayonnement EU",
-        improvement: "Échelle européenne"
+        metric: "Positionnement Tech",
+        before: "Sous-traitant invisible",
+        after: "Expert Innovation visible",
+        improvement: "Leader Reconnu"
       }
     ]
   }
@@ -282,187 +282,187 @@ export const localCaseStudies = {
 export const localServicesData = {
   valais: [
     {
-      title: "SEO Tourisme Alpin",
-      description: "Optimisation spécialisée pour hôtels, restaurants et activités touristiques valaisannes. Capture du trafic saisonnier été/hiver.",
-      localAdvantage: "Expertise unique du marché touristique valaisan et saisonnalité alpine",
-      price: "2500 CHF/mois",
-      duration: "6 mois minimum"
+      title: "Sites Web Tourisme Alpin",
+      description: "Création de sites web responsive pour hôtels, restaurants et activités valaisannes. Design authentique montagne, réservation intégrée.",
+      localAdvantage: "Basés dans les Alpes, nous vivons votre réalité touristique saisonnière",
+      price: "Sur mesure",
+      duration: "6-8 semaines"
     },
     {
-      title: "E-commerce Vins & Terroir",
-      description: "Solutions e-commerce pour vignerons et producteurs locaux. Vente directe optimisée avec géolocalisation Valais.",
-      localAdvantage: "Connaissance approfondie de l'écosystème viticole valaisan",
-      price: "3800 CHF",
-      duration: "Projet 2 mois"
+      title: "E-commerce Vins du Valais",
+      description: "Boutiques en ligne pour vignerons valaisans. Vente directe cave-consommateur, expédition suisse, fiches techniques AOC.",
+      localAdvantage: "Collaboration directe avec caves partenaires, connaissance cépages locaux",
+      price: "Projet fixe",
+      duration: "2-3 mois"
     },
     {
-      title: "Marketing Artisanat Local",
-      description: "Visibilité digitale pour artisans et PME valaisannes. Focus sur savoir-faire traditionnel et clientèle locale + touristique.",
-      localAdvantage: "Réseau établi avec Culture Peinture et autres artisans valaisans",
-      price: "1800 CHF/mois", 
-      duration: "Engagement 12 mois"
+      title: "Portfolio Artisanat Swiss",
+      description: "Sites vitrine pour artisans valaisans. Galeries photo professionnelles, processus sur-mesure, témoignages clients réels.",
+      localAdvantage: "Références vérifiables : jdwaeber.ch, projets Culture Peinture",
+      price: "Devis transparent", 
+      duration: "Livraison 45 jours"
     },
     {
-      title: "Immobilier Alpin Digital",
-      description: "Marketing digital spécialisé promoteurs et agences immobilières. Ciblage investisseurs et résidents secondaires.",
-      localAdvantage: "Maîtrise du marché immobilier valaisan et réglementation Lex Weber",
-      price: "4200 CHF/mois",
-      duration: "Saisonnier flex"
+      title: "Sites Immobilier Alpin",
+      description: "Plateformes web pour promoteurs et agences valaisannes. Visites virtuelles 360°, conformité Lex Weber, multi-langues.",
+      localAdvantage: "Expertise réglementation résidences secondaires et marché local",
+      price: "Selon projet",
+      duration: "3-4 mois"
     }
   ],
 
   sion: [
     {
-      title: "Institutions & Administration",
-      description: "Communication digitale pour institutions publiques et parapubliques sédunois. Transparence et engagement citoyen.",
-      localAdvantage: "Compréhension des enjeux politiques et administratifs de la capitale valaisanne",
-      price: "3200 CHF/mois",
-      duration: "Annuel renouvelable"
+      title: "Sites Web Institutions",
+      description: "Création de sites pour institutions publiques sédunoises. Interface citoyens, accessibilité web, conformité légale.",
+      localAdvantage: "Proximité capitale, compréhension enjeux administratifs valaisans",
+      price: "Appel d'offres",
+      duration: "Selon procédure"
     },
     {
-      title: "Services Professionnels B2B", 
-      description: "Lead generation pour avocats, fiduciaires, consultants et professions libérales sédunois.",
-      localAdvantage: "Network B2B établi et connaissance du tissu économique de Sion",
-      price: "2400 CHF/mois",
-      duration: "6-12 mois"
+      title: "Portfolio Professionnels", 
+      description: "Sites vitrine pour avocats, fiduciaires, consultants Sion. Design sobre, références client, contact sécurisé.",
+      localAdvantage: "Réseau professionnel établi, références vérifiables dans la région",
+      price: "Package fixe",
+      duration: "4-6 semaines"
     },
     {
-      title: "Retail & Commerce Local",
-      description: "Digitalisation commerces de centre-ville. E-commerce local, click & collect, fidélisation client.",
-      localAdvantage: "Partenariats avec associations de commerçants et Ville de Sion", 
-      price: "1650 CHF/mois",
-      duration: "Modulable saison"
+      title: "E-commerce Local Sion",
+      description: "Boutiques en ligne pour commerces centre-ville. Click & collect, livraison locale, intégration stocks existants.",
+      localAdvantage: "Collaboration directe avec Association des Commerçants de Sion", 
+      price: "Modulaire",
+      duration: "6-10 semaines"
     },
     {
-      title: "Éducation & Formation",
-      description: "Marketing éducatif pour écoles privées, centres de formation et institutions académiques sédunois.",
-      localAdvantage: "Connaissance approfondie du paysage éducatif valaisan",
-      price: "2800 CHF/mois",
+      title: "Sites Éducatifs",
+      description: "Plateformes web pour écoles et centres formation sédunois. Inscription en ligne, espace élèves, communication parents.",
+      localAdvantage: "Expertise pédagogie digitale et réglementation éducative valaisanne",
+      price: "Forfait école",
       duration: "Année scolaire"
     }
   ],
 
   lausanne: [
     {
-      title: "Tech & Startup Scale-up",
-      description: "Growth marketing pour startups tech lémaniques en phase de croissance. Inbound B2B et lead generation qualifiée.",
-      localAdvantage: "Intégration dans l'écosystème EPFL, Startup Campus et VD Innovation",
-      price: "4500 CHF/mois",
-      duration: "12-24 mois"
+      title: "Plateformes SaaS B2B",
+      description: "Développement web pour startups tech lausannoises. Applications React/Next.js, interfaces utilisateurs, tableau de bord analytics.",
+      localAdvantage: "Présents aux meetups EPFL, collaboration directe écosystème innovation",
+      price: "Projet sur mesure",
+      duration: "3-6 mois"
     },
     {
-      title: "Services Financiers Léman",
-      description: "Marketing digital pour banques privées, family offices et gestionnaires de fortune région lémanique.",
-      localAdvantage: "Expertise réglementation financière suisse et discrétion requise",
-      price: "5800 CHF/mois", 
-      duration: "Engagement annuel"
+      title: "Sites Fintech Léman",
+      description: "Sites web conformes pour fintech, banques digitales, gestionnaires fortune. Sécurité bancaire, UX premium.",
+      localAdvantage: "Expertise réglementation FINMA et standards sécurité finance suisse",
+      price: "Devis confidentiel", 
+      duration: "Cycle réglementaire"
     },
     {
-      title: "Pharma & Life Sciences",
-      description: "Content marketing et lead gen B2B pour biotech, pharma et medtech basées à Lausanne/Vaud.",
-      localAdvantage: "Compréhension de l'écosystème Health Valley et réglementation",
-      price: "6200 CHF/mois",
-      duration: "Projets 18 mois+"
+      title: "Portfolio Biotech",
+      description: "Sites vitrine biotech/medtech lausannoises. Showcase R&D, publications scientifiques, réseaux investisseurs.",
+      localAdvantage: "Connaissance Health Valley, terminology médicale, enjeux IP",
+      price: "Secteur spécialisé",
+      duration: "6-8 mois"
     },
     {
-      title: "Culture & Événementiel",
-      description: "Promotion digitale festivals, théâtres, musées et événements culturels lausannois.",
-      localAdvantage: "Réseau culturel établi et connaissance agenda événementiel régional",
-      price: "2200 CHF/projet",
-      duration: "Événementiel variable"
+      title: "Plateformes Culturelles",
+      description: "Sites web festivals, théâtres, musées lausannois. Billetterie intégrée, programmation dynamique, médias rich.",
+      localAdvantage: "Collaboration avec acteurs culturels locaux, agenda événementiel sync",
+      price: "Package culture",
+      duration: "Saisonnier"
     }
   ],
 
   geneve: [
     {
-      title: "Luxury & Premium Services",
-      description: "Marketing digital discret pour services haut de gamme. Clientèle UHNW et internationale exigeante.",
-      localAdvantage: "Maîtrise codes luxury market et discrétion suisse légendaire",
-      price: "7500 CHF/mois",
-      duration: "Engagement premium 24 mois"
+      title: "Sites Luxury Discrets",
+      description: "Création de sites web premium ultra-sélectifs. Design élégant minimal, accès restreint, confidentialité absolue clientèle UHNW.",
+      localAdvantage: "Maîtrise codes discrétion genevoise, références confidentielles solides",
+      price: "Sur invitation",
+      duration: "Process premium"
     },
     {
-      title: "Organisations Internationales",
-      description: "Communication digitale pour ONG, organisations internationales et missions diplomatiques genevoises.",
-      localAdvantage: "Compréhension enjeux géopolitiques et communication institutionnelle",
-      price: "5200 CHF/mois",
-      duration: "Contrats annuels"  
+      title: "Plateformes Internationales",
+      description: "Sites web pour ONG, missions diplomatiques, organisations genevoises. Multi-langues, sécurité renforcée, protocoles officiels.",
+      localAdvantage: "Expertise communication institutionnelle et enjeux géopolitiques",
+      price: "Appel d'offres",
+      duration: "Mandats officiels"  
     },
     {
-      title: "Finance & Wealth Management",
-      description: "Lead generation sophistiquée pour banques privées, gestionnaires fortune et family offices genevois.",
-      localAdvantage: "Expertise place financière genevoise et clientèle internationale",
-      price: "8900 CHF/mois",
-      duration: "Partenariat long terme"
+      title: "Wealth Tech Platforms",
+      description: "Applications web pour banques privées genevoises. Interface client premium, reporting, conformité bancaire stricte.",
+      localAdvantage: "Certification place financière, standards sécurité bancaire suisse",
+      price: "Confidentiel",
+      duration: "Long terme exclusif"
     },
     {
-      title: "Horlogerie & Luxe Swiss Made",
-      description: "Marketing digital pour maisons horlogères, joaillerie et luxe traditionnel suisse basé à Genève.",
-      localAdvantage: "Connaissance patrimoine horloger genevois et codes luxury marketing",
-      price: "6800 CHF/mois", 
-      duration: "Saisonnier haute horlogerie"
+      title: "Horlogerie Swiss Made",
+      description: "Sites web maisons horlogères genevoises. Heritage storytelling, catalogue premium, réseau revendeurs exclusifs.",
+      localAdvantage: "Connaissance patrimoine horloger et codes marketing luxury traditionnel",
+      price: "Prestige tier", 
+      duration: "Cycles haute horlogerie"
     }
   ],
 
   fribourg: [
     {
-      title: "Agroalimentaire & Bio Local",
-      description: "E-commerce et marketing territorial pour producteurs bio, fromagers et spécialités fribourgeoises.",
-      localAdvantage: "Expertise terroir fribourgeois, AOC Gruyère et circuits courts",
-      price: "2100 CHF/mois",
-      duration: "Saisonnier agricole"
+      title: "E-commerce Terroir Bio",
+      description: "Boutiques en ligne producteurs fribourgeois. Vente directe fromages AOC, produits bio, circuits courts, livraison régionale.",
+      localAdvantage: "Partenariat avec producteurs locaux, maîtrise AOC Gruyère et terroir",
+      price: "Package terroir",
+      duration: "Cycles agricoles"
     },
     {
-      title: "Services Bilingues FR/DE",
-      description: "Communication digitale pour entreprises actives dans les deux communautés linguistiques fribourgeoises.",
-      localAdvantage: "Maîtrise parfaite contexte bilingual et sensibilités culturelles",
-      price: "2800 CHF/mois",
-      duration: "Annuel bilingue"
+      title: "Sites Web Bilingues",
+      description: "Création sites FR/DE pour entreprises fribourgeoises. Gestion contenu bilingue, SEO local, sensibilité culturelle.",
+      localAdvantage: "Bilinguisme natif, compréhension nuances culturelles FR/DE",
+      price: "Forfait bilingue",
+      duration: "Déploiement simultané"
     },
     {
-      title: "Éducation & Formation",
-      description: "Marketing éducatif pour Université, HES-SO et écoles privées fribourgeoises. Recrutement étudiant.",
-      localAdvantage: "Connaissance écosystème académique fribourgeois et bassin de recrutement",  
-      price: "3200 CHF/semestre",
+      title: "Plateformes Éducatives",
+      description: "Sites web Université Fribourg, HES-SO, écoles privées. Inscription en ligne, espace étudiants, ressources académiques.",
+      localAdvantage: "Expertise pédagogie digitale et environnement académique fribourgeois",  
+      price: "Tarif éducatif",
       duration: "Année académique"
     },
     {
-      title: "Tourisme & Patrimoine",
-      description: "Promotion digitale sites touristiques, musées et patrimoine fribourgeois. Gruyères, Bulle, etc.",
-      localAdvantage: "Expertise valorisation patrimoine et tourisme culturel fribourgeois",
-      price: "1900 CHF/mois",
-      duration: "Campagnes saisonnières"
+      title: "Sites Patrimoine FR",
+      description: "Plateformes web château Gruyères, musées, sites patrimoniaux. Visites virtuelles, billetterie, agenda culturel.",
+      localAdvantage: "Collaboration Office du Tourisme, valorisation patrimoine authentique",
+      price: "Package culture",
+      duration: "Saisons touristiques"
     }
   ],
 
   neuchatel: [
     {
-      title: "Horlogerie & Microtechnique",
-      description: "Marketing B2B spécialisé pour sous-traitants horlogers, microtechnique et précision neuchâteloise.",
-      localAdvantage: "Expertise unique de l'Arc horloger et réseau industrie 4.0",
-      price: "3600 CHF/mois",
-      duration: "Contrats industriels 18 mois"
+      title: "Catalogues Horlogerie B2B",
+      description: "Sites web sous-traitants horlogers neuchâtelois. Showcase microtechnique, certifications qualité, références industrielles.",
+      localAdvantage: "Immersion Arc horloger, terminologie technique, réseau industrie précision",
+      price: "Tarif industriel",
+      duration: "Cycles production"
     },
     {
-      title: "Innovation & Research",
-      description: "Visibilité pour centres R&D, instituts recherche et innovation technologique basés à Neuchâtel.",
-      localAdvantage: "Compréhension écosystème recherche EPFL extension et Microcity",
-      price: "4200 CHF/mois", 
-      duration: "Projets recherche pluriannuels"
+      title: "Plateformes Innovation",
+      description: "Sites web centres R&D, instituts Microcity. Showcase brevets, publications, partenariats recherche, funding.",
+      localAdvantage: "Proximité EPFL Neuchâtel, compréhension écosystème recherche appliquée",
+      price: "Projet recherche", 
+      duration: "Mandats pluriannuels"
     },
     {
-      title: "Artisanat & Savoir-faire",
-      description: "Promotion digitale artisans d'art, restaurateurs patrimoine et métiers traditionnels neuchâtelois.",
-      localAdvantage: "Valorisation savoir-faire local et positionnement premium artisanat",
-      price: "1650 CHF/mois",
-      duration: "Saisonnier touristique"  
+      title: "Portfolio Artisans Swiss",
+      description: "Sites vitrine artisans d'art neuchâtelois. Métiers traditionnels, restauration patrimoine, créations contemporaines.",
+      localAdvantage: "Valorisation authentique savoir-faire et positionnement premium artisanal",
+      price: "Package artisan",
+      duration: "Cycles créatifs"  
     },
     {
-      title: "Services & Consulting",
-      description: "Lead generation pour consultants, services B2B et professions libérales neuchâteloises.",
-      localAdvantage: "Réseau business local et connaissance tissu économique cantonal",
-      price: "2200 CHF/mois",
-      duration: "Flexible 6-12 mois"
+      title: "Sites Professionnels NE",
+      description: "Plateformes web consultants, avocats, services B2B neuchâtelois. Portfolio compétences, références, contact pro.",
+      localAdvantage: "Réseau business établi, connaissance spécificités marché cantonal",
+      price: "Forfait pro",
+      duration: "Flexible evolutif"
     }
   ]
 }
@@ -552,6 +552,50 @@ export const cityContactInfo = {
   }
 }
 
+// City-specific SEO meta generation
+function getCitySpecificMeta(cityKey: string, cityData: SwissCityData, localMetrics: LocalMetrics) {
+  const metaTemplates = {
+    valais: {
+      metaTitle: `Création Site Web Valais - osom | Expert Digital Alpes Suisses`,
+      metaDescription: `Agence web Valais spécialisée tourisme alpin & PME locales. ${localMetrics.localClients} clients actifs, sites Next.js optimisés. SEO local, e-commerce, marketing Valais 1500 CHF.`,
+      heroTitle: `Agence Web Valais`,
+      heroDescription: `Expert digital des Alpes suisses. Nous créons des sites web optimisés pour le marché valaisan : tourisme, artisanat, PME locales. Basés en Valais, nous comprenons vos défis business.`
+    },
+    sion: {
+      metaTitle: `Agence Web Sion - osom | Création Site Capital Valais`,
+      metaDescription: `Création site web Sion, capitale Valais. Services professionnels, institutions, commerce local. ${localMetrics.localClients} projets Sion livrés. Sites modernes, SEO local, support 1h.`,
+      heroTitle: `Agence Digitale Sion`,
+      heroDescription: `Spécialiste digital de la capitale valaisanne. Sites web pour professions libérales, institutions publiques, commerces Sion. Proximité centre-ville, réactivité garantie.`
+    },
+    lausanne: {
+      metaTitle: `Agence Web Lausanne - osom | Tech Startup & Scale-up Léman`,
+      metaDescription: `Développement web Lausanne écosystème tech. Startups EPFL, scale-up SaaS B2B, services financiers Léman. ${localMetrics.localClients} clients tech actifs. Innovation & performance.`,
+      heroTitle: `Tech Web Agency Lausanne`,
+      heroDescription: `Partenaire digital de l'écosystème tech lausannois. Sites web pour startups, SaaS B2B, fintech région Léman. Expertise EPFL Innovation Park, growth-focused.`
+    },
+    geneve: {
+      metaTitle: `Agence Web Genève Premium - osom | Luxury & International`,
+      metaDescription: `Création site web Genève haut de gamme. Services luxury, organisations internationales, finance premium. Discrétion suisse, excellence technique. Clientèle UHNW exigeante.`,
+      heroTitle: `Premium Web Genève`,
+      heroDescription: `Agence digitale premium pour Genève internationale. Sites web luxury, wealth management, ONG internationales. Discrétion légendaire suisse, qualité sans compromis.`
+    },
+    fribourg: {
+      metaTitle: `Agence Web Fribourg Bilingue - osom | Terroir & Tradition`,
+      metaDescription: `Site web Fribourg FR/DE. Agroalimentaire bio, terroir Gruyère, PME traditionnelles. ${localMetrics.localClients} clients bilingual. E-commerce local, circuits courts optimisés.`,
+      heroTitle: `Digital Fribourg Bilingue`,
+      heroDescription: `Expertise digitale bilingue pour Fribourg. Sites web agroalimentaire, terroir AOC, éducation. Communication FR/DE, valorisation savoir-faire fribourgeois traditionnel.`
+    },
+    neuchatel: {
+      metaTitle: `Agence Web Neuchâtel - osom | Horlogerie & Microtechnique`,
+      metaDescription: `Développement web Neuchâtel horlogerie. Microtechnique B2B, innovation precision, artisanat Swiss-made. ${localMetrics.localClients} projets Arc horloger. Excellence technique.`,
+      heroTitle: `Web Précision Neuchâtel`,
+      heroDescription: `Spécialiste digital de l'Arc horloger. Sites web horlogerie, microtechnique B2B, innovation Swiss-made. Précision technique, qualité Neuchâtel, savoir-faire reconnu.`
+    }
+  }
+
+  return metaTemplates[cityKey as keyof typeof metaTemplates] || metaTemplates.valais
+}
+
 // Helper function to generate complete city page data
 export function getCityPageData(cityKey: keyof typeof swissCitiesData): CityPageTemplateProps {
   const cityData = swissCitiesData[cityKey]
@@ -565,14 +609,17 @@ export function getCityPageData(cityKey: keyof typeof swissCitiesData): CityPage
     throw new Error(`City data not found for: ${cityKey}`)
   }
 
+  // Générer meta-descriptions spécifiques par ville
+  const citySpecificMeta = getCitySpecificMeta(cityKey, cityData, localMetrics)
+
   return {
     cityData,
     localMetrics,
-    metaTitle: `Agence Marketing Digital ${cityData.name} - osom | ROI +4693% Prouvé`,
-    metaDescription: `Agence web ${cityData.name} spécialisée ROI mesurable. ${localMetrics.localClients} clients ${cityData.region}, ${localMetrics.averageROI} ROI moyen. Marketing digital, SEO, sites premium 1500 CHF.`,
-    heroTitle: `osom ${cityData.name}`,
+    metaTitle: citySpecificMeta.metaTitle,
+    metaDescription: citySpecificMeta.metaDescription,
+    heroTitle: citySpecificMeta.heroTitle,
     heroSubtitle: cityData.name,
-    heroDescription: `Agence marketing digital ${cityData.region} spécialisée ROI mesurable. Transformez votre présence digitale avec nos méthodes data-driven éprouvées par ${localMetrics.localClients} clients locaux.`,
+    heroDescription: citySpecificMeta.heroDescription,
     localCaseStudy: caseStudy,
     localServices: services,
     testimonial,
