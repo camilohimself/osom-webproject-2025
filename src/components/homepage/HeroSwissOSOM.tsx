@@ -168,64 +168,55 @@ const HeroSwissOSOM = ({ dictionary }: HeroSwissOSOMProps) => {
             </motion.div>
 
             {/* Typographie principale - Style Helvetica/Swiss */}
-            <motion.div 
+            <motion.div
               className="space-y-0 font-sans text-white"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              <motion.div 
+              <motion.div
                 className="text-6xl md:text-8xl font-bold leading-none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                L'AGENCE
+                NOUS
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="text-6xl md:text-8xl font-bold leading-none text-yellow-400"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                CRÉATIVE
+                TRAVAILLONS
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="text-3xl md:text-4xl font-light mt-8 leading-tight text-gray-300"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
               >
-                qui transforme vos
+                dans l'ombre
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="text-6xl md:text-8xl font-bold text-yellow-400 leading-none"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
               >
-                DONNÉES
+                POUR VOUS
               </motion.div>
-              
-              <motion.div 
-                className="text-3xl md:text-4xl font-light mt-8 leading-tight text-gray-300"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.4 }}
-              >
-                en pixels qui
-              </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="text-6xl md:text-8xl font-bold leading-none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.6 }}
               >
-                VENDENT.
+                FAIRE BRILLER.
               </motion.div>
             </motion.div>
 
