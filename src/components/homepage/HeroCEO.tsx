@@ -56,12 +56,12 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
           ))}
         </div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="text-center">
-          
+
           {/* Label Tech */}
-          <motion.div 
+          <motion.div
             className="mb-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,33 +74,27 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
           </motion.div>
 
           {/* Message Principal CEO */}
-          <motion.div 
+          <motion.div
             className="space-y-6 mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
             <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight max-w-5xl mx-auto">
-              Nous travaillons
+              Nous travaillons dans l'ombre
               <span className="block text-yellow-400 mt-4">
-                dans l'ombre
-              </span>
-              <span className="block text-white mt-4">
-                pour vous faire
-              </span>
-              <span className="block text-yellow-400 mt-4">
-                briller.
+                pour vous faire briller
               </span>
             </div>
 
             <div className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto">
-              Votre expertise au premier plan.<br/>
-              Notre technologie <span className="text-green-400 font-semibold">invisible mais puissante</span>.
+              Fini les 8 secondes de chargement.<br/>
+              Place aux sites qui <span className="text-green-400 font-semibold">convertissent en &lt; 2s</span>.
             </div>
           </motion.div>
 
           {/* Features Tech Cards */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,7 +119,7 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
                     {feature.detail}
                   </div>
                 </div>
-                
+
                 {hoveredFeature === feature.id && (
                   <motion.div
                     className="absolute inset-0 border-2 border-yellow-400 rounded-2xl pointer-events-none"
@@ -140,7 +134,7 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
           </motion.div>
 
           {/* Social Proof Rapide */}
-          <motion.div 
+          <motion.div
             className="mb-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -157,7 +151,7 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
           </motion.div>
 
           {/* CTA Principal CEO */}
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -170,7 +164,7 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
             >
               Audit Technique Gratuit
             </MagneticButton>
-            
+
             <MagneticButton
               href="/services/creation-site-web"
               variant="secondary"
@@ -181,7 +175,7 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
           </motion.div>
 
           {/* Process Ultra-Simple CEO */}
-          <motion.div 
+          <motion.div
             className="max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -190,7 +184,7 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
             <div className="text-2xl font-bold text-white mb-8">
               Comment ça marche ?
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-2xl mx-auto mb-4">
@@ -199,7 +193,7 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
                 <div className="text-white font-semibold mb-2">Brief 30 min</div>
                 <div className="text-gray-400 text-sm">Nous comprenons votre métier</div>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold text-2xl mx-auto mb-4">
                   2
@@ -207,7 +201,7 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
                 <div className="text-white font-semibold mb-2">Développement Next.js</div>
                 <div className="text-gray-400 text-sm">Vous validez chaque étape</div>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center text-black font-bold text-2xl mx-auto mb-4">
                   3
