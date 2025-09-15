@@ -81,16 +81,21 @@ const HeroCEO = ({ dictionary }: HeroCEOProps) => {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight max-w-5xl mx-auto">
-              Votre site WordPress est
-              <span className="block text-red-400 line-through opacity-60 mt-2">lent</span>
+              Nous travaillons
               <span className="block text-yellow-400 mt-4">
-                remplacé par Next.js
+                dans l'ombre
+              </span>
+              <span className="block text-white mt-4">
+                pour vous faire
+              </span>
+              <span className="block text-yellow-400 mt-4">
+                briller.
               </span>
             </div>
-            
+
             <div className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto">
-              Fini les 8 secondes de chargement.<br/>
-              Place aux sites qui <span className="text-green-400 font-semibold">convertissent en &lt; 2s</span>.
+              Votre expertise au premier plan.<br/>
+              Notre technologie <span className="text-green-400 font-semibold">invisible mais puissante</span>.
             </div>
           </motion.div>
 
