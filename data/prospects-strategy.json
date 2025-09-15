@@ -1,0 +1,136 @@
+{
+  "acquisition_strategy": {
+    "objective": "50 prospects qualité → 5 nouveaux clients premium",
+    "timeline": "90 jours",
+    "conversion_funnel": {
+      "prospects_identified": 50,
+      "landing_page_visitors": 200,
+      "audit_requests": 15,
+      "audit_completed": 12,
+      "proposals_sent": 10,
+      "clients_signed": 5
+    }
+  },
+  "target_profiles": [
+    {
+      "profile": "Entreprises B2B Techniques",
+      "quantity": 20,
+      "sectors": ["BTP", "Industrie", "Assainissement", "Services techniques"],
+      "size": "10-50 employés",
+      "revenue": "1-10M CHF/an",
+      "location": "Valais, Vaud, Genève",
+      "pain_points": [
+        "Peu de leads qualifiés",
+        "Site web obsolète",
+        "Concurrence établie",
+        "Besoin crédibilité digitale"
+      ],
+      "search_terms": [
+        "entreprise [secteur] valais",
+        "société [secteur] sion lausanne",
+        "[secteur] suisse romande"
+      ],
+      "package_target": "B2B Technique Premium (3,000 CHF/mois)"
+    },
+    {
+      "profile": "E-commerce Premium",
+      "quantity": 15,
+      "sectors": ["Luxe", "Artisanat", "Décoration", "Mode premium"],
+      "size": "Boutique établie ou startup premium",
+      "revenue": "500k-5M CHF/an",
+      "location": "Suisse romande",
+      "pain_points": [
+        "Concurrence e-commerce féroce",
+        "Conversion faible",
+        "Panier moyen bas",
+        "Acquisition coûteuse"
+      ],
+      "search_terms": [
+        "boutique [produit] suisse",
+        "e-commerce [secteur] romande",
+        "artisan [produit] valais"
+      ],
+      "package_target": "E-commerce Premium (2,500 CHF/mois)"
+    },
+    {
+      "profile": "Professionnels Premium",
+      "quantity": 15,
+      "sectors": ["Médical", "Juridique", "Consulting", "Architecture"],
+      "size": "Cabinet individuel à 5 praticiens",
+      "revenue": "200k-2M CHF/an",
+      "location": "Valais, Vaud, Genève",
+      "pain_points": [
+        "Visibilité locale faible",
+        "Nouveaux clients/patients rares",
+        "Image digitale amateur",
+        "Concurrents mieux positionnés"
+      ],
+      "search_terms": [
+        "[profession] [ville] suisse",
+        "cabinet [profession] valais",
+        "[spécialité] sion lausanne genève"
+      ],
+      "package_target": "Professionnel Premium (2,000 CHF/mois)"
+    }
+  ],
+  "prospection_channels": [
+    {
+      "channel": "LinkedIn Sales Navigator",
+      "targets": "Dirigeants, responsables marketing",
+      "approach": "Message personnalisé + case study pertinent",
+      "volume": "10 contacts/jour"
+    },
+    {
+      "channel": "Google Ads Landing Page",
+      "targets": "Recherches business locales",
+      "approach": "Landing page premium-b2b + audit gratuit",
+      "budget": "500 CHF/mois"
+    },
+    {
+      "channel": "Email Direct",
+      "targets": "Emails trouvés via recherche",
+      "approach": "Email personnalisé + rapport audit rapide",
+      "volume": "5 emails personnalisés/jour"
+    },
+    {
+      "channel": "Réseau & Références",
+      "targets": "Clients actuels satisfaits",
+      "approach": "Programme de parrainage",
+      "incentive": "1 mois gratuit pour parrain + filleul"
+    }
+  ],
+  "sales_process": {
+    "step_1": {
+      "name": "Premier Contact",
+      "objective": "Attirer l'attention avec case study pertinent",
+      "tools": ["Case study H-SECHEMENT/LMDI", "Landing page premium"],
+      "conversion_rate": "30% → audit request"
+    },
+    "step_2": {
+      "name": "Audit Gratuit",
+      "objective": "Identifier problèmes concrets + démontrer expertise",
+      "duration": "45 minutes",
+      "deliverable": "Rapport audit 5 pages",
+      "conversion_rate": "80% → proposition"
+    },
+    "step_3": {
+      "name": "Proposition",
+      "objective": "Présenter package adapté avec ROI estimé",
+      "tools": ["Proposition personnalisée", "Estimation ROI"],
+      "conversion_rate": "50% → signature"
+    },
+    "step_4": {
+      "name": "Signature",
+      "objective": "Contrat signé + paiement setup",
+      "contract": "12 mois minimum",
+      "payment": "Setup + 3 mois d'avance"
+    }
+  },
+  "supporting_materials": {
+    "case_studies": ["h-sechement.json", "lmdi.json"],
+    "landing_pages": ["/premium-b2b", "/audit-gratuit"],
+    "email_templates": "Templates personnalisés par secteur",
+    "audit_framework": "Checklist audit 20 points",
+    "proposal_template": "Template proposition avec ROI"
+  }
+}

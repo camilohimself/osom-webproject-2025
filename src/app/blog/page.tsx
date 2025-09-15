@@ -429,6 +429,73 @@ export default function BlogEditorialPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Premium CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-yellow-400/5 via-transparent to-black/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="text-3xl md:text-4xl font-light text-black mb-6">
+              Prêt à appliquer ces <span className="font-semibold text-yellow-600">méthodologies</span> ?
+            </h3>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Transformez vos insights en résultats mesurables avec notre accompagnement sur-mesure.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.a
+                href="/contact"
+                className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-xl font-semibold shadow-lg relative overflow-hidden"
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 15px 30px rgba(255, 221, 0, 0.3)"
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span className="relative z-10 flex items-center justify-center">
+                  Stratégie Personnalisée
+                  <motion.span
+                    className="ml-2"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                </span>
+              </motion.a>
+
+              <motion.a
+                href="/outils"
+                className="border-2 border-black text-black px-8 py-4 rounded-xl font-semibold hover:bg-black hover:text-white transition-all duration-300"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Outils Gratuits
+              </motion.a>
+            </div>
+
+            {/* Newsletter Signup */}
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <div className="text-sm text-gray-500 mb-4">
+                Recevez nos analyses exclusives • 1 fois par mois • Swiss Marketing Intelligence
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="votre@email.ch"
+                  className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                />
+                <button className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+                  S'inscrire
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       </div>
     </>
   )

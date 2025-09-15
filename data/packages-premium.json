@@ -1,0 +1,82 @@
+{
+  "premium_packages": [
+    {
+      "id": "b2b-technique",
+      "name": "Package B2B Technique Premium",
+      "target": "Entreprises techniques B2B (BTP, industrie, services techniques)",
+      "based_on": "Expertise H-SECHEMENT",
+      "price": "3,000 CHF/mois",
+      "setup": "5,000 CHF",
+      "services": [
+        "SEO technique complexe",
+        "Dashboard performance personnalisé",
+        "Optimisation conversion B2B", 
+        "Suivi ROI mensuel",
+        "Formation équipe incluse"
+      ],
+      "results_promise": "ROI 300-600% première année",
+      "case_study": "h-sechement",
+      "ideal_client": {
+        "sector": "BTP, Industrie, Services techniques",
+        "size": "10-50 employés",
+        "budget": "5,000+ CHF/mois marketing",
+        "pain_points": ["Génération leads B2B", "Concurrence technique", "Crédibilité digitale"]
+      }
+    },
+    {
+      "id": "ecommerce-premium", 
+      "name": "Package E-commerce Premium",
+      "target": "E-commerce haut de gamme et boutiques premium",
+      "based_on": "Expertise LMDI",
+      "price": "2,500 CHF/mois",
+      "setup": "3,500 CHF",
+      "services": [
+        "SEO e-commerce avancé",
+        "Optimisation conversion",
+        "Analytics e-commerce",
+        "A/B testing continu",
+        "Formation e-commerce incluse"
+      ],
+      "results_promise": "Augmentation CA mesurable dès le 2ème mois",
+      "case_study": "lmdi",
+      "ideal_client": {
+        "sector": "Luxe, Artisanat, Décoration premium",
+        "size": "Boutique établie ou startup premium",
+        "budget": "3,000+ CHF/mois marketing",
+        "pain_points": ["Concurrence e-commerce", "Conversion faible", "Panier moyen bas"]
+      }
+    },
+    {
+      "id": "medical-juridique",
+      "name": "Package Professionnel Premium",
+      "target": "Cabinets médicaux, juridiques, consultants",
+      "based_on": "Expertise Dr. Bourdin + Cabinet Avocat",
+      "price": "2,000 CHF/mois",
+      "setup": "2,500 CHF",
+      "services": [
+        "SEO professionnel local",
+        "Site premium mobile-first",
+        "Système prise RDV intégré",
+        "Maintenance sécurisée",
+        "Formation professionnelle"
+      ],
+      "results_promise": "Visibilité locale #1-3 + nouveaux patients/clients",
+      "ideal_client": {
+        "sector": "Médical, Juridique, Consulting",
+        "size": "Cabinet individuel à 5 praticiens",
+        "budget": "2,000+ CHF/mois marketing",
+        "pain_points": ["Visibilité locale faible", "Concurrents établis", "Image professionnelle"]
+      }
+    }
+  ],
+  "value_proposition": {
+    "differentiator": "Seule agence VALAIS avec expertise technique IA + preuves mesurables",
+    "guarantee": "Résultats mesurables dès le 2ème mois ou optimisation gratuite",
+    "unique_assets": [
+      "Dashboard performance temps réel",
+      "Collaboration officielle Claude IA", 
+      "Stack technique Next.js 15 premium",
+      "Case studies ROI documentés"
+    ]
+  }
+}

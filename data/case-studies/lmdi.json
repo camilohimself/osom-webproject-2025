@@ -1,0 +1,33 @@
+{
+  "id": "lmdi",
+  "title": "La Maison de l'Intérieur (LMDI)",
+  "sector": "E-commerce Premium",
+  "challenge": "E-commerce concurrentiel - besoin de différenciation et performance",
+  "solution": "SEO e-commerce + optimisation conversion + expérience premium",
+  "results": {
+    "organic_traffic": "315 clics organiques page d'accueil",
+    "impressions": "9,133 impressions mensuelles",
+    "ctr": "3.45% CTR (excellent pour e-commerce)",
+    "ranking": "Progression continue des positions",
+    "sector_advantage": "Secteur luxe/décoration = budgets élevés"
+  },
+  "testimonial": {
+    "quote": "Leur approche technique nous a permis d'améliorer significativement notre visibilité en ligne. L'expertise SEO est remarquable.",
+    "author": "Direction",
+    "position": "LMDI Sàrl"
+  },
+  "services_provided": [
+    "SEO e-commerce premium",
+    "Optimisation technique",
+    "Analytics e-commerce",
+    "Suivi performance continue"
+  ],
+  "investment": "Package E-commerce Premium",
+  "timeline": "Optimisation continue",
+  "status": "Partenaire récurrent - Croissance soutenue",
+  "potential": {
+    "description": "Potentiel premium identifié",
+    "margin_per_sale": "500-2,000 CHF par vente",
+    "justification": "Justifie 4,000-8,000 CHF/mois en services complets"
+  }
+}

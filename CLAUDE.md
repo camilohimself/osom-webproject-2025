@@ -1,5 +1,67 @@
 # Journal de Développement OSOM
 
+## Session 16 Septembre 2025 - INCIDENT HERO & ANALYSE POST-MORTEM
+
+### 🚨 INCIDENT MAJEUR - HÉRO HOMEPAGE DÉTRUIT
+
+#### ❌ CE QUI S'EST MAL PASSÉ
+**Demande initiale** : Changer message "L'agence créative qui transforme vos données en pixels qui vendent" → "Nous travaillons dans l'ombre pour vous faire briller"
+
+**Erreurs commises par Claude** :
+1. **MAUVAIS COMPOSANT** : Modifié HeroSwissOSOM (pas utilisé) au lieu de chercher le vrai message
+2. **DESTRUCTION HÉRO** : Remplacé complètement HeroCEO par un contenu différent au lieu de juste changer le message
+3. **ÉCRAN NOIR** : Switch vers HeroSwissOSOM a causé un crash (composant trop complexe avec useEffect/useMemo)
+4. **PANIQUE & OVER-ENGINEERING** : Créé HeroSwissOSOMSimple au lieu de debug le problème
+
+#### 🔍 ANALYSE ROOT CAUSE
+
+**PROBLÈME 1 - COMMUNICATION** :
+- Camilo a montré une image avec le texte à changer
+- Claude n'a PAS vérifié quel composant était réellement utilisé sur la homepage
+- Claude a assumé que le message était dans HeroSwissOSOM (unused component)
+
+**PROBLÈME 2 - MÉTHODOLOGIE** :
+- Pas de vérification : quel hero est actuellement affiché ?
+- Modification en aveugle sans comprendre l'architecture
+- Quand erreur détectée → escalade au lieu de revenir en arrière
+
+**PROBLÈME 3 - TECHNIQUE** :
+- HeroSwissOSOM trop complexe (hooks client-side, loupe interactive)
+- Pas compatible avec certains rendus
+- Claude a créé une complexity inutile
+
+#### ✅ SOLUTION APPLIQUÉE
+**Git reset --hard 4b6b4bd** : Retour état début session
+- Suppression de tous les commits foireux
+- Récupération de l'état fonctionnel original
+
+#### 📋 LEÇONS APPRISES
+
+**POUR CLAUDE** :
+1. **TOUJOURS** vérifier quel composant est utilisé dans page.tsx AVANT de modifier
+2. **JAMAIS** modifier un composant sans être sûr qu'il est utilisé
+3. **GARDER SIMPLE** : changer SEULEMENT ce qui est demandé
+4. **DEBUG MÉTHODIQUE** : si erreur → revenir en arrière, pas escalader
+
+**POUR CAMILO** :
+1. **PRÉCISION** : Dire explicitement "change dans HeroCEO" ou "change dans le composant affiché sur homepage"
+2. **VALIDATION ÉTAPES** : Checker chaque étape avant de passer à la suivante
+3. **STOP RAPIDE** : Dès que quelque chose va mal, stopper immédiatement
+
+#### 🛡️ PRÉVENTION FUTURE
+
+**PROCESS OBLIGATOIRE pour changements Hero/Components** :
+1. `git status` - vérifier état propre
+2. Identifier le composant exact utilisé dans page.tsx
+3. Lire le composant pour comprendre la structure
+4. Faire SEULEMENT le changement demandé
+5. Vérifier que ça fonctionne avant commit
+6. Si erreur → git reset, pas escalade
+
+**RÈGLE D'OR** : "Change SEULEMENT ce qui est demandé, rien d'autre"
+
+---
+
 ## Session 8 Septembre 2025 - FINALISATION & CORRECTIONS TECHNIQUES
 
 ### ✅ MISSION ACCOMPLIE - SITE PRÊT POUR PRODUCTION
