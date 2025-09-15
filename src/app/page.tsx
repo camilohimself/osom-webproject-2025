@@ -18,7 +18,7 @@ const GaugeChart = dynamic(() => import('@/components/ui/GaugeChart'), {
 })
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData } from '@/lib/structured-data'
-import HeroCEO from '@/components/homepage/HeroCEO'
+import HeroSwissOSOM from '@/components/homepage/HeroSwissOSOM'
 import WhyNextJS from '@/components/homepage/WhyNextJS'
 import TrustSignalsB2B from '@/components/homepage/TrustSignalsB2B'
 
@@ -116,8 +116,8 @@ export default async function Home() {
       
       {/* Scroll Progress Indicator */}
       <ScrollProgressIndicator />
-      {/* Hero CEO Section */}
-      <HeroCEO dictionary={dictionary.home} />
+      {/* Hero Swiss OSOM Section */}
+      <HeroSwissOSOM dictionary={dictionary.home} />
       
       {/* Section Valorisation Next.js */}
       <WhyNextJS />
