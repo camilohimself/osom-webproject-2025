@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+// Import direct temporaire
 import CTRCircularChart from '@/components/ui/CTRCircularChart'
 
 const PilierSwiss1 = () => {

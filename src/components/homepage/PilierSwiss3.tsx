@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+// Import direct temporaire
 import GaugeChart from '@/components/ui/GaugeChart'
 
 const PilierSwiss3 = () => {

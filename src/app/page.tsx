@@ -3,26 +3,18 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, type Locale } from '@/lib/i18n'
 import dynamic from 'next/dynamic'
 
-// Lazy loading pour optimiser la fluidité
-const HorizontalBarsChart = dynamic(() => import('@/components/ui/HorizontalBarsChart'), {
-  loading: () => <div className="h-32 bg-purple-400/5 rounded-2xl animate-pulse" />
-})
-const CTRCircularChart = dynamic(() => import('@/components/ui/CTRCircularChart'), {
-  loading: () => <div className="h-64 bg-purple-400/5 rounded-2xl animate-pulse" />
-})
-const DataLineChart = dynamic(() => import('@/components/ui/DataLineChart'), {
-  loading: () => <div className="h-32 bg-cyan-400/5 rounded-2xl animate-pulse" />
-})
-const GaugeChart = dynamic(() => import('@/components/ui/GaugeChart'), {
-  loading: () => <div className="h-32 bg-green-400/5 rounded-2xl animate-pulse" />
-})
+// Import direct temporaire pour éviter webpack error
+import HorizontalBarsChart from '@/components/ui/HorizontalBarsChart'
+import CTRCircularChart from '@/components/ui/CTRCircularChart'
+import DataLineChart from '@/components/ui/DataLineChart'
+import GaugeChart from '@/components/ui/GaugeChart'
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOM from '@/components/homepage/HeroSwissOSOM'
 import WhyNextJS from '@/components/homepage/WhyNextJS'
 import TrustSignalsB2B from '@/components/homepage/TrustSignalsB2B'
 
-// Lazy loading pour les Piliers Swiss (composants client)
+// Lazy loading Piliers Swiss optimisé
 const PilierSwiss1 = dynamic(() => import('@/components/homepage/PilierSwiss1'), {
   loading: () => <div className="h-96 bg-purple-400/5 rounded-2xl animate-pulse" />
 })
