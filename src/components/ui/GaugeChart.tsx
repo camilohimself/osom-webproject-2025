@@ -225,82 +225,123 @@ export default function GaugeChart({
               )
             })}
 
-            {/* Secondary Needle (WordPress) */}
+            {/* Secondary Needle (WordPress) - AUTOMOTIVE STYLE */}
             <motion.g
               initial={{ rotate: startAngle }}
-              animate={{ 
-                rotate: isVisible ? secondaryAngle * animationProgress + startAngle * (1 - animationProgress) : startAngle 
+              animate={{
+                rotate: isVisible ? secondaryAngle * animationProgress + startAngle * (1 - animationProgress) : startAngle
               }}
               transition={{ duration: 2, delay: 1.5, ease: "easeOut" }}
               style={{ transformOrigin: `${centerX}px ${centerY}px` }}
             >
+              {/* Needle base stem */}
               <line
                 x1={centerX}
                 y1={centerY}
                 x2={centerX}
-                y2={centerY - radius + 30}
+                y2={centerY - radius + 40}
                 stroke={secondaryColor}
-                strokeWidth="4"
-                strokeLinecap="round"
+                strokeWidth="3"
                 opacity="0.8"
               />
+              {/* Automotive pointer triangle */}
+              <polygon
+                points={`${centerX},${centerY - radius + 30} ${centerX - 8},${centerY - radius + 50} ${centerX + 8},${centerY - radius + 50}`}
+                fill={secondaryColor}
+                opacity="0.9"
+              />
+              {/* Pointer tip */}
               <circle
                 cx={centerX}
                 cy={centerY - radius + 30}
-                r="6"
+                r="3"
                 fill={secondaryColor}
               />
             </motion.g>
 
-            {/* Primary Needle (OSOM) */}
+            {/* Primary Needle (OSOM) - AUTOMOTIVE STYLE */}
             <motion.g
               initial={{ rotate: startAngle }}
-              animate={{ 
-                rotate: isVisible ? primaryAngle * animationProgress + startAngle * (1 - animationProgress) : startAngle 
+              animate={{
+                rotate: isVisible ? primaryAngle * animationProgress + startAngle * (1 - animationProgress) : startAngle
               }}
               transition={{ duration: 2.2, delay: 1.8, ease: "easeOut" }}
               style={{ transformOrigin: `${centerX}px ${centerY}px` }}
             >
+              {/* Needle base stem - plus thick pour OSOM */}
               <line
                 x1={centerX}
                 y1={centerY}
                 x2={centerX}
-                y2={centerY - radius + 25}
+                y2={centerY - radius + 35}
                 stroke="url(#primaryNeedleGradient)"
-                strokeWidth="6"
-                strokeLinecap="round"
+                strokeWidth="4"
                 filter="url(#primaryGlow)"
               />
+              {/* Automotive pointer triangle - PREMIUM */}
+              <polygon
+                points={`${centerX},${centerY - radius + 25} ${centerX - 10},${centerY - radius + 45} ${centerX + 10},${centerY - radius + 45}`}
+                fill={primaryColor}
+                filter="url(#primaryGlow)"
+              />
+              {/* Pointer tip avec glow */}
               <circle
                 cx={centerX}
                 cy={centerY - radius + 25}
-                r="8"
+                r="4"
                 fill={primaryColor}
                 filter="url(#primaryGlow)"
               />
             </motion.g>
 
-            {/* Center Hub */}
+            {/* Center Hub - AUTOMOTIVE STYLE */}
             <motion.circle
               cx={centerX}
               cy={centerY}
-              r="12"
-              fill="#1F2937"
+              r="18"
+              fill="#0F172A"
               stroke="#374151"
-              strokeWidth="2"
+              strokeWidth="3"
               initial={{ scale: 0 }}
               animate={{ scale: isVisible ? 1 : 0 }}
               transition={{ delay: 2.5, duration: 0.3, type: "spring" }}
             />
-            
+
+            {/* Hub ring métallique */}
             <motion.circle
               cx={centerX}
               cy={centerY}
-              r="6"
+              r="13"
+              fill="none"
+              stroke="#64748B"
+              strokeWidth="1"
+              initial={{ scale: 0 }}
+              animate={{ scale: isVisible ? 1 : 0 }}
+              transition={{ delay: 2.6, duration: 0.3, type: "spring" }}
+            />
+
+            {/* Center dot avec glow OSOM */}
+            <motion.circle
+              cx={centerX}
+              cy={centerY}
+              r="8"
               fill={primaryColor}
+              filter="url(#primaryGlow)"
               initial={{ scale: 0 }}
               animate={{ scale: isVisible ? 1 : 0 }}
               transition={{ delay: 2.7, duration: 0.3, type: "spring" }}
+            />
+
+            {/* Inner highlight automotive */}
+            <motion.circle
+              cx={centerX}
+              cy={centerY}
+              r="4"
+              fill="#FFFFFF"
+              opacity="0.3"
+              initial={{ scale: 0 }}
+              animate={{ scale: isVisible ? 1 : 0 }}
+              transition={{ delay: 2.8, duration: 0.3, type: "spring" }}
             />
           </svg>
         </div>
