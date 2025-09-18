@@ -1,29 +1,7 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
-// Import direct temporaire
+// PERFORMANCE OPTIMIZED VERSION - All client-side logic removed
 import GaugeChart from '@/components/ui/GaugeChart'
 
 const PilierSwiss3 = () => {
-  const [buildProgress, setBuildProgress] = useState(0)
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const interval = setInterval(() => {
-        setBuildProgress(prev => {
-          if (prev >= 100) {
-            clearInterval(interval)
-            return 100
-          }
-          return prev + 2
-        })
-      }, 50)
-      return () => clearInterval(interval)
-    }, 1000)
-    return () => clearTimeout(timer)
-  }, [])
-
   const modules = [
     { id: 1, title: "CORE WEB VITALS", metric: "95+", unit: "score", status: "optimal" },
     { id: 2, title: "LOADING TIME", metric: "<2", unit: "sec", status: "fast" },
@@ -47,13 +25,8 @@ const PilierSwiss3 = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <motion.div 
-          className="mb-16 flex items-center justify-between"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+
+        <div className="mb-16 flex items-center justify-between">
           <div>
             <div className="w-16 h-1 bg-green-400 mb-6"></div>
             <div className="text-sm tracking-wider text-gray-400 font-light font-mono">
@@ -61,16 +34,12 @@ const PilierSwiss3 = () => {
             </div>
           </div>
           <div className="text-xs text-green-400 tracking-wider font-mono">
-            BUILD: {buildProgress}% • STATUS: ACTIVE • ENV: PROD
+            BUILD: 100% • STATUS: ACTIVE • ENV: PROD
           </div>
-        </motion.div>
+        </div>
 
         <div className="text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-          >
+          <div>
             <div className="space-y-4 font-sans text-white mb-12">
               <div className="text-3xl md:text-4xl font-light text-gray-400">
                 VOTRE IMAGE EN LIGNE SE TRANSFORME EN
@@ -85,56 +54,37 @@ const PilierSwiss3 = () => {
                 Performance • Scalabilité • Fiabilité
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div 
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-        >
-          {modules.map((module, index) => (
-            <motion.div
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {modules.map((module) => (
+            <div
               key={module.id}
-              className="bg-green-400/5 border border-green-400/30 p-6 relative"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-              whileHover={{ backgroundColor: 'rgba(16, 185, 129, 0.1)' }}
+              className="bg-green-400/5 border border-green-400/30 p-6 relative hover:bg-green-400/10 transition-colors duration-300"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="w-2 h-2 rounded-full bg-green-400"></div>
                 <div className="text-xs text-green-400 font-mono">{module.status.toUpperCase()}</div>
               </div>
-              
+
               <div className="text-xs text-gray-500 mb-2 tracking-wider font-mono">
                 {module.title}
               </div>
-              
+
               <div className="text-4xl font-black text-green-400 leading-none mb-1 font-mono">
                 {module.metric}
                 <span className="text-lg text-gray-400">{module.unit}</span>
               </div>
-              
-              <div className="w-full h-1 bg-gray-800 mt-4">
-                <motion.div 
-                  className="h-full bg-green-400"
-                  initial={{ width: "0%" }}
-                  animate={{ width: `${buildProgress}%` }}
-                  transition={{ duration: 2, delay: 1.2 + index * 0.1 }}
-                />
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
 
-        <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.4 }}
-        >
+              <div className="w-full h-1 bg-gray-800 mt-4">
+                <div className="h-full bg-green-400 w-full" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <GaugeChart
               title="PERFORMANCE STACK"
@@ -149,14 +99,14 @@ const PilierSwiss3 = () => {
               secondaryColor="#6B7280"
               backgroundColor="transparent"
               className="border-0"
-              animate={true}
+              animate={false}
             />
           </div>
-          
+
           <div>
             <div className="space-y-6">
               <div className="text-2xl font-bold text-white mb-6">STACK TECHNIQUE</div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 border border-green-400/30 bg-green-400/5">
                   <div>
@@ -165,7 +115,7 @@ const PilierSwiss3 = () => {
                   </div>
                   <div className="text-green-400 font-mono">v14.2.1</div>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-4 border border-green-400/30 bg-green-400/5">
                   <div>
                     <div className="text-green-400 font-bold">TypeScript</div>
@@ -173,7 +123,7 @@ const PilierSwiss3 = () => {
                   </div>
                   <div className="text-green-400 font-mono">v5.3</div>
                 </div>
-                
+
                 <div className="flex items-center justify-between p-4 border border-green-400/30 bg-green-400/5">
                   <div>
                     <div className="text-green-400 font-bold">Claude IA</div>
@@ -184,14 +134,9 @@ const PilierSwiss3 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="mt-20 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2 }}
-        >
+        <div className="mt-20 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="text-3xl font-light text-white italic mb-6">
               "L'art de ne jamais faire attendre"
@@ -201,7 +146,7 @@ const PilierSwiss3 = () => {
               {"// Code élégant, performance brutale, évolutivité infinie"}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

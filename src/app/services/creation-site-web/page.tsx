@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ServicePageMobile } from '@/components/services/ServicePageMobile'
 
 export default function CreationSiteWebPage() {
   const [selectedProject, setSelectedProject] = useState('vitrine')
@@ -104,8 +105,37 @@ export default function CreationSiteWebPage() {
     { id: 5, name: 'Lancement', desc: 'Mise en ligne + formation', day: 'J45' }
   ]
 
+  const mobileData = {
+    title: "Site Web Qui Convertit",
+    subtitle: "Next.js premium, design sur-mesure, performance garantie",
+    mainKPI: {
+      value: "25% CTR",
+      label: "vs 2-3% industrie standard"
+    },
+    caseStudy: {
+      client: "PME Valaisanne",
+      before: "Aucune présence web",
+      after: "50+ leads/mois",
+      result: "ROI positif en 30 jours"
+    },
+    process: {
+      step1: "Brief 30 min + audit technique gratuit",
+      step2: "Développement Next.js + formation 2h"
+    },
+    pricing: {
+      price: "4'500 CHF",
+      timeline: "Livraison en 15-45 jours",
+      included: ["Design sur-mesure", "SEO optimisé", "Formation incluse", "Support 30 jours"]
+    },
+    ctaTitle: "Démarrer votre projet",
+    ctaSubtitle: "Consultation gratuite • Devis transparent"
+  }
+
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <>
+      <ServicePageMobile {...mobileData} />
+
+      <div className="hidden lg:block min-h-screen bg-black text-white overflow-hidden">
       
       {/* HERO PROCESS VISUEL - TIMELINE INTERACTIVE */}
       <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
@@ -382,6 +412,7 @@ export default function CreationSiteWebPage() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

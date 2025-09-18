@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePres
 import { MagneticButton } from '@/components/ui'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import EmailModal from '@/components/contact/EmailModal'
+import { ContactMobile } from '@/components/contact/ContactMobile'
 
 interface ContactDictionary {
   hero?: {
@@ -143,14 +144,19 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
   }
 
   return (
-    <div 
-      ref={containerRef}
-      onMouseMove={handleMouseMove}
-      className="min-h-screen relative overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, #000000 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%)'
-      }}
-    >
+    <>
+      {/* Mobile Version */}
+      <ContactMobile />
+
+      {/* Desktop Version */}
+      <div
+        ref={containerRef}
+        onMouseMove={handleMouseMove}
+        className="hidden lg:block min-h-screen relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #000000 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%)'
+        }}
+      >
       {/* LIQUID CHROME BACKGROUND SYSTEM */}
       <div className="absolute inset-0">
         {/* Base Liquid Flow */}
@@ -803,12 +809,13 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
         </div>
       </div>
 
-      {/* Email Modal */}
-      <EmailModal 
-        isOpen={showEmailModal} 
-        onClose={() => setShowEmailModal(false)} 
-      />
-    </div>
+        {/* Email Modal */}
+        <EmailModal
+          isOpen={showEmailModal}
+          onClose={() => setShowEmailModal(false)}
+        />
+      </div>
+    </>
   )
 }
 
