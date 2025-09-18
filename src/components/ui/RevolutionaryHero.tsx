@@ -175,7 +175,7 @@ export default function RevolutionaryHero() {
           <Button
             variant="primary"
             size="lg"
-            href="#contact"
+            href="/contact"
             className="bg-osom-yellow text-osom-black hover:bg-white hover:text-osom-black text-xl md:text-2xl px-12 py-6 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-osom-yellow/30"
             animated={true}
           >

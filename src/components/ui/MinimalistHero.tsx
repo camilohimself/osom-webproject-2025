@@ -70,7 +70,7 @@ export default function MinimalistHero() {
           <Button
             variant="primary"
             size="lg"
-            href="#contact"
+            href="/contact"
             className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-4 text-base font-medium rounded-sm transition-all duration-300 hover:shadow-lg hover:shadow-gray-900/10"
           >
             Démarrer un projet
