@@ -11,8 +11,7 @@ import GaugeChart from '@/components/ui/GaugeChart'
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOMHybrid from '@/components/homepage/HeroSwissOSOMHybrid'
-import WhyNextJS from '@/components/homepage/WhyNextJS'
-import TrustSignalsB2B from '@/components/homepage/TrustSignalsB2B'
+// Sections supprimées pour approche directe
 
 // Lazy loading Piliers Swiss optimisé
 const PilierSwiss1 = dynamic(() => import('@/components/homepage/PilierSwiss1'), {
@@ -111,11 +110,7 @@ export default async function Home() {
       {/* Hero Swiss OSOM Section */}
       <HeroSwissOSOMHybrid dictionary={dictionary.home} />
       
-      {/* Section Valorisation Next.js */}
-      <WhyNextJS />
-      
-      {/* Trust Signals B2B */}
-      <TrustSignalsB2B />
+      {/* Approche directe - pas de comparaisons défensives */}
 
       <section className="py-16 lg:py-32 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
