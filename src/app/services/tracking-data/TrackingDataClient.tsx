@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // Custom Hero Section - Data Forensics × Claude Intelligence
 const CustomHeroSection = () => {
@@ -267,31 +267,111 @@ const CustomHeroSection = () => {
             L'alliance révolutionnaire entre investigation forensics et intelligence artificielle Claude
           </motion.p>
 
-          {/* Live Data Recovery Display */}
+          {/* Live Data Recovery Display - Carousel */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 2.4 }}
-            className="flex justify-center items-center space-x-8 mt-8"
+            className="mt-8"
           >
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">7500 CHF</div>
-              <div className="text-sm text-gray-400">Forensics Premium</div>
-            </div>
-            <div className="w-px h-12 bg-gray-600"></div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400">3 mois</div>
-              <div className="text-sm text-gray-400">Support Intelligence</div>
-            </div>
-            <div className="w-px h-12 bg-gray-600"></div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">14,171</div>
-              <div className="text-sm text-gray-400">Sessions Révélées</div>
-            </div>
+            <DataCarousel />
           </motion.div>
         </motion.div>
       </div>
     </section>
+  )
+}
+
+// Data Carousel Component with Auto-rotation and Navigation
+const DataCarousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
+
+  const slides = [
+    {
+      value: "14,171",
+      label: "Sessions révélées",
+      color: "text-purple-400",
+      description: "Attribution multi-touch GA4 permet de voir l'impact réel de chaque canal marketing sur vos conversions."
+    },
+    {
+      value: "+280%",
+      label: "ROI opportunités",
+      color: "text-cyan-400",
+      description: "Identification des patterns cachés pour révéler les opportunités d'optimisation Business Intelligence."
+    },
+    {
+      value: "7,500 CHF",
+      label: "Forensics premium",
+      color: "text-green-400",
+      description: "Setup professionnel complet avec formation équipe et support intelligence 3 mois inclus."
+    }
+  ]
+
+  // Auto-rotation every 5 seconds (pause on hover)
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length)
+      }, 5000)
+      return () => clearInterval(interval)
+    }
+  }, [isHovered, slides.length])
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Main Display */}
+      <motion.div
+        key={currentSlide}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center space-y-4"
+      >
+        <div className={`text-5xl lg:text-6xl font-black ${slides[currentSlide].color}`}>
+          {slides[currentSlide].value}
+        </div>
+        <div className="text-lg text-gray-300 font-medium">
+          {slides[currentSlide].label}
+        </div>
+        <div className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          {slides[currentSlide].description}
+        </div>
+      </motion.div>
+
+      {/* Navigation Dots */}
+      <div className="flex justify-center space-x-3 mt-8">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              currentSlide === index
+                ? 'bg-purple-400 scale-125'
+                : 'bg-gray-600 hover:bg-gray-500'
+            }`}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Progress Bar */}
+      {!isHovered && (
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-800 rounded-full overflow-hidden">
+          <motion.div
+            className="h-full bg-purple-400"
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            key={currentSlide}
+          />
+        </div>
+      )}
+    </div>
   )
 }
 
