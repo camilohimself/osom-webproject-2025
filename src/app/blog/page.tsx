@@ -39,6 +39,9 @@ export default function BlogEditorialPage() {
 
   return (
     <>
+      {/* Progress Bars Sublimes */}
+      <ScrollProgressIndicator />
+
       <CustomCursor isActive={true} />
       <div className="min-h-screen bg-white text-black">
       {/* MASTHEAD - Premium Magazine Style */}

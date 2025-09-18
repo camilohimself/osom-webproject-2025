@@ -286,6 +286,9 @@ const RealisationsPage = () => {
 
   return (
     <div className="min-h-screen bg-black">
+
+      {/* Progress Bars Sublimes */}
+      <ScrollProgressIndicator />
       {/* Premium Hero Section - Homepage Level */}
       <section className="py-20 lg:py-32 relative overflow-hidden">
         {/* Multi-layered Background System */}

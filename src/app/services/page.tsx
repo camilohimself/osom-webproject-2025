@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export const metadata = {
   title: 'Nos services | osom - Agence web digitale Valais',
@@ -108,6 +109,9 @@ export default async function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-black">
+
+      {/* Progress Bars Sublimes */}
+      <ScrollProgressIndicator />
       {/* Hero Section - Style Linear */}
       <section className="py-32 lg:py-40 bg-black text-white relative overflow-hidden">
         {/* Background Pattern Linear */}
