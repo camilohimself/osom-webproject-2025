@@ -75,33 +75,33 @@ export default async function ServicesPage() {
       icon: ""
     },
     {
-      title: "E-commerce & IA",
+      title: "E-commerce & Automation",
       subtitle: "Boutiques intelligentes",
-      description: "Solutions e-commerce avec automatisations IA pour maximiser vos ventes en ligne",
+      description: "Solutions e-commerce avec automatisations intelligentes pour maximiser vos ventes en ligne",
       pricing: "À partir de 5000 CHF",
       timeline: "4-8 semaines",
       expectedResults: [
         "Boutique complète sécurisée",
-        "Automatisations IA intégrées",
+        "Automatisations intelligentes intégrées",
         "Analytics avancées",
-        "Optimisation conversion IA"
+        "Optimisation conversion automatique"
       ],
       caseStudy: "E-commerce nouvelle génération",
       icon: ""
     },
     {
       title: "Transformation Digitale",
-      subtitle: "Accompagnement global IA",
-      description: "Formation et intégration complète des outils IA dans vos processus métier",
+      subtitle: "Accompagnement transformation digitale",
+      description: "Formation et intégration complète d'outils modernes dans vos processus métier",
       pricing: "Sur mesure",
       timeline: "3-12 mois",
       expectedResults: [
-        "Formation Claude/GPT complète",
+        "Formation outils modernes complète",
         "Workflows automatisés",
         "ROI mesurable documenté",
         "Accompagnement continu"
       ],
-      caseStudy: "Transformation réussie IA",
+      caseStudy: "Transformation digitale réussie",
       icon: ""
     }
   ]
@@ -171,8 +171,8 @@ export default async function ServicesPage() {
             </div>
             <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
               <span className="text-yellow-400 font-bold">Premium Web</span> : design sur-mesure, CRO, Next.js.<br />
-              <span className="text-purple-400 font-bold">E-commerce + IA</span> : boutique + automatisations vente.<br />
-              <span className="text-pink-400 font-bold">Transformation IA</span> : outils, process, formation.
+              <span className="text-purple-400 font-bold">E-commerce + Auto</span> : boutique + automatisations vente.<br />
+              <span className="text-pink-400 font-bold">Transformation Digitale</span> : outils, process, formation.
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
               Pricing transparent, <span className="text-yellow-400 font-semibold">KPI contractualisés</span>, livraisons par sprints.
@@ -583,7 +583,7 @@ export default async function ServicesPage() {
                 </div>
                 <h4 className="text-xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Technologie Premium</h4>
                 <p className="text-gray-300 leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                  Outils professionnels + IA. Performance et <span className="text-yellow-400 font-semibold">innovation</span> au service de vos objectifs.
+                  Outils professionnels avancés. Performance et <span className="text-yellow-400 font-semibold">innovation</span> au service de vos objectifs.
                 </p>
               </div>
             </div>

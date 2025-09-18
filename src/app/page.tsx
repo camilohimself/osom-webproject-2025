@@ -32,11 +32,11 @@ import IconeOSOM from '@/components/IconeOSOM'
 
 export const metadata: Metadata = {
   title: 'Agence Web Valais OSOM | Marketing IA × Création Site Internet',
-  description: 'Agence Web VALAIS N°1 : 1589 recherches "agence web valais" → Expertise confirmée. Marketing Humain × Claude IA. Création site internet, SEO, marketing digital révolutionnaire.',
+  description: 'Agence Web VALAIS N°1 : 1589 recherches "agence web valais" → Expertise confirmée. Marketing data-driven avancé. Création site internet, SEO, marketing digital révolutionnaire.',
   keywords: 'agence web valais, création site internet valais, seo valais, marketing digital valais, agence marketing valais, référencement valais, agence digitale valais, site web valais',
   openGraph: {
     title: 'OSOM - Marketing Humain × Puissance IA Révolutionnaire',
-    description: 'Première collaboration officielle Agence × Claude IA. Résultats vérifiés : 688 conversions vs 49 classique. Révolution marketing VALAIS.',
+    description: 'Agence marketing data-driven VALAIS. Résultats vérifiés et performances mesurables. Révolution marketing VALAIS.',
     url: 'https://osom.ch',
     siteName: 'OSOM',
     locale: 'fr_CH',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'OSOM - Marketing Humain × Puissance IA',
-    description: '12x plus efficace que publicité classique. Collaboration révolutionnaire Homme × Claude IA.',
+    description: 'Performance mesurable supérieure aux méthodes classiques. Approche data-driven éprouvée.',
     images: ['/osom-og-image.jpg'],
   },
   alternates: {
@@ -361,8 +361,8 @@ export default async function Home() {
 
             <div className="bg-purple-400/10 rounded-xl p-4 lg:p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300">
               <div className="flex items-center justify-center mb-2 lg:mb-3">
-                <IconeOSOM type="chart" size={20} color="purple" ariaLabel="Claude IA Integration" />
-                <span className="text-purple-400 font-semibold ml-2 text-sm lg:text-base">Claude IA Intégré</span>
+                <IconeOSOM type="chart" size={20} color="purple" ariaLabel="Analytics Avancées" />
+                <span className="text-purple-400 font-semibold ml-2 text-sm lg:text-base">Analytics Avancées</span>
               </div>
               <p className="text-gray-300 text-xs lg:text-sm">Contenu optimisé automatiquement</p>
             </div>

@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Développeur x Claude Code | Collaboration IA Révolutionnaire - osom',
-  description: 'Première collaboration officielle Développeur Humain x Claude Code. Marketing humain amplifiée par IA. 2.4M vues Culture Peinture, 14x ROI. Synergie inédite.',
-  keywords: 'développeur claude code, collaboration humain ia, marketing humain intelligence artificielle, claude 4 sonnet, programmation ia créative',
+  title: 'Développement Web Avancé | Solutions Techniques Personnalisées - osom',
+  description: 'Développement web technique avancé. Solutions sur-mesure et automatisations intelligentes. Performance mesurable et résultats concrets.',
+  keywords: 'développeur web valais, solutions techniques, automatisations, programmation avancée, développement sur-mesure',
   openGraph: {
-    title: 'Développeur x Claude Code | Synergie Humain-IA Inédite',
-    description: 'Marketing humain x Puissance Claude = Résultats extraordinaires. 2.4M vues documentées.',
+    title: 'Développement Web Avancé | Solutions Techniques',
+    description: 'Solutions techniques avancées et développement sur-mesure. Résultats mesurables et performance garantie.',
     type: 'website',
   }
 }

@@ -17,7 +17,7 @@ export default function CreationSiteWebPage() {
       id: 'vitrine',
       name: 'Site Vitrine Express',
       client: 'PME locale',
-      preview: '🏢',
+      preview: 'WEB',
       before: 'Aucune présence en ligne',
       after: '50+ leads/mois',
       time: '5 jours',
@@ -27,7 +27,7 @@ export default function CreationSiteWebPage() {
       id: 'ecommerce',
       name: 'Boutique en ligne',
       client: 'Artisan Valaisan',
-      preview: '🛍️',
+      preview: 'SHOP',
       before: 'Vente locale uniquement',
       after: '3x chiffre affaires',
       time: '3 semaines',
@@ -37,7 +37,7 @@ export default function CreationSiteWebPage() {
       id: 'webapp',
       name: 'Application métier',
       client: 'Cabinet médical',
-      preview: '⚕️',
+      preview: 'APP',
       before: 'Gestion manuelle',
       after: '10h économisées/sem',
       time: '6 semaines',
@@ -96,13 +96,43 @@ export default function CreationSiteWebPage() {
     }
   ]
 
-  // Process timeline
+  // Process timeline - OSOM QUALITY
   const processSteps = [
-    { id: 1, name: 'Brief', desc: 'On comprend vos besoins', day: 'J1' },
-    { id: 2, name: 'Maquette', desc: 'Design validé ensemble', day: 'J5' },
-    { id: 3, name: 'Développement', desc: 'Code propre et rapide', day: 'J10-30' },
-    { id: 4, name: 'Tests', desc: 'Optimisation performance', day: 'J35' },
-    { id: 5, name: 'Lancement', desc: 'Mise en ligne + formation', day: 'J45' }
+    {
+      id: 1,
+      name: 'AUDIT TECHNIQUE',
+      desc: 'Analyse concurrentielle + Architecture SEO personnalisée',
+      day: 'J1-3',
+      detail: 'GA4 setup, mots-clés prioritaires, wireframes UX data-driven'
+    },
+    {
+      id: 2,
+      name: 'DESIGN SYSTEM',
+      desc: 'Interface sur-mesure + Tests utilisateur',
+      day: 'J4-10',
+      detail: 'Figma collaborative, responsive design, validation conversion'
+    },
+    {
+      id: 3,
+      name: 'DEV NEXT.JS',
+      desc: 'Code production + Optimisations Core Web Vitals',
+      day: 'J11-35',
+      detail: 'TypeScript, lazy loading, SEO technique, performance < 2s'
+    },
+    {
+      id: 4,
+      name: 'QA + ANALYTICS',
+      desc: 'Tests multi-devices + Tracking avancé',
+      day: 'J36-40',
+      detail: 'Lighthouse 95+, heatmaps, conversions goals, debugging'
+    },
+    {
+      id: 5,
+      name: 'GO-LIVE + FORMATION',
+      desc: 'Déploiement + Formation équipe 2h',
+      day: 'J41-45',
+      detail: 'DNS config, SSL, CMS training, documentation complète'
+    }
   ]
 
   const mobileData = {
@@ -166,7 +196,7 @@ export default function CreationSiteWebPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-yellow-400 text-sm font-medium">PROCESS TRANSPARENT • 688 SITES LIVRÉS</span>
+              <span className="text-yellow-400 text-sm font-medium">PROCESS TRANSPARENT • LIVRAISON GARANTIE</span>
             </motion.div>
             
             <motion.h1 
@@ -222,16 +252,13 @@ export default function CreationSiteWebPage() {
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-3">{step.name}</h3>
-                      <p className="text-gray-300 leading-relaxed">{step.desc}</p>
-                      
-                      {/* Progress indicator */}
-                      <div className="mt-4 pt-4 border-t border-yellow-400/20">
-                        <div className="flex items-center space-x-2">
-                          <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                          <span className="text-green-400 text-sm font-medium">
-                            {step.id === 5 ? 'Site en ligne !' : 'En cours...'}
-                          </span>
-                        </div>
+                      <p className="text-gray-300 leading-relaxed mb-4">{step.desc}</p>
+
+                      {/* Technical details - OSOM Quality */}
+                      <div className="bg-black/30 rounded-lg p-4 border-l-2 border-yellow-400">
+                        <p className="text-yellow-100 text-sm leading-relaxed">
+                          <span className="text-yellow-400 font-semibold">Inclus:</span> {step.detail}
+                        </p>
                       </div>
                     </div>
                   </div>
