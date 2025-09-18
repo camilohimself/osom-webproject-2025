@@ -168,18 +168,10 @@ export default function AgencePage() {
               >
                 <Link
                   href="/contact"
-                  className="bg-yellow-400 text-black px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:bg-yellow-300 relative overflow-hidden group"
+                  className="bg-yellow-400 text-black px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl transition-all duration-300 hover:bg-yellow-300"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                  onMouseEnter={() => setHoveredCard('cta-primary')}
-                  onMouseLeave={() => setHoveredCard(null)}
                 >
-                  <span className="relative z-10">Consultation gratuite 30 min</span>
-                  <motion.div
-                    className="absolute inset-0 bg-white/20"
-                    initial={{ x: "-100%" }}
-                    whileHover={{ x: "100%" }}
-                    transition={{ duration: 0.5 }}
-                  />
+                  Consultation gratuite 30 min
                 </Link>
               </motion.div>
               
