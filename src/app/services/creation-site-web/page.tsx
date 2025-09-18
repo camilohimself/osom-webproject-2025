@@ -11,8 +11,9 @@ export default function CreationSiteWebPage() {
   const [selectedProject, setSelectedProject] = useState('vitrine')
   const [selectedPrice, setSelectedPrice] = useState('growth')
   const [currentStep, setCurrentStep] = useState(1)
+  const [scrollProgress, setScrollProgress] = useState(0)
 
-  // Optimisation scroll OSOM
+  // Optimisation scroll OSOM + Timeline tracking
   useEffect(() => {
     // Smooth scroll CSS pour toute la page
     document.documentElement.style.scrollBehavior = 'smooth'
@@ -48,8 +49,29 @@ export default function CreationSiteWebPage() {
     `
     document.head.appendChild(style)
 
+    // Scroll tracking pour timeline - CORRIGÉ OSOM
+    const handleScroll = () => {
+      const timelineSection = document.querySelector('.timeline-section')
+      if (!timelineSection) return
+
+      const rect = timelineSection.getBoundingClientRect()
+      const sectionTop = window.scrollY + rect.top
+      const sectionHeight = rect.height
+      const scrollTop = window.scrollY
+
+      // Calculer progression relative à la section timeline
+      const progressInSection = Math.max(0, Math.min(1,
+        (scrollTop - sectionTop + window.innerHeight * 0.5) / (sectionHeight * 0.8)
+      ))
+
+      setScrollProgress(progressInSection)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
     return () => {
       document.head.removeChild(style)
+      window.removeEventListener('scroll', handleScroll)
     }
   }, [])
   
@@ -213,7 +235,7 @@ export default function CreationSiteWebPage() {
       <div className="hidden lg:block min-h-screen bg-black text-white" style={{scrollBehavior: 'smooth'}}>
       
       {/* HERO PROCESS VISUEL - TIMELINE INTERACTIVE */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-16">
+      <section className="timeline-section relative min-h-[90vh] flex items-center justify-center pt-32 pb-16">
         
         {/* Background timeline effect */}
         <div className="absolute inset-0">
@@ -268,8 +290,72 @@ export default function CreationSiteWebPage() {
 
           {/* Timeline interactive */}
           <div className="relative max-w-6xl mx-auto">
-            {/* Ligne centrale */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-400 via-yellow-400/50 to-yellow-400/20 transform -translate-x-1/2"></div>
+            {/* Ligne centrale - Base avec effet */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-2 bg-gradient-to-b from-gray-700/40 via-gray-600/20 to-gray-700/40 transform -translate-x-1/2 rounded-full"></div>
+
+            {/* Ligne centrale - Progressée OSOM */}
+            <motion.div
+              className="absolute left-1/2 top-0 w-2 bg-gradient-to-b from-yellow-400 via-yellow-300 to-yellow-500 transform -translate-x-1/2 rounded-full shadow-lg"
+              style={{
+                height: `${scrollProgress * 100}%`,
+                boxShadow: '0 0 20px rgba(250, 204, 21, 0.6), 0 0 40px rgba(250, 204, 21, 0.3)'
+              }}
+              animate={{
+                boxShadow: [
+                  '0 0 20px rgba(250, 204, 21, 0.6), 0 0 40px rgba(250, 204, 21, 0.3)',
+                  '0 0 30px rgba(250, 204, 21, 0.8), 0 0 60px rgba(250, 204, 21, 0.4)',
+                  '0 0 20px rgba(250, 204, 21, 0.6), 0 0 40px rgba(250, 204, 21, 0.3)'
+                ]
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+
+            {/* Bille animée OSOM - Style image avec cercle et halo */}
+            <motion.div
+              className="absolute left-1/2 transform -translate-x-1/2 z-20"
+              style={{
+                top: `${Math.max(0, Math.min(95, scrollProgress * 100))}%`
+              }}
+            >
+              {/* Cercle extérieur avec halo animé */}
+              <motion.div
+                className="relative w-12 h-12 rounded-full border-4 border-yellow-400/60 bg-gradient-to-r from-yellow-600/40 to-yellow-400/20"
+                animate={{
+                  rotate: [0, 360],
+                  scale: [1, 1.1, 1],
+                  borderColor: ['rgba(250, 204, 21, 0.6)', 'rgba(250, 204, 21, 0.9)', 'rgba(250, 204, 21, 0.6)']
+                }}
+                transition={{
+                  rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                  scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                  borderColor: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+                }}
+              >
+                {/* Bille centrale jaune pure */}
+                <div className="absolute top-1/2 left-1/2 w-6 h-6 bg-yellow-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 shadow-xl">
+                  {/* Point central noir comme dans l'image */}
+                  <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-black rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+                </div>
+
+                {/* Effet de lueur pulsante */}
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-yellow-400/20"
+                  animate={{
+                    scale: [1, 1.4, 1],
+                    opacity: [0.6, 0.2, 0.6]
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+              </motion.div>
+            </motion.div>
             
             {/* Steps */}
             <div className="space-y-24">
