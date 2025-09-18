@@ -12,6 +12,8 @@ export default function CreationSiteWebPage() {
   const [selectedPrice, setSelectedPrice] = useState('growth')
   const [currentStep, setCurrentStep] = useState(1)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [expandedStep, setExpandedStep] = useState<number | null>(null)
+  const [hoveredStep, setHoveredStep] = useState<number | null>(null)
 
   // Optimisation scroll OSOM + Timeline tracking
   useEffect(() => {
@@ -160,42 +162,97 @@ export default function CreationSiteWebPage() {
     }
   ]
 
-  // Process timeline - OSOM QUALITY
+  // Process timeline - OSOM QUALITY EXPANDABLE
   const processSteps = [
     {
       id: 1,
       name: 'AUDIT TECHNIQUE',
       desc: 'Analyse concurrentielle + Architecture SEO personnalisée',
       day: 'J1-3',
-      detail: 'GA4 setup, mots-clés prioritaires, wireframes UX data-driven'
+      detail: 'GA4 setup, mots-clés prioritaires, wireframes UX data-driven',
+      expandedContent: {
+        tools: ['Google Analytics 4', 'SEMrush Pro', 'Screaming Frog', 'Figma'],
+        deliverables: [
+          'Rapport audit concurrentiel (15 pages)',
+          'Stratégie mots-clés (50+ termes ciblés)',
+          'Architecture site optimisée SEO',
+          'Wireframes UX avec heatmap predictions'
+        ],
+        timeline: '72h maximum',
+        outcome: 'Blueprint complet pour dominer votre marché'
+      }
     },
     {
       id: 2,
       name: 'DESIGN SYSTEM',
       desc: 'Interface sur-mesure + Tests utilisateur',
       day: 'J4-10',
-      detail: 'Figma collaborative, responsive design, validation conversion'
+      detail: 'Figma collaborative, responsive design, validation conversion',
+      expandedContent: {
+        tools: ['Figma Advanced', 'Adobe Creative Suite', 'Principle', 'UserTesting'],
+        deliverables: [
+          'Design system complet (couleurs, typos, composants)',
+          'Maquettes desktop + mobile pixel-perfect',
+          'Prototypes interactifs clickables',
+          'Tests A/B sur 3 versions de landing'
+        ],
+        timeline: '7 jours avec 2 rounds de révisions',
+        outcome: 'Interface qui convertit 3x mieux que la concurrence'
+      }
     },
     {
       id: 3,
       name: 'DEV NEXT.JS',
       desc: 'Code production + Optimisations Core Web Vitals',
       day: 'J11-35',
-      detail: 'TypeScript, lazy loading, SEO technique, performance < 2s'
+      detail: 'TypeScript, lazy loading, SEO technique, performance < 2s',
+      expandedContent: {
+        tools: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+        deliverables: [
+          'Code source TypeScript 100% type-safe',
+          'Performance Lighthouse 95+ sur tous devices',
+          'SEO technique avancé (schema, sitemap, robots)',
+          'Animations Framer Motion sur-mesure'
+        ],
+        timeline: '25 jours avec reviews daily',
+        outcome: 'Site 10x plus rapide que WordPress, indexation Google optimale'
+      }
     },
     {
       id: 4,
       name: 'QA + ANALYTICS',
       desc: 'Tests multi-devices + Tracking avancé',
       day: 'J36-40',
-      detail: 'Lighthouse 95+, heatmaps, conversions goals, debugging'
+      detail: 'Lighthouse 95+, heatmaps, conversions goals, debugging',
+      expandedContent: {
+        tools: ['BrowserStack', 'Hotjar', 'Google Tag Manager', 'Sentry'],
+        deliverables: [
+          'Tests sur 15+ devices/navigateurs',
+          'Tracking conversions micro/macro setup',
+          'Heatmaps et session recordings configurés',
+          'Dashboard analytics personnalisé'
+        ],
+        timeline: '5 jours de tests intensifs',
+        outcome: 'Zéro bug, tracking précis, insights actionnables'
+      }
     },
     {
       id: 5,
       name: 'GO-LIVE + FORMATION',
       desc: 'Déploiement + Formation équipe 2h',
       day: 'J41-45',
-      detail: 'DNS config, SSL, CMS training, documentation complète'
+      detail: 'DNS config, SSL, CMS training, documentation complète',
+      expandedContent: {
+        tools: ['Vercel Pro', 'Cloudflare', 'Sanity CMS', 'Loom'],
+        deliverables: [
+          'Déploiement production avec CDN global',
+          'Formation équipe 2h (enregistrée)',
+          'Documentation technique + business',
+          'Support 30 jours post-lancement'
+        ],
+        timeline: '5 jours pour transition smooth',
+        outcome: 'Équipe autonome, site performant, croissance measurable'
+      }
     }
   ]
 
@@ -288,8 +345,8 @@ export default function CreationSiteWebPage() {
             </motion.p>
           </div>
 
-          {/* Timeline interactive */}
-          <div className="relative max-w-6xl mx-auto">
+          {/* Timeline interactive - ULTRA WIDE DESKTOP */}
+          <div className="relative max-w-[90rem] mx-auto">
             {/* Ligne centrale - Base avec effet */}
             <div className="absolute left-1/2 top-0 bottom-0 w-2 bg-gradient-to-b from-gray-700/40 via-gray-600/20 to-gray-700/40 transform -translate-x-1/2 rounded-full"></div>
 
@@ -354,6 +411,45 @@ export default function CreationSiteWebPage() {
                     ease: "easeInOut"
                   }}
                 />
+
+                {/* Particules orbitales OSOM */}
+                {[...Array(3)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-1 h-1 bg-yellow-300 rounded-full"
+                    animate={{
+                      rotate: [0, 360],
+                      scale: [0.8, 1.2, 0.8],
+                      opacity: [0.4, 0.8, 0.4]
+                    }}
+                    transition={{
+                      rotate: { duration: 4 + i, repeat: Infinity, ease: "linear" },
+                      scale: { duration: 2 + i * 0.5, repeat: Infinity, ease: "easeInOut" },
+                      opacity: { duration: 1.5 + i * 0.3, repeat: Infinity, ease: "easeInOut" }
+                    }}
+                    style={{
+                      top: '50%',
+                      left: '50%',
+                      transformOrigin: `${15 + i * 5}px center`,
+                      transform: `translate(-50%, -50%) rotate(${i * 120}deg)`
+                    }}
+                  />
+                ))}
+              </motion.div>
+
+              {/* Indicateur de progression numérique */}
+              <motion.div
+                className="absolute -right-16 top-1/2 transform -translate-y-1/2 text-yellow-400 text-xs font-bold"
+                animate={{
+                  opacity: [0.7, 1, 0.7],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                {Math.round(scrollProgress * 100)}%
               </motion.div>
             </motion.div>
             
@@ -368,30 +464,222 @@ export default function CreationSiteWebPage() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.2, duration: 0.8 }}
-                  whileInView={{ 
-                    scale: [1, 1.02, 1],
-                    transition: { duration: 2, repeat: Infinity }
-                  }}
+                  onMouseEnter={() => setHoveredStep(step.id)}
+                  onMouseLeave={() => setHoveredStep(null)}
                 >
-                  {/* Content Card */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-16 text-right' : 'pl-16 text-left'}`}>
-                    <div className="bg-gradient-to-br from-yellow-400/10 to-orange-400/5 backdrop-blur-sm rounded-2xl p-8 border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300">
-                      <div className={`flex items-center space-x-4 mb-4 ${index % 2 === 0 ? 'justify-end flex-row-reverse space-x-reverse' : ''}`}>
-                        <span className="text-yellow-400 text-2xl font-black">{step.day}</span>
-                        <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                          <span className="text-yellow-400 font-bold">{step.id}</span>
-                        </div>
+                  {/* Content Card INTERACTIVE - ULTRA LARGE DESKTOP */}
+                  <div className={`w-7/12 ${index % 2 === 0 ? 'pr-20 text-right' : 'pl-20 text-left'}`}>
+                    <motion.div
+                      className={`relative overflow-hidden backdrop-blur-sm rounded-3xl p-12 border transition-all duration-700 cursor-pointer group ${
+                        hoveredStep === step.id
+                          ? 'bg-gradient-to-br from-amber-50/5 via-yellow-100/10 to-orange-100/5 border-amber-300/60 shadow-2xl shadow-amber-400/25'
+                          : 'bg-gradient-to-br from-slate-900/40 via-gray-800/30 to-slate-900/40 border-slate-600/40'
+                      } ${
+                        expandedStep === step.id
+                          ? 'bg-gradient-to-br from-amber-50/8 via-yellow-100/15 to-orange-100/8 border-amber-300/80 shadow-3xl shadow-amber-400/35'
+                          : ''
+                      }`}
+                      onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
+                      whileHover={{
+                        scale: 1.02,
+                        transition: { duration: 0.2 }
+                      }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      {/* Motif décoratif de fond - Élégance */}
+                      <div className="absolute inset-0 opacity-20">
+                        <div className="absolute top-6 right-8 w-24 h-24 bg-gradient-to-br from-amber-300/20 to-yellow-400/10 rounded-full blur-xl"></div>
+                        <div className="absolute bottom-8 left-6 w-32 h-32 bg-gradient-to-tl from-orange-300/15 to-amber-400/5 rounded-full blur-2xl"></div>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.name}</h3>
-                      <p className="text-gray-300 leading-relaxed mb-4">{step.desc}</p>
 
-                      {/* Technical details - OSOM Quality */}
-                      <div className="bg-black/30 rounded-lg p-4 border-l-2 border-yellow-400">
-                        <p className="text-yellow-100 text-sm leading-relaxed">
-                          <span className="text-yellow-400 font-semibold">Inclus:</span> {step.detail}
+                      {/* Effet de respiration au hover */}
+                      <motion.div
+                        className="absolute inset-0 rounded-3xl"
+                        initial={false}
+                        animate={{
+                          background: hoveredStep === step.id
+                            ? [
+                                'radial-gradient(circle at 30% 40%, rgba(251, 191, 36, 0.1) 0%, transparent 50%)',
+                                'radial-gradient(circle at 70% 60%, rgba(245, 158, 11, 0.15) 0%, transparent 50%)',
+                                'radial-gradient(circle at 30% 40%, rgba(251, 191, 36, 0.1) 0%, transparent 50%)'
+                              ]
+                            : 'radial-gradient(circle at 50% 50%, transparent 0%, transparent 100%)'
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: hoveredStep === step.id ? Infinity : 0,
+                          ease: "easeInOut"
+                        }}
+                      />
+
+                      <div className={`relative flex items-center space-x-6 mb-8 ${index % 2 === 0 ? 'justify-end flex-row-reverse space-x-reverse' : ''}`}>
+                        <div className="text-center">
+                          <span className="text-amber-300 text-2xl font-light block mb-1 tracking-wide">Phase</span>
+                          <span className="text-amber-100 text-3xl font-bold">{step.day}</span>
+                        </div>
+                        <motion.div
+                          className="relative w-20 h-20 rounded-2xl flex items-center justify-center overflow-hidden"
+                          style={{
+                            background: hoveredStep === step.id
+                              ? 'linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(245, 158, 11, 0.2))'
+                              : 'linear-gradient(135deg, rgba(148, 163, 184, 0.2), rgba(100, 116, 139, 0.1))'
+                          }}
+                          animate={{
+                            scale: hoveredStep === step.id ? 1.05 : 1,
+                            rotate: hoveredStep === step.id ? [0, 2, -2, 0] : 0
+                          }}
+                          transition={{
+                            scale: { duration: 0.3 },
+                            rotate: { duration: 2, repeat: hoveredStep === step.id ? Infinity : 0 }
+                          }}
+                        >
+                          {/* Motif décoratif dans l'icône */}
+                          <div className="absolute inset-0 opacity-30">
+                            <div className="absolute top-2 right-2 w-4 h-4 bg-gradient-to-br from-amber-200 to-yellow-300 rounded-full blur-sm"></div>
+                            <div className="absolute bottom-3 left-3 w-6 h-6 bg-gradient-to-tl from-orange-200 to-amber-300 rounded-full blur-md"></div>
+                          </div>
+                          <span className="relative text-amber-200 font-bold text-2xl z-10">{step.id}</span>
+                        </motion.div>
+                      </div>
+
+                      <div className="relative z-10">
+                        <h3 className="text-4xl font-light text-white mb-3 group-hover:text-amber-100 transition-colors duration-500 leading-tight">
+                          {step.name}
+                        </h3>
+                        <div className="w-16 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-500 mb-6 group-hover:w-24 transition-all duration-500"></div>
+                        <p className="text-lg text-slate-300 leading-relaxed mb-6 group-hover:text-slate-200 transition-colors duration-500 font-light">
+                          {step.desc}
                         </p>
                       </div>
-                    </div>
+
+                      {/* Section aperçu élégante */}
+                      <div className="relative bg-gradient-to-r from-slate-800/40 via-slate-700/30 to-slate-800/40 rounded-2xl p-6 border border-slate-600/30 group-hover:border-amber-400/40 transition-all duration-500">
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <h4 className="text-amber-300 text-sm font-medium mb-2 tracking-wide uppercase">Aperçu inclus</h4>
+                            <p className="text-slate-200 text-base leading-relaxed font-light">
+                              {step.detail}
+                            </p>
+                          </div>
+
+                          <motion.div
+                            className="ml-6 flex flex-col items-center text-center"
+                            animate={{
+                              opacity: hoveredStep === step.id ? [0.7, 1, 0.7] : 0.5,
+                              y: hoveredStep === step.id ? [0, -2, 0] : 0
+                            }}
+                            transition={{
+                              duration: 2,
+                              repeat: hoveredStep === step.id ? Infinity : 0,
+                              ease: "easeInOut"
+                            }}
+                          >
+                            <div className="w-12 h-12 bg-gradient-to-br from-amber-400/20 to-yellow-500/20 rounded-xl flex items-center justify-center mb-2 group-hover:from-amber-400/30 group-hover:to-yellow-500/30 transition-all duration-500">
+                              <span className="text-amber-300 text-lg">
+                                {expandedStep === step.id ? '▲' : '▼'}
+                              </span>
+                            </div>
+                            <span className="text-amber-300 text-xs font-medium tracking-wide">
+                              {expandedStep === step.id ? 'Fermer' : 'Explorer'}
+                            </span>
+                          </motion.div>
+                        </div>
+
+                        {/* Indicateur subtil de clickabilité */}
+                        <div className="absolute bottom-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-amber-400/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      </div>
+
+                      {/* CONTENU EXPANDABLE - CONNAISSANCE OSOM */}
+                      <AnimatePresence>
+                        {expandedStep === step.id && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                            animate={{ opacity: 1, height: 'auto', marginTop: 16 }}
+                            exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                            className="overflow-hidden"
+                          >
+                            <div className="bg-gradient-to-br from-slate-900/60 via-slate-800/40 to-slate-900/60 rounded-3xl p-10 border border-amber-400/30 backdrop-blur-sm">
+
+                              {/* HEADER SECTION ACCUEILLANTE */}
+                              <div className="text-center mb-10">
+                                <div className="w-16 h-16 bg-gradient-to-br from-amber-400/30 to-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                  <span className="text-amber-300 text-2xl">✨</span>
+                                </div>
+                                <h3 className="text-2xl font-light text-white mb-2">Ce qui vous attend</h3>
+                                <p className="text-slate-400 text-sm">Voici le détail complet de cette phase</p>
+                              </div>
+
+                              {/* LAYOUT ULTRA-WIDE DESKTOP - 2 COLONNES HARMONIEUSES */}
+                              <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
+
+                                {/* COLONNE GAUCHE - RESSOURCES & OUTILS */}
+                                <div className="space-y-8">
+                                  {/* Stack technique élégante */}
+                                  <div className="bg-gradient-to-r from-slate-800/40 to-slate-700/30 rounded-2xl p-6 border border-slate-600/40">
+                                    <h4 className="text-amber-300 font-medium text-lg mb-6 flex items-center">
+                                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-3"></span>
+                                      Outils & Technologies
+                                    </h4>
+                                    <div className="grid grid-cols-2 gap-4">
+                                      {step.expandedContent.tools.map((tool, idx) => (
+                                        <div key={idx} className="px-8 py-5 bg-gradient-to-r from-amber-50/5 to-yellow-100/5 text-amber-100 text-lg rounded-2xl border border-amber-400/20 hover:border-amber-400/40 hover:from-amber-50/8 hover:to-yellow-100/8 transition-all duration-300 font-light text-center">
+                                          {tool}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+
+                                  {/* Métriques importantes */}
+                                  <div className="grid grid-cols-1 gap-6">
+                                    <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/10 rounded-2xl p-6 border border-blue-400/20">
+                                      <div className="flex items-center mb-3">
+                                        <div className="w-8 h-8 bg-cyan-400/20 rounded-lg flex items-center justify-center mr-3">
+                                          <span className="text-cyan-300 text-sm">⏱</span>
+                                        </div>
+                                        <h4 className="text-cyan-300 font-medium text-sm">Délai de livraison</h4>
+                                      </div>
+                                      <p className="text-white text-xl font-light">{step.expandedContent.timeline}</p>
+                                    </div>
+                                    <div className="bg-gradient-to-br from-emerald-900/20 to-green-900/10 rounded-2xl p-6 border border-emerald-400/20">
+                                      <div className="flex items-center mb-3">
+                                        <div className="w-8 h-8 bg-emerald-400/20 rounded-lg flex items-center justify-center mr-3">
+                                          <span className="text-emerald-300 text-sm">🎯</span>
+                                        </div>
+                                        <h4 className="text-emerald-300 font-medium text-sm">Impact attendu</h4>
+                                      </div>
+                                      <p className="text-emerald-100 text-base font-light leading-relaxed">{step.expandedContent.outcome}</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* COLONNE DROITE - LIVRABLES CHALEUREUX */}
+                                <div>
+                                  <div className="bg-gradient-to-r from-slate-800/40 to-slate-700/30 rounded-2xl p-6 border border-slate-600/40 h-full">
+                                    <h4 className="text-amber-300 font-medium text-lg mb-6 flex items-center">
+                                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-3"></span>
+                                      Vos livrables
+                                    </h4>
+                                    <div className="space-y-4">
+                                      {step.expandedContent.deliverables.map((item, idx) => (
+                                        <div key={idx} className="group flex items-start space-x-4 p-4 bg-gradient-to-r from-slate-700/30 to-slate-600/20 rounded-xl border border-slate-600/30 hover:border-emerald-400/30 hover:from-emerald-900/10 hover:to-slate-600/20 transition-all duration-300">
+                                          <div className="w-8 h-8 bg-gradient-to-br from-emerald-400/30 to-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:from-emerald-400/40 group-hover:to-green-500/30 transition-all duration-300">
+                                            <span className="text-emerald-300 text-sm font-medium">✓</span>
+                                          </div>
+                                          <div>
+                                            <p className="text-slate-200 text-sm font-light leading-relaxed group-hover:text-white transition-colors duration-300">{item}</p>
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
                   </div>
                   
                   {/* Center dot */}
