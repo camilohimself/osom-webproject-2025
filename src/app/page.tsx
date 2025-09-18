@@ -145,7 +145,7 @@ export default async function Home() {
             {/* Desktop: Méthode complète */}
             <div className="hidden lg:block text-center mb-24">
               <div className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Notre méthode <LogoOSOM size="lg" className="inline-block ml-4 align-middle" />
+                Notre méthode <span className="text-yellow-400">OSOM</span>
               </div>
 
               <div className="text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
