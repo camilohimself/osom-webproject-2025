@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
 import IconeOSOM from '@/components/IconeOSOM'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export default function SEOContentMarketingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -81,6 +82,9 @@ export default function SEOContentMarketingPage() {
 
   return (
     <div className="min-h-screen bg-black">
+
+      {/* Progress Bars Sublimes */}
+      <ScrollProgressIndicator />
       
       {/* HERO STORYTELLING MODÉRÉ */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-32 pb-16">

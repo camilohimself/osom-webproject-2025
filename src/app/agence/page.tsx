@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 // Import des jeux (client-side only)
 const PongGame = dynamic(() => import('@/components/gaming/PongGame'), {
@@ -97,10 +98,136 @@ export default function AgencePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-black relative">
 
-      {/* HERO SIMPLIFIÉ - Sans vidéo background */}
-      <section className="h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+      {/* Progress Bars Desktop Only */}
+      <div className="hidden lg:block">
+        <ScrollProgressIndicator />
+      </div>
+
+      {/* MOBILE VERSION LÉGÈRE */}
+      <div className="lg:hidden">
+        {/* Mobile Hero Ultra Léger */}
+        <section className="min-h-screen flex items-center justify-center px-4 py-20">
+          <div className="text-center max-w-lg mx-auto">
+            <div className="mb-6">
+              <span className="text-yellow-400 text-sm font-medium tracking-wide uppercase">
+                AGENCE DIGITALE VALAIS
+              </span>
+            </div>
+
+            <h1 className="text-4xl font-bold text-white mb-6">
+              WE ARE <span className="text-yellow-400">OSOM</span>
+            </h1>
+
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              <span className="text-yellow-400 font-semibold">Créatifs mesurables</span> : on raconte et on prouve.
+            </p>
+
+            <div className="space-y-4">
+              <a
+                href="/contact"
+                className="block w-full bg-yellow-400 text-black py-4 px-6 rounded-xl font-bold text-lg text-center"
+              >
+                Consultation gratuite 30 min
+              </a>
+
+              <a
+                href="tel:+41791289549"
+                className="block w-full border-2 border-yellow-400 text-yellow-400 py-4 px-6 rounded-xl font-medium text-lg text-center"
+              >
+                📞 +41 79 128 95 49
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Valeurs Mobile Condensées */}
+        <section className="py-16 px-4">
+          <div className="max-w-lg mx-auto">
+            <h2 className="text-2xl font-bold text-white text-center mb-8">
+              Nos <span className="text-purple-400">valeurs</span>
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-yellow-400/30">
+                <h3 className="text-lg font-bold text-yellow-400 mb-2">Data-Driven</h3>
+                <p className="text-gray-300 text-sm">Zéro intuition, que des faits vérifiables.</p>
+              </div>
+
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-green-400/30">
+                <h3 className="text-lg font-bold text-green-400 mb-2">Transparence</h3>
+                <p className="text-gray-300 text-sm">ROI visible et mesurable.</p>
+              </div>
+
+              <div className="bg-gray-900/50 rounded-xl p-6 border border-purple-400/30">
+                <h3 className="text-lg font-bold text-purple-400 mb-2">Innovation</h3>
+                <p className="text-gray-300 text-sm">Technologies premium avant-gardistes.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Gaming Zone Mobile - MORPION SEULEMENT */}
+        <section className="py-16 px-4">
+          <div className="max-w-lg mx-auto text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Testez notre <span className="text-purple-400">IA</span>
+            </h2>
+            <p className="text-gray-400 mb-8">
+              Morpion contre algorithme minimax
+            </p>
+            <TicTacToeGame />
+          </div>
+        </section>
+
+        {/* Stats Mobile */}
+        <section className="py-16 px-4">
+          <div className="max-w-lg mx-auto">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gray-900/50 rounded-xl p-4 text-center border border-white/10">
+                <div className="text-2xl font-bold text-yellow-400 mb-1">200+</div>
+                <div className="text-gray-300 text-sm">Projets</div>
+              </div>
+              <div className="bg-gray-900/50 rounded-xl p-4 text-center border border-white/10">
+                <div className="text-2xl font-bold text-green-400 mb-1">5+</div>
+                <div className="text-gray-300 text-sm">Années</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Mobile Final */}
+        <section className="py-16 px-4">
+          <div className="max-w-lg mx-auto text-center">
+            <h3 className="text-xl font-bold text-white mb-4">
+              Prêt pour l'extraordinaire ?
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Une question ? Un projet ?
+            </p>
+            <div className="space-y-3">
+              <a
+                href="/contact"
+                className="block w-full bg-yellow-400 text-black py-4 px-6 rounded-xl font-bold"
+              >
+                Démarrons votre projet
+              </a>
+              <a
+                href="/outils"
+                className="block w-full border border-white/30 text-white py-4 px-6 rounded-xl"
+              >
+                Calculer votre ROI
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* DESKTOP VERSION COMPLÈTE */}
+      <div className="hidden lg:block">
+        {/* HERO SIMPLIFIÉ - Sans vidéo background */}
+        <section className="h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
 
 
         {/* CONTENU HERO */}
@@ -509,6 +636,9 @@ export default function AgencePage() {
           </div>
         </div>
       </section>
+      </div>
+      {/* Fin Desktop Version */}
+
     </div>
   )
 }

@@ -7,6 +7,7 @@ import SEOAuditTool from '@/components/tools/SEOAuditTool'
 import ROICalculatorEducatif from '@/components/tools/ROICalculatorEducatif'
 import AnimatedElement from '@/components/ui/AnimatedElement'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 import type { CalculatorResults as CalculatorResultsType } from '@/types/calculator'
 
 export default function OutilsPage() {

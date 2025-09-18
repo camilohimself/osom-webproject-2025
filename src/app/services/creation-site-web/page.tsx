@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ServicePageMobile } from '@/components/services/ServicePageMobile'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export default function CreationSiteWebPage() {
   const [selectedProject, setSelectedProject] = useState('vitrine')
@@ -204,6 +205,9 @@ export default function CreationSiteWebPage() {
 
   return (
     <>
+      {/* Progress Bars Sublimes */}
+      <ScrollProgressIndicator />
+
       <ServicePageMobile {...mobileData} />
 
       <div className="hidden lg:block min-h-screen bg-black text-white" style={{scrollBehavior: 'smooth'}}>

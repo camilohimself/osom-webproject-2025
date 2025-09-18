@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
 import { motion } from 'framer-motion'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export default function MarketingAutomationCRMPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -69,6 +70,9 @@ export default function MarketingAutomationCRMPage() {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
+
+      {/* Progress Bars Sublimes */}
+      <ScrollProgressIndicator />
       {/* Background Pattern OSOM */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

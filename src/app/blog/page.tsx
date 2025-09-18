@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useState, useEffect, useMemo } from 'react'
 import CustomCursor from '@/components/ui/CustomCursor'
 import { calculateReadingTime, formatReadingTime } from '@/utils/readingTime'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export default function BlogEditorialPage() {
   const [activeCategory, setActiveCategory] = useState('all')

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { InteractiveCaseStudy } from '@/components/portfolio'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import IconeOSOM from '@/components/IconeOSOM'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 interface CaseStudyData {
   id: string

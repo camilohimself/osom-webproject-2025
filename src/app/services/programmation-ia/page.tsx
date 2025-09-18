@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import React from 'react'
 import { motion } from 'framer-motion'
+import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export default function ProgrammationIAPage() {
   const [activeExperiment, setActiveExperiment] = useState<string>('dashboard')
@@ -82,6 +83,9 @@ export default function ProgrammationIAPage() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
+
+      {/* Progress Bars Sublimes */}
+      <ScrollProgressIndicator />
       
       {/* HERO LABORATOIRE IA - STYLE TERMINAL */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
