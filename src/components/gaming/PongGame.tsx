@@ -17,7 +17,7 @@ interface GameState {
 
 export default function PongGame() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | undefined>()
   const [gameState, setGameState] = useState<GameState>({
     ballX: 400,
     ballY: 200,
