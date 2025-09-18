@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ServicePageMobile } from '@/components/services/ServicePageMobile'
@@ -10,6 +10,47 @@ export default function CreationSiteWebPage() {
   const [selectedProject, setSelectedProject] = useState('vitrine')
   const [selectedPrice, setSelectedPrice] = useState('growth')
   const [currentStep, setCurrentStep] = useState(1)
+
+  // Optimisation scroll OSOM
+  useEffect(() => {
+    // Smooth scroll CSS pour toute la page
+    document.documentElement.style.scrollBehavior = 'smooth'
+    document.body.style.scrollBehavior = 'smooth'
+
+    // Optimisation performance scroll OSOM
+    const style = document.createElement('style')
+    style.textContent = `
+      * {
+        scroll-behavior: smooth;
+      }
+      html {
+        scroll-padding-top: 100px;
+      }
+      .scroll-smooth {
+        -webkit-overflow-scrolling: touch;
+      }
+      /* Optimisation GPU pour scroll fluide */
+      .motion-div, motion-div {
+        will-change: transform, opacity;
+        transform: translateZ(0);
+      }
+      /* Amélioration performance sections */
+      section {
+        contain: style layout;
+      }
+      /* Smooth scrolling pour tous les navigateurs */
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+    `
+    document.head.appendChild(style)
+
+    return () => {
+      document.head.removeChild(style)
+    }
+  }, [])
   
   // Projets du studio avec émojis pour simplicité
   const studioProjects = [
@@ -165,10 +206,10 @@ export default function CreationSiteWebPage() {
     <>
       <ServicePageMobile {...mobileData} />
 
-      <div className="hidden lg:block min-h-screen bg-black text-white overflow-hidden">
+      <div className="hidden lg:block min-h-screen bg-black text-white" style={{scrollBehavior: 'smooth'}}>
       
       {/* HERO PROCESS VISUEL - TIMELINE INTERACTIVE */}
-      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
+      <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-16">
         
         {/* Background timeline effect */}
         <div className="absolute inset-0">

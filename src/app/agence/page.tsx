@@ -3,6 +3,18 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import dynamic from 'next/dynamic'
+
+// Import des jeux (client-side only)
+const PongGame = dynamic(() => import('@/components/gaming/PongGame'), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-black/50 rounded-2xl border border-green-500/30 animate-pulse flex items-center justify-center"><span className="text-green-400 font-mono">CHARGEMENT SYSTÈME OSOM...</span></div>
+})
+
+const TicTacToeGame = dynamic(() => import('@/components/gaming/TicTacToeGame'), {
+  ssr: false,
+  loading: () => <div className="h-96 bg-black/50 rounded-2xl border border-purple-500/30 animate-pulse flex items-center justify-center"><span className="text-purple-400 font-mono">INICIANDO...</span></div>
+})
 
 export default function AgencePage() {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
@@ -204,7 +216,7 @@ export default function AgencePage() {
 
       </section>
 
-      {/* VIDÉO SHOWCASE - Après le hero */}
+      {/* VIDÉO SHOWCASE - Click to Play */}
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -214,17 +226,45 @@ export default function AgencePage() {
             </h2>
           </div>
 
-          {/* Vidéo centrée */}
-          <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10">
+          {/* Vidéo Click-to-Play */}
+          <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
+               onClick={() => {
+                 const video = document.getElementById('osom-video') as HTMLVideoElement;
+                 const overlay = document.getElementById('video-overlay');
+                 if (video && overlay) {
+                   video.play();
+                   overlay.style.display = 'none';
+                 }
+               }}>
+
+            {/* Vidéo */}
             <video
+              id="osom-video"
               className="w-full h-full object-cover"
-              autoPlay
               muted
               loop
               playsInline
+              preload="metadata"
             >
               <source src="/osom-motion.MP4" type="video/mp4" />
             </video>
+
+            {/* Overlay Click-to-Play */}
+            <div id="video-overlay" className="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm group-hover:bg-black/40 transition-all duration-300">
+              <div className="text-center">
+                <motion.div
+                  className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </motion.div>
+                <p className="text-white font-medium text-lg">Cliquez pour voir OSOM motion</p>
+                <p className="text-white/70 text-sm mt-1">Performance optimisée</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -271,11 +311,77 @@ export default function AgencePage() {
           </div>
         </div>
       </section>
-              
-                  
-                  
-                  
-                  
+
+      {/* SECTION GAMING INTERACTIVE */}
+      <section className="py-32 bg-black relative overflow-hidden" id="gaming-zone">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Header Gaming */}
+          <div className="text-center mb-20">
+            <span className="text-cyan-400 text-sm font-medium tracking-[0.15em] uppercase">
+              EXPÉRIENCE INTERACTIVE
+            </span>
+
+            <h2 className="text-5xl md:text-6xl font-light text-white mt-4 mb-8 leading-tight">
+              Venez jouer contre nos <span className="text-cyan-400 font-bold">algorithmes</span>
+            </h2>
+
+            <p className="text-gray-300 text-xl max-w-3xl mx-auto">
+              Un clin d'œil au monde binaire. Testez votre habileté contre l'intelligence artificielle OSOM.
+            </p>
+          </div>
+
+          {/* Gaming Zone Desktop - PONG */}
+          <div className="hidden lg:block mb-12">
+            <div className="text-center mb-8">
+              <span className="text-green-400 font-mono text-lg">
+                &gt; MODE DESKTOP DÉTECTÉ - PONG RÉTRO ACTIVÉ &lt;
+              </span>
+              <p className="text-green-400/70 font-mono text-sm mt-2">
+                Premier jeu vidéo de l'histoire (1972) • Bille jaune OSOM signature
+              </p>
+            </div>
+            <PongGame />
+          </div>
+
+          {/* Gaming Zone Mobile - MORPION */}
+          <div className="lg:hidden">
+            <div className="text-center mb-8">
+              <span className="text-purple-400 font-mono text-lg">
+                &gt; MODE MOBILE DÉTECTÉ - GATO ACTIVÉ &lt;
+              </span>
+              <p className="text-purple-400/70 font-mono text-sm mt-2">
+                IA imbattable • Algorithme Minimax • Touch optimisé
+              </p>
+            </div>
+            <TicTacToeGame />
+          </div>
+
+          {/* Call to Action Gaming */}
+          <div className="text-center mt-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 max-w-2xl mx-auto"
+            >
+              <p className="text-cyan-400 font-mono text-lg mb-4">
+                &gt; SYSTÈME ÉVALUATION TERMINÉ &lt;
+              </p>
+              <p className="text-gray-300 text-lg">
+                Nos algorithmes sont-ils aussi performants pour votre business ?
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block mt-6 bg-cyan-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-cyan-300 transition-colors"
+              >
+                Tester nos vrais algorithmes
+              </Link>
+            </motion.div>
+          </div>
+
+        </div>
+      </section>
 
       {/* STATS SIMPLIFIÉES */}
       <section className="py-20 bg-black">
