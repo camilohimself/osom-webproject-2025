@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const ROICalculatorEducatif = () => {
   const [currentStep, setCurrentStep] = useState(0)
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     secteur: '',
     chiffreAffaires: '',
@@ -264,7 +266,7 @@ const ROICalculatorEducatif = () => {
                     onClick={() => setCurrentStep(4)}
                     className="bg-gradient-to-r from-yellow-400 to-green-400 text-black px-12 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-green-500 transition-all shadow-lg"
                   >
-                    Calculer mon potentiel roi
+                    Voir ma projection personnalisée
                   </button>
                 </motion.div>
               )}
