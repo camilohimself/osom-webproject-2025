@@ -128,10 +128,13 @@ export default function PongGame() {
       }
 
       // Ball collision with paddles
-      // Player paddle (left)
+      // Player paddle (left) - CONTACT = +1 POINT !
       if (newState.ballX <= PADDLE_WIDTH &&
           newState.ballY + BALL_SIZE >= newState.playerY &&
           newState.ballY <= newState.playerY + PADDLE_HEIGHT) {
+
+        // +1 POINT pour chaque contact avec la balle !
+        newState.playerScore++
 
         // Increase speed by 5% on contact (max cap at maxSpeed)
         newState.ballSpeed = Math.min(newState.ballSpeed * 1.05, newState.maxSpeed)
@@ -140,8 +143,8 @@ export default function PongGame() {
         const hitPos = (newState.ballY + BALL_SIZE/2 - newState.playerY - PADDLE_HEIGHT/2) / (PADDLE_HEIGHT/2)
         newState.ballVelY = hitPos * 5
 
-        // Update message with speed info
-        newState.gameMessage = `Vitesse: ${Math.round(newState.ballSpeed * 10) / 10}x`
+        // Update message with contact count + speed
+        newState.gameMessage = `Contacts: ${newState.playerScore} | Vitesse: ${Math.round(newState.ballSpeed * 10) / 10}x`
       }
 
       // AI paddle (right)
@@ -164,12 +167,11 @@ export default function PongGame() {
       if (newState.ballX < 0) {
         // Player loses - GAME OVER
         newState.gameStarted = false
-        newState.gameMessage = "💀 DEATHMATCH TERMINÉ! L'IA OSOM a gagné!"
-        newState.showNameInput = newState.playerScore > 0 // Only save if player scored
+        newState.gameMessage = `💀 GAME OVER! ${newState.playerScore} contacts réalisés!`
+        newState.showNameInput = newState.playerScore > 0 // Only save if player had contacts
       } else if (newState.ballX > CANVAS_WIDTH) {
-        // Player scores +1 point, game continues
-        newState.playerScore++
-        newState.gameMessage = `Score: ${newState.playerScore} | Vitesse: ${Math.round(newState.ballSpeed * 10) / 10}x`
+        // Ball passed AI - reset ball, game continues (no additional points)
+        newState.gameMessage = `Contacts: ${newState.playerScore} | Vitesse: ${Math.round(newState.ballSpeed * 10) / 10}x`
         setTimeout(() => {
           resetBall()
         }, 1000)
@@ -197,7 +199,7 @@ export default function PongGame() {
     setGameState(prev => ({
       ...prev,
       gameStarted: true,
-      gameMessage: "DEATHMATCH MODE: Ratez une balle = GAME OVER!",
+      gameMessage: "ENDURANCE MODE: +1 point par contact | Ratez = GAME OVER!",
       ballSpeed: 5,
       playerScore: 0,
       aiScore: 0,
@@ -217,7 +219,7 @@ export default function PongGame() {
       playerScore: 0,
       aiScore: 0,
       gameStarted: false,
-      gameMessage: "🎮 DEATHMATCH PONG OSOM - Cliquez pour défier l'IA",
+      gameMessage: "🎮 ENDURANCE PONG OSOM - Combien de contacts ?",
       ballSpeed: 5,
       maxSpeed: 15,
       playerName: "",
@@ -291,16 +293,20 @@ export default function PongGame() {
     ctx.fillStyle = '#FACC15' // Yellow-400 OSOM
     ctx.fillRect(gameState.ballX, gameState.ballY, BALL_SIZE, BALL_SIZE)
 
-    // Draw scores
+    // Draw contact counter (left side only)
     ctx.font = '32px monospace'
     ctx.textAlign = 'center'
     ctx.fillText(gameState.playerScore.toString(), CANVAS_WIDTH / 4, 50)
-    ctx.fillText(gameState.aiScore.toString(), (3 * CANVAS_WIDTH) / 4, 50)
 
-    // Draw labels
+    // Draw "ENDURANCE" label instead of score battle
     ctx.font = '16px monospace'
-    ctx.fillText('HUMAIN', CANVAS_WIDTH / 4, 80)
-    ctx.fillText('IA OSOM', (3 * CANVAS_WIDTH) / 4, 80)
+    ctx.fillText('CONTACTS', CANVAS_WIDTH / 4, 80)
+
+    // Right side shows difficulty level
+    ctx.font = '24px monospace'
+    ctx.fillText(`${Math.round(gameState.ballSpeed * 10) / 10}x`, (3 * CANVAS_WIDTH) / 4, 50)
+    ctx.font = '16px monospace'
+    ctx.fillText('VITESSE', (3 * CANVAS_WIDTH) / 4, 80)
 
   }, [gameState])
 
@@ -332,7 +338,7 @@ export default function PongGame() {
               onClick={startGame}
               className="bg-green-500 text-black px-8 py-4 font-mono font-bold text-xl hover:bg-green-400 transition-colors"
             >
-              &gt; DEATHMATCH MODE &lt;
+              &gt; ENDURANCE MODE &lt;
             </button>
           </div>
         )}
@@ -342,7 +348,7 @@ export default function PongGame() {
           <div className="absolute inset-0 flex items-center justify-center bg-black/80">
             <div className="bg-black border-2 border-green-500 p-6 rounded-lg">
               <div className="text-green-400 font-mono text-lg mb-4 text-center">
-                🏆 SCORE: {gameState.playerScore} POINTS!
+                🏆 ENDURANCE: {gameState.playerScore} CONTACTS!
               </div>
               <div className="text-green-400 font-mono text-sm mb-4 text-center">
                 Entrez votre nom pour concourir au projet OSOM gratuit:
@@ -379,7 +385,7 @@ export default function PongGame() {
       {/* Controls */}
       <div className="text-center mt-4 space-y-2">
         <div className="text-green-400/80 font-mono text-sm">
-          DEATHMATCH: Ratez une balle = GAME OVER | Souris = contrôle paddle
+          ENDURANCE: +1 point par contact | Ratez = GAME OVER | Souris = paddle
         </div>
         <div className="flex justify-center gap-4">
           <button
