@@ -17,6 +17,115 @@ const ROICalculatorEducatif = () => {
 
   const steps = [
     {
+      id: 'intro',
+      title: 'Calculateur ROI avancé',
+      subtitle: 'Découvrez votre potentiel digital en Suisse',
+      content: (
+        <div className="text-center space-y-8">
+          <div className="max-w-2xl mx-auto">
+            <div className="mb-12">
+              <motion.div
+                className="w-24 h-24 bg-gradient-to-br from-yellow-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-8"
+                animate={{
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 1, -1, 0]
+                }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                <svg className="w-12 h-12 text-black" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                </svg>
+              </motion.div>
+
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Combien pesez-vous sur Internet ?
+              </h3>
+
+              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                En 5 minutes, découvrez votre vrai potentiel digital par rapport à vos concurrents suisses.
+              </p>
+
+              <div className="bg-cyan-400/10 border border-cyan-400/30 rounded-2xl p-6 mb-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-2">Analyse basée sur des données réelles</h4>
+                    <p className="text-gray-300 text-sm">
+                      Comparaison avec 247 entreprises suisses analysées par OSOM en 2025.
+                      Métriques Google Analytics vérifiées.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <motion.button
+              onClick={() => setCurrentStep(1)}
+              className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-green-400 text-black px-12 py-6 rounded-xl font-bold text-2xl hover:from-yellow-500 hover:via-yellow-600 hover:to-green-500 transition-all shadow-2xl transform hover:scale-105"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Commencer l'analyse
+            </motion.button>
+
+            <p className="text-xs text-gray-500 mt-6">
+              Résultats personnalisés • 100% confidentiel • Aucun engagement
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      id: 'email-consent',
+      title: 'Résultats par email',
+      subtitle: 'Pour des raisons de confidentialité',
+      content: (
+        <div className="text-center space-y-6">
+          <div className="bg-purple-400/10 border border-purple-400/30 rounded-2xl p-8 max-w-2xl mx-auto">
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+
+            <h3 className="text-2xl font-bold text-white mb-6">Confidentialité garantie</h3>
+
+            <div className="text-gray-300 space-y-4 text-left">
+              <p>
+                Pour protéger les données sensibles de votre entreprise, nous envoyons votre analyse détaillée directement par email.
+              </p>
+              <p>
+                <span className="text-purple-400 font-semibold">Délai :</span> Sous 24 heures ouvrables (nous on dort aussi).
+              </p>
+              <p>
+                <span className="text-cyan-400 font-semibold">Contenu :</span> Analyse complète + recommandations personnalisées + comparaison sectorielle.
+              </p>
+            </div>
+
+            <div className="bg-black/30 rounded-xl p-4 mt-6">
+              <div className="flex items-center justify-center text-sm text-gray-400">
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Aucun spam • Zéro démarchage • Analyse authentique
+              </div>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setCurrentStep(2)}
+            className="bg-gradient-to-r from-purple-400 to-cyan-400 text-black px-10 py-4 rounded-xl font-bold text-lg hover:from-purple-500 hover:to-cyan-500 transition-all shadow-lg"
+          >
+            J'accepte de recevoir les résultats par email
+          </button>
+        </div>
+      )
+    },
+    {
       id: 'disclaimer',
       title: 'Important à savoir',
       subtitle: 'Quelques précisions avant de commencer',
@@ -37,7 +146,7 @@ const ROICalculatorEducatif = () => {
             </div>
           </div>
           <button
-            onClick={() => setCurrentStep(1)}
+            onClick={() => setCurrentStep(3)}
             className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-500 transition-colors"
           >
             J'ai compris, continuer
@@ -75,7 +184,7 @@ const ROICalculatorEducatif = () => {
             </div>
           </div>
           <button
-            onClick={() => setCurrentStep(2)}
+            onClick={() => setCurrentStep(4)}
             className="bg-cyan-400 text-black px-8 py-4 rounded-xl font-bold hover:bg-cyan-500 transition-colors"
           >
             Compris, voir les données
@@ -117,7 +226,7 @@ const ROICalculatorEducatif = () => {
             </div>
           </div>
           <button
-            onClick={() => setCurrentStep(3)}
+            onClick={() => setCurrentStep(5)}
             className="bg-green-400 text-black px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition-colors"
           >
             Parfait, commencer l'évaluation
@@ -263,7 +372,7 @@ const ROICalculatorEducatif = () => {
                   className="text-center pt-6"
                 >
                   <button
-                    onClick={() => setCurrentStep(4)}
+                    onClick={() => setCurrentStep(6)}
                     className="bg-gradient-to-r from-yellow-400 to-green-400 text-black px-12 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-green-500 transition-all shadow-lg"
                   >
                     Voir ma projection personnalisée
@@ -315,7 +424,7 @@ const ROICalculatorEducatif = () => {
                     setIsSubmitting(true)
                     // Simuler l'envoi
                     await new Promise(resolve => setTimeout(resolve, 1500))
-                    setCurrentStep(5)
+                    setCurrentStep(7)
                   }}
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-yellow-400 to-green-400 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-green-500 transition-all shadow-lg disabled:opacity-50"
