@@ -171,7 +171,7 @@ export default function OutilsPage() {
               variants={itemVariants}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Analysez votre potentiel SEO et calculez votre ROI avec nos outils professionnels.
+              Analysez votre potentiel SEO et calculez votre performance avec nos outils professionnels.
               <br />
               <span className="text-yellow-400 font-semibold">Audit complet</span> et 
               <span className="text-green-400 font-semibold"> projection personnalisée</span> gratuits.
@@ -238,7 +238,7 @@ export default function OutilsPage() {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                 />
-                <span>Culture Peinture: 14x ROI</span>
+                <span>Culture Peinture: performance supérieure</span>
               </div>
               <div className="flex items-center">
                 <motion.div 
@@ -246,7 +246,7 @@ export default function OutilsPage() {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                 />
-                <span>Artisane Lumière: 68.6% Engagement</span>
+                <span>Artisane Lumière: engagement élevé</span>
               </div>
             </motion.div>
           </motion.div>

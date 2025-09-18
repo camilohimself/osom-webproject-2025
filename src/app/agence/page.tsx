@@ -77,11 +77,11 @@ export default function AgencePage() {
 
   const stats = [
     { number: '200+', label: 'Projets Réalisés', icon: '' },
-    { number: '14x', label: 'ROI Maximum', icon: '' },
+    { number: 'supérieur', label: 'Performance', icon: '' },
     { number: '5+', label: 'Années d\'Expertise', icon: '' },
     { number: '400+', label: 'Jours de Données', icon: '' },
     { number: '100%', label: 'Satisfaction Client', icon: '' },
-    { number: '68.6%', label: 'Engagement SEO', icon: '' }
+    { number: 'élevé', label: 'Engagement SEO', icon: '' }
   ]
 
   return (

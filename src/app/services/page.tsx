@@ -30,15 +30,15 @@ export default async function ServicesPage() {
     },
     {
       title: "Marketing Data-Driven",
-      subtitle: "ROI 14x supérieur aux ads traditionnelles",
+      subtitle: "Performance mesurable supérieure aux méthodes classiques",
       description: "Stratégie organique Facebook/Instagram avec création de contenu performant pour audiences ciblées",
       pricing: "À partir de 1000 CHF/mois",
       timeline: "Résultats dès 3 mois",
       expectedResults: [
-        "11.3% taux de conversion",
-        "99.3% réduction coût acquisition",
+        "Taux de conversion optimisé",
+        "Réduction significative coûts acquisition",
         "2.4M+ vues organiques",
-        "688 conversions documentées"
+        "Croissance documentée"
       ],
       caseStudy: "Pure player Genève : 8x plus efficace",
       icon: "",
@@ -56,7 +56,7 @@ export default async function ServicesPage() {
         "Core Web Vitals optimisés",
         "Trafic organique croissant"
       ],
-      caseStudy: "Augmentation trafic moyenne +150%",
+      caseStudy: "Augmentation trafic notable et durable",
       icon: ""
     },
     {

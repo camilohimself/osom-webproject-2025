@@ -1,5 +1,51 @@
 # Journal de Développement OSOM
 
+## Session 18 Septembre 2025 - ERREUR CRITIQUE MÉMOIRE & SWISS-CREDIBLE KPI
+
+### 🚨 INCIDENT MAJEUR - ERREUR MÉMOIRE HÉRO MESSAGE
+
+#### ❌ CE QUI S'EST MAL PASSÉ
+**Situation** : Claude confond l'ancien hero message avec le nouveau lors d'analyse marketing.
+
+**Erreurs commises par Claude** :
+1. **MAUVAISE RÉFÉRENCE** : Cité `"L'agence créative qui transforme vos données en pixels qui vendent"` (ancien)
+2. **RÉALITÉ SITE** : Actuel = `"NOUS TRAVAILLONS dans l'ombre POUR VOUS FAIRE BRILLER"` (nouveau)
+3. **PANIQUE UTILISATEUR** : Camilo effrayé par incohérence, demande vérification urgente
+4. **MÉTHODE DÉFAILLANTE** : Claude n'a PAS vérifié le site live avant analyse
+
+#### 🔍 ANALYSE ROOT CAUSE
+
+**PROBLÈME 1 - VALIDATION** :
+- Claude analyse sans vérifier état actuel du site
+- Se base sur mémoire sessions précédentes (obsolète)
+- Ne cross-check pas avec WebFetch avant affirmations
+
+**PROBLÈME 2 - MÉTHODOLOGIE** :
+- Propose plan basé sur fausses données
+- N'utilise pas WebFetch systématiquement pour validation
+- Assume l'état du code sans vérification
+
+#### ✅ PROCÉDURE CORRECTIVE APPLIQUÉE
+1. **WebFetch immédiat** : Vérification hero message réel
+2. **Grep recherche** : Localisation exacte du texte dans code
+3. **Read composant** : Confirmation `HeroSwissOSOMHybrid.tsx`
+4. **Plan réajusté** : Hero actuel déjà Swiss-compatible, pas de modification
+
+#### 🛡️ RÈGLES PRÉVENTIVES NOUVELLES
+
+**PROCESS OBLIGATOIRE pour toute analyse** :
+1. **WebFetch FIRST** - Toujours vérifier site live avant analyse
+2. **Cross-reference code** - Grep/Read pour confirmer état actuel
+3. **Jamais d'assumption** - Vérifier avant affirmer
+4. **WebFetch systematique** - Avant toute proposition de modification
+
+**RÈGLE D'OR RENFORCÉE** : "Vérifier l'état RÉEL avant proposer le plan"
+
+### 🇨🇭 GO MODE - SWISS-CREDIBLE KPI ADAPTATION
+
+#### 🎯 CONTEXTE SESSION
+Camilo valide que les KPI "américains" (688, ROI 14x, 99.3%) sont contreproductifs en Suisse où le digital est "encore au moyen âge". Demande adoucissement pour crédibilité locale, tout en gardant les case studies verrouillés avec vraies métriques.
+
 ## Session 17 Septembre 2025 - GO MODE COMPLET : OPTIMIZATION MOBILE-FIRST RÉUSSIE
 
 ### ✅ MISSION ACCOMPLIE - GO MODE OPTIMIZATION 100% COMPLÈTE

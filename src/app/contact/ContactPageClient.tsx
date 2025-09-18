@@ -70,7 +70,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
     { title: "Audit & Stratégie", time: "Semaine 1", value: "Analyse complète", color: "yellow", description: "Diagnostic approfondi de votre écosystème digital actuel" },
     { title: "Optimisation Tech", time: "Semaine 2-3", value: "Site + Analytics", color: "white", description: "Mise en place des fondations techniques solides" },
     { title: "Campagnes Lancées", time: "Semaine 4", value: "SEO + Ads", color: "yellow", description: "Déploiement des premières actions marketing" },
-    { title: "Premiers Résultats", time: "Mois 2", value: "+150% leads", color: "white", description: "Métriques positives et ajustements en temps réel" },
+    { title: "Premiers Résultats", time: "Mois 2", value: "leads augmentés", color: "white", description: "Métriques positives et ajustements en temps réel" },
     { title: "Scaling & Growth", time: "Mois 3+", value: "ROI optimisé", color: "yellow", description: "Accélération et expansion vers de nouveaux canaux" }
   ]
 
