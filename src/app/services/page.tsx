@@ -3,7 +3,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 
 export const metadata = {
-  title: 'Nos Services | osom - Agence Web Digitale Valais',
+  title: 'Nos services | osom - Agence web digitale Valais',
   description: 'Découvrez nos services : création de sites web, SEO, marketing digital et plus. Solutions complètes pour votre présence en ligne.',
 }
 
@@ -45,7 +45,7 @@ export default async function ServicesPage() {
       realData: true
     },
     {
-      title: "SEO Technique Expert",
+      title: "SEO technique expert",
       subtitle: "Visibilité Google garantie",
       description: "Optimisation technique poussée avec outils professionnels pour dominer votre secteur",
       pricing: "À partir de 800 CHF/mois",
@@ -60,7 +60,7 @@ export default async function ServicesPage() {
       icon: ""
     },
     {
-      title: "Sites Web Premium",
+      title: "Sites web premium",
       subtitle: "Design & performance exceptionnels",
       description: "Développement sur mesure avec technologies modernes pour des expériences utilisateur remarquables",
       pricing: "À partir de 3500 CHF",

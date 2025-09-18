@@ -15,7 +15,7 @@ export default function CreationSiteWebPage() {
   const studioProjects = [
     {
       id: 'vitrine',
-      name: 'Site Vitrine Express',
+      name: 'Site vitrine express',
       client: 'PME locale',
       preview: 'WEB',
       before: 'Aucune présence en ligne',
@@ -136,7 +136,7 @@ export default function CreationSiteWebPage() {
   ]
 
   const mobileData = {
-    title: "Site Web Qui Convertit",
+    title: "Site web qui convertit",
     subtitle: "Next.js premium, design sur-mesure, performance garantie",
     mainKPI: {
       value: "25% CTR",

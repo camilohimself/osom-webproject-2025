@@ -31,11 +31,11 @@ import IconeOSOM from '@/components/IconeOSOM'
 import LogoOSOM from '@/components/ui/LogoOSOM'
 
 export const metadata: Metadata = {
-  title: 'Agence Web Valais OSOM | Marketing IA × Création Site Internet',
+  title: 'Agence web Valais OSOM | Marketing IA × Création site internet',
   description: 'Agence Web VALAIS N°1 : 1589 recherches "agence web valais" → Expertise confirmée. Marketing data-driven avancé. Création site internet, SEO, marketing digital révolutionnaire.',
   keywords: 'agence web valais, création site internet valais, seo valais, marketing digital valais, agence marketing valais, référencement valais, agence digitale valais, site web valais',
   openGraph: {
-    title: 'OSOM - Marketing Humain × Puissance IA Révolutionnaire',
+    title: 'OSOM - Marketing humain × Puissance IA révolutionnaire',
     description: 'Agence marketing data-driven VALAIS. Résultats vérifiés et performances mesurables. Révolution marketing VALAIS.',
     url: 'https://osom.ch',
     siteName: 'OSOM',
