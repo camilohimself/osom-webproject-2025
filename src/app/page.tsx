@@ -28,6 +28,7 @@ import InteractiveBackground from '@/components/ui/InteractiveBackground'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 import MagneticButton from '@/components/ui/MagneticButton'
 import IconeOSOM from '@/components/IconeOSOM'
+import LogoOSOM from '@/components/ui/LogoOSOM'
 
 export const metadata: Metadata = {
   title: 'Agence Web Valais OSOM | Marketing IA × Création Site Internet',
@@ -144,7 +145,7 @@ export default async function Home() {
             {/* Desktop: Méthode complète */}
             <div className="hidden lg:block text-center mb-24">
               <div className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Notre méthode <span className="text-yellow-400">OSOM</span>
+                Notre méthode <LogoOSOM size="lg" className="inline-block ml-4 align-middle" />
               </div>
 
               <div className="text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
