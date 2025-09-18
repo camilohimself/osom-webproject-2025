@@ -8,7 +8,12 @@ import { cookies } from 'next/headers'
 import AnalyticsScripts from '@/components/analytics/AnalyticsScripts'
 import { ABTestProvider } from '@/components/ab-testing/ABTestProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  variable: '--font-inter'
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://osom.ch'),
@@ -46,10 +51,16 @@ export default async function RootLayout({
   return (
     <html lang={currentLocale}>
       <head>
+        {/* Preload Inter font pour éliminer FOUC */}
+        <link
+          rel="preload"
+          href="/_next/static/css/app/layout.css"
+          as="style"
+        />
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${inter.variable}`}>
         <div id="app-container">
           <ABTestProvider>
             <Header currentLocale={currentLocale} dictionary={dictionary} />

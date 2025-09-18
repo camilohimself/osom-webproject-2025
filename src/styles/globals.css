@@ -27,6 +27,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  /* Font fallback pour éliminer FOUC */
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,7 +43,8 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #ffffff;
-  font-family: 'Cera PRO', 'Inter', sans-serif;
+  font-family: var(--font-inter), 'Cera PRO', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-display: swap;
 }
 
 html {

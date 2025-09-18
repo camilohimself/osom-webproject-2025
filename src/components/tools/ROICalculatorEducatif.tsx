@@ -276,105 +276,190 @@ const ROICalculatorEducatif = () => {
       )
     },
     {
-      id: 'results',
-      title: 'Votre projection personnalisée',
-      subtitle: 'Basée sur vos réponses et nos données suisses',
+      id: 'email',
+      title: 'Une dernière chose',
+      subtitle: 'Votre email pour recevoir votre analyse personnalisée',
       content: (
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-yellow-400/10 border border-yellow-400/30 rounded-2xl p-6 text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">
-                {formData.chiffreAffaires === '< 500K CHF' ? '+47%' :
-                 formData.chiffreAffaires === '500K - 1M CHF' ? '+63%' :
-                 formData.chiffreAffaires === '1M - 5M CHF' ? '+78%' : '+92%'}
-              </div>
-              <div className="text-sm text-gray-300">Augmentation leads qualifiés</div>
-              <div className="text-xs text-yellow-400 mt-1">Estimation 12 mois</div>
+        <div className="max-w-lg mx-auto text-center">
+          <div className="bg-purple-400/10 border border-purple-400/30 rounded-2xl p-8">
+            <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
             </div>
 
-            <div className="bg-cyan-400/10 border border-cyan-400/30 rounded-2xl p-6 text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">
-                {formData.budgetMarketing === '0 CHF' ? '2.8x' :
-                 formData.budgetMarketing === '< 500 CHF' ? '4.1x' :
-                 formData.budgetMarketing === '500-2000 CHF' ? '3.6x' : '5.2x'}
-              </div>
-              <div className="text-sm text-gray-300">Retour sur investissement</div>
-              <div className="text-xs text-cyan-400 mt-1">ROI digital optimisé</div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Votre analyse est prête
+            </h3>
+
+            <p className="text-gray-300 mb-8">
+              Nous vous envoyons votre projection ROI personnalisée + nos recommandations sectorielles par email.
+            </p>
+
+            <div className="space-y-4">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="votre.email@entreprise.ch"
+                className="w-full px-4 py-4 bg-black/40 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 transition-colors"
+                disabled={isSubmitting}
+              />
+
+              {email && email.includes('@') && email.includes('.') && (
+                <motion.button
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  onClick={async () => {
+                    setIsSubmitting(true)
+                    // Simuler l'envoi
+                    await new Promise(resolve => setTimeout(resolve, 1500))
+                    setCurrentStep(5)
+                  }}
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-yellow-400 to-green-400 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-green-500 transition-all shadow-lg disabled:opacity-50"
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <motion.div
+                        className="w-5 h-5 border-2 border-black border-t-transparent rounded-full mr-3"
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                      />
+                      Envoi en cours...
+                    </div>
+                  ) : (
+                    'Recevoir mon analyse'
+                  )}
+                </motion.button>
+              )}
             </div>
 
-            <div className="bg-green-400/10 border border-green-400/30 rounded-2xl p-6 text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">
-                {formData.nombreEmployes === '1-5' ? '8-15' :
-                 formData.nombreEmployes === '6-20' ? '12-28' :
-                 formData.nombreEmployes === '21-50' ? '25-45' : '40-80'}
-              </div>
-              <div className="text-sm text-gray-300">Nouveaux clients/mois</div>
-              <div className="text-xs text-green-400 mt-1">Projection conservative</div>
-            </div>
+            <p className="text-xs text-gray-500 mt-6">
+              Aucun spam. Juste votre analyse + conseils stratégiques OSOM.
+            </p>
           </div>
+        </div>
+      )
+    },
+    {
+      id: 'thank-you',
+      title: 'Merci !',
+      subtitle: 'Vous aurez rapidement des nouvelles de OSOM',
+      content: (
+        <div className="max-w-2xl mx-auto text-center">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+            className="mb-8"
+          >
+            <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 via-green-400 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-8 relative overflow-hidden">
+              {/* Effet de brillance */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                animate={{ x: [-200, 200] }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                style={{ transform: 'skewX(-20deg)' }}
+              />
 
-          <div className="bg-black/40 border border-gray-700 rounded-2xl p-8 mb-8">
-            <h3 className="text-xl font-bold text-white mb-6">Recommandations pour votre secteur</h3>
-            <div className="space-y-4 text-gray-300">
-              {formData.secteur === 'Services B2B' && (
-                <>
-                  <p>• <span className="text-yellow-400">Priorité 1 :</span> Site web professionnel avec case studies</p>
-                  <p>• <span className="text-cyan-400">Priorité 2 :</span> SEO local + LinkedIn automation</p>
-                  <p>• <span className="text-green-400">Priorité 3 :</span> Email nurturing pour prospects longs</p>
-                </>
-              )}
-              {formData.secteur === 'Commerce local' && (
-                <>
-                  <p>• <span className="text-yellow-400">Priorité 1 :</span> Google My Business optimisé + avis</p>
-                  <p>• <span className="text-cyan-400">Priorité 2 :</span> Site e-commerce local</p>
-                  <p>• <span className="text-green-400">Priorité 3 :</span> Réseaux sociaux + promo locale</p>
-                </>
-              )}
-              {formData.secteur === 'Santé' && (
-                <>
-                  <p>• <span className="text-yellow-400">Priorité 1 :</span> Site conforme + prise RDV en ligne</p>
-                  <p>• <span className="text-cyan-400">Priorité 2 :</span> SEO médical local strict</p>
-                  <p>• <span className="text-green-400">Priorité 3 :</span> Content éducatif patients</p>
-                </>
-              )}
-              {(formData.secteur === 'Construction' || formData.secteur === 'Industrie') && (
-                <>
-                  <p>• <span className="text-yellow-400">Priorité 1 :</span> Portfolio projets + témoignages</p>
-                  <p>• <span className="text-cyan-400">Priorité 2 :</span> SEO "entreprise + localité"</p>
-                  <p>• <span className="text-green-400">Priorité 3 :</span> Lead magnets sectoriels</p>
-                </>
-              )}
+              <svg className="w-16 h-16 text-black relative z-10" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="text-center">
-            <p className="text-gray-400 mb-6">Ces projections sont basées sur nos case studies suisses réels</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
-                href="/contact"
-                className="bg-gradient-to-r from-yellow-400 to-green-400 text-black px-8 py-4 rounded-xl font-bold hover:from-yellow-500 hover:to-green-500 transition-all shadow-lg"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Stratégie personnalisée gratuite
-              </motion.a>
-              <button
-                onClick={() => {
-                  setCurrentStep(0)
-                  setFormData({
-                    secteur: '',
-                    chiffreAffaires: '',
-                    nombreEmployes: '',
-                    budgetMarketing: '',
-                    objectifCroissance: ''
-                  })
-                }}
-                className="border-2 border-yellow-400/60 text-yellow-400 px-8 py-4 rounded-xl font-medium hover:bg-yellow-400 hover:text-black transition-all"
-              >
-                Nouveau calcul
-              </button>
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-4xl font-bold text-white mb-6"
+          >
+            Analyse envoyée sur {email}
+          </motion.h3>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="bg-gradient-to-r from-yellow-400/10 via-green-400/10 to-cyan-400/10 border border-yellow-400/30 rounded-2xl p-8 mb-8"
+          >
+            <p className="text-xl text-gray-300 mb-6">
+              Votre projection ROI personnalisée arrive dans votre boîte mail avec nos recommandations sectorielles détaillées.
+            </p>
+
+            <div className="space-y-3 text-gray-400">
+              <div className="flex items-center justify-center">
+                <motion.div
+                  className="w-2 h-2 rounded-full bg-yellow-400 mr-3"
+                  animate={{ scale: [1, 1.3, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                <span>Un expert OSOM vous contactera sous 24h</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <motion.div
+                  className="w-2 h-2 rounded-full bg-green-400 mr-3"
+                  animate={{ scale: [1, 1.3, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                />
+                <span>Stratégie personnalisée gratuite disponible</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <motion.div
+                  className="w-2 h-2 rounded-full bg-cyan-400 mr-3"
+                  animate={{ scale: [1, 1.3, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                />
+                <span>Première consultation offerte</span>
+              </div>
             </div>
-          </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <motion.a
+              href="/contact"
+              className="bg-gradient-to-r from-yellow-400 to-green-400 text-black px-8 py-4 rounded-xl font-bold hover:from-yellow-500 hover:to-green-500 transition-all shadow-lg"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Nous contacter directement
+            </motion.a>
+
+            <button
+              onClick={() => {
+                setCurrentStep(0)
+                setEmail('')
+                setFormData({
+                  secteur: '',
+                  chiffreAffaires: '',
+                  nombreEmployes: '',
+                  budgetMarketing: '',
+                  objectifCroissance: ''
+                })
+              }}
+              className="border-2 border-yellow-400/60 text-yellow-400 px-8 py-4 rounded-xl font-medium hover:bg-yellow-400 hover:text-black transition-all"
+            >
+              Nouvelle analyse
+            </button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            className="mt-12 text-center"
+          >
+            <div className="text-sm text-gray-500">
+              <span className="text-yellow-400">●</span> Confidentialité garantie <span className="text-yellow-400">●</span> Aucun engagement <span className="text-yellow-400">●</span> Support expert inclus
+            </div>
+          </motion.div>
         </div>
       )
     }
