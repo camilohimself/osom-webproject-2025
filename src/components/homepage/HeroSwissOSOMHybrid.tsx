@@ -146,31 +146,21 @@ const HeroSwissOSOMHybrid = ({ dictionary }: HeroSwissOSOMProps) => {
               </div>
             </div>
 
-            {/* Mobile: Version simplifiée */}
-            <div className="lg:hidden space-y-4 font-sans text-white mb-8">
-              <div className="text-4xl md:text-5xl font-bold leading-none text-yellow-400">
-                NOUS TRAVAILLONS
-              </div>
-              <div className="text-2xl font-light text-gray-300">
-                dans l'ombre pour vous faire briller.
-              </div>
-            </div>
-
-            {/* Desktop: Typographie complète */}
-            <div className="hidden lg:block space-y-0 font-sans text-white">
-              <div className="text-6xl md:text-8xl font-bold leading-none">
+            {/* Version unifiée - évite le flash hydratation */}
+            <div className="space-y-0 font-sans text-white">
+              <div className="text-4xl md:text-6xl lg:text-8xl font-bold leading-none">
                 NOUS
               </div>
-              <div className="text-6xl md:text-8xl font-bold leading-none text-yellow-400">
+              <div className="text-4xl md:text-6xl lg:text-8xl font-bold leading-none text-yellow-400">
                 TRAVAILLONS
               </div>
-              <div className="text-3xl md:text-4xl font-light mt-8 leading-tight text-gray-300">
+              <div className="text-xl md:text-3xl lg:text-4xl font-light mt-4 lg:mt-8 leading-tight text-gray-300">
                 dans l'ombre
               </div>
-              <div className="text-6xl md:text-8xl font-bold text-yellow-400 leading-none">
+              <div className="text-4xl md:text-6xl lg:text-8xl font-bold text-yellow-400 leading-none">
                 POUR VOUS
               </div>
-              <div className="text-6xl md:text-8xl font-bold leading-none">
+              <div className="text-4xl md:text-6xl lg:text-8xl font-bold leading-none">
                 FAIRE BRILLER.
               </div>
             </div>
@@ -197,27 +187,21 @@ const HeroSwissOSOMHybrid = ({ dictionary }: HeroSwissOSOMProps) => {
               </div>
             </div>
 
-            {/* Métriques - Desktop uniquement */}
-            <div className="hidden lg:grid grid-cols-3 gap-8 max-w-2xl">
-              <div>
+            {/* Métriques responsive unifiées */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 max-w-2xl">
+              <div className="text-center lg:text-left">
+                <div className="text-xs text-gray-500 mb-1 tracking-wider">CONVERSION</div>
+                <div className="text-2xl lg:text-2xl font-bold text-yellow-400">25% CTR</div>
+                <div className="text-xs text-gray-400 lg:hidden">vs 2-3% industrie</div>
+              </div>
+              <div className="hidden lg:block">
                 <div className="text-xs text-gray-500 mb-1 tracking-wider">PRÉCISION</div>
                 <div className="text-2xl font-bold text-yellow-400">99.7%</div>
               </div>
-              <div>
-                <div className="text-xs text-gray-500 mb-1 tracking-wider">CONVERSION</div>
-                <div className="text-2xl font-bold text-yellow-400">25%</div>
-              </div>
-              <div>
+              <div className="hidden lg:block">
                 <div className="text-xs text-gray-500 mb-1 tracking-wider">VITESSE</div>
                 <div className="text-2xl font-bold text-yellow-400">&lt;2s</div>
               </div>
-            </div>
-
-            {/* Mobile: Un seul KPI principal */}
-            <div className="lg:hidden text-center">
-              <div className="text-xs text-gray-500 mb-1 tracking-wider">CONVERSION</div>
-              <div className="text-4xl font-bold text-yellow-400">25% CTR</div>
-              <div className="text-xs text-gray-400">vs 2-3% industrie</div>
             </div>
           </div>
 

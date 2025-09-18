@@ -117,11 +117,13 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
             <p className="text-brand-light text-sm">
               Recevez nos dernières actualités et conseils digitaux.
             </p>
-            <form className="space-y-2">
+            <form className="space-y-2" action="/api/newsletter" method="POST">
               <input
                 type="email"
+                name="email"
                 placeholder="Votre email"
                 className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-brand-primary"
+                required
               />
               <button
                 type="submit"

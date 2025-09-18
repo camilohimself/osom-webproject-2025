@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CalculatorForm, CalculatorResults } from '@/components/calculator'
 import SEOAuditTool from '@/components/tools/SEOAuditTool'
+import ROICalculatorEducatif from '@/components/tools/ROICalculatorEducatif'
 import AnimatedElement from '@/components/ui/AnimatedElement'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import type { CalculatorResults as CalculatorResultsType } from '@/types/calculator'
@@ -288,103 +289,28 @@ export default function OutilsPage() {
             </div>
           </AnimatedElement>
 
-          {/* ROI Calculator Section */}
-          {isLoading ? (
-            <motion.div 
-              className="flex justify-center items-center py-20"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="text-center">
-                {/* Premium Loading Animation */}
-                <motion.div 
-                  className="relative w-20 h-20 mx-auto mb-6"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                >
-                  <div className="absolute inset-0 rounded-full border-4 border-yellow-400/20" />
-                  <motion.div 
-                    className="absolute inset-0 rounded-full border-4 border-yellow-400 border-t-transparent"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                  />
-                </motion.div>
-                
-                <motion.p 
-                  className="text-xl text-white mb-2" 
-                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                  animate={{ opacity: [0.7, 1, 0.7] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  Calcul en cours...
-                </motion.p>
-                <p className="text-gray-400" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                  Analyse de vos données avec algorithmes OSOM
-                </p>
-                
-                {/* Progress indicators */}
-                <div className="flex justify-center space-x-2 mt-4">
-                  {[0, 1, 2].map((i) => (
-                    <motion.div
-                      key={i}
-                      className="w-2 h-2 rounded-full bg-yellow-400"
-                      animate={{
-                        scale: [1, 1.5, 1],
-                        opacity: [0.5, 1, 0.5]
-                      }}
-                      transition={{
-                        duration: 1,
-                        repeat: Infinity,
-                        delay: i * 0.2
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ) : results ? (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <CalculatorResults results={results} onReset={handleReset} />
-            </motion.div>
-          ) : (
-            <div>
-              <AnimatedElement type="slideUp" delay={0.2}>
-                <div className="text-center mb-20">
-                  <div className="flex items-center justify-center mb-6">
-                    <motion.div 
-                      className="w-2 h-2 rounded-full bg-green-400 mr-3"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                    <span className="text-green-400 text-sm font-medium tracking-wide">
-                      CALCULATEUR ROI • PROJECTION PERSONNALISÉE
-                    </span>
-                  </div>
-                  
-                  <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight">
-                    <span className="text-green-400 font-bold">Calculateur ROI</span> Avancé
-                  </h2>
-                  
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                    Basé sur <span className="text-yellow-400 font-semibold">688 conversions réelles</span> de Culture Peinture 
-                    et nos <span className="text-cyan-400 font-semibold">case studies vérifiés GA4</span>.
-                  </p>
-                </div>
-              </AnimatedElement>
-              
-              <AnimatedElement type="slideUp" delay={0.4}>
-                <CalculatorForm 
-                  onResults={handleResults} 
-                  onLoading={handleLoading} 
-                />
-              </AnimatedElement>
+          {/* ROI Calculator Section - Desktop uniquement */}
+          <div className="hidden lg:block">
+            <ROICalculatorEducatif />
+          </div>
+
+          {/* Message mobile */}
+          <div className="lg:hidden text-center py-20">
+            <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-2xl p-8 max-w-md mx-auto">
+              <h3 className="text-2xl font-bold text-yellow-400 mb-4">Calculateur disponible sur desktop</h3>
+              <p className="text-gray-300 mb-6">
+                Pour une expérience optimale, utilisez un ordinateur pour accéder au calculateur roi interactif.
+              </p>
+              <motion.a
+                href="/contact"
+                className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Consultation directe
+              </motion.a>
             </div>
-          )}
+          </div>
         </div>
       </section>
 

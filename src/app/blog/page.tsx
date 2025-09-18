@@ -107,7 +107,7 @@ export default function BlogEditorialPage() {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6">
-                La Vérité Sur L'Écran : Où L'IA Nous Mène-t-Elle Vraiment ?
+                LA VÉRITÉ SUR L'ÉCRAN : OÙ L'IA NOUS MÈNE-T-ELLE VRAIMENT ?
               </h1>
               
               <p className="text-xl text-gray-600 mb-6 font-light leading-relaxed">

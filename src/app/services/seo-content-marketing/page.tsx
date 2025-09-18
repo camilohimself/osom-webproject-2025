@@ -109,7 +109,7 @@ export default function SEOContentMarketingPage() {
               Consultation gratuite 30 min
             </Link>
             <Link
-              href="#services" 
+              href="/services" 
               className="inline-flex items-center px-8 py-5 rounded-xl border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 text-lg font-medium"
             >
               Voir notre méthode
