@@ -305,7 +305,7 @@ export default function PongGame() {
   }, [gameState])
 
   return (
-    <div className="bg-black p-8 rounded-2xl border border-green-500/30">
+    <div className="bg-black p-8 rounded-2xl border border-green-500/30 mx-auto max-w-4xl">
       {/* Header rétro */}
       <div className="text-center mb-6">
         <div className="text-green-400 font-mono text-lg mb-2">
@@ -316,8 +316,8 @@ export default function PongGame() {
         </div>
       </div>
 
-      {/* Canvas Game */}
-      <div className="relative">
+      {/* Canvas Game - Centré */}
+      <div className="relative flex justify-center">
         <canvas
           ref={canvasRef}
           width={CANVAS_WIDTH}
