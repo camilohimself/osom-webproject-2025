@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import React from 'react'
 import IconeOSOM from '@/components/IconeOSOM'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
