@@ -227,12 +227,21 @@ export default function TrackingDataPage() {
       </section>
 
 
-      {/* TARIFICATION TRACKING */}
+      {/* PACKAGES PERSONNALISÉS TRACKING DATA */}
       <section className="py-24 relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/5 via-transparent to-pink-400/5" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Anti-Agence Tracking */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-              Investissement <span className="text-purple-400 font-bold">tracking</span>
+            <div className="inline-flex items-center px-6 py-3 bg-purple-400/20 rounded-full text-purple-400 text-sm font-medium mb-8">
+              <div className="w-2 h-2 bg-purple-400 rounded-full mr-3 animate-pulse"></div>
+              LA SEULE AGENCE TRACKING DU VALAIS QUI RÉVÈLE VOS DONNÉES CACHÉES
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
+              Fini les <span className="text-red-400 line-through">métriques vanity</span>
+              <br />
+              <span className="font-bold text-purple-400">Voici vos vraies données</span>
             </h2>
             <p className="text-xl text-gray-400">
               Setup professionnel et accompagnement
