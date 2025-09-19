@@ -2,18 +2,11 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
-import { useCookieConsent, type CookieConsent } from '@/hooks/useCookieConsent'
+import { useCookieConsent } from '@/hooks/useCookieConsent'
 
 const CookieBanner = () => {
-  const { showBanner, acceptAll, acceptEssential, updateConsent } = useCookieConsent()
+  const { showBanner, acceptAll, acceptEssential } = useCookieConsent()
   const [showRecipe, setShowRecipe] = useState(false)
-  const [customConsent, setCustomConsent] = useState<CookieConsent>({
-    essential: true,
-    analytics: false,
-    marketing: false,
-    functional: false
-  })
 
   if (!showBanner) return null
 
