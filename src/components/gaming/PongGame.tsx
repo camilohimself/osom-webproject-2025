@@ -29,7 +29,7 @@ interface ScoreRecord {
 
 export default function PongGame() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const animationRef = useRef<number | undefined>()
+  const animationRef = useRef<number | undefined>(undefined)
   const [gameState, setGameState] = useState<GameState>({
     ballX: 400,
     ballY: 200,

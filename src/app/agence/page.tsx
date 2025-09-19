@@ -136,7 +136,7 @@ export default function AgencePage() {
                 href="tel:+41791289549"
                 className="block w-full border-2 border-yellow-400 text-yellow-400 py-4 px-6 rounded-xl font-medium text-lg text-center"
               >
-                📞 +41 79 128 95 49
+                +41 79 128 95 49
               </a>
             </div>
           </div>
@@ -510,34 +510,78 @@ export default function AgencePage() {
                   
                   
 
-      {/* TIMELINE SIMPLIFIÉE */}
+      {/* TIMELINE ULTRA MINIMALISTE */}
       <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-cyan-400 text-sm font-medium tracking-wide uppercase">NOTRE HISTOIRE</span>
-            <h2 className="text-4xl md:text-5xl font-light text-white mt-4 mb-8 leading-tight">
-              5 ans d'<span className="text-cyan-400 font-bold">innovation</span> continue
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light text-white">
+              <span className="text-cyan-400">2019-2025</span> Evolution
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {timeline.map((item, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className={`bg-${item.color}-400 w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center`}>
-                  <span className="text-black font-bold">{item.year.slice(-2)}</span>
-                </div>
-                <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm">{item.description}</p>
-              </motion.div>
-            ))}
+          <div className="flex justify-between items-center max-w-4xl mx-auto relative">
+            {/* Ligne horizontale */}
+            <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
+
+            {/* Points clés uniquement */}
+            <motion.div
+              className="relative z-10 text-center"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="w-3 h-3 bg-cyan-400 rounded-full mx-auto mb-2"></div>
+              <p className="text-xs text-gray-400">2019</p>
+              <p className="text-xs text-white font-medium">Début</p>
+            </motion.div>
+
+            <motion.div
+              className="relative z-10 text-center"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="w-4 h-4 bg-green-400 rounded-full mx-auto mb-2"></div>
+              <p className="text-xs text-gray-400">2021</p>
+              <p className="text-xs text-white font-medium">Data</p>
+            </motion.div>
+
+            <motion.div
+              className="relative z-10 text-center"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+            >
+              <div className="w-5 h-5 bg-yellow-400 rounded-full mx-auto mb-2"></div>
+              <p className="text-xs text-gray-400">2023</p>
+              <p className="text-xs text-white font-medium">Brevet</p>
+            </motion.div>
+
+            <motion.div
+              className="relative z-10 text-center"
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+            >
+              <div className="w-6 h-6 bg-purple-400 rounded-full mx-auto mb-2 animate-pulse"></div>
+              <p className="text-xs text-gray-400">2025</p>
+              <p className="text-xs text-white font-medium">OSOM</p>
+            </motion.div>
           </div>
+
+          {/* Résumé en une ligne */}
+          <motion.p
+            className="text-center text-gray-400 mt-8 text-sm max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.8 }}
+          >
+            De l'artisanat web au data-driven marketing. <span className="text-cyan-400">200+ projets</span>, <span className="text-yellow-400">certifications officielles</span>, <span className="text-purple-400">méthodologie éprouvée</span>.
+          </motion.p>
         </div>
       </section>
 
