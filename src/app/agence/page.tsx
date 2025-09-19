@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import dynamic from 'next/dynamic'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
@@ -18,7 +18,8 @@ const TicTacToeGame = dynamic(() => import('@/components/gaming/TicTacToeGame'),
 })
 
 export default function AgencePage() {
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   const valeurs = [
     {
@@ -50,52 +51,6 @@ export default function AgencePage() {
     }
   ]
 
-  const timeline = [
-    {
-      year: '2019',
-      title: 'Les Débuts',
-      description: 'Premiers projets web avec une approche artisanale. Focus sur la qualité technique et l\'expérience utilisateur.',
-      icon: '',
-      color: 'cyan'
-    },
-    {
-      year: '2021',
-      title: 'Certification Data',
-      description: 'Formation Google Data Analyst. Pivot vers une approche 100% data-driven avec tracking avancé GA4.',
-      icon: '',
-      color: 'green'
-    },
-    {
-      year: '2023',
-      title: 'Brevet Fédéral',
-      description: 'Obtention du Brevet Fédéral en Marketing SAWI. Expertise reconnue officiellement par la Confédération.',
-      icon: '',
-      color: 'yellow'
-    },
-    {
-      year: '2024',
-      title: 'Révolution ROI',
-      description: 'Culture Peinture : 8x plus efficace que les ads. Naissance de la méthodologie OSOM.',
-      icon: '',
-      color: 'purple'
-    },
-    {
-      year: '2025',
-      title: 'OSOM Today',
-      description: '200+ projets, méthodologie éprouvée, résultats transparents. L\'agence qui mesure tout.',
-      icon: '',
-      color: 'pink'
-    }
-  ]
-
-  const stats = [
-    { number: '200+', label: 'Projets Réalisés', icon: '' },
-    { number: 'supérieur', label: 'Performance', icon: '' },
-    { number: '5+', label: 'Années d\'Expertise', icon: '' },
-    { number: '400+', label: 'Jours de Données', icon: '' },
-    { number: '100%', label: 'Satisfaction Client', icon: '' },
-    { number: 'élevé', label: 'Engagement SEO', icon: '' }
-  ]
 
   return (
     <div className="min-h-screen bg-black relative">
@@ -150,20 +105,12 @@ export default function AgencePage() {
             </h2>
 
             <div className="space-y-6">
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-yellow-400/30">
-                <h3 className="text-lg font-bold text-yellow-400 mb-2">Data-Driven</h3>
-                <p className="text-gray-300 text-sm">Zéro intuition, que des faits vérifiables.</p>
-              </div>
-
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-green-400/30">
-                <h3 className="text-lg font-bold text-green-400 mb-2">Transparence</h3>
-                <p className="text-gray-300 text-sm">ROI visible et mesurable.</p>
-              </div>
-
-              <div className="bg-gray-900/50 rounded-xl p-6 border border-purple-400/30">
-                <h3 className="text-lg font-bold text-purple-400 mb-2">Innovation</h3>
-                <p className="text-gray-300 text-sm">Technologies premium avant-gardistes.</p>
-              </div>
+              {valeurs.map((valeur, index) => (
+                <div key={valeur.id} className={`bg-gray-900/50 rounded-xl p-6 border border-${valeur.color}-400/30`}>
+                  <h3 className={`text-lg font-bold text-${valeur.color}-400 mb-2`}>{valeur.title}</h3>
+                  <p className="text-gray-300 text-sm">{valeur.subtitle}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -228,8 +175,6 @@ export default function AgencePage() {
       <div className="hidden lg:block">
         {/* HERO SIMPLIFIÉ - Sans vidéo background */}
         <section className="h-screen relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
-
-
         {/* CONTENU HERO */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center max-w-6xl mx-auto px-4">
@@ -313,8 +258,6 @@ export default function AgencePage() {
                   href="#video-showcase"
                   className="border-2 border-white/40 text-white px-12 py-5 rounded-2xl font-medium text-xl hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-sm"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                  onMouseEnter={() => setHoveredCard('cta-secondary')}
-                  onMouseLeave={() => setHoveredCard(null)}
                 >
                   Voir nos réalisations
                 </Link>
@@ -348,17 +291,15 @@ export default function AgencePage() {
           {/* Vidéo Click-to-Play */}
           <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10 group cursor-pointer"
                onClick={() => {
-                 const video = document.getElementById('osom-video') as HTMLVideoElement;
-                 const overlay = document.getElementById('video-overlay');
-                 if (video && overlay) {
-                   video.play();
-                   overlay.style.display = 'none';
+                 if (videoRef.current) {
+                   videoRef.current.play();
+                   setIsVideoPlaying(true);
                  }
                }}>
 
             {/* Vidéo */}
             <video
-              id="osom-video"
+              ref={videoRef}
               className="w-full h-full object-cover"
               muted
               loop
@@ -369,7 +310,8 @@ export default function AgencePage() {
             </video>
 
             {/* Overlay Click-to-Play */}
-            <div id="video-overlay" className="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm group-hover:bg-black/40 transition-all duration-300">
+            {!isVideoPlaying && (
+              <div className="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm group-hover:bg-black/40 transition-all duration-300">
               <div className="text-center">
                 <motion.div
                   className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform"
@@ -383,7 +325,8 @@ export default function AgencePage() {
                 <p className="text-white font-medium text-lg">Cliquez pour voir OSOM motion</p>
                 <p className="text-white/70 text-sm mt-1">Performance optimisée</p>
               </div>
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -501,14 +444,6 @@ export default function AgencePage() {
 
         </div>
       </section>
-
-
-
-
-                
-                  
-                  
-                  
 
       {/* TIMELINE ULTRA MINIMALISTE */}
       <section className="py-20 bg-black">
