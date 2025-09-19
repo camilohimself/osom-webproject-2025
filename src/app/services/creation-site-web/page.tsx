@@ -1,60 +1,21 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import React from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ServicePageMobile } from '@/components/services/ServicePageMobile'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export default function CreationSiteWebPage() {
-  const [selectedProject, setSelectedProject] = useState('vitrine')
-  const [selectedPrice, setSelectedPrice] = useState('growth')
-  const [currentStep, setCurrentStep] = useState(1)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const timelineRef = useRef<HTMLElement>(null)
 
-  // Optimisation scroll OSOM + Timeline tracking
+  // Scroll tracking pour timeline avec useRef
   useEffect(() => {
-    // Smooth scroll CSS pour toute la page
-    document.documentElement.style.scrollBehavior = 'smooth'
-    document.body.style.scrollBehavior = 'smooth'
-
-    // Optimisation performance scroll OSOM
-    const style = document.createElement('style')
-    style.textContent = `
-      * {
-        scroll-behavior: smooth;
-      }
-      html {
-        scroll-padding-top: 100px;
-      }
-      .scroll-smooth {
-        -webkit-overflow-scrolling: touch;
-      }
-      /* Optimisation GPU pour scroll fluide */
-      .motion-div, motion-div {
-        will-change: transform, opacity;
-        transform: translateZ(0);
-      }
-      /* Amélioration performance sections */
-      section {
-        contain: style layout;
-      }
-      /* Smooth scrolling pour tous les navigateurs */
-      @media (prefers-reduced-motion: no-preference) {
-        html {
-          scroll-behavior: smooth;
-        }
-      }
-    `
-    document.head.appendChild(style)
-
-    // Scroll tracking pour timeline - CORRIGÉ OSOM
     const handleScroll = () => {
-      const timelineSection = document.querySelector('.timeline-section')
-      if (!timelineSection) return
+      if (!timelineRef.current) return
 
-      const rect = timelineSection.getBoundingClientRect()
+      const rect = timelineRef.current.getBoundingClientRect()
       const sectionTop = window.scrollY + rect.top
       const sectionHeight = rect.height
       const scrollTop = window.scrollY
@@ -68,11 +29,7 @@ export default function CreationSiteWebPage() {
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
-
-    return () => {
-      document.head.removeChild(style)
-      window.removeEventListener('scroll', handleScroll)
-    }
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   
   // Projets du studio avec émojis pour simplicité
@@ -324,7 +281,7 @@ export default function CreationSiteWebPage() {
       <div className="hidden lg:block min-h-screen bg-black text-white" style={{scrollBehavior: 'smooth'}}>
       
       {/* HERO PROCESS VISUEL - TIMELINE INTERACTIVE */}
-      <section className="timeline-section relative min-h-[90vh] flex items-center justify-center pt-32 pb-16">
+      <section ref={timelineRef} className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-16">
         
         {/* Background timeline effect */}
         <div className="absolute inset-0">

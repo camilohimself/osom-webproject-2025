@@ -11,7 +11,6 @@ import GaugeChart from '@/components/ui/GaugeChart'
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOMHybrid from '@/components/homepage/HeroSwissOSOMHybrid'
-// Sections supprimées pour approche directe
 
 // Lazy loading Piliers Swiss optimisé
 const PilierSwiss1 = dynamic(() => import('@/components/homepage/PilierSwiss1'), {
