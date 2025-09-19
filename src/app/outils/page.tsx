@@ -1,30 +1,13 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { CalculatorForm, CalculatorResults } from '@/components/calculator'
 import SEOAuditTool from '@/components/tools/SEOAuditTool'
 import ROICalculatorEducatif from '@/components/tools/ROICalculatorEducatif'
 import AnimatedElement from '@/components/ui/AnimatedElement'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
-import type { CalculatorResults as CalculatorResultsType } from '@/types/calculator'
 
 export default function OutilsPage() {
-  const [results, setResults] = useState<CalculatorResultsType | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-
-  const handleResults = (calculatorResults: CalculatorResultsType) => {
-    setResults(calculatorResults)
-  }
-
-  const handleReset = () => {
-    setResults(null)
-  }
-
-  const handleLoading = (loading: boolean) => {
-    setIsLoading(loading)
-  }
 
   // Premium animation variants (homepage level)
   const containerVariants = {
