@@ -64,6 +64,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
 
   // Timeline state
   const timelineRef = useRef<HTMLDivElement>(null)
+  const calendlyRef = useRef<HTMLDivElement>(null)
   const [currentTimelineStep, setCurrentTimelineStep] = useState(0)
   
   const timelineSteps = [
@@ -117,23 +118,27 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
     }
   }
 
-  // Load Calendly script
+  // Load Calendly script with useRef
   useEffect(() => {
-    if (showCalendly && typeof window !== 'undefined') {
+    if (showCalendly && typeof window !== 'undefined' && calendlyRef.current) {
       const script = document.createElement('script')
       script.src = 'https://assets.calendly.com/assets/external/widget.js'
       script.async = true
       document.body.appendChild(script)
-      
+
       script.onload = () => {
-        if ((window as any).Calendly) {
+        if ((window as any).Calendly && calendlyRef.current) {
           (window as any).Calendly.initInlineWidget({
             url: 'https://calendly.com/osom-consultation/30min',
-            parentElement: document.getElementById('calendly-inline-widget'),
+            parentElement: calendlyRef.current,
             prefill: {},
             utm: {}
           })
         }
+      }
+
+      return () => {
+        document.body.removeChild(script)
       }
     }
   }, [showCalendly])
@@ -706,7 +711,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <div id="calendly-inline-widget" className="w-full h-full"></div>
+                      <div ref={calendlyRef} className="w-full h-full"></div>
                     </motion.div>
                   </motion.div>
                 ) : (
