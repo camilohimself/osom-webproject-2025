@@ -27,32 +27,34 @@ const CookieBanner = () => {
             transition={{ duration: 0.4, ease: 'easeOut' }}
             className="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t border-yellow-400/20"
           >
-            <div className="max-w-4xl mx-auto p-6">
-              <div className="text-center">
-                <p className="text-white text-lg mb-6">
-                  Ce site génial utilise des cookies pour vous offrir la meilleure expérience.
-                  <br />
-                  <span className="text-gray-300">Acceptez-vous ?</span>
-                </p>
+            <div className="max-w-6xl mx-auto p-6">
+              <div className="flex items-center justify-between gap-8">
+                <div className="flex-1">
+                  <p className="text-white text-lg">
+                    Ce site génial utilise des cookies pour vous offrir la meilleure expérience.
+                    <br />
+                    <span className="text-gray-300">Acceptez-vous ?</span>
+                  </p>
+                </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex gap-4 items-center">
                   <button
                     onClick={acceptAll}
-                    className="px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
+                    className="px-6 py-3 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-500 transition-colors"
                   >
                     OUI
                   </button>
 
                   <button
                     onClick={handleRecipeClick}
-                    className="px-6 py-3 bg-yellow-400 text-black font-medium rounded-lg hover:bg-yellow-500 transition-colors flex items-center gap-2"
+                    className="px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-2"
                   >
                     🍪 JE VEUX LA RECETTE
                   </button>
 
                   <button
                     onClick={acceptEssential}
-                    className="px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition-colors"
+                    className="px-6 py-3 bg-black border border-yellow-400 text-yellow-400 rounded-lg hover:bg-yellow-400/10 transition-colors"
                   >
                     NON
                   </button>
