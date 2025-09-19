@@ -269,11 +269,11 @@ export default function MarketingAutomationCRMPage() {
         </div>
       </section>
 
-      {/* CTA + PRICING */}
+      {/* PACKAGES PERSONNALISÉS MARKETING AUTOMATION */}
       <section className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-400/5 to-transparent" />
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-400/5 via-transparent to-yellow-400/5" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-black/80 backdrop-blur-xl rounded-3xl p-12 border border-green-400/40">
             <div className="text-green-400 font-semibold mb-4">
               MARKETING AUTOMATION COMPLETE

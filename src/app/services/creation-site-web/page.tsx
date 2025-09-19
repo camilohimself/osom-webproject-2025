@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ServicePageMobile } from '@/components/services/ServicePageMobile'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
@@ -12,8 +12,6 @@ export default function CreationSiteWebPage() {
   const [selectedPrice, setSelectedPrice] = useState('growth')
   const [currentStep, setCurrentStep] = useState(1)
   const [scrollProgress, setScrollProgress] = useState(0)
-  const [expandedStep, setExpandedStep] = useState<number | null>(null)
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null)
 
   // Optimisation scroll OSOM + Timeline tracking
   useEffect(() => {
@@ -111,54 +109,88 @@ export default function CreationSiteWebPage() {
     }
   ]
   
-  // Nouveau pricing simplifié
+  // Packages personnalisés par PERSONA MARKETING - STRATÉGIE ANTI-AGENCE
   const pricingOptions = [
     {
-      id: 'express',
-      name: 'EXPRESS',
-      price: '1,500',
+      id: 'georges-pme',
+      name: 'PACKAGE "GEORGES"',
+      subtitle: 'PME Pragmatique',
+      price: '2,500',
       currency: 'CHF',
-      time: '5 jours',
-      description: 'Site vitrine professionnel',
+      time: '30 jours',
+      description: 'Site qui prouve aux concurrents',
+      antiAgency: 'Prix fixe transparent (pas de surprises cachées)',
       features: [
-        '5 pages optimisées',
-        'Design moderne responsive',
-        'SEO de base inclus',
-        'Formulaire contact'
+        'Site vitrine + GA4 setup professionnel',
+        '1 case study concurrent local inclus',
+        'Formation équipe interne (2h)',
+        'SEO local Valais optimisé',
+        'Délai garanti 30 jours'
       ],
-      ideal: 'Idéal pour démarrer rapidement'
+      ideal: 'Votre concurrent sierrois a déjà commencé',
+      objectionHandler: 'ROI prouvé par portfolio vérifiable',
+      persona: 'Georges Bonvin - Directeur PME sceptique'
     },
     {
-      id: 'growth',
-      name: 'GROWTH',
-      price: '4,500',
+      id: 'marie-creatif',
+      name: 'PACKAGE "MARIE"',
+      subtitle: 'Créatif Budget Serré',
+      price: '1,800',
+      currency: 'CHF',
+      time: '25 jours',
+      description: 'Portfolio qui impressionne les jurys',
+      antiAgency: 'Pas de jargon technique, langage business',
+      features: [
+        'Portfolio optimisé subventions',
+        'SEO local culturel Valais',
+        'Template newsletter inclus',
+        'Design artistique premium',
+        'Support candidatures'
+      ],
+      ideal: 'Portfolio qui impressionne les jurys',
+      objectionHandler: 'Investissement qui rapporte des subventions',
+      persona: 'Marie Dubuis - Artiste ambitieuse'
+    },
+    {
+      id: 'sarah-premium',
+      name: 'PACKAGE "SARAH"',
+      subtitle: 'Premium Discret',
+      price: '6,500',
       currency: 'CHF',
       time: '45 jours',
-      description: 'Site complet avec stratégie',
+      description: 'Excellence sans ostentation',
+      antiAgency: 'Promesses tenues, pas de délais élastiques',
       features: [
-        'Pages illimitées',
-        'SEO avancé + contenus',
-        'Analytics dashboard',
-        'Intégrations métier',
-        'Formation équipe'
+        'Design haut de gamme sur-mesure',
+        'Rédaction copywriting premium',
+        'Maintenance 6 mois incluse',
+        'Consulting stratégique inclus',
+        'Support prioritaire 24h'
       ],
-      ideal: 'Notre recommandation',
+      ideal: 'Excellence qui reflète votre standing',
+      objectionHandler: 'Process clair, réactivité garantie',
+      persona: 'Dr. Sarah Meier - Professionnelle exigeante',
       popular: true
     },
     {
-      id: 'custom',
-      name: 'SUR MESURE',
-      price: 'Sur devis',
-      currency: '',
-      time: 'À définir',
-      description: 'Projet spécifique',
+      id: 'audit-gratuit',
+      name: 'AUDIT GRATUIT',
+      subtitle: 'Lead Magnet Product Ladder',
+      price: '0',
+      currency: 'CHF',
+      time: '48h',
+      description: 'Découvrez votre potentiel caché',
+      antiAgency: 'Analyse transparente, sans engagement',
       features: [
-        'Architecture custom',
-        'Fonctionnalités avancées',
-        'Équipe dédiée',
-        'Support premium'
+        'Analyse SEO complète de votre site',
+        'Benchmark concurrents locaux Valais',
+        'Identification 5 opportunités quick-wins',
+        'Rapport PDF personnalisé',
+        'Consultation téléphonique 30 min'
       ],
-      ideal: 'Pour projets complexes'
+      ideal: 'Point de départ idéal avant tout projet',
+      objectionHandler: 'Gratuit, sans engagement, valeur immédiate',
+      cta: 'Réservez votre audit (2 places/mois)'
     }
   ]
 
@@ -320,7 +352,7 @@ export default function CreationSiteWebPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-yellow-400 text-sm font-medium">PROCESS TRANSPARENT • LIVRAISON GARANTIE</span>
+              <span className="text-yellow-400 text-sm font-medium">LA SEULE AGENCE DU VALAIS QUI PROUVE AVANT DE PROMETTRE</span>
             </motion.div>
             
             <motion.h1 
@@ -329,8 +361,8 @@ export default function CreationSiteWebPage() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              De l'idée au site en ligne
-              <span className="font-bold text-yellow-400 block">45 jours maximum</span>
+              Fini les promesses vides
+              <span className="font-bold text-yellow-400 block">Voici notre portfolio</span>
             </motion.h1>
             
             <motion.p 
@@ -339,10 +371,36 @@ export default function CreationSiteWebPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Process rodé, délais respectés, résultats garantis.
+              <strong className="text-white">Prix fixe transparent</strong> • <strong className="text-white">Délais garantis</strong> • <strong className="text-white">Portfolio vérifiable</strong>
               <br />
-              Voici exactement ce qui se passe à chaque étape.
+              <span className="text-yellow-400">Votre concurrent sierrois a déjà commencé. Et vous ?</span>
             </motion.p>
+
+            {/* Messaging Anti-Agence Différenciant */}
+            <motion.div
+              className="bg-white/5 border border-yellow-400/30 rounded-2xl p-6 max-w-4xl mx-auto mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-red-400 font-semibold mb-2">❌ Agences traditionnelles</div>
+                  <div className="text-gray-400 text-sm">Promesses sans preuves</div>
+                </div>
+                <div>
+                  <div className="text-red-400 font-semibold mb-2">❌ Facturations cachées</div>
+                  <div className="text-gray-400 text-sm">Délais élastiques</div>
+                </div>
+                <div>
+                  <div className="text-red-400 font-semibold mb-2">❌ Jargon technique</div>
+                  <div className="text-gray-400 text-sm">Client largué</div>
+                </div>
+              </div>
+              <div className="border-t border-white/20 mt-4 pt-4">
+                <div className="text-yellow-400 font-bold text-lg text-center">✅ OSOM : Portfolio vérifiable + Prix fixe + Langage business</div>
+              </div>
+            </motion.div>
           </div>
 
           {/* Timeline interactive - ULTRA WIDE DESKTOP */}
@@ -464,73 +522,26 @@ export default function CreationSiteWebPage() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.2, duration: 0.8 }}
-                  onMouseEnter={() => setHoveredStep(step.id)}
-                  onMouseLeave={() => setHoveredStep(null)}
                 >
-                  {/* Content Card INTERACTIVE - ULTRA LARGE DESKTOP */}
+                  {/* Content Card SIMPLE SCROLL-ONLY */}
                   <div className={`w-7/12 ${index % 2 === 0 ? 'pr-20 text-right' : 'pl-20 text-left'}`}>
-                    <motion.div
-                      className={`relative overflow-hidden backdrop-blur-sm rounded-3xl p-12 border transition-all duration-700 cursor-pointer group ${
-                        hoveredStep === step.id
-                          ? 'bg-gradient-to-br from-amber-50/5 via-yellow-100/10 to-orange-100/5 border-amber-300/60 shadow-2xl shadow-amber-400/25'
-                          : 'bg-gradient-to-br from-slate-900/40 via-gray-800/30 to-slate-900/40 border-slate-600/40'
-                      } ${
-                        expandedStep === step.id
-                          ? 'bg-gradient-to-br from-amber-50/8 via-yellow-100/15 to-orange-100/8 border-amber-300/80 shadow-3xl shadow-amber-400/35'
-                          : ''
-                      }`}
-                      onClick={() => setExpandedStep(expandedStep === step.id ? null : step.id)}
-                      whileHover={{
-                        scale: 1.02,
-                        transition: { duration: 0.2 }
-                      }}
-                      whileTap={{ scale: 0.98 }}
-                    >
+                    <div className="relative overflow-hidden backdrop-blur-sm rounded-3xl p-12 border bg-gradient-to-br from-slate-900/40 via-gray-800/30 to-slate-900/40 border-slate-600/40">
                       {/* Motif décoratif de fond - Élégance */}
                       <div className="absolute inset-0 opacity-20">
                         <div className="absolute top-6 right-8 w-24 h-24 bg-gradient-to-br from-amber-300/20 to-yellow-400/10 rounded-full blur-xl"></div>
                         <div className="absolute bottom-8 left-6 w-32 h-32 bg-gradient-to-tl from-orange-300/15 to-amber-400/5 rounded-full blur-2xl"></div>
                       </div>
 
-                      {/* Effet de respiration au hover */}
-                      <motion.div
-                        className="absolute inset-0 rounded-3xl"
-                        initial={false}
-                        animate={{
-                          background: hoveredStep === step.id
-                            ? [
-                                'radial-gradient(circle at 30% 40%, rgba(251, 191, 36, 0.1) 0%, transparent 50%)',
-                                'radial-gradient(circle at 70% 60%, rgba(245, 158, 11, 0.15) 0%, transparent 50%)',
-                                'radial-gradient(circle at 30% 40%, rgba(251, 191, 36, 0.1) 0%, transparent 50%)'
-                              ]
-                            : 'radial-gradient(circle at 50% 50%, transparent 0%, transparent 100%)'
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: hoveredStep === step.id ? Infinity : 0,
-                          ease: "easeInOut"
-                        }}
-                      />
 
                       <div className={`relative flex items-center space-x-6 mb-8 ${index % 2 === 0 ? 'justify-end flex-row-reverse space-x-reverse' : ''}`}>
                         <div className="text-center">
                           <span className="text-amber-300 text-2xl font-light block mb-1 tracking-wide">Phase</span>
                           <span className="text-amber-100 text-3xl font-bold">{step.day}</span>
                         </div>
-                        <motion.div
+                        <div
                           className="relative w-20 h-20 rounded-2xl flex items-center justify-center overflow-hidden"
                           style={{
-                            background: hoveredStep === step.id
-                              ? 'linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(245, 158, 11, 0.2))'
-                              : 'linear-gradient(135deg, rgba(148, 163, 184, 0.2), rgba(100, 116, 139, 0.1))'
-                          }}
-                          animate={{
-                            scale: hoveredStep === step.id ? 1.05 : 1,
-                            rotate: hoveredStep === step.id ? [0, 2, -2, 0] : 0
-                          }}
-                          transition={{
-                            scale: { duration: 0.3 },
-                            rotate: { duration: 2, repeat: hoveredStep === step.id ? Infinity : 0 }
+                            background: 'linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(245, 158, 11, 0.2))'
                           }}
                         >
                           {/* Motif décoratif dans l'icône */}
@@ -539,162 +550,32 @@ export default function CreationSiteWebPage() {
                             <div className="absolute bottom-3 left-3 w-6 h-6 bg-gradient-to-tl from-orange-200 to-amber-300 rounded-full blur-md"></div>
                           </div>
                           <span className="relative text-amber-200 font-bold text-2xl z-10">{step.id}</span>
-                        </motion.div>
+                        </div>
                       </div>
 
                       <div className="relative z-10">
-                        <h3 className="text-4xl font-light text-white mb-3 group-hover:text-amber-100 transition-colors duration-500 leading-tight">
+                        <h3 className="text-4xl font-light text-white mb-3 leading-tight">
                           {step.name}
                         </h3>
-                        <div className="w-16 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-500 mb-6 group-hover:w-24 transition-all duration-500"></div>
-                        <p className="text-lg text-slate-300 leading-relaxed mb-6 group-hover:text-slate-200 transition-colors duration-500 font-light">
+                        <div className="w-16 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-500 mb-6"></div>
+                        <p className="text-lg text-slate-300 leading-relaxed mb-6 font-light">
                           {step.desc}
                         </p>
                       </div>
 
-                      {/* Section aperçu élégante */}
-                      <div className="relative bg-gradient-to-r from-slate-800/40 via-slate-700/30 to-slate-800/40 rounded-2xl p-6 border border-slate-600/30 group-hover:border-amber-400/40 transition-all duration-500">
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <h4 className="text-amber-300 text-sm font-medium mb-2 tracking-wide uppercase">Aperçu inclus</h4>
-                            <p className="text-slate-200 text-base leading-relaxed font-light">
-                              {step.detail}
-                            </p>
-                          </div>
-
-                          <motion.div
-                            className="ml-6 flex flex-col items-center text-center"
-                            animate={{
-                              opacity: hoveredStep === step.id ? [0.7, 1, 0.7] : 0.5,
-                              y: hoveredStep === step.id ? [0, -2, 0] : 0
-                            }}
-                            transition={{
-                              duration: 2,
-                              repeat: hoveredStep === step.id ? Infinity : 0,
-                              ease: "easeInOut"
-                            }}
-                          >
-                            <div className="w-12 h-12 bg-gradient-to-br from-amber-400/20 to-yellow-500/20 rounded-xl flex items-center justify-center mb-2 group-hover:from-amber-400/30 group-hover:to-yellow-500/30 transition-all duration-500">
-                              <span className="text-amber-300 text-lg">
-                                {expandedStep === step.id ? '▲' : '▼'}
-                              </span>
-                            </div>
-                            <span className="text-amber-300 text-xs font-medium tracking-wide">
-                              {expandedStep === step.id ? 'Fermer' : 'Explorer'}
-                            </span>
-                          </motion.div>
-                        </div>
-
-                        {/* Indicateur subtil de clickabilité */}
-                        <div className="absolute bottom-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-amber-400/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      {/* Section aperçu simple */}
+                      <div className="relative bg-gradient-to-r from-slate-800/40 via-slate-700/30 to-slate-800/40 rounded-2xl p-6 border border-slate-600/30">
+                        <h4 className="text-amber-300 text-sm font-medium mb-2 tracking-wide uppercase">Inclus dans cette phase</h4>
+                        <p className="text-slate-200 text-base leading-relaxed font-light">
+                          {step.detail}
+                        </p>
                       </div>
-
-                      {/* CONTENU EXPANDABLE - CONNAISSANCE OSOM */}
-                      <AnimatePresence>
-                        {expandedStep === step.id && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0, marginTop: 0 }}
-                            animate={{ opacity: 1, height: 'auto', marginTop: 16 }}
-                            exit={{ opacity: 0, height: 0, marginTop: 0 }}
-                            transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="overflow-hidden"
-                          >
-                            <div className="bg-gradient-to-br from-slate-900/60 via-slate-800/40 to-slate-900/60 rounded-3xl p-10 border border-amber-400/30 backdrop-blur-sm">
-
-                              {/* HEADER SECTION ACCUEILLANTE */}
-                              <div className="text-center mb-10">
-                                <div className="w-16 h-16 bg-gradient-to-br from-amber-400/30 to-yellow-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                                  <span className="text-amber-300 text-2xl">✨</span>
-                                </div>
-                                <h3 className="text-2xl font-light text-white mb-2">Ce qui vous attend</h3>
-                                <p className="text-slate-400 text-sm">Voici le détail complet de cette phase</p>
-                              </div>
-
-                              {/* LAYOUT ULTRA-WIDE DESKTOP - 2 COLONNES HARMONIEUSES */}
-                              <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
-
-                                {/* COLONNE GAUCHE - RESSOURCES & OUTILS */}
-                                <div className="space-y-8">
-                                  {/* Stack technique élégante */}
-                                  <div className="bg-gradient-to-r from-slate-800/40 to-slate-700/30 rounded-2xl p-6 border border-slate-600/40">
-                                    <h4 className="text-amber-300 font-medium text-lg mb-6 flex items-center">
-                                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-3"></span>
-                                      Outils & Technologies
-                                    </h4>
-                                    <div className="grid grid-cols-2 gap-4">
-                                      {step.expandedContent.tools.map((tool, idx) => (
-                                        <div key={idx} className="px-8 py-5 bg-gradient-to-r from-amber-50/5 to-yellow-100/5 text-amber-100 text-lg rounded-2xl border border-amber-400/20 hover:border-amber-400/40 hover:from-amber-50/8 hover:to-yellow-100/8 transition-all duration-300 font-light text-center">
-                                          {tool}
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-
-                                  {/* Métriques importantes */}
-                                  <div className="grid grid-cols-1 gap-6">
-                                    <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/10 rounded-2xl p-6 border border-blue-400/20">
-                                      <div className="flex items-center mb-3">
-                                        <div className="w-8 h-8 bg-cyan-400/20 rounded-lg flex items-center justify-center mr-3">
-                                          <span className="text-cyan-300 text-sm">⏱</span>
-                                        </div>
-                                        <h4 className="text-cyan-300 font-medium text-sm">Délai de livraison</h4>
-                                      </div>
-                                      <p className="text-white text-xl font-light">{step.expandedContent.timeline}</p>
-                                    </div>
-                                    <div className="bg-gradient-to-br from-emerald-900/20 to-green-900/10 rounded-2xl p-6 border border-emerald-400/20">
-                                      <div className="flex items-center mb-3">
-                                        <div className="w-8 h-8 bg-emerald-400/20 rounded-lg flex items-center justify-center mr-3">
-                                          <span className="text-emerald-300 text-sm">🎯</span>
-                                        </div>
-                                        <h4 className="text-emerald-300 font-medium text-sm">Impact attendu</h4>
-                                      </div>
-                                      <p className="text-emerald-100 text-base font-light leading-relaxed">{step.expandedContent.outcome}</p>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                {/* COLONNE DROITE - LIVRABLES CHALEUREUX */}
-                                <div>
-                                  <div className="bg-gradient-to-r from-slate-800/40 to-slate-700/30 rounded-2xl p-6 border border-slate-600/40 h-full">
-                                    <h4 className="text-amber-300 font-medium text-lg mb-6 flex items-center">
-                                      <span className="w-2 h-2 bg-amber-400 rounded-full mr-3"></span>
-                                      Vos livrables
-                                    </h4>
-                                    <div className="space-y-4">
-                                      {step.expandedContent.deliverables.map((item, idx) => (
-                                        <div key={idx} className="group flex items-start space-x-4 p-4 bg-gradient-to-r from-slate-700/30 to-slate-600/20 rounded-xl border border-slate-600/30 hover:border-emerald-400/30 hover:from-emerald-900/10 hover:to-slate-600/20 transition-all duration-300">
-                                          <div className="w-8 h-8 bg-gradient-to-br from-emerald-400/30 to-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:from-emerald-400/40 group-hover:to-green-500/30 transition-all duration-300">
-                                            <span className="text-emerald-300 text-sm font-medium">✓</span>
-                                          </div>
-                                          <div>
-                                            <p className="text-slate-200 text-sm font-light leading-relaxed group-hover:text-white transition-colors duration-300">{item}</p>
-                                          </div>
-                                        </div>
-                                      ))}
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
+                    </div>
                   </div>
                   
                   {/* Center dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2">
-                    <motion.div 
-                      className="w-8 h-8 bg-yellow-400 rounded-full border-4 border-black shadow-lg"
-                      animate={{ 
-                        scale: currentStep === step.id ? [1, 1.3, 1] : 1,
-                        boxShadow: currentStep === step.id 
-                          ? ['0 0 0 0 rgba(250, 204, 21, 0.7)', '0 0 0 20px rgba(250, 204, 21, 0)']
-                          : 'none'
-                      }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      whileHover={{ scale: 1.2 }}
-                    />
+                    <div className="w-8 h-8 bg-yellow-400 rounded-full border-4 border-black shadow-lg" />
                   </div>
                 </motion.div>
               ))}
@@ -708,24 +589,47 @@ export default function CreationSiteWebPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
+            {/* Objections Handling Pre-CTA */}
+            <div className="bg-gray-900/50 border border-yellow-400/30 rounded-2xl p-6 max-w-3xl mx-auto mb-8">
+              <h3 className="text-yellow-400 font-bold text-lg mb-4 text-center">Vos questions, nos réponses transparentes</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="text-red-400">❓ "C'est trop cher"</span>
+                  <div className="text-gray-300 mt-1">→ ROI Calculator personnalisé inclus</div>
+                </div>
+                <div>
+                  <span className="text-red-400">❓ "On n'a pas le temps"</span>
+                  <div className="text-gray-300 mt-1">→ Process clés en main démontré</div>
+                </div>
+                <div>
+                  <span className="text-red-400">❓ "Notre secteur est différent"</span>
+                  <div className="text-gray-300 mt-1">→ Case study secteur similaire</div>
+                </div>
+                <div>
+                  <span className="text-red-400">❓ "Mon neveu peut le faire"</span>
+                  <div className="text-gray-300 mt-1">→ Comparatif amateur vs pro</div>
+                </div>
+              </div>
+            </div>
+
             <div className="inline-flex items-center px-6 py-3 bg-green-400/20 rounded-full text-green-400 text-sm font-medium mb-8">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-              3 créneaux disponibles ce mois
+              2 places restantes ce mois (Georges déjà réservé)
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 href="#pricing"
                 className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-400/20"
               >
-                Voir les prix
+                Packages personnalisés →
               </Link>
-              
-              <Link 
+
+              <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 border border-yellow-400/50 text-yellow-400 hover:text-white hover:bg-yellow-400/10 font-semibold text-lg rounded-xl transition-all duration-300"
               >
-                Démarrer maintenant
+                Audit gratuit (sans engagement)
               </Link>
             </div>
           </motion.div>
@@ -811,6 +715,80 @@ export default function CreationSiteWebPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* SEO LOCAL VALAIS SECTION */}
+      <section className="py-16 bg-gradient-to-br from-black via-gray-900/50 to-black">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-light text-white mb-4">
+              Agence web <span className="text-yellow-400 font-bold">Valais</span> spécialisée
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Créateur de sites internet pour PME valaisannes. Sion, Sierre, Martigny, Monthey.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              className="bg-white/5 rounded-2xl p-6 border border-white/10 text-center"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h3 className="text-yellow-400 font-bold text-lg mb-3">Marketing digital Sion</h3>
+              <p className="text-gray-300 text-sm">
+                Site web professionnel pour entreprises sédunois. SEO local optimisé, performance garantie.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white/5 rounded-2xl p-6 border border-white/10 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h3 className="text-yellow-400 font-bold text-lg mb-3">Développeur web Sierre</h3>
+              <p className="text-gray-300 text-sm">
+                Création site internet sur-mesure. Next.js, design responsive, optimisation mobile-first.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white/5 rounded-2xl p-6 border border-white/10 text-center"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <h3 className="text-yellow-400 font-bold text-lg mb-3">Agence digitale Valais</h3>
+              <p className="text-gray-300 text-sm">
+                Stratégie web complète : conception, développement, SEO. Expertise locale reconnue.
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <p className="text-gray-400 text-sm">
+              <strong className="text-white">Mots-clés ciblés :</strong> site internet Valais, agence web Sion, création site Sierre,
+              développeur web Martigny, marketing digital Monthey, SEO local Valais, site responsive mobile
+            </p>
+          </motion.div>
         </div>
       </section>
 

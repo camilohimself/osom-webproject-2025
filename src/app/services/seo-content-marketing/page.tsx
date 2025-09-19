@@ -212,58 +212,239 @@ export default function SEOContentMarketingPage() {
       </section>
 
 
-      {/* TARIFICATION SIMPLE */}
+      {/* PACKAGES PERSONNALISÉS SEO MARKETING */}
       <section className="py-24 relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/5 via-transparent to-purple-400/5" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Anti-Agence SEO */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
-              Investissement <span className="text-cyan-400 font-bold">SEO</span>
+            <div className="inline-flex items-center px-6 py-3 bg-cyan-400/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
+              <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></div>
+              LA SEULE AGENCE SEO DU VALAIS QUI PROUVE AVANT DE PROMETTRE
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
+              Fini les <span className="text-red-400 line-through">promesses SEO magiques</span>
+              <br />
+              <span className="font-bold text-cyan-400">Voici nos résultats SEO</span>
             </h2>
-            <p className="text-xl text-gray-400">
-              Des formules adaptées à vos objectifs
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              <strong className="text-white">Prix fixe transparent</strong> • <strong className="text-white">Positions vérifiables</strong> • <strong className="text-white">Trafic mesurable</strong>
+              <br />
+              <span className="text-cyan-400">Votre concurrent SEO sierrois grimpe déjà dans Google</span>
             </p>
+
+            {/* Messaging Anti-Agence SEO */}
+            <div className="bg-white/5 border border-cyan-400/30 rounded-2xl p-6 max-w-4xl mx-auto mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-red-400 font-semibold mb-2">❌ Agences SEO traditionnelles</div>
+                  <div className="text-gray-400 text-sm">Position #1 en 30 jours (impossible)</div>
+                </div>
+                <div>
+                  <div className="text-red-400 font-semibold mb-2">❌ Techniques black hat</div>
+                  <div className="text-gray-400 text-sm">Pénalités Google garanties</div>
+                </div>
+                <div>
+                  <div className="text-red-400 font-semibold mb-2">❌ Reporting bidon</div>
+                  <div className="text-gray-400 text-sm">Métriques gonflées artificiellement</div>
+                </div>
+              </div>
+              <div className="border-t border-white/20 mt-4 pt-4">
+                <div className="text-cyan-400 font-bold text-lg text-center">✅ OSOM SEO : Positions vérifiables + Techniques white hat + Trafic réel</div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 rounded-3xl p-8 border border-gray-700/50">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">SEO Essentiel</h3>
-              <div className="text-3xl font-bold text-white mb-4">890 CHF<span className="text-lg text-gray-400">/mois</span></div>
-              <ul className="space-y-3 text-gray-300">
-                <li>• Optimisations techniques mensuelles</li>
-                <li>• 2 contenus optimisés/mois</li>
-                <li>• Suivi positions et trafic</li>
-                <li>• Rapport mensuel détaillé</li>
-                <li>• Support par email</li>
+          {/* Packages SEO Personnalisés */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
+            {/* Package Georges SEO */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all relative">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">PACKAGE "GEORGES"</h3>
+                <p className="text-cyan-400 text-sm">PME SEO Local</p>
+                <div className="text-3xl font-bold text-cyan-400 mt-4">1,200 CHF</div>
+                <div className="text-gray-400 text-sm">Par mois, 6 mois min</div>
+              </div>
+
+              <div className="bg-cyan-400/10 rounded-lg p-4 mb-6">
+                <div className="text-cyan-400 font-semibold text-sm mb-2">Anti-Agence Promise:</div>
+                <div className="text-gray-300 text-xs">Positions Google vérifiables (pas de fake ranking)</div>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">SEO local Valais optimisé</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">2 contenus optimisés/mois</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Google My Business pro</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Rapport positions mensuel</span>
+                </li>
               </ul>
-              <Link href="/contact?service=seo-essentiel" className="block mt-6 text-center py-3 rounded-xl border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 transition-all">
-                Commencer
-              </Link>
+
+              <div className="text-center">
+                <div className="text-cyan-400 font-semibold text-sm mb-2">Idéal pour:</div>
+                <div className="text-gray-400 text-xs mb-4">"Concurrent sierrois me dépasse sur Google"</div>
+                <div className="text-xs text-gray-500">Objection: "ROI incertain" → Positions trackées en temps réel</div>
+              </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-black/90 to-gray-900/90 rounded-3xl p-8 border border-cyan-400/60 shadow-xl shadow-cyan-400/10">
-              <div className="bg-cyan-400 text-black px-3 py-1 rounded-full text-sm font-bold inline-block mb-4">
+
+            {/* Package Marie SEO */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all relative">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">PACKAGE "MARIE"</h3>
+                <p className="text-purple-400 text-sm">Créatif SEO Culturel</p>
+                <div className="text-3xl font-bold text-purple-400 mt-4">890 CHF</div>
+                <div className="text-gray-400 text-sm">Par mois, 4 mois min</div>
+              </div>
+
+              <div className="bg-purple-400/10 rounded-lg p-4 mb-6">
+                <div className="text-purple-400 font-semibold text-sm mb-2">Anti-Agence Promise:</div>
+                <div className="text-gray-300 text-xs">Contenu culturel qui convertit (pas de générique)</div>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">SEO culturel spécialisé Valais</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Content marketing événementiel</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Optimisation subventions</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Newsletter SEO incluse</span>
+                </li>
+              </ul>
+
+              <div className="text-center">
+                <div className="text-purple-400 font-semibold text-sm mb-2">Idéal pour:</div>
+                <div className="text-gray-400 text-xs mb-4">"Contenu créatif qui attire les jurys"</div>
+                <div className="text-xs text-gray-500">Objection: "Budget serré" → ROI subventions inclus</div>
+              </div>
+            </div>
+
+            {/* Package Sarah SEO */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-yellow-400/50 transition-all relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-4 py-2 rounded-full text-xs font-bold">
                 RECOMMANDÉ
               </div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">SEO Performance</h3>
-              <div className="text-3xl font-bold text-white mb-4">1,890 CHF<span className="text-lg text-gray-400">/mois</span></div>
-              <ul className="space-y-3 text-gray-300">
-                <li>• Tout du pack Essentiel +</li>
-                <li>• 4 contenus premium/mois</li>
-                <li>• Stratégie backlinks</li>
-                <li>• Optimisation conversion</li>
-                <li>• Call mensuel stratégie</li>
-                <li>• Support prioritaire</li>
+
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">PACKAGE "SARAH"</h3>
+                <p className="text-yellow-400 text-sm">SEO Premium Médical</p>
+                <div className="text-3xl font-bold text-yellow-400 mt-4">2,800 CHF</div>
+                <div className="text-gray-400 text-sm">Par mois, 12 mois min</div>
+              </div>
+
+              <div className="bg-yellow-400/10 rounded-lg p-4 mb-6">
+                <div className="text-yellow-400 font-semibold text-sm mb-2">Anti-Agence Promise:</div>
+                <div className="text-gray-300 text-xs">Excellence discrète, conformité médicale</div>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">SEO médical spécialisé</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Content medical copywriting</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Stratégie réseaux premium</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Support prioritaire 24h</span>
+                </li>
               </ul>
-              <Link href="/contact?service=seo-performance" className="block mt-6 text-center py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-purple-400 text-black font-bold hover:brightness-110 transition-all">
-                Solution complète
-              </Link>
+
+              <div className="text-center">
+                <div className="text-yellow-400 font-semibold text-sm mb-2">Idéal pour:</div>
+                <div className="text-gray-400 text-xs mb-4">"Visibilité professionnelle sans ostentation"</div>
+                <div className="text-xs text-gray-500">Objection: "Confidentialité" → RGPD médical strict</div>
+              </div>
+            </div>
+
+            {/* Audit SEO Gratuit */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-green-400/30 hover:border-green-400/50 transition-all relative">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">AUDIT SEO GRATUIT</h3>
+                <p className="text-green-400 text-sm">Diagnostic complet</p>
+                <div className="text-3xl font-bold text-green-400 mt-4">0 CHF</div>
+                <div className="text-gray-400 text-sm">Rapport 48h</div>
+              </div>
+
+              <div className="bg-green-400/10 rounded-lg p-4 mb-6">
+                <div className="text-green-400 font-semibold text-sm mb-2">Anti-Agence Promise:</div>
+                <div className="text-gray-300 text-xs">Valeur immédiate, pas de spam commercial</div>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Analyse SEO technique complète</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Benchmark concurrents locaux</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Plan action priorisé</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Session Q&A 30 min</span>
+                </li>
+              </ul>
+
+              <div className="text-center">
+                <div className="text-green-400 font-semibold text-sm mb-2">Idéal pour:</div>
+                <div className="text-gray-400 text-xs mb-4">"Où en est mon SEO actuellement ?"</div>
+                <div className="text-xs text-gray-500">Objection: "Pas de spam" → 1 seul contact post-audit</div>
+              </div>
             </div>
           </div>
 
-          <div className="text-center mt-8">
-            <p className="text-gray-400 text-sm">
-              Engagement minimum 6 mois • Audit initial offert • Résultats progressifs
-            </p>
+          {/* Objections Handling SEO */}
+          <div className="bg-gray-900/50 border border-cyan-400/30 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-cyan-400 font-bold text-xl mb-6 text-center">Objections SEO = Nos spécialités</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <span className="text-red-400">❓ "Le SEO prend trop de temps"</span>
+                <div className="text-gray-300 mt-2 text-sm">→ Quick wins premiers mois + stratégie long terme. Georges voit résultats mois 2</div>
+              </div>
+              <div>
+                <span className="text-red-400">❓ "Google change tout le temps"</span>
+                <div className="text-gray-300 mt-2 text-sm">→ Techniques white hat pérennes. Nos clients stables depuis 2+ ans</div>
+              </div>
+              <div>
+                <span className="text-red-400">❓ "Concurrence trop forte"</span>
+                <div className="text-gray-300 mt-2 text-sm">→ SEO local Valais moins concurrentiel. Marie domine sa niche</div>
+              </div>
+              <div>
+                <span className="text-red-400">❓ "Budget mensuel trop lourd"</span>
+                <div className="text-gray-300 mt-2 text-sm">→ ROI Calculator personnalisé + tracking conversions temps réel</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

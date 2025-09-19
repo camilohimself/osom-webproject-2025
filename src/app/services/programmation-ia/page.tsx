@@ -451,6 +451,257 @@ export default function ProgrammationIAPage() {
         </div>
       </section>
 
+      {/* PACKAGES PERSONNALISÉS IA MARKETING */}
+      <section id="pricing" className="py-24 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/5 via-transparent to-cyan-400/5" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-purple-400/20 rounded-full text-purple-400 text-sm font-medium mb-8">
+              <div className="w-2 h-2 bg-purple-400 rounded-full mr-3 animate-pulse"></div>
+              STRATÉGIE ANTI-AGENCE • PACKAGES TRANSPARENTS
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-6">
+              Fini les <span className="text-red-400 line-through">promesses IA magiques</span>
+              <br />
+              <span className="font-bold text-purple-400">Voici notre portfolio IA</span>
+            </h2>
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <strong className="text-white">Solutions personnalisées</strong> • <strong className="text-white">ROI mesurable</strong> • <strong className="text-white">Support inclus</strong>
+              <br />
+              <span className="text-purple-400">Votre concurrent digital a déjà une longueur d'avance</span>
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
+            {/* Package Georges IA */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">PACKAGE "GEORGES"</h3>
+                <p className="text-purple-400 text-sm">PME Automatisation</p>
+                <div className="text-3xl font-bold text-purple-400 mt-4">3,500 CHF</div>
+                <div className="text-gray-400 text-sm">Livraison 6 semaines</div>
+              </div>
+
+              <div className="bg-purple-400/10 rounded-lg p-4 mb-6">
+                <div className="text-purple-400 font-semibold text-sm mb-2">Anti-Agence Promise:</div>
+                <div className="text-gray-300 text-xs">Dashboard fonctionnel garanti (pas de démo bidon)</div>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Dashboard automatisé GA4 + CRM</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Automatisation emails répétitifs</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Formation équipe 3h incluse</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Support 3 mois</span>
+                </li>
+              </ul>
+
+              <div className="text-center">
+                <div className="text-purple-400 font-semibold text-sm mb-2">Idéal pour:</div>
+                <div className="text-gray-400 text-xs mb-4">"Mon concurrent utilise déjà l'IA"</div>
+                <div className="text-xs text-gray-500">Objection: "Trop technique" → Formation équipe incluse</div>
+              </div>
+            </motion.div>
+
+            {/* Package Marie IA */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">PACKAGE "MARIE"</h3>
+                <p className="text-cyan-400 text-sm">Créatif IA Assisté</p>
+                <div className="text-3xl font-bold text-cyan-400 mt-4">2,800 CHF</div>
+                <div className="text-gray-400 text-sm">Livraison 4 semaines</div>
+              </div>
+
+              <div className="bg-cyan-400/10 rounded-lg p-4 mb-6">
+                <div className="text-cyan-400 font-semibold text-sm mb-2">Anti-Agence Promise:</div>
+                <div className="text-gray-300 text-xs">Créativité augmentée, pas remplacée</div>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Assistant IA contenu créatif</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Génération visuels optimisés</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Workflow créatif personnalisé</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Templates sur-mesure</span>
+                </li>
+              </ul>
+
+              <div className="text-center">
+                <div className="text-cyan-400 font-semibold text-sm mb-2">Idéal pour:</div>
+                <div className="text-gray-400 text-xs mb-4">"L'IA va remplacer ma créativité"</div>
+                <div className="text-xs text-gray-500">Objection: "Peur remplacement" → IA augmente créativité</div>
+              </div>
+            </motion.div>
+
+            {/* Package Sarah IA */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-yellow-400/50 transition-all relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-4 py-2 rounded-full text-xs font-bold">
+                RECOMMANDÉ
+              </div>
+
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">PACKAGE "SARAH"</h3>
+                <p className="text-yellow-400 text-sm">IA Stratégique Premium</p>
+                <div className="text-3xl font-bold text-yellow-400 mt-4">8,500 CHF</div>
+                <div className="text-gray-400 text-sm">Livraison 8 semaines</div>
+              </div>
+
+              <div className="bg-yellow-400/10 rounded-lg p-4 mb-6">
+                <div className="text-yellow-400 font-semibold text-sm mb-2">Anti-Agence Promise:</div>
+                <div className="text-gray-300 text-xs">ROI mesurable, confidentialité absolue</div>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Système IA sur-mesure complet</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Analyse prédictive avancée</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Maintenance 12 mois incluse</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Consulting stratégique continu</span>
+                </li>
+              </ul>
+
+              <div className="text-center">
+                <div className="text-yellow-400 font-semibold text-sm mb-2">Idéal pour:</div>
+                <div className="text-gray-400 text-xs mb-4">"Excellence discrète, résultats mesurables"</div>
+                <div className="text-xs text-gray-500">Objection: "Confidentialité" → NDA renforcé inclus</div>
+              </div>
+            </motion.div>
+
+            {/* Audit Gratuit IA */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-green-400/30 hover:border-green-400/50 transition-all relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">AUDIT IA GRATUIT</h3>
+                <p className="text-green-400 text-sm">Point de départ</p>
+                <div className="text-3xl font-bold text-green-400 mt-4">0 CHF</div>
+                <div className="text-gray-400 text-sm">Rapport 72h</div>
+              </div>
+
+              <div className="bg-green-400/10 rounded-lg p-4 mb-6">
+                <div className="text-green-400 font-semibold text-sm mb-2">Anti-Agence Promise:</div>
+                <div className="text-gray-300 text-xs">Valeur immédiate, pas de pitch commercial</div>
+              </div>
+
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Analyse potentiel IA métier</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Benchmark concurrents IA</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Roadmap recommandations</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-gray-300 text-sm">Session Q&A 30 min</span>
+                </li>
+              </ul>
+
+              <div className="text-center">
+                <div className="text-green-400 font-semibold text-sm mb-2">Idéal pour:</div>
+                <div className="text-gray-400 text-xs mb-4">"Par où commencer avec l'IA ?"</div>
+                <div className="text-xs text-gray-500">Objection: "Pas de spam" → 1 seul contact post-audit</div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Objections Handling IA */}
+          <motion.div
+            className="bg-gray-900/50 border border-purple-400/30 rounded-2xl p-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <h3 className="text-purple-400 font-bold text-xl mb-6 text-center">Objections IA = Nos spécialités</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <span className="text-red-400">❓ "L'IA va remplacer mes employés"</span>
+                <div className="text-gray-300 mt-2 text-sm">→ IA augmente productivité, pas remplacement. Georges économise 3h/jour grâce à IA</div>
+              </div>
+              <div>
+                <span className="text-red-400">❓ "C'est trop technique pour nous"</span>
+                <div className="text-gray-300 mt-2 text-sm">→ Formation incluse + interface simple. Marie utilise IA sans connaissances tech</div>
+              </div>
+              <div>
+                <span className="text-red-400">❓ "Sécurité des données"</span>
+                <div className="text-gray-300 mt-2 text-sm">→ Données restent en Suisse. Sarah: NDA renforcé + conformité RGPD</div>
+              </div>
+              <div>
+                <span className="text-red-400">❓ "ROI incertain"</span>
+                <div className="text-gray-300 mt-2 text-sm">→ ROI Calculator personnalisé + métriques tracking temps réel</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA FINAL LABORATOIRE */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent" />
