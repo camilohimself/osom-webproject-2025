@@ -237,9 +237,8 @@ const RealisationsPage = () => {
     setIsUnlocked(true)
     setShowEmailModal(false)
     setIsSubmitting(false)
-    
+
     // Ici tu peux ajouter l'envoi vers ton CRM
-    console.log('Nouveau lead case studies:', email)
   }
 
   // Versions censurées des case studies
@@ -286,7 +285,6 @@ const RealisationsPage = () => {
 
   return (
     <div className="min-h-screen bg-black">
-
       {/* Progress Bars Sublimes */}
       <ScrollProgressIndicator />
       {/* Premium Hero Section - Homepage Level */}
