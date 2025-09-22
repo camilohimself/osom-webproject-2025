@@ -46,7 +46,7 @@ export default function MarketingAutomationCRMPage() {
     },
     {
       question: "Combien coûte l'automation complète ?",
-      answer: "8900 CHF tout inclus : audit, setup CRM, automation, formation équipe, support 6 mois. ROI récupéré en 2-3 mois."
+      answer: "Tarif sur demande selon vos besoins spécifiques. Chaque setup est unique : audit, CRM personnalisé, workflows sur-mesure, formation équipe. Devis détaillé après consultation gratuite."
     },
     {
       question: "Que se passe-t-il si l'automation ne fonctionne pas comme prévu ?",
@@ -108,7 +108,7 @@ export default function MarketingAutomationCRMPage() {
           </Link>
 
           <div className="text-sm text-gray-400">
-            8900 CHF • Setup + Formation • Support 6 mois
+            Tarif sur demande • Setup ultra-personnalisé
           </div>
         </div>
       </section>
@@ -268,7 +268,7 @@ export default function MarketingAutomationCRMPage() {
         </div>
       </section>
 
-      {/* PACKAGES PERSONNALISÉS MARKETING AUTOMATION */}
+      {/* SOLUTION PERSONNALISÉE MARKETING AUTOMATION */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-green-400/5 via-transparent to-yellow-400/5" />
 
@@ -278,10 +278,10 @@ export default function MarketingAutomationCRMPage() {
               MARKETING AUTOMATION COMPLETE
             </div>
             <div className="text-5xl md:text-6xl font-light text-green-400 mb-4">
-              8900 CHF
+              Sur demande
             </div>
             <div className="text-xl text-gray-300 mb-8">
-              Setup + Formation + Support 6 mois
+              Setup ultra-personnalisé selon vos besoins
             </div>
 
             <div className="grid grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
@@ -308,7 +308,7 @@ export default function MarketingAutomationCRMPage() {
             </Link>
             
             <div className="text-sm text-gray-400">
-              Consultation gratuite • ROI mesurable • Équipe autonome en 3 mois
+              Consultation gratuite • Solutions sur-mesure • Équipe autonome en 3 mois
             </div>
           </div>
         </div>
