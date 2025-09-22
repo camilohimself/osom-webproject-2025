@@ -38,8 +38,8 @@ const InteractiveBackground = () => {
     
     const initParticles = () => {
       const newParticles: Particle[] = []
-      // Reduce particles on mobile for 60fps
-      const particleCount = isMobile ? 25 : 50
+      // Optimize particles for performance - drastically reduced for presentation
+      const particleCount = isMobile ? 8 : 15
       for (let i = 0; i < particleCount; i++) {
         newParticles.push({
           x: Math.random() * window.innerWidth,

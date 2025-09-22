@@ -5,11 +5,11 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 const ScrollProgressIndicator = () => {
   const { scrollYProgress } = useScroll()
   
-  // Spring physics for smooth animation
+  // Optimized spring physics - reduced calculations for performance
   const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
+    stiffness: 60,
+    damping: 25,
+    restDelta: 0.01
   })
 
   // Transform scroll to different values
