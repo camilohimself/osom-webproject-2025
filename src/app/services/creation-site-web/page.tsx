@@ -66,88 +66,65 @@ export default function CreationSiteWebPage() {
     }
   ]
   
-  // Packages personnalisés par PERSONA MARKETING - STRATÉGIE ANTI-AGENCE
+  // Packages restructurés B2B cohérents
   const pricingOptions = [
     {
-      id: 'georges-pme',
-      name: 'PACKAGE "GEORGES"',
-      subtitle: 'PME Pragmatique',
-      price: '2,500',
+      id: 'starter',
+      name: 'SITE STARTER',
+      subtitle: 'Présence digitale',
+      price: '1,500',
+      currency: 'CHF',
+      time: '15 jours',
+      description: 'Site vitrine professionnel',
+      antiAgency: 'Prix fixe transparent, délai garanti',
+      features: [
+        'Site vitrine responsive (5 pages)',
+        'SEO local Valais optimisé',
+        'Google Analytics setup',
+        'Formulaire contact + newsletter',
+        'Formation équipe 1h'
+      ],
+      ideal: 'PME qui veut une présence web rapide',
+      objectionHandler: 'ROI visible dès le premier mois'
+    },
+    {
+      id: 'growth',
+      name: 'SITE GROWTH',
+      subtitle: 'Croissance business',
+      price: '4,500',
       currency: 'CHF',
       time: '30 jours',
-      description: 'Site qui prouve aux concurrents',
-      antiAgency: 'Prix fixe transparent (pas de surprises cachées)',
+      description: 'Site complet pour développer',
+      antiAgency: 'Tout inclus, pas de surprises',
       features: [
-        'Site vitrine + GA4 setup professionnel',
-        '1 case study concurrent local inclus',
-        'Formation équipe interne (2h)',
-        'SEO local Valais optimisé',
-        'Délai garanti 30 jours'
+        'Tout le package Starter',
+        'Design sur-mesure premium',
+        'Blog intégré + CMS',
+        'Optimisations conversion',
+        'Formation équipe 2h + support 30j'
       ],
-      ideal: 'Votre concurrent sierrois a déjà commencé',
-      objectionHandler: 'ROI prouvé par portfolio vérifiable',
-      persona: 'Georges Bonvin - Directeur PME sceptique'
-    },
-    {
-      id: 'marie-creatif',
-      name: 'PACKAGE "MARIE"',
-      subtitle: 'Créatif Budget Serré',
-      price: '1,800',
-      currency: 'CHF',
-      time: '25 jours',
-      description: 'Portfolio qui impressionne les jurys',
-      antiAgency: 'Pas de jargon technique, langage business',
-      features: [
-        'Portfolio optimisé subventions',
-        'SEO local culturel Valais',
-        'Template newsletter inclus',
-        'Design artistique premium',
-        'Support candidatures'
-      ],
-      ideal: 'Portfolio qui impressionne les jurys',
-      objectionHandler: 'Investissement qui rapporte des subventions',
-      persona: 'Marie Dubuis - Artiste ambitieuse'
-    },
-    {
-      id: 'sarah-premium',
-      name: 'PACKAGE "SARAH"',
-      subtitle: 'Premium Discret',
-      price: '6,500',
-      currency: 'CHF',
-      time: '45 jours',
-      description: 'Excellence sans ostentation',
-      antiAgency: 'Promesses tenues, pas de délais élastiques',
-      features: [
-        'Design haut de gamme sur-mesure',
-        'Rédaction copywriting premium',
-        'Maintenance 6 mois incluse',
-        'Consulting stratégique inclus',
-        'Support prioritaire 24h'
-      ],
-      ideal: 'Excellence qui reflète votre standing',
-      objectionHandler: 'Process clair, réactivité garantie',
-      persona: 'Dr. Sarah Meier - Professionnelle exigeante',
+      ideal: 'Entreprises prêtes à investir dans leur croissance',
+      objectionHandler: 'Accompagnement complet inclus',
       popular: true
     },
     {
-      id: 'audit-gratuit',
-      name: 'AUDIT GRATUIT',
-      subtitle: 'Lead Magnet Product Ladder',
-      price: '0',
-      currency: 'CHF',
-      time: '48h',
-      description: 'Découvrez votre potentiel caché',
-      antiAgency: 'Analyse transparente, sans engagement',
+      id: 'custom',
+      name: 'PROJET SUR-MESURE',
+      subtitle: 'Solution personnalisée',
+      price: 'Sur demande',
+      currency: '',
+      time: '45-90 jours',
+      description: 'Application métier unique',
+      antiAgency: 'Cahier des charges détaillé, budget maîtrisé',
       features: [
-        'Analyse SEO complète de votre site',
-        'Benchmark concurrents locaux Valais',
-        'Identification 5 opportunités quick-wins',
-        'Rapport PDF personnalisé',
-        'Consultation téléphonique 30 min'
+        'Analyse besoins approfondie',
+        'Développement spécifique',
+        'Intégrations API tierces',
+        'Formation personnalisée',
+        'Maintenance évolutive'
       ],
-      ideal: 'Point de départ idéal avant tout projet',
-      objectionHandler: 'Gratuit, sans engagement, valeur immédiate',
-      cta: 'Réservez votre audit (2 places/mois)'
+      ideal: 'Projets complexes avec besoins spécifiques',
+      objectionHandler: 'Devis détaillé après consultation'
     }
   ]
 
@@ -263,9 +240,9 @@ export default function CreationSiteWebPage() {
       step2: "Développement Next.js + formation 2h"
     },
     pricing: {
-      price: "4'500 CHF",
-      timeline: "Livraison en 15-45 jours",
-      included: ["Design sur-mesure", "SEO optimisé", "Formation incluse", "Support 30 jours"]
+      price: "1'500 - 4'500 CHF",
+      timeline: "Livraison en 15-30 jours",
+      included: ["Design responsive", "SEO optimisé", "Formation incluse", "Support inclus"]
     },
     ctaTitle: "Démarrer votre projet",
     ctaSubtitle: "Consultation gratuite • Devis transparent"
@@ -663,7 +640,7 @@ export default function CreationSiteWebPage() {
                       : 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600'
                   }`}
                 >
-                  {option.id === 'custom' ? 'Demander un devis' : 'Choisir ce plan'}
+                  {option.id === 'custom' ? 'Demander un devis' : 'Choisir ce package'}
                 </Link>
                 
                 {option.ideal && (
