@@ -3,11 +3,19 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, type Locale } from '@/lib/i18n'
 import dynamic from 'next/dynamic'
 
-// Import direct temporaire pour éviter webpack error
-import HorizontalBarsChart from '@/components/ui/HorizontalBarsChart'
-import CTRCircularChart from '@/components/ui/CTRCircularChart'
-import DataLineChart from '@/components/ui/DataLineChart'
-import GaugeChart from '@/components/ui/GaugeChart'
+// Lazy load des charts pour améliorer FCP/LCP
+const HorizontalBarsChart = dynamic(() => import('@/components/ui/HorizontalBarsChart'), {
+  loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded" />
+})
+const CTRCircularChart = dynamic(() => import('@/components/ui/CTRCircularChart'), {
+  loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded" />
+})
+const DataLineChart = dynamic(() => import('@/components/ui/DataLineChart'), {
+  loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded" />
+})
+const GaugeChart = dynamic(() => import('@/components/ui/GaugeChart'), {
+  loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded" />
+})
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOMHybrid from '@/components/homepage/HeroSwissOSOMHybrid'
@@ -22,12 +30,17 @@ const PilierSwiss2 = dynamic(() => import('@/components/homepage/PilierSwiss2'),
 const PilierSwiss3 = dynamic(() => import('@/components/homepage/PilierSwiss3'), {
   loading: () => <div className="h-96 bg-green-400/5 rounded-2xl animate-pulse" />
 })
+// Components critiques - gardés en import direct
 import AnimatedElement from '@/components/ui/AnimatedElement'
-import InteractiveBackground from '@/components/ui/InteractiveBackground'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
-import MagneticButton from '@/components/ui/MagneticButton'
 import IconeOSOM from '@/components/IconeOSOM'
 import LogoOSOM from '@/components/ui/LogoOSOM'
+
+// Components non-critiques - lazy load
+const InteractiveBackground = dynamic(() => import('@/components/ui/InteractiveBackground'), {
+  loading: () => null
+})
+const MagneticButton = dynamic(() => import('@/components/ui/MagneticButton'))
 
 export const metadata: Metadata = {
   title: 'Agence web Valais OSOM | Marketing IA × Création site internet',

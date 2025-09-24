@@ -15,16 +15,6 @@ export const swissCitiesData: Record<string, SwissCityData> = {
     businessHub: "Cœur économique des Alpes suisses",
     phoneCode: "+41 27"
   },
-  sion: {
-    name: "Sion",
-    canton: "Valais", 
-    region: "Valais",
-    population: 35041,
-    economicCenter: true,
-    majorIndustries: ["Administration", "Services", "Commerce", "Tourisme"],
-    businessHub: "Capitale du Valais",
-    phoneCode: "+41 27"
-  },
   lausanne: {
     name: "Lausanne",
     canton: "Vaud",
@@ -74,12 +64,6 @@ export const localMetricsData: Record<string, LocalMetrics> = {
     averageROI: "Sites Next.js",
     projectsCompleted: 89,
     marketShare: "Expert Local"
-  },
-  sion: {
-    localClients: 23,
-    averageROI: "Portfolio Réel", 
-    projectsCompleted: 45,
-    marketShare: "Basé Sion"
   },
   lausanne: {
     localClients: 18,
@@ -137,34 +121,6 @@ export const localCaseStudies = {
     ]
   },
   
-  sion: {
-    clientName: "Artisane de Lumière",
-    industry: "Éclairage Design",
-    location: "Sion, Valais",
-    challenge: "Concurrence nationale sur les mots-clés éclairage. Besoin de se positionner comme référence locale haut de gamme pour les projets architecturaux et hôteliers en Valais.",
-    solution: "Content marketing technique, SEO local Sion, partenariats avec architectes valaisans, et showcase projets patrimoniaux (châteaux, hôtels de luxe).",
-    results: [
-      {
-        metric: "Portfolio Digitalisé",
-        before: "Brochures papier uniquement", 
-        after: "Galerie interactive en ligne",
-        improvement: "Showcase 24/7"
-      },
-      {
-        metric: "Processus Devis",
-        before: "Rendez-vous obligatoire",
-        after: "Pré-qualification digitale",
-        improvement: "Efficacité +"
-      },
-      {
-        metric: "Références Clients",
-        before: "Bouche-à-oreille local",
-        after: "Témoignages en ligne", 
-        improvement: "Crédibilité Renforcée"
-      }
-    ]
-  },
-
   lausanne: {
     clientName: "TechStart Lausanne",
     industry: "SaaS B2B",
@@ -311,37 +267,6 @@ export const localServicesData = {
     }
   ],
 
-  sion: [
-    {
-      title: "Sites Web Institutions",
-      description: "Création de sites pour institutions publiques sédunoises. Interface citoyens, accessibilité web, conformité légale.",
-      localAdvantage: "Proximité capitale, compréhension enjeux administratifs valaisans",
-      price: "Appel d'offres",
-      duration: "Selon procédure"
-    },
-    {
-      title: "Portfolio Professionnels", 
-      description: "Sites vitrine pour avocats, fiduciaires, consultants Sion. Design sobre, références client, contact sécurisé.",
-      localAdvantage: "Réseau professionnel établi, références vérifiables dans la région",
-      price: "Package fixe",
-      duration: "4-6 semaines"
-    },
-    {
-      title: "E-commerce Local Sion",
-      description: "Boutiques en ligne pour commerces centre-ville. Click & collect, livraison locale, intégration stocks existants.",
-      localAdvantage: "Collaboration directe avec Association des Commerçants de Sion", 
-      price: "Modulaire",
-      duration: "6-10 semaines"
-    },
-    {
-      title: "Sites Éducatifs",
-      description: "Plateformes web pour écoles et centres formation sédunois. Inscription en ligne, espace élèves, communication parents.",
-      localAdvantage: "Expertise pédagogie digitale et réglementation éducative valaisanne",
-      price: "Forfait école",
-      duration: "Année scolaire"
-    }
-  ],
-
   lausanne: [
     {
       title: "Plateformes SaaS B2B",
@@ -476,13 +401,6 @@ export const cityTestimonials = {
     industry: "Artisanat & Décoration"
   },
   
-  sion: {
-    quote: "L'expertise locale d'osom à Sion nous a permis de devenir la référence éclairage haut de gamme en Valais. ROI exceptionnel !",
-    author: "Caroline Métrailler",
-    company: "Artisane de Lumière", 
-    industry: "Design & Éclairage"
-  },
-
   lausanne: {
     quote: "Scale-up réussi grâce à osom ! De startup à 1.8M CHF ARR en 18 mois. Leur compréhension de l'écosystème tech lausannois est parfaite.",
     author: "David Chen",
@@ -517,14 +435,8 @@ export const cityContactInfo = {
   valais: {
     phone: "+41 27 565 90 20",
     email: "valais@osom.ch",
-    meetingLocation: "Bureaux Sion ou déplacement client",
+    meetingLocation: "Bureaux Valais ou déplacement client",
     responseTime: "< 2h"
-  },
-  sion: {
-    phone: "+41 27 565 90 20", 
-    email: "sion@osom.ch",
-    meetingLocation: "Centre-ville Sion",
-    responseTime: "< 1h"
   },
   lausanne: {
     phone: "+41 21 510 24 15",
@@ -560,12 +472,6 @@ function getCitySpecificMeta(cityKey: string, cityData: SwissCityData, localMetr
       metaDescription: `Agence web Valais spécialisée tourisme alpin & PME locales. ${localMetrics.localClients} clients actifs, sites Next.js optimisés. SEO local, e-commerce, marketing Valais 1500 CHF.`,
       heroTitle: `Agence Web Valais`,
       heroDescription: `Expert digital des Alpes suisses. Nous créons des sites web optimisés pour le marché valaisan : tourisme, artisanat, PME locales. Basés en Valais, nous comprenons vos défis business.`
-    },
-    sion: {
-      metaTitle: `Agence Web Sion - osom | Création Site Capital Valais`,
-      metaDescription: `Création site web Sion, capitale Valais. Services professionnels, institutions, commerce local. ${localMetrics.localClients} projets Sion livrés. Sites modernes, SEO local, support 1h.`,
-      heroTitle: `Agence Digitale Sion`,
-      heroDescription: `Spécialiste digital de la capitale valaisanne. Sites web pour professions libérales, institutions publiques, commerces Sion. Proximité centre-ville, réactivité garantie.`
     },
     lausanne: {
       metaTitle: `Agence Web Lausanne - osom | Tech Startup & Scale-up Léman`,

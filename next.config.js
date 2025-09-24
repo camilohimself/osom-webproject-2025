@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -17,8 +21,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: [
       'framer-motion',
-      '@react-three/fiber',
-      'recharts',
       'lucide-react'
     ],
   },
@@ -30,4 +32,4 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer(nextConfig)

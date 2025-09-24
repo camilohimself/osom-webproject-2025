@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import { Header, Footer } from '@/components/layout'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, locales, type Locale } from '@/lib/i18n'
 import { cookies } from 'next/headers'
@@ -52,19 +53,36 @@ export default async function RootLayout({
   return (
     <html lang={currentLocale}>
       <head>
-        {/* Preload Inter font pour éliminer FOUC */}
+        {/* DNS Prefetch & Preconnect pour performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        <link rel="preconnect" href="https://assets.calendly.com" />
+
+        {/* Preload critical CSS */}
         <link
           rel="preload"
           href="/_next/static/css/app/layout.css"
           as="style"
         />
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+        {/* Defer Calendly - non-critical */}
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        />
+        <script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          type="text/javascript"
+          defer
+        ></script>
       </head>
       <body className={`${inter.className} ${inter.variable}`}>
         <div id="app-container">
           <ABTestProvider>
             <Header currentLocale={currentLocale} dictionary={dictionary} />
+            <Breadcrumb />
             <main>
               {children}
             </main>

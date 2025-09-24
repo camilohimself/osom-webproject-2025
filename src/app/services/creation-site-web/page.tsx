@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ServicePageMobile } from '@/components/services/ServicePageMobile'
-import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import ServicesCrossLinks from '@/components/ui/ServicesCrossLinks'
 
 export default function CreationSiteWebPage() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -250,8 +250,6 @@ export default function CreationSiteWebPage() {
 
   return (
     <>
-      {/* Progress Bars Sublimes */}
-      <ScrollProgressIndicator />
 
       <ServicePageMobile {...mobileData} />
 
@@ -770,6 +768,9 @@ export default function CreationSiteWebPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Services Complémentaires */}
+      <ServicesCrossLinks currentService="creation-site-web" />
       </div>
     </>
   )

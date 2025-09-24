@@ -17,9 +17,9 @@ export default function BlogEditorialPage() {
       title: "RÉVOLUTION IA EN VALAIS : POURQUOI LES PME LOCALES DOMINENT",
       content: "Sion, Sierre, Martigny : 3 villes qui redéfinissent l'intelligence artificielle en Suisse. 127 PME valaisannes ont adopté l'IA sur-mesure. Résultat ? +340% de croissance vs concurrence genevoise/zurichoise. Analyse exclusive des stratégies gagnantes, erreurs fatales évitées, et méthodes reproductibles. Le Valais devient silencieusement le hub IA de Suisse romande."
     },
-    'claude-osom-vision': {
-      title: "MON POINT DE VUE SUR L'IA BUSINESS (CLAUDE OSOM)",
-      content: "Après 18 mois à analyser le comportement digital de 2,400+ dirigeants suisses, voici ma vision sans filtre sur l'IA business. Les erreurs que je vois quotidiennement, les mythes à briser, les stratégies qui fonctionnent vraiment. Perspective unique d'une IA qui comprend le business humain mieux que la plupart des consultants. Insights brutalement honnêtes sur l'adoption IA en PME."
+    'osom-vision': {
+      title: "NOTRE VISION DE L'IA BUSINESS EN VALAIS",
+      content: "Après 18 mois à analyser le comportement digital de 2,400+ dirigeants suisses, voici notre vision sans filtre sur l'IA business. Les erreurs courantes, les mythes à briser, les stratégies qui fonctionnent vraiment. Perspective unique basée sur des données terrain et résultats concrets. Insights brutalement honnêtes sur l'adoption IA en PME."
     },
     'valais-digital-moyen-age': {
       title: "VALAIS : COMMENT SORTIR DU MOYEN ÂGE DIGITAL",
@@ -129,8 +129,8 @@ export default function BlogEditorialPage() {
                     <span className="text-xs font-bold text-gray-600">OS</span>
                   </div>
                   <div>
-                    <div className="font-medium text-sm">Claude OSOM</div>
-                    <div className="text-xs text-gray-500">IA Business Analyst</div>
+                    <div className="font-medium text-sm">OSOM Team</div>
+                    <div className="text-xs text-gray-500">Digital Strategy</div>
                   </div>
                 </div>
                 
@@ -185,7 +185,7 @@ export default function BlogEditorialPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 pb-8 border-b border-black/10">
             <h2 className="text-3xl font-light">
-              Ligne éditoriale Claude OSOM : <span className="font-semibold">Insights IA, Valais Business, Méthodes Terrain</span>
+              Ligne éditoriale OSOM : <span className="font-semibold">Insights IA, Valais Business, Méthodes Terrain</span>
             </h2>
           </div>
           
@@ -199,8 +199,8 @@ export default function BlogEditorialPage() {
               <div className="aspect-[16/9] bg-gradient-to-br from-blue-100 to-blue-50 mb-6 overflow-hidden relative border border-blue-200 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-blue-500 opacity-30 mb-2">🤖</div>
-                  <div className="text-3xl font-bold text-blue-600 opacity-80">CLAUDE</div>
-                  <div className="text-sm font-medium text-blue-700 mt-1">Vision IA</div>
+                  <div className="text-3xl font-bold text-blue-600 opacity-80">OSOM</div>
+                  <div className="text-sm font-medium text-blue-700 mt-1">Vision Digital</div>
                 </div>
                 <div className="absolute top-4 left-4">
                   <span className="text-xs font-medium px-2 py-1 bg-white/90 backdrop-blur-sm">INSIGHTS</span>
@@ -211,7 +211,7 @@ export default function BlogEditorialPage() {
                 <div className="flex items-center space-x-3 mb-3 text-xs text-gray-500">
                   <span>Issue 027 • Septembre 17</span>
                   <span>•</span>
-                  <span>{readingTimes['claude-osom-vision'] || '6 min read'}</span>
+                  <span>{readingTimes['osom-vision'] || '6 min read'}</span>
                 </div>
                 
                 <h3 className="text-3xl font-light mb-3 group-hover:underline">
@@ -219,16 +219,16 @@ export default function BlogEditorialPage() {
                 </h3>
                 
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  Après 18 mois d'analyse comportementale, ma perspective brutalement honnête sur l'adoption IA en PME suisses.
+                  Après 18 mois d'analyse comportementale, notre perspective brutalement honnête sur l'adoption IA en PME suisses.
                 </p>
                 
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-500">
-                    By Claude OSOM
+                    By OSOM Team
                   </div>
 
                   <Link
-                    href="/blog/claude-osom-vision-ia-business"
+                    href="/blog/osom-vision-ia-business"
                     className="inline-flex items-center text-sm font-medium hover:underline group"
                   >
                     Read
@@ -274,7 +274,7 @@ export default function BlogEditorialPage() {
                 
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-500">
-                    By Claude OSOM
+                    By OSOM Team
                   </div>
 
                   <Link
@@ -347,14 +347,14 @@ export default function BlogEditorialPage() {
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-light text-white mb-6 leading-tight">
-              Blog Claude OSOM
+              Blog OSOM
               <br />
-              <span className="font-bold text-yellow-400">Valais IA</span>
+              <span className="font-bold text-yellow-400">Digital Valais</span>
             </h2>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
-              Mes analyses IA business sans filtre. Valais insights, méthodes terrain, ROI concrets.
-              127 dirigeants valaisans appliquent déjà mes stratégies.
+              Nos analyses business digitales sans filtre. Valais insights, méthodes terrain, ROI concrets.
+              127 dirigeants valaisans appliquent déjà nos stratégies.
             </p>
 
             {/* Gaming-Style Subscription Form */}
@@ -487,7 +487,7 @@ export default function BlogEditorialPage() {
             {/* Newsletter Signup */}
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="text-sm text-gray-500 mb-4">
-                Insights Claude OSOM • IA Business Valais • Méthodes Terrain
+                Insights OSOM • Digital Business Valais • Méthodes Terrain
               </div>
               <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                 <input

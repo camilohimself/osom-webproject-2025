@@ -58,14 +58,10 @@ export default function CustomCursor({ isActive = false }: CustomCursorProps) {
         setCursorVariant('data')
         setHoverText('📊 DATA')
       }
-      // Éléments interactifs
-      else if (target.closest('a') || 
-               target.closest('button') || 
-               target.closest('.group') ||
-               target.closest('[role="button"]') ||
-               target.closest('[data-cursor="interactive"]')) {
+      // Éléments interactifs - désactivé
+      else if (false) {
         setCursorVariant('interactive')
-        setHoverText('👆 CLIC')
+        setHoverText('')
       }
       // Zone prisme principal (legacy)
       else if (target.closest('[data-prism="triangle"]')) {

@@ -18,7 +18,6 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
 
   const localPages = [
     { name: 'Valais', href: '/local/valais' },
-    { name: 'Sion', href: '/local/sion' },
     { name: 'Lausanne', href: '/local/lausanne' },
     { name: 'Genève', href: '/local/geneve' },
     { name: 'Fribourg', href: '/local/fribourg' },
