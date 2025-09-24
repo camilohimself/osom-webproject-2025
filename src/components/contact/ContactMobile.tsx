@@ -10,10 +10,21 @@ export function ContactMobile() {
     project: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
+
+    // Validation simple
+    if (!formData.name || !formData.phone) {
+      alert('Nom et téléphone obligatoires')
+      return
+    }
+
+    // Redirect vers Calendly avec paramètres
+    const calendlyUrl = `https://calendly.com/osom-consultation/30min?name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}&phone=${encodeURIComponent(formData.phone)}`
+    window.open(calendlyUrl, '_blank')
+
+    // Reset form
+    setFormData({ name: '', email: '', phone: '', project: '' })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

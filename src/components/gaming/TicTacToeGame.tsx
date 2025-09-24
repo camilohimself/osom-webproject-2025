@@ -208,7 +208,7 @@ export default function TicTacToeGame() {
             onClick={() => makeMove(index)}
             disabled={!gameState.gameStarted || gameState.isAIThinking || !!cell || !!gameState.winner}
             className={`
-              h-20 w-20 border-2 border-purple-500/50 bg-gray-900/50
+              h-24 w-24 border-2 border-purple-500/50 bg-gray-900/50
               flex items-center justify-center font-mono text-3xl font-bold
               transition-all duration-200 rounded-lg
               ${!cell && gameState.gameStarted && !gameState.winner && !gameState.isAIThinking
@@ -241,9 +241,9 @@ export default function TicTacToeGame() {
         ) : (
           <button
             onClick={resetGame}
-            className="text-purple-400 font-mono text-sm hover:text-purple-300 underline"
+            className="bg-purple-500 text-white px-6 py-3 font-mono font-bold rounded-lg hover:bg-purple-400 transition-colors min-h-[44px] min-w-[120px] text-base"
           >
-            &gt; REINICIAR &lt;
+            NUEVA PARTIDA
           </button>
         )}
       </div>

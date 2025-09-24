@@ -215,7 +215,7 @@ export default async function Home() {
                   </div>
                   <div>
                     <div className="text-purple-400 font-bold text-lg">CRÉATION IA</div>
-                    <div className="text-yellow-400 text-2xl font-bold">25% CTR</div>
+                    <div className="text-yellow-400 text-2xl font-bold">8.5% CTR</div>
                   </div>
                 </div>
                 <div className="text-gray-300 text-sm">Contenus optimisés IA vs 2-3% industrie</div>
@@ -228,10 +228,10 @@ export default async function Home() {
                   </div>
                   <div>
                     <div className="text-cyan-400 font-bold text-lg">DATA INSIGHTS</div>
-                    <div className="text-yellow-400 text-2xl font-bold">688</div>
+                    <div className="text-yellow-400 text-2xl font-bold">120+</div>
                   </div>
                 </div>
-                <div className="text-gray-300 text-sm">Sessions cachées révélées en 6 mois</div>
+                <div className="text-gray-300 text-sm">Leads qualifiés générés mensuellement</div>
               </div>
 
               <div className="bg-green-400/10 border border-green-400/20 rounded-2xl p-6">

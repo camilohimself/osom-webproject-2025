@@ -133,11 +133,11 @@ export default function AgencePage() {
           <div className="max-w-lg mx-auto">
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gray-900/50 rounded-xl p-4 text-center border border-white/10">
-                <div className="text-2xl font-bold text-yellow-400 mb-1">200+</div>
+                <div className="text-2xl font-bold text-yellow-400 mb-1">50+</div>
                 <div className="text-gray-300 text-sm">Projets</div>
               </div>
               <div className="bg-gray-900/50 rounded-xl p-4 text-center border border-white/10">
-                <div className="text-2xl font-bold text-green-400 mb-1">5+</div>
+                <div className="text-2xl font-bold text-green-400 mb-1">3+</div>
                 <div className="text-gray-300 text-sm">Années</div>
               </div>
             </div>
@@ -221,7 +221,7 @@ export default function AgencePage() {
               transition={{ duration: 1, delay: 0.5 }}
             >
               <span className="text-yellow-400 font-bold">Créatifs mesurables</span>: on raconte et on prouve.<br/>
-              <span className="text-gray-300">Brevet fédéral marketing, certif. Google Data Analyst, 200+ projets.</span>
+              <span className="text-gray-300">Brevet fédéral marketing, certif. Google Data Analyst, 50+ projets.</span>
             </motion.p>
 
             {/* CTA Buttons Premium */}
@@ -515,7 +515,7 @@ export default function AgencePage() {
             viewport={{ once: true }}
             transition={{ delay: 0.8 }}
           >
-            De l'artisanat web au data-driven marketing. <span className="text-cyan-400">200+ projets</span>, <span className="text-yellow-400">certifications officielles</span>, <span className="text-purple-400">méthodologie éprouvée</span>.
+            De l'artisanat web au data-driven marketing. <span className="text-cyan-400">50+ projets</span>, <span className="text-yellow-400">certifications officielles</span>, <span className="text-purple-400">méthodologie éprouvée</span>.
           </motion.p>
         </div>
       </section>
