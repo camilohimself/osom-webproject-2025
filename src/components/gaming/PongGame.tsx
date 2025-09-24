@@ -42,7 +42,7 @@ export default function PongGame() {
     gameStarted: false,
     gameMessage: "Cliquez pour défier l'IA OSOM",
     ballSpeed: 5,
-    maxSpeed: 7.76,
+    maxSpeed: 15,
     playerName: "",
     showNameInput: false,
     currentSession: Date.now()
@@ -221,7 +221,7 @@ export default function PongGame() {
       gameStarted: false,
       gameMessage: "🎮 ENDURANCE PONG OSOM - Combien de contacts ?",
       ballSpeed: 5,
-      maxSpeed: 7.76,
+      maxSpeed: 15,
       playerName: "",
       showNameInput: false,
       currentSession: Date.now()
