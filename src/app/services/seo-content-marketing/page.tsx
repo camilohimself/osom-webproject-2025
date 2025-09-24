@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import IconeOSOM from '@/components/IconeOSOM'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import ServicesCrossLinks from '@/components/ui/ServicesCrossLinks'
 
 export default function SEOContentMarketingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -558,6 +559,9 @@ export default function SEOContentMarketingPage() {
           </div>
         </div>
       </section>
+
+      {/* Services Complémentaires */}
+      <ServicesCrossLinks currentService="seo-content-marketing" />
 
     </div>
   )

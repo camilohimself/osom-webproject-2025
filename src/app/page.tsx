@@ -16,9 +16,15 @@ const DataLineChart = dynamic(() => import('@/components/ui/DataLineChart'), {
 const GaugeChart = dynamic(() => import('@/components/ui/GaugeChart'), {
   loading: () => <div className="h-64 bg-gray-100 animate-pulse rounded" />
 })
+
+// Mobile lightweight versions
+import { MobileHorizontalBars, MobileCTRChart, MobileDataLine, MobileGauge } from '@/components/ui/MobileChartPlaceholder'
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOMHybrid from '@/components/homepage/HeroSwissOSOMHybrid'
+const ExpertiseLocale = dynamic(() => import('@/components/homepage/ExpertiseLocale'), {
+  loading: () => <div className="h-96 bg-gradient-to-br from-emerald-600/5 to-purple-600/5 animate-pulse rounded-2xl" />
+})
 
 // Lazy loading Piliers Swiss optimisé
 const PilierSwiss1 = dynamic(() => import('@/components/homepage/PilierSwiss1'), {
@@ -383,6 +389,9 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      {/* Expertise Locale Section */}
+      <ExpertiseLocale />
       </div>
     </>
   )

@@ -153,6 +153,11 @@ const InteractiveBackground = () => {
     }
   }, [mousePosition, isMobile])
 
+  // KILLER MOBILE: Return null AFTER all hooks
+  if (isMobile) {
+    return null
+  }
+
   return (
     <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0">
       <canvas

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import IconeOSOM from '@/components/IconeOSOM'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import ServicesCrossLinks from '@/components/ui/ServicesCrossLinks'
 
 export default function TrackingDataPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -374,6 +375,9 @@ export default function TrackingDataPage() {
           </div>
         </div>
       </section>
+
+      {/* Services Cross-Links */}
+      <ServicesCrossLinks currentService="tracking-data" />
 
     </div>
   )

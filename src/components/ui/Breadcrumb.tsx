@@ -27,7 +27,7 @@ export default function Breadcrumb() {
     'outils': 'Outils',
     'local': 'Suisse',
     'sion': 'Sion',
-    'valais': 'Sierre',
+    'valais': 'Valais',
     'lausanne': 'Lausanne',
     'geneve': 'Genève',
     'fribourg': 'Fribourg',

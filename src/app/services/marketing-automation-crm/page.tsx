@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import ServicesCrossLinks from '@/components/ui/ServicesCrossLinks'
 
 export default function MarketingAutomationCRMPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
@@ -357,6 +358,9 @@ export default function MarketingAutomationCRMPage() {
           </div>
         </div>
       </section>
+
+      {/* Services Cross-Links */}
+      <ServicesCrossLinks currentService="marketing-automation-crm" />
 
     </div>
   )

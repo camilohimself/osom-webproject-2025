@@ -1,10 +1,23 @@
 'use client'
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const ScrollProgressIndicator = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Mobile detection
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   const { scrollYProgress } = useScroll()
-  
+
   // Optimized spring physics - reduced calculations for performance
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 60,
@@ -15,7 +28,22 @@ const ScrollProgressIndicator = () => {
   // Transform scroll to different values
   const scaleProgress = useTransform(smoothProgress, [0, 1], [0, 1])
   const opacityProgress = useTransform(smoothProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0])
+  const percentProgress = useTransform(smoothProgress, latest => Math.round(latest * 100))
 
+  // MOBILE VERSION: Only top bar, no circular indicator
+  if (isMobile) {
+    return (
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-yellow-400 z-50"
+        style={{
+          scaleX: scrollYProgress,
+          transformOrigin: "0%"
+        }}
+      />
+    )
+  }
+
+  // DESKTOP VERSION: Full power with animations
   return (
     <>
       {/* Top progress bar */}
@@ -94,7 +122,7 @@ const ScrollProgressIndicator = () => {
         transition={{ delay: 1 }}
       >
         <div className="text-yellow-400 text-sm font-medium">
-          Progress: <motion.span>{useTransform(smoothProgress, latest => Math.round(latest * 100))}</motion.span>%
+          Progress: <motion.span>{percentProgress}</motion.span>%
         </div>
         <div className="text-gray-400 text-xs">
           Scroll for premium experience

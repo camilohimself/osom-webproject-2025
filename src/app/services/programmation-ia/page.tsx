@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import ServicesCrossLinks from '@/components/ui/ServicesCrossLinks'
 
 export default function ProgrammationIAPage() {
   const [activeExperiment, setActiveExperiment] = useState<string>('dashboard')
@@ -745,6 +746,9 @@ export default function ProgrammationIAPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Services Cross-Links */}
+      <ServicesCrossLinks currentService="programmation-ia" />
     </div>
   )
 }
