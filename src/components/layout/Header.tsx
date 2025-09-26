@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
-import LanguageSwitcher from '@/components/LanguageSwitcher'
+// import LanguageSwitcher from '@/components/LanguageSwitcher' // Temporairement désactivé Phase 1
 
 interface HeaderProps {
   currentLocale: Locale
@@ -194,8 +194,8 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-6">
-            {/* Language Switcher */}
-            <LanguageSwitcher currentLocale={currentLocale} />
+            {/* Language Switcher - DÉSACTIVÉ PHASE 1 */}
+            {/* <LanguageSwitcher currentLocale={currentLocale} /> */}
 
             {/* CTA Button */}
             <Link
@@ -271,7 +271,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
               ))}
               
               <div className="pt-4 border-t border-yellow-400/20 px-4">
-                <LanguageSwitcher currentLocale={currentLocale} />
+                {/* <LanguageSwitcher currentLocale={currentLocale} /> */}
                 
                 <Link
                   href="/contact"
