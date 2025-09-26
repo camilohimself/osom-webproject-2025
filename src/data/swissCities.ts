@@ -97,8 +97,8 @@ export const localCaseStudies = {
     clientName: "Culture Peinture",
     industry: "Artisanat & Décoration", 
     location: "Martigny, Valais",
-    challenge: "Visibilité limitée sur le marché valaisan malgré un savoir-faire reconnu. Concurrence accrue des grandes enseignes et besoin de digitalisation pour toucher une clientèle locale et touristique.",
-    solution: "Stratégie SEO géolocalisée Valais, refonte site responsive, campagne Google Ads ciblée tourisme alpin, et marketing automation pour fidélisation client.",
+    challenge: "Vous manquez de visibilité digitale face aux grandes enseignes ? Votre savoir-faire artisanal mérite d'être connu au-delà du bouche-à-oreille local.",
+    solution: "Nous vous proposons : stratégie SEO géolocalisée Valais, site responsive optimisé tourisme, et automation marketing pour fidéliser votre clientèle.",
     results: [
       {
         metric: "Site Web Performance",
@@ -125,8 +125,8 @@ export const localCaseStudies = {
     clientName: "TechStart Lausanne",
     industry: "SaaS B2B",
     location: "Lausanne, Vaud",
-    challenge: "Startup tech en phase de scale-up cherchant à conquérir le marché romand B2B. Besoin de crédibilité et de leads qualifiés dans l'écosystème Léman.",
-    solution: "Inbound marketing tech-focused, SEO B2B Suisse romande, content hubs, automation Hubspot, et stratégie LinkedIn targeting décideurs.",
+    challenge: "Votre startup tech peine à générer des leads qualifiés B2B en Suisse romande ? La crédibilité digitale manque pour convaincre les décideurs.",
+    solution: "Notre approche : inbound marketing tech-focused, SEO B2B ciblé, content strategy et automation LinkedIn pour toucher les bonnes personnes.",
     results: [
       {
         metric: "Platform B2B",
@@ -153,8 +153,8 @@ export const localCaseStudies = {
     clientName: "Luxury Swiss Services",
     industry: "Services Premium",
     location: "Genève International",
-    challenge: "Positionnement haut de gamme sur marché international compétitif. Clientèle UHNW exigeante nécessitant approche digitale discrète mais efficace.",
-    solution: "SEO luxury keywords, stratégie content discrétion suisse, targeting géographique premium, et automation de lead nurturing personnalisé.",
+    challenge: "Votre clientèle UHNW exige discrétion absolue mais vous devez rester visible ? Le digital premium demande une approche sur-mesure.",
+    solution: "Nous maîtrisons : SEO luxury discret, content strategy élégant, targeting géographique premium et nurturing ultra-personnalisé.",
     results: [
       {
         metric: "Discrétion Premium",
@@ -181,8 +181,8 @@ export const localCaseStudies = {
     clientName: "Bio-Terroir Fribourg",
     industry: "Agriculture Biologique",
     location: "Fribourg, Gruyère",
-    challenge: "Producteur bio local cherchant à développer vente directe et circuits courts. Concurrence des grandes surfaces bio et besoin de valoriser l'origine fribourgeoise.",
-    solution: "E-commerce local, SEO \"bio Fribourg\", marketing territorial gruyérien, automation seasonal, et stratégie social media authentique.",
+    challenge: "Vous produisez bio local mais les grandes surfaces captent vos clients ? La vente directe digitale peut transformer votre business.",
+    solution: "Nous développons : e-commerce terroir, SEO \"bio Fribourg\", storytelling gruyérien authentique et automation saisonnière.",
     results: [
       {
         metric: "E-commerce Local",
@@ -209,8 +209,8 @@ export const localCaseStudies = {
     clientName: "Precision Watch Tech",
     industry: "Microtechnique Horlogère", 
     location: "Neuchâtel, Arc Jurassien",
-    challenge: "Sous-traitant horloger B2B cherchant à diversifier sa clientèle au-delà des grands groupes. Innovation tech nécessitant visibilité sur expertise unique.",
-    solution: "Content marketing technique, SEO B2B horlogerie, showcase innovation, lead generation industrie 4.0, et positioning expertise pointe.",
+    challenge: "Votre dépendance aux grands horlogers vous inquiète ? Votre expertise microtechnique mérite une visibilité plus large.",
+    solution: "Notre stratégie : content marketing technique, SEO B2B spécialisé, showcase innovation et lead generation industrie 4.0.",
     results: [
       {
         metric: "Showcase Innovation",
@@ -395,72 +395,72 @@ export const localServicesData = {
 // Testimonials per city
 export const cityTestimonials = {
   valais: {
-    quote: "osom a transformé notre visibilité digitale en Valais. De 49 à 688 conversions mensuelles, c'est du jamais vu dans l'artisanat !",
-    author: "Jean-Marc Sarrasin", 
-    company: "Culture Peinture",
-    industry: "Artisanat & Décoration"
+    quote: "Besoin de plus de visibilité pour votre artisanat valaisan ? Nous transformons les PME locales avec des résultats mesurables et durables.",
+    author: "Expertise Valais",
+    company: "OSOM Conseil",
+    industry: "Marketing Digital Local"
   },
   
   lausanne: {
-    quote: "Scale-up réussi grâce à osom ! De startup à 1.8M CHF ARR en 18 mois. Leur compréhension de l'écosystème tech lausannois est parfaite.",
-    author: "David Chen",
-    company: "TechStart Lausanne",
-    industry: "SaaS B2B"
+    quote: "Votre startup tech stagne dans l'écosystème EPFL ? Nous accélérons la croissance B2B avec une stratégie digitale adaptée au marché romand.",
+    author: "Expertise Tech",
+    company: "OSOM Growth",
+    industry: "Scale-up Consulting"
   },
 
   geneve: {
-    quote: "Discrétion, efficacité, résultats : osom maîtrise parfaitement les codes du luxury marketing genevois. Clients premium conquis !",
-    author: "Isabella Marchetti",
-    company: "Luxury Swiss Services", 
-    industry: "Services Premium"
+    quote: "Clientèle UHNW exigeante ? Nous maîtrisons les codes du luxury marketing genevois : discrétion, élégance et résultats mesurables.",
+    author: "Expertise Premium",
+    company: "OSOM Luxury",
+    industry: "Marketing Haut de Gamme"
   },
 
   fribourg: {
-    quote: "Vente directe multipliée par 6 grâce au marketing territorial d'osom. Ils comprennent l'âme du terroir fribourgeois !",
-    author: "Paul Ducrest",
-    company: "Bio-Terroir Fribourg",
-    industry: "Agriculture Bio"
+    quote: "Producteur bio cherchant plus de vente directe ? Nous développons le marketing territorial qui valorise authentiquement votre terroir fribourgeois.",
+    author: "Expertise Terroir",
+    company: "OSOM Bio",
+    industry: "Marketing Agroalimentaire"
   },
 
   neuchatel: {
-    quote: "Innovation B2B horlogère révélée au monde grâce à osom. De local à européen en 2 ans, expertise technique remarquable !",
-    author: "Marie-Claude Jeanneret", 
-    company: "Precision Watch Tech",
-    industry: "Microtechnique"
+    quote: "Sous-traitant horloger cherchant diversification ? Nous révélons votre innovation B2B au-delà de l'Arc jurassien avec une expertise technique pointue.",
+    author: "Expertise Horlogère",
+    company: "OSOM Precision",
+    industry: "B2B Microtechnique"
   }
 }
 
 // Contact information per city
 export const cityContactInfo = {
   valais: {
-    phone: "+41 27 565 90 20",
-    email: "valais@osom.ch",
+    phone: "+41 79 128 95 49",
+    email: "hello@osom.ch",
     meetingLocation: "Bureaux Valais ou déplacement client",
     responseTime: "< 2h"
   },
   lausanne: {
-    phone: "+41 21 510 24 15",
-    email: "lausanne@osom.ch", 
+    phone: "+41 79 128 95 49",
+    email: "hello@osom.ch",
     meetingLocation: "EPFL Innovation Park ou centre Lausanne",
     responseTime: "< 2h"
   },
   geneve: {
-    phone: "+41 22 755 88 30",
-    email: "geneve@osom.ch",
-    meetingLocation: "Rendez-vous discrets sur mesure", 
+    phone: "+41 79 128 95 49",
+    email: "hello@osom.ch",
+    meetingLocation: "Rendez-vous discrets sur mesure",
     responseTime: "< 1h"
   },
   fribourg: {
-    phone: "+41 26 565 45 12", 
-    email: "fribourg@osom.ch",
+    phone: "+41 79 128 95 49",
+    email: "hello@osom.ch",
     meetingLocation: "Fribourg centre ou Gruyère",
     responseTime: "< 3h"
   },
   neuchatel: {
-    phone: "+41 32 565 78 25",
-    email: "neuchatel@osom.ch",
+    phone: "+41 79 128 95 49",
+    email: "hello@osom.ch",
     meetingLocation: "Microcity ou centre Neuchâtel",
-    responseTime: "< 2h"  
+    responseTime: "< 2h"
   }
 }
 
