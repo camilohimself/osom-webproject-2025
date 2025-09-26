@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import IconeOSOM from '@/components/IconeOSOM'
 
 // Custom Hero Section - Data Forensics × Claude Intelligence
 const CustomHeroSection = () => {
@@ -232,7 +233,12 @@ const CustomHeroSection = () => {
               }}
               className="text-4xl font-bold text-black"
             >
-              ⚡
+              <IconeOSOM
+                type="lightning"
+                size={32}
+                color="yellow"
+                ariaLabel="Performance tracking"
+              />
             </motion.div>
           </div>
         </motion.div>

@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 import ServicesCrossLinks from '@/components/ui/ServicesCrossLinks'
+import IconeOSOM from '@/components/IconeOSOM'
 
 export default function ProgrammationIAPage() {
   const [activeExperiment, setActiveExperiment] = useState<string>('dashboard')
@@ -148,7 +149,10 @@ export default function ProgrammationIAPage() {
                     transition={{ delay: 1.5 }}
                     className="mt-1"
                   >
-                    <div className="text-yellow-400">⚡ 3 opportunités IA détectées:</div>
+                    <div className="text-yellow-400 flex items-center gap-2">
+                      <IconeOSOM type="lightning" size={20} color="yellow" ariaLabel="Opportunités détectées" />
+                      3 opportunités IA détectées:
+                    </div>
                   </motion.div>
                   
                   <motion.div
@@ -168,8 +172,14 @@ export default function ProgrammationIAPage() {
                     transition={{ delay: 2.5 }}
                     className="mt-3"
                   >
-                    <div className="text-purple-400">📊 Temps économisé estimé: 15h/semaine</div>
-                    <div className="text-purple-400">💰 ROI projeté: visible en 30 jours</div>
+                    <div className="text-purple-400 flex items-center gap-2">
+                      <IconeOSOM type="chart" size={20} color="purple" ariaLabel="Statistiques temps" />
+                      Temps économisé estimé: 15h/semaine
+                    </div>
+                    <div className="text-green-400 flex items-center gap-2">
+                      <IconeOSOM type="business-growth" size={20} color="green" ariaLabel="ROI projeté" />
+                      ROI projeté: visible en 30 jours
+                    </div>
                   </motion.div>
                   
                   <motion.div
