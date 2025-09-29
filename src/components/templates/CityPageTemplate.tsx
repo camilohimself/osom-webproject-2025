@@ -195,50 +195,6 @@ export default function CityPageTemplate({
               </div>
             </AnimatedElement>
 
-            {/* Local Performance Metrics */}
-            <AnimatedElement type="slideUp" delay={0.4}>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto">
-                <motion.div
-                  className="backdrop-blur-sm border border-yellow-400/20 rounded-2xl p-6 text-center hover:border-yellow-400/40 transition-all duration-300"
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">
-                    <AnimatedCounter from={0} to={localMetrics.localClients} duration={1.5} />
-                  </div>
-                  <div className="text-white font-medium mb-1">Clients {cityData.name}</div>
-                  <div className="text-gray-400 text-sm">Projets réalisés</div>
-                </motion.div>
-
-                <motion.div
-                  className="backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 text-center hover:border-green-400/40 transition-all duration-300"
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <div className="text-3xl font-bold text-green-400 mb-2">{localMetrics.averageROI}</div>
-                  <div className="text-white font-medium mb-1">ROI Moyen</div>
-                  <div className="text-gray-400 text-sm">Clients {cityData.region}</div>
-                </motion.div>
-
-                <motion.div
-                  className="backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300"
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">
-                    <AnimatedCounter from={0} to={localMetrics.projectsCompleted} duration={1.8} />
-                  </div>
-                  <div className="text-white font-medium mb-1">Projets</div>
-                  <div className="text-gray-400 text-sm">Livrés à temps</div>
-                </motion.div>
-
-                <motion.div
-                  className="backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 text-center hover:border-purple-400/40 transition-all duration-300"
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <div className="text-3xl font-bold text-purple-400 mb-2">{localMetrics.marketShare}</div>
-                  <div className="text-white font-medium mb-1">Position</div>
-                  <div className="text-gray-400 text-sm">Marché local</div>
-                </motion.div>
-              </div>
-            </AnimatedElement>
 
             {/* CTA Mobile-optimized */}
             <AnimatedElement type="scale" delay={0.6}>
@@ -410,7 +366,7 @@ export default function CityPageTemplate({
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <AnimatedElement type="scale" delay={0.2}>
               <h2 className="text-4xl md:text-5xl font-light text-white mb-8">
-                Prêt à dominer le marché <span className="text-yellow-400 font-bold">{cityData.name}</span> ?
+                Prêt à dominer le marché <span className="text-yellow-400 font-bold">{cityData.name}</span> ?
               </h2>
               
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
