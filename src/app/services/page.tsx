@@ -4,8 +4,8 @@ import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export const metadata = {
-  title: 'Nos services | osom - Agence web digitale Valais',
-  description: 'Découvrez nos services : création de sites web, SEO, marketing digital et plus. Solutions complètes pour votre présence en ligne.',
+  title: 'Services agence web Valais | Sites internet & SEO | osom',
+  description: 'Services web Valais : création sites internet, SEO, marketing digital. Solutions complètes PME. Performance mesurable. Consultation gratuite.',
 }
 
 export default async function ServicesPage() {

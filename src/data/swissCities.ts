@@ -468,32 +468,32 @@ export const cityContactInfo = {
 function getCitySpecificMeta(cityKey: string, cityData: SwissCityData, localMetrics: LocalMetrics) {
   const metaTemplates = {
     valais: {
-      metaTitle: `Création Site Web Valais - osom | Expert Digital Alpes Suisses`,
-      metaDescription: `Agence web Valais spécialisée tourisme alpin & PME locales. ${localMetrics.localClients} clients actifs, sites Next.js optimisés. SEO local, e-commerce, marketing Valais 1500 CHF.`,
+      metaTitle: `Agence web Valais | Création site internet local | osom`,
+      metaDescription: `Agence web Valais : création sites internet, SEO local, marketing digital. ${localMetrics.localClients} projets Valais, PME et tourisme. Devis gratuit.`,
       heroTitle: `Agence Web Valais`,
       heroDescription: `Expert digital des Alpes suisses. Nous créons des sites web optimisés pour le marché valaisan : tourisme, artisanat, PME locales. Basés en Valais, nous comprenons vos défis business.`
     },
     lausanne: {
-      metaTitle: `Agence Web Lausanne - osom | Tech Startup & Scale-up Léman`,
-      metaDescription: `Développement web Lausanne écosystème tech. Startups EPFL, scale-up SaaS B2B, services financiers Léman. ${localMetrics.localClients} clients tech actifs. Innovation & performance.`,
+      metaTitle: `Agence web Lausanne | Startups & tech Léman | osom`,
+      metaDescription: `Agence web Lausanne pour startups et scale-up. Sites web tech, SaaS B2B, fintech. ${localMetrics.localClients} clients innovation. EPFL ecosystem.`,
       heroTitle: `Tech Web Agency Lausanne`,
       heroDescription: `Partenaire digital de l'écosystème tech lausannois. Sites web pour startups, SaaS B2B, fintech région Léman. Expertise EPFL Innovation Park, growth-focused.`
     },
     geneve: {
-      metaTitle: `Agence Web Genève Premium - osom | Luxury & International`,
-      metaDescription: `Création site web Genève haut de gamme. Services luxury, organisations internationales, finance premium. Discrétion suisse, excellence technique. Clientèle UHNW exigeante.`,
+      metaTitle: `Agence web Genève | Sites premium & international | osom`,
+      metaDescription: `Agence web Genève premium : sites luxury, organisations internationales, finance. ${localMetrics.localClients} clients haut de gamme. Excellence discrète.`,
       heroTitle: `Premium Web Genève`,
       heroDescription: `Agence digitale premium pour Genève internationale. Sites web luxury, wealth management, ONG internationales. Discrétion légendaire suisse, qualité sans compromis.`
     },
     fribourg: {
-      metaTitle: `Agence Web Fribourg Bilingue - osom | Terroir & Tradition`,
-      metaDescription: `Site web Fribourg FR/DE. Agroalimentaire bio, terroir Gruyère, PME traditionnelles. ${localMetrics.localClients} clients bilingual. E-commerce local, circuits courts optimisés.`,
+      metaTitle: `Agence web Fribourg | Sites bilingues FR/DE | osom`,
+      metaDescription: `Agence web Fribourg bilingue : sites agroalimentaire, terroir, PME. ${localMetrics.localClients} clients FR/DE. E-commerce local optimisé.`,
       heroTitle: `Digital Fribourg Bilingue`,
       heroDescription: `Expertise digitale bilingue pour Fribourg. Sites web agroalimentaire, terroir AOC, éducation. Communication FR/DE, valorisation savoir-faire fribourgeois traditionnel.`
     },
     neuchatel: {
-      metaTitle: `Agence Web Neuchâtel - osom | Horlogerie & Microtechnique`,
-      metaDescription: `Développement web Neuchâtel horlogerie. Microtechnique B2B, innovation precision, artisanat Swiss-made. ${localMetrics.localClients} projets Arc horloger. Excellence technique.`,
+      metaTitle: `Agence web Neuchâtel | Horlogerie & microtechnique | osom`,
+      metaDescription: `Agence web Neuchâtel spécialisée horlogerie et microtechnique. Sites B2B precision, innovation Swiss-made. ${localMetrics.localClients} projets Arc horloger.`,
       heroTitle: `Web Précision Neuchâtel`,
       heroDescription: `Spécialiste digital de l'Arc horloger. Sites web horlogerie, microtechnique B2B, innovation Swiss-made. Précision technique, qualité Neuchâtel, savoir-faire reconnu.`
     }

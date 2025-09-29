@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'SEO Valais - Référencement Naturel Local | OSOM',
-  description: 'Agence SEO Valais: référencement naturel local pour cabinets B2B. Content marketing + suivi positions Google. Audit gratuit.',
+  title: 'SEO Valais | Référencement naturel & content marketing | osom',
+  description: 'SEO Valais expert : référencement naturel, content marketing, positionnement Google. Agence SEO locale pour PME valaisannes. Audit gratuit.',
   keywords: 'seo valais, référencement valais, seo content marketing, agence seo valais, référencement naturel valais, marketing de contenu valais, seo local valais'
 }
 

@@ -49,8 +49,8 @@ const InteractiveBackground = dynamic(() => import('@/components/ui/InteractiveB
 const MagneticButton = dynamic(() => import('@/components/ui/MagneticButton'))
 
 export const metadata: Metadata = {
-  title: 'Agence web Valais OSOM | Marketing IA × Création site internet',
-  description: 'Agence Web VALAIS N°1 : 1589 recherches "agence web valais" → Expertise confirmée. Marketing data-driven avancé. Création site internet, SEO, marketing digital révolutionnaire.',
+  title: 'Agence web Valais | Création site internet & SEO | osom',
+  description: 'Agence web Valais spécialisée création sites internet + SEO. Marketing digital data-driven. Résultats mesurables pour PME valaisannes. Devis gratuit.',
   keywords: 'agence web valais, création site internet valais, seo valais, marketing digital valais, agence marketing valais, référencement valais, agence digitale valais, site web valais',
   openGraph: {
     title: 'OSOM - Marketing humain × Puissance IA révolutionnaire',

@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Développement Web Avancé | Solutions Techniques Personnalisées - osom',
-  description: 'Développement web technique avancé. Solutions sur-mesure et automatisations intelligentes. Performance mesurable et résultats concrets.',
+  title: 'Programmation IA Valais | Solutions intelligence artificielle | osom',
+  description: 'Programmation IA Valais : solutions intelligence artificielle, automatisation, dashboards prédictifs. Développement IA sur-mesure PME. Audit gratuit.',
   keywords: 'développeur web valais, solutions techniques, automatisations, programmation avancée, développement sur-mesure',
   openGraph: {
     title: 'Développement Web Avancé | Solutions Techniques',
