@@ -6,6 +6,7 @@
 **Build** : ✅ 46 pages générées, 8s compilation
 **Langue** : ✅ FRANÇAIS ONLY - Sélecteur multilingue supprimé (Phase 1)
 **Urgence** : Prêt pour présentation Q4 2025 - Expansion multilingue 2026 planifiée
+**Blog** : ⏸️ TEMPORAIREMENT MASQUÉ - Pages existantes mais non affichées (MVP focus)
 
 ## 🛡️ RÈGLES OBLIGATOIRES
 
@@ -317,5 +318,18 @@ npm run lint         # Vérification code
 - Équipe multiculturelle (perception)
 - Certifications/références internationales
 
+## 📝 TODO LIST POST-MVP
+
+### 🎯 PRIORITÉ 1 - Q1 2026
+- **Blog activation** : Réactiver menu + finaliser articles existants
+- **Méthode OSOM** : Créer page /methode dédiée avec process détaillé
+- **Portfolio enrichi** : Ajouter 5+ case studies vérifiés avec données GA4
+- **Services détaillés** : Pages individuelles pour E-commerce & Transformation Digitale
+
+### 🌍 PRIORITÉ 2 - Q2 2026
+- **Version allemande** : Traduction complète + SEO Zurich/Bâle
+- **Version anglaise** : Focus Geneva International
+- **i18n complet** : Infrastructure multilingue Next.js
+
 ---
-*Dernière mise à jour : 26 Sept 2025 - Stratégie multilingue 2026 intégrée*
+*Dernière mise à jour : 29 Sept 2025 - Blog masqué MVP + Services page optimisée -69% lignes*
