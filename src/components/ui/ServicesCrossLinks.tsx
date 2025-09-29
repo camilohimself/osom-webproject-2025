@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import IconeOSOM from '@/components/IconeOSOM'
 
 interface Service {
   title: string
@@ -16,34 +17,34 @@ interface ServicesCrossLinksProps {
 
 const allServices: Record<string, Service> = {
   'creation-site-web': {
-    title: 'Création Sites Web',
+    title: 'Création sites web',
     href: '/services/creation-site-web',
     description: 'Sites web performants et sur-mesure',
-    icon: '🌐'
+    icon: 'monitor'
   },
   'seo-content-marketing': {
-    title: 'SEO & Content Marketing',
+    title: 'SEO & content marketing',
     href: '/services/seo-content-marketing',
     description: 'Visibilité et trafic qualifié',
-    icon: '🎯'
+    icon: 'target'
   },
   'tracking-data': {
-    title: 'Tracking & Data',
+    title: 'Tracking & data',
     href: '/services/tracking-data',
     description: 'Analytics et performance data-driven',
-    icon: '📊'
+    icon: 'chart'
   },
   'marketing-automation-crm': {
-    title: 'Marketing Automation',
+    title: 'Marketing automation',
     href: '/services/marketing-automation-crm',
     description: 'Automatisation et CRM intelligent',
-    icon: '🚀'
+    icon: 'rocket'
   },
   'programmation-ia': {
     title: 'Programmation & IA',
     href: '/services/programmation-ia',
     description: 'Solutions IA sur-mesure',
-    icon: '🤖'
+    icon: 'lightning'
   }
 }
 
@@ -72,7 +73,7 @@ export default function ServicesCrossLinks({ currentService }: ServicesCrossLink
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light text-white mb-4">
-              Services <span className="text-yellow-400 font-bold">Complémentaires</span>
+              Services <span className="text-yellow-400 font-bold">complémentaires</span>
             </h2>
             <p className="text-lg text-gray-300">
               Maximisez votre impact avec une approche intégrée
@@ -94,7 +95,14 @@ export default function ServicesCrossLinks({ currentService }: ServicesCrossLink
                 >
                   <div className="p-8">
                     <div className="flex items-start space-x-4">
-                      <span className="text-4xl">{service.icon}</span>
+                      <div className="w-12 h-12 flex items-center justify-center">
+                        <IconeOSOM
+                          type={service.icon as any}
+                          size={32}
+                          color="yellow"
+                          ariaLabel={service.title}
+                        />
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors">
                           {service.title}
