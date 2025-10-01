@@ -1,5 +1,7 @@
 'use client'
 
+import MobileCTABar from '@/components/ui/MobileCTABar'
+
 interface ServicePageMobileProps {
   title: string
   subtitle: string
@@ -37,21 +39,50 @@ export function ServicePageMobile({
   ctaSubtitle
 }: ServicePageMobileProps) {
   return (
-    <div className="lg:hidden min-h-screen bg-black text-white">
-      {/* Hero Mobile Simplifié */}
-      <section className="pt-20 pb-12 px-4">
+    <div className="lg:hidden min-h-screen bg-black text-white pb-24">
+      {/* Hero Mobile OPTIMISÉ CONVERSION */}
+      <section className="pt-20 pb-8 px-4">
         <div className="max-w-lg mx-auto text-center">
-          <h1 className="text-3xl font-bold mb-4">
+          <h1 className="text-3xl font-bold mb-3">
             {title}
           </h1>
-          <p className="text-gray-300 mb-8">{subtitle}</p>
+          <p className="text-gray-300 mb-6">{subtitle}</p>
 
-          {/* KPI Principal */}
-          <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-2xl p-6 mb-8">
-            <div className="text-4xl font-bold text-yellow-400 mb-2">
+          {/* KPI + PRICING COMBINÉS */}
+          <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-2xl p-6 mb-6">
+            <div className="text-5xl font-bold text-yellow-400 mb-2">
               {mainKPI.value}
             </div>
-            <div className="text-gray-300 text-sm">{mainKPI.label}</div>
+            <div className="text-gray-300 text-sm mb-4">{mainKPI.label}</div>
+
+            {/* Prix visible immédiatement */}
+            <div className="border-t border-yellow-400/20 pt-4 mt-4">
+              <div className="text-3xl font-bold text-white mb-1">
+                {pricing.price}
+              </div>
+              <div className="text-yellow-400 text-sm font-medium">
+                {pricing.timeline}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA IMMÉDIAT */}
+          <div className="space-y-3 mb-6">
+            <a
+              href="tel:+41791289549"
+              className="block w-full bg-yellow-400 text-black font-bold py-5 rounded-xl text-lg active:scale-95 transition-transform shadow-lg shadow-yellow-400/20 flex items-center justify-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              Appeler pour ce service
+            </a>
+            <a
+              href="/contact"
+              className="block w-full border-2 border-yellow-400 text-yellow-400 font-bold py-5 rounded-xl active:scale-95 transition-transform"
+            >
+              Réserver consultation gratuite
+            </a>
           </div>
         </div>
       </section>
@@ -117,30 +148,40 @@ export function ServicePageMobile({
         </div>
       </section>
 
-      {/* CTA Mobile */}
+      {/* CTA Mobile SIMPLIFIÉ */}
       <section className="py-12 px-4">
         <div className="max-w-lg mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4">{ctaTitle}</h2>
-          <p className="text-gray-300 mb-8">{ctaSubtitle}</p>
+          <p className="text-gray-300 mb-6">{ctaSubtitle}</p>
 
-          <div className="space-y-4">
-            <button className="w-full bg-yellow-400 text-black font-bold py-4 px-8 rounded-xl hover:bg-yellow-500 transition-colors">
-              Démarrer mon projet
-            </button>
-            <div className="text-yellow-400 text-sm">
-              ✓ Devis gratuit • ✓ Délai garanti
+          {/* Friction Killers */}
+          <div className="bg-green-400/5 border border-green-400/20 rounded-xl p-4 mb-6">
+            <div className="text-green-400 text-sm space-y-2 font-medium">
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span>Devis gratuit sous 24h</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span>Délai garanti {pricing.timeline}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span>Prix fixe {pricing.price}</span>
+              </div>
             </div>
-          </div>
-
-          {/* Contact rapide */}
-          <div className="mt-8 p-4 bg-gray-900/30 rounded-xl">
-            <div className="text-sm text-gray-400 mb-2">Ou appelez directement</div>
-            <a href="tel:+41791289549" className="text-yellow-400 font-bold text-lg">
-              079 128 95 49
-            </a>
           </div>
         </div>
       </section>
+
+      {/* Sticky Bottom CTA */}
+      <MobileCTABar variant="service" serviceName={title} />
     </div>
   )
 }

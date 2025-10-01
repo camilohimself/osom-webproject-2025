@@ -47,6 +47,7 @@ const InteractiveBackground = dynamic(() => import('@/components/ui/InteractiveB
   loading: () => null
 })
 const MagneticButton = dynamic(() => import('@/components/ui/MagneticButton'))
+import MobileCTABar from '@/components/ui/MobileCTABar'
 
 export const metadata: Metadata = {
   title: 'Agence web Valais | Création site internet & SEO | osom',
@@ -140,23 +141,62 @@ export default async function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedElement type="fadeIn" delay={0.1}>
-            {/* Mobile: Version CTA directe */}
-            <div className="lg:hidden text-center mb-12">
-              <div className="text-2xl font-bold text-white mb-4">
-                Prêt à <span className="text-yellow-400">digitaliser</span> votre business ?
+            {/* Mobile: Version HOOK + CTA directe */}
+            <div className="lg:hidden text-center mb-12 px-4">
+              {/* HOOK CHOC */}
+              <div className="mb-8">
+                <div className="text-6xl font-bold text-yellow-400 mb-3">
+                  688
+                </div>
+                <div className="text-gray-300 text-base mb-2">
+                  Leads générés pour client PME peinture
+                </div>
+                <div className="text-yellow-400 font-semibold text-lg">
+                  14x ROI vs publicité payante
+                </div>
               </div>
-              <div className="text-gray-300 mb-8">
-                Site Next.js premium en 15-45 jours
-              </div>
-              <div className="flex flex-col gap-4 max-w-sm mx-auto">
-                <MagneticButton
-                  href="/contact"
-                  variant="primary"
-                  className="w-full text-lg px-8 py-4 bg-yellow-400 text-black hover:bg-yellow-500"
+
+              {/* CTA IMMÉDIAT DOUBLE */}
+              <div className="space-y-3 max-w-sm mx-auto mb-8">
+                <a
+                  href="tel:+41791289549"
+                  className="block w-full bg-yellow-400 text-black font-bold py-5 rounded-xl text-lg flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-lg shadow-yellow-400/20"
                 >
-                  Démarrer mon projet
-                </MagneticButton>
-                <div className="text-yellow-400 text-sm">✓ Audit gratuit • ✓ Devis transparent</div>
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  079 128 95 49
+                </a>
+                <a
+                  href="/contact"
+                  className="block w-full border-2 border-yellow-400 text-yellow-400 font-bold py-5 rounded-xl text-lg active:scale-95 transition-transform"
+                >
+                  Consultation 30 min gratuite
+                </a>
+              </div>
+
+              {/* FRICTION KILLERS */}
+              <div className="bg-yellow-400/5 border border-yellow-400/20 rounded-xl p-4 max-w-sm mx-auto">
+                <div className="text-yellow-400 text-sm space-y-2 font-medium">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Devis gratuit transparent</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Prix fixes (1,500-8,000 CHF)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Délai garanti 15-45 jours</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -392,6 +432,9 @@ export default async function Home() {
 
       {/* Expertise Locale Section */}
       <ExpertiseLocale />
+
+      {/* Mobile Sticky CTA Bar */}
+      <MobileCTABar variant="default" />
       </div>
     </>
   )
