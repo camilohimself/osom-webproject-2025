@@ -30,26 +30,26 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
     {
       name: 'Artisan',
       price: '8,000 - 15,000 CHF',
-      href: '/services#artisan',
+      href: '/services/artisan',
       description: 'Sites 10-25 pages',
     },
     {
       name: 'Master',
       price: '15,000 - 35,000 CHF',
-      href: '/services#master',
+      href: '/services/master',
       description: 'Projets complexes + API',
       badge: 'POPULAIRE'
     },
     {
       name: 'Legend',
       price: '40,000 - 80,000 CHF',
-      href: '/services#legend',
+      href: '/services/legend',
       description: 'Conquête digitale',
     },
     {
       name: 'Optimisation continue',
       price: '1,500 - 4,000 CHF/mois',
-      href: '/services#optimisation',
+      href: '/services/optimisation-continue',
       description: 'SEO + Analytics',
     },
   ]

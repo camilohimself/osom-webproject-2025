@@ -10,10 +10,10 @@ interface FooterProps {
 export default function Footer({ currentLocale, dictionary }: FooterProps) {
   // Packages craftsman pour footer (aligné avec navbar)
   const packages = [
-    { name: 'Artisan', href: '/services#artisan' },
-    { name: 'Master', href: '/services#master' },
-    { name: 'Legend', href: '/services#legend' },
-    { name: 'Optimisation continue', href: '/services#optimisation' },
+    { name: 'Artisan', href: '/services/artisan' },
+    { name: 'Master', href: '/services/master' },
+    { name: 'Legend', href: '/services/legend' },
+    { name: 'Optimisation continue', href: '/services/optimisation-continue' },
     { name: 'Audit gratuit', href: '/outils#audit' },
   ]
 
