@@ -29,19 +29,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Packages craftsman (priorité élevée - pages stratégiques)
   const packagePages = [
     {
-      url: `${baseUrl}/services/artisan`,
+      url: `${baseUrl}/services/essentiel`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/master`,
+      url: `${baseUrl}/services/performance`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/legend`,
+      url: `${baseUrl}/services/sur-mesure`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.9,

@@ -28,22 +28,22 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
   // Packages craftsman pour dropdown
   const packages = [
     {
-      name: 'Artisan',
-      price: '8,000 - 15,000 CHF',
-      href: '/services/artisan',
-      description: 'Sites 10-25 pages',
+      name: 'Essentiel',
+      price: '5,000 - 9,000 CHF sur 3-6 mois',
+      href: '/services/essentiel',
+      description: 'Sites 15-25 pages',
     },
     {
-      name: 'Master',
-      price: '15,000 - 35,000 CHF',
-      href: '/services/master',
+      name: 'Performance',
+      price: '10,000 - 18,000 CHF sur 6-12 mois',
+      href: '/services/performance',
       description: 'Projets complexes + API',
       badge: 'POPULAIRE'
     },
     {
-      name: 'Legend',
-      price: '40,000 - 80,000 CHF',
-      href: '/services/legend',
+      name: 'Sur Mesure',
+      price: '20,000+ CHF sur 12-24 mois',
+      href: '/services/sur-mesure',
       description: 'Conquête digitale',
     },
     {
