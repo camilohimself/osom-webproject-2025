@@ -8,38 +8,6 @@ const PilierSwiss2 = () => {
   const [staticNoise, setStaticNoise] = useState(true)
   const [currentBillboard, setCurrentBillboard] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
-  
-  useEffect(() => {
-    const staticTimer = setTimeout(() => setStaticNoise(false), 800)
-    const bootTimer = setTimeout(() => setTvBooted(true), 1200)
-    
-    return () => {
-      clearTimeout(staticTimer)
-      clearTimeout(bootTimer)
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!tvBooted) return
-    
-    const billboardTimer = setInterval(() => {
-      setIsTransitioning(true)
-      
-      setTimeout(() => {
-        setCurrentBillboard(prev => {
-          let next
-          do {
-            next = Math.floor(Math.random() * billboardContent.length)
-          } while (next === prev && billboardContent.length > 1)
-          return next
-        })
-        setIsTransitioning(false)
-      }, 300)
-      
-    }, 6000)
-    
-    return () => clearInterval(billboardTimer)
-  }, [tvBooted])
 
   const billboardContent = [
     {
@@ -123,6 +91,38 @@ const PilierSwiss2 = () => {
       effect: 'formula'
     }
   ]
+
+  useEffect(() => {
+    const staticTimer = setTimeout(() => setStaticNoise(false), 800)
+    const bootTimer = setTimeout(() => setTvBooted(true), 1200)
+
+    return () => {
+      clearTimeout(staticTimer)
+      clearTimeout(bootTimer)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!tvBooted) return
+
+    const billboardTimer = setInterval(() => {
+      setIsTransitioning(true)
+
+      setTimeout(() => {
+        setCurrentBillboard(prev => {
+          let next
+          do {
+            next = Math.floor(Math.random() * billboardContent.length)
+          } while (next === prev && billboardContent.length > 1)
+          return next
+        })
+        setIsTransitioning(false)
+      }, 300)
+
+    }, 6000)
+
+    return () => clearInterval(billboardTimer)
+  }, [tvBooted, billboardContent.length])
 
   return (
     <section className="py-32 bg-black relative overflow-hidden">

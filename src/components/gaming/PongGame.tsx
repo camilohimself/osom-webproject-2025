@@ -179,7 +179,7 @@ export default function PongGame() {
 
       return newState
     })
-  }, [resetBall, messages])
+  }, [resetBall])
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     const canvas = canvasRef.current
