@@ -85,7 +85,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-12 ml-auto mr-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
@@ -107,11 +107,11 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                   >
                     <Link
                       href={item.href}
-                      className="text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg relative group flex items-center"
+                      className="text-gray-300 hover:text-yellow-400 transition-colors font-light text-base relative group flex items-center"
                       style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                     >
                       {item.name}
-                      <svg className="w-4 h-4 ml-1 transition-transform duration-200" style={{ transform: isServicesMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 ml-1 transition-transform duration-200" style={{ transform: isServicesMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
@@ -190,7 +190,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-yellow-400 transition-colors font-medium text-lg relative group"
+                    className="text-gray-300 hover:text-yellow-400 transition-colors font-light text-base relative group"
                     style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                   >
                     {item.name}
@@ -202,21 +202,21 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Audit gratuit - Highlighted */}
+          <div className="hidden md:flex items-center space-x-3">
+            {/* Audit gratuit - Subtle */}
             <Link
               href="/outils"
-              className="relative px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black group"
+              className="relative px-4 py-2 rounded-md font-medium text-sm transition-all duration-300 text-yellow-400/80 hover:text-yellow-400 hover:bg-yellow-400/10 group"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
-              <span className="relative z-10">Audit gratuit</span>
-              <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              Audit gratuit
+              <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
             </Link>
 
-            {/* CTA Contact */}
+            {/* CTA Contact - Plus fin */}
             <Link
               href="/contact"
-              className="bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-all duration-300 font-bold shadow-lg hover:shadow-yellow-400/25 hover:scale-105"
+              className="bg-yellow-400 text-black px-5 py-2 rounded-md hover:bg-yellow-500 transition-all duration-300 font-medium text-sm shadow-sm hover:shadow-md"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
               {dictionary.navigation.contact}
