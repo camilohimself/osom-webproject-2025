@@ -32,41 +32,41 @@ const HeroSwissOSOMHybrid = ({ dictionary }: HeroSwissOSOMProps) => {
 
   // Services data - Memoized to prevent dependency changes
   const services = useMemo(() => ({
-    'marketing': {
+    'conception': {
       x: 120, y: 250,
-      name: 'MARKETING IA',
-      subtitle: 'Claude × Analytics',
-      kpi: '25% CTR',
-      detail: 'vs 2-3% industrie',
+      name: 'CONCEPTION',
+      subtitle: 'Architecture × UX',
+      kpi: '60 pages',
+      detail: 'Paroisse Nendaz',
       color: '#FFDD00',
-      description: 'Intelligence artificielle pour campagnes qui convertissent'
+      description: 'Sites complexes pensés pour durer'
     },
-    'data': {
+    'developpement': {
       x: 180, y: 200,
-      name: 'DATA SCIENCE',
-      subtitle: 'Insights × ROI',
-      kpi: '688 conversions',
-      detail: 'révélées en 6 mois',
-      color: '#FFDD00',
-      description: 'Transformation des données en opportunités business'
-    },
-    'dev': {
-      x: 300, y: 240,
-      name: 'DEV WEB',
+      name: 'DÉVELOPPEMENT',
       subtitle: 'Next.js × Performance',
       kpi: '< 2s loading',
-      detail: 'garantie performance',
+      detail: 'garanti PageSpeed',
       color: '#FFDD00',
-      description: 'Sites web haute performance qui ne ralentissent jamais'
+      description: 'Code premium qui ne ralentit jamais'
     },
-    'automation': {
-      x: 350, y: 180,
-      name: 'AUTOMATION',
-      subtitle: 'CRM × Workflow',
-      kpi: '+78% efficacité',
-      detail: '24h/24 sans pause',
+    'seo': {
+      x: 300, y: 240,
+      name: 'SEO LOCAL',
+      subtitle: 'Positions × Conversions',
+      kpi: 'Position #2',
+      detail: 'H-Sechement Google',
       color: '#FFDD00',
-      description: 'Automatisation intelligente de vos processus business'
+      description: 'Visibilité locale qui génère des leads'
+    },
+    'optimisation': {
+      x: 350, y: 180,
+      name: 'OPTIMISATION',
+      subtitle: 'Analytics × A/B Tests',
+      kpi: '688 leads',
+      detail: 'client PME 6 mois',
+      color: '#FFDD00',
+      description: 'Amélioration continue data-driven'
     }
   }), [])
 

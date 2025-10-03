@@ -50,12 +50,12 @@ const MagneticButton = dynamic(() => import('@/components/ui/MagneticButton'))
 import MobileCTABar from '@/components/ui/MobileCTABar'
 
 export const metadata: Metadata = {
-  title: 'Agence web Valais | Création site internet & SEO | osom',
-  description: 'Agence web Valais spécialisée création sites internet + SEO. Marketing digital data-driven. Résultats mesurables pour PME valaisannes. Devis gratuit.',
-  keywords: 'agence web valais, création site internet valais, seo valais, marketing digital valais, agence marketing valais, référencement valais, agence digitale valais, site web valais',
+  title: 'Développeur web Valais | Sites sur mesure Next.js & SEO | OSOM',
+  description: 'Développeur web Valais spécialisé projets complexes sur mesure. Sites 60+ pages, API, dashboards, SEO local. Next.js expert. Devis gratuit.',
+  keywords: 'développeur web valais, site sur mesure valais, next.js valais, seo local valais, développement web valais, site complexe valais, api integration valais, dashboard valais',
   openGraph: {
-    title: 'OSOM - Marketing humain × Puissance IA révolutionnaire',
-    description: 'Agence marketing data-driven VALAIS. Résultats vérifiés et performances mesurables. Révolution marketing VALAIS.',
+    title: 'OSOM - Sites web sur mesure qui génèrent des résultats',
+    description: 'Développeur web Valais spécialisé projets complexes. 60 pages + API + SEO local. Performance garantie < 2s.',
     url: 'https://osom.ch',
     siteName: 'OSOM',
     locale: 'fr_CH',
@@ -65,14 +65,14 @@ export const metadata: Metadata = {
         url: '/osom-og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'OSOM - Marketing Humain × Puissance IA',
+        alt: 'OSOM - Sites web sur mesure Valais',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OSOM - Marketing Humain × Puissance IA',
-    description: 'Performance mesurable supérieure aux méthodes classiques. Approche data-driven éprouvée.',
+    title: 'OSOM - Sites web sur mesure Valais',
+    description: 'Projets complexes 60+ pages. API integration. SEO local. Performance garantie.',
     images: ['/osom-og-image.jpg'],
   },
   alternates: {
@@ -203,43 +203,43 @@ export default async function Home() {
             {/* Desktop: Méthode complète */}
             <div className="hidden lg:block text-center mb-24">
               <div className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Notre méthode <span className="text-yellow-400">OSOM</span>
+                L'approche <span className="text-yellow-400">sur mesure</span>
               </div>
 
               <div className="text-xl text-gray-300 mb-16 max-w-3xl mx-auto">
-                3 étapes simples pour transformer votre présence digitale
+                3 étapes pour des sites qui génèrent des résultats
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
                 <div className="bg-yellow-400/5 border border-yellow-400/20 rounded-3xl p-8 hover:border-yellow-400/40 transition-all duration-300">
                   <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">1</div>
-                  <div className="text-2xl font-bold text-white mb-4">Brief 30 min</div>
-                  <div className="text-gray-300 mb-4">Nous analysons votre métier et vos besoins</div>
+                  <div className="text-2xl font-bold text-white mb-4">Audit 30 min</div>
+                  <div className="text-gray-300 mb-4">Analyse de vos besoins réels</div>
                   <div className="text-yellow-400 text-sm font-semibold">✓ Audit technique gratuit</div>
-                  <div className="text-yellow-400 text-sm font-semibold">✓ Analyse concurrentielle</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Devis transparent</div>
                 </div>
 
                 <div className="bg-cyan-400/5 border border-cyan-400/20 rounded-3xl p-8 hover:border-cyan-400/40 transition-all duration-300">
                   <div className="w-20 h-20 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">2</div>
                   <div className="text-2xl font-bold text-white mb-4">Développement</div>
-                  <div className="text-gray-300 mb-4">Site Next.js développé avec validation continue</div>
-                  <div className="text-cyan-400 text-sm font-semibold">✓ Architecture moderne</div>
-                  <div className="text-cyan-400 text-sm font-semibold">✓ Performance garantie</div>
+                  <div className="text-gray-300 mb-4">Architecture Next.js sur mesure</div>
+                  <div className="text-cyan-400 text-sm font-semibold">✓ 2-6 mois selon complexité</div>
+                  <div className="text-cyan-400 text-sm font-semibold">✓ API + Dashboards custom</div>
                 </div>
 
                 <div className="bg-green-400/5 border border-green-400/20 rounded-3xl p-8 hover:border-green-400/40 transition-all duration-300">
                   <div className="w-20 h-20 bg-green-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">3</div>
-                  <div className="text-2xl font-bold text-white mb-4">Formation</div>
-                  <div className="text-gray-300 mb-4">2h pour devenir autonome sur votre site</div>
-                  <div className="text-green-400 text-sm font-semibold">✓ Support 30 jours</div>
-                  <div className="text-green-400 text-sm font-semibold">✓ Maintenance incluse</div>
+                  <div className="text-2xl font-bold text-white mb-4">Optimisation</div>
+                  <div className="text-gray-300 mb-4">Sessions mensuelles 6-12 mois</div>
+                  <div className="text-green-400 text-sm font-semibold">✓ SEO local continu</div>
+                  <div className="text-green-400 text-sm font-semibold">✓ Analytics + A/B tests</div>
                 </div>
               </div>
 
               <div className="mt-16 text-center">
-                <div className="text-lg text-gray-400 mb-4">Délai total</div>
-                <div className="text-4xl font-bold text-yellow-400 mb-2">15-45 jours</div>
-                <div className="text-gray-400">selon la complexité du projet</div>
+                <div className="text-lg text-gray-400 mb-4">Portfolio projets complexes</div>
+                <div className="text-4xl font-bold text-yellow-400 mb-2">60 pages</div>
+                <div className="text-gray-400">Paroisse Nendaz + API Calendar automatique</div>
               </div>
             </div>
           </AnimatedElement>
@@ -355,31 +355,31 @@ export default async function Home() {
           <div className="hidden lg:block">
             <div className="mb-12 leading-tight font-sans">
               <div className="text-2xl md:text-3xl font-light text-gray-300 mb-2">
-                Prêt à structurer votre
+                Besoin d'un site qui
               </div>
 
               <div className="text-7xl md:text-8xl font-black text-yellow-400 leading-none mb-4">
-                ACQUISITION
+                GÉNÈRE
               </div>
 
               <div className="text-lg md:text-xl font-light text-gray-400 italic mb-2">
-                avec
+                vraiment des
               </div>
 
               <div className="text-6xl md:text-7xl font-black text-green-400 leading-none mb-6">
-                MÉTHODE OSOM
+                RÉSULTATS
               </div>
 
               <div className="text-2xl md:text-3xl font-light text-white">
-                mesurable et durable ?
+                mesurables ?
               </div>
             </div>
 
             <p className="text-xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto font-sans">
-              <span className="text-yellow-400 font-semibold">Visibilité locale</span>,
-              <span className="text-cyan-400 font-semibold">leads qualifiés</span>,
-              <span className="text-green-400 font-semibold">reporting GA4 clair</span>.
-              Parlons objectifs, délais, KPI — puis livrons.
+              Développement <span className="text-yellow-400 font-semibold">Next.js sur mesure</span>,
+              <span className="text-cyan-400 font-semibold"> SEO local stratégique</span>,
+              <span className="text-green-400 font-semibold"> optimisation continue</span>.
+              Des sites complexes qui transforment visiteurs en clients.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -388,7 +388,7 @@ export default async function Home() {
                 variant="primary"
                 className="text-xl px-12 py-6 relative overflow-hidden group"
               >
-                <span className="relative z-10">Consultation 30 min offerte</span>
+                <span className="relative z-10">Audit gratuit 30 min</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </MagneticButton>
               <MagneticButton
@@ -396,7 +396,7 @@ export default async function Home() {
                 variant="secondary"
                 className="text-xl px-12 py-6 border-2 border-gray-600 hover:border-purple-400 transition-all duration-300"
               >
-                Voir Nos Résultats
+                Portfolio projets
               </MagneticButton>
             </div>
           </div>
@@ -405,26 +405,26 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 max-w-4xl mx-auto">
             <div className="bg-cyan-400/10 rounded-xl p-4 lg:p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
               <div className="flex items-center justify-center mb-2 lg:mb-3">
-                <IconeOSOM type="star" size={20} color="cyan" ariaLabel="Next.js Expert" />
-                <span className="text-cyan-400 font-semibold ml-2 text-sm lg:text-base">Next.js Expert</span>
+                <IconeOSOM type="star" size={20} color="cyan" ariaLabel="Projets complexes" />
+                <span className="text-cyan-400 font-semibold ml-2 text-sm lg:text-base">Projets complexes</span>
               </div>
-              <p className="text-gray-300 text-xs lg:text-sm">Architecture moderne garantie</p>
+              <p className="text-gray-300 text-xs lg:text-sm">60 pages + API + dashboards sur mesure</p>
             </div>
 
             <div className="bg-purple-400/10 rounded-xl p-4 lg:p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300">
               <div className="flex items-center justify-center mb-2 lg:mb-3">
-                <IconeOSOM type="chart" size={20} color="purple" ariaLabel="Analytics Avancées" />
-                <span className="text-purple-400 font-semibold ml-2 text-sm lg:text-base">Analytics Avancées</span>
+                <IconeOSOM type="chart" size={20} color="purple" ariaLabel="SEO local expert" />
+                <span className="text-purple-400 font-semibold ml-2 text-sm lg:text-base">SEO local expert</span>
               </div>
-              <p className="text-gray-300 text-xs lg:text-sm">Contenu optimisé automatiquement</p>
+              <p className="text-gray-300 text-xs lg:text-sm">Positions Google top 3 garanties</p>
             </div>
 
             <div className="bg-green-400/10 rounded-xl p-4 lg:p-6 border border-green-400/20 hover:border-green-400/40 transition-all duration-300">
               <div className="flex items-center justify-center mb-2 lg:mb-3">
-                <IconeOSOM type="shield" size={20} color="green" ariaLabel="Performance Garantie" />
+                <IconeOSOM type="shield" size={20} color="green" ariaLabel="Performance garantie" />
                 <span className="text-green-400 font-semibold ml-2 text-sm lg:text-base">Performance &lt; 2s</span>
               </div>
-              <p className="text-gray-300 text-xs lg:text-sm">Chargement garanti ou remboursé</p>
+              <p className="text-gray-300 text-xs lg:text-sm">Next.js optimisé ou remboursement</p>
             </div>
           </div>
         </div>

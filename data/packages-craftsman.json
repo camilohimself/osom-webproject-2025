@@ -1,0 +1,138 @@
+{
+  "packages_craftsman": [
+    {
+      "id": "artisan",
+      "name": "Artisan",
+      "tagline": "Site professionnel sur mesure",
+      "ideal_for": "Professionnels, artisans, petites entreprises",
+      "price_range": "8,000 - 15,000 CHF",
+      "price_monthly": "1,500 CHF/mois",
+      "duration": "2-3 mois",
+      "monthly_support_optional": true,
+      "includes": [
+        "10-25 pages sur mesure",
+        "Design responsive premium",
+        "SEO technique de base",
+        "Intégration CMS simple (gestion autonome)",
+        "Formation 2h incluse",
+        "3 mois maintenance incluse"
+      ],
+      "perfect_for": [
+        "Cabinet médical ou juridique",
+        "Artisan local premium",
+        "Restaurant gastronomique",
+        "Professionnel libéral"
+      ],
+      "delivery": "2-3 mois",
+      "support": "Support email 48h"
+    },
+    {
+      "id": "master",
+      "name": "Master",
+      "tagline": "Projet complexe & optimisation continue",
+      "ideal_for": "Institutions, PME, projets multi-facettes",
+      "price_range": "15,000 - 35,000 CHF",
+      "price_monthly": "2,500 CHF/mois",
+      "duration": "3-6 mois",
+      "monthly_support_recommended": true,
+      "includes": [
+        "25-60 pages architecture custom",
+        "Intégrations API complexes (Calendar, CRM, Paiement)",
+        "Dashboard analytics personnalisé",
+        "SEO hyper-local stratégique (7+ pages locales)",
+        "Sessions optimisation mensuelles (6 mois minimum)",
+        "Formation équipe 4h",
+        "Support prioritaire 24h"
+      ],
+      "perfect_for": [
+        "Paroisse avec gestion événements (ex: Nendaz)",
+        "PME technique B2B (ex: H-Sechement)",
+        "Institution culturelle (ex: Maîtrise Cathédrale)",
+        "E-commerce premium"
+      ],
+      "examples": [
+        {
+          "name": "Paroisse Nendaz",
+          "specs": "60 pages + API Google Calendar automatique",
+          "duration": "6 mois",
+          "case_study": "paroisse-nendaz"
+        },
+        {
+          "name": "H-Sechement",
+          "specs": "Migration Next.js + SEO local + Dashboard",
+          "duration": "4 mois",
+          "case_study": "h-sechement"
+        }
+      ],
+      "delivery": "3-6 mois",
+      "support": "Support prioritaire + sessions mensuelles"
+    },
+    {
+      "id": "legend",
+      "name": "Legend",
+      "tagline": "Conquête digitale complète",
+      "ideal_for": "Finance, Corporate, projets stratégiques haute visibilité",
+      "price_range": "40,000 - 80,000 CHF",
+      "price_monthly": "4,000+ CHF/mois",
+      "duration": "6-12 mois",
+      "monthly_support_included": true,
+      "includes": [
+        "Architecture entreprise complète",
+        "Dashboards temps réel sur mesure",
+        "SEO compétitif high-stakes (domination locale)",
+        "Optimisation continue 12 mois garantie",
+        "Consulting stratégique mensuel",
+        "Support 24/7 prioritaire",
+        "Garantie résultats contractuelle",
+        "Formation équipe complète"
+      ],
+      "perfect_for": [
+        "Wealth management (ex: Nowssen)",
+        "Corporate multilingue",
+        "Startup scale-up",
+        "Finance institutionnelle"
+      ],
+      "examples": [
+        {
+          "name": "Nowssen",
+          "specs": "SEO premium finance Zürich + stratégie 12 mois",
+          "investment": "50,000 CHF/an",
+          "case_study": "nowssen"
+        }
+      ],
+      "delivery": "6-12 mois",
+      "support": "Support dédié 24/7 + consultant attitré"
+    }
+  ],
+  "value_proposition": {
+    "positioning": "Développeur web suisse spécialisé projets sur mesure complexes",
+    "differentiator": "Pas une agence. Un artisan digital qui construit des machines web premium et les optimise sur 6-12 mois.",
+    "guarantee": "Performance garantie < 2s loading ou remboursement. Résultats SEO mesurables dès le 3ème mois.",
+    "unique_assets": [
+      "Expert Next.js 15 certifié",
+      "Spécialiste SEO local & hyper-local Suisse romande",
+      "Intégrations API complexes (Calendar, CRM, Analytics)",
+      "Dashboards performance temps réel sur mesure",
+      "Portfolio projets 60+ pages documentés"
+    ],
+    "location": "Valais, Suisse",
+    "languages": ["Français", "Anglais", "Espagnol"]
+  },
+  "process": {
+    "step_1": {
+      "name": "Brief 30 min",
+      "duration": "30-60 minutes",
+      "deliverable": "Audit technique gratuit + analyse concurrentielle + devis transparent"
+    },
+    "step_2": {
+      "name": "Développement",
+      "duration": "Selon package choisi",
+      "deliverable": "Site Next.js développé avec validations continues + formation"
+    },
+    "step_3": {
+      "name": "Optimisation",
+      "duration": "6-12 mois recommandé",
+      "deliverable": "Sessions mensuelles SEO + analytics + A/B tests + support prioritaire"
+    }
+  }
+}

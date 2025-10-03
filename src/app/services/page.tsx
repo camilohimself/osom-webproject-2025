@@ -4,8 +4,8 @@ import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export const metadata = {
-  title: 'Services agence web Valais | Sites internet & SEO | osom',
-  description: 'Services web Valais : création sites internet, SEO, marketing digital. Solutions complètes PME. Performance mesurable. Consultation gratuite.',
+  title: 'Développeur web Valais | Projets sur mesure & SEO | OSOM',
+  description: 'Développement web sur mesure Valais : sites complexes, API, dashboards, SEO local. Projets 2-6 mois. Next.js expert. Consultation gratuite.',
 }
 
 export default async function ServicesPage() {
@@ -13,47 +13,59 @@ export default async function ServicesPage() {
 
   const services = [
     {
-      title: "osom Web",
-      subtitle: "Sites 1500 CHF • Livrés en 10 jours",
-      description: "Sites premium Next.js avec SEO complet intégré",
+      title: "Artisan",
+      subtitle: "8,000 - 15,000 CHF • 2-3 mois",
+      description: "Sites professionnels sur mesure 10-25 pages",
       expectedResults: [
-        "Performance 95+ PageSpeed garantie",
-        "SEO technique optimisé dès le départ"
+        "Design responsive premium",
+        "SEO technique de base inclus",
+        "Formation 2h + 3 mois maintenance"
       ],
       icon: "",
-      badge: "NOUVEAU",
-      highlight: true
+      badge: "PME",
+      highlight: false,
+      pricing: "1,500 CHF/mois support (optionnel)"
     },
     {
-      title: "Marketing Data-Driven",
-      subtitle: "Performance mesurable supérieure",
-      description: "Stratégie organique avec 2.4M+ vues générées",
+      title: "Master",
+      subtitle: "15,000 - 35,000 CHF • 3-6 mois",
+      description: "Projets complexes 25-60 pages + API + dashboards",
       expectedResults: [
-        "14x plus efficace que publicité payante",
-        "688 conversions organiques vérifiées"
+        "Intégrations API (Calendar, CRM, Analytics)",
+        "SEO hyper-local 7+ pages stratégiques",
+        "Sessions optimisation 6 mois incluses"
       ],
       icon: "",
-      realData: true
+      realData: true,
+      badge: "POPULAIRE",
+      highlight: true,
+      pricing: "2,500 CHF/mois (recommandé)",
+      examples: "Paroisse Nendaz • H-Sechement"
     },
     {
-      title: "SEO technique expert",
-      subtitle: "Visibilité Google garantie",
-      description: "Optimisation poussée avec outils professionnels",
+      title: "Legend",
+      subtitle: "40,000 - 80,000 CHF • 6-12 mois",
+      description: "Conquête digitale complète haute visibilité",
       expectedResults: [
-        "Positions Google trackées mensuellement",
-        "Core Web Vitals optimisés en continu"
+        "Architecture entreprise sur mesure",
+        "SEO compétitif domination locale",
+        "Support 24/7 + consultant dédié"
       ],
-      icon: ""
+      icon: "",
+      pricing: "4,000+ CHF/mois inclus",
+      examples: "Nowssen • Finance • Corporate"
     },
     {
-      title: "Sites web premium",
-      subtitle: "Design & performance exceptionnels",
-      description: "Développement sur mesure Next.js/React",
+      title: "Optimisation continue",
+      subtitle: "Sessions mensuelles 6-12 mois",
+      description: "Pour sites existants à transformer en machines de conversion",
       expectedResults: [
-        "Interface utilisateur premium unique",
-        "Optimisation conversion data-driven"
+        "SEO local continu + analytics avancées",
+        "A/B testing + optimisation conversions",
+        "Dashboards performance temps réel"
       ],
-      icon: ""
+      icon: "",
+      pricing: "1,500 - 4,000 CHF/mois"
     }
   ]
 
@@ -77,16 +89,16 @@ export default async function ServicesPage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-light mb-6 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Solutions digitales <span className="text-yellow-400 font-bold">data-driven</span>
+              Développement web <span className="text-yellow-400 font-bold">sur mesure</span>
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Performance mesurable. ROI transparent. Livraisons rapides.
+              Projets complexes. API & dashboards. SEO local stratégique.
             </p>
 
             <div className="inline-flex bg-white/5 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10">
-              <span className="text-yellow-400 font-bold text-2xl">14x</span>
-              <span className="text-gray-300 ml-2 text-lg">plus performant que méthodes traditionnelles</span>
+              <span className="text-yellow-400 font-bold text-2xl">60 pages</span>
+              <span className="text-gray-300 ml-2 text-lg">Paroisse Nendaz + API Calendar automatique</span>
             </div>
           </div>
         </div>
@@ -148,7 +160,7 @@ export default async function ServicesPage() {
                   {service.description}
                 </p>
 
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-4">
                   {service.expectedResults.map((result, resultIndex) => (
                     <li key={resultIndex} className="flex items-start">
                       <div className={`w-1.5 h-1.5 rounded-full mt-1.5 mr-3 flex-shrink-0 ${
@@ -161,12 +173,26 @@ export default async function ServicesPage() {
                   ))}
                 </ul>
 
+                {service.pricing && (
+                  <div className="mb-3">
+                    <span className="text-xs text-gray-500">Support : </span>
+                    <span className={`text-sm text-${colors.bg} font-semibold`}>{service.pricing}</span>
+                  </div>
+                )}
+
+                {service.examples && (
+                  <div className="mb-4">
+                    <span className="text-xs text-gray-500">Exemples : </span>
+                    <span className="text-xs text-gray-400">{service.examples}</span>
+                  </div>
+                )}
+
                 <div className={`mt-4 pt-4 border-t border-${colors.bg}/20`}>
                   <Link
-                    href={index === 0 ? '/services/creation-site-web' : index === 1 ? '/services/marketing-automation-crm' : index === 2 ? '/services/seo-content-marketing' : '/services/creation-site-web'}
+                    href="/contact"
                     className={`text-${colors.bg} hover:text-${colors.bg}/80 text-sm font-medium transition-colors inline-flex items-center`}
                   >
-                    En savoir plus
+                    Discuter de ce package
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -176,17 +202,17 @@ export default async function ServicesPage() {
             )})}
           </div>
 
-          {/* Link to more services */}
+          {/* Link to more info */}
           <div className="text-center mt-12">
             <p className="text-gray-400 mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Découvrez aussi : E-commerce & Automation • Transformation Digitale
+              Tous les packages incluent : Performance &lt; 2s garantie • Support prioritaire • Formation incluse
             </p>
             <Link
               href="/contact"
               className="text-yellow-400 hover:text-yellow-500 font-medium transition-colors"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
-              Discuter de votre projet →
+              Audit gratuit 30 min →
             </Link>
           </div>
         </div>
