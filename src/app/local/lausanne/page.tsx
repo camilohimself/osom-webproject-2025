@@ -5,14 +5,14 @@ import { getCityPageData } from '@/data/swissCities'
 const cityData = getCityPageData('lausanne')
 
 export const metadata: Metadata = {
-  title: cityData.metaTitle,
-  description: cityData.metaDescription,
-  keywords: 'agence web lausanne, développement web startup lausanne, création site SaaS lausanne, SEO tech léman, site internet EPFL, marketing digital fintech vaud, web agency innovation park, osom lausanne',
+  title: 'Développeur Web Lausanne | Sites Next.js sur Mesure | OSOM',
+  description: 'Développeur web Lausanne spécialisé startups tech & SaaS. Sites Next.js performants, API integrations, dashboards. Expert Next.js 15 App Router.',
+  keywords: 'développeur web lausanne, site sur mesure lausanne, next.js lausanne, développement saas vaud, api integration lausanne, dashboard analytics vaud, développeur startup epfl, osom lausanne',
   openGraph: {
-    title: cityData.metaTitle,
-    description: cityData.metaDescription,
+    title: 'Développeur Web Lausanne | Sites Next.js sur Mesure | OSOM',
+    description: 'Développeur web Lausanne spécialisé startups tech & SaaS. Sites Next.js performants, API integrations, dashboards.',
     url: 'https://osom.ch/local/lausanne',
-    siteName: 'osom Agence Marketing Digital',
+    siteName: 'OSOM - Développeur Web Craftsman',
     locale: 'fr_CH',
     type: 'website',
   },

@@ -5,14 +5,14 @@ import { getCityPageData } from '@/data/swissCities'
 const cityData = getCityPageData('neuchatel')
 
 export const metadata: Metadata = {
-  title: cityData.metaTitle,
-  description: cityData.metaDescription,
-  keywords: 'agence web neuchâtel horlogerie, création site microtechnique, développement web arc horloger, site internet swiss made, SEO industrie précision, marketing B2B horlogerie, web agency innovation neuchâtel, osom neuchâtel',
+  title: 'Développeur Web Neuchâtel | Sites B2B Techniques | OSOM',
+  description: 'Développeur web Neuchâtel spécialisé B2B technique & industriel. Portfolio projets, lead generation qualifiée, SEO B2B spécialisé.',
+  keywords: 'développeur web neuchâtel, site b2b neuchâtel, site sur mesure neuchâtel, portfolio technique neuchâtel, lead generation b2b neuchâtel, seo industriel arc jurassien, développeur microtechnique, osom neuchâtel',
   openGraph: {
-    title: cityData.metaTitle,
-    description: cityData.metaDescription,
+    title: 'Développeur Web Neuchâtel | Sites B2B Techniques | OSOM',
+    description: 'Développeur web Neuchâtel spécialisé B2B technique & industriel. Portfolio projets, lead generation qualifiée.',
     url: 'https://osom.ch/local/neuchatel',
-    siteName: 'osom Agence Marketing Digital',
+    siteName: 'OSOM - Développeur Web Craftsman',
     locale: 'fr_CH',
     type: 'website',
   },

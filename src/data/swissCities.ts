@@ -122,113 +122,113 @@ export const localCaseStudies = {
   },
   
   lausanne: {
-    clientName: "TechStart Lausanne",
-    industry: "SaaS B2B",
+    clientName: "Expertise Tech Vaud",
+    industry: "Développement Web sur Mesure",
     location: "Lausanne, Vaud",
-    challenge: "Votre startup tech peine à générer des leads qualifiés B2B en Suisse romande ? La crédibilité digitale manque pour convaincre les décideurs.",
-    solution: "Notre approche : inbound marketing tech-focused, SEO B2B ciblé, content strategy et automation LinkedIn pour toucher les bonnes personnes.",
+    challenge: "Votre startup ou PME tech cherche un développeur qui comprend vos enjeux B2B SaaS ? Les agences volume ne maîtrisent pas les architectures complexes nécessaires.",
+    solution: "Développement craftsman: Sites Next.js performants, API integrations (CRM, paiements), dashboards analytics métier. Stack moderne adapté aux startups tech.",
     results: [
       {
-        metric: "Platform B2B",
-        before: "Site vitrine statique",
-        after: "SaaS platform interactive",
-        improvement: "Tech Crédible"  
+        metric: "Expertise Next.js 15",
+        before: "WordPress lent",
+        after: "Next.js App Router performant",
+        improvement: "Performance garantie"
       },
       {
-        metric: "Lead Qualification",
-        before: "Contacts non-qualifiés",
-        after: "Formulaires intelligents",
-        improvement: "Qualité Focus"
+        metric: "API Integrations",
+        before: "Systèmes isolés",
+        after: "CRM + Analytics + Paiements connectés",
+        improvement: "Automatisation"
       },
       {
-        metric: "Écosystème Tech",
-        before: "Invisible startup scene", 
-        after: "Présent événements EPFL",
-        improvement: "Network Actif"
+        metric: "SEO Technique",
+        before: "Invisibilité Google",
+        after: "Structure optimisée tech B2B",
+        improvement: "Visibilité ciblée"
       }
     ]
   },
 
   geneve: {
-    clientName: "Luxury Swiss Services",
-    industry: "Services Premium",
+    clientName: "Expertise Finance & Corporate",
+    industry: "Développement Web Premium",
     location: "Genève International",
-    challenge: "Votre clientèle UHNW exige discrétion absolue mais vous devez rester visible ? Le digital premium demande une approche sur-mesure.",
-    solution: "Nous maîtrisons : SEO luxury discret, content strategy élégant, targeting géographique premium et nurturing ultra-personnalisé.",
+    challenge: "Votre entreprise finance ou corporate cherche crédibilité digitale internationale sans sacrifier la discrétion suisse ? Les templates génériques ne reflètent pas votre standing.",
+    solution: "Sites sur mesure multilingues (FR/EN/DE). Architecture entreprise. Design élégant et professionnel. SEO international. Garanties contractuelles.",
     results: [
       {
-        metric: "Discrétion Premium",
-        before: "Site web trop visible",
-        after: "Présence digitale élégante", 
-        improvement: "Swiss Discret"
+        metric: "Architecture Entreprise",
+        before: "Template générique",
+        after: "Site custom multilingue",
+        improvement: "Crédibilité corporate"
       },
       {
-        metric: "Clientèle UHNW",
-        before: "Positionnement généraliste",
-        after: "Services ultra-premium",
-        improvement: "Luxury Focus"
+        metric: "Performance Garantie",
+        before: "PageSpeed moyen",
+        after: "90+ score garanti contractuellement",
+        improvement: "Excellence technique"
       },
       {
-        metric: "Confiance Client",
-        before: "Références non-vérifiables",
-        after: "Portfolio confidentiel solide",
-        improvement: "Trust Swiss+"
+        metric: "SEO International",
+        before: "Visibilité locale uniquement",
+        after: "Optimisation FR/EN/DE ciblée",
+        improvement: "Portée élargie"
       }
     ]
   },
 
   fribourg: {
-    clientName: "Bio-Terroir Fribourg",
-    industry: "Agriculture Biologique",
+    clientName: "Expertise E-commerce & Terroir",
+    industry: "Développement Web sur Mesure",
     location: "Fribourg, Gruyère",
-    challenge: "Vous produisez bio local mais les grandes surfaces captent vos clients ? La vente directe digitale peut transformer votre business.",
-    solution: "Nous développons : e-commerce terroir, SEO \"bio Fribourg\", storytelling gruyérien authentique et automation saisonnière.",
+    challenge: "Votre commerce local ou production artisanale cherche à vendre en ligne sans perdre l'authenticité? Les plateformes génériques ne valorisent pas votre savoir-faire.",
+    solution: "E-commerce craftsman: Boutiques Next.js performantes, paiements Stripe/Twint, SEO local, storytelling produit. Design qui respecte votre identité.",
     results: [
       {
-        metric: "E-commerce Local",
-        before: "Vente marché uniquement",
-        after: "Boutique en ligne 24/7",
-        improvement: "Circuits Courts+"
+        metric: "E-commerce Sur Mesure",
+        before: "Template WooCommerce lent",
+        after: "Boutique Next.js optimisée",
+        improvement: "Performance + conversion"
       },
       {
-        metric: "Valorisation Terroir", 
-        before: "Produits génériques",
-        after: "AOC Gruyère mis en avant",
-        improvement: "Premium Local"
+        metric: "Paiements Suisses",
+        before: "Stripe uniquement",
+        after: "Stripe + Twint + Facture",
+        improvement: "Options locales"
       },
       {
-        metric: "Relation Client",
-        before: "Vente impersonnelle",
-        after: "Histoire producteur visible",
-        improvement: "Authenticité+"
+        metric: "SEO Local Fribourg",
+        before: "Invisibilité Google",
+        after: "Positions ciblées secteur",
+        improvement: "Visibilité artisanale"
       }
     ]
   },
 
   neuchatel: {
-    clientName: "Precision Watch Tech",
-    industry: "Microtechnique Horlogère", 
+    clientName: "Expertise B2B Technique",
+    industry: "Développement Web sur Mesure",
     location: "Neuchâtel, Arc Jurassien",
-    challenge: "Votre dépendance aux grands horlogers vous inquiète ? Votre expertise microtechnique mérite une visibilité plus large.",
-    solution: "Notre stratégie : content marketing technique, SEO B2B spécialisé, showcase innovation et lead generation industrie 4.0.",
+    challenge: "Votre entreprise B2B technique cherche crédibilité digitale pour diversifier clientèle? Les sites généralistes ne reflètent pas votre expertise pointue.",
+    solution: "Sites B2B craftsman: Architecture technique, portfolio projets, SEO B2B spécialisé, lead generation qualifiée. Design professionnel secteur industriel.",
     results: [
       {
-        metric: "Showcase Innovation",
-        before: "Références confidentielles",
-        after: "Portfolio tech visible", 
+        metric: "Portfolio Technique",
+        before: "Références cachées",
+        after: "Showcase expertise visible",
         improvement: "Crédibilité B2B"
       },
       {
-        metric: "Diversification Clients",
-        before: "Dépendance horlogerie",
-        after: "Secteurs multiples actifs",
-        improvement: "Risque Réduit"
+        metric: "Lead Generation",
+        before: "Contacts non-qualifiés",
+        after: "Formulaires intelligents B2B",
+        improvement: "Leads secteur"
       },
       {
-        metric: "Positionnement Tech",
-        before: "Sous-traitant invisible",
-        after: "Expert Innovation visible",
-        improvement: "Leader Reconnu"
+        metric: "SEO Technique",
+        before: "Invisibilité Google",
+        after: "Positions mots-clés métier",
+        improvement: "Visibilité spécialisée"
       }
     ]
   }

@@ -5,14 +5,14 @@ import { getCityPageData } from '@/data/swissCities'
 const cityData = getCityPageData('geneve')
 
 export const metadata: Metadata = {
-  title: cityData.metaTitle,
-  description: cityData.metaDescription,
-  keywords: 'agence web genève premium, création site luxury genève, développement web banque privée, site internet wealth management, SEO finance genève, marketing digital UHNW geneva, web agency international geneva, osom genève',
+  title: 'Développeur Web Genève | Sites Corporate Multilingues | OSOM',
+  description: 'Développeur web Genève spécialisé finance & corporate international. Sites multilingues (FR/EN/DE), architecture entreprise, garanties contractuelles.',
+  keywords: 'développeur web genève, site sur mesure genève, site multilingue genève, développement corporate genève, architecture entreprise genève, seo international genève, développeur finance geneva, osom genève',
   openGraph: {
-    title: cityData.metaTitle,
-    description: cityData.metaDescription,
+    title: 'Développeur Web Genève | Sites Corporate Multilingues | OSOM',
+    description: 'Développeur web Genève spécialisé finance & corporate international. Sites multilingues (FR/EN/DE), architecture entreprise.',
     url: 'https://osom.ch/local/geneve',
-    siteName: 'osom Agence Marketing Digital',
+    siteName: 'OSOM - Développeur Web Craftsman',
     locale: 'fr_CH',
     type: 'website',
   },

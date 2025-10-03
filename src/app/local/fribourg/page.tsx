@@ -5,14 +5,14 @@ import { getCityPageData } from '@/data/swissCities'
 const cityData = getCityPageData('fribourg')
 
 export const metadata: Metadata = {
-  title: cityData.metaTitle,
-  description: cityData.metaDescription,
-  keywords: 'agence web fribourg bilingue, création site agroalimentaire fribourg, e-commerce bio gruyère, site internet producteur local, SEO terroir AOC, marketing digital FR DE, web agency circuits courts, osom fribourg',
+  title: 'Développeur Web Fribourg | E-commerce sur Mesure | OSOM',
+  description: 'Développeur web Fribourg spécialisé e-commerce artisanal & terroir. Boutiques Next.js performantes, paiements Stripe/Twint, SEO local.',
+  keywords: 'développeur web fribourg, e-commerce fribourg, boutique en ligne fribourg, site sur mesure fribourg, paiement twint fribourg, seo local fribourg, développeur artisan gruyère, osom fribourg',
   openGraph: {
-    title: cityData.metaTitle,
-    description: cityData.metaDescription,
+    title: 'Développeur Web Fribourg | E-commerce sur Mesure | OSOM',
+    description: 'Développeur web Fribourg spécialisé e-commerce artisanal & terroir. Boutiques Next.js performantes, paiements Stripe/Twint.',
     url: 'https://osom.ch/local/fribourg',
-    siteName: 'osom Agence Marketing Digital',
+    siteName: 'OSOM - Développeur Web Craftsman',
     locale: 'fr_CH',
     type: 'website',
   },
