@@ -94,29 +94,29 @@ export const localMetricsData: Record<string, LocalMetrics> = {
 // Unique case studies per city to avoid duplicate content
 export const localCaseStudies = {
   valais: {
-    clientName: "Culture Peinture",
-    industry: "Artisanat & Décoration", 
-    location: "Martigny, Valais",
-    challenge: "Vous manquez de visibilité digitale face aux grandes enseignes ? Votre savoir-faire artisanal mérite d'être connu au-delà du bouche-à-oreille local.",
-    solution: "Nous vous proposons : stratégie SEO géolocalisée Valais, site responsive optimisé tourisme, et automation marketing pour fidéliser votre clientèle.",
+    clientName: "H-Sechement",
+    industry: "B2B Technique Arc Lémanique",
+    location: "Valais",
+    challenge: "Site lent (11s loading) = 0.84% conversion seulement. Besoin dashboard performance + SEO local compétitif secteur technique.",
+    solution: "Migration Next.js + Dashboard performance personnalisé + SEO technique hyper-local + Optimisation conversion continue 6 mois.",
     results: [
       {
-        metric: "Site Web Performance",
-        before: "Site vitrine basique",
-        after: "Site Next.js optimisé", 
-        improvement: "Moderne & Rapide"
+        metric: "Performance technique",
+        before: "65/100 PageSpeed",
+        after: "95+/100 PageSpeed",
+        improvement: "< 2s loading garanti"
       },
       {
-        metric: "Présence Digitale",
-        before: "Invisible en ligne",
-        after: "Référencé Google",
-        improvement: "Visibilité Locale"
+        metric: "Visibilité Google",
+        before: "Page 3+",
+        after: "Position #2 'entreprise assèchement arc lémanique'",
+        improvement: "+150% visibilité"
       },
       {
-        metric: "Process Client",
-        before: "Contact téléphone uniquement",
-        after: "Formulaires & automation", 
-        improvement: "24/7 Accessible"
+        metric: "Trafic organique",
+        before: "Invisibilité digitale",
+        after: "1,287 impressions/mois",
+        improvement: "80.7% engagement"
       }
     ]
   },

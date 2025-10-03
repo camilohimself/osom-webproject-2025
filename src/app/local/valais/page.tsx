@@ -5,14 +5,14 @@ import { getCityPageData } from '@/data/swissCities'
 const cityData = getCityPageData('valais')
 
 export const metadata: Metadata = {
-  title: cityData.metaTitle,
-  description: cityData.metaDescription,
-  keywords: 'agence web valais, création site web valais, développeur valais, SEO tourisme alpin, e-commerce vins valais, site internet artisanat valais, marketing digital sion martigny, osom valais',
+  title: 'Développeur web Valais | Sites sur mesure Next.js & SEO local | OSOM',
+  description: 'Développeur web Valais spécialisé projets complexes sur mesure. Sites 25-60 pages, API, dashboards, SEO local. Next.js expert. H-Sechement, Maîtrise Cathédrale.',
+  keywords: 'développeur web valais, site sur mesure valais, next.js valais, seo local valais, agence web valais, développement web sion, api integration valais, dashboard valais, osom valais',
   openGraph: {
-    title: cityData.metaTitle,
-    description: cityData.metaDescription,
+    title: 'Développeur web Valais | Sites sur mesure Next.js & SEO local | OSOM',
+    description: 'Développeur web Valais spécialisé projets complexes sur mesure. Sites 25-60 pages, API, dashboards, SEO local. Next.js expert.',
     url: 'https://osom.ch/local/valais',
-    siteName: 'osom Agence Marketing Digital',
+    siteName: 'OSOM - Développeur web Valais',
     locale: 'fr_CH',
     type: 'website',
   },
