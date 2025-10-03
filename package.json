@@ -46,7 +46,7 @@
   "author": "osom Agency",
   "license": "MIT",
   "engines": {
-    "node": ">=20.0.0",
+    "node": "22.x",
     "npm": ">=10.0.0"
   },
   "keywords": [
