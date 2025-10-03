@@ -13,6 +13,7 @@ export default async function ServicesPage() {
 
   const services = [
     {
+      id: "artisan",
       title: "Artisan",
       subtitle: "8,000 - 15,000 CHF • 2-3 mois",
       description: "Sites professionnels sur mesure 10-25 pages",
@@ -27,6 +28,7 @@ export default async function ServicesPage() {
       pricing: "1,500 CHF/mois support (optionnel)"
     },
     {
+      id: "master",
       title: "Master",
       subtitle: "15,000 - 35,000 CHF • 3-6 mois",
       description: "Projets complexes 25-60 pages + API + dashboards",
@@ -43,6 +45,7 @@ export default async function ServicesPage() {
       examples: "Paroisse Nendaz • H-Sechement"
     },
     {
+      id: "legend",
       title: "Legend",
       subtitle: "40,000 - 80,000 CHF • 6-12 mois",
       description: "Conquête digitale complète haute visibilité",
@@ -56,6 +59,7 @@ export default async function ServicesPage() {
       examples: "Nowssen • Finance • Corporate"
     },
     {
+      id: "optimisation",
       title: "Optimisation continue",
       subtitle: "Sessions mensuelles 6-12 mois",
       description: "Pour sites existants à transformer en machines de conversion",
@@ -126,7 +130,8 @@ export default async function ServicesPage() {
               return (
               <div
                 key={index}
-                className={`backdrop-blur-sm border rounded-2xl p-6 hover:border-opacity-60 transition-all duration-500 relative overflow-hidden ${
+                id={service.id}
+                className={`backdrop-blur-sm border rounded-2xl p-6 hover:border-opacity-60 transition-all duration-500 relative overflow-hidden scroll-mt-24 ${
                   service.highlight
                     ? `border-${colors.bg}/30 bg-gradient-to-br from-${colors.bg}/10 to-black/60`
                     : `border-white/10 bg-gradient-to-br from-white/5 to-black/40 hover:border-${colors.bg}/30`
