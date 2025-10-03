@@ -25,22 +25,44 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
     setIsServicesMenuOpen(false)
   }
 
-  // Liste des services avec les vraies pages
-  const services = [
-    { name: 'Création Sites Web', href: '/services/creation-site-web' },
-    { name: 'Programmation & IA', href: '/services/programmation-ia' },
-    { name: 'SEO & Marketing', href: '/services/seo-content-marketing' },
-    { name: 'Marketing Automation', href: '/services/marketing-automation-crm' },
-    { name: 'Tracking & Data', href: '/services/tracking-data' },
+  // Packages craftsman pour dropdown
+  const packages = [
+    {
+      name: 'Artisan',
+      price: '8,000 - 15,000 CHF',
+      href: '/services#artisan',
+      description: 'Sites 10-25 pages',
+    },
+    {
+      name: 'Master',
+      price: '15,000 - 35,000 CHF',
+      href: '/services#master',
+      description: 'Projets complexes + API',
+      badge: 'POPULAIRE'
+    },
+    {
+      name: 'Legend',
+      price: '40,000 - 80,000 CHF',
+      href: '/services#legend',
+      description: 'Conquête digitale',
+    },
+    {
+      name: 'Optimisation continue',
+      price: '1,500 - 4,000 CHF/mois',
+      href: '/services#optimisation',
+      description: 'SEO + Analytics',
+    },
+  ]
+
+  const ressources = [
+    { name: 'Audit SEO gratuit', href: '/outils#audit' },
+    { name: 'Calculateur ROI', href: '/outils#roi' },
   ]
 
   const navigation = [
     { name: dictionary.navigation.services, href: '/services', hasDropdown: true },
     { name: dictionary.navigation.portfolio, href: '/realisations' },
-    { name: 'Outils', href: '/outils' },
-    // { name: dictionary.navigation.blog, href: '/blog' }, // TODO: À réactiver après MVP
     { name: dictionary.navigation.agency, href: '/agence' },
-    { name: dictionary.navigation.contact, href: '/contact' },
   ]
 
 
@@ -63,7 +85,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
@@ -95,10 +117,10 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                     </Link>
                     
-                    {/* Menu déroulant Services */}
+                    {/* Menu déroulant Services - Craftsman */}
                     {isServicesMenuOpen && (
-                      <div 
-                        className="absolute top-full left-0 mt-2 w-[520px] bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-yellow-400/20 z-50"
+                      <div
+                        className="absolute top-full left-0 mt-2 w-[420px] bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-yellow-400/20 z-50"
                         onMouseEnter={() => {
                           if (servicesMenuTimeout) {
                             clearTimeout(servicesMenuTimeout)
@@ -113,65 +135,52 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                         }}
                       >
                         <div className="p-6">
-                          <div className="grid grid-cols-2 gap-8">
-                            {/* Services Digitaux */}
-                            <div>
-                              <div className="mb-4">
-                                <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-1" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Services Digitaux</h3>
-                                <p className="text-xs text-gray-400" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Solutions techniques & créatives professionnelles</p>
-                              </div>
-                              <div className="space-y-1">
+                          {/* Packages sur mesure */}
+                          <div className="mb-6">
+                            <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-3" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Packages sur mesure</h3>
+                            <div className="space-y-2">
+                              {packages.map((pkg) => (
                                 <Link
-                                  href="/services/creation-site-web"
-                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
+                                  key={pkg.name}
+                                  href={pkg.href}
+                                  className="block px-3 py-3 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 rounded-md relative group"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                   onClick={closeServicesMenu}
                                 >
-                                  Création Site Web
+                                  <div className="flex items-start justify-between">
+                                    <div>
+                                      <div className="font-semibold text-sm flex items-center gap-2">
+                                        {pkg.name}
+                                        {pkg.badge && (
+                                          <span className="text-xs bg-yellow-400 text-black px-2 py-0.5 rounded-full font-bold">
+                                            {pkg.badge}
+                                          </span>
+                                        )}
+                                      </div>
+                                      <div className="text-xs text-gray-400 mt-0.5">{pkg.description}</div>
+                                      <div className="text-xs text-yellow-400/70 mt-1">{pkg.price}</div>
+                                    </div>
+                                  </div>
                                 </Link>
-                                <Link
-                                  href="/services/programmation-ia"
-                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
-                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                                  onClick={closeServicesMenu}
-                                >
-                                  Programmation & IA
-                                </Link>
-                                <Link
-                                  href="/services/seo-content-marketing"
-                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
-                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                                  onClick={closeServicesMenu}
-                                >
-                                  SEO & Content Marketing
-                                </Link>
-                              </div>
+                              ))}
                             </div>
+                          </div>
 
-                            {/* Growth & Performance */}
-                            <div>
-                              <div className="mb-4">
-                                <h3 className="text-sm font-semibold text-yellow-400 uppercase tracking-wide mb-1" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Growth & Performance</h3>
-                                <p className="text-xs text-gray-400" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Acquisition client & optimisation ROI</p>
-                              </div>
-                              <div className="space-y-1">
+                          {/* Ressources gratuites */}
+                          <div className="pt-4 border-t border-yellow-400/20">
+                            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Ressources gratuites</h3>
+                            <div className="space-y-1">
+                              {ressources.map((ressource) => (
                                 <Link
-                                  href="/services/marketing-automation-crm"
+                                  key={ressource.name}
+                                  href={ressource.href}
                                   className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
                                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                                   onClick={closeServicesMenu}
                                 >
-                                  Marketing Automation & CRM
+                                  {ressource.name}
                                 </Link>
-                                <Link
-                                  href="/services/tracking-data"
-                                  className="block px-3 py-2 text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10 transition-all duration-200 text-sm rounded-md"
-                                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-                                  onClick={closeServicesMenu}
-                                >
-                                  Tracking & Data
-                                </Link>
-                              </div>
+                              ))}
                             </div>
                           </div>
                         </div>
@@ -193,11 +202,18 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-6">
-            {/* Language Switcher - DÉSACTIVÉ PHASE 1 */}
-            {/* <LanguageSwitcher currentLocale={currentLocale} /> */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Audit gratuit - Highlighted */}
+            <Link
+              href="/outils"
+              className="relative px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black group"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+            >
+              <span className="relative z-10">Audit gratuit</span>
+              <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            </Link>
 
-            {/* CTA Button */}
+            {/* CTA Contact */}
             <Link
               href="/contact"
               className="bg-yellow-400 text-black px-6 py-3 rounded-lg hover:bg-yellow-500 transition-all duration-300 font-bold shadow-lg hover:shadow-yellow-400/25 hover:scale-105"
@@ -240,18 +256,34 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                         </svg>
                       </button>
                       {isServicesMenuOpen && (
-                        <div className="ml-4 mt-2 space-y-1">
-                          {services.map((service) => (
+                        <div className="ml-4 mt-2 space-y-2 pb-2">
+                          <div className="px-3 py-1 text-xs text-yellow-400 font-semibold uppercase">Packages</div>
+                          {packages.map((pkg) => (
                             <Link
-                              key={service.href}
-                              href={service.href}
+                              key={pkg.href}
+                              href={pkg.href}
                               className="block px-4 py-2 text-gray-400 hover:text-yellow-400 hover:bg-white/5 transition-colors text-sm rounded-lg"
                               onClick={() => {
                                 setIsMenuOpen(false)
                                 setIsServicesMenuOpen(false)
                               }}
                             >
-                              {service.name}
+                              <div className="font-medium">{pkg.name}</div>
+                              <div className="text-xs text-gray-500">{pkg.price}</div>
+                            </Link>
+                          ))}
+                          <div className="px-3 py-1 mt-2 text-xs text-gray-500 font-semibold uppercase">Ressources</div>
+                          {ressources.map((ressource) => (
+                            <Link
+                              key={ressource.href}
+                              href={ressource.href}
+                              className="block px-4 py-2 text-gray-400 hover:text-yellow-400 hover:bg-white/5 transition-colors text-sm rounded-lg"
+                              onClick={() => {
+                                setIsMenuOpen(false)
+                                setIsServicesMenuOpen(false)
+                              }}
+                            >
+                              {ressource.name}
                             </Link>
                           ))}
                         </div>
@@ -269,13 +301,20 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                   )}
                 </div>
               ))}
-              
-              <div className="pt-4 border-t border-yellow-400/20 px-4">
-                {/* <LanguageSwitcher currentLocale={currentLocale} /> */}
-                
+
+              <div className="pt-4 border-t border-yellow-400/20 px-4 space-y-3">
+                <Link
+                  href="/outils"
+                  className="block text-center border-2 border-yellow-400 text-yellow-400 px-4 py-3 rounded-lg hover:bg-yellow-400 hover:text-black transition-colors font-bold"
+                  style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Audit gratuit
+                </Link>
+
                 <Link
                   href="/contact"
-                  className="block mx-4 mt-3 bg-yellow-400 text-black text-center px-4 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
+                  className="block bg-yellow-400 text-black text-center px-4 py-3 rounded-lg hover:bg-yellow-500 transition-colors font-bold"
                   style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
                   onClick={() => setIsMenuOpen(false)}
                 >
