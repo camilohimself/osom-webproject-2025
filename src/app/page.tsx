@@ -238,8 +238,8 @@ export default async function Home() {
 
               <div className="mt-16 text-center">
                 <div className="text-lg text-gray-400 mb-4">Portfolio projets complexes</div>
-                <div className="text-4xl font-bold text-yellow-400 mb-2">60 pages</div>
-                <div className="text-gray-400">Paroisse Nendaz + API Calendar automatique</div>
+                <div className="text-4xl font-bold text-yellow-400 mb-2">+150%</div>
+                <div className="text-gray-400">H-Sechement visibilité Google</div>
               </div>
             </div>
           </AnimatedElement>

@@ -1,0 +1,140 @@
+{
+  "id": "maitrise-cathedrale",
+  "client": "Maîtrise de la Cathédrale de Sion",
+  "sector": "Culturel & Patrimoine",
+  "location": "Sion, Valais",
+  "project_type": "Site web culturel sur mesure + Gestion événements",
+  "url": "https://maitrisecathedrale.ch",
+
+  "challenge": {
+    "title": "Visibilité institution culturelle & gestion calendrier complexe",
+    "pain_points": [
+      "Absence de présence digitale structurée",
+      "Calendrier événements 2025-2026 non accessible en ligne",
+      "Communication concerts & événements fragmentée",
+      "Difficulté à valoriser patrimoine musical unique",
+      "Besoin de crédibilité professionnelle pour partenariats"
+    ]
+  },
+
+  "solution": {
+    "title": "Site culturel premium + Système événements optimisé",
+    "approach": [
+      "Audit positionnement institution culturelle valaisanne",
+      "Architecture site adaptée secteur culturel/concerts",
+      "Intégration calendrier événements 2025-2026",
+      "Design élégant reflétant prestige cathédrale",
+      "SEO local 'concerts Sion', 'chorale cathédrale Valais'"
+    ],
+    "tech_stack": [
+      "Next.js 14 App Router",
+      "Système événements avec filtres",
+      "Design responsive premium",
+      "TypeScript + Tailwind CSS",
+      "Hébergement Vercel optimisé"
+    ]
+  },
+
+  "scope": {
+    "pages_built": 18,
+    "main_sections": [
+      "Présentation Maîtrise & histoire",
+      "Calendrier concerts & événements 2025-2026",
+      "Membres & organigramme",
+      "Partenaires (FAS, RHV)",
+      "Galerie photos concerts",
+      "Contact & auditions"
+    ],
+    "integrations": [
+      "Système événements filtrable par date",
+      "Galerie média optimisée",
+      "Formulaires contact auditions",
+      "SEO local optimisé"
+    ]
+  },
+
+  "duration": "4 mois",
+  "investment": {
+    "project": "12,000 CHF",
+    "monthly_support": "1,500 CHF/mois",
+    "total_year_1": "18,000 CHF"
+  },
+
+  "results": {
+    "pages_delivered": 18,
+    "events_managed": "Calendrier 2025-2026 complet intégré",
+    "performance": {
+      "page_speed_score": 92,
+      "loading_time": "< 2s",
+      "mobile_friendly": "100%"
+    },
+    "seo": {
+      "target_keywords": [
+        "concerts cathédrale sion",
+        "chorale valais",
+        "maîtrise sion événements"
+      ],
+      "local_visibility": "Positionnement Google local établi"
+    },
+    "impact": {
+      "credibility": "Présence professionnelle crédible pour partenariats culturels",
+      "accessibility": "Calendrier événements accessible 24/7",
+      "communication": "Communication concerts centralisée et structurée"
+    }
+  },
+
+  "testimonial": {
+    "text": "Le site web a considérablement renforcé notre crédibilité institutionnelle. Nos partenaires et le public peuvent maintenant accéder facilement à notre calendrier complet d'événements.",
+    "author": "Direction",
+    "role": "Maîtrise de la Cathédrale de Sion"
+  },
+
+  "key_features": [
+    {
+      "title": "Calendrier événements intégré",
+      "description": "Système complet de gestion et affichage du calendrier 2025-2026 avec filtres par type d'événement.",
+      "impact": "Visibilité événements optimale"
+    },
+    {
+      "title": "Design culturel premium",
+      "description": "Identité visuelle élégante reflétant le prestige de l'institution cathédrale et du patrimoine musical valaisan.",
+      "impact": "Crédibilité professionnelle"
+    },
+    {
+      "title": "SEO local culturel",
+      "description": "Optimisation pour recherches locales concerts Sion/Valais, positionnement institution culturelle régionale.",
+      "impact": "Découvrabilité concerts"
+    },
+    {
+      "title": "Gestion partenaires",
+      "description": "Section dédiée partenaires (FAS, RHV) avec logos et reconnaissance professionnelle.",
+      "impact": "Valorisation partenariats"
+    }
+  ],
+
+  "tags": [
+    "Site culturel",
+    "Événements",
+    "SEO local",
+    "Design premium",
+    "Calendrier intégré",
+    "Patrimoine",
+    "Institution Valais"
+  ],
+
+  "category": "artisan",
+  "package_type": "Artisan - Site culturel professionnel",
+
+  "highlights": {
+    "complexity": "Moyenne (18 pages + système événements)",
+    "duration": "4 mois conception → livraison",
+    "value": "Crédibilité institutionnelle + visibilité événements culturels"
+  },
+
+  "lessons_learned": [
+    "Importance design élégant pour secteur culturel/patrimoine",
+    "Système événements doit être flexible pour calendrier annuel complexe",
+    "SEO local culturel nécessite ciblage mots-clés spécifiques institution",
+    "Valorisation partenaires crucial pour institutions culturelles"
+  ]
+}

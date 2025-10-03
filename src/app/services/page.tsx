@@ -42,7 +42,7 @@ export default async function ServicesPage() {
       badge: "POPULAIRE",
       highlight: true,
       pricing: "2,500 CHF/mois (recommandé)",
-      examples: "Paroisse Nendaz • H-Sechement"
+      examples: "H-Sechement • Maîtrise Cathédrale"
     },
     {
       id: "legend",
@@ -101,8 +101,8 @@ export default async function ServicesPage() {
             </p>
 
             <div className="inline-flex bg-white/5 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10">
-              <span className="text-yellow-400 font-bold text-2xl">60 pages</span>
-              <span className="text-gray-300 ml-2 text-lg">Paroisse Nendaz + API Calendar automatique</span>
+              <span className="text-yellow-400 font-bold text-2xl">+150%</span>
+              <span className="text-gray-300 ml-2 text-lg">visibilité Google H-Sechement</span>
             </div>
           </div>
         </div>
