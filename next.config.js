@@ -30,6 +30,36 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
+  // Redirections sous-pages services vers contact
+  async redirects() {
+    return [
+      {
+        source: '/services/creation-site-web',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/services/marketing-automation-crm',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/services/programmation-ia',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/services/seo-content-marketing',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/services/tracking-data',
+        destination: '/contact',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = withBundleAnalyzer(nextConfig)
