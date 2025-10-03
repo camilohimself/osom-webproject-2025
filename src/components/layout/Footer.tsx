@@ -8,12 +8,13 @@ interface FooterProps {
 }
 
 export default function Footer({ currentLocale, dictionary }: FooterProps) {
-  const services = [
-    { name: dictionary.services['web-development'], href: '/services/creation-site-web' },
-    { name: 'Programmation & IA', href: '/services/programmation-ia' },
-    { name: dictionary.services['seo-marketing'], href: '/services/seo-content-marketing' },
-    { name: dictionary.services['marketing-automation'], href: '/services/marketing-automation-crm' },
-    { name: dictionary.services['tracking-data'], href: '/services/tracking-data' },
+  // Packages craftsman pour footer (aligné avec navbar)
+  const packages = [
+    { name: 'Artisan', href: '/services#artisan' },
+    { name: 'Master', href: '/services#master' },
+    { name: 'Legend', href: '/services#legend' },
+    { name: 'Optimisation continue', href: '/services#optimisation' },
+    { name: 'Audit gratuit', href: '/outils#audit' },
   ]
 
   const localPages = [
@@ -77,17 +78,17 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Packages Craftsman */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">{dictionary.navigation.services}</h3>
+            <h3 className="text-lg font-semibold">Packages sur mesure</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.name}>
+              {packages.map((pkg) => (
+                <li key={pkg.name}>
                   <Link
-                    href={service.href}
-                    className="text-brand-light hover:text-brand-primary transition-colors text-sm"
+                    href={pkg.href}
+                    className="text-brand-light hover:text-yellow-400 transition-colors text-sm"
                   >
-                    {service.name}
+                    {pkg.name}
                   </Link>
                 </li>
               ))}
