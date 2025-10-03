@@ -1,335 +1,272 @@
-# OSOM WebProject 2025 - Guide Technique
+# OSOM - Premium Craftsman Développeur Web Valais
 
-## 🚨 STATUS ACTUEL
-**Site local** : ✅ localhost:3001 fonctionnel + optimisé performance
-**Performance** : ✅ OPTIMISÉ pour présentation (commit d70caeb)
-**Build** : ✅ 46 pages générées, 8s compilation
-**Langue** : ✅ FRANÇAIS ONLY - Sélecteur multilingue supprimé (Phase 1)
-**Urgence** : Prêt pour présentation Q4 2025 - Expansion multilingue 2026 planifiée
-**Blog** : ⏸️ TEMPORAIREMENT MASQUÉ - Pages existantes mais non affichées (MVP focus)
+## 🎯 POSITIONNEMENT STRATÉGIQUE ACTUALISÉ (Octobre 2025)
 
-## 🛡️ RÈGLES OBLIGATOIRES
+### Qui est OSOM?
+**Pas une agence volume. Un craftsman digital premium.**
 
-### Validation Process
-- **WebFetch FIRST** : Vérifier site live avant toute analyse
-- **Cross-check code** : Grep/Read pour confirmer état
-- **No assumptions** : Toujours vérifier avant affirmer
+- **Identité**: OSOM (la marque/agence) opéré par un craftsman solo avec collaborateurs occasionnels
+- **Focus**: 3-5 **grands projets/an** avec accompagnement 6-12 mois (pas 50 petits sites)
+- **Expertise**: Projets complexes sur mesure (25-60 pages, API, dashboards, SEO stratégique)
+- **Localisation**: Valais, Suisse - Expertise SEO local hyper-ciblé
 
-### Politique Contenu
-- **Anonymat** : "Client PME", "Entreprise locale" (jamais noms réels)
-- **Devise** : Tous montants en CHF
-- **Design** : NO emojis, interface clean uniquement
-- **KPI** : Suppression métriques non-vérifiables
+### Modèle Business Craftsman
 
-### Lifting Methodology
-1. DIAGNOSTIC → SUPPRESSION → CONDENSATION
-2. KPI unique par page
-3. Target : -40% lignes code
-4. Build sans erreur obligatoire
+**IMPORTANT - Pricing mensuel = partenariat, pas projet + support:**
 
-## 📊 ARCHITECTURE SITE
+Les projets Master/Legend sont facturés mensuellement parce que c'est un **partenariat continu**, pas un site livré puis un support vendu séparément.
+
+Exemple concret:
+- **H-Sechement**: 24,000 CHF sur 6 mois = **4,000 CHF/mois** (dev + SEO + dashboard + support premium TOUT COMPRIS chaque mois)
+- **Maîtrise Cathédrale**: 12,000 CHF sur 4 mois = **3,000 CHF/mois** (site + calendrier + SEO + formation TOUT COMPRIS)
+
+Ce n'est PAS "18,000 CHF projet + 1,800 CHF/mois support optionnel". C'est **18,000 CHF ÷ 6 mois = 3,000 CHF/mois partenariat total**.
+
+## 📦 PACKAGES CRAFTSMAN
+
+### 1. Artisan (8,000 - 15,000 CHF)
+**Durée**: 2-3 mois
+**Pour**: Professionnels, artisans, PME
+**Inclus**: 10-25 pages sur mesure, design responsive premium, SEO de base, formation 2h, 3 mois maintenance
+**Support optionnel**: 1,500 CHF/mois (vraiment optionnel après livraison)
+
+### 2. Master (15,000 - 35,000 CHF)
+**Durée**: 3-6 mois
+**Pour**: Institutions, PME technique, projets complexes
+**Inclus**: 25-60 pages architecture custom, API complexes (Calendar, CRM), Dashboard analytics personnalisé, SEO hyper-local stratégique (7+ pages), Sessions optimisation mensuelles 6 mois, Formation équipe 4h, Support prioritaire 24h
+**Pricing mensuel**: 2,500 - 5,833 CHF/mois TOUT COMPRIS pendant durée projet
+**Exemples**: H-Sechement (B2B technique), Maîtrise Cathédrale (culturel)
+
+### 3. Legend (40,000 - 80,000 CHF)
+**Durée**: 6-12 mois
+**Pour**: Finance, Corporate, projets stratégiques haute visibilité
+**Inclus**: Architecture entreprise complète, Dashboards temps réel sur mesure, SEO domination locale, Consulting stratégique mensuel, Support 24/7 prioritaire, Garantie résultats contractuelle, Formation équipe complète
+**Pricing mensuel**: 3,333 - 6,667 CHF/mois partenariat stratégique complet
+**Exemples**: Nowssen (finance), projets corporate multilingues
+
+### 4. Optimisation Continue (1,500 - 4,000 CHF/mois)
+**Durée**: 6-12 mois recommandé
+**Pour**: Sites existants à transformer en machines de conversion
+**3 tiers**:
+- **Essential** (1,500 CHF/mois): SEO local base, analytics, 1 session/mois
+- **Growth** (2,500 CHF/mois): SEO stratégique, dashboard, A/B tests, 2 sessions/mois (POPULAIRE)
+- **Performance** (4,000 CHF/mois): SEO agressif, dashboard custom, consultant dédié, garantie résultats
+
+## 🏆 PROJETS RÉELS OSOM
+
+### H-Sechement (B2B Technique)
+- **Package**: Master (24,000 CHF sur 6 mois = 4,000 CHF/mois)
+- **Livrables**: Migration Next.js, Dashboard performance personnalisé, SEO technique Arc Lémanique
+- **Résultats**: Performance 65 → 95+ PageSpeed, Position #2 Google "entreprise assèchement arc lémanique", +150% visibilité, 1,287 impressions/mois
+
+### Maîtrise Cathédrale Sion (Institution Culturelle)
+- **Package**: Master (12,000 CHF sur 4 mois = 3,000 CHF/mois)
+- **Livrables**: Site 18 pages + système événements, Intégration calendrier 2025-2026, SEO local culturel Sion/Valais
+- **Impact**: Crédibilité institutionnelle renforcée, Communication événements centralisée, Partenariats culturels valorisés
+
+### LMDI (E-commerce Premium)
+- **Package**: Optimisation Continue Growth
+- **Focus**: SEO e-commerce + optimisation technique continue
+- **Résultats**: 315 clics organiques/mois, CTR 3.45% (excellent e-commerce), 9,133 impressions/mois
+
+### JDWaeber (Portfolio Musical) - EN DÉVELOPPEMENT
+- **Package**: Artisan
+- **Localisation**: ~/JDW-Portfolio-2025/ (repo Git actif)
+- **Status**: Développement en cours, migration prévue après déploiement
+
+### ❌ EXCLUS - Projets personnels non-OSOM:
+- **Paroisse Nendaz**: Projet personnel Camilo, NE PAS utiliser comme référence OSOM
+
+## 🛠️ STACK TECHNIQUE
+
+### Core
+- **Next.js 15** App Router
+- **TypeScript** + **Tailwind CSS**
+- **Framer Motion** (animations)
+- **Vercel** (déploiement automatique)
+
+### Performance
+- **Images**: WebP, AVIF formats, optimisations automatiques
+- **Bundle**: optimizePackageImports (framer-motion, lucide-react)
+- **Caching**: Compression activée, headers optimisés
+- **PageSpeed**: Garantie 90+ score, < 2s loading
+
+### Features Craftsman
+- **CMS Headless**: Autonomie clients post-formation
+- **API Integrations**: Google Calendar, CRM, Analytics (custom)
+- **Dashboards**: Analytics temps réel personnalisés par métier
+- **SEO Local**: Hyper-local Valais (Sion, Sierre, Martigny, etc.)
+
+## 📊 ARCHITECTURE SITE OSOM
 
 ### Pages Actives
-- Homepage + 6 services + agence + contact + outils + légales + 5 SEO local
-- Gaming : Pong desktop + Tic-Tac-Toe mobile
-- Progress bars : Toutes pages sauf contact
-- SEO Local : Valais, Lausanne, Genève, Fribourg, Neuchâtel
+- **Homepage**: Hero phare interactif (HeroSwissOSOMHybrid.tsx) - SIGNATURE DESIGN À CONSERVER
+- **Services**: Page hub + 4 pages packages détaillées
+  - `/services` - Overview packages
+  - `/services/artisan` - Package détaillé Artisan
+  - `/services/master` - Package détaillé Master (pricing mensuel explicite)
+  - `/services/legend` - Package détaillé Legend (garanties contractuelles)
+  - `/services/optimisation-continue` - 3 tiers optimisation
+- **Réalisations**: Portfolio projets (H-Sechement, LMDI, Maîtrise Cathédrale)
+- **Agence**: À propos OSOM craftsman
+- **Contact**: Formulaire + CTA audit gratuit
+- **Outils**: SEO Audit gratuit + Calculateur ROI
+- **SEO Local**: Valais (hub principal), Lausanne, Genève, Fribourg, Neuchâtel
 
-### Stack Technique
-- Next.js 15 + TypeScript + Tailwind + Framer Motion
-- Responsive mobile-first avec hooks `useMediaQuery`
-- Components : ServicePageMobile, ContactMobile, GaugeChart automotive
+### Pages Supprimées/Redirigées
+- `/services/creation-site-web` → `/contact` (permanent redirect)
+- `/services/marketing-automation-crm` → `/contact`
+- `/services/programmation-ia` → `/contact`
+- `/services/seo-content-marketing` → `/contact`
+- `/services/tracking-data` → `/contact`
 
-### KPI Réels Utilisés
-- Culture Peinture : 688 vs 49 conversions
-- Artisane Lumière : 68.6% vs 44.6% engagement
-- Données GA4 vérifiées sur 200+ jours
+### Navigation
+**Navbar craftsman premium (Header.tsx)**:
+- Logo OSOM | **Services ▼** | Portfolio | Agence | **Audit gratuit** | Contact
+- Dropdown Services: 4 packages (Artisan, Master POPULAIRE, Legend, Optimisation) + Ressources (Audit SEO, ROI Calculator)
+- Design: font-light, espacement ml-auto mr-8 space-x-12, CTAs subtils
+- NO EMOJIS (explicitement demandé par utilisateur)
 
-## 🎯 COMMANDES ESSENTIELLES
+## 🎯 RÈGLES OBLIGATOIRES
+
+### Design & UX
+- **NO EMOJIS**: Interdit dans l'ensemble du site (demande explicite utilisateur)
+- **Phare interactif**: Hero homepage SIGNATURE - NE JAMAIS MODIFIER sans validation
+- **Font**: Cera PRO (primary), Inter (fallback)
+- **Spacing**: Navigation aérée, CTAs fins et élégants
+- **Mobile-first**: Responsive total, touch-friendly
+
+### Contenu
+- **Anonymat clients**: Sauf projets OSOM réels validés (H-Sechement, LMDI, Maîtrise Cathédrale)
+- **Devise**: Tous montants en CHF uniquement
+- **Langue**: Français ONLY (Phase 1) - Multilingue planifié 2026
+- **Metrics**: Données GA4 vérifiées uniquement, pas de KPIs fantaisistes
+
+### Validation Process
+1. **WebFetch FIRST**: Vérifier site live avant analyse
+2. **Cross-check code**: Grep/Read pour confirmer état
+3. **No assumptions**: Toujours vérifier avant affirmer
+4. **Build sans erreur**: Obligatoire avant commit
+
+## 🚀 COMMANDES ESSENTIELLES
+
 ```bash
-npm run dev          # Serveur développement (port 3001)
-npm run build        # Build production
+npm run dev          # Serveur développement (port 3004)
+npm run build        # Build production (vérifier 0 erreurs)
 npm run lint         # Vérification code
+git add -A && git commit -m "message" && git push  # Déploiement auto Vercel
 ```
 
-## 📝 REPOS DISTINCTS
-- `osom-webproject-2025` : Site principal production
-- `osom-lab` : R&D Camilo (expérimentations)
+## 📂 STRUCTURE PROJET
 
-## 🔧 PROBLÈMES CONNUS
-1. **FOUC Google Fonts** : ✅ Résolu avec `display: swap`
-2. **CTA pollution visuelle** : ✅ Corrigé overflow
-3. **Gauge needles** : ✅ Style automotive appliqué
-4. **Déploiement** : ❌ CRITIQUE - Next.js 15 config requise
+### Repositories
+- **osom-webproject-2025**: Site principal production (ce repo)
+- **JDW-Portfolio-2025**: Projet client en développement
+- **WORKSPACE-OSOM**: Tous projets clients OSOM
+  - `/CLIENTS-ACTIFS/H-SECHEMENT`
+  - `/CLIENTS-ACTIFS/LMDI`
+  - `/CLIENTS-ACTIFS/MAITRISE-CATHEDRALE`
+  - `/CLIENTS-ACTIFS/JDW-PORTFOLIO`
 
-## 💡 DONNÉES IMPORTANTES
-**Contact** : +41 79 128 95 49 | hello@osom.ch
-**Adresse** : Rue de Clodevis 13, 1967 Bramois
-**Build status** : 47 pages générées localement
-**Performance** : Mobile-first optimized
+### Data Files
+- `/data/packages-craftsman.json`: Définitions packages complets
+- `/data/case-studies/h-sechement.json`: Case study H-Sechement
+- `/data/case-studies/lmdi.json`: Case study LMDI
+- `/data/case-studies/maitrise-cathedrale.json`: Case study Maîtrise Cathédrale
+- `/data/swissCities.ts`: SEO local Suisse (Valais focus)
 
-## 🎯 INSIGHTS MARKETING CRITIQUES
+### Key Components
+- **Header.tsx**: Navbar craftsman premium (ml-auto spacing, dropdown packages)
+- **HeroSwissOSOMHybrid.tsx**: Hero phare interactif SIGNATURE
+- **ScrollProgressIndicator**: Toutes pages sauf contact
+- **CityPageTemplate**: Template SEO local réutilisable
 
-### Personas Validés OSOM
-**Georges Bonvin - "Le PME Sceptique"** (45 ans, Directeur construction)
-- Frein : "Mon neveu peut faire un site pour 500.-"
-- Déclencher : ROI concret, cas clients similaires
-- Besoin : Crédibilité digitale face concurrents romands
+## 💰 STRATÉGIE ACQUISITION 400K CHF
 
-**Marie Dubuis - "L'Artiste Ambitieuse"** (32 ans, Violoniste/Directrice artistique)
-- Budget serré mais vision claire
-- Déclencher : Portfolio culturel, process rapide
-- Besoin : Paraître établie pour subventions
+### Clients Actuels (10 clients qualité)
+**Tier 1 - Premium B2B (upselling immédiat)**:
+- H-SECHEMENT: 600 → 3,000 CHF/mois target
+- LMDI: 800 → 2,500 CHF/mois target
 
-**Dr. Sarah Meier - "La Professionnelle Exigeante"** (38 ans, Médecin spécialiste)
-- Habituée premium (Mercedes, Rolex discrète)
-- Déclencher : Process clair, réactivité, références premium
-- Besoin : Site qui reflète standing sans ostentation
+**Tier 2 - Business Premium**:
+- DR-BOURDIN-SION: 2K/mois
+- CABINET-AVOCAT-TEST: 2K/mois
+- MAITRISE-CATHEDRALE: 1.5K/mois
+- JDW-PORTFOLIO: 1.5K/mois
 
-### Stratégie Swiss-Credible Validée
-- **PROBLÈME IDENTIFIÉ** : KPIs "américains" (688, ROI 14x, 99.3%) contreproductifs en Suisse
-- **INSIGHT** : Digital suisse "encore au moyen âge" - méfiance des gros chiffres
-- **SOLUTION** : Adoucissement pour crédibilité locale + case studies verrouillés
-- **APPROCHE** : Portfolio AVANT promesses, montrer vs raconter
+**Tier 3 - Professional**:
+- ARTISANE-LUMIERE (CTR 14.47% exceptionnel)
+- DR-DELHASSE
+- CHANDOLINE
 
-### Campagne Acquisition Testée
-- **Budget** : 100 CHF/semaine Meta Ads
-- **Ciblage** : CEO PME VALAIS (30-55 ans, Services/B2B/Retail)
-- **Objectifs** : 25-30 leads, 8-12 consultations, ROI 300%+
-- **14 Punchlines** : "Prouvez-nous impossible" → "Timer final"
-- **Timing** : Séquentiel 14 jours + timer 48h urgence
+### Plan Acquisition 2026
+**Phase 1**: Repricing clients actuels → +49K/an
+**Phase 2**: 5 nouveaux clients premium (2 B2B Technique, 2 E-commerce, 1 Pro) → +156K/an
+**Total Année 1**: +205,200 CHF/an
 
-### Psychologie Conversion CRO
-**Scan-Decide-Act (60 sec max)** :
-- Hero 5 sec : Métrique choc + urgence
-- Social proof visuel immédiat
-- CTA final : "2 places restantes" + friction zéro
-- Mobile-first radical : Touch-friendly + loading < 2sec
+### Canaux
+1. **LinkedIn Sales Navigator**: 10 contacts/jour ciblés
+2. **Google Ads**: 500 CHF/mois → landing /premium-b2b
+3. **Email direct**: 5 emails personnalisés/jour
+4. **Références clients**: Programme parrainage
 
-### Formule OSOM Validée
-**DONNÉES + CRÉATIVITÉ + HUMOUR = 140x Results**
-- Transparence totale + portfolio accessible
-- Solution universelle : Méfiance agences + besoin crédibilité + peur prix
-- Focus cas d'usage réels vs métriques fantaisistes
+## 🌍 EXPANSION MULTILINGUE 2026
 
-### Pricing Strategy Swiss
-- **OSOM Web Formula** : 4,500 CHF (vs initial 1,500 CHF)
-- **Délai** : 45 jours ouvrés (transparence process)
-- **Positionnement** : Premium accessible, pas luxury inaccessible
+### Q1 2026 - Version DE 🇩🇪
+- **Marché**: Zurich, Bâle, Berne (60% marché suisse)
+- **SEO**: "Webdesign Zürich", "Web Agentur Basel"
+- **Pricing**: +15% premium (5,200 CHF vs 4,500 CHF FR)
 
-## 🚀 OPPORTUNITÉS STRATÉGIQUES IDENTIFIÉES
+### Q2 2026 - Version EN 🇬🇧
+- **Marché**: Geneva International, Multinationales
+- **Positioning**: "Swiss Digital Excellence for Global Business"
+- **Pricing**: +50% premium international (6,800 CHF)
 
-### 1. OFFRES SEGMENTÉES PAR PERSONA
-
-**Package "Georges" - PME Pragmatique** (2,500 CHF)
-- Site vitrine + GA4 setup
-- 1 case study concurrent local inclus
-- Formation équipe interne (2h)
-- Message : "Votre concurrent a déjà commencé"
-
-**Package "Marie" - Créatif Budget** (1,800 CHF)
-- Portfolio optimisé subventions
-- SEO local culturel Valais
-- Template newsletter inclus
-- Message : "Portfolio qui impressionne les jurys"
-
-**Package "Sarah" - Premium Discret** (6,500 CHF)
-- Design haut de gamme
-- Rédaction copywriting premium
-- Maintenance 6 mois incluse
-- Message : "Excellence sans ostentation"
-
-### 2. STRATÉGIE ACQUISITION MULTI-CANAL
-
-**Canal 1 : Meta Ads Localisé**
-- Ciblage géographique : Sion, Sierre, Martigny
-- Créatifs adaptés : "Votre concurrent sierrois a déjà..."
-- Budget test : 300 CHF/mois
-
-**Canal 2 : LinkedIn ABM**
-- Ciblage : Dirigeants 100+ employés Valais
-- Content : Case studies anonymisés
-- Approche : Soft outreach + valeur ajoutée
-
-**Canal 3 : Réseau Local**
-- Partenariats comptables/notaires
-- Événements Chambre Commerce
-- Recommandations cross-business
-
-### 3. MESSAGING ANTI-AGENCE DIFFÉRENCIANT
-
-**Pain Points Agences Traditionnelles** :
-- "Promesses sans preuves" → **OSOM : Portfolio vérifiable**
-- "Facturations cachées" → **OSOM : Prix fixe transparent**
-- "Délais élastiques" → **OSOM : 45 jours garantis**
-- "Jargon technique" → **OSOM : Langage business**
-
-**Positionnement Unique** :
-"La seule agence du Valais qui prouve avant de promettre"
-
-### 4. PRODUCT LADDER ÉVOLUTIF
-
-**Entrée de gamme** : Audit gratuit (Lead magnet)
-**Niveau 1** : Site vitrine (2,500 CHF)
-**Niveau 2** : Site + SEO (4,500 CHF)
-**Niveau 3** : Écosystème complet (8,000 CHF)
-**Premium** : Consulting stratégique (1,500 CHF/jour)
-
-### 5. CONTENT MARKETING LOCALISÉ
-
-**Blog Topics Valaisans** :
-- "Pourquoi les PME valaisannes résistent au digital"
-- "Case study : Comment [Secteur] cartonne avec 688 leads"
-- "Digital en Valais : Stop aux excuses, place aux résultats"
-
-**SEO Local** :
-- "Agence web Sion"
-- "Marketing digital Valais"
-- "Site internet PME Sierre"
-
-### 6. OBJECTIONS HANDLING SYSTEMATIQUE
-
-**"C'est trop cher"** → ROI Calculator personnalisé
-**"On n'a pas le temps"** → Process clés en main démontré
-**"Notre secteur est différent"** → Case study secteur similaire
-**"Mon neveu peut le faire"** → Comparatif amateur vs pro
-
-### 7. RETENTION & UPSELL
-
-**Phase 1** : Site livré → Newsletter mensuelle résultats
-**Phase 2** : 3 mois → Audit performance gratuit
-**Phase 3** : 6 mois → Proposition optimisations
-**Phase 4** : 12 mois → Évolution/refonte
-
-**Upsell naturels** :
-- Formation équipe interne
-- Gestion réseaux sociaux
-- Optimisations continues
-- Sites additionnels (multilingue)
-
-## 🚀 TODO LIST OPTIMISATION PERFORMANCE POST-PRÉSENTATION
-
-### ⚡ OPTIMISATIONS APPLIQUÉES (22 Sept 2025)
-
-**PRÉ-PRÉSENTATION (commit d70caeb):**
-- ✅ **InteractiveBackground** : Particules 50→15 desktop, 25→8 mobile (-70% calculs)
-- ✅ **ScrollProgressIndicator** : Spring physics optimisé (stiffness 100→60)
-- ✅ **Build performance** : 17s compilation, 47 pages OK, 206KB homepage
-
-**PHASE 1 COMPLÉTÉE (commit b8f4808):**
-- ✅ **Images WebP** : 956KB → 152KB (-84% ! logos convertis)
-- ✅ **Next.js config** : Build 17s → 12s, optimizePackageImports activé
-- ✅ **Google Fonts** : Déjà optimisé avec display: swap
-- ✅ **Tailwind CSS** : Purge déjà configuré correctement
-- ✅ **GARANTIE VISUELLE** : Zéro changement design, +40% performance
-
-### ✅ PHASE 1 : TERMINÉE LE 22 SEPT
-- ✅ **Images WebP** : Tous logos convertis (-804KB économisés)
-- ✅ **Next.js config** : Toutes optimisations activées
-- ✅ **Google Fonts** : Déjà optimisé
-- ✅ **Tailwind purge** : Déjà configuré
-
-### 🎯 PHASE 2 : PRÊT CE SOIR (22 SEPT)
-- [ ] **Lighthouse audit complet** : Mesurer gains Phase 1 + identifier blockers
-- [ ] **Bundle analysis** : webpack-bundle-analyzer pour voir impact réel
-- [ ] **Core Web Vitals test** : LCP/FID/CLS mesures avant/après
-- [ ] **Mobile performance** : Optimisations spécifiques mobile
-- [ ] **Images restantes** : Scanner autres assets non-optimisés
-
-### PHASE 3 : EXCELLENCE (1 MOIS) 🚀
-- [ ] **Virtual scrolling** : Listes longues (réalisations/blog)
-- [ ] **Web Workers** : Animations particules déportées
-- [ ] **Service Workers** : Caching stratégique assets
-- [ ] **Performance monitoring** : Real-time metrics setup
-- [ ] **A/B testing** : Performance vs conversions balance
-
-### 🎯 PRIORITÉS TECHNIQUES ACTUALISÉES
-
-**✅ ACCOMPLI :**
-1. ✅ **Images WebP** : -84% taille (gain +40% mesuré)
-2. ✅ **Next.js config** : Build -29% temps (gain +20% estimé)
-
-**🎯 CE SOIR (Phase 2) :**
-1. **Lighthouse audit** : Mesurer score réel post-optimisations
-2. **Bundle analysis** : Identifier prochains goulots d'étranglement
-3. **Core Web Vitals** : Baseline pour Phase 3
-4. **Mobile fine-tuning** : Optimisations spécifiques touch devices
-
-**OBJECTIF FINAL** : Performance Score 95+ / LCP <2s / Build <10s
-
-## 🌍 STRATÉGIE MULTILINGUE OSOM 2026
-
-### 📅 PLANNING EXPANSION INTERNATIONALE
-
-**Q4 2025 - FINALISATION FR** :
-- ✅ Site français parfait (SEO local corrigé)
-- ✅ UX cohérente (sélecteur langue supprimé)
-- ✅ Performance optimisée
-- ✅ Portfolio case studies authentiques
-
-**Q1 2026 - LANCEMENT VERSION DE** 🇩🇪 :
-- **Marché cible** : Zurich, Bâle, Berne (60% marché suisse)
-- **Pages prioritaires** : Homepage + 5 services + 2 SEO local (Zurich/Basel)
-- **Infrastructure** : Next.js i18n, routing /de/*, hreflang SEO
-- **Content** : Traduction pro + adaptation culturelle allemande
-- **Test market** : Budget ads 500 CHF/mois Zurich
-
-**Q2 2026 - LANCEMENT VERSION EN** 🇬🇧 :
-- **Marché cible** : Geneva International, Multinationales
-- **Positioning** : "Swiss Digital Excellence for Global Business"
-- **Pages focus** : Premium services, international case studies
-- **SEO strategy** : "Swiss Web Agency", "Geneva Digital Marketing"
-
-### 🎯 PRÉPARATION TECHNIQUE QUOTIDIENNE
-
-**Tâches Micro-Quotidiennes (5-10 min/jour)** :
-1. **Content Audit** : Identifier phrases "FR-only" à internationaliser
-2. **Component Review** : Marquer hardcoded text pour i18n
-3. **Asset Preparation** : Images avec text → versions multilingues
-4. **SEO Structure** : URLs structure /fr/de/en planning
-5. **Translation Keys** : Créer dictionnaire progressif FR→DE→EN
-
-**Tâches Hebdomadaires (30 min/semaine)** :
-- **Competitive Analysis** : Agences web allemandes/anglaises Suisse
-- **Keyword Research** : "Webdesign Zürich", "Web Agency Geneva"
-- **Cultural Adaptation** : Codes visuels/messaging par marché
-- **Technical Planning** : i18n architecture progressive
-
-### 💰 BUSINESS MODEL MULTILINGUE
-
-**Pricing Strategy Adaptée** :
-- **FR (Romande)** : 4,500 CHF (référence actuelle)
-- **DE (Allemagne)** : 5,200 CHF (+15% premium qualité)
-- **EN (International)** : 6,800 CHF (+50% positioning luxury)
-
-**ROI Projection 2026** :
-- **Marché x3** : 60% DE + 20% EN + 20% FR
-- **Revenus x2.5** : Expansion géographique + premium pricing
-- **Différenciation** : Seule agence valaisanne trilingue
-
-### 🚀 AVANTAGE CONCURRENTIEL 2026
-
-**Unique Value Prop** :
+### UVP Multilingue
 "La seule agence web valaisanne maîtrisant les 3 codes culturels suisses : discrétion romande, efficacité allemande, excellence internationale"
 
-**Crédibilité Premium** :
-- Portfolio trilingue démontré
-- Case studies adaptés par marché
-- Équipe multiculturelle (perception)
-- Certifications/références internationales
+## 🔧 PROBLÈMES CONNUS & SOLUTIONS
 
-## 📝 TODO LIST POST-MVP
+### ✅ Résolus
+- Images WebP: -84% taille (commit b8f4808)
+- FOUC Google Fonts: display: swap
+- Navbar craftsman: espacement optimisé (commit 7ced075)
+- Paroisse Nendaz removed: projet personnel exclu (commit da0381a)
 
-### 🎯 PRIORITÉ 1 - Q1 2026
-- **Blog activation** : Réactiver menu + finaliser articles existants
-- **Méthode OSOM** : Créer page /methode dédiée avec process détaillé
-- **Portfolio enrichi** : Ajouter 5+ case studies vérifiés avec données GA4
-- **Services détaillés** : Pages individuelles pour E-commerce & Transformation Digitale
+### 🎯 Priorités Actuelles
+- [ ] Finaliser case study JDWaeber (après déploiement projet)
+- [ ] Enrichir portfolio: 5+ case studies avec GA4 data
+- [ ] Blog activation: Réactiver menu + articles existants
+- [ ] Performance monitoring: Real-time metrics setup
 
-### 🌍 PRIORITÉ 2 - Q2 2026
-- **Version allemande** : Traduction complète + SEO Zurich/Bâle
-- **Version anglaise** : Focus Geneva International
-- **i18n complet** : Infrastructure multilingue Next.js
+## 📝 NOTES IMPORTANTES
+
+### Hero "Phare" - SIGNATURE DESIGN
+Le phare interactif (lighthouse) sur homepage est LA signature visuelle OSOM. Labels services actualisés:
+- CONCEPTION (Architecture × UX)
+- DÉVELOPPEMENT (Next.js × Performance)
+- SEO LOCAL (Positions × Conversions)
+- OPTIMISATION (Analytics × A/B Tests)
+
+**NE JAMAIS modifier sans validation explicite utilisateur.**
+
+### Pricing Philosophy
+Le modèle craftsman OSOM est unique:
+- **Artisan**: Projet unique + support optionnel (modèle classique)
+- **Master/Legend**: Partenariat mensuel tout compris (modèle innovant)
+
+Cette distinction est CRUCIALE pour le positionnement premium et doit être communiquée clairement sur toutes les pages packages.
+
+### SEO Local Strategy
+- **Valais**: Hub principal (H-Sechement case study)
+- **Sion**: SUPPRIMÉ et remplacé par Valais (décision stratégique)
+- **Autres villes**: Lausanne, Genève, Fribourg, Neuchâtel (contenu générique)
+
+### Contact
+**Email**: hello@osom.ch
+**Téléphone**: +41 79 128 95 49
+**Adresse**: Rue de Clodevis 13, 1967 Bramois, Valais
 
 ---
-*Dernière mise à jour : 29 Sept 2025 - Blog masqué MVP + Services page optimisée -69% lignes*
+
+*Dernière mise à jour: 4 Octobre 2025 - Positionnement craftsman actualisé + packages détaillés + pricing mensuel explicite*
