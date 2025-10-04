@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Développeur Web Genève | Sites Corporate Multilingues | OSOM',
     description: 'Développeur web Genève spécialisé finance & corporate international. Sites multilingues (FR/EN/DE), architecture entreprise.',
-    url: 'https://osom.ch/local/geneve',
+    url: 'https://www.osom.ch/local/geneve',
     siteName: 'OSOM - Développeur Web Craftsman',
     locale: 'fr_CH',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://osom.ch/local/geneve',
+    canonical: 'https://www.osom.ch/local/geneve',
   },
   other: {
     'geo.region': 'CH-GE',

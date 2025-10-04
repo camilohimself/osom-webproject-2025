@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Agence Marketing Valais N°1 - Marketing IA Révolutionnaire',
     description: 'Agence Marketing VALAIS : 1239 recherches mensuelles confirment notre leadership. Marketing Humain × IA = 8x plus efficace.',
-    url: 'https://osom.ch/agence',
+    url: 'https://www.osom.ch/agence',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://osom.ch/agence',
+    canonical: 'https://www.osom.ch/agence',
   },
   other: {
     'geo.region': 'CH-VS',

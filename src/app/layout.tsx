@@ -18,7 +18,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://osom.ch'),
+  metadataBase: new URL('https://www.osom.ch'),
   title: 'OSOM | Agence Web Valais N°1 - Création Site Internet × SEO',
   description: 'Agence Web VALAIS N°1 : 1589 recherches/mois confirment notre expertise. Création site internet (1718 recherches), SEO Valais (772), Marketing digital révolutionnaire.',
   keywords: 'agence web valais, création site internet valais, seo valais, marketing digital valais, agence marketing valais, référencement valais, agence digitale valais, site web valais',
@@ -27,10 +27,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'osom - Agence Web Digitale Valais',
     description: 'Agence web spécialisée dans la création de sites internet, SEO, et marketing digital en Valais.',
-    url: 'https://osom.ch',
+    url: 'https://www.osom.ch',
     siteName: 'osom',
     locale: 'fr_CH',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.osom.ch',
   },
 }
 

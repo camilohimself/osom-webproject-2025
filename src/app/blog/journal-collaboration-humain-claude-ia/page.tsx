@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'L\'IA au Service de l\'Innovation : Notre Processus Révélé',
     description: 'Comment nous intégrons l\'intelligence artificielle dans nos processus pour des résultats 8x plus rapides.',
-    url: 'https://osom.ch/blog/journal-collaboration-humain-claude-ia',
+    url: 'https://www.osom.ch/blog/journal-collaboration-humain-claude-ia',
     type: 'article',
   }
 }

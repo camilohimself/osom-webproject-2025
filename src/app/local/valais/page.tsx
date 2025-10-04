@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Développeur web Valais | Sites sur mesure Next.js & SEO local | OSOM',
     description: 'Développeur web Valais spécialisé projets complexes sur mesure. Sites 25-60 pages, API, dashboards, SEO local. Next.js expert.',
-    url: 'https://osom.ch/local/valais',
+    url: 'https://www.osom.ch/local/valais',
     siteName: 'OSOM - Développeur web Valais',
     locale: 'fr_CH',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://osom.ch/local/valais',
+    canonical: 'https://www.osom.ch/local/valais',
   },
   other: {
     'geo.region': 'CH-VS',

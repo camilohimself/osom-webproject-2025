@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'OSOM - Sites web sur mesure qui génèrent des résultats',
     description: 'Développeur web Valais spécialisé projets complexes. 60 pages + API + SEO local. Performance garantie < 2s.',
-    url: 'https://osom.ch',
+    url: 'https://www.osom.ch',
     siteName: 'OSOM',
     locale: 'fr_CH',
     type: 'website',

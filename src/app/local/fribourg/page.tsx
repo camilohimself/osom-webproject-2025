@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Développeur Web Fribourg | E-commerce sur Mesure | OSOM',
     description: 'Développeur web Fribourg spécialisé e-commerce artisanal & terroir. Boutiques Next.js performantes, paiements Stripe/Twint.',
-    url: 'https://osom.ch/local/fribourg',
+    url: 'https://www.osom.ch/local/fribourg',
     siteName: 'OSOM - Développeur Web Craftsman',
     locale: 'fr_CH',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://osom.ch/local/fribourg',
+    canonical: 'https://www.osom.ch/local/fribourg',
   },
   other: {
     'geo.region': 'CH-FR',

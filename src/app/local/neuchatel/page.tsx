@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Développeur Web Neuchâtel | Sites B2B Techniques | OSOM',
     description: 'Développeur web Neuchâtel spécialisé B2B technique & industriel. Portfolio projets, lead generation qualifiée.',
-    url: 'https://osom.ch/local/neuchatel',
+    url: 'https://www.osom.ch/local/neuchatel',
     siteName: 'OSOM - Développeur Web Craftsman',
     locale: 'fr_CH',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://osom.ch/local/neuchatel',
+    canonical: 'https://www.osom.ch/local/neuchatel',
   },
   other: {
     'geo.region': 'CH-NE',

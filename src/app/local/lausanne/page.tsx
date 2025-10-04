@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Développeur Web Lausanne | Sites Next.js sur Mesure | OSOM',
     description: 'Développeur web Lausanne spécialisé startups tech & SaaS. Sites Next.js performants, API integrations, dashboards.',
-    url: 'https://osom.ch/local/lausanne',
+    url: 'https://www.osom.ch/local/lausanne',
     siteName: 'OSOM - Développeur Web Craftsman',
     locale: 'fr_CH',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://osom.ch/local/lausanne',
+    canonical: 'https://www.osom.ch/local/lausanne',
   },
   other: {
     'geo.region': 'CH-VD',
