@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://osom.ch'
+  const baseUrl = 'https://www.osom.ch'
   const currentDate = new Date()
 
   // Pages principales (priorité max)
