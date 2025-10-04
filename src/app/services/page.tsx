@@ -4,254 +4,221 @@ import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export const metadata = {
-  title: 'Développeur web Valais | Projets sur mesure & SEO | OSOM',
-  description: 'Développement web sur mesure Valais : sites complexes, API, dashboards, SEO local. Projets 2-6 mois. Next.js expert. Consultation gratuite.',
+  title: 'Packages Développeur Web Valais | Essentiel, Performance, Sur Mesure | OSOM',
+  description: 'Packages développement web sur mesure Valais. Essentiel (5-9K), Performance (10-18K), Sur Mesure (20K+). Paiement mensuel = partenariat actif continu.',
+  keywords: 'packages développeur web, pricing développement valais, site sur mesure, partenariat mensuel, osom valais',
 }
 
 export default async function ServicesPage() {
   const dictionary = await getDictionary(defaultLocale)
 
-  const services = [
+  const packages = [
     {
-      id: "artisan",
-      title: "Artisan",
-      subtitle: "8,000 - 15,000 CHF • 2-3 mois",
-      description: "Sites professionnels sur mesure 10-25 pages",
-      expectedResults: [
+      name: "Essentiel",
+      tagline: "Fondations solides",
+      priceOptions: [
+        { duration: "3 mois", total: "5,000 CHF", monthly: "1,667 CHF/mois" },
+        { duration: "6 mois", total: "9,000 CHF", monthly: "1,500 CHF/mois", popular: true }
+      ],
+      description: "Sites professionnels 15-25 pages avec accompagnement dev actif",
+      features: [
+        "15-25 pages sur mesure",
         "Design responsive premium",
-        "SEO technique de base inclus",
-        "Formation 2h + 3 mois maintenance"
+        "SEO technique de base",
+        "Accompagnement mensuel actif",
+        "Formation 2h incluse",
+        "CMS simple intégré"
       ],
-      icon: "",
-      badge: "PME",
-      highlight: false,
-      pricing: "1,500 CHF/mois support (optionnel)"
+      cta: "Démarrer",
+      href: "/services/essentiel",
+      color: "green",
+      badge: null
     },
     {
-      id: "master",
-      title: "Master",
-      subtitle: "15,000 - 35,000 CHF • 3-6 mois",
-      description: "Projets complexes 25-60 pages + API + dashboards",
-      expectedResults: [
-        "Intégrations API (Calendar, CRM, Analytics)",
-        "SEO hyper-local 7+ pages stratégiques",
-        "Sessions optimisation 6 mois incluses"
+      name: "Performance",
+      tagline: "Partenariat actif",
+      priceOptions: [
+        { duration: "6 mois", total: "10,000 CHF", monthly: "1,667 CHF/mois" },
+        { duration: "12 mois", total: "18,000 CHF", monthly: "1,500 CHF/mois", popular: true }
       ],
-      icon: "",
-      realData: true,
-      badge: "POPULAIRE",
-      highlight: true,
-      pricing: "2,500 CHF/mois (recommandé)",
-      examples: "H-Sechement • Maîtrise Cathédrale"
+      description: "Projets complexes 30-60 pages + API + SEO stratégique continu",
+      features: [
+        "30-60 pages complexes",
+        "API & Integrations (CRM, paiements)",
+        "Dashboard personnalisé",
+        "SEO stratégique mensuel",
+        "Support premium 48h",
+        "Partenariat actif continu"
+      ],
+      cta: "Démarrer",
+      href: "/services/performance",
+      color: "purple",
+      badge: "POPULAIRE"
     },
     {
-      id: "legend",
-      title: "Legend",
-      subtitle: "40,000 - 80,000 CHF • 6-12 mois",
-      description: "Conquête digitale complète haute visibilité",
-      expectedResults: [
-        "Architecture entreprise sur mesure",
-        "SEO compétitif domination locale",
-        "Support 24/7 + consultant dédié"
+      name: "Sur Mesure",
+      tagline: "Conquête digitale",
+      priceOptions: [
+        { duration: "12-24 mois", total: "20,000 - 100,000+ CHF", monthly: "Devis personnalisé" }
       ],
-      icon: "",
-      pricing: "4,000+ CHF/mois inclus",
-      examples: "Nowssen • Finance • Corporate"
-    },
-    {
-      id: "optimisation",
-      title: "Optimisation continue",
-      subtitle: "Sessions mensuelles 6-12 mois",
-      description: "Pour sites existants à transformer en machines de conversion",
-      expectedResults: [
-        "SEO local continu + analytics avancées",
-        "A/B testing + optimisation conversions",
-        "Dashboards performance temps réel"
+      description: "Architecture entreprise + garanties contractuelles + consultant dédié",
+      features: [
+        "Architecture entreprise",
+        "Consultant dédié",
+        "SEO domination locale",
+        "Support 24/7 avec SLA",
+        "Analytics & ROI avancés",
+        "Garanties contractuelles"
       ],
-      icon: "",
-      pricing: "1,500 - 4,000 CHF/mois"
+      cta: "Discuter",
+      href: "/services/sur-mesure",
+      color: "cyan",
+      badge: "ELITE"
     }
   ]
+
+  const colorClasses = {
+    green: {
+      border: "border-green-400/30",
+      hoverBorder: "hover:border-green-400/50",
+      text: "text-green-400",
+      bg: "bg-green-400",
+      bgHover: "hover:bg-green-500",
+      gradient: "from-green-400/10 to-black",
+      ring: ""
+    },
+    purple: {
+      border: "border-purple-400/30",
+      hoverBorder: "hover:border-purple-400/50",
+      text: "text-purple-400",
+      bg: "bg-purple-400",
+      bgHover: "hover:bg-purple-500",
+      gradient: "from-purple-400/10 to-black",
+      ring: "ring-2 ring-purple-400/20"
+    },
+    cyan: {
+      border: "border-cyan-400/30",
+      hoverBorder: "hover:border-cyan-400/50",
+      text: "text-cyan-400",
+      bg: "bg-gradient-to-r from-cyan-400 to-blue-500",
+      bgHover: "hover:shadow-2xl hover:shadow-cyan-400/50",
+      gradient: "from-cyan-400/10 to-black",
+      ring: ""
+    }
+  }
 
   return (
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
 
-      {/* Hero Section - Ultra Compact */}
-      <section className="py-24 lg:py-32 bg-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
-
+      {/* Hero Section */}
+      <section className="py-24 lg:py-32 bg-gradient-to-b from-black via-black to-yellow-400/5 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-4">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
               <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-              <span className="text-yellow-400 text-sm font-medium tracking-wide">SERVICES PREMIUM</span>
+              <span className="text-yellow-400 text-sm font-medium tracking-wide uppercase">Packages Craftsman</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-light mb-6 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Développement web <span className="text-yellow-400 font-bold">sur mesure</span>
+            <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Paiement mensuel = <span className="text-yellow-400 font-bold">Partenariat actif</span>
             </h1>
 
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Projets complexes. API & dashboards. SEO local stratégique.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              Ce n'est pas un site livré puis abandonné. C'est un <strong>partenariat mensuel</strong> où je travaille activement sur votre projet chaque mois.
             </p>
+          </div>
 
-            <div className="inline-flex bg-white/5 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10">
-              <span className="text-yellow-400 font-bold text-2xl">+150%</span>
-              <span className="text-gray-300 ml-2 text-lg">visibilité Google H-Sechement</span>
+          {/* Pricing Cards Netflix Style */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {packages.map((pkg, index) => {
+              const colors = colorClasses[pkg.color as keyof typeof colorClasses]
+              const isPopular = pkg.badge === "POPULAIRE"
+
+              return (
+                <div
+                  key={index}
+                  className={`relative bg-gradient-to-br ${colors.gradient} border ${colors.border} ${colors.hoverBorder} rounded-2xl p-8 transition-all duration-300 ${isPopular ? colors.ring : ''}`}
+                >
+                  {pkg.badge && (
+                    <div className={`absolute -top-4 left-1/2 -translate-x-1/2 ${colors.bg} text-black text-xs font-bold px-4 py-1 rounded-full`}>
+                      {pkg.badge}
+                    </div>
+                  )}
+
+                  <div className="mb-6">
+                    <h3 className={`text-3xl font-bold ${colors.text} mb-2`} style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                      {pkg.name}
+                    </h3>
+                    <p className="text-gray-400 text-sm">{pkg.tagline}</p>
+                  </div>
+
+                  <div className="mb-6 space-y-3">
+                    {pkg.priceOptions.map((option, i) => (
+                      <div key={i} className={`${option.popular ? `bg-black/40 border ${colors.border} rounded-lg p-3` : ''}`}>
+                        <div className="text-sm text-gray-400">{option.duration}</div>
+                        <div className={`text-2xl font-bold ${colors.text}`}>{option.total}</div>
+                        <div className="text-sm text-gray-500">{option.monthly}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">{pkg.description}</p>
+
+                  <ul className="space-y-3 mb-8">
+                    {pkg.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                        <svg className={`w-5 h-5 ${colors.text} flex-shrink-0 mt-0.5`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href={pkg.href}
+                    className={`block w-full text-center ${colors.bg} text-black px-6 py-3 rounded-lg ${colors.bgHover} transition-all duration-300 font-bold`}
+                    style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                  >
+                    {pkg.cta}
+                  </Link>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Note importante */}
+          <div className="mt-12 max-w-3xl mx-auto">
+            <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-6">
+              <p className="text-gray-300 text-sm text-center leading-relaxed">
+                <strong className="text-yellow-400">Philosophie pricing:</strong> Le paiement mensuel n'est PAS un site livré + support optionnel. C'est un <strong>partenariat actif</strong> où le développeur travaille sur votre projet chaque mois (dev + SEO + optimisations + support).
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid - Compact */}
-      <section className="py-20 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFDD00' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {services.map((service, index) => {
-              const serviceColors: { [key: number]: { main: string; bg: string } } = {
-                0: { main: '#EAB308', bg: 'yellow-400' },
-                1: { main: '#A855F7', bg: 'purple-400' },
-                2: { main: '#06B6D4', bg: 'cyan-400' },
-                3: { main: '#EAB308', bg: 'yellow-400' }
-              }
-              const colors = serviceColors[index] || serviceColors[0]
-
-              return (
-              <div
-                key={index}
-                id={service.id}
-                className={`backdrop-blur-sm border rounded-2xl p-6 hover:border-opacity-60 transition-all duration-500 relative overflow-hidden scroll-mt-24 ${
-                  service.highlight
-                    ? `border-${colors.bg}/30 bg-gradient-to-br from-${colors.bg}/10 to-black/60`
-                    : `border-white/10 bg-gradient-to-br from-white/5 to-black/40 hover:border-${colors.bg}/30`
-                }`}
-              >
-                {service.badge && (
-                  <div className="absolute top-4 right-4">
-                    <span className={`bg-${colors.bg} text-black text-xs font-bold px-3 py-1 rounded-full`}>
-                      {service.badge}
-                    </span>
-                  </div>
-                )}
-
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center space-x-3">
-                    <div className={`w-12 h-12 bg-${colors.bg} rounded-full flex items-center justify-center ${service.highlight ? 'animate-pulse' : ''}`}>
-                      <div className="w-6 h-6 bg-black rounded-full"></div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-light text-white" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                        {service.title}
-                      </h3>
-                      <p className={`text-xs text-${colors.bg} font-medium`}>
-                        {service.subtitle}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                  {service.description}
-                </p>
-
-                <ul className="space-y-2 mb-4">
-                  {service.expectedResults.map((result, resultIndex) => (
-                    <li key={resultIndex} className="flex items-start">
-                      <div className={`w-1.5 h-1.5 rounded-full mt-1.5 mr-3 flex-shrink-0 ${
-                        service.realData ? `bg-${colors.bg}` : `bg-${colors.bg}/60`
-                      }`}></div>
-                      <span className={`text-sm ${
-                        service.realData ? `text-${colors.bg} font-medium` : 'text-gray-400'
-                      }`} style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>{result}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {service.pricing && (
-                  <div className="mb-3">
-                    <span className="text-xs text-gray-500">Support : </span>
-                    <span className={`text-sm text-${colors.bg} font-semibold`}>{service.pricing}</span>
-                  </div>
-                )}
-
-                {service.examples && (
-                  <div className="mb-4">
-                    <span className="text-xs text-gray-500">Exemples : </span>
-                    <span className="text-xs text-gray-400">{service.examples}</span>
-                  </div>
-                )}
-
-                <div className={`mt-4 pt-4 border-t border-${colors.bg}/20`}>
-                  <Link
-                    href="/contact"
-                    className={`text-${colors.bg} hover:text-${colors.bg}/80 text-sm font-medium transition-colors inline-flex items-center`}
-                  >
-                    Discuter de ce package
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            )})}
-          </div>
-
-          {/* Link to more info */}
-          <div className="text-center mt-12">
-            <p className="text-gray-400 mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              Tous les packages incluent : Performance &lt; 2s garantie • Support prioritaire • Formation incluse
-            </p>
-            <Link
-              href="/contact"
-              className="text-yellow-400 hover:text-yellow-500 font-medium transition-colors"
-              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-            >
-              Audit gratuit 30 min →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Ultra Simple */}
-      <section className="py-20 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/5 via-transparent to-green-400/5"></div>
-
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="flex items-center justify-center mb-4">
-            <div className="w-2 h-2 rounded-full bg-yellow-400 mr-3"></div>
-            <span className="text-yellow-400 text-sm font-medium tracking-wide">AUDIT GRATUIT</span>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Découvrez votre <span className="text-yellow-400 font-bold">potentiel digital</span>
+      {/* CTA Final */}
+      <section className="py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            Pas sûr de votre <span className="text-yellow-400 font-bold">package?</span>
           </h2>
-
-          <p className="text-xl text-gray-300 mb-10" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            30 minutes • Sans engagement • Analyse personnalisée
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+            Audit gratuit 30 min pour identifier le package adapté à vos besoins et budget.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-yellow-400 text-black px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors font-bold text-lg shadow-lg"
+              className="bg-yellow-400 text-black px-10 py-5 rounded-lg hover:bg-yellow-500 transition-all duration-300 font-bold text-lg shadow-xl"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
-              Réserver mon audit gratuit
+              Audit gratuit 30 min
             </Link>
             <Link
               href="/outils"
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium backdrop-blur-sm"
+              className="border-2 border-white/30 text-white px-10 py-5 rounded-lg hover:bg-white hover:text-black transition-all duration-300 font-medium backdrop-blur-sm"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
               Calculateur ROI
