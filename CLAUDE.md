@@ -1,5 +1,44 @@
 # OSOM - Premium Craftsman Développeur Web Valais
 
+## ⏰ TODO DEMAIN MATIN (5 OCTOBRE 2025)
+
+### 🚀 LANCEMENT OFFICIEL SITE OSOM.CH - FINALISATION
+
+1. **✅ Vérifier que osom.ch fonctionne** (propagation DNS terminée)
+   - Tester https://osom.ch et https://www.osom.ch
+   - Vérifier que les 3 nouveaux packages s'affichent correctement
+   - Tester navigation navbar → packages
+
+2. **📊 Google Search Console - Configuration SEO**
+   - Soumettre sitemap: https://osom.ch/sitemap.xml
+   - Demander réindexation manuelle des pages clés:
+     - /services/essentiel
+     - /services/performance
+     - /services/sur-mesure
+     - /local/valais, /local/lausanne, /local/geneve, /local/fribourg, /local/neuchatel
+     - / (homepage)
+
+3. **🎯 Google Analytics 4 - Tracking CTA**
+   - Configurer événements GA4 pour tracking conversions:
+     - Clic CTA "Démarrer mon projet" (toutes pages packages)
+     - Clic CTA "Audit gratuit"
+     - Clic CTA "Contact" (navbar + footer)
+     - Clic packages dropdown navbar
+   - Vérifier que GA4 collecte bien les données
+
+4. **🔍 Vérification finale**
+   - Tester tous les liens navbar/footer
+   - Vérifier responsive mobile
+   - Speed test PageSpeed Insights
+   - Vérifier sitemap.xml accessible
+
+**RAPPEL MODÈLE PRICING EN LIGNE:**
+- Essentiel: 5-9K sur 3-6 mois (1,500-1,667 CHF/mois)
+- Performance: 10-18K sur 6-12 mois (1,500-1,667 CHF/mois)
+- Sur Mesure: 20K+ sur 12-24 mois (devis personnalisé)
+
+---
+
 ## 🎯 POSITIONNEMENT STRATÉGIQUE ACTUALISÉ (Octobre 2025)
 
 ### Qui est OSOM?
@@ -22,26 +61,36 @@ Exemple concret:
 
 Ce n'est PAS "18,000 CHF projet + 1,800 CHF/mois support optionnel". C'est **18,000 CHF ÷ 6 mois = 3,000 CHF/mois partenariat total**.
 
-## 📦 PACKAGES CRAFTSMAN
+## 📦 PACKAGES CRAFTSMAN (NOUVEAU MODÈLE ANNÉE 1)
 
-### 1. Artisan (8,000 - 15,000 CHF)
-**Durée**: 2-3 mois
-**Pour**: Professionnels, artisans, PME
-**Inclus**: 10-25 pages sur mesure, design responsive premium, SEO de base, formation 2h, 3 mois maintenance
-**Support optionnel**: 1,500 CHF/mois (vraiment optionnel après livraison)
-
-### 2. Master (15,000 - 35,000 CHF)
+### 1. Essentiel (5,000 - 9,000 CHF)
 **Durée**: 3-6 mois
-**Pour**: Institutions, PME technique, projets complexes
-**Inclus**: 25-60 pages architecture custom, API complexes (Calendar, CRM), Dashboard analytics personnalisé, SEO hyper-local stratégique (7+ pages), Sessions optimisation mensuelles 6 mois, Formation équipe 4h, Support prioritaire 24h
-**Pricing mensuel**: 2,500 - 5,833 CHF/mois TOUT COMPRIS pendant durée projet
+**Pricing mensuel**:
+- 3 mois = 5,000 CHF total = **1,667 CHF/mois**
+- 6 mois = 9,000 CHF total = **1,500 CHF/mois** (POPULAIRE)
+
+**Pour**: Professionnels, artisans, PME, cabinets
+**Inclus**: 15-25 pages sur mesure, design responsive premium, SEO de base, accompagnement dev actif chaque mois, formation 2h, CMS simple
+**Message clé**: Le paiement mensuel = votre développeur actif chaque mois (pas un site livré puis abandonné)
+
+### 2. Performance (10,000 - 18,000 CHF)
+**Durée**: 6-12 mois
+**Pricing mensuel**:
+- 6 mois = 10,000 CHF total = **1,667 CHF/mois**
+- 12 mois = 18,000 CHF total = **1,500 CHF/mois** (MEILLEUR PRIX)
+
+**Pour**: PME B2B, e-commerce premium, SaaS/tech startup, institutions culturelles
+**Inclus**: 30-60 pages complexes, API & integrations (CRM, paiements, calendriers), Dashboard personnalisé, SEO stratégique mensuel continu, Support premium 48h, Partenariat actif (dev + SEO + optimisations chaque mois)
+**Message clé**: Partenariat mensuel actif = dev + SEO + support TOUT inclus chaque mois
 **Exemples**: H-Sechement (B2B technique), Maîtrise Cathédrale (culturel)
 
-### 3. Legend (40,000 - 80,000 CHF)
-**Durée**: 6-12 mois
-**Pour**: Finance, Corporate, projets stratégiques haute visibilité
-**Inclus**: Architecture entreprise complète, Dashboards temps réel sur mesure, SEO domination locale, Consulting stratégique mensuel, Support 24/7 prioritaire, Garantie résultats contractuelle, Formation équipe complète
-**Pricing mensuel**: 3,333 - 6,667 CHF/mois partenariat stratégique complet
+### 3. Sur Mesure (20,000 - 100,000+ CHF)
+**Durée**: 12-24 mois
+**Pricing mensuel**: Devis personnalisé selon ambitions (généralement 2,000 - 5,000 CHF/mois)
+
+**Pour**: Finance/Banque privée, Corporate international, E-commerce scaling, Startup série A+
+**Inclus**: Architecture entreprise complète, Consultant dédié, SEO domination locale, Support 24/7 avec SLA, Analytics & ROI avancés, Garanties contractuelles (performance 90+ PageSpeed, top 5 SEO mois 6)
+**Message clé**: Conquête digitale long terme avec garanties contractuelles
 **Exemples**: Nowssen (finance), projets corporate multilingues
 
 ### 4. Optimisation Continue (1,500 - 4,000 CHF/mois)
