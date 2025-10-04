@@ -4,9 +4,9 @@ import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export const metadata = {
-  title: 'Package Performance | Projets complexes API & SEO | 10-18K sur 6-12 mois | OSOM',
-  description: 'Projets web complexes 30-60 pages + API + dashboards. 10,000 CHF (6 mois) ou 18,000 CHF (12 mois). Partenariat mensuel actif = dev + SEO + support premium continu.',
-  keywords: 'site web complexe, api integration, dashboard personnalisé, seo stratégique, partenariat dev, développeur valais',
+  title: 'Marketing Digital Valais | Agence Web SEO & Dev | 10-18K CHF | OSOM',
+  description: 'Agence marketing digital Valais. Projets web 30-60 pages + API + SEO stratégique. 10,000 CHF (6 mois) ou 18,000 CHF (12 mois). Partenariat mensuel actif = dev + SEO + support continu.',
+  keywords: 'marketing digital valais, agence marketing digital valais, agence web valais, marketing digital sion, agence marketing valais, seo valais, développeur web valais, stratégie digitale valais',
 }
 
 export default async function PerformancePage() {

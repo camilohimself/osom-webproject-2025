@@ -4,9 +4,9 @@ import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export const metadata = {
-  title: 'Package Essentiel | Site pro 15-25 pages | 5-9K sur 3-6 mois | OSOM',
-  description: 'Site web professionnel 15-25 pages. 5,000 CHF (3 mois) ou 9,000 CHF (6 mois). Paiement mensuel = accompagnement dev continu. Design premium, SEO base, formation incluse.',
-  keywords: 'site web 5000 chf, développeur valais, site pme, paiement mensuel, accompagnement dev, site professionnel',
+  title: 'Création Site Internet Valais | Site Vitrine Pro 15-25 Pages | 5-9K CHF | OSOM',
+  description: 'Création site web Valais professionnel. Site vitrine 15-25 pages, 5,000 CHF (3 mois) ou 9,000 CHF (6 mois). Développeur web Valais spécialisé PME. Paiement mensuel = accompagnement continu.',
+  keywords: 'création site internet valais, création site web valais, site vitrine valais, créer site web valais, développeur web valais, création de site internet valais, site professionnel valais, création site pme valais',
 }
 
 export default async function EssentielPage() {
