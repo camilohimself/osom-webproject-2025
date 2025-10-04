@@ -101,10 +101,18 @@ export default function CityPageTemplate({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": `osom Agence Marketing Digital ${cityData.name}`,
+            "@id": `https://www.osom.ch/local/${cityData.name.toLowerCase()}#organization`,
+            "name": `OSOM - Développeur Web ${cityData.name}`,
+            "alternateName": `OSOM Agence Web & Marketing Digital ${cityData.name}`,
             "description": metaDescription,
-            "url": `https://osom.ch/local/${cityData.name.toLowerCase()}`,
+            "url": `https://www.osom.ch/local/${cityData.name.toLowerCase()}`,
+            "email": "hello@osom.ch",
             "telephone": contactInfo.phone,
+            "image": "https://www.osom.ch/osom-og-image.jpg",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.osom.ch/osom-logo.svg"
+            },
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "CH",
@@ -127,12 +135,24 @@ export default function CityPageTemplate({
               },
               "geoRadius": "50"
             },
-            "priceRange": "1500-15000 CHF",
+            "priceRange": "5000-100000 CHF",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": localMetrics.localClients.toString()
-            }
+              "ratingValue": "5.0",
+              "reviewCount": localMetrics.localClients.toString(),
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "sameAs": [
+              "https://linkedin.com/company/osom-ch",
+              "https://instagram.com/osom.ch"
+            ]
           })
         }}
       />

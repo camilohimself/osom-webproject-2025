@@ -20,7 +20,7 @@ const GaugeChart = dynamic(() => import('@/components/ui/GaugeChart'), {
 // Mobile lightweight versions
 import { MobileHorizontalBars, MobileCTRChart, MobileDataLine, MobileGauge } from '@/components/ui/MobileChartPlaceholder'
 import { cookies } from 'next/headers'
-import { getHomepageStructuredData } from '@/lib/structured-data'
+import { getHomepageStructuredData, getLocalBusinessStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOMHybrid from '@/components/homepage/HeroSwissOSOMHybrid'
 const ExpertiseLocale = dynamic(() => import('@/components/homepage/ExpertiseLocale'), {
   loading: () => <div className="h-96 bg-gradient-to-br from-emerald-600/5 to-purple-600/5 animate-pulse rounded-2xl" />
@@ -114,12 +114,19 @@ export default async function Home() {
 
   const dictionary = await getDictionary(currentLocale)
   const jsonLd = getHomepageStructuredData()
+  const jsonLdLocalBusiness = getLocalBusinessStructuredData()
 
   return (
     <>
+      {/* Organization Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* LocalBusiness Schema pour SEO local */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdLocalBusiness) }}
       />
       <div className="min-h-screen bg-black relative">
       {/* Interactive Background Layer */}
