@@ -39,6 +39,219 @@
 
 ---
 
+## 📈 ROADMAP SEO 3 MOIS (OCTOBRE → JANVIER 2026)
+
+### 🎯 OBJECTIF: TOP 5 POSITIONS JANVIER 2026
+
+**État actuel (4 Oct 2025):**
+- Visibilité SEMrush: < 1% (site neuf, pas indexé)
+- Pages créées: 35+ (packages, local SEO, blog)
+- Sitemap: ✅ Prêt (https://osom.ch/sitemap.xml)
+
+**Projection réaliste:**
+- **Fin Octobre 2025**: 2-5% SoV (indexation initiale)
+- **Fin Novembre 2025**: 8-15% SoV (crawl complet, premières positions)
+- **Fin Décembre 2025**: 15-25% SoV (consolidation positions)
+- **Fin Janvier 2026**: **25-40% SoV** (TOP 5 sur mots-clés cibles)
+
+---
+
+### 📅 MOIS 1: OCTOBRE 2025 (Fondations)
+
+#### Semaine 1 (5-11 Oct): Indexation & Bases
+- [X] Soumettre sitemap GSC
+- [X] Réindexation forcée 10 pages clés
+- [ ] Vérifier indexation: site:osom.ch dans Google
+- [ ] Google Business Profile: Créer/optimiser (Bramois, Valais)
+- [ ] Schema.org LocalBusiness ajouté au site
+- [ ] Audit technique PageSpeed (maintenir 90+)
+
+**Livrables:**
+- Sitemap soumis + indexation confirmée
+- GBP actif avec photos, horaires, services
+- Score PageSpeed maintenu 90+
+
+#### Semaine 2 (12-18 Oct): Contenu Stratégique
+- [ ] Article 1: "Développeur web Valais : Guide complet 2025" (2000 mots)
+  - Mots-clés: développeur web valais, site sur mesure valais
+  - CTA: Package Essentiel
+- [ ] Article 2: "Prix site web Valais : Transparence totale" (1500 mots)
+  - Mots-clés: prix site web valais, tarif développeur valais
+  - CTA: Calculateur ROI
+- [ ] Optimiser balises title/meta descriptions (vérifier 35+ pages)
+- [ ] Internal linking: relier articles aux pages packages
+
+**Livrables:**
+- 2 articles publiés + optimisés SEO
+- Internal linking structure solide
+
+#### Semaine 3 (19-25 Oct): Backlinks Locaux Valais
+- [ ] Backlink 1: Annuaire local-ch.ch (Valais)
+- [ ] Backlink 2: Valais/Wallis Tourisme (partenariat?)
+- [ ] Backlink 3: Chambre de commerce Valais
+- [ ] Mentions réseaux sociaux LinkedIn/Instagram (3 posts)
+- [ ] Créer page Google Business Post hebdomadaire
+
+**Livrables:**
+- 3 backlinks locaux acquis
+- 3 posts réseaux sociaux
+- 1 GBP post publié
+
+#### Semaine 4 (26 Oct - 1 Nov): Analyse & Ajustements
+- [ ] Audit GSC: pages indexées, erreurs, positions
+- [ ] Audit GA4: trafic, conversions CTA, bounce rate
+- [ ] Ajuster strategy selon premières données
+- [ ] Article 3: "SEO local Valais : 10 erreurs PME" (1800 mots)
+
+**Livrables:**
+- Rapport GSC/GA4 Mois 1
+- 1 article supplémentaire
+- Ajustements stratégie basés données réelles
+
+**KPI FIN OCTOBRE:**
+- Pages indexées: 30+ / 35
+- Positions moyennes: Top 30-50 (début tracking)
+- Trafic organique: 50-100 visites/mois
+- Visibilité SoV: **2-5%**
+
+---
+
+### 📅 MOIS 2: NOVEMBRE 2025 (Accélération)
+
+#### Semaine 5-6 (2-15 Nov): Contenu Agressif
+- [ ] Article 4: "Portfolio développeur Valais : 5 projets analysés" (2500 mots)
+  - Showcaser H-Sechement, Maîtrise Cathédrale
+- [ ] Article 5: "API integrations Valais : CRM, Paiements, Calendriers" (2000 mots)
+- [ ] Créer landing page: "Développeur Next.js Valais" (SEO ultra-ciblé)
+- [ ] Optimiser images: Alt text, compression, lazy loading
+
+**Livrables:**
+- 2 articles + 1 landing page SEO
+- Images site optimisées (< 100kb chacune)
+
+#### Semaine 7-8 (16-30 Nov): Backlinks + Local SEO
+- [ ] Backlink 4-6: Annuaires spécialisés (web, tech, Valais)
+- [ ] Guest post: Blog partenaire Valais (si possible)
+- [ ] Citations locales: Yelp, Pages Jaunes, local.ch
+- [ ] GBP: Demander avis clients (H-Sechement, Maîtrise)
+- [ ] Article 6: "E-commerce Valais : Stripe vs Twint" (1500 mots)
+
+**Livrables:**
+- 3 backlinks supplémentaires (total: 6)
+- 2-3 avis Google Business
+- 1 article e-commerce
+
+**KPI FIN NOVEMBRE:**
+- Pages indexées: 35+ / 35 (100%)
+- Positions moyennes: Top 15-30
+- Trafic organique: 150-300 visites/mois
+- Backlinks: 6-8 domaines référents
+- Visibilité SoV: **8-15%**
+
+---
+
+### 📅 MOIS 3: DÉCEMBRE 2025 (Domination)
+
+#### Semaine 9-10 (1-14 Déc): Consolidation Positions
+- [ ] Audit concurrence: Analyser TOP 5 actuels sur mots-clés cibles
+- [ ] Améliorer articles existants (ajouter 500 mots aux top performers)
+- [ ] Article 7: "Refonte site web Valais : Migration Next.js" (2000 mots)
+- [ ] Créer landing page: "SEO local Valais : Expert craftsman"
+- [ ] Internal linking: 5+ liens vers chaque page package
+
+**Livrables:**
+- 1 article + 1 landing page SEO
+- Articles existants enrichis
+- Internal linking renforcé
+
+#### Semaine 11-12 (15-28 Déc): Scaling & Autorité
+- [ ] Backlink 7-9: Qualité > Quantité (DR 30+ si possible)
+- [ ] Article 8: "ROI site web Valais : Calculer rentabilité projet"
+- [ ] Créer page FAQ SEO (50+ questions)
+- [ ] GBP: Publier 4 posts décembre (promo fin année?)
+- [ ] Préparer stratégie contenu Janvier 2026
+
+**Livrables:**
+- 3 backlinks autorité (total: 9-12)
+- 1 article ROI + page FAQ
+- 4 GBP posts
+- Roadmap SEO Q1 2026
+
+**KPI FIN DÉCEMBRE:**
+- Positions moyennes: Top 10-20
+- Trafic organique: 300-500 visites/mois
+- Backlinks: 10-15 domaines référents
+- Visibilité SoV: **15-25%**
+
+---
+
+### 📅 JANVIER 2026 (Objectif TOP 5)
+
+#### Semaine 13-14 (1-14 Jan): Push Final
+- [ ] Audit complet: Identifier gaps vs concurrence TOP 5
+- [ ] Optimiser pages underperforming (améliorer contenu, CTA)
+- [ ] Article 9: "Tendances web Valais 2026" (2500 mots)
+- [ ] Backlink 10-12: Partenariats stratégiques
+
+**Livrables:**
+- 1 article tendances 2026
+- 3 backlinks stratégiques
+- Optimisations techniques basées audit
+
+#### Semaine 15-16 (15-31 Jan): Consolidation TOP 5
+- [ ] Surveiller positions quotidiennes (GSC + SEMrush)
+- [ ] Ajuster strategy en temps réel (si pas TOP 5)
+- [ ] Article 10: "Case study : Site Valais → +300% visibilité" (2000 mots)
+- [ ] Préparer célébration TOP 5 (LinkedIn, réseaux)
+
+**Livrables:**
+- 1 case study
+- Surveillance positions active
+- Célébration TOP 5 (si atteint)
+
+**KPI FIN JANVIER 2026 (OBJECTIF):**
+- **Positions TOP 5:**
+  - "développeur web valais" → **TOP 3-5** ✅
+  - "site sur mesure valais" → **TOP 3-5** ✅
+  - "agence web valais" → **TOP 10-15** (compétitif)
+- Trafic organique: **500-1000 visites/mois**
+- Backlinks: **15-20 domaines référents**
+- Visibilité SoV: **25-40%**
+
+---
+
+### 🎯 MOTS-CLÉS CIBLES PRIORITAIRES
+
+**Tier 1 (TOP 5 Janvier):**
+1. développeur web valais (vol: 90/mois, diff: Moyenne)
+2. site sur mesure valais (vol: 70/mois, diff: Facile)
+3. création site web valais (vol: 110/mois, diff: Moyenne)
+
+**Tier 2 (TOP 10 Janvier):**
+4. agence web valais (vol: 170/mois, diff: Difficile)
+5. seo valais (vol: 50/mois, diff: Facile)
+6. développeur next.js suisse (vol: 40/mois, diff: Facile)
+
+**Tier 3 (Long-tail):**
+7. prix site web valais
+8. développeur api valais
+9. refonte site web valais
+10. e-commerce valais
+
+---
+
+### ⚠️ FACTEURS CRITIQUES SUCCÈS
+
+1. **Régularité absolue**: 1 article/semaine minimum (pas de pause)
+2. **Quality > Quantity**: Articles 1500+ mots, recherche approfondie
+3. **Backlinks qualité**: Privilégier DR 20+ locaux Valais
+4. **GBP actif**: 1 post/semaine + réponses avis < 24h
+5. **Performance technique**: PageSpeed 90+ maintenu (critique)
+6. **Internal linking**: Chaque nouvel article → 5+ liens internes
+7. **Monitoring quotidien**: GSC positions + trafic GA4
+
+---
+
 ## 🎯 POSITIONNEMENT STRATÉGIQUE ACTUALISÉ (Octobre 2025)
 
 ### Qui est OSOM?
