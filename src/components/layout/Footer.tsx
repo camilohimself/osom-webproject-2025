@@ -28,7 +28,7 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
   const legalPages = [
     { name: 'Mentions légales', href: '/legal/mentions-legales' },
     { name: 'Politique de confidentialité', href: '/legal/politique-confidentialite' },
-    { name: 'Conditions générales', href: '/legal/conditions-generales' },
+    { name: "Conditions d'utilisation", href: '/legal/conditions-utilisation' },
     { name: 'Politique des cookies', href: '/legal/cookies' },
   ]
 

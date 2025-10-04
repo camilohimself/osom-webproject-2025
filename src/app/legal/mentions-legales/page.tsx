@@ -22,11 +22,12 @@ export default function MentionsLegalesPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Informations sur l'entreprise</h2>
             <div className="space-y-2 text-gray-700">
-              <p><strong>Raison sociale :</strong> OSOM</p>
+              <p><strong>Raison sociale :</strong> OSOM - Agence Marketing</p>
               <p><strong>Forme juridique :</strong> Entreprise individuelle</p>
-              <p><strong>Adresse :</strong> Valais, Suisse</p>
-              <p><strong>Email :</strong> contact@osom.ch</p>
-              <p><strong>Site web :</strong> https://osom.ch</p>
+              <p><strong>Adresse :</strong> Rue de Clodevis 13, 1e étage, 1967 Bramois, Valais, Suisse</p>
+              <p><strong>Téléphone :</strong> +41 79 128 95 49</p>
+              <p><strong>Email :</strong> hello@osom.ch</p>
+              <p><strong>Site web :</strong> https://www.osom.ch</p>
             </div>
           </section>
 
