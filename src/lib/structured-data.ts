@@ -1,13 +1,13 @@
 // Structured Data optimisé pour SEO - Externalisé pour performance
 
-// LocalBusiness Schema pour SEO local (Bramois, Valais)
+// LocalBusiness Schema pour SEO local (Bramois, Valais) - Données GMB exactes
 export const getLocalBusinessStructuredData = () => ({
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': 'https://www.osom.ch/#organization',
-  name: 'OSOM - Agence Web & Marketing IA Valais',
-  alternateName: 'OSOM Digital Agency',
-  description: 'Développeur web Valais spécialisé projets sur mesure. Sites Next.js 60+ pages, API, dashboards, SEO local. Marketing Humain × IA.',
+  name: 'OSOM - Agence Marketing',
+  alternateName: ['OSOM Digital Agency', 'OSOM Agence Web Valais'],
+  description: 'Chez OSOM, nous rendons votre présence en ligne aussi brillante que votre entreprise. Basés en Valais et actifs dans toute la Suisse Romande, nous créons des sites internet sur mesure, optimisons votre référencement SEO pour vous propulser en tête des recherches, et gérons vos campagnes SEA avec expertise.',
   url: 'https://www.osom.ch',
   logo: {
     '@type': 'ImageObject',
@@ -17,8 +17,10 @@ export const getLocalBusinessStructuredData = () => ({
   },
   image: 'https://www.osom.ch/osom-og-image.jpg',
   email: 'hello@osom.ch',
+  telephone: '+41791289549',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Rue de Clodevis 13, 1e étage',
     addressLocality: 'Bramois',
     addressRegion: 'Valais',
     postalCode: '1967',
@@ -31,22 +33,25 @@ export const getLocalBusinessStructuredData = () => ({
   },
   areaServed: [
     {
-      '@type': 'City',
-      name: 'Sion',
-      '@id': 'https://www.wikidata.org/wiki/Q68135'
-    },
-    {
       '@type': 'State',
       name: 'Valais',
       '@id': 'https://www.wikidata.org/wiki/Q834'
     },
     {
-      '@type': 'City',
-      name: 'Lausanne'
+      '@type': 'State',
+      name: 'Vaud'
     },
     {
       '@type': 'City',
-      name: 'Genève'
+      name: 'Geneva'
+    },
+    {
+      '@type': 'City',
+      name: 'Basel'
+    },
+    {
+      '@type': 'City',
+      name: 'Zürich'
     },
     {
       '@type': 'City',
@@ -54,37 +59,55 @@ export const getLocalBusinessStructuredData = () => ({
     },
     {
       '@type': 'City',
-      name: 'Neuchâtel'
+      name: 'Lausanne'
     }
   ],
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      email: 'hello@osom.ch',
+      telephone: '+41791289549',
       contactType: 'Customer Service',
       areaServed: 'CH',
-      availableLanguage: ['French', 'German', 'English']
+      availableLanguage: ['French', 'German', 'English'],
+      contactOption: 'TollFree'
     },
     {
       '@type': 'ContactPoint',
-      email: 'hello@osom.ch',
+      telephone: '+41791289549',
       contactType: 'Sales',
       areaServed: 'CH-VS',
       availableLanguage: ['French']
     }
   ],
   sameAs: [
-    'https://linkedin.com/company/osom-ch',
-    'https://instagram.com/osom.ch',
-    'https://github.com/camilohimself'
+    'https://www.linkedin.com/company/104685960/',
+    'https://www.facebook.com/profile.php?id=61562483814741',
+    'https://www.youtube.com/@OsomCreativeMarketing',
+    'https://www.tiktok.com/@osom.ch',
+    'https://www.instagram.com/osom.ch/',
+    'https://x.com/osom_ch'
   ],
   priceRange: '5000-100000 CHF',
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00'
-  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+      opens: '08:30',
+      closes: '18:30'
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Friday',
+      opens: '08:30',
+      closes: '20:00'
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: 'Saturday',
+      opens: '09:00',
+      closes: '14:00'
+    }
+  ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Packages Développement Web Valais',
