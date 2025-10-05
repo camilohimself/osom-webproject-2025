@@ -143,8 +143,8 @@ export default function PremiumB2BPage() {
               <div className="text-center mb-6 pt-4">
                 <h3 className="text-xl font-bold mb-2">B2B Technique Premium</h3>
                 <p className="text-gray-600 mb-4">Entreprises techniques, BTP, industrie</p>
-                <div className="text-3xl font-bold text-purple-600">3,000 CHF</div>
-                <div className="text-gray-500">/mois + setup 5,000 CHF</div>
+                <div className="text-3xl font-bold text-purple-600">3,000 CHF/mois</div>
+                <div className="text-xs text-gray-500">Setup initial: 5,000 CHF</div>
               </div>
               
               <ul className="space-y-3 mb-8">
@@ -182,8 +182,8 @@ export default function PremiumB2BPage() {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">E-commerce Premium</h3>
                 <p className="text-gray-600 mb-4">Boutiques premium, luxe, artisanat</p>
-                <div className="text-3xl font-bold text-purple-600">2,500 CHF</div>
-                <div className="text-gray-500">/mois + setup 3,500 CHF</div>
+                <div className="text-3xl font-bold text-purple-600">2,500 CHF/mois</div>
+                <div className="text-xs text-gray-500">Setup initial: 3,500 CHF</div>
               </div>
 
               <ul className="space-y-3 mb-8">
@@ -221,8 +221,8 @@ export default function PremiumB2BPage() {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">Professionnel Premium</h3>
                 <p className="text-gray-600 mb-4">Médical, juridique, consulting</p>
-                <div className="text-3xl font-bold text-yellow-400">2,000 CHF</div>
-                <div className="text-gray-500">/mois + setup 2,500 CHF</div>
+                <div className="text-3xl font-bold text-yellow-400">2,000 CHF/mois</div>
+                <div className="text-xs text-gray-500">Setup initial: 2,500 CHF</div>
               </div>
 
               <ul className="space-y-3 mb-8">

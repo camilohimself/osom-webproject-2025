@@ -215,10 +215,10 @@ export default async function SurMesurePage() {
             <div className="inline-flex bg-gradient-to-br from-purple-400/10 to-purple-600/10 backdrop-blur-sm rounded-2xl px-10 py-6 border border-purple-400/30">
               <div className="text-center">
                 <div className="text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-3">
-                  20,000 - 100,000+ CHF
+                  Dès 2,000 CHF/mois
                 </div>
-                <div className="text-gray-300 text-base font-medium mb-1">sur 12-24 mois de partenariat stratégique</div>
-                <div className="text-purple-400/80 text-sm">Devis personnalisé selon ambitions</div>
+                <div className="text-gray-300 text-base font-medium mb-1">Partenariat stratégique 12-24 mois</div>
+                <div className="text-xs text-gray-500">Investissement total: 20,000 - 100,000+ CHF selon ambitions</div>
               </div>
             </div>
           </div>
@@ -228,16 +228,16 @@ export default async function SurMesurePage() {
               <div className="text-3xl font-bold text-purple-400 mb-6">PME Croissance rapide</div>
               <div className="space-y-5 text-gray-300">
                 <div className="flex justify-between items-center pb-4 border-b border-purple-400/20">
-                  <span className="text-gray-400">Investment total:</span>
-                  <span className="text-2xl font-bold text-purple-400">24,000 CHF</span>
-                </div>
-                <div className="flex justify-between items-center pb-4 border-b border-purple-400/20">
                   <span className="text-gray-400">Durée partenariat:</span>
                   <span className="font-semibold">12 mois</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-purple-400/20">
                   <span className="font-bold text-white">Coût mensuel:</span>
                   <span className="text-3xl font-bold text-purple-400">2,000 CHF/mois</span>
+                </div>
+                <div className="flex justify-between items-center pb-4 border-b border-purple-400/20">
+                  <span className="text-gray-400 text-sm">Investment total:</span>
+                  <span className="text-sm text-gray-500">24,000 CHF</span>
                 </div>
                 <div className="bg-black/60 rounded-xl p-6 mt-6 space-y-3">
                   <div className="text-sm text-purple-400 font-semibold mb-2">Inclus chaque mois:</div>
@@ -256,16 +256,16 @@ export default async function SurMesurePage() {
               <div className="text-3xl font-bold text-purple-400 mb-6">Finance / Corporate Elite</div>
               <div className="space-y-5 text-gray-300">
                 <div className="flex justify-between items-center pb-4 border-b border-purple-400/20">
-                  <span className="text-gray-400">Investment total:</span>
-                  <span className="text-2xl font-bold text-purple-400">60,000 - 100,000+ CHF</span>
-                </div>
-                <div className="flex justify-between items-center pb-4 border-b border-purple-400/20">
                   <span className="text-gray-400">Durée partenariat:</span>
                   <span className="font-semibold">18-24 mois</span>
                 </div>
                 <div className="flex justify-between items-center pb-4 border-b border-purple-400/20">
                   <span className="font-bold text-white">Coût mensuel:</span>
                   <span className="text-3xl font-bold text-purple-400">2,500 - 5,000 CHF/mois</span>
+                </div>
+                <div className="flex justify-between items-center pb-4 border-b border-purple-400/20">
+                  <span className="text-gray-400 text-sm">Investment total:</span>
+                  <span className="text-sm text-gray-500">60,000 - 100,000+ CHF</span>
                 </div>
                 <div className="bg-black/60 rounded-xl p-6 mt-6 space-y-3">
                   <div className="text-sm text-purple-400 font-semibold mb-2">Inclus chaque mois:</div>

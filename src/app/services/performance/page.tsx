@@ -211,8 +211,8 @@ export default async function PerformancePage() {
             {/* Option 6 mois */}
             <div className="bg-purple-400/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
               <div className="text-sm text-gray-400 mb-2">Partenariat 6 mois</div>
-              <div className="text-5xl font-bold text-purple-400 mb-2">10,000 CHF</div>
-              <div className="text-gray-400 text-base mb-6">= 1,667 CHF/mois</div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">1,667 CHF/mois</div>
+              <div className="text-xs text-gray-500 mb-6">Total: 10,000 CHF</div>
               <p className="text-sm text-gray-300 mb-4">Dev + SEO + Support inclus</p>
 
               <div className="mt-6 pt-6 border-t border-purple-400/20">
@@ -231,8 +231,8 @@ export default async function PerformancePage() {
                 Partenariat 12 mois
                 <span className="text-xs bg-purple-400 text-black px-2 py-0.5 rounded-full font-bold">MEILLEUR PRIX</span>
               </div>
-              <div className="text-5xl font-bold text-purple-400 mb-2">18,000 CHF</div>
-              <div className="text-gray-400 text-base mb-6">= 1,500 CHF/mois</div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">1,500 CHF/mois</div>
+              <div className="text-xs text-gray-500 mb-6">Total: 18,000 CHF</div>
               <p className="text-sm text-gray-300 mb-4">Dev + SEO + Support + Optimisations continues</p>
 
               <div className="mt-6 pt-6 border-t border-purple-400/20">

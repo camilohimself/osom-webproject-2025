@@ -148,8 +148,8 @@ export default async function ServicesPage() {
                     {pkg.priceOptions.map((option, i) => (
                       <div key={i} className={`${option.popular ? `bg-black/40 border ${colors.border} rounded-lg p-3` : ''}`}>
                         <div className="text-sm text-gray-400">{option.duration}</div>
-                        <div className={`text-2xl font-bold ${colors.text}`}>{option.total}</div>
-                        <div className="text-sm text-gray-500">{option.monthly}</div>
+                        <div className={`text-3xl font-bold ${colors.text}`}>{option.monthly}</div>
+                        <div className="text-xs text-gray-500">Total: {option.total}</div>
                       </div>
                     ))}
                   </div>

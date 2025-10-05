@@ -221,8 +221,8 @@ export default async function EssentielPage() {
             {/* Option 3 mois */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-yellow-400/20">
               <div className="text-sm text-gray-400 mb-2">Accompagnement 3 mois</div>
-              <div className="text-5xl font-bold text-yellow-400 mb-2">5,000 CHF</div>
-              <div className="text-gray-400 text-base mb-6">= 1,667 CHF/mois</div>
+              <div className="text-5xl font-bold text-yellow-400 mb-2">1,667 CHF/mois</div>
+              <div className="text-xs text-gray-500 mb-6">Total: 5,000 CHF</div>
               <p className="text-sm text-gray-300">Développement intensif, livraison rapide, accompagnement actif</p>
             </div>
 
@@ -232,8 +232,8 @@ export default async function EssentielPage() {
                 Accompagnement 6 mois
                 <span className="text-xs bg-yellow-400 text-black px-2 py-0.5 rounded-full font-bold">POPULAIRE</span>
               </div>
-              <div className="text-5xl font-bold text-yellow-400 mb-2">9,000 CHF</div>
-              <div className="text-gray-400 text-base mb-6">= 1,500 CHF/mois</div>
+              <div className="text-5xl font-bold text-yellow-400 mb-2">1,500 CHF/mois</div>
+              <div className="text-xs text-gray-500 mb-6">Total: 9,000 CHF</div>
               <p className="text-sm text-gray-300">Développement étalé, plus de temps pour ajustements, meilleur tarif mensuel</p>
             </div>
           </div>
