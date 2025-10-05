@@ -31,7 +31,7 @@ export default async function ServicesPage() {
       ],
       cta: "Démarrer",
       href: "/services/essentiel",
-      color: "green",
+      color: "yellow",
       badge: null
     },
     {
@@ -72,19 +72,19 @@ export default async function ServicesPage() {
       ],
       cta: "Discuter",
       href: "/services/sur-mesure",
-      color: "cyan",
+      color: "purple",
       badge: "ELITE"
     }
   ]
 
   const colorClasses = {
-    green: {
-      border: "border-green-400/30",
-      hoverBorder: "hover:border-green-400/50",
-      text: "text-green-400",
-      bg: "bg-green-400",
-      bgHover: "hover:bg-green-500",
-      gradient: "from-green-400/10 to-black",
+    yellow: {
+      border: "border-yellow-400/30",
+      hoverBorder: "hover:border-yellow-400/50",
+      text: "text-yellow-400",
+      bg: "bg-yellow-400",
+      bgHover: "hover:bg-yellow-500",
+      gradient: "from-yellow-400/10 to-black",
       ring: ""
     },
     purple: {
@@ -95,15 +95,6 @@ export default async function ServicesPage() {
       bgHover: "hover:bg-purple-500",
       gradient: "from-purple-400/10 to-black",
       ring: "ring-2 ring-purple-400/20"
-    },
-    cyan: {
-      border: "border-cyan-400/30",
-      hoverBorder: "hover:border-cyan-400/50",
-      text: "text-cyan-400",
-      bg: "bg-gradient-to-r from-cyan-400 to-blue-500",
-      bgHover: "hover:shadow-2xl hover:shadow-cyan-400/50",
-      gradient: "from-cyan-400/10 to-black",
-      ring: ""
     }
   }
 

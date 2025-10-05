@@ -11,7 +11,7 @@ const expertises = [
     description: 'Sites web optimisés pour le marché alpin',
     projects: '47 clients actifs',
     specialties: ['E-commerce Vins', 'Hôtellerie', 'PME Locales'],
-    gradient: 'from-emerald-600 to-emerald-800',
+    gradient: 'from-yellow-400 to-yellow-600',
     icon: '🏔️'
   },
   {
@@ -21,7 +21,7 @@ const expertises = [
     description: 'Écosystème EPFL et scale-up Léman',
     projects: '18 projets tech',
     specialties: ['SaaS B2B', 'Fintech', 'Biotech'],
-    gradient: 'from-blue-600 to-blue-800',
+    gradient: 'from-purple-600 to-purple-800',
     icon: '🚀'
   },
   {
@@ -59,7 +59,7 @@ export default function ExpertiseLocale() {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-2 h-2 rounded-full bg-red-500 mr-2"></div>
+            <div className="w-2 h-2 rounded-full bg-osom-dark-gray mr-2"></div>
             <div className="w-2 h-2 rounded-full bg-white mr-3"></div>
             <span className="text-yellow-400 text-sm font-medium tracking-wide">
               SUISSE ROMANDE

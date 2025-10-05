@@ -158,7 +158,6 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                                         )}
                                       </div>
                                       <div className="text-xs text-gray-400 mt-0.5">{pkg.description}</div>
-                                      <div className="text-xs text-yellow-400/70 mt-1">{pkg.price}</div>
                                     </div>
                                   </div>
                                 </Link>
@@ -269,7 +268,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
                               }}
                             >
                               <div className="font-medium">{pkg.name}</div>
-                              <div className="text-xs text-gray-500">{pkg.price}</div>
+                              <div className="text-xs text-gray-500">{pkg.description}</div>
                             </Link>
                           ))}
                           <div className="px-3 py-1 mt-2 text-xs text-gray-500 font-semibold uppercase">Ressources</div>

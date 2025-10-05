@@ -23,7 +23,7 @@ import { cookies } from 'next/headers'
 import { getHomepageStructuredData, getLocalBusinessStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOMHybrid from '@/components/homepage/HeroSwissOSOMHybrid'
 const ExpertiseLocale = dynamic(() => import('@/components/homepage/ExpertiseLocale'), {
-  loading: () => <div className="h-96 bg-gradient-to-br from-emerald-600/5 to-purple-600/5 animate-pulse rounded-2xl" />
+  loading: () => <div className="h-96 bg-gradient-to-br from-yellow-400/5 to-purple-600/5 animate-pulse rounded-2xl" />
 })
 
 // Lazy loading Piliers Swiss optimisé
@@ -31,10 +31,10 @@ const PilierSwiss1 = dynamic(() => import('@/components/homepage/PilierSwiss1'),
   loading: () => <div className="h-96 bg-purple-400/5 rounded-2xl animate-pulse" />
 })
 const PilierSwiss2 = dynamic(() => import('@/components/homepage/PilierSwiss2'), {
-  loading: () => <div className="h-96 bg-cyan-400/5 rounded-2xl animate-pulse" />
+  loading: () => <div className="h-96 bg-purple-400/5 rounded-2xl animate-pulse" />
 })
 const PilierSwiss3 = dynamic(() => import('@/components/homepage/PilierSwiss3'), {
-  loading: () => <div className="h-96 bg-green-400/5 rounded-2xl animate-pulse" />
+  loading: () => <div className="h-96 bg-yellow-400/5 rounded-2xl animate-pulse" />
 })
 // Components critiques - gardés en import direct
 import AnimatedElement from '@/components/ui/AnimatedElement'
@@ -226,20 +226,20 @@ export default async function Home() {
                   <div className="text-yellow-400 text-sm font-semibold">✓ Devis transparent</div>
                 </div>
 
-                <div className="bg-cyan-400/5 border border-cyan-400/20 rounded-3xl p-8 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className="w-20 h-20 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">2</div>
+                <div className="bg-purple-400/5 border border-purple-400/20 rounded-3xl p-8 hover:border-purple-400/40 transition-all duration-300">
+                  <div className="w-20 h-20 bg-purple-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">2</div>
                   <div className="text-2xl font-bold text-white mb-4">Développement</div>
                   <div className="text-gray-300 mb-4">Architecture Next.js sur mesure</div>
-                  <div className="text-cyan-400 text-sm font-semibold">✓ 2-6 mois selon complexité</div>
-                  <div className="text-cyan-400 text-sm font-semibold">✓ API + Dashboards custom</div>
+                  <div className="text-purple-400 text-sm font-semibold">✓ 2-6 mois selon complexité</div>
+                  <div className="text-purple-400 text-sm font-semibold">✓ API + Dashboards custom</div>
                 </div>
 
-                <div className="bg-green-400/5 border border-green-400/20 rounded-3xl p-8 hover:border-green-400/40 transition-all duration-300">
-                  <div className="w-20 h-20 bg-green-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">3</div>
+                <div className="bg-yellow-400/5 border border-yellow-400/20 rounded-3xl p-8 hover:border-yellow-400/40 transition-all duration-300">
+                  <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">3</div>
                   <div className="text-2xl font-bold text-white mb-4">Optimisation</div>
                   <div className="text-gray-300 mb-4">Sessions mensuelles 6-12 mois</div>
-                  <div className="text-green-400 text-sm font-semibold">✓ SEO local continu</div>
-                  <div className="text-green-400 text-sm font-semibold">✓ Analytics + A/B tests</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ SEO local continu</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Analytics + A/B tests</div>
                 </div>
               </div>
 
@@ -268,27 +268,27 @@ export default async function Home() {
                 <div className="text-gray-300 text-sm">Contenus optimisés IA vs 2-3% industrie</div>
               </div>
 
-              <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-2xl p-6">
+              <div className="bg-purple-400/10 border border-purple-400/20 rounded-2xl p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center">
                     <span className="text-black font-bold">2</span>
                   </div>
                   <div>
-                    <div className="text-cyan-400 font-bold text-lg">DATA INSIGHTS</div>
+                    <div className="text-purple-400 font-bold text-lg">DATA INSIGHTS</div>
                     <div className="text-yellow-400 text-2xl font-bold">120+</div>
                   </div>
                 </div>
                 <div className="text-gray-300 text-sm">Leads qualifiés générés mensuellement</div>
               </div>
 
-              <div className="bg-green-400/10 border border-green-400/20 rounded-2xl p-6">
+              <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-2xl p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
                     <span className="text-black font-bold">3</span>
                   </div>
                   <div>
-                    <div className="text-green-400 font-bold text-lg">PERFORMANCE</div>
-                    <div className="text-yellow-400 text-2xl font-bold">&lt;2s</div>
+                    <div className="text-osom-dark-gray font-bold text-lg">PERFORMANCE</div>
+                    <div className="text-black text-2xl font-bold">&lt;2s</div>
                   </div>
                 </div>
                 <div className="text-gray-300 text-sm">Sites ultra-rapides garantis</div>
@@ -304,13 +304,13 @@ export default async function Home() {
               </AnimatedElement>
 
               <AnimatedElement type="slideUp" delay={0.4}>
-                <div className="backdrop-blur-sm border border-cyan-400/20 rounded-3xl overflow-hidden min-h-[800px] hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/10 transition-all duration-500 group">
+                <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[800px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group">
                   <PilierSwiss2 />
                 </div>
               </AnimatedElement>
 
               <AnimatedElement type="slideUp" delay={0.6}>
-                <div className="backdrop-blur-sm border border-green-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-green-400/40 hover:shadow-2xl hover:shadow-green-400/10 transition-all duration-500 group">
+                <div className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-yellow-400/40 hover:shadow-2xl hover:shadow-yellow-400/10 transition-all duration-500 group">
                   <PilierSwiss3 />
                 </div>
               </AnimatedElement>
@@ -373,7 +373,7 @@ export default async function Home() {
                 vraiment des
               </div>
 
-              <div className="text-6xl md:text-7xl font-black text-green-400 leading-none mb-6">
+              <div className="text-6xl md:text-7xl font-black text-yellow-400 leading-none mb-6">
                 RÉSULTATS
               </div>
 
@@ -384,8 +384,8 @@ export default async function Home() {
 
             <p className="text-xl text-gray-300 mb-16 leading-relaxed max-w-4xl mx-auto font-sans">
               Développement <span className="text-yellow-400 font-semibold">Next.js sur mesure</span>,
-              <span className="text-cyan-400 font-semibold"> SEO local stratégique</span>,
-              <span className="text-green-400 font-semibold"> optimisation continue</span>.
+              <span className="text-purple-400 font-semibold"> SEO local stratégique</span>,
+              <span className="text-yellow-400 font-semibold"> optimisation continue</span>.
               Des sites complexes qui transforment visiteurs en clients.
             </p>
 
@@ -396,7 +396,7 @@ export default async function Home() {
                 className="text-xl px-12 py-6 relative overflow-hidden group"
               >
                 <span className="relative z-10">Audit gratuit 30 min</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </MagneticButton>
               <MagneticButton
                 href="/realisations"
@@ -410,10 +410,10 @@ export default async function Home() {
 
           {/* Trust Indicators - Plus compacts sur mobile */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 max-w-4xl mx-auto">
-            <div className="bg-cyan-400/10 rounded-xl p-4 lg:p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
+            <div className="bg-purple-400/10 rounded-xl p-4 lg:p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300">
               <div className="flex items-center justify-center mb-2 lg:mb-3">
-                <IconeOSOM type="star" size={20} color="cyan" ariaLabel="Projets complexes" />
-                <span className="text-cyan-400 font-semibold ml-2 text-sm lg:text-base">Projets complexes</span>
+                <IconeOSOM type="star" size={20} color="purple" ariaLabel="Projets complexes" />
+                <span className="text-purple-400 font-semibold ml-2 text-sm lg:text-base">Projets complexes</span>
               </div>
               <p className="text-gray-300 text-xs lg:text-sm">60 pages + API + dashboards sur mesure</p>
             </div>
@@ -426,10 +426,10 @@ export default async function Home() {
               <p className="text-gray-300 text-xs lg:text-sm">Positions Google top 3 garanties</p>
             </div>
 
-            <div className="bg-green-400/10 rounded-xl p-4 lg:p-6 border border-green-400/20 hover:border-green-400/40 transition-all duration-300">
+            <div className="bg-yellow-400/10 rounded-xl p-4 lg:p-6 border border-yellow-400/20 hover:border-yellow-400/40 transition-all duration-300">
               <div className="flex items-center justify-center mb-2 lg:mb-3">
-                <IconeOSOM type="shield" size={20} color="green" ariaLabel="Performance garantie" />
-                <span className="text-green-400 font-semibold ml-2 text-sm lg:text-base">Performance &lt; 2s</span>
+                <IconeOSOM type="shield" size={20} color="yellow" ariaLabel="Performance garantie" />
+                <span className="text-yellow-400 font-semibold ml-2 text-sm lg:text-base">Performance &lt; 2s</span>
               </div>
               <p className="text-gray-300 text-xs lg:text-sm">Next.js optimisé ou remboursement</p>
             </div>

@@ -81,7 +81,7 @@ export default function OutilsPage() {
         
         <motion.div
           className="absolute bottom-32 left-16 w-48 h-48 rounded-full opacity-10 blur-2xl"
-          style={{ backgroundColor: "#10B981" }}
+          style={{ backgroundColor: "#9333EA" }}
           animate={{
             x: [0, -20, 0],
             y: [0, 15, 0],
@@ -161,8 +161,8 @@ export default function OutilsPage() {
             >
               Analysez votre potentiel SEO et calculez votre performance avec nos outils professionnels.
               <br />
-              <span className="text-yellow-400 font-semibold">Audit complet</span> et 
-              <span className="text-green-400 font-semibold"> projection personnalisée</span> gratuits.
+              <span className="text-yellow-400 font-semibold">Audit complet</span> et
+              <span className="text-purple-400 font-semibold"> projection personnalisée</span> gratuits.
             </motion.p>
             
             {/* Premium Animated Stats Pills */}
@@ -173,9 +173,9 @@ export default function OutilsPage() {
             >
               {[
                 { label: "2 outils", detail: "essentiels", color: "#ffd507", icon: "" },
-                { label: "100%", detail: "gratuit", color: "#10B981", icon: "" },
-                { label: "< 30 sec", detail: "chrono", color: "#06B6D4", icon: "" },
-                { label: "Data GA4", detail: "vérifiée", color: "#8B5CF6", icon: "" }
+                { label: "100%", detail: "gratuit", color: "#ffd507", icon: "" },
+                { label: "< 30 sec", detail: "chrono", color: "#9333EA", icon: "" },
+                { label: "Data GA4", detail: "vérifiée", color: "#9333EA", icon: "" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -213,15 +213,15 @@ export default function OutilsPage() {
               transition={{ duration: 0.6, delay: 1.2 }}
             >
               <div className="flex items-center">
-                <motion.div 
-                  className="w-2 h-2 rounded-full bg-green-400 mr-2"
+                <motion.div
+                  className="w-2 h-2 rounded-full bg-yellow-400 mr-2"
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
                 <span>Données GA4 Vérifiées</span>
               </div>
               <div className="flex items-center">
-                <motion.div 
+                <motion.div
                   className="w-2 h-2 rounded-full bg-yellow-400 mr-2"
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
@@ -229,8 +229,8 @@ export default function OutilsPage() {
                 <span>Culture Peinture: performance supérieure</span>
               </div>
               <div className="flex items-center">
-                <motion.div 
-                  className="w-2 h-2 rounded-full bg-cyan-400 mr-2"
+                <motion.div
+                  className="w-2 h-2 rounded-full bg-purple-400 mr-2"
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                 />
@@ -249,23 +249,23 @@ export default function OutilsPage() {
           <AnimatedElement type="slideUp" delay={0.2}>
             <div className="text-center mb-20">
               <div className="flex items-center justify-center mb-6">
-                <motion.div 
-                  className="w-2 h-2 rounded-full bg-cyan-400 mr-3"
+                <motion.div
+                  className="w-2 h-2 rounded-full bg-purple-400 mr-3"
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
-                <span className="text-cyan-400 text-sm font-medium tracking-wide">
+                <span className="text-purple-400 text-sm font-medium tracking-wide">
                   AUDIT SEO PROFESSIONNEL • ALGORITHME ÉPROUVÉ
                 </span>
               </div>
-              
+
               <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight">
-                <span className="text-cyan-400 font-bold">Audit SEO</span> Automatisé
+                <span className="text-purple-400 font-bold">Audit SEO</span> Automatisé
               </h2>
-              
+
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Analysez les performances SEO de votre site et recevez des recommandations personnalisées. 
-                <span className="text-cyan-400 font-semibold"> Même outil utilisé pour nos clients à CHF 1,500</span>.
+                Analysez les performances SEO de votre site et recevez des recommandations personnalisées.
+                <span className="text-purple-400 font-semibold"> Même outil utilisé pour nos clients à CHF 1,500</span>.
               </p>
             </div>
           </AnimatedElement>
@@ -302,14 +302,14 @@ export default function OutilsPage() {
       </section>
 
       {/* Enhanced Bottom CTA */}
-      <section className="py-24 bg-gradient-to-r from-yellow-400/10 via-transparent to-green-400/5">
+      <section className="py-24 bg-gradient-to-r from-yellow-400/10 via-transparent to-purple-400/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedElement type="scale" delay={0.2}>
             <h3 className="text-3xl md:text-4xl font-light text-white mb-6">
               Prêt à <span className="text-yellow-400 font-bold">transformer</span> vos résultats ?
             </h3>
             <p className="text-xl text-gray-300 mb-8">
-              Rejoignez les entreprises qui ont multiplié leur ROI par <strong className="text-green-400">14x</strong>
+              Rejoignez les entreprises qui ont multiplié leur ROI par <strong className="text-yellow-400">14x</strong>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -66,15 +66,15 @@ export default function PremiumB2BPage() {
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Position Google</span>
-                  <span className="font-bold text-green-600">#2</span>
+                  <span className="font-bold text-yellow-400">#2</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Visibilité</span>
-                  <span className="font-bold text-green-600">+150%</span>
+                  <span className="font-bold text-yellow-400">+150%</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">ROI Estimé</span>
-                  <span className="font-bold text-green-600">30-60k CHF/mois</span>
+                  <span className="font-bold text-yellow-400">30-60k CHF/mois</span>
                 </div>
               </div>
               
@@ -85,9 +85,9 @@ export default function PremiumB2BPage() {
             </div>
 
             {/* LMDI Case Study */}
-            <div className="bg-gradient-to-br from-cyan-50 to-white p-8 rounded-2xl border border-cyan-100">
+            <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold">L</span>
                 </div>
                 <div className="ml-4">
@@ -95,23 +95,23 @@ export default function PremiumB2BPage() {
                   <p className="text-gray-600">E-commerce Premium</p>
                 </div>
               </div>
-              
+
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Clics organiques</span>
-                  <span className="font-bold text-green-600">315/mois</span>
+                  <span className="font-bold text-yellow-400">315/mois</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">CTR moyen</span>
-                  <span className="font-bold text-green-600">3.45%</span>
+                  <span className="font-bold text-yellow-400">3.45%</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Impressions</span>
-                  <span className="font-bold text-green-600">9,133/mois</span>
+                  <span className="font-bold text-yellow-400">9,133/mois</span>
                 </div>
               </div>
-              
-              <blockquote className="text-gray-700 italic border-l-4 border-cyan-400 pl-4">
+
+              <blockquote className="text-gray-700 italic border-l-4 border-purple-400 pl-4">
                 "Approche technique exceptionnelle. Amélioration significative de notre visibilité e-commerce."
                 <cite className="block mt-2 text-sm text-gray-600">- Direction LMDI</cite>
               </blockquote>
@@ -182,33 +182,33 @@ export default function PremiumB2BPage() {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">E-commerce Premium</h3>
                 <p className="text-gray-600 mb-4">Boutiques premium, luxe, artisanat</p>
-                <div className="text-3xl font-bold text-cyan-600">2,500 CHF</div>
+                <div className="text-3xl font-bold text-purple-600">2,500 CHF</div>
                 <div className="text-gray-500">/mois + setup 3,500 CHF</div>
               </div>
-              
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
-                  <span className="w-5 h-5 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                  <span className="w-5 h-5 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
                   SEO e-commerce avancé
                 </li>
                 <li className="flex items-center">
-                  <span className="w-5 h-5 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                  <span className="w-5 h-5 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
                   Optimisation conversion
                 </li>
                 <li className="flex items-center">
-                  <span className="w-5 h-5 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                  <span className="w-5 h-5 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
                   Analytics e-commerce
                 </li>
                 <li className="flex items-center">
-                  <span className="w-5 h-5 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                  <span className="w-5 h-5 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
                   A/B testing continu
                 </li>
               </ul>
-              
+
               <div className="text-center">
-                <Link 
-                  href="/contact" 
-                  className="block bg-cyan-600 text-white py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
+                <Link
+                  href="/contact"
+                  className="block bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                 >
                   Démarrer Maintenant
                 </Link>
@@ -221,33 +221,33 @@ export default function PremiumB2BPage() {
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">Professionnel Premium</h3>
                 <p className="text-gray-600 mb-4">Médical, juridique, consulting</p>
-                <div className="text-3xl font-bold text-green-600">2,000 CHF</div>
+                <div className="text-3xl font-bold text-yellow-400">2,000 CHF</div>
                 <div className="text-gray-500">/mois + setup 2,500 CHF</div>
               </div>
-              
+
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                  <span className="w-5 h-5 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
                   SEO professionnel local
                 </li>
                 <li className="flex items-center">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                  <span className="w-5 h-5 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
                   Site premium mobile-first
                 </li>
                 <li className="flex items-center">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                  <span className="w-5 h-5 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
                   Système prise RDV
                 </li>
                 <li className="flex items-center">
-                  <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                  <span className="w-5 h-5 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
                   Maintenance sécurisée
                 </li>
               </ul>
-              
+
               <div className="text-center">
-                <Link 
-                  href="/contact" 
-                  className="block bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                <Link
+                  href="/contact"
+                  className="block bg-yellow-400 text-black py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors"
                 >
                   Démarrer Maintenant
                 </Link>
@@ -259,7 +259,7 @@ export default function PremiumB2BPage() {
       </section>
 
       {/* CTA Final */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-cyan-600">
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-yellow-400">
         <div className="container mx-auto max-w-4xl px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Prêt à Transformer Votre Business ?
