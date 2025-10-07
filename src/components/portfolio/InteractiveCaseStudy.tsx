@@ -448,7 +448,7 @@ export default function InteractiveCaseStudy({ data, isExpanded = false, onToggl
                     className="space-y-6"
                   >
                     <div className="bg-gray-50 p-6 rounded-lg">
-                      <h4 className="text-lg font-medium mb-4">Data sources >Data Sources & Methodology< methodology</h4>
+                      <h4 className="text-lg font-medium mb-4">Data sources & methodology</h4>
                       <p className="text-gray-700 mb-4">{data.dataSource}</p>
                       
                       <div className="grid grid-cols-2 gap-6">

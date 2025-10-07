@@ -177,7 +177,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                   whileHover={{ scale: 1.02, borderColor: 'rgba(0, 0, 0, 0.5)' }}
                 >
                   <div className="text-center">
-                    <h3 className="text-lg font-bold text-black mb-2">Analyse >Analyse & Stratégie< stratégie</h3>
+                    <h3 className="text-lg font-bold text-black mb-2">Analyse & stratégie</h3>
                     <p className="text-slate-800">Plan d'action personnalisé</p>
                   </div>
                   
