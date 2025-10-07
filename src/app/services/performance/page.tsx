@@ -48,15 +48,15 @@ export default async function PerformancePage() {
             </div>
           </div>
 
-          {/* Typo MASSIVE minimaliste */}
+          {/* Typo MASSIVE minimaliste (réduit 25%) */}
           <h1 className="mb-12" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            <div className="text-[12vw] md:text-[14vw] lg:text-[16vw] font-black leading-[0.85] tracking-[-0.02em] text-white mb-4">
+            <div className="text-[9vw] md:text-[10.5vw] lg:text-[12vw] font-black leading-[0.85] tracking-[-0.02em] text-white mb-4">
               PROJETS
             </div>
-            <div className="text-[14vw] md:text-[16vw] lg:text-[18vw] font-black leading-[0.85] tracking-[-0.02em] mb-4">
+            <div className="text-[10.5vw] md:text-[12vw] lg:text-[13.5vw] font-black leading-[0.85] tracking-[-0.02em] mb-4">
               <span className="text-purple-400">COMPLEXES</span>
             </div>
-            <div className="flex items-center justify-center gap-6 text-[6vw] md:text-[7vw] lg:text-[8vw] font-light text-white/80 leading-none mt-4 tracking-tight">
+            <div className="flex items-center justify-center gap-6 text-[4.5vw] md:text-[5.25vw] lg:text-[6vw] font-light text-white/80 leading-none mt-4 tracking-tight">
               <div className="w-16 h-[2px] bg-purple-400/50"></div>
               <span>PARTENARIAT</span>
               <div className="w-16 h-[2px] bg-purple-400/50"></div>
