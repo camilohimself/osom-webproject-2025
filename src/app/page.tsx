@@ -136,7 +136,26 @@ export default async function Home() {
       <ScrollProgressIndicator />
       {/* Hero Swiss OSOM Section */}
       <HeroSwissOSOMHybrid dictionary={dictionary.home} />
-      
+
+      {/* Slogan "Pas votre neveu" - Haute couture digitale */}
+      <section className="py-12 lg:py-16 bg-gradient-to-b from-black to-black relative overflow-hidden border-t border-yellow-400/10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <AnimatedElement type="fadeIn" delay={0.2}>
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-white leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Nous ne sommes <span className="font-bold text-yellow-400" style={{fontSize: '1.4em', lineHeight: '1'}}>PAS</span>
+              </h2>
+              <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-yellow-400 tracking-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                VOTRE NEVEU
+              </h2>
+              <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mt-6 font-light" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Haute couture digitale. Pas du prêt-à-porter low-cost.
+              </p>
+            </div>
+          </AnimatedElement>
+        </div>
+      </section>
+
       {/* Approche directe - pas de comparaisons défensives */}
 
       <section className="py-16 lg:py-32 bg-black relative overflow-hidden">

@@ -329,16 +329,16 @@ export default async function PerformancePage() {
             {/* Option 6 mois */}
             <div className="bg-purple-400/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400/50 transition-all duration-300">
               <div className="text-sm text-gray-400 mb-2">Partenariat 6 mois</div>
-              <div className="text-5xl font-bold text-purple-400 mb-2">1,667 CHF/mois</div>
-              <div className="text-xs text-gray-500 mb-6">Total: 10,000 CHF</div>
-              <p className="text-sm text-gray-300 mb-4">Dev + SEO + Support inclus chaque mois</p>
+              <div className="text-5xl font-bold text-purple-400 mb-2">4,500 CHF/mois</div>
+              <div className="text-xs text-gray-500 mb-6">Total: 27,000 CHF</div>
+              <p className="text-sm text-gray-300 mb-4">Dev + SEO + Support + Dashboards inclus chaque mois</p>
 
               <div className="mt-6 pt-6 border-t border-purple-400/20">
                 <p className="text-sm text-gray-400 leading-relaxed">
                   <strong className="text-purple-400">Exemple B2B / E-commerce:</strong><br/>
-                  Mois 1-2: Architecture + Design UX<br/>
-                  Mois 3-4: Développement + API integrations<br/>
-                  Mois 5-6: SEO stratégique + Dashboard + Formation
+                  Mois 1-2: Architecture avancée + Design UX<br/>
+                  Mois 3-4: Développement complet + API integrations<br/>
+                  Mois 5-6: SEO stratégique + Dashboard personnalisé + Formation
                 </p>
               </div>
             </div>
@@ -349,17 +349,17 @@ export default async function PerformancePage() {
                 Partenariat 12 mois
                 <span className="text-xs bg-purple-400 text-black px-2 py-0.5 rounded-full font-bold">MEILLEUR PRIX</span>
               </div>
-              <div className="text-5xl font-bold text-purple-400 mb-2">1,500 CHF/mois</div>
-              <div className="text-xs text-gray-500 mb-6">Total: 18,000 CHF</div>
-              <p className="text-sm text-gray-300 mb-4">Dev + SEO + Support + Optimisations continues</p>
+              <div className="text-5xl font-bold text-purple-400 mb-2">4,000 CHF/mois</div>
+              <div className="text-xs text-gray-500 mb-6">Total: 48,000 CHF</div>
+              <p className="text-sm text-gray-300 mb-4">Dev + SEO + Support + Dashboards + Optimisations continues</p>
 
               <div className="mt-6 pt-6 border-t border-purple-400/20">
                 <p className="text-sm text-gray-400 leading-relaxed">
                   <strong className="text-purple-400">Exemple PME Croissance / SaaS:</strong><br/>
-                  Mois 1-3: Architecture + Design système<br/>
-                  Mois 4-7: Développement complet + API<br/>
-                  Mois 8-10: SEO stratégique + Analytics avancées<br/>
-                  Mois 11-12: Optimisations + Scaling business
+                  Mois 1-3: Architecture entreprise + Design système<br/>
+                  Mois 4-7: Développement complet + API complexes<br/>
+                  Mois 8-10: SEO agressif + Analytics avancées<br/>
+                  Mois 11-12: Optimisations + Scaling infrastructure
                 </p>
               </div>
             </div>
@@ -380,7 +380,7 @@ export default async function PerformancePage() {
             Prêt pour un <span className="text-purple-400 font-bold">partenariat Performance?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Audit gratuit 30 min. Devis transparent. Partenariat actif 6-12 mois. À partir de 1,500 CHF/mois tout compris.
+            Audit gratuit 30 min. Devis transparent. Partenariat actif 6-12 mois. À partir de 4,000 CHF/mois tout compris.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
