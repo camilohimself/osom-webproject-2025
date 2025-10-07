@@ -30,7 +30,7 @@ export default async function EssentielPage() {
             <span className="text-yellow-400 text-sm font-medium tracking-wide uppercase">Package Essentiel</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight text-center lg:whitespace-nowrap" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             Site professionnel <span className="text-yellow-400 font-bold">clé en main</span>
           </h1>
 

@@ -31,7 +31,7 @@ export default async function PerformancePage() {
             <span className="ml-3 bg-purple-400 text-black text-xs font-bold px-3 py-1 rounded-full">POPULAIRE</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight text-center lg:whitespace-nowrap" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             Projets <span className="text-purple-400 font-bold">complexes</span> + Partenariat
           </h1>
 
