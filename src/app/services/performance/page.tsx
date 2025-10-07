@@ -16,44 +16,78 @@ export default async function PerformancePage() {
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
 
-      {/* 1. ATTENTION - Hero Section */}
-      <section className="py-32 lg:py-40 bg-gradient-to-b from-black via-purple-900/10 to-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      {/* 1. ATTENTION - Hero Section MINIMALISTE */}
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+        {/* Grille technique subtile */}
+        <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23A855F7' fill-opacity='0.15'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `
+              linear-gradient(0deg, transparent 24%, rgba(168, 85, 247, .05) 25%, rgba(168, 85, 247, .05) 26%, transparent 27%, transparent 74%, rgba(168, 85, 247, .05) 75%, rgba(168, 85, 247, .05) 76%, transparent 77%, transparent),
+              linear-gradient(90deg, transparent 24%, rgba(168, 85, 247, .05) 25%, rgba(168, 85, 247, .05) 26%, transparent 27%, transparent 74%, rgba(168, 85, 247, .05) 75%, rgba(168, 85, 247, .05) 76%, transparent 77%, transparent)
+            `,
+            backgroundSize: '50px 50px'
           }} />
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-2 h-2 rounded-full bg-purple-400 mr-3 animate-pulse"></div>
-            <span className="text-purple-400 text-sm font-medium tracking-wide uppercase">Package Performance</span>
-            <span className="ml-3 bg-purple-400 text-black text-xs font-bold px-3 py-1 rounded-full">POPULAIRE</span>
+        {/* Lignes de construction */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+          <div className="absolute top-3/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+          <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent"></div>
+          <div className="absolute top-0 left-1/2 w-[1px] h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent"></div>
+          <div className="absolute top-0 left-3/4 w-[1px] h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          {/* Badge technique */}
+          <div className="flex items-center justify-center mb-16">
+            <div className="border border-purple-400/30 px-4 py-1 rounded-none">
+              <span className="text-purple-400 text-[10px] font-mono tracking-[0.4em] uppercase">PKG.PERFORMANCE</span>
+              <span className="ml-3 text-purple-300 text-[10px] font-mono">v2.0</span>
+            </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight text-center lg:whitespace-nowrap" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Projets <span className="text-purple-400 font-bold">complexes</span> + Partenariat
+          {/* Typo MASSIVE minimaliste */}
+          <h1 className="mb-12" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            <div className="text-[12vw] md:text-[14vw] lg:text-[16vw] font-black leading-[0.85] tracking-[-0.02em] text-white mb-4">
+              PROJETS
+            </div>
+            <div className="text-[14vw] md:text-[16vw] lg:text-[18vw] font-black leading-[0.85] tracking-[-0.02em] mb-4">
+              <span className="text-purple-400">COMPLEXES</span>
+            </div>
+            <div className="flex items-center justify-center gap-6 text-[6vw] md:text-[7vw] lg:text-[8vw] font-light text-white/80 leading-none mt-4 tracking-tight">
+              <div className="w-16 h-[2px] bg-purple-400/50"></div>
+              <span>PARTENARIAT</span>
+              <div className="w-16 h-[2px] bg-purple-400/50"></div>
+            </div>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto text-center leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            30-60 pages. API & dashboards. SEO stratégique. Partenariat actif continu 6-12 mois.
+          <p className="text-lg md:text-xl text-gray-500 mb-16 max-w-3xl mx-auto font-mono text-sm tracking-wide leading-relaxed">
+            30-60_PAGES // API_DASHBOARDS // SEO_STRATEGIQUE // 6-12_MOIS
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* CTAs minimalistes */}
+          <div className="flex flex-col sm:flex-row gap-0 justify-center">
             <Link
               href="/contact"
-              className="bg-purple-400 text-black px-8 py-4 rounded-lg hover:bg-purple-500 transition-all duration-300 font-bold text-center shadow-lg shadow-purple-400/25"
-              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              className="bg-purple-400 text-black px-16 py-6 rounded-none font-black text-sm tracking-wider hover:bg-purple-500 transition-colors duration-300 uppercase"
             >
-              Démarrer mon projet Performance
+              Démarrer projet
             </Link>
             <Link
               href="#why-performance"
-              className="border-2 border-purple-400/50 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 font-medium text-center backdrop-blur-sm"
-              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+              className="border-2 border-purple-400 text-purple-400 px-16 py-6 rounded-none font-black text-sm tracking-wider hover:bg-purple-400 hover:text-black transition-all duration-300 uppercase"
             >
-              Pourquoi Performance?
+              Détails
             </Link>
+          </div>
+
+          {/* Prix architectural */}
+          <div className="mt-20 flex items-center justify-center gap-4 text-xs text-gray-600 font-mono">
+            <div className="w-8 h-[1px] bg-purple-400/30"></div>
+            <span>FROM_4000_CHF/MONTH</span>
+            <div className="w-8 h-[1px] bg-purple-400/30"></div>
           </div>
         </div>
       </section>
