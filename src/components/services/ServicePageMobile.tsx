@@ -97,11 +97,11 @@ export function ServicePageMobile({
             </div>
             <div className="grid grid-cols-2 gap-4 text-center">
               <div>
-                <div className="text-gray-400 text-xs mb-1">AVANT</div>
+                <div className="text-gray-400 text-xs mb-1">Avant</div>
                 <div className="text-sm">{caseStudy.before}</div>
               </div>
               <div>
-                <div className="text-yellow-400 text-xs mb-1">APRÈS</div>
+                <div className="text-yellow-400 text-xs mb-1">Après</div>
                 <div className="text-yellow-400 font-bold text-sm">{caseStudy.after}</div>
               </div>
             </div>

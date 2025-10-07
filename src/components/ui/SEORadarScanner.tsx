@@ -299,7 +299,7 @@ export default function SEORadarScanner({
               transition={{ duration: 0.8, delay: 1.5 }}
               className="mt-8 bg-black/60 backdrop-blur-xl rounded-2xl p-6 border border-cyan-400/20"
             >
-              <h3 className="text-cyan-400 font-bold text-sm mb-4">OPPORTUNITÉS DÉTECTÉES</h3>
+              <h3 className="text-cyan-400 font-bold text-sm mb-4">Opportunités détectées</h3>
               <div className="space-y-2 max-h-40 overflow-y-auto">
                 {detectedKeywords.slice(0, scannedKeywords.length + 1).map((keyword, index) => (
                   <motion.div
@@ -338,7 +338,7 @@ export default function SEORadarScanner({
                   <span className="text-green-400 font-bold text-sm">CASE STUDY • ARTISANE DE LUMIÈRE</span>
                 </div>
                 
-                <h4 className="text-white font-bold mb-3">Position 21 → Page 1 en 6 mois</h4>
+                <h4 className="text-white font-bold mb-3">Position 21 → page 1 en 6 mois</h4>
                 
                 {/* Position Tracking Line */}
                 <div className="relative h-20 bg-black/30 rounded-xl p-4 mb-4">

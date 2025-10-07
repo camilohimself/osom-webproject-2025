@@ -149,7 +149,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                   whileHover={{ scale: 1.02, borderColor: 'rgba(0, 0, 0, 0.4)' }}
                 >
                   <div className="text-center">
-                    <h3 className="text-xl font-bold text-black mb-2">Votre Situation Actuelle</h3>
+                    <h3 className="text-xl font-bold text-black mb-2">Votre situation actuelle</h3>
                     <p className="text-slate-800">Défis, objectifs, opportunités manquées</p>
                   </div>
                   
@@ -177,7 +177,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                   whileHover={{ scale: 1.02, borderColor: 'rgba(0, 0, 0, 0.5)' }}
                 >
                   <div className="text-center">
-                    <h3 className="text-lg font-bold text-black mb-2">Analyse & Stratégie</h3>
+                    <h3 className="text-lg font-bold text-black mb-2">Analyse >Analyse & Stratégie< stratégie</h3>
                     <p className="text-slate-800">Plan d'action personnalisé</p>
                   </div>
                   
@@ -204,7 +204,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                   whileHover={{ scale: 1.02, borderColor: 'rgba(0, 0, 0, 0.8)' }}
                 >
                   <div className="text-center">
-                    <h3 className="text-lg font-bold text-yellow-400 mb-2">Résultats Mesurables</h3>
+                    <h3 className="text-lg font-bold text-yellow-400 mb-2">Résultats mesurables</h3>
                     <p className="text-yellow-300">ROI transparent et croissance</p>
                   </div>
                   

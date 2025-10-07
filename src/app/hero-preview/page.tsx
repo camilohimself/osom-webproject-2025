@@ -56,7 +56,7 @@ export default function HeroPreviewPage() {
       {/* HEADER DE NAVIGATION */}
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-xl border-b border-gray-800 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-white font-bold text-xl">PREVIEW HERO VERSIONS</h1>
+          <h1 className="text-white font-bold text-xl">Preview hero versions</h1>
           <Link href="/services" className="text-yellow-400 hover:text-yellow-300 transition-colors">
             ← Retour aux Services
           </Link>
@@ -268,7 +268,7 @@ export default function HeroPreviewPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-black/60 rounded-2xl p-6 border border-yellow-400/40">
-              <h3 className="text-yellow-400 font-bold text-xl mb-4">VERSION 1</h3>
+              <h3 className="text-yellow-400 font-bold text-xl mb-4">Version 1</h3>
               <p className="text-gray-300 mb-4">Animation progressive élégante, style business sophistiqué</p>
               <button className="w-full py-3 bg-yellow-400 text-black font-bold rounded-xl hover:bg-yellow-300 transition-colors">
                 Choisir Version 1
@@ -276,7 +276,7 @@ export default function HeroPreviewPage() {
             </div>
             
             <div className="bg-black/60 rounded-2xl p-6 border border-green-400/40">
-              <h3 className="text-green-400 font-bold text-xl mb-4">VERSION 2</h3>
+              <h3 className="text-green-400 font-bold text-xl mb-4">Version 2</h3>
               <p className="text-gray-300 mb-4">Effet typewriter dynamique, style tech moderne</p>
               <button className="w-full py-3 bg-green-400 text-black font-bold rounded-xl hover:bg-green-300 transition-colors">
                 Choisir Version 2

@@ -278,7 +278,7 @@ export default function InternalProjectBrief() {
             </div>
           )}
 
-          {/* Étape 3: Analyse Marketing */}
+          {/* Étape 3 : Analyse Marketing */}
           {currentStep === 3 && (
             <div>
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">

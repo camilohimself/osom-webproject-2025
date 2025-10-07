@@ -147,7 +147,7 @@ export default function TrackingInvisibleROIPage() {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div className="bg-gradient-to-br from-white/5 to-transparent rounded-xl p-8 border border-gray-700">
-                  <h3 className="text-xl font-bold text-cyan-400 mb-4">Contexte Initial</h3>
+                  <h3 className="text-xl font-bold text-cyan-400 mb-4">Contexte initial</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li className="flex items-start">
                       <span className="text-cyan-400 mr-3">▸</span>
@@ -380,7 +380,7 @@ gtag('event', 'lead_qualified', {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-purple-500/10 to-transparent rounded-xl p-6 border border-purple-500/20">
-                  <h3 className="text-lg font-bold text-purple-400 mb-3">Insights Business</h3>
+                  <h3 className="text-lg font-bold text-purple-400 mb-3">Insights business</h3>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li>• 67% du ROI marketing était invisible</li>
                     <li>• Canaux "low performance" étaient mal trackés</li>
@@ -391,7 +391,7 @@ gtag('event', 'lead_qualified', {
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-500/10 to-transparent rounded-xl p-6 border border-blue-500/20">
-                  <h3 className="text-lg font-bold text-blue-400 mb-3">Solutions Techniques</h3>
+                  <h3 className="text-lg font-bold text-blue-400 mb-3">Solutions techniques</h3>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li>• Server-Side Tracking mandatory</li>
                     <li>• Enhanced Conversions activated</li>

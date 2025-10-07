@@ -119,7 +119,7 @@ export default function ArtisaneLumiereArticle() {
               </h2>
               <div className="text-gray-300 leading-relaxed space-y-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40">
-                  <h3 className="text-xl font-semibold text-white mb-3">Données Collectées</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">Données collectées</h3>
                   <ul className="space-y-2">
                     <li>• <strong>200+ jours</strong> d'historique GA4</li>
                     <li>• <strong>Engagement Quality</strong> par source de trafic</li>
@@ -130,7 +130,7 @@ export default function ArtisaneLumiereArticle() {
                 </div>
                 
                 <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40">
-                  <h3 className="text-xl font-semibold text-white mb-3">Métriques Clés</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">Métriques clés</h3>
                   <p>
                     L'Engagement Quality GA4 combine plusieurs signaux : temps passé, interactions, 
                     scroll depth et événements de conversion pour mesurer la véritable qualité du trafic.
@@ -151,7 +151,7 @@ export default function ArtisaneLumiereArticle() {
               <div className="text-gray-300 leading-relaxed space-y-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 
                 <div className="backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-8 bg-gradient-to-br from-cyan-400/10 to-black/60">
-                  <h3 className="text-cyan-400 font-semibold text-xl mb-4">Trafic SEO : 68.6% Engagement Quality</h3>
+                  <h3 className="text-cyan-400 font-semibold text-xl mb-4">Trafic SEO : 68.6% engagement quality</h3>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <strong>Temps de session :</strong> 4m 23s<br />
@@ -171,7 +171,7 @@ export default function ArtisaneLumiereArticle() {
                 </div>
 
                 <div className="backdrop-blur-sm border border-gray-400/30 rounded-2xl p-8 bg-gradient-to-br from-gray-400/10 to-black/60">
-                  <h3 className="text-gray-300 font-semibold text-xl mb-4">Trafic Direct : 44.6% Engagement Quality</h3>
+                  <h3 className="text-gray-300 font-semibold text-xl mb-4">Trafic direct : 44.6% engagement quality</h3>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <strong>Temps de session :</strong> 2m 51s<br />
@@ -204,7 +204,7 @@ export default function ArtisaneLumiereArticle() {
               <div className="text-gray-300 leading-relaxed space-y-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 
                 <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-8 bg-gradient-to-br from-white/5 to-black/40">
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Intention vs Habitude</h3>
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Intention vs habitude</h3>
                   <p>
                     Les visiteurs SEO arrivent avec une <strong>intention de recherche spécifique</strong>, 
                     ce qui explique leur engagement supérieur. Ils cherchent activement des informations 
@@ -213,7 +213,7 @@ export default function ArtisaneLumiereArticle() {
                 </div>
 
                 <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-8 bg-gradient-to-br from-white/5 to-black/40">
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Contenu Aligné</h3>
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Contenu aligné</h3>
                   <p>
                     Le contenu optimisé SEO répond précisément aux questions des utilisateurs, créant 
                     une experience plus satisfaisante qui se traduit par plus d'interactions et 
@@ -222,7 +222,7 @@ export default function ArtisaneLumiereArticle() {
                 </div>
 
                 <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-8 bg-gradient-to-br from-white/5 to-black/40">
-                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Potentiel de Conversion</h3>
+                  <h3 className="text-xl font-semibold text-cyan-400 mb-4">Potentiel de conversion</h3>
                   <p>
                     Avec un taux de conversion de 8.2% vs 4.1%, le trafic SEO présente un potentiel 
                     commercial deux fois supérieur, justifiant l'investissement dans cette stratégie.
@@ -254,7 +254,7 @@ export default function ArtisaneLumiereArticle() {
                   </div>
 
                   <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 bg-gradient-to-br from-white/5 to-black/40">
-                    <h4 className="text-cyan-400 font-semibold mb-3">Optimiser le Direct</h4>
+                    <h4 className="text-cyan-400 font-semibold mb-3">Optimiser le direct</h4>
                     <ul className="space-y-2 text-sm">
                       <li>• Améliorer l'UX de la page d'accueil</li>
                       <li>• Créer des parcours guidés</li>

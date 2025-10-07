@@ -271,7 +271,7 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                   ref={timelineRef}
                 >
                   <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-green-400 font-bold text-lg">Votre Parcours Growth</h3>
+                    <h3 className="text-green-400 font-bold text-lg">Votre parcours growth</h3>
                   </div>
                   
                   {/* Timeline Container */}

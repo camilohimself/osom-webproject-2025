@@ -409,17 +409,17 @@ export default function InteractiveCaseStudy({ data, isExpanded = false, onToggl
                     className="space-y-6"
                   >
                     <div>
-                      <h4 className="text-lg font-medium mb-4">Strategic Challenge</h4>
+                      <h4 className="text-lg font-medium mb-4">Strategic challenge</h4>
                       <p className="text-gray-700 leading-relaxed">{data.challenge}</p>
                     </div>
                     
                     <div>
-                      <h4 className="text-lg font-medium mb-4">OSOM Solution</h4>
+                      <h4 className="text-lg font-medium mb-4">OSOM solution</h4>
                       <p className="text-gray-700 leading-relaxed">{data.solution}</p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-medium mb-4">Key Insights</h4>
+                      <h4 className="text-lg font-medium mb-4">Key insights</h4>
                       <ul className="space-y-3">
                         {data.insights.map((insight, index) => (
                           <motion.li
@@ -448,7 +448,7 @@ export default function InteractiveCaseStudy({ data, isExpanded = false, onToggl
                     className="space-y-6"
                   >
                     <div className="bg-gray-50 p-6 rounded-lg">
-                      <h4 className="text-lg font-medium mb-4">Data Sources & Methodology</h4>
+                      <h4 className="text-lg font-medium mb-4">Data sources >Data Sources & Methodology< methodology</h4>
                       <p className="text-gray-700 mb-4">{data.dataSource}</p>
                       
                       <div className="grid grid-cols-2 gap-6">

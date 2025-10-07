@@ -366,11 +366,11 @@ export default function TechStackCarousel({
                   {activeTech.metrics && (
                     <div className="grid grid-cols-3 gap-2 text-xs">
                       <div className="bg-red-500/20 px-2 py-1 rounded border border-red-400/30 text-center">
-                        <div className="text-red-200 font-bold text-xs mb-1">AVANT</div>
+                        <div className="text-red-200 font-bold text-xs mb-1">Avant</div>
                         <div className="text-red-300 font-mono text-xs">{activeTech.metrics.before}</div>
                       </div>
                       <div className="bg-green-500/20 px-2 py-1 rounded border border-green-400/30 text-center">
-                        <div className="text-green-200 font-bold text-xs mb-1">APRÈS</div>
+                        <div className="text-green-200 font-bold text-xs mb-1">Après</div>
                         <div className="text-green-300 font-mono text-xs">{activeTech.metrics.after}</div>
                       </div>
                       <div className="bg-yellow-500/20 px-2 py-1 rounded border border-yellow-400/30 text-center">

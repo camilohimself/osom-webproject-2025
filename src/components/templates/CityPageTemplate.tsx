@@ -262,7 +262,7 @@ export default function CityPageTemplate({
               <AnimatedElement type="slideLeft" delay={0.4}>
                 <div>
                   <div className="mb-8">
-                    <h3 className="text-2xl font-semibold text-yellow-400 mb-4">Défi Initial</h3>
+                    <h3 className="text-2xl font-semibold text-yellow-400 mb-4">Défi initial</h3>
                     <p className="text-gray-300 text-lg leading-relaxed">
                       {localCaseStudy.challenge}
                     </p>
@@ -293,7 +293,7 @@ export default function CityPageTemplate({
               {/* Results Metrics */}
               <AnimatedElement type="slideRight" delay={0.6}>
                 <div className="bg-gradient-to-br from-white/5 to-transparent rounded-2xl p-8 border border-yellow-400/30">
-                  <h3 className="text-2xl font-bold text-white mb-8 text-center">Résultats Mesurés</h3>
+                  <h3 className="text-2xl font-bold text-white mb-8 text-center">Résultats mesurés</h3>
                   
                   <div className="space-y-6">
                     {localCaseStudy.results.map((result, index) => (

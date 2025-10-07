@@ -245,7 +245,7 @@ export default function CodeSynergyMatrix({
 
             {/* Synergy Comparison */}
             <div className="space-y-6 mb-12">
-              <h3 className="text-2xl font-bold text-white mb-6">Performance Matrix</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Performance matrix</h3>
               
               {synergyMetrics.map((metric, index) => (
                 <motion.div

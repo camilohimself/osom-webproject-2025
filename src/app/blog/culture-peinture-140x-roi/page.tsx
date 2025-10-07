@@ -194,7 +194,7 @@ export default function CulturePeintureArticle() {
               </h2>
               <div className="text-gray-300 leading-relaxed space-y-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-8 bg-gradient-to-br from-white/5 to-black/40">
-                  <h3 className="text-xl font-semibold text-green-400 mb-4">La Qualité Surpasse la Quantité</h3>
+                  <h3 className="text-xl font-semibold text-green-400 mb-4">La qualité surpasse la quantité</h3>
                   <p>
                     688 conversions organiques vs 49 payantes prouvent que l'engagement authentique 
                     génère des résultats exponentiellement supérieurs à la portée achetée.
@@ -202,7 +202,7 @@ export default function CulturePeintureArticle() {
                 </div>
 
                 <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-8 bg-gradient-to-br from-white/5 to-black/40">
-                  <h3 className="text-xl font-semibold text-green-400 mb-4">L'Expertise Crée la Confiance</h3>
+                  <h3 className="text-xl font-semibold text-green-400 mb-4">L'expertise crée la confiance</h3>
                   <p>
                     Le contenu de valeur établit une relation de confiance qui se traduit directement 
                     par un taux de conversion 5x supérieur (11.3% vs 2.1%).
@@ -210,7 +210,7 @@ export default function CulturePeintureArticle() {
                 </div>
 
                 <div className="backdrop-blur-sm border border-white/10 rounded-2xl p-8 bg-gradient-to-br from-white/5 to-black/40">
-                  <h3 className="text-xl font-semibold text-green-400 mb-4">Les Données Révèlent la Vérité</h3>
+                  <h3 className="text-xl font-semibold text-green-400 mb-4">Les données révèlent la vérité</h3>
                   <p>
                     Sans tracking GA4 précis, cette différence de performance serait restée invisible. 
                     La mesure exacte est essentielle pour optimiser le ROI.

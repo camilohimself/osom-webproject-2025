@@ -196,7 +196,7 @@ export default function GraphiqueImpact({
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 2 }}
         >
-          <div className="text-gray-400 text-sm">Publicité Payante</div>
+          <div className="text-gray-400 text-sm">Publicité payante</div>
           <div className="text-red-400 text-xl font-bold">{paidValue} conversions</div>
         </motion.div>
 

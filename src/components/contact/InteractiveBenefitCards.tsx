@@ -470,7 +470,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                 <div className="w-12 h-12 bg-yellow-400/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <IconSVG type="target" className="w-6 h-6 text-yellow-400" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Étape 1: Diagnostic</h4>
+                <h4 className="text-white font-semibold mb-2">Étape 1 : Diagnostic</h4>
                 <ul className="text-gray-400 text-sm space-y-1">
                   <li>• Analyse de vos outils actuels</li>
                   <li>• Identification des lacunes</li>
@@ -483,7 +483,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                 <div className="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <IconSVG type="strategy" className="w-6 h-6 text-purple-400" />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Étape 2: Stratégie</h4>
+                <h4 className="text-white font-semibold mb-2">Étape 2 : Stratégie</h4>
                 <ul className="text-gray-400 text-sm space-y-1">
                   <li>• Plan d'action personnalisé</li>
                   <li>• Priorisation des actions</li>
@@ -499,7 +499,7 @@ const InteractiveBenefitCards = ({ onCalendlyEvent, onConversionEvent }: Interac
                     className={`w-6 h-6 ${isUrgentMode ? 'text-red-400' : 'text-cyan-400'}`} 
                   />
                 </div>
-                <h4 className="text-white font-semibold mb-2">Étape 3: {isUrgentMode ? 'Urgence' : 'Lancement'}</h4>
+                <h4 className="text-white font-semibold mb-2">Étape 3 : {isUrgentMode ? 'Urgence' : 'Lancement'}</h4>
                 <ul className="text-gray-400 text-sm space-y-1">
                   {isUrgentMode ? (
                     <>

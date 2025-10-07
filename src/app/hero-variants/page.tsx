@@ -81,7 +81,7 @@ export default function HeroVariantsPage() {
               >
                 {/* Dashboard Header */}
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-cyan-400 font-bold text-lg">Analytics Dashboard</h3>
+                  <h3 className="text-cyan-400 font-bold text-lg">Analytics dashboard</h3>
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 </div>
                 
@@ -152,7 +152,7 @@ export default function HeroVariantsPage() {
                 exit={{ opacity: 0, x: -50, scale: 0.9 }}
                 transition={{ duration: 0.6 }}
               >
-                <h3 className="text-green-400 font-bold text-lg mb-6">Votre Parcours Growth</h3>
+                <h3 className="text-green-400 font-bold text-lg mb-6">Votre parcours growth</h3>
                 
                 {/* Timeline */}
                 <div className="relative">
@@ -207,7 +207,7 @@ export default function HeroVariantsPage() {
                 exit={{ opacity: 0, x: -50, scale: 0.9 }}
                 transition={{ duration: 0.6 }}
               >
-                <h3 className="text-yellow-400 font-bold text-lg mb-4">Calculateur ROI Instantané</h3>
+                <h3 className="text-yellow-400 font-bold text-lg mb-4">Calculateur ROI instantané</h3>
                 
                 {/* Calculator Interface */}
                 <div className="space-y-4">

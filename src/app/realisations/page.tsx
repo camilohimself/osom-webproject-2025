@@ -492,7 +492,7 @@ const RealisationsPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                <h3 className="text-pink-400 font-bold text-lg mb-3">Transformation Complète</h3>
+                <h3 className="text-pink-400 font-bold text-lg mb-3">Transformation complète</h3>
                 <p className="text-gray-300">Pas juste un site web, mais une révolution digitale de votre business avec IA intégrée.</p>
               </motion.div>
               
@@ -503,7 +503,7 @@ const RealisationsPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <h3 className="text-yellow-400 font-bold text-lg mb-3">Partenariat Stratégique</h3>
+                <h3 className="text-yellow-400 font-bold text-lg mb-3">Partenariat stratégique</h3>
                 <p className="text-gray-300">Accompagnement long-terme avec optimisation continue basée sur vos données réelles.</p>
               </motion.div>
               
@@ -580,7 +580,7 @@ const RealisationsPage = () => {
               >
                 <div className="flex items-center justify-center mb-4">
                   <IconeOSOM type="shield" size={32} color="orange" ariaLabel="Protection données" />
-                  <h3 className="text-orange-400 font-bold text-xl ml-3">Case Studies Protégés</h3>
+                  <h3 className="text-orange-400 font-bold text-xl ml-3">Case studies protégés</h3>
                 </div>
                 <p className="text-gray-300 mb-6">
                   Nos clients nous font confiance avec des données sensibles. 

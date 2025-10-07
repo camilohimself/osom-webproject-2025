@@ -103,7 +103,7 @@ export default function SEOForensicsLab({ title, subtitle, description }: SEOFor
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <h5 className="text-red-300 font-semibold text-xs mb-2">FAIBLESSES DÉTECTÉES:</h5>
+                    <h5 className="text-red-300 font-semibold text-xs mb-2">Faiblesses détectées :</h5>
                     {comp.weaknesses.map((weakness, i) => (
                       <div key={i} className="text-red-200 text-xs mb-1 flex items-center">
                         <span className="w-1 h-1 bg-red-400 rounded-full mr-2"></span>
@@ -112,7 +112,7 @@ export default function SEOForensicsLab({ title, subtitle, description }: SEOFor
                     ))}
                   </div>
                   <div>
-                    <h5 className="text-green-300 font-semibold text-xs mb-2">OPPORTUNITÉS:</h5>
+                    <h5 className="text-green-300 font-semibold text-xs mb-2">Opportunités :</h5>
                     {comp.opportunities.map((opp, i) => (
                       <div key={i} className="text-green-200 text-xs mb-1 flex items-center">
                         <span className="w-1 h-1 bg-green-400 rounded-full mr-2"></span>

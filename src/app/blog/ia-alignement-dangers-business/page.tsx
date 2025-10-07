@@ -152,7 +152,7 @@ export default function IAAlignementDangersPage() {
                   </p>
                   
                   <div className="bg-black/50 p-6 rounded-lg border-l-4 border-red-400">
-                    <h4 className="text-red-400 font-bold mb-3">EXEMPLE CONCRET</h4>
+                    <h4 className="text-red-400 font-bold mb-3">Exemple concret</h4>
                     <p className="text-sm">
                       ChatGPT refuse de rédiger une publicité pour un restaurant servant de la viande. 
                       Pourquoi ? <span className="text-yellow-400">Biais idéologique</span> programmé par ses créateurs californiens.

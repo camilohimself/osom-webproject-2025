@@ -232,7 +232,7 @@ export default function SEOIntelligenceDashboard({ title, subtitle }: SEOIntelli
                       <span className="text-green-400 font-bold text-sm">DOSSIER CONFIDENTIEL • GÉRANCE SWISS</span>
                     </div>
                     
-                    <h4 className="text-white font-bold text-lg mb-4">Potentiel SEO 397x Révélé</h4>
+                    <h4 className="text-white font-bold text-lg mb-4">Potentiel SEO 397x révélé</h4>
                     
                     {/* ROI Visualization */}
                     <div className="grid grid-cols-2 gap-6 mb-6">

@@ -36,7 +36,7 @@ export default function PhrasePreviewPage() {
       {/* HEADER DE NAVIGATION */}
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-xl border-b border-gray-800 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-white font-bold text-xl">PREVIEW PHRASE VERSIONS</h1>
+          <h1 className="text-white font-bold text-xl">Preview phrase versions</h1>
           <Link href="/services" className="text-yellow-400 hover:text-yellow-300 transition-colors">
             ← Retour aux Services
           </Link>
@@ -206,7 +206,7 @@ export default function PhrasePreviewPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-black/60 rounded-2xl p-6 border border-green-400/40">
-              <h3 className="text-green-400 font-bold text-xl mb-4">VERSION 1 - RÉVEIL DIGITAL</h3>
+              <h3 className="text-green-400 font-bold text-xl mb-4">Version 1 - Réveil digital</h3>
               <p className="text-gray-300 mb-4">Matrix style, animation réveil, cerveau qui pulse, fun et impact</p>
               <button className="w-full py-3 bg-green-400 text-black font-bold rounded-xl hover:bg-green-300 transition-colors">
                 Choisir Réveil Digital
@@ -214,7 +214,7 @@ export default function PhrasePreviewPage() {
             </div>
             
             <div className="bg-black/60 rounded-2xl p-6 border border-purple-400/40">
-              <h3 className="text-purple-400 font-bold text-xl mb-4">VERSION 2 - SILICON VALLEY</h3>
+              <h3 className="text-purple-400 font-bold text-xl mb-4">Version 2 - Silicon Valley</h3>
               <p className="text-gray-300 mb-4">Ultra-premium, corporate, épuré, prestige maximal</p>
               <button className="w-full py-3 bg-purple-400 text-black font-bold rounded-xl hover:bg-purple-300 transition-colors">
                 Choisir Silicon Valley

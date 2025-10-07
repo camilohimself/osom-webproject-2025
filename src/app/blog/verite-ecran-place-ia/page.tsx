@@ -309,7 +309,7 @@ export default function VeriteEcranPlaceIAPage() {
                     </div>
                     
                     <div className="bg-red-500/10 p-6 rounded-lg border-l-4 border-red-400">
-                      <h4 className="text-red-400 font-bold mb-2">RÉALITÉ CHOC :</h4>
+                      <h4 className="text-red-400 font-bold mb-2">Réalité choc :</h4>
                       <p className="text-sm text-gray-300">
                         Un dirigeant consulte son téléphone <strong>144 fois/jour</strong>. 
                         Interruption cognitive toutes les <span className="text-yellow-400">4 minutes</span>.
@@ -388,11 +388,11 @@ export default function VeriteEcranPlaceIAPage() {
                     
                     <div className="space-y-4">
                       <div className="bg-orange-500/10 p-4 rounded-lg border-l-4 border-orange-400">
-                        <h4 className="text-orange-400 font-bold mb-1">PROMESSE IA :</h4>
+                        <h4 className="text-orange-400 font-bold mb-1">Promesse IA :</h4>
                         <p className="text-sm">"Automatisation = Plus de temps libre"</p>
                       </div>
                       <div className="bg-red-500/10 p-4 rounded-lg border-l-4 border-red-400">
-                        <h4 className="text-red-400 font-bold mb-1">RÉALITÉ IA :</h4>
+                        <h4 className="text-red-400 font-bold mb-1">Réalité IA :</h4>
                         <p className="text-sm">"+23% temps écran pour 'superviser' l'automatisation"</p>
                       </div>
                     </div>
@@ -477,7 +477,7 @@ export default function VeriteEcranPlaceIAPage() {
                     </div>
                     
                     <div className="space-y-3">
-                      <h4 className="text-green-400 font-bold">Les 4 Piliers De La Libération :</h4>
+                      <h4 className="text-green-400 font-bold">Les 4 piliers de la libération :</h4>
                       {[
                         "IA qui travaille SANS vous (automation complète)",
                         "Dashboards qui remplacent 12 apps (consolidation)",  
