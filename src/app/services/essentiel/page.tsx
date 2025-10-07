@@ -114,50 +114,8 @@ export default async function EssentielPage() {
         </div>
       </section>
 
-      {/* Perfect For */}
-      <section className="py-20 bg-gradient-to-b from-black to-yellow-400/5">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Parfait pour <span className="text-yellow-400 font-bold">qui?</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                type: "Cabinet médical ou juridique",
-                needs: "Présence professionnelle crédible. Formulaires contact. Horaires & services. SEO local."
-              },
-              {
-                type: "Artisan local premium",
-                description: "Menuisier, électricien, maçon haut de gamme cherchant clients qualifiés."
-              },
-              {
-                type: "Restaurant gastronomique",
-                needs: "Menu élégant. Réservations. Galerie photos. SEO local 'restaurant [ville]'."
-              },
-              {
-                type: "Professionnel libéral",
-                description: "Architecte, designer, consultant nécessitant portfolio + crédibilité."
-              }
-            ].map((profile, index) => (
-              <div
-                key={index}
-                className="bg-black/60 border border-yellow-400/20 rounded-xl p-6"
-              >
-                <h3 className="text-xl font-semibold text-yellow-400 mb-3" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                  {profile.type}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {profile.needs || profile.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Process */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-gradient-to-b from-black to-yellow-400/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-16 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             Le <span className="text-yellow-400 font-bold">processus</span>
@@ -204,6 +162,48 @@ export default async function EssentielPage() {
                 {index < 2 && (
                   <div className="hidden md:block absolute top-6 left-[3.5rem] w-full h-0.5 bg-yellow-400/20"></div>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Perfect For */}
+      <section className="py-20 bg-black">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            Parfait pour <span className="text-yellow-400 font-bold">qui?</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                type: "Cabinet médical ou juridique",
+                needs: "Présence professionnelle crédible. Formulaires contact. Horaires & services. SEO local."
+              },
+              {
+                type: "Artisan local premium",
+                description: "Menuisier, électricien, maçon haut de gamme cherchant clients qualifiés."
+              },
+              {
+                type: "Restaurant gastronomique",
+                needs: "Menu élégant. Réservations. Galerie photos. SEO local 'restaurant [ville]'."
+              },
+              {
+                type: "Professionnel libéral",
+                description: "Architecte, designer, consultant nécessitant portfolio + crédibilité."
+              }
+            ].map((profile, index) => (
+              <div
+                key={index}
+                className="bg-black/60 border border-yellow-400/20 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-yellow-400 mb-3" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  {profile.type}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {profile.needs || profile.description}
+                </p>
               </div>
             ))}
           </div>

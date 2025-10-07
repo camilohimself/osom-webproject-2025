@@ -115,50 +115,8 @@ export default async function PerformancePage() {
         </div>
       </section>
 
-      {/* Perfect For */}
-      <section className="py-20 bg-gradient-to-b from-black to-purple-400/5">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Parfait pour <span className="text-purple-400 font-bold">qui?</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                type: "PME B2B en croissance",
-                needs: "Plateforme complexe 30-60 pages. API CRM. Dashboard analytics. SEO stratégique mensuel."
-              },
-              {
-                type: "E-commerce artisanal premium",
-                description: "Boutique Next.js. Paiements Stripe/Twint. Stock automatisé. SEO local + national."
-              },
-              {
-                type: "SaaS / Tech startup",
-                needs: "Site produit + landing pages. Integrations API. Analytics avancées. Scaling continu."
-              },
-              {
-                type: "Institution culturelle",
-                description: "Site 40+ pages. Calendrier automatique. Billetterie. CMS multi-utilisateurs. SEO patrimoine."
-              }
-            ].map((profile, index) => (
-              <div
-                key={index}
-                className="bg-black/60 border border-purple-400/20 rounded-xl p-6"
-              >
-                <h3 className="text-xl font-semibold text-purple-400 mb-3" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                  {profile.type}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {profile.needs || profile.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Le Partenariat Performance */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-gradient-to-b from-black to-purple-400/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-light text-white mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             Qu'est-ce qu'un <span className="text-purple-400 font-bold">partenariat Performance?</span>
@@ -196,6 +154,48 @@ export default async function PerformancePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Perfect For */}
+      <section className="py-20 bg-black">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-12 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            Parfait pour <span className="text-purple-400 font-bold">qui?</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                type: "PME B2B en croissance",
+                needs: "Plateforme complexe 30-60 pages. API CRM. Dashboard analytics. SEO stratégique mensuel."
+              },
+              {
+                type: "E-commerce artisanal premium",
+                description: "Boutique Next.js. Paiements Stripe/Twint. Stock automatisé. SEO local + national."
+              },
+              {
+                type: "SaaS / Tech startup",
+                needs: "Site produit + landing pages. Integrations API. Analytics avancées. Scaling continu."
+              },
+              {
+                type: "Institution culturelle",
+                description: "Site 40+ pages. Calendrier automatique. Billetterie. CMS multi-utilisateurs. SEO patrimoine."
+              }
+            ].map((profile, index) => (
+              <div
+                key={index}
+                className="bg-black/60 border border-purple-400/20 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-purple-400 mb-3" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  {profile.type}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {profile.needs || profile.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
