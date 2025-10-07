@@ -38,8 +38,8 @@ export default async function ServicesPage() {
       name: "Performance",
       tagline: "Partenariat actif",
       priceOptions: [
-        { duration: "6 mois", total: "10,000 CHF", monthly: "1,667 CHF/mois" },
-        { duration: "12 mois", total: "18,000 CHF", monthly: "1,500 CHF/mois", popular: true }
+        { duration: "6 mois", total: "27,000 CHF", monthly: "4,500 CHF/mois" },
+        { duration: "12 mois", total: "48,000 CHF", monthly: "4,000 CHF/mois", popular: true }
       ],
       description: "Projets complexes 30-60 pages + API + SEO stratégique continu",
       features: [

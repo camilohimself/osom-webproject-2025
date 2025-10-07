@@ -9,7 +9,7 @@ export default function HeroPerformanceTest() {
   return (
     <div className="min-h-screen bg-black">
       {/* Navigation entre directions */}
-      <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 flex gap-2 bg-black/80 backdrop-blur-sm border border-purple-400/30 rounded-full px-6 py-3">
+      <div className="fixed top-20 left-1/2 -translate-x-1/2 z-[100] flex gap-2 bg-black/80 backdrop-blur-sm border border-purple-400/30 rounded-full px-6 py-3">
         <button
           onClick={() => setActiveDirection(1)}
           className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
@@ -18,7 +18,7 @@ export default function HeroPerformanceTest() {
               : 'bg-transparent text-purple-400 hover:bg-purple-400/10'
           }`}
         >
-          VISUEL
+          PARTENARIAT
         </button>
         <button
           onClick={() => setActiveDirection(2)}
@@ -28,7 +28,7 @@ export default function HeroPerformanceTest() {
               : 'bg-transparent text-purple-400 hover:bg-purple-400/10'
           }`}
         >
-          MINIMALISTE
+          VOYAGE
         </button>
         <button
           onClick={() => setActiveDirection(3)}
@@ -38,264 +38,248 @@ export default function HeroPerformanceTest() {
               : 'bg-transparent text-purple-400 hover:bg-purple-400/10'
           }`}
         >
-          CONCRET
+          PROMESSE
         </button>
       </div>
 
-      {/* DIRECTION 1 - LE VISUEL (Tableau, Galerie d'art) */}
+      {/* DIRECTION 1 - LE PARTENARIAT - Main dans la main */}
       {activeDirection === 1 && (
-        <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">
-          {/* Lumière dramatique */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-400/10 rounded-full blur-[120px] animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-[120px] animate-pulse" style={{animationDelay: '1s'}}></div>
-          </div>
+        <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-400/5 via-black to-black"></div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            {/* Badge subtil */}
-            <div className="flex items-center justify-center mb-12 opacity-60">
-              <div className="w-1 h-1 rounded-full bg-purple-400 mr-2"></div>
-              <span className="text-purple-400 text-xs font-light tracking-[0.3em] uppercase">Package Performance</span>
-              <span className="ml-3 bg-purple-400/10 border border-purple-400/30 text-purple-300 text-[10px] font-bold px-3 py-1 rounded-full tracking-wider">POPULAIRE</span>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-8">
+              <div className="text-xs text-purple-400 font-mono tracking-[0.3em] uppercase mb-6 opacity-60">Direction 1 — Le Partenariat</div>
             </div>
 
-            {/* Typo MONUMENTALE avec lumière */}
-            <h1 className="relative mb-8" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              <div className="text-[8vw] md:text-[10vw] lg:text-[12vw] font-light text-white/10 leading-none mb-[-1em] tracking-tight">
-                PROJETS
-              </div>
-              <div className="text-[10vw] md:text-[12vw] lg:text-[14vw] font-bold leading-none tracking-tighter">
-                <span className="bg-gradient-to-br from-purple-200 via-purple-400 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_60px_rgba(168,85,247,0.4)]">
-                  COMPLEXES
-                </span>
-              </div>
-              <div className="text-[6vw] md:text-[7vw] lg:text-[8vw] font-light text-white/90 leading-none mt-4 tracking-wide">
-                + Partenariat
-              </div>
-            </h1>
+            {/* Hero centré autour de l'accompagnement */}
+            <div className="text-center space-y-8">
+              <h1 className="space-y-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                {/* "6 MOIS" ÉNORME pour ancrer la durée */}
+                <div className="text-[16vw] md:text-[20vw] lg:text-[24vw] font-black leading-[0.8] tracking-[-0.04em] text-white">
+                  6 MOIS
+                </div>
 
-            <p className="text-xl md:text-2xl text-gray-400 mb-16 max-w-4xl mx-auto font-light leading-relaxed opacity-80">
-              30-60 pages. API & dashboards. SEO stratégique. Partenariat actif continu 6-12 mois.
-            </p>
+                {/* "Main dans la main" en cursif/script pour l'humain */}
+                <div className="text-[6vw] md:text-[7vw] lg:text-[8vw] font-light italic leading-none text-purple-400/80">
+                  main dans la main
+                </div>
 
-            {/* CTAs galerie */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="group relative bg-gradient-to-r from-purple-400 to-purple-600 text-black px-12 py-5 rounded-sm overflow-hidden font-bold text-lg transition-all duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.6)]"
-              >
-                <span className="relative z-10">Démarrer mon projet Performance</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </Link>
-              <Link
-                href="#why-performance"
-                className="border border-purple-400/30 text-purple-300 px-12 py-5 rounded-sm hover:bg-purple-400/5 hover:border-purple-400/60 transition-all duration-500 font-medium backdrop-blur-sm"
-              >
-                Pourquoi Performance?
-              </Link>
-            </div>
+                {/* Objectif clair */}
+                <div className="text-[8vw] md:text-[10vw] lg:text-[12vw] font-black leading-[0.85] tracking-[-0.02em] mt-6">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-purple-400">
+                    DÉCOLLAGE
+                  </span>
+                </div>
+              </h1>
 
-            {/* Prix discret en bas */}
-            <div className="mt-20 text-sm text-gray-500 font-light">
-              À partir de <span className="text-purple-400 font-semibold">4,000 CHF/mois</span>
+              <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                Pas un site livré puis oublié. Un partenariat actif où on travaille ensemble chaque mois sur votre croissance digitale : développement, SEO, analytics, stratégie.
+              </p>
+
+              {/* Timeline visuelle simple */}
+              <div className="flex items-center justify-center gap-3 pt-8">
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className="flex flex-col items-center gap-2">
+                    <div className={`w-3 h-3 rounded-full ${i === 0 ? 'bg-purple-400' : 'bg-purple-400/30'}`}></div>
+                    <span className="text-xs text-gray-600 font-mono">M{i + 1}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+                <Link
+                  href="/contact"
+                  className="bg-purple-400 text-black px-12 py-5 rounded-lg hover:bg-purple-500 transition-all duration-300 font-bold text-lg"
+                >
+                  Démarrer partenariat
+                </Link>
+                <Link
+                  href="#why-performance"
+                  className="border-2 border-purple-400/40 text-purple-300 px-12 py-5 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-medium"
+                >
+                  Comment ça marche?
+                </Link>
+              </div>
             </div>
           </div>
 
           {/* Label direction */}
           <div className="absolute bottom-8 right-8 text-xs text-gray-600 font-mono">
-            DIRECTION 1 — LE VISUEL
+            DIRECTION 1 — LE PARTENARIAT
           </div>
         </section>
       )}
 
-      {/* DIRECTION 2 - LE MINIMALISTE (Plans d'architecte) */}
+      {/* DIRECTION 2 - LE VOYAGE - De 0 au sommet */}
       {activeDirection === 2 && (
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-          {/* Grille technique subtile */}
-          <div className="absolute inset-0 opacity-[0.02]">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `
-                linear-gradient(0deg, transparent 24%, rgba(168, 85, 247, .05) 25%, rgba(168, 85, 247, .05) 26%, transparent 27%, transparent 74%, rgba(168, 85, 247, .05) 75%, rgba(168, 85, 247, .05) 76%, transparent 77%, transparent),
-                linear-gradient(90deg, transparent 24%, rgba(168, 85, 247, .05) 25%, rgba(168, 85, 247, .05) 26%, transparent 27%, transparent 74%, rgba(168, 85, 247, .05) 75%, rgba(168, 85, 247, .05) 76%, transparent 77%, transparent)
-              `,
-              backgroundSize: '50px 50px'
-            }} />
+          <div className="absolute inset-0">
+            {/* Montagne stylisée en arrière-plan */}
+            <svg className="absolute bottom-0 left-0 w-full h-1/2 opacity-5" viewBox="0 0 1000 400" preserveAspectRatio="none">
+              <path d="M0,400 L0,200 L200,150 L400,80 L600,120 L800,60 L1000,100 L1000,400 Z" fill="url(#mountain-gradient)" />
+              <defs>
+                <linearGradient id="mountain-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#a855f7" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="#a855f7" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
 
-          {/* Lignes de construction */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
-            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
-            <div className="absolute top-3/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
-            <div className="absolute top-0 left-1/4 w-[1px] h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent"></div>
-            <div className="absolute top-0 left-1/2 w-[1px] h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent"></div>
-            <div className="absolute top-0 left-3/4 w-[1px] h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent"></div>
-          </div>
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            {/* Badge technique */}
-            <div className="flex items-center justify-center mb-16">
-              <div className="border border-purple-400/30 px-4 py-1 rounded-none">
-                <span className="text-purple-400 text-[10px] font-mono tracking-[0.4em] uppercase">PKG.PERFORMANCE</span>
-                <span className="ml-3 text-purple-300 text-[10px] font-mono">v2.0</span>
-              </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-8">
+              <div className="text-xs text-purple-400 font-mono tracking-[0.3em] uppercase mb-6 opacity-60">Direction 2 — Le Voyage</div>
             </div>
 
-            {/* Typo MASSIVE minimaliste */}
-            <h1 className="mb-12" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              <div className="text-[12vw] md:text-[14vw] lg:text-[16vw] font-black leading-[0.85] tracking-[-0.02em] text-white mb-4">
-                PROJETS
-              </div>
-              <div className="text-[14vw] md:text-[16vw] lg:text-[18vw] font-black leading-[0.85] tracking-[-0.02em] mb-4">
-                <span className="text-purple-400">COMPLEXES</span>
-              </div>
-              <div className="flex items-center justify-center gap-6 text-[6vw] md:text-[7vw] lg:text-[8vw] font-light text-white/80 tracking-tight">
-                <div className="w-16 h-[2px] bg-purple-400/50"></div>
-                <span>PARTENARIAT</span>
-                <div className="w-16 h-[2px] bg-purple-400/50"></div>
-              </div>
-            </h1>
+            {/* Hero axé sur la transformation */}
+            <div className="text-center space-y-12">
+              <h1 className="space-y-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                {/* Point de départ */}
+                <div className="text-[5vw] md:text-[6vw] lg:text-[7vw] font-light text-gray-600 leading-tight flex items-center justify-center gap-8">
+                  <span>VOTRE PROJET</span>
+                  <span className="text-purple-400/40">AUJOURD'HUI</span>
+                </div>
 
-            <p className="text-lg md:text-xl text-gray-500 mb-16 max-w-3xl mx-auto font-mono text-sm tracking-wide leading-relaxed">
-              30-60_PAGES // API_DASHBOARDS // SEO_STRATEGIQUE // 6-12_MOIS
-            </p>
+                {/* Flèche ascendante symbolique */}
+                <div className="flex justify-center my-8">
+                  <svg className="w-16 h-32 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 48">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 44 L12 4 M12 4 L6 10 M12 4 L18 10" />
+                  </svg>
+                </div>
 
-            {/* CTAs minimalistes */}
-            <div className="flex flex-col sm:flex-row gap-0 justify-center">
-              <Link
-                href="/contact"
-                className="bg-purple-400 text-black px-16 py-6 rounded-none font-black text-sm tracking-wider hover:bg-purple-500 transition-colors duration-300 uppercase"
-              >
-                Démarrer projet
-              </Link>
-              <Link
-                href="#why-performance"
-                className="border-2 border-purple-400 text-purple-400 px-16 py-6 rounded-none font-black text-sm tracking-wider hover:bg-purple-400 hover:text-black transition-all duration-300 uppercase"
-              >
-                Détails
-              </Link>
-            </div>
+                {/* Point d'arrivée MASSIF */}
+                <div className="text-[12vw] md:text-[15vw] lg:text-[18vw] font-black leading-[0.8] tracking-[-0.03em]">
+                  <div className="text-white">SOMMET</div>
+                  <div className="text-purple-400 mt-2">DIGITAL</div>
+                </div>
+              </h1>
 
-            {/* Prix architectural */}
-            <div className="mt-20 flex items-center justify-center gap-4 text-xs text-gray-600 font-mono">
-              <div className="w-8 h-[1px] bg-purple-400/30"></div>
-              <span>FROM_4000_CHF/MONTH</span>
-              <div className="w-8 h-[1px] bg-purple-400/30"></div>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+                <span className="text-purple-400 font-semibold">6 à 12 mois</span> d'accompagnement stratégique pour transformer votre présence digitale en machine d'acquisition clients.
+              </p>
+
+              {/* Étapes clés du voyage */}
+              <div className="grid grid-cols-3 gap-6 max-w-4xl mx-auto pt-12">
+                <div className="text-center">
+                  <div className="text-4xl font-black text-purple-400/30 mb-2">01</div>
+                  <div className="text-sm text-gray-500">Fondations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-black text-purple-400/60 mb-2">02</div>
+                  <div className="text-sm text-gray-400">Croissance</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-black text-purple-400 mb-2">03</div>
+                  <div className="text-sm text-gray-300">Domination</div>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+                <Link
+                  href="/contact"
+                  className="bg-purple-400 text-black px-12 py-5 rounded-lg hover:bg-purple-500 transition-all duration-300 font-bold text-lg"
+                >
+                  Commencer l'ascension
+                </Link>
+                <Link
+                  href="#why-performance"
+                  className="border-2 border-purple-400/40 text-purple-300 px-12 py-5 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-medium"
+                >
+                  Voir le parcours
+                </Link>
+              </div>
             </div>
           </div>
 
           {/* Label direction */}
           <div className="absolute bottom-8 right-8 text-xs text-gray-600 font-mono">
-            DIRECTION 2 — LE MINIMALISTE
+            DIRECTION 2 — LE VOYAGE
           </div>
         </section>
       )}
 
-      {/* DIRECTION 3 - LE CONCRET (Comptable, chiffres durs) */}
+      {/* DIRECTION 3 - LA PROMESSE - Engagement clair */}
       {activeDirection === 3 && (
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-          {/* Background data subtil */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0 text-purple-400 text-xs font-mono p-8 overflow-hidden leading-loose">
-              {Array.from({ length: 50 }).map((_, i) => (
-                <div key={i}>
-                  27,000 CHF • 48,000 CHF • 4,500/mois • ROI 300% • 30-60 pages • API • Dashboards • SEO •
-                </div>
-              ))}
-            </div>
+          <div className="absolute inset-0">
+            {/* Effet de lumière qui se renforce */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-400/5 rounded-full blur-3xl"></div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            {/* Badge data */}
-            <div className="inline-flex items-center gap-3 mb-12 bg-purple-400/10 border border-purple-400/30 px-6 py-2 rounded-full">
-              <span className="text-purple-400 text-xs font-semibold tracking-wide uppercase">Package Performance</span>
-              <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
-              <span className="text-purple-300 text-xs font-bold">POPULAIRE</span>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-8">
+              <div className="text-xs text-purple-400 font-mono tracking-[0.3em] uppercase mb-6 opacity-60">Direction 3 — La Promesse</div>
             </div>
 
-            {/* Typo GÉANTE avec data intégrée */}
-            <h1 className="mb-12" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              <div className="text-[10vw] md:text-[12vw] lg:text-[14vw] font-black leading-none tracking-tight text-white mb-2">
-                PROJETS
-              </div>
-
-              {/* Data KPIs intégrés */}
-              <div className="flex items-center justify-center gap-6 mb-2 flex-wrap">
-                <div className="bg-purple-400/10 border border-purple-400/30 px-4 py-2 rounded-lg">
-                  <div className="text-purple-400 text-xs font-mono">PAGES</div>
-                  <div className="text-white text-2xl font-bold">30-60</div>
+            {/* Hero comme un engagement contractuel */}
+            <div className="text-center space-y-10">
+              <h1 className="space-y-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                {/* L'engagement temporel */}
+                <div className="text-[10vw] md:text-[12vw] lg:text-[14vw] font-black leading-[0.85] tracking-[-0.03em] text-white">
+                  6-12 MOIS
                 </div>
-                <div className="bg-purple-400/10 border border-purple-400/30 px-4 py-2 rounded-lg">
-                  <div className="text-purple-400 text-xs font-mono">API</div>
-                  <div className="text-white text-2xl font-bold">✓</div>
+
+                {/* L'intensité de l'accompagnement */}
+                <div className="text-[5vw] md:text-[6vw] lg:text-[7vw] font-light text-gray-400 leading-tight">
+                  ENSEMBLE
                 </div>
-                <div className="bg-purple-400/10 border border-purple-400/30 px-4 py-2 rounded-lg">
-                  <div className="text-purple-400 text-xs font-mono">MOIS</div>
-                  <div className="text-white text-2xl font-bold">6-12</div>
+
+                {/* Le résultat garanti */}
+                <div className="flex flex-col items-center gap-4 mt-8">
+                  <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+                  <div className="text-[8vw] md:text-[10vw] lg:text-[12vw] font-black leading-[0.85] tracking-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
+                      CROISSANCE
+                    </span>
+                  </div>
+                  <div className="text-[8vw] md:text-[10vw] lg:text-[12vw] font-black leading-[0.85] tracking-tight text-white">
+                    MESURABLE
+                  </div>
+                  <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
                 </div>
+              </h1>
+
+              {/* Le contrat en une phrase */}
+              <div className="max-w-4xl mx-auto bg-gradient-to-r from-purple-400/10 via-purple-400/5 to-purple-400/10 border border-purple-400/20 rounded-xl px-8 py-8 mt-12">
+                <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+                  <span className="text-purple-400 font-bold">Mon engagement :</span> travailler activement chaque mois sur votre développement, SEO, analytics et stratégie digitale jusqu'à ce que votre projet <span className="text-white font-semibold">décolle vraiment</span>.
+                </p>
               </div>
 
-              <div className="text-[12vw] md:text-[14vw] lg:text-[16vw] font-black leading-none tracking-tight mb-4">
-                <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-                  COMPLEXES
-                </span>
+              {/* Compteur mensuel visuel */}
+              <div className="flex flex-wrap items-center justify-center gap-4 pt-12">
+                {['DEV', 'SEO', 'ANALYTICS', 'SUPPORT', 'STRATÉGIE', 'OPTIMISATION'].map((service, i) => (
+                  <div key={i} className="bg-purple-400/10 border border-purple-400/30 px-4 py-2 rounded-md">
+                    <span className="text-xs text-purple-400 font-mono">{service}</span>
+                    <span className="ml-2 text-xs text-gray-500">→ CHAQUE MOIS</span>
+                  </div>
+                ))}
               </div>
 
-              <div className="text-[6vw] md:text-[7vw] lg:text-[8vw] font-bold text-white/90 leading-none tracking-tight">
-                + PARTENARIAT ACTIF
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+                <Link
+                  href="/contact"
+                  className="bg-purple-400 text-black px-12 py-5 rounded-lg hover:bg-purple-500 transition-all duration-300 font-bold text-lg"
+                >
+                  Engageons-nous
+                </Link>
+                <Link
+                  href="#why-performance"
+                  className="border-2 border-purple-400/40 text-purple-300 px-12 py-5 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-medium"
+                >
+                  Voir l'engagement
+                </Link>
               </div>
-            </h1>
-
-            {/* Pricing TRÈS visible */}
-            <div className="mb-12 flex items-center justify-center gap-8 flex-wrap">
-              <div className="bg-gradient-to-br from-purple-400/20 to-purple-600/20 border-2 border-purple-400/40 rounded-xl px-8 py-6">
-                <div className="text-gray-400 text-xs font-mono mb-1">6 MOIS</div>
-                <div className="text-5xl font-black text-purple-400 mb-1">4,500</div>
-                <div className="text-gray-500 text-xs font-mono">CHF/MOIS</div>
-                <div className="text-gray-600 text-[10px] font-mono mt-2">TOTAL: 27,000 CHF</div>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-400/30 to-purple-600/30 border-2 border-purple-400/60 rounded-xl px-8 py-6 relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-400 text-black text-[10px] font-black px-3 py-1 rounded-full">
-                  MEILLEUR PRIX
-                </div>
-                <div className="text-gray-400 text-xs font-mono mb-1">12 MOIS</div>
-                <div className="text-6xl font-black text-purple-400 mb-1">4,000</div>
-                <div className="text-gray-500 text-xs font-mono">CHF/MOIS</div>
-                <div className="text-gray-600 text-[10px] font-mono mt-2">TOTAL: 48,000 CHF</div>
-              </div>
-            </div>
-
-            <p className="text-base text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Dev + SEO stratégique + Support premium + Dashboards personnalisés inclus chaque mois
-            </p>
-
-            {/* CTAs data-driven */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-purple-400 text-black px-12 py-5 rounded-lg font-black text-base hover:bg-purple-500 hover:shadow-2xl hover:shadow-purple-400/40 transition-all duration-300 uppercase tracking-wide"
-              >
-                Démarrer projet Performance
-              </Link>
-              <Link
-                href="#why-performance"
-                className="border-2 border-purple-400/50 text-purple-300 px-12 py-5 rounded-lg hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300 font-semibold backdrop-blur-sm uppercase tracking-wide"
-              >
-                Voir détails techniques
-              </Link>
-            </div>
-
-            {/* ROI indicator */}
-            <div className="mt-16 inline-flex items-center gap-3 text-sm text-gray-500 font-mono">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span>ROI_MOYEN: <span className="text-green-400 font-bold">300%+</span></span>
             </div>
           </div>
 
           {/* Label direction */}
           <div className="absolute bottom-8 right-8 text-xs text-gray-600 font-mono">
-            DIRECTION 3 — LE CONCRET
+            DIRECTION 3 — LA PROMESSE
           </div>
         </section>
       )}
