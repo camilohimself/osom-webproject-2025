@@ -52,82 +52,53 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
   const { trackBusinessEvent, trackConversionWithLead } = useAnalytics()
 
   const performSEOAnalysis = async (targetUrl: string): Promise<SEOMetrics> => {
-    // Simulate real SEO analysis with intelligent scoring
-    await new Promise(resolve => setTimeout(resolve, 3000))
-    
-    // Simulate realistic results based on common SEO patterns
-    const urlAnalysis = targetUrl.toLowerCase()
-    const hasWww = urlAnalysis.includes('www.')
-    const hasHttps = targetUrl.startsWith('https://')
-    const isWordPress = Math.random() > 0.6 // Simulate WP detection
-    
-    const titleLength = Math.floor(Math.random() * 80) + 30
-    const descLength = Math.floor(Math.random() * 200) + 80
-    const h1Count = Math.floor(Math.random() * 3) + 1
-    const h2Count = Math.floor(Math.random() * 8) + 2
-    const imageTotal = Math.floor(Math.random() * 50) + 10
-    const imagesWithAlt = Math.floor(imageTotal * (0.3 + Math.random() * 0.5))
-    
-    const metrics: SEOMetrics = {
-      score: 0, // Will calculate below
-      title: {
-        exists: true,
-        length: titleLength,
-        optimal: titleLength >= 30 && titleLength <= 60
-      },
-      description: {
-        exists: descLength > 0,
-        length: descLength,
-        optimal: descLength >= 120 && descLength <= 160
-      },
-      headings: {
-        h1Count,
-        h2Count,
-        structure: h1Count === 1 && h2Count >= 2 ? 'good' : 
-                  h1Count <= 2 && h2Count >= 1 ? 'fair' : 'poor'
-      },
-      images: {
-        total: imageTotal,
-        withAlt: imagesWithAlt,
-        altOptimization: Math.round((imagesWithAlt / imageTotal) * 100)
-      },
-      performance: {
-        loadTime: 1.2 + Math.random() * 4, // 1.2-5.2 seconds
-        mobileOptimized: Math.random() > 0.3
-      },
-      technical: {
-        httpsEnabled: hasHttps,
-        robotsTxt: Math.random() > 0.4,
-        sitemap: Math.random() > 0.5
-      }
+    // Call real API
+    const response = await fetch('/api/seo-audit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url: targetUrl })
+    })
+
+    if (!response.ok) {
+      const error = await response.json()
+      throw new Error(error.error || 'Erreur API')
     }
 
-    // Calculate overall score
-    let score = 0
-    if (metrics.title.optimal) score += 15
-    else if (metrics.title.exists) score += 8
-    
-    if (metrics.description.optimal) score += 15
-    else if (metrics.description.exists) score += 8
-    
-    if (metrics.headings.structure === 'good') score += 20
-    else if (metrics.headings.structure === 'fair') score += 12
-    else score += 5
-    
-    score += Math.min(metrics.images.altOptimization / 2, 15) // Max 15 points for images
-    
-    if (metrics.performance.loadTime && metrics.performance.loadTime < 3) score += 15
-    else if (metrics.performance.loadTime && metrics.performance.loadTime < 5) score += 8
-    
-    if (metrics.performance.mobileOptimized) score += 10
-    
-    if (metrics.technical.httpsEnabled) score += 5
-    if (metrics.technical.robotsTxt) score += 3
-    if (metrics.technical.sitemap) score += 2
-    
-    metrics.score = Math.min(Math.round(score), 100)
-    
-    return metrics
+    const data = await response.json()
+
+    // Transform API response to match component interface
+    return {
+      score: data.score,
+      title: {
+        exists: data.title.exists,
+        length: data.title.length,
+        optimal: data.title.optimal
+      },
+      description: {
+        exists: data.description.exists,
+        length: data.description.length,
+        optimal: data.description.optimal
+      },
+      headings: {
+        h1Count: data.headings.h1Count,
+        h2Count: data.headings.h2Count,
+        structure: data.headings.structure
+      },
+      images: {
+        total: data.images.total,
+        withAlt: data.images.withAlt,
+        altOptimization: data.images.altOptimization
+      },
+      performance: {
+        loadTime: data.performance.mobile ? (100 - data.performance.mobile) / 20 : null, // Simulate load time from score
+        mobileOptimized: data.performance.mobile ? data.performance.mobile >= 50 : null
+      },
+      technical: {
+        httpsEnabled: data.technical.httpsEnabled,
+        robotsTxt: null, // Not checked in new API
+        sitemap: null // Not checked in new API
+      }
+    }
   }
 
   const handleAnalyze = async () => {

@@ -1,8 +1,91 @@
 # OSOM - Premium Craftsman Développeur Web Valais
 
-## 📅 DERNIÈRES MODIFICATIONS (7 Octobre 2025)
+## 📅 DERNIÈRES MODIFICATIONS (8 Octobre 2025)
 
-### ✅ SESSION COMPLÉTÉE - Optimisations UX & Typographie
+### ✅ SESSION COMPLÉTÉE - Hero Performance + Audit SEO Réel
+
+#### 1. **Hero Performance Editorial "VOYAGE"**
+**Commit**: `d504e2f` - "Integration hero VOYAGE editorial + update pricing Performance"
+
+**Objectif**: Storytelling partenariat 6-12 mois avec design magazine mode
+
+**Design magazine éditorial**:
+- Asymétrique 7/5 colonnes
+- Typography proportionnée (10vw max, réduit de 18vw)
+- Grid magazine subtil (opacity 0.015)
+- Accents géométriques purple/20
+- Rythme visuel avec phases 01/02/03 (text-6xl)
+- Offset 20% droite pour tension éditoriale
+
+**Storytelling**: Votre projet AUJOURD'HUI → [flèche élégante] → SOMMET DIGITAL
+
+**Structure phases**:
+- 01 - Fondations solides
+- 02 - Momentum digital
+- 03 - Performance peak
+
+**Pages modifiées**:
+- `/services/performance/page.tsx`: Hero complet remplacé (lignes 19-145)
+- `/services/page.tsx`: Prix Performance mis à jour (27K/48K CHF)
+
+---
+
+#### 2. **Audit SEO Réel - Transformation Complète**
+**Fichiers créés/modifiés**:
+- `/src/app/api/seo-audit/route.ts` (NOUVEAU - 325 lignes)
+- `/src/components/tools/SEOAuditTool.tsx` (API call réel remplace simulation)
+- `/src/app/outils/page.tsx` (texte adapté pour API réelle)
+- `package.json` (cheerio installé)
+
+**Fonctionnalités réelles implémentées**:
+
+**Google PageSpeed Insights API**:
+- Scores mobile/desktop performance réels
+- Extraction recommendations Lighthouse (FCP, LCP, CLS)
+- Cache 1h (revalidate: 3600)
+- Graceful degradation si API key manquante
+
+**Scraping HTML avec Cheerio**:
+- Meta tags: title, description (+ OpenGraph fallback)
+- Structure Hn: H1, H2, H3 counts + extraction texte
+- Images: total, avec/sans ALT, liste 5 premiers sans ALT
+- Technical: canonical, viewport, lang tag, HTTPS
+
+**Scoring algorithm réel**:
+- Title optimal (50-60 chars): 20 points
+- Description optimale (120-160 chars): 20 points
+- Structure H1 (exactement 1): 15 points
+- Images ALT optimization: 15 points
+- Performance mobile/desktop (90+): 20 points
+- Technical (HTTPS, canonical, viewport, lang): 10 points
+- **Total**: 100 points
+
+**Recommendations personnalisées**:
+- Title trop long/court → suggestion précise
+- Description inadéquate → guidance optimale
+- H1 manquant/multiple → règle SEO
+- Images sans ALT → quantité + exemples
+- Performance mobile critique → actions concrètes
+- Recommendations Lighthouse intégrées
+
+**Test validation (https://osom.ch)**:
+```
+Score: 63/100
+Title: 62 caractères (légèrement long)
+Description: 139 caractères ✅ optimal
+H1: 0 (problème détecté)
+Images: 2/2 avec ALT ✅
+Technical: HTTPS ✅, Canonical ✅, Viewport ✅, Lang ✅
+Recommendations:
+- Raccourcir le titre (optimal: 50-60 caractères)
+- Utiliser exactement 1 balise H1 par page
+```
+
+**Lead magnet professionnel**: Audit gratuit → capture email → recommendations détaillées
+
+---
+
+### ✅ SESSION PRÉCÉDENTE (7 Octobre 2025) - Optimisations UX & Typographie
 
 #### 1. **Refonte Affichage Pricing (Approche Douce)**
 **Commit**: `64197fa` - "Refonte affichage pricing: approche douce avec prix mensuels"
@@ -165,11 +248,11 @@ Ce n'est PAS "18,000 CHF projet + 1,800 CHF/mois support optionnel". C'est **18,
 
 ---
 
-### 2. Performance (10,000 - 18,000 CHF)
+### 2. Performance (27,000 - 48,000 CHF)
 **Durée**: 6-12 mois
 **Pricing mensuel**:
-- 6 mois = 10,000 CHF total = **1,667 CHF/mois**
-- 12 mois = 18,000 CHF total = **1,500 CHF/mois** (MEILLEUR PRIX)
+- 6 mois = 27,000 CHF total = **4,500 CHF/mois**
+- 12 mois = 48,000 CHF total = **4,000 CHF/mois** (MEILLEUR PRIX)
 
 **Pour**: PME B2B, e-commerce premium, SaaS/tech startup, institutions culturelles
 **Inclus**: 30-60 pages complexes, API & integrations (CRM, paiements, calendriers), Dashboard personnalisé, SEO stratégique mensuel continu, Support premium 48h, Partenariat actif (dev + SEO + optimisations chaque mois)
@@ -261,6 +344,7 @@ Ce n'est PAS "18,000 CHF projet + 1,800 CHF/mois support optionnel". C'est **18,
 - **API Integrations**: Google Calendar, CRM, Analytics (custom)
 - **Dashboards**: Analytics temps réel personnalisés par métier
 - **SEO Local**: Hyper-local Valais (Sion, Sierre, Martigny, etc.)
+- **SEO Audit Tool**: Google PageSpeed Insights + Cheerio scraping réel (lead magnet)
 
 ---
 
@@ -404,12 +488,15 @@ git add -A && git commit -m "message" && git push  # Déploiement auto Vercel
 - Pricing UX: Approche douce mensuelle appliquée (commit 64197fa)
 - UX Flow: Ordre sections optimisé (commit 791a5c8)
 - Typographie: Majuscules multiples corrigées (commit c690ce5)
+- Hero Performance: Design magazine éditorial VOYAGE (commit d504e2f)
+- Audit SEO: API réelle Google PageSpeed + Cheerio scraping (commit d504e2f)
 
 ### 🎯 Priorités Actuelles
+- [ ] Configurer GOOGLE_PAGESPEED_API_KEY pour scores performance réels
+- [ ] Ajouter génération PDF rapport audit (phase 2)
 - [ ] Finaliser case study JDWaeber (après déploiement projet)
 - [ ] Enrichir portfolio: 5+ case studies avec GA4 data
 - [ ] Blog activation: Réactiver menu + articles existants
-- [ ] Performance monitoring: Real-time metrics setup
 
 ---
 
@@ -456,4 +543,4 @@ Cette séquence suit le parcours mental du visiteur:
 
 ---
 
-*Dernière mise à jour: 7 Octobre 2025 - Optimisations UX (pricing, flow, typographie) + audit coordonnées complet*
+*Dernière mise à jour: 8 Octobre 2025 - Hero Performance VOYAGE + Audit SEO réel API (Google PageSpeed + Cheerio)*

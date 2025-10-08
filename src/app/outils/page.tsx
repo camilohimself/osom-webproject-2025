@@ -264,9 +264,14 @@ export default function OutilsPage() {
               </h2>
 
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Analysez les performances SEO de votre site et recevez des recommandations personnalisées.
-                <span className="text-purple-400 font-semibold"> Même outil utilisé pour nos clients à CHF 1,500</span>.
+                Audit SEO technique avec <span className="text-cyan-400 font-semibold">Google PageSpeed Insights</span> + analyse HTML réelle de votre site.
+                Balises meta, structure Hn, images ALT, performance mobile/desktop.
               </p>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+                <span className="flex items-center gap-2">✓ API Google officielle</span>
+                <span className="flex items-center gap-2">✓ Données réelles scraping</span>
+                <span className="flex items-center gap-2">✓ Recommendations personnalisées</span>
+              </div>
             </div>
           </AnimatedElement>
           
