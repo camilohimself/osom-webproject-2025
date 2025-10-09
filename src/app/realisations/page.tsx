@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { InteractiveCaseStudy } from '@/components/portfolio'
+import { InteractiveCaseStudy, ProjectCardMinimal } from '@/components/portfolio'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import IconeOSOM from '@/components/IconeOSOM'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
@@ -518,6 +518,95 @@ const RealisationsPage = () => {
                 <p className="text-gray-300">Chaque action justifiée par la data, chaque investissement avec retour quantifiable.</p>
               </motion.div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Projets Web Live Section - NOUVEAU */}
+      <section className="py-32 bg-gradient-to-br from-black via-purple-900/5 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex items-center justify-center mb-6">
+              <motion.div
+                className="w-2 h-2 rounded-full bg-purple-500 mr-3"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  opacity: [0.7, 1, 0.7]
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <span className="text-purple-400 text-sm font-medium tracking-wide uppercase">
+                Projets Web Live • Sites en Production
+              </span>
+            </div>
+
+            <h2
+              className="text-4xl md:text-5xl font-light text-white mb-6"
+              style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
+            >
+              Nos <span className="text-purple-400 font-bold">Créations Digitales</span>
+            </h2>
+
+            <p
+              className="text-xl text-gray-300 max-w-3xl mx-auto"
+              style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
+            >
+              Sites web sur mesure en production. Architecture Next.js premium, design élégant, performances optimales.
+            </p>
+          </motion.div>
+
+          {/* Projects Grid - Minimaliste */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {/* Maîtrise Cathédrale */}
+            <ProjectCardMinimal
+              title="Maîtrise Cathédrale"
+              subtitle="Institution Culturelle • Sion"
+              liveUrl="https://maitrise-cathedrale.ch"
+              screenshot="/projects/maitrise-logo.jpg"
+              accentColor="#9333EA"
+            />
+
+            {/* JD Waeber */}
+            <ProjectCardMinimal
+              title="Jean-David Waeber"
+              subtitle="Organiste & Chef de Chœur"
+              liveUrl="https://jdwaeber.ch"
+              screenshot="/projects/jdw-portrait.jpg"
+              accentColor="#D4A574"
+            />
+
+            {/* Culture Peinture */}
+            <ProjectCardMinimal
+              title="Culture Peinture"
+              subtitle="14x ROI • 688 Conversions"
+              liveUrl="/realisations#culture-peinture"
+              accentColor="#10B981"
+            />
+          </div>
+
+          {/* CTA */}
+          <motion.div
+            className="text-center mt-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <a
+              href="/contact"
+              className="inline-block bg-purple-600 hover:bg-purple-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300"
+            >
+              Discuter de votre projet web →
+            </a>
           </motion.div>
         </div>
       </section>
