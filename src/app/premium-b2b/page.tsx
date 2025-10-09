@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Solutions Premium B2B | OSOM - Expertise Technique Valais',
-  description: 'Packages premium B2B pour entreprises techniques. ROI 300-600% garanti. Dashboard performance + SEO complexe. H-Séchement : +150% visibilité.',
+  description: 'Packages premium B2B pour entreprises techniques. ROI 300-600% garanti. Dashboard performance + SEO complexe. +150% visibilité moyenne clients.',
   keywords: 'agence b2b valais, seo technique, dashboard performance, marketing b2b suisse'
 }
 
@@ -22,7 +22,7 @@ export default function PremiumB2BPage() {
               <span className="text-purple-600"> en machine à leads qualifiés</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Seule agence VALAIS avec preuves mesurables : H-Séchement +150% visibilité, 
+              Seule agence VALAIS avec preuves mesurables : +150% visibilité client B2B,
               LMDI 3.45% CTR. Expertise technique + IA = ROI 300-600% garanti.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -51,18 +51,18 @@ export default function PremiumB2BPage() {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {/* H-Séchement Case Study */}
+            {/* Client B2B Anonyme */}
             <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">H</span>
+                  <span className="text-white font-bold">B2B</span>
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-bold text-lg">H-Séchement Sàrl</h3>
-                  <p className="text-gray-600">Entreprise technique B2B</p>
+                  <h3 className="font-bold text-lg">Client B2B Technique</h3>
+                  <p className="text-gray-600">Entreprise services techniques</p>
                 </div>
               </div>
-              
+
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Position Google</span>
@@ -77,10 +77,10 @@ export default function PremiumB2BPage() {
                   <span className="font-bold text-yellow-400">30-60k CHF/mois</span>
                 </div>
               </div>
-              
+
               <blockquote className="text-gray-700 italic border-l-4 border-purple-400 pl-4">
                 "Expertise technique remarquable. Dashboard professionnel qui nous permet de suivre nos performances en temps réel."
-                <cite className="block mt-2 text-sm text-gray-600">- Amanda, Responsable Marketing</cite>
+                <cite className="block mt-2 text-sm text-gray-600">- Responsable Marketing</cite>
               </blockquote>
             </div>
 

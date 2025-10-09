@@ -258,11 +258,11 @@ export default async function OptimisationContinuePage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* H-Sechement */}
+            {/* Client B2B */}
             <div className="bg-black/60 border border-yellow-400/30 rounded-2xl p-8">
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">H-Sechement</h3>
+                  <h3 className="text-2xl font-bold text-white mb-1">Client B2B</h3>
                   <div className="text-yellow-400 text-sm">B2B Technique</div>
                 </div>
                 <div className="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">6 MOIS</div>

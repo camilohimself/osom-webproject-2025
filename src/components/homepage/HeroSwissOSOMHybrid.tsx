@@ -55,7 +55,7 @@ const HeroSwissOSOMHybrid = ({ dictionary }: HeroSwissOSOMProps) => {
       name: 'SEO LOCAL',
       subtitle: 'Positions × Conversions',
       kpi: 'Position #2',
-      detail: 'H-Sechement Google',
+      detail: 'Mots-clés locaux',
       color: '#FFDD00',
       description: 'Visibilité locale qui génère des leads'
     },

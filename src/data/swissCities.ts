@@ -94,7 +94,7 @@ export const localMetricsData: Record<string, LocalMetrics> = {
 // Unique case studies per city to avoid duplicate content
 export const localCaseStudies = {
   valais: {
-    clientName: "H-Sechement",
+    clientName: "Client B2B Valais",
     industry: "B2B Technique Arc Lémanique",
     location: "Valais",
     challenge: "Site lent (11s loading) = 0.84% conversion seulement. Besoin dashboard performance + SEO local compétitif secteur technique.",

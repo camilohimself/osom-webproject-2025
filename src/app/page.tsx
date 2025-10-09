@@ -22,9 +22,6 @@ import { MobileHorizontalBars, MobileCTRChart, MobileDataLine, MobileGauge } fro
 import { cookies } from 'next/headers'
 import { getHomepageStructuredData, getLocalBusinessStructuredData } from '@/lib/structured-data'
 import HeroSwissOSOMHybrid from '@/components/homepage/HeroSwissOSOMHybrid'
-const ExpertiseLocale = dynamic(() => import('@/components/homepage/ExpertiseLocale'), {
-  loading: () => <div className="h-96 bg-gradient-to-br from-yellow-400/5 to-purple-600/5 animate-pulse rounded-2xl" />
-})
 
 // Lazy loading Piliers Swiss optimisé
 const PilierSwiss1 = dynamic(() => import('@/components/homepage/PilierSwiss1'), {
@@ -137,19 +134,19 @@ export default async function Home() {
       {/* Hero Swiss OSOM Section */}
       <HeroSwissOSOMHybrid dictionary={dictionary.home} />
 
-      {/* Slogan "Pas votre neveu" - Haute couture digitale */}
+      {/* Slogan "Pas votre neveu" - Question sarcastique */}
       <section className="py-12 lg:py-16 bg-gradient-to-b from-black to-black relative overflow-hidden border-t border-yellow-400/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimatedElement type="fadeIn" delay={0.2}>
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-light text-white leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Nous ne sommes <span className="font-bold text-yellow-400" style={{fontSize: '1.4em', lineHeight: '1'}}>PAS</span>
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Combien coûte vraiment
               </h2>
-              <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-yellow-400 tracking-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                VOTRE NEVEU
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-300 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                un site fait par votre neveu ?
               </h2>
-              <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mt-6 font-light" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Haute couture digitale. Pas du prêt-à-porter low-cost.
+              <p className="text-xl md:text-2xl text-yellow-400 max-w-2xl mx-auto mt-6 font-medium" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                (Spoiler : plus cher qu'un professionnel)
               </p>
             </div>
           </AnimatedElement>
@@ -239,101 +236,92 @@ export default async function Home() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
                 <div className="bg-yellow-400/5 border border-yellow-400/20 rounded-3xl p-8 hover:border-yellow-400/40 transition-all duration-300">
                   <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">1</div>
-                  <div className="text-2xl font-bold text-white mb-4">Audit 30 min</div>
-                  <div className="text-gray-300 mb-4">Analyse de vos besoins réels</div>
-                  <div className="text-yellow-400 text-sm font-semibold">✓ Audit technique gratuit</div>
-                  <div className="text-yellow-400 text-sm font-semibold">✓ Devis transparent</div>
+                  <div className="text-2xl font-bold text-white mb-4">Audit complet</div>
+                  <div className="text-gray-300 mb-4">Analyse complète de votre présence digitale</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Audit marketing complet</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Audit technique du site</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Étude de marché</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Veille concurrentielle</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Stratégie SEO mots-clés</div>
                 </div>
 
                 <div className="bg-purple-400/5 border border-purple-400/20 rounded-3xl p-8 hover:border-purple-400/40 transition-all duration-300">
                   <div className="w-20 h-20 bg-purple-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">2</div>
                   <div className="text-2xl font-bold text-white mb-4">Développement</div>
-                  <div className="text-gray-300 mb-4">Architecture Next.js sur mesure</div>
-                  <div className="text-purple-400 text-sm font-semibold">✓ 2-6 mois selon complexité</div>
+                  <div className="text-gray-300 mb-4">Architecture digitale sur mesure</div>
+                  <div className="text-purple-400 text-sm font-semibold">✓ 100% code sur mesure</div>
+                  <div className="text-purple-400 text-sm font-semibold">✓ Next.js / HTML5</div>
+                  <div className="text-purple-400 text-sm font-semibold">✓ Tailwind CSS</div>
                   <div className="text-purple-400 text-sm font-semibold">✓ API + Dashboards custom</div>
+                  <div className="text-purple-400 text-sm font-semibold">✓ 2-6 mois selon complexité</div>
                 </div>
 
                 <div className="bg-yellow-400/5 border border-yellow-400/20 rounded-3xl p-8 hover:border-yellow-400/40 transition-all duration-300">
                   <div className="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold text-3xl mx-auto mb-6">3</div>
                   <div className="text-2xl font-bold text-white mb-4">Optimisation</div>
-                  <div className="text-gray-300 mb-4">Sessions mensuelles 6-12 mois</div>
+                  <div className="text-gray-300 mb-4">Accompagnement et optimisation continue</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Sessions mensuelles 6-12 mois</div>
                   <div className="text-yellow-400 text-sm font-semibold">✓ SEO local continu</div>
                   <div className="text-yellow-400 text-sm font-semibold">✓ Analytics + A/B tests</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Optimisations techniques</div>
+                  <div className="text-yellow-400 text-sm font-semibold">✓ Support prioritaire</div>
                 </div>
               </div>
 
               <div className="mt-16 text-center">
                 <div className="text-lg text-gray-400 mb-4">Portfolio projets complexes</div>
                 <div className="text-4xl font-bold text-yellow-400 mb-2">+150%</div>
-                <div className="text-gray-400">H-Sechement visibilité Google</div>
+                <div className="text-gray-400">Visibilité Google moyenne clients</div>
               </div>
             </div>
           </AnimatedElement>
 
-          <div className="space-y-20">
-            
-            {/* Mobile: Versions condensées des piliers */}
-            <div className="lg:hidden space-y-8">
-              <div className="bg-purple-400/10 border border-purple-400/20 rounded-2xl p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center">
-                    <span className="text-black font-bold">1</span>
+          {/* Expertise - Less is More */}
+          <div className="mt-32">
+            <AnimatedElement type="fadeIn" delay={0.2}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 max-w-6xl mx-auto">
+
+                {/* ARCHITECTURE */}
+                <div className="text-center space-y-4">
+                  <div className="text-2xl lg:text-3xl font-bold text-white tracking-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    ARCHITECTURE
                   </div>
-                  <div>
-                    <div className="text-purple-400 font-bold text-lg">CRÉATION IA</div>
-                    <div className="text-yellow-400 text-2xl font-bold">8.5% CTR</div>
+                  <div className="h-px bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent"></div>
+                  <div className="space-y-2 text-gray-400">
+                    <div className="text-sm lg:text-base">Code sur mesure</div>
+                    <div className="text-sm lg:text-base">Next.js expert</div>
+                    <div className="text-sm lg:text-base">API complexes</div>
                   </div>
                 </div>
-                <div className="text-gray-300 text-sm">Contenus optimisés IA vs 2-3% industrie</div>
+
+                {/* PERFORMANCE */}
+                <div className="text-center space-y-4">
+                  <div className="text-2xl lg:text-3xl font-bold text-yellow-400 tracking-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    PERFORMANCE
+                  </div>
+                  <div className="h-px bg-gradient-to-r from-transparent via-yellow-400/50 to-transparent"></div>
+                  <div className="space-y-2 text-gray-400">
+                    <div className="text-sm lg:text-base">&lt;2s garanti</div>
+                    <div className="text-sm lg:text-base">90+ PageSpeed</div>
+                    <div className="text-sm lg:text-base">Optimisation continue</div>
+                  </div>
+                </div>
+
+                {/* CROISSANCE */}
+                <div className="text-center space-y-4">
+                  <div className="text-2xl lg:text-3xl font-bold text-white tracking-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    CROISSANCE
+                  </div>
+                  <div className="h-px bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent"></div>
+                  <div className="space-y-2 text-gray-400">
+                    <div className="text-sm lg:text-base">SEO stratégique</div>
+                    <div className="text-sm lg:text-base">Résultats mesurés</div>
+                    <div className="text-sm lg:text-base">Top 3 positions</div>
+                  </div>
+                </div>
+
               </div>
-
-              <div className="bg-purple-400/10 border border-purple-400/20 rounded-2xl p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center">
-                    <span className="text-black font-bold">2</span>
-                  </div>
-                  <div>
-                    <div className="text-purple-400 font-bold text-lg">DATA INSIGHTS</div>
-                    <div className="text-yellow-400 text-2xl font-bold">120+</div>
-                  </div>
-                </div>
-                <div className="text-gray-300 text-sm">Leads qualifiés générés mensuellement</div>
-              </div>
-
-              <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-2xl p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <span className="text-black font-bold">3</span>
-                  </div>
-                  <div>
-                    <div className="text-osom-dark-gray font-bold text-lg">PERFORMANCE</div>
-                    <div className="text-black text-2xl font-bold">&lt;2s</div>
-                  </div>
-                </div>
-                <div className="text-gray-300 text-sm">Sites ultra-rapides garantis</div>
-              </div>
-            </div>
-
-            {/* Desktop: Versions complètes des piliers */}
-            <div className="hidden lg:block space-y-20">
-              <AnimatedElement type="slideUp" delay={0.2}>
-                <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group">
-                  <PilierSwiss1 />
-                </div>
-              </AnimatedElement>
-
-              <AnimatedElement type="slideUp" delay={0.4}>
-                <div className="backdrop-blur-sm border border-purple-400/20 rounded-3xl overflow-hidden min-h-[800px] hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-400/10 transition-all duration-500 group">
-                  <PilierSwiss2 />
-                </div>
-              </AnimatedElement>
-
-              <AnimatedElement type="slideUp" delay={0.6}>
-                <div className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl overflow-hidden min-h-[600px] hover:border-yellow-400/40 hover:shadow-2xl hover:shadow-yellow-400/10 transition-all duration-500 group">
-                  <PilierSwiss3 />
-                </div>
-              </AnimatedElement>
-            </div>
+            </AnimatedElement>
           </div>
         </div>
       </section>
@@ -455,9 +443,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
-      {/* Expertise Locale Section */}
-      <ExpertiseLocale />
 
       {/* Mobile Sticky CTA Bar */}
       <MobileCTABar variant="default" />
