@@ -205,31 +205,10 @@ const HeroSwissOSOMHybrid = ({ dictionary }: HeroSwissOSOMProps) => {
             </div>
           </div>
 
-          {/* Right: Visualization - Responsive */}
-          <div className="relative">
-            {/* Mobile: Version statique simple */}
-            <div className="lg:hidden relative w-full h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-yellow-400/20">
-              <svg viewBox="0 0 500 400" className="w-full h-full">
-                <defs>
-                  <linearGradient id="mountain-mobile" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{stopColor: '#374151', stopOpacity: 0.9}} />
-                    <stop offset="100%" style={{stopColor: '#111827', stopOpacity: 0.8}} />
-                  </linearGradient>
-                </defs>
-                <path d="M0,280 L100,200 L180,240 L250,180 L320,220 L420,160 L500,200 L500,400 L0,400 Z" fill="url(#mountain-mobile)" opacity="0.8"/>
-                <g transform="translate(220, 120)">
-                  <rect x="0" y="40" width="20" height="60" fill="#FFDD00" rx="2" />
-                  <circle cx="10" cy="15" r="10" fill="#FFDD00" stroke="#000" strokeWidth="2" />
-                  <circle cx="10" cy="15" r="4" fill="#000" />
-                </g>
-                <text x="250" y="360" fill="#9ca3af" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle" opacity="0.8">
-                  Expertise digitale OSOM
-                </text>
-              </svg>
-            </div>
-
+          {/* Right: Visualization - Desktop Only */}
+          <div className="relative hidden lg:block">
             {/* Desktop: Version interactive avec loupe FPS */}
-            <div className="hidden lg:block">
+            <div>
               <div
                 ref={svgRef}
                 className="relative w-full h-96 rounded-2xl overflow-visible"
