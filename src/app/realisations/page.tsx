@@ -572,7 +572,7 @@ const RealisationsPage = () => {
               title="Maîtrise Cathédrale"
               subtitle="Institution Culturelle • Sion"
               liveUrl="https://maitrise-cathedrale.ch"
-              screenshot="/projects/maitrise-logo.jpg"
+              screenshot="/projects/maitrise-logo.webp"
               accentColor="#9333EA"
             />
 
@@ -581,7 +581,7 @@ const RealisationsPage = () => {
               title="Jean-David Waeber"
               subtitle="Organiste & Chef de Chœur"
               liveUrl="https://jdwaeber.ch"
-              screenshot="/projects/jdw-portrait.jpg"
+              screenshot="/projects/jdw-portrait.webp"
               accentColor="#D4A574"
             />
 
