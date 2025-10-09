@@ -374,71 +374,80 @@ export default function AgencePage() {
         </div>
       </section>
 
-      {/* SECTION GAMING INTERACTIVE */}
+      {/* SECTION GAMING INTERACTIVE - OPTIMISÉE */}
       <section className="py-32 bg-black relative overflow-hidden" id="gaming-zone">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Header Gaming */}
-          <div className="text-center mb-20">
-            <span className="text-cyan-400 text-sm font-medium tracking-[0.15em] uppercase">
-              EXPÉRIENCE INTERACTIVE
-            </span>
-
-            <h2 className="text-5xl md:text-6xl font-light text-white mt-4 mb-8 leading-tight">
-              Venez jouer contre nos <span className="text-cyan-400 font-bold">algorithmes</span>
+          {/* Header Gaming - Ultra Minimaliste */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-light text-white mb-4 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              3 secondes pour comprendre <span className="text-cyan-400 font-bold">OSOM</span>
             </h2>
-
-            <p className="text-gray-300 text-xl max-w-3xl mx-auto">
-              Un clin d'œil au monde binaire. Testez votre habileté contre l'intelligence artificielle OSOM.
+            <p className="text-gray-400 text-lg">
+              Essayez de battre notre IA. Spoiler : vous ne pouvez pas.
             </p>
           </div>
 
           {/* Gaming Zone Desktop - PONG */}
           <div className="hidden lg:block mb-12">
-            <div className="text-center mb-8">
-              <span className="text-green-400 font-mono text-lg">
-                &gt; MODE DESKTOP DÉTECTÉ - PONG RÉTRO ACTIVÉ &lt;
-              </span>
-              <p className="text-green-400/70 font-mono text-sm mt-2">
-                Premier jeu vidéo de l'histoire (1972) • Bille jaune OSOM signature
-              </p>
-            </div>
             <PongGame />
           </div>
 
           {/* Gaming Zone Mobile - MORPION */}
-          <div className="lg:hidden">
-            <div className="text-center mb-8">
-              <span className="text-purple-400 font-mono text-lg">
-                &gt; MODE MOBILE DÉTECTÉ - GATO ACTIVÉ &lt;
-              </span>
-              <p className="text-purple-400/70 font-mono text-sm mt-2">
-                IA imbattable • Algorithme Minimax • Touch optimisé
-              </p>
-            </div>
+          <div className="lg:hidden mb-12">
             <TicTacToeGame />
           </div>
 
-          {/* Call to Action Gaming */}
+          {/* Impact Business - Après le jeu */}
           <div className="text-center mt-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 max-w-2xl mx-auto"
+              className="bg-gradient-to-br from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-cyan-500/30 max-w-3xl mx-auto"
             >
-              <p className="text-cyan-400 font-mono text-lg mb-4">
-                &gt; SYSTÈME ÉVALUATION TERMINÉ &lt;
-              </p>
-              <p className="text-gray-300 text-lg">
-                Nos algorithmes sont-ils aussi performants pour votre business ?
-              </p>
-              <Link
-                href="/contact"
-                className="inline-block mt-6 bg-cyan-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-cyan-300 transition-colors"
-              >
-                Tester nos vrais algorithmes
-              </Link>
+              <div className="space-y-6">
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                  <span className="text-cyan-400 font-medium text-sm tracking-wide uppercase">Résultat</span>
+                </div>
+
+                <div className="space-y-4 text-left max-w-2xl mx-auto">
+                  <div className="flex items-start gap-3">
+                    <div className="text-cyan-400 text-xl mt-1">✓</div>
+                    <div>
+                      <p className="text-white font-semibold text-lg">Notre IA réfléchit en 0.05 secondes</p>
+                      <p className="text-gray-400 text-sm">Analyse instantanée, décisions optimales</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="text-cyan-400 text-xl mt-1">✓</div>
+                    <div>
+                      <p className="text-white font-semibold text-lg">Vos concurrents ne peuvent pas suivre</p>
+                      <p className="text-gray-400 text-sm">Pendant qu'ils réfléchissent, vous agissez</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="text-cyan-400 text-xl mt-1">✓</div>
+                    <div>
+                      <p className="text-white font-semibold text-lg">Imaginez ça pour votre SEO, Analytics, Content</p>
+                      <p className="text-gray-400 text-sm">Même précision, appliquée à votre croissance</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-cyan-500/20">
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-cyan-400 text-black px-10 py-4 rounded-xl font-bold text-lg hover:bg-cyan-300 transition-all duration-300 shadow-lg shadow-cyan-400/20"
+                    style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
+                  >
+                    Mettre cette IA au service de mon business →
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           </div>
 
