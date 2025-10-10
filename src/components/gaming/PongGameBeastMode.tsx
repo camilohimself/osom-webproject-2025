@@ -243,6 +243,52 @@ export default function PongGameBeastMode() {
     return () => canvas.removeEventListener('mousemove', handleMouseMove)
   }, [handleMouseMove])
 
+  // SOLUTION A: Bloquer scroll pendant le jeu
+  useEffect(() => {
+    if (gameState.gameStarted) {
+      // Sauvegarder position scroll actuelle
+      const scrollY = window.scrollY
+
+      // Bloquer scroll
+      document.body.style.overflow = 'hidden'
+      document.body.style.position = 'fixed'
+      document.body.style.width = '100%'
+      document.body.style.top = `-${scrollY}px`
+    } else {
+      // Restaurer scroll
+      const scrollY = document.body.style.top
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
+      document.body.style.top = ''
+      window.scrollTo(0, parseInt(scrollY || '0') * -1)
+    }
+
+    return () => {
+      // Cleanup: toujours restaurer scroll
+      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.width = ''
+      document.body.style.top = ''
+    }
+  }, [gameState.gameStarted])
+
+  // Écouter touche ESC pour quitter le jeu
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && gameState.gameStarted) {
+        setGameState(prev => ({
+          ...prev,
+          gameStarted: false,
+          gameMessage: 'Jeu interrompu - Cliquez pour recommencer'
+        }))
+      }
+    }
+
+    window.addEventListener('keydown', handleEscape)
+    return () => window.removeEventListener('keydown', handleEscape)
+  }, [gameState.gameStarted])
+
   useEffect(() => {
     if (gameState.gameStarted) {
       const gameLoop = () => {
@@ -326,10 +372,27 @@ export default function PongGameBeastMode() {
         <div className="text-yellow-400 font-mono text-xs mt-2">
           Phase 1 (0-20): Vitesse | Phase 2 (20-50): Rétrécissement | Phase 3 (50+): CHAOS
         </div>
+
+        {/* Disclaimers - Sans emojis */}
+        {gameState.gameStarted && (
+          <div className="mt-3 space-y-1">
+            <div className="text-yellow-400 font-mono text-xs">
+              ESC pour quitter • Scroll désactivé pendant le jeu
+            </div>
+            <div className="text-gray-500 font-mono text-xs">
+              Connexion stable recommandée pour expérience optimale
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* Canvas Game */}
-      <div className="relative flex justify-center">
+      {/* Canvas Game - SOLUTION C: Isolation */}
+      <div
+        className="relative flex justify-center"
+        onWheel={(e) => e.preventDefault()}
+        onTouchMove={(e) => e.preventDefault()}
+        style={{ touchAction: 'none' }}
+      >
         <canvas
           ref={canvasRef}
           width={CANVAS_WIDTH}
