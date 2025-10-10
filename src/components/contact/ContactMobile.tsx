@@ -19,9 +19,8 @@ export function ContactMobile() {
       return
     }
 
-    // Redirect vers Calendly avec paramètres
-    const calendlyUrl = `https://calendly.com/osom-consultation/30min?name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}&phone=${encodeURIComponent(formData.phone)}`
-    window.open(calendlyUrl, '_blank')
+    // Envoi direct appel téléphonique
+    window.location.href = `tel:+41791289549`
 
     // Reset form
     setFormData({ name: '', email: '', phone: '', project: '' })
