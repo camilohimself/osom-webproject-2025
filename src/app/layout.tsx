@@ -60,8 +60,6 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://assets.calendly.com" />
-        <link rel="preconnect" href="https://assets.calendly.com" />
 
         {/* Preload critical CSS */}
         <link
@@ -69,17 +67,6 @@ export default async function RootLayout({
           href="/_next/static/css/app/layout.css"
           as="style"
         />
-
-        {/* Defer Calendly - non-critical */}
-        <link
-          href="https://assets.calendly.com/assets/external/widget.css"
-          rel="stylesheet"
-        />
-        <script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          type="text/javascript"
-          defer
-        ></script>
       </head>
       <body className={`${inter.className} ${inter.variable}`}>
         <div id="app-container">
