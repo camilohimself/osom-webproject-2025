@@ -1,6 +1,69 @@
 # OSOM - Premium Craftsman Développeur Web Valais
 
-## 📅 DERNIÈRES MODIFICATIONS (8 Octobre 2025)
+## 📅 DERNIÈRES MODIFICATIONS (9 Octobre 2025)
+
+### 🎯 SESSION EN COURS - Performance Mobile Optimization
+
+**OBJECTIF: PageSpeed Mobile 90+**
+
+**État actuel:**
+- PageSpeed Mobile: 63/100 (avant optimisations)
+- FCP: 4.0s (cible < 1.8s)
+- LCP: 6.6s (cible < 2.5s)
+- Render blocking: 750ms économie identifiée
+
+**Actions réalisées:**
+
+#### 1. **Suppression Calendly Widget - Gain 780ms**
+**Commit**: `902b0af` + `fb43ba4`
+
+**Problème**: Widget Calendly bloquait render 780ms (third-party)
+
+**Solution appliquée:**
+- Scripts Calendly CSS + JS supprimés du layout.tsx
+- DNS prefetch/preconnect assets.calendly.com retirés
+- Références UI Calendly nettoyées (ContactMobile, etc.)
+- 1321 lignes code mort supprimées
+- Variables env CALENDLY_URL supprimées
+
+**Gain attendu:**
+- -780ms render blocking
+- -2 requêtes DNS
+- Contact simplifié: Tel direct + WhatsApp + Email
+
+#### 2. **Beast Mode Pong - Gaming Section Agence**
+**Commit**: `0d69cb8` + `f748813`
+
+**Features:**
+- 3 phases difficulté progressive (Vitesse, Rétrécissement, Chaos)
+- Anti-scroll system (zero latence pendant jeu)
+- ESC pour quitter, disclaimers sans emojis
+- Isolation canvas (wheel/touch events bloqués)
+
+**Impact UX:**
+- Expérience gaming premium sans friction
+- Scroll body bloqué pendant jeu actif
+- Position restaurée après quit
+
+#### 3. **Hero Mobile Optimisé**
+**Commit**: `0b905cd`
+
+**Optimisation:**
+- Phare interactif SVG supprimé mobile (lg:hidden)
+- Desktop garde version interactive avec loupe FPS
+- Hero mobile ultra minimaliste: Typo + CTAs uniquement
+- Performance mobile améliorée (moins SVG à render)
+
+**Prochaines étapes identifiées:**
+- [ ] Critical CSS inline pour réduire FCP
+- [ ] Preload hero image avec priority hint
+- [ ] Defer non-critical CSS
+- [ ] Optimiser fonts loading strategy
+- [ ] Cible finale: PageSpeed Mobile 90+
+
+---
+
+## 📅 SESSION 8 OCTOBRE 2025
 
 ### ✅ SESSION COMPLÉTÉE - Hero Performance + Audit SEO Réel
 
