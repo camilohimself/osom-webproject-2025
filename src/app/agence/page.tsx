@@ -7,9 +7,9 @@ import dynamic from 'next/dynamic'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 // Import des jeux (client-side only)
-const PongGame = dynamic(() => import('@/components/gaming/PongGame'), {
+const PongGameBeastMode = dynamic(() => import('@/components/gaming/PongGameBeastMode'), {
   ssr: false,
-  loading: () => <div className="h-96 bg-black/50 rounded-2xl border border-green-500/30 animate-pulse flex items-center justify-center"><span className="text-green-400 font-mono">CHARGEMENT SYSTÈME OSOM...</span></div>
+  loading: () => <div className="h-96 bg-black/50 rounded-2xl border border-green-500/30 animate-pulse flex items-center justify-center"><span className="text-green-400 font-mono">CHARGEMENT BEAST MODE...</span></div>
 })
 
 const TicTacToeGame = dynamic(() => import('@/components/gaming/TicTacToeGame'), {
@@ -388,9 +388,9 @@ export default function AgencePage() {
             </p>
           </div>
 
-          {/* Gaming Zone Desktop - PONG */}
+          {/* Gaming Zone Desktop - BEAST MODE PONG */}
           <div className="hidden lg:block mb-12">
-            <PongGame />
+            <PongGameBeastMode />
           </div>
 
           {/* Gaming Zone Mobile - MORPION */}
