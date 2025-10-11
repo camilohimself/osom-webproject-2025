@@ -47,10 +47,10 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
       description: 'Conquête digitale',
     },
     {
-      name: 'Optimisation continue',
-      price: '1,500 - 4,000 CHF/mois',
-      href: '/services/optimisation-continue',
-      description: 'SEO + Analytics',
+      name: 'Expertise Marketing',
+      price: 'Méthodologie & Frameworks',
+      href: '/expertise-marketing',
+      description: 'Notre approche stratégique',
     },
   ]
 
