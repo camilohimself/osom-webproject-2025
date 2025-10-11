@@ -3,6 +3,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 import SlotMachineText from '@/components/ui/SlotMachineText'
+import { getFAQSchemaSurMesure, getServiceSchemaSurMesure, getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata = {
   title: 'Package Sur Mesure | Conquête digitale complète | OSOM Valais',
@@ -13,9 +14,32 @@ export const metadata = {
 export default async function SurMesurePage() {
   const dictionary = await getDictionary(defaultLocale)
 
+  // Structured Data pour SEO
+  const faqSchema = getFAQSchemaSurMesure()
+  const serviceSchema = getServiceSchemaSurMesure()
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Accueil', url: 'https://www.osom.ch' },
+    { name: 'Services', url: 'https://www.osom.ch/services' },
+    { name: 'Package Sur Mesure', url: 'https://www.osom.ch/services/sur-mesure' }
+  ])
+
   return (
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
+
+      {/* Structured Data JSON-LD pour SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* Hero Section - Slot Machine Effect */}
       <section className="py-32 lg:py-40 bg-gradient-to-b from-black via-purple-900/10 to-black text-white relative overflow-hidden">

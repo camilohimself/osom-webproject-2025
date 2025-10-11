@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import { getFAQSchemaEssentiel, getServiceSchemaEssentiel, getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata = {
   title: 'Création Site Internet Valais | Site Vitrine Pro 15-25 Pages | 5-9K CHF | OSOM',
@@ -12,9 +13,32 @@ export const metadata = {
 export default async function EssentielPage() {
   const dictionary = await getDictionary(defaultLocale)
 
+  // Structured Data pour SEO
+  const faqSchema = getFAQSchemaEssentiel()
+  const serviceSchema = getServiceSchemaEssentiel()
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Accueil', url: 'https://www.osom.ch' },
+    { name: 'Services', url: 'https://www.osom.ch/services' },
+    { name: 'Package Essentiel', url: 'https://www.osom.ch/services/essentiel' }
+  ])
+
   return (
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
+
+      {/* Structured Data JSON-LD pour SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* Hero Section - SANS PRIX */}
       <section className="py-32 lg:py-40 bg-gradient-to-b from-black via-black to-yellow-400/5 text-white relative overflow-hidden">

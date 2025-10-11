@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import { getFAQSchemaPerformance, getServiceSchemaPerformance, getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata = {
   title: 'Marketing Digital Valais | Agence Web SEO & Dev | 10-18K CHF | OSOM',
@@ -12,9 +13,32 @@ export const metadata = {
 export default async function PerformancePage() {
   const dictionary = await getDictionary(defaultLocale)
 
+  // Structured Data pour SEO
+  const faqSchema = getFAQSchemaPerformance()
+  const serviceSchema = getServiceSchemaPerformance()
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: 'Accueil', url: 'https://www.osom.ch' },
+    { name: 'Services', url: 'https://www.osom.ch/services' },
+    { name: 'Package Performance', url: 'https://www.osom.ch/services/performance' }
+  ])
+
   return (
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
+
+      {/* Structured Data JSON-LD pour SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       {/* 1. ATTENTION - Hero Section VOYAGE Editorial */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
