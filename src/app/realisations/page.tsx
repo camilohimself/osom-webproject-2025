@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { InteractiveCaseStudy, ProjectCardMinimal } from '@/components/portfolio'
-import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import IconeOSOM from '@/components/IconeOSOM'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
@@ -287,188 +286,71 @@ const RealisationsPage = () => {
     <div className="min-h-screen bg-black">
       {/* Progress Bars Sublimes */}
       <ScrollProgressIndicator />
-      {/* Premium Hero Section - Homepage Level */}
-      <section className="py-20 lg:py-32 relative overflow-hidden">
-        {/* Multi-layered Background System */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23EC4899' fill-opacity='0.1'%3E%3Cpath d='m0 0h80v80H0z'/%3E%3Cpath d='m20 20h40v40H20z' fill='%23000' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
-
-        {/* Premium Gradient Animation */}
+      {/* Hero Ultra Minimaliste - Version A Mobile Optimized */}
+      <section className="min-h-screen flex flex-col justify-center items-center px-4 relative overflow-hidden">
+        {/* Badge subtil */}
         <motion.div
-          className="absolute inset-0 opacity-10"
-          animate={{
-            background: [
-              "radial-gradient(circle at 25% 25%, #ec489915, transparent 50%)",
-              "radial-gradient(circle at 75% 75%, #ec489920, transparent 50%)",
-              "radial-gradient(circle at 25% 25%, #ec489915, transparent 50%)"
-            ]
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        />
+          className="mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="text-pink-400 text-xs font-medium tracking-widest uppercase">
+            Projets OSOM
+          </span>
+        </motion.div>
 
-        {/* Floating Accent Elements */}
-        <motion.div
-          className="absolute top-20 right-20 w-64 h-64 rounded-full opacity-20 blur-3xl"
-          style={{ backgroundColor: "#EC4899" }}
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-16 w-48 h-48 rounded-full opacity-10 blur-2xl"
-          style={{ backgroundColor: "#FFDD00" }}
-          animate={{
-            x: [0, -20, 0],
-            y: [0, 15, 0],
-            scale: [1, 0.9, 1]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 5
-          }}
-        />
+        {/* Titre simple et puissant */}
+        <motion.h1
+          className="text-5xl md:text-7xl font-black text-center mb-6 leading-tight"
+          style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <span className="text-white">Nos</span>
+          <br />
+          <span className="text-yellow-400">PROJETS</span>
+        </motion.h1>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div 
-            className="text-center"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+        {/* 1 ligne percutante */}
+        <motion.p
+          className="text-lg text-gray-300 text-center max-w-md mb-12"
+          style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Résultats mesurables. Performances vérifiées.
+        </motion.p>
+
+        {/* CTA scroll subtil */}
+        <motion.div
+          className="flex flex-col items-center gap-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <span className="text-sm text-gray-500">Découvrir</span>
+          <motion.div
+            className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
           >
-            {/* Premium Badge with Pulse Animation */}
-            <motion.div 
-              className="flex items-center justify-center mb-8"
-              variants={itemVariants}
-              transition={{ duration: 0.6, ease: [0.25, 0.25, 0.25, 0.75] }}
-            >
-              <motion.div 
-                className="w-2 h-2 rounded-full bg-pink-500 mr-3"
-                animate={{
-                  scale: [1, 1.3, 1],
-                  opacity: [0.7, 1, 0.7]
-                }}
-                transition={{
-                  duration: 2.5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              <span className="text-pink-400 text-sm font-medium tracking-wide">
-                PROJETS OSOM • TRANSFORMATIONS MESURABLES
-              </span>
-            </motion.div>
-            
-            {/* TITRE CRÉATIF PORTFOLIO */}
-            <motion.div className="mb-12 leading-tight" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              <motion.div className="text-2xl font-light text-gray-300 mb-2"
-                initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-                Nos
-              </motion.div>
-              
-              <motion.div className="text-8xl md:text-9xl font-black text-yellow-400 leading-none mb-4"
-                initial={{ opacity: 0, scale: 0.7 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.4 }}
-                whileHover={{ scale: 1.05, textShadow: "0 0 30px rgba(251, 191, 36, 0.5)" }}>
-                PROJETS
-              </motion.div>
-              
-              <motion.div className="text-3xl font-light text-white"
-                initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
-                parlent d'eux-mêmes
-              </motion.div>
-            </motion.div>
-            
-            {/* Enhanced Description */}
-            <motion.p 
-              className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto" 
-              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
-              variants={itemVariants}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              Transformations digitales complètes où 
-              <span className="text-pink-400 font-semibold"> stratégie + IA + data</span> génèrent des performances 
-              <span className="text-yellow-400 font-semibold"> 14x supérieures</span> aux solutions classiques.
-              <br />
-              Un projet OSOM = <span className="text-pink-400 font-semibold"> partenariat stratégique</span> 
-              avec <span className="text-yellow-400 font-semibold"> ROI mesurable</span> et résultats concrets.
-            </motion.p>
-            
-            {/* Premium Animated Metrics Grid */}
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-5xl mx-auto"
-              variants={itemVariants}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              {[
-                { value: 14, suffix: "x", label: "Efficacité vs Concurrence", color: "#EC4899", icon: "" },
-                { value: 688, suffix: "", label: "Conversions Générées", color: "#10B981", icon: "" },
-                { value: 68.6, suffix: "%", label: "Engagement Qualifié", color: "#06B6D4", icon: "" },
-                { value: 200, suffix: "+", label: "Jours d'Analyse", color: "#FFDD00", icon: "" }
-              ].map((metric, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center group"
-                  whileHover={{ scale: 1.05 }}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 1 }}
-                >
-                  {metric.icon && (
-                    <motion.div
-                      className="text-4xl mb-3"
-                      animate={{ 
-                        rotate: [0, 10, -10, 0],
-                        scale: [1, 1.1, 1]
-                      }}
-                      transition={{ 
-                        duration: 4,
-                        repeat: Infinity,
-                        delay: index * 0.5
-                      }}
-                    >
-                      {metric.icon}
-                    </motion.div>
-                  )}
-                  
-                  <div className="text-4xl font-bold mb-2" style={{ color: metric.color, fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                    <AnimatedCounter from={0} to={metric.value} duration={2.5} />{metric.suffix}
-                  </div>
-                  
-                  <p className="text-white font-medium text-sm" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>{metric.label}</p>
-                  <p className="text-gray-400 text-xs">Données vérifiées</p>
-                  
-                  {/* Animated progress bar */}
-                  <motion.div 
-                    className="mt-3 h-1 bg-white/20 rounded-full overflow-hidden mx-auto w-16"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: index * 0.1 + 1.5 }}
-                  >
-                    <motion.div 
-                      className="h-full rounded-full"
-                      style={{ backgroundColor: metric.color }}
-                      initial={{ width: 0 }}
-                      animate={{ width: "100%" }}
-                      transition={{ duration: 2, delay: index * 0.1 + 2 }}
-                    />
-                  </motion.div>
-                </motion.div>
-              ))}
-            </motion.div>
+            <div className="w-1 h-2 bg-pink-400 rounded-full" />
           </motion.div>
-        </div>
+        </motion.div>
+
+        {/* Floating accent subtil */}
+        <motion.div
+          className="absolute top-20 right-10 w-32 h-32 rounded-full opacity-10 blur-3xl"
+          style={{ backgroundColor: '#FFDD00' }}
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.15, 0.1]
+          }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
       </section>
 
       {/* Section Philosophie Projet OSOM */}
