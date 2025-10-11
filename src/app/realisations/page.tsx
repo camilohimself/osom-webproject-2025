@@ -585,6 +585,15 @@ const RealisationsPage = () => {
               accentColor="#D4A574"
             />
 
+            {/* Camilo Rivera Portfolio */}
+            <ProjectCardMinimal
+              title="Camilo Rivera"
+              subtitle="Artiste Peintre • Portfolio Premium"
+              liveUrl="https://camilorivera.ch"
+              screenshot="/projects/camilo-rivera-portrait.webp"
+              accentColor="#D4AF37"
+            />
+
             {/* Culture Peinture */}
             <ProjectCardMinimal
               title="Culture Peinture"

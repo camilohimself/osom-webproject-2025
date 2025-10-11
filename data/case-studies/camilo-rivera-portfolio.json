@@ -1,0 +1,136 @@
+{
+  "id": "camilo-rivera-portfolio",
+  "client": "Camilo Rivera",
+  "sector": "Art & Culture",
+  "location": "Suisse",
+  "project_type": "Portfolio artistique premium",
+  "url": "https://camilorivera.ch",
+
+  "challenge": {
+    "title": "Créer une présence digitale élégante pour artiste peintre",
+    "pain_points": [
+      "Absence de portfolio en ligne pour valoriser 70+ œuvres",
+      "Difficulté à présenter exposition actuelle et parcours artistique",
+      "Besoin d'une identité visuelle raffinée reflétant l'art contemporain",
+      "Communication acquisitions et contacts dispersée",
+      "Nécessité d'un design minimaliste ne distrayant pas des œuvres"
+    ]
+  },
+
+  "solution": {
+    "title": "Portfolio artistique sur mesure avec galerie premium",
+    "approach": [
+      "Design minimaliste élégant (noir, blanc, or) mettant en valeur les œuvres",
+      "Architecture galerie optimisée pour navigation intuitive collections",
+      "Section exposition actualisable dynamiquement",
+      "Animations subtiles Framer Motion pour expérience fluide",
+      "Responsive premium garantissant qualité visuelle mobile/desktop"
+    ],
+    "tech_stack": [
+      "Next.js 14 App Router",
+      "TypeScript + Tailwind CSS",
+      "Framer Motion (animations)",
+      "Système galerie optimisé",
+      "Hébergement Vercel"
+    ]
+  },
+
+  "scope": {
+    "pages_built": 12,
+    "main_sections": [
+      "Hero artistique avec présentation vision",
+      "Galerie collections (huile, encre de Chine)",
+      "Page About avec parcours et philosophie",
+      "Exposition actuelle (Riddes 2025)",
+      "Contact et acquisitions"
+    ],
+    "integrations": [
+      "Système galerie filtrable par collection",
+      "Gestion expositions dynamique",
+      "Optimisation images œuvres (WebP)",
+      "Animations transitions élégantes"
+    ]
+  },
+
+  "duration": "3 mois",
+  "investment": {
+    "project": "9,000 CHF",
+    "monthly_support": "1,500 CHF/mois",
+    "total_year_1": "18,000 CHF"
+  },
+
+  "results": {
+    "pages_delivered": 12,
+    "artworks_showcased": "70+ œuvres présentées",
+    "performance": {
+      "page_speed_score": 94,
+      "loading_time": "< 1.8s",
+      "mobile_friendly": "100%"
+    },
+    "design": {
+      "visual_identity": "Minimaliste premium avec palette noir/blanc/or",
+      "animations": "Transitions Framer Motion subtiles et fluides",
+      "responsive": "Expérience optimale mobile et desktop"
+    },
+    "impact": {
+      "credibility": "Présence professionnelle crédible pour galeries et collectionneurs",
+      "accessibility": "Portfolio accessible 24/7 avec navigation intuitive",
+      "communication": "Canal centralisé pour exposition actuelle et acquisitions"
+    }
+  },
+
+  "testimonial": {
+    "text": "Mon portfolio reflète parfaitement mon univers artistique. Le design élégant met en valeur mes œuvres sans les écraser, et la navigation est fluide.",
+    "author": "Camilo Rivera",
+    "role": "Artiste Peintre"
+  },
+
+  "key_features": [
+    {
+      "title": "Galerie premium optimisée",
+      "description": "Système de galerie élégant avec filtres par collection (huile, encre de Chine), images optimisées WebP, navigation intuitive.",
+      "impact": "Mise en valeur optimale des œuvres"
+    },
+    {
+      "title": "Design minimaliste raffiné",
+      "description": "Identité visuelle noir/blanc/or, typographie sophistiquée, animations subtiles Framer Motion pour expérience fluide.",
+      "impact": "Expérience artistique immersive"
+    },
+    {
+      "title": "Section exposition dynamique",
+      "description": "Mise en avant de l'exposition actuelle (Riddes 2025) avec informations pratiques et visuels actualisables.",
+      "impact": "Communication événements optimisée"
+    },
+    {
+      "title": "Performance mobile premium",
+      "description": "Responsive total, chargement < 1.8s, PageSpeed 94/100, expérience identique mobile/desktop.",
+      "impact": "Accessibilité collectionneurs mobile"
+    }
+  ],
+
+  "tags": [
+    "Portfolio artistique",
+    "Galerie premium",
+    "Design minimaliste",
+    "Performance optimale",
+    "Art contemporain",
+    "Responsive",
+    "Framer Motion"
+  ],
+
+  "category": "artisan",
+  "package_type": "Essentiel - Portfolio artistique premium",
+
+  "highlights": {
+    "complexity": "Moyenne (12 pages + galerie dynamique)",
+    "duration": "3 mois conception → livraison",
+    "value": "Crédibilité professionnelle + valorisation 70+ œuvres"
+  },
+
+  "lessons_learned": [
+    "Design minimaliste crucial pour portfolios artistiques (ne pas concurrencer œuvres)",
+    "Optimisation images critiques pour galeries (WebP, lazy loading)",
+    "Animations subtiles améliorent expérience sans distraire de l'art",
+    "Section exposition actualisable ajoute dynamisme au portfolio statique"
+  ]
+}
