@@ -134,6 +134,182 @@ export default async function Home() {
       {/* Hero Swiss OSOM Section */}
       <HeroSwissOSOMHybrid dictionary={dictionary.home} />
 
+      {/* Nos Services - Internal Linking SEO */}
+      <section className="py-16 lg:py-24 bg-gradient-to-b from-black to-purple-900/5 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23EC4899' fill-opacity='0.1'%3E%3Cpath d='M0 0h60v60H0z'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <AnimatedElement type="fadeIn" delay={0.1}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Nos <span className="text-pink-400 font-bold">packages</span> sur mesure
+              </h2>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                Du site professionnel clé en main à l'architecture entreprise avec garanties
+              </p>
+            </div>
+          </AnimatedElement>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Package Essentiel */}
+            <AnimatedElement type="fadeIn" delay={0.2}>
+              <a
+                href="/services/essentiel"
+                className="group block bg-black/40 border border-yellow-400/20 rounded-2xl p-8 hover:border-yellow-400/60 hover:bg-black/60 transition-all duration-300 h-full"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    Essentiel
+                  </h3>
+                  <div className="w-12 h-12 bg-yellow-400/10 rounded-full flex items-center justify-center group-hover:bg-yellow-400/20 transition-colors">
+                    <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  <p className="text-gray-300 text-sm">Site professionnel clé en main</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>15-25 pages sur mesure</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Design responsive premium</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>SEO de base inclus</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-yellow-400/20">
+                  <div className="text-2xl font-bold text-yellow-400 mb-1">1,500-1,667 CHF/mois</div>
+                  <div className="text-xs text-gray-500">Durée 3-6 mois</div>
+                </div>
+              </a>
+            </AnimatedElement>
+
+            {/* Package Performance */}
+            <AnimatedElement type="fadeIn" delay={0.3}>
+              <a
+                href="/services/performance"
+                className="group block bg-black/40 border border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/70 hover:bg-black/60 transition-all duration-300 h-full relative"
+              >
+                <div className="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  POPULAIRE
+                </div>
+
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    Performance
+                  </h3>
+                  <div className="w-12 h-12 bg-pink-500/10 rounded-full flex items-center justify-center group-hover:bg-pink-500/20 transition-colors">
+                    <svg className="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  <p className="text-gray-300 text-sm">Transformation digitale complète</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>30-60 pages complexes</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>API & intégrations</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>SEO stratégique mensuel</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-pink-500/20">
+                  <div className="text-2xl font-bold text-pink-400 mb-1">4,000-4,500 CHF/mois</div>
+                  <div className="text-xs text-gray-500">Durée 6-12 mois</div>
+                </div>
+              </a>
+            </AnimatedElement>
+
+            {/* Package Sur Mesure */}
+            <AnimatedElement type="fadeIn" delay={0.4}>
+              <a
+                href="/services/sur-mesure"
+                className="group block bg-black/40 border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/60 hover:bg-black/60 transition-all duration-300 h-full relative"
+              >
+                <div className="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  ELITE
+                </div>
+
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    Sur Mesure
+                  </h3>
+                  <div className="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  <p className="text-gray-300 text-sm">Conquête digitale avec garanties</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Architecture entreprise</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Consultant dédié</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Garanties contractuelles</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-purple-500/20">
+                  <div className="text-2xl font-bold text-purple-400 mb-1">Dès 2,000 CHF/mois</div>
+                  <div className="text-xs text-gray-500">Durée 12-24 mois</div>
+                </div>
+              </a>
+            </AnimatedElement>
+          </div>
+        </div>
+      </section>
+
       {/* Slogan "Pas votre neveu" - Question sarcastique */}
       <section className="py-12 lg:py-16 bg-gradient-to-b from-black to-black relative overflow-hidden border-t border-yellow-400/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
