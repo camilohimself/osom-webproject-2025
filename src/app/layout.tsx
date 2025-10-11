@@ -61,12 +61,21 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Preload critical CSS */}
+        {/* Preload critical assets pour mobile performance */}
         <link
           rel="preload"
-          href="/_next/static/css/app/layout.css"
-          as="style"
+          href="/osom-logo.svg"
+          as="image"
+          type="image/svg+xml"
         />
+
+        {/* Critical CSS inline pour mobile */}
+        <style dangerouslySetInnerHTML={{__html: `
+          body{margin:0;padding:0;font-family:system-ui,-apple-system,sans-serif}
+          #app-container{min-height:100vh;display:flex;flex-direction:column}
+          main{flex:1}
+          *{box-sizing:border-box}
+        `}} />
       </head>
       <body className={`${inter.className} ${inter.variable}`}>
         <div id="app-container">

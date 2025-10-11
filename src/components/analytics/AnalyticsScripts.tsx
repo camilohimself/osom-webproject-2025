@@ -22,18 +22,18 @@ const AnalyticsScripts = () => {
 
   return (
     <>
-      {/* Google Analytics 4 - Optimized Loading */}
+      {/* Google Analytics 4 - Deferred for mobile performance */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         onLoad={() => {
           console.log('📊 GA4 loaded successfully');
         }}
       />
-      
+
       <Script
         id="google-analytics"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -70,10 +70,10 @@ const AnalyticsScripts = () => {
         }}
       />
 
-      {/* Hotjar - Heatmaps & Session Recording */}
+      {/* Hotjar - Heatmaps & Session Recording - Deferred */}
       <Script
         id="hotjar"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             (function(h,o,t,j,a,r){
@@ -126,10 +126,10 @@ const AnalyticsScripts = () => {
         }}
       />
 
-      {/* Performance Monitoring Integration */}
+      {/* Performance Monitoring Integration - Deferred */}
       <Script
         id="performance-monitoring"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             // Web Vitals tracking
@@ -182,10 +182,10 @@ const AnalyticsScripts = () => {
         }}
       />
 
-      {/* Attribution Tracking Script */}
+      {/* Attribution Tracking Script - Deferred */}
       <Script
         id="attribution-tracking"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             // Track referrer and UTM parameters
