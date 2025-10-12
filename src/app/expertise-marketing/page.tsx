@@ -41,10 +41,10 @@ export default function ExpertiseMarketingPage() {
               className="text-5xl md:text-7xl lg:text-8xl font-black mb-8"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
-              <span className="text-white">Comment on Transforme</span>
+              <span className="text-white">Comment on transforme</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-purple-500 to-purple-600">
-                des PME en Leaders Digitaux
+                des PME en leaders digitaux
               </span>
             </motion.h1>
 
@@ -104,9 +104,9 @@ export default function ExpertiseMarketingPage() {
             {/* Section Header */}
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-black mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                <span className="text-white">Nos 4 Frameworks</span>
+                <span className="text-white">Nos 4 frameworks</span>
                 <br />
-                <span className="text-yellow-400">Stratégiques</span>
+                <span className="text-yellow-400">stratégiques</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Voici exactement comment on pense, analyse et exécute chaque projet.
@@ -246,7 +246,7 @@ export default function ExpertiseMarketingPage() {
                         </div>
                       </div>
                       <div className="space-y-3">
-                        {['Positionnement mots-clés', 'Qualité contenu', 'Autorité domaine', 'UX & Performance', 'Stratégie conversion'].map((dim, i) => (
+                        {['Positionnement mots-clés', 'Qualité contenu', 'Autorité domaine', 'UX & performance', 'Stratégie conversion'].map((dim, i) => (
                           <div key={i} className="flex items-center gap-3 bg-black/40 p-3 rounded-lg">
                             <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                             <span className="text-sm text-gray-300">{dim}</span>
@@ -273,7 +273,7 @@ export default function ExpertiseMarketingPage() {
                     Framework #2
                   </div>
                   <h3 className="text-3xl md:text-5xl font-black text-white mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                    Analyse Concurrentielle 5D
+                    Analyse concurrentielle 5D
                   </h3>
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                     On ne réinvente pas la roue. On analyse en profondeur vos concurrents directs,
@@ -283,7 +283,7 @@ export default function ExpertiseMarketingPage() {
 
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-xl font-bold text-white mb-3">Les 5 Dimensions</h4>
+                      <h4 className="text-xl font-bold text-white mb-3">Les 5 dimensions</h4>
                       <div className="space-y-3">
                         <div className="flex items-start gap-3">
                           <div className="mt-1 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
@@ -357,7 +357,7 @@ export default function ExpertiseMarketingPage() {
                     Framework #3
                   </div>
                   <h3 className="text-3xl md:text-5xl font-black text-white mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                    Stratégie Mots-Clés 3 Horizons
+                    Stratégie mots-clés 3 horizons
                   </h3>
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                     On ne cible pas tout en même temps (erreur classique). On priorise par ROI/effort
@@ -372,7 +372,7 @@ export default function ExpertiseMarketingPage() {
                           <span className="text-lg text-purple-400 font-black">H1</span>
                         </div>
                         <div>
-                          <div className="text-white font-bold text-lg">Quick Wins</div>
+                          <div className="text-white font-bold text-lg">Quick wins</div>
                           <div className="text-sm text-gray-400">Mois 1-3</div>
                         </div>
                       </div>
@@ -473,7 +473,7 @@ export default function ExpertiseMarketingPage() {
                         H1
                       </div>
                       <div className="flex-1 bg-purple-900/20 border border-purple-500/20 rounded-lg p-6">
-                        <div className="font-bold text-white mb-2">Quick Wins</div>
+                        <div className="font-bold text-white mb-2">Quick wins</div>
                         <div className="text-sm text-gray-400">Premiers résultats rapides</div>
                       </div>
                     </div>
@@ -522,7 +522,7 @@ export default function ExpertiseMarketingPage() {
                           <span className="text-xs text-yellow-400">Temps réel</span>
                         </div>
                       </div>
-                      <div className="text-xl md:text-2xl font-black text-white">Performance Marketing</div>
+                      <div className="text-xl md:text-2xl font-black text-white">Performance marketing</div>
                     </div>
 
                     {/* Metrics grid */}
@@ -576,7 +576,7 @@ export default function ExpertiseMarketingPage() {
                     Framework #4
                   </div>
                   <h3 className="text-3xl md:text-5xl font-black text-white mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                    Monitoring & Optimisation Continue
+                    Monitoring & optimisation continue
                   </h3>
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                     On ne fait pas des rapports mensuels statiques. On monitore en temps réel avec des seuils
@@ -585,7 +585,7 @@ export default function ExpertiseMarketingPage() {
 
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-xl font-bold text-white mb-4">3 Catégories de Métriques</h4>
+                      <h4 className="text-xl font-bold text-white mb-4">3 catégories de métriques</h4>
 
                       <div className="space-y-4">
                         <div className="bg-purple-900/20 border border-purple-600/20 rounded-lg p-4">
@@ -639,10 +639,10 @@ export default function ExpertiseMarketingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-black mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                <span className="text-white">Behind the Scenes:</span>
+                <span className="text-white">Behind the scenes:</span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-purple-500">
-                  Comment On a Vraiment Fait
+                  comment on a vraiment fait
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -665,9 +665,9 @@ export default function ExpertiseMarketingPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-3xl md:text-4xl font-black text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Client B2B Technique</h3>
-                  <p className="text-yellow-400 font-semibold">De 0 à Top 3 Google en 6 Mois</p>
-                  <p className="text-gray-400 text-sm mt-1">Secteur Services Techniques - Arc Lémanique</p>
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Client B2B technique</h3>
+                  <p className="text-yellow-400 font-semibold">De 0 à top 3 Google en 6 mois</p>
+                  <p className="text-gray-400 text-sm mt-1">Secteur services techniques - Arc Lémanique</p>
                 </div>
               </div>
 
@@ -695,7 +695,7 @@ export default function ExpertiseMarketingPage() {
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-3">Stratégie appliquée (Timeline)</h4>
+                  <h4 className="text-xl font-bold text-white mb-3">Stratégie appliquée (timeline)</h4>
                   <div className="space-y-3">
                     <div className="flex gap-4">
                       <div className="flex-shrink-0 w-20 text-right">
@@ -786,8 +786,8 @@ export default function ExpertiseMarketingPage() {
                 </div>
                 <div>
                   <h3 className="text-3xl md:text-4xl font-black text-white mb-2">LMDI</h3>
-                  <p className="text-purple-400 font-semibold">Veille Concurrentielle × 3 Trafic</p>
-                  <p className="text-gray-400 text-sm mt-1">E-commerce Premium - Mode & Design</p>
+                  <p className="text-purple-400 font-semibold">Veille concurrentielle × 3 trafic</p>
+                  <p className="text-gray-400 text-sm mt-1">E-commerce premium - Mode & design</p>
                 </div>
               </div>
 
@@ -894,7 +894,7 @@ export default function ExpertiseMarketingPage() {
               className="bg-gradient-to-br from-yellow-900/20 to-purple-900/20 border-2 border-yellow-400/30 rounded-2xl p-8 md:p-12"
             >
               <h2 className="text-3xl md:text-5xl font-black text-white mb-6 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Pourquoi Cette Transparence ?
+                Pourquoi cette transparence ?
               </h2>
 
               <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
@@ -940,9 +940,9 @@ export default function ExpertiseMarketingPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-6xl font-black mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                <span className="text-white">Prêt à Appliquer</span>
+                <span className="text-white">Prêt à appliquer</span>
                 <br />
-                <span className="text-yellow-400">Cette Méthodologie ?</span>
+                <span className="text-yellow-400">cette méthodologie ?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
                 Discutons de votre situation spécifique et voyons comment notre approche
