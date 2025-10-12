@@ -123,7 +123,7 @@ const HeroSwissOSOMHybrid = ({ dictionary }: HeroSwissOSOMProps) => {
   }, [isLoupeActive, isDesktop, handleMouseMove])
 
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden flex items-center">
+    <section className="min-h-screen bg-black relative overflow-hidden flex items-center pt-20">
       {/* Grille suisse subtile */}
       <div className="absolute inset-0 opacity-5">
         <div className="grid grid-cols-12 gap-4 h-full max-w-7xl mx-auto">

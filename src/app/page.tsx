@@ -197,8 +197,13 @@ export default async function Home() {
                 </div>
 
                 <div className="pt-6 border-t border-yellow-400/20">
-                  <div className="text-2xl font-bold text-yellow-400 mb-1">1,500-1,667 CHF/mois</div>
-                  <div className="text-xs text-gray-500">Durée 3-6 mois</div>
+                  <div className="text-lg font-medium text-yellow-400 mb-1">Engagement 3-6 mois</div>
+                  <div className="text-sm text-gray-400 flex items-center gap-2">
+                    Découvrir le package
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               </a>
             </AnimatedElement>
@@ -249,8 +254,13 @@ export default async function Home() {
                 </div>
 
                 <div className="pt-6 border-t border-pink-500/20">
-                  <div className="text-2xl font-bold text-pink-400 mb-1">4,000-4,500 CHF/mois</div>
-                  <div className="text-xs text-gray-500">Durée 6-12 mois</div>
+                  <div className="text-lg font-medium text-pink-400 mb-1">Engagement 6-12 mois</div>
+                  <div className="text-sm text-gray-400 flex items-center gap-2">
+                    Découvrir le package
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               </a>
             </AnimatedElement>
@@ -301,8 +311,13 @@ export default async function Home() {
                 </div>
 
                 <div className="pt-6 border-t border-purple-500/20">
-                  <div className="text-2xl font-bold text-purple-400 mb-1">Dès 2,000 CHF/mois</div>
-                  <div className="text-xs text-gray-500">Durée 12-24 mois</div>
+                  <div className="text-lg font-medium text-purple-400 mb-1">Engagement 12-24 mois</div>
+                  <div className="text-sm text-gray-400 flex items-center gap-2">
+                    Découvrir le package
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               </a>
             </AnimatedElement>
