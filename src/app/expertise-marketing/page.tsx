@@ -8,7 +8,7 @@ export default function ExpertiseMarketingPage() {
   return (
     <>
       <ScrollProgressIndicator />
-      <div className="min-h-screen bg-gradient-to-b from-black via-purple-900/10 to-black">
+      <div className="min-h-screen bg-black">
 
         {/* Hero Section */}
         <section className="min-h-screen flex flex-col justify-center items-center px-4 py-20 relative overflow-hidden">
@@ -635,7 +635,7 @@ export default function ExpertiseMarketingPage() {
         </section>
 
         {/* Case Studies Behind the Scenes */}
-        <section className="py-20 px-4 bg-gradient-to-b from-black via-purple-900/5 to-black">
+        <section className="py-20 px-4 bg-black">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-black mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
@@ -649,6 +649,126 @@ export default function ExpertiseMarketingPage() {
                 Pas juste des résultats. La stratégie exacte, mois par mois, décisions prises et pourquoi.
               </p>
             </div>
+
+            {/* Client B2B Technique Case Study */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-16 bg-gradient-to-br from-yellow-900/10 to-purple-900/10 border border-yellow-400/20 rounded-2xl p-8 md:p-12"
+            >
+              <div className="flex items-start gap-4 mb-8">
+                <div className="w-16 h-16 rounded-full bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>Client B2B Technique</h3>
+                  <p className="text-yellow-400 font-semibold">De 0 à Top 3 Google en 6 Mois</p>
+                  <p className="text-gray-400 text-sm mt-1">Secteur Services Techniques - Arc Lémanique</p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-3">Contexte initial</h4>
+                  <div className="bg-black/40 p-6 rounded-lg border border-yellow-400/10">
+                    <div className="grid md:grid-cols-3 gap-4 text-sm">
+                      <div>
+                        <div className="text-gray-400 mb-1">Performance technique</div>
+                        <div className="text-2xl font-black text-yellow-400">65/100</div>
+                      </div>
+                      <div>
+                        <div className="text-gray-400 mb-1">Positions Google</div>
+                        <div className="text-2xl font-black text-purple-400">0</div>
+                        <div className="text-xs text-gray-500">Top 10</div>
+                      </div>
+                      <div>
+                        <div className="text-gray-400 mb-1">Trafic organique</div>
+                        <div className="text-2xl font-black text-purple-400">~50</div>
+                        <div className="text-xs text-gray-500">visites/mois</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-3">Stratégie appliquée (Timeline)</h4>
+                  <div className="space-y-3">
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-20 text-right">
+                        <span className="text-sm font-semibold text-yellow-400">Mois 1</span>
+                      </div>
+                      <div className="flex-1 bg-black/40 p-4 rounded-lg border-l-4 border-yellow-400">
+                        <p className="text-sm text-gray-300">
+                          <span className="font-semibold text-white">Migration technique + Performance 95+.</span> Optimisation
+                          complète, compression images, critical CSS inline.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-20 text-right">
+                        <span className="text-sm font-semibold text-yellow-400">Mois 2</span>
+                      </div>
+                      <div className="flex-1 bg-black/40 p-4 rounded-lg border-l-4 border-purple-500">
+                        <p className="text-sm text-gray-300">
+                          <span className="font-semibold text-white">Analyse concurrentielle identifie opportunité:</span> Mots-clés
+                          sectoriels régionaux = 170 recherches/mois, faible concurrence. Création page pilier 2,800 mots + 3 articles satellites.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-20 text-right">
+                        <span className="text-sm font-semibold text-yellow-400">Mois 3</span>
+                      </div>
+                      <div className="flex-1 bg-black/40 p-4 rounded-lg border-l-4 border-yellow-400">
+                        <p className="text-sm text-gray-300">
+                          <span className="font-semibold text-white">Position Top 3 atteinte.</span> 89 visites/mois sur ce cluster uniquement.
+                          Dashboard monitoring installé.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0 w-20 text-right">
+                        <span className="text-sm font-semibold text-yellow-400">Mois 4-6</span>
+                      </div>
+                      <div className="flex-1 bg-black/40 p-4 rounded-lg border-l-4 border-purple-500">
+                        <p className="text-sm text-gray-300">
+                          <span className="font-semibold text-white">Expansion Horizon 2:</span> 15 mots-clés techniques moyenne concurrence ciblés.
+                          Campagne backlinks locaux. Résultat final: 1,200+ impressions/mois, +150% visibilité.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-purple-900/20 border border-yellow-400/20 rounded-lg p-6">
+                  <h4 className="text-lg font-bold text-yellow-400 mb-3">Résultats mesurés</h4>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <div className="text-gray-300 mb-1">Performance PageSpeed</div>
+                      <div className="text-3xl font-black text-yellow-400">95+</div>
+                      <div className="text-xs text-gray-500">vs 65 avant</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-300 mb-1">Position Google</div>
+                      <div className="text-3xl font-black text-yellow-400">Top 3</div>
+                      <div className="text-xs text-gray-500">Région ciblée</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-300 mb-1">Visibilité</div>
+                      <div className="text-3xl font-black text-yellow-400">+150%</div>
+                      <div className="text-xs text-gray-500">1,200+ impressions/mois</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
 
             {/* LMDI Case Study (shorter) */}
             <motion.div
