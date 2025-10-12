@@ -39,10 +39,11 @@ export default function ExpertiseMarketingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-5xl md:text-7xl lg:text-8xl font-black mb-8"
+              style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
               <span className="text-white">Comment on Transforme</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-purple-500 to-purple-600">
                 des PME en Leaders Digitaux
               </span>
             </motion.h1>
@@ -102,7 +103,7 @@ export default function ExpertiseMarketingPage() {
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-black mb-6">
+              <h2 className="text-4xl md:text-6xl font-black mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 <span className="text-white">Nos 4 Frameworks</span>
                 <br />
                 <span className="text-yellow-400">Stratégiques</span>
@@ -125,7 +126,7 @@ export default function ExpertiseMarketingPage() {
                   <div className="inline-block px-4 py-2 bg-yellow-400/10 border border-yellow-400/20 rounded-lg text-yellow-400 text-sm font-semibold mb-6">
                     Framework #1
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-black text-white mb-6">
+                  <h3 className="text-3xl md:text-5xl font-black text-white mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Diagnostic 360° OSOM
                   </h3>
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
@@ -138,13 +139,13 @@ export default function ExpertiseMarketingPage() {
                   <div className="space-y-4">
                     {[
                       { name: 'Performance technique', color: 'yellow' },
-                      { name: 'SEO on-page', color: 'pink' },
+                      { name: 'SEO on-page', color: 'purple' },
                       { name: 'Contenu & mots-clés', color: 'purple' },
-                      { name: 'Backlinks & autorité', color: 'blue' },
-                      { name: 'Expérience utilisateur', color: 'green' },
-                      { name: 'Taux de conversion', color: 'orange' },
-                      { name: 'Veille concurrentielle', color: 'red' },
-                      { name: 'Opportunités marché local', color: 'indigo' }
+                      { name: 'Backlinks & autorité', color: 'purple' },
+                      { name: 'Expérience utilisateur', color: 'yellow' },
+                      { name: 'Taux de conversion', color: 'yellow' },
+                      { name: 'Veille concurrentielle', color: 'purple' },
+                      { name: 'Opportunités marché local', color: 'purple' }
                     ].map((axe, index) => (
                       <motion.div
                         key={axe.name}
@@ -162,9 +163,9 @@ export default function ExpertiseMarketingPage() {
 
                   <div className="mt-8 p-6 bg-purple-900/20 border border-purple-500/20 rounded-lg">
                     <p className="text-sm text-gray-300 italic">
-                      <span className="font-semibold text-purple-400">Exemple H-Sechement:</span> Score 8/10 en technique
-                      mais 3/10 en contenu. On a priorisé création contenu stratégique. Résultat: Position #2 Google
-                      "entreprise assèchement arc lémanique" en 6 mois.
+                      <span className="font-semibold text-purple-400">Exemple réel:</span> Score 8/10 en technique
+                      mais 3/10 en contenu. Priorisation création contenu stratégique. Résultat: Position top 3 Google
+                      sur mots-clés stratégiques en 6 mois.
                     </p>
                   </div>
                 </motion.div>
@@ -232,11 +233,11 @@ export default function ExpertiseMarketingPage() {
                   transition={{ duration: 0.6 }}
                   className="relative order-2 lg:order-1"
                 >
-                  <div className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-pink-500/20 rounded-2xl p-8 h-[500px] flex items-center justify-center">
+                  <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/10 border border-purple-500/20 rounded-2xl p-8 h-[500px] flex items-center justify-center">
                     <div className="text-center">
                       <div className="grid grid-cols-2 gap-6 mb-8">
-                        <div className="bg-black/40 p-6 rounded-lg border border-pink-500/20">
-                          <div className="text-3xl font-black text-pink-400 mb-2">23</div>
+                        <div className="bg-black/40 p-6 rounded-lg border border-purple-500/20">
+                          <div className="text-3xl font-black text-purple-400 mb-2">23</div>
                           <div className="text-sm text-gray-400">Mots-clés<br/>opportunités</div>
                         </div>
                         <div className="bg-black/40 p-6 rounded-lg border border-purple-500/20">
@@ -247,11 +248,11 @@ export default function ExpertiseMarketingPage() {
                       <div className="space-y-3">
                         {['Positionnement mots-clés', 'Qualité contenu', 'Autorité domaine', 'UX & Performance', 'Stratégie conversion'].map((dim, i) => (
                           <div key={i} className="flex items-center gap-3 bg-black/40 p-3 rounded-lg">
-                            <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                            <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                             <span className="text-sm text-gray-300">{dim}</span>
                             <div className="ml-auto flex gap-1">
                               {Array.from({ length: 5 }).map((_, j) => (
-                                <div key={j} className={`w-2 h-4 rounded ${j < (5 - i) ? 'bg-pink-400' : 'bg-gray-700'}`}></div>
+                                <div key={j} className={`w-2 h-4 rounded ${j < (5 - i) ? 'bg-purple-400' : 'bg-gray-700'}`}></div>
                               ))}
                             </div>
                           </div>
@@ -268,10 +269,10 @@ export default function ExpertiseMarketingPage() {
                   transition={{ duration: 0.6 }}
                   className="order-1 lg:order-2"
                 >
-                  <div className="inline-block px-4 py-2 bg-pink-500/10 border border-pink-500/20 rounded-lg text-pink-400 text-sm font-semibold mb-6">
+                  <div className="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-purple-400 text-sm font-semibold mb-6">
                     Framework #2
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-black text-white mb-6">
+                  <h3 className="text-3xl md:text-5xl font-black text-white mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Analyse Concurrentielle 5D
                   </h3>
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
@@ -285,8 +286,8 @@ export default function ExpertiseMarketingPage() {
                       <h4 className="text-xl font-bold text-white mb-3">Les 5 Dimensions</h4>
                       <div className="space-y-3">
                         <div className="flex items-start gap-3">
-                          <div className="mt-1 w-6 h-6 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center flex-shrink-0">
-                            <span className="text-xs text-pink-400 font-bold">1</span>
+                          <div className="mt-1 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                            <span className="text-xs text-purple-400 font-bold">1</span>
                           </div>
                           <div>
                             <div className="text-white font-semibold mb-1">Positionnement mots-clés</div>
@@ -294,8 +295,8 @@ export default function ExpertiseMarketingPage() {
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
-                          <div className="mt-1 w-6 h-6 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center flex-shrink-0">
-                            <span className="text-xs text-pink-400 font-bold">2</span>
+                          <div className="mt-1 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                            <span className="text-xs text-purple-400 font-bold">2</span>
                           </div>
                           <div>
                             <div className="text-white font-semibold mb-1">Qualité contenu</div>
@@ -303,8 +304,8 @@ export default function ExpertiseMarketingPage() {
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
-                          <div className="mt-1 w-6 h-6 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center flex-shrink-0">
-                            <span className="text-xs text-pink-400 font-bold">3</span>
+                          <div className="mt-1 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                            <span className="text-xs text-purple-400 font-bold">3</span>
                           </div>
                           <div>
                             <div className="text-white font-semibold mb-1">Autorité domaine</div>
@@ -312,8 +313,8 @@ export default function ExpertiseMarketingPage() {
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
-                          <div className="mt-1 w-6 h-6 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center flex-shrink-0">
-                            <span className="text-xs text-pink-400 font-bold">4</span>
+                          <div className="mt-1 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                            <span className="text-xs text-purple-400 font-bold">4</span>
                           </div>
                           <div>
                             <div className="text-white font-semibold mb-1">Expérience utilisateur</div>
@@ -321,8 +322,8 @@ export default function ExpertiseMarketingPage() {
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
-                          <div className="mt-1 w-6 h-6 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center flex-shrink-0">
-                            <span className="text-xs text-pink-400 font-bold">5</span>
+                          <div className="mt-1 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                            <span className="text-xs text-purple-400 font-bold">5</span>
                           </div>
                           <div>
                             <div className="text-white font-semibold mb-1">Stratégie conversion</div>
@@ -333,9 +334,9 @@ export default function ExpertiseMarketingPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-pink-900/20 border border-pink-500/20 rounded-lg">
+                  <div className="mt-8 p-6 bg-purple-900/20 border border-purple-500/20 rounded-lg">
                     <p className="text-sm text-gray-300 italic">
-                      <span className="font-semibold text-pink-400">Exemple LMDI:</span> Analyse de 5 concurrents e-commerce
+                      <span className="font-semibold text-purple-400">Exemple LMDI:</span> Analyse de 5 concurrents e-commerce
                       a révélé 23 mots-clés ignorés avec volume 50-200/mois. Création contenu ciblé. Résultat: +180% trafic organique.
                     </p>
                   </div>
@@ -355,7 +356,7 @@ export default function ExpertiseMarketingPage() {
                   <div className="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-lg text-purple-400 text-sm font-semibold mb-6">
                     Framework #3
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-black text-white mb-6">
+                  <h3 className="text-3xl md:text-5xl font-black text-white mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Stratégie Mots-Clés 3 Horizons
                   </h3>
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
@@ -392,10 +393,10 @@ export default function ExpertiseMarketingPage() {
                     </div>
 
                     {/* Horizon 2 */}
-                    <div className="bg-pink-900/20 border border-pink-500/20 rounded-xl p-6">
+                    <div className="bg-purple-900/20 border border-purple-500/20 rounded-xl p-6">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 rounded-full bg-pink-500/20 border border-pink-500/30 flex items-center justify-center">
-                          <span className="text-lg text-pink-400 font-black">H2</span>
+                        <div className="w-12 h-12 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
+                          <span className="text-lg text-purple-400 font-black">H2</span>
                         </div>
                         <div>
                           <div className="text-white font-bold text-lg">Momentum</div>
@@ -404,15 +405,15 @@ export default function ExpertiseMarketingPage() {
                       </div>
                       <ul className="space-y-2 text-sm text-gray-300">
                         <li className="flex items-start gap-2">
-                          <span className="text-pink-400 mt-1">•</span>
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Mots-clés moyenne concurrence, volume élevé</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-pink-400 mt-1">•</span>
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Nouveau contenu stratégique</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-pink-400 mt-1">•</span>
+                          <span className="text-purple-400 mt-1">•</span>
                           <span>Campagnes backlinks ciblées</span>
                         </li>
                       </ul>
@@ -464,7 +465,7 @@ export default function ExpertiseMarketingPage() {
                 >
                   <div className="relative h-full flex flex-col justify-between py-8 md:py-12">
                     {/* Timeline line */}
-                    <div className="absolute left-8 md:left-12 top-8 md:top-12 bottom-8 md:bottom-12 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-yellow-500"></div>
+                    <div className="absolute left-8 md:left-12 top-8 md:top-12 bottom-8 md:bottom-12 w-1 bg-gradient-to-b from-purple-500 via-purple-500 to-yellow-500"></div>
 
                     {/* Timeline items */}
                     <div className="relative flex items-center gap-4 md:gap-6">
@@ -478,10 +479,10 @@ export default function ExpertiseMarketingPage() {
                     </div>
 
                     <div className="relative flex items-center gap-4 md:gap-6">
-                      <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-pink-500 flex items-center justify-center text-xl md:text-2xl font-black text-white border-4 border-black z-10">
+                      <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-purple-500 flex items-center justify-center text-xl md:text-2xl font-black text-white border-4 border-black z-10">
                         H2
                       </div>
-                      <div className="flex-1 bg-pink-900/20 border border-pink-500/20 rounded-lg p-6">
+                      <div className="flex-1 bg-purple-900/20 border border-purple-500/20 rounded-lg p-6">
                         <div className="font-bold text-white mb-2">Momentum</div>
                         <div className="text-sm text-gray-400">Accélération croissance</div>
                       </div>
@@ -512,13 +513,13 @@ export default function ExpertiseMarketingPage() {
                   transition={{ duration: 0.6 }}
                   className="relative order-2 lg:order-1"
                 >
-                  <div className="bg-gradient-to-br from-blue-500/10 to-green-500/10 border border-blue-500/20 rounded-2xl p-4 md:p-6 overflow-hidden">
+                  <div className="bg-gradient-to-br from-purple-600/10 to-yellow-400/10 border border-purple-600/20 rounded-2xl p-4 md:p-6 overflow-hidden">
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-2">
                         <div className="text-xs text-gray-500 uppercase tracking-wide">Dashboard Live</div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                          <span className="text-xs text-green-400">Temps réel</span>
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                          <span className="text-xs text-yellow-400">Temps réel</span>
                         </div>
                       </div>
                       <div className="text-xl md:text-2xl font-black text-white">Performance Marketing</div>
@@ -526,20 +527,20 @@ export default function ExpertiseMarketingPage() {
 
                     {/* Metrics grid */}
                     <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="bg-black/40 p-4 rounded-lg border border-blue-500/20">
+                      <div className="bg-black/40 p-4 rounded-lg border border-purple-600/20">
                         <div className="text-xs text-gray-400 mb-1">Impressions organiques</div>
-                        <div className="text-2xl font-black text-blue-400">9,133</div>
-                        <div className="text-xs text-green-400">+47% vs mois dernier</div>
+                        <div className="text-2xl font-black text-purple-400">9,133</div>
+                        <div className="text-xs text-yellow-400">+47% vs mois dernier</div>
                       </div>
-                      <div className="bg-black/40 p-4 rounded-lg border border-green-500/20">
+                      <div className="bg-black/40 p-4 rounded-lg border border-yellow-400/20">
                         <div className="text-xs text-gray-400 mb-1">Position moyenne</div>
-                        <div className="text-2xl font-black text-green-400">4.2</div>
-                        <div className="text-xs text-green-400">-1.3 positions</div>
+                        <div className="text-2xl font-black text-yellow-400">4.2</div>
+                        <div className="text-xs text-yellow-400">-1.3 positions</div>
                       </div>
                       <div className="bg-black/40 p-4 rounded-lg border border-purple-500/20">
                         <div className="text-xs text-gray-400 mb-1">CTR moyen</div>
                         <div className="text-2xl font-black text-purple-400">3.45%</div>
-                        <div className="text-xs text-green-400">+0.8 points</div>
+                        <div className="text-xs text-yellow-400">+0.8 points</div>
                       </div>
                       <div className="bg-black/40 p-4 rounded-lg border border-yellow-500/20">
                         <div className="text-xs text-gray-400 mb-1">Nouveaux backlinks</div>
@@ -549,13 +550,13 @@ export default function ExpertiseMarketingPage() {
                     </div>
 
                     {/* Mini chart placeholder */}
-                    <div className="bg-black/40 p-4 rounded-lg border border-blue-500/20">
+                    <div className="bg-black/40 p-4 rounded-lg border border-purple-600/20">
                       <div className="text-xs text-gray-400 mb-3">Évolution trafic 90 jours</div>
                       <div className="flex items-end justify-between gap-1 h-20">
                         {[40, 45, 42, 50, 55, 52, 60, 65, 62, 70, 75, 80].map((height, i) => (
                           <div
                             key={i}
-                            className="flex-1 bg-gradient-to-t from-blue-500 to-purple-500 rounded-t"
+                            className="flex-1 bg-gradient-to-t from-purple-600 to-purple-500 rounded-t"
                             style={{ height: `${height}%` }}
                           ></div>
                         ))}
@@ -571,10 +572,10 @@ export default function ExpertiseMarketingPage() {
                   transition={{ duration: 0.6 }}
                   className="order-1 lg:order-2"
                 >
-                  <div className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-blue-400 text-sm font-semibold mb-6">
+                  <div className="inline-block px-4 py-2 bg-purple-600/10 border border-purple-600/20 rounded-lg text-purple-400 text-sm font-semibold mb-6">
                     Framework #4
                   </div>
-                  <h3 className="text-3xl md:text-5xl font-black text-white mb-6">
+                  <h3 className="text-3xl md:text-5xl font-black text-white mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Monitoring & Optimisation Continue
                   </h3>
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
@@ -587,8 +588,8 @@ export default function ExpertiseMarketingPage() {
                       <h4 className="text-xl font-bold text-white mb-4">3 Catégories de Métriques</h4>
 
                       <div className="space-y-4">
-                        <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4">
-                          <div className="font-semibold text-blue-400 mb-2">Acquisition</div>
+                        <div className="bg-purple-900/20 border border-purple-600/20 rounded-lg p-4">
+                          <div className="font-semibold text-purple-400 mb-2">Acquisition</div>
                           <ul className="space-y-1 text-sm text-gray-300">
                             <li>• Impressions organiques (évolution)</li>
                             <li>• Positions moyennes top 10/20/50</li>
@@ -597,8 +598,8 @@ export default function ExpertiseMarketingPage() {
                           </ul>
                         </div>
 
-                        <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4">
-                          <div className="font-semibold text-green-400 mb-2">Engagement</div>
+                        <div className="bg-purple-900/20 border border-yellow-400/20 rounded-lg p-4">
+                          <div className="font-semibold text-yellow-400 mb-2">Engagement</div>
                           <ul className="space-y-1 text-sm text-gray-300">
                             <li>• Temps passé par page</li>
                             <li>• Taux rebond par source</li>
@@ -620,9 +621,9 @@ export default function ExpertiseMarketingPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-blue-900/20 border border-blue-500/20 rounded-lg">
+                  <div className="mt-8 p-6 bg-purple-900/20 border border-purple-600/20 rounded-lg">
                     <p className="text-sm text-gray-300 italic">
-                      <span className="font-semibold text-blue-400">Exemple H-Sechement:</span> Dashboard live a détecté
+                      <span className="font-semibold text-purple-400">Exemple réel:</span> Dashboard live a détecté
                       un bug technique causant drop de 3 positions en 24h (au lieu de découvrir ça 1 mois plus tard).
                       Correction immédiate, positions récupérées en 48h.
                     </p>
@@ -637,10 +638,10 @@ export default function ExpertiseMarketingPage() {
         <section className="py-20 px-4 bg-gradient-to-b from-black via-purple-900/5 to-black">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-black mb-6">
+              <h2 className="text-4xl md:text-6xl font-black mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 <span className="text-white">Behind the Scenes:</span>
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-purple-500">
                   Comment On a Vraiment Fait
                 </span>
               </h2>
@@ -649,145 +650,29 @@ export default function ExpertiseMarketingPage() {
               </p>
             </div>
 
-            {/* H-Sechement Case Study */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-16 bg-gradient-to-br from-yellow-900/10 to-purple-900/10 border border-yellow-400/20 rounded-2xl p-8 md:p-12"
-            >
-              <div className="flex items-start gap-4 mb-8">
-                <div className="w-16 h-16 rounded-full bg-yellow-400/20 border border-yellow-400/30 flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🏗️</span>
-                </div>
-                <div>
-                  <h3 className="text-3xl md:text-4xl font-black text-white mb-2">H-Sechement</h3>
-                  <p className="text-yellow-400 font-semibold">De 0 à #2 Google en 6 Mois</p>
-                  <p className="text-gray-400 text-sm mt-1">B2B Technique - Assèchement Arc Lémanique</p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div>
-                  <h4 className="text-xl font-bold text-white mb-3">Contexte initial</h4>
-                  <div className="bg-black/40 p-6 rounded-lg border border-yellow-400/10">
-                    <div className="grid md:grid-cols-3 gap-4 text-sm">
-                      <div>
-                        <div className="text-gray-400 mb-1">Performance technique</div>
-                        <div className="text-2xl font-black text-yellow-400">65/100</div>
-                      </div>
-                      <div>
-                        <div className="text-gray-400 mb-1">Positions Google</div>
-                        <div className="text-2xl font-black text-red-400">0</div>
-                        <div className="text-xs text-gray-500">Top 10</div>
-                      </div>
-                      <div>
-                        <div className="text-gray-400 mb-1">Trafic organique</div>
-                        <div className="text-2xl font-black text-red-400">~50</div>
-                        <div className="text-xs text-gray-500">visites/mois</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-bold text-white mb-3">Stratégie appliquée (Timeline)</h4>
-                  <div className="space-y-3">
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-20 text-right">
-                        <span className="text-sm font-semibold text-yellow-400">Mois 1</span>
-                      </div>
-                      <div className="flex-1 bg-black/40 p-4 rounded-lg border-l-4 border-yellow-400">
-                        <p className="text-sm text-gray-300">
-                          <span className="font-semibold text-white">Migration Next.js + Performance 95+.</span> Optimisation
-                          technique complète, compression images, critical CSS inline.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-20 text-right">
-                        <span className="text-sm font-semibold text-yellow-400">Mois 2</span>
-                      </div>
-                      <div className="flex-1 bg-black/40 p-4 rounded-lg border-l-4 border-pink-500">
-                        <p className="text-sm text-gray-300">
-                          <span className="font-semibold text-white">Analyse concurrentielle identifie opportunité:</span> "assèchement
-                          arc lémanique" = 170 recherches/mois, seulement 2 concurrents faibles. Création page pilier 2,800 mots + 3 articles satellites.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-20 text-right">
-                        <span className="text-sm font-semibold text-yellow-400">Mois 3</span>
-                      </div>
-                      <div className="flex-1 bg-black/40 p-4 rounded-lg border-l-4 border-green-500">
-                        <p className="text-sm text-gray-300">
-                          <span className="font-semibold text-white">Position #2 atteinte.</span> 89 visites/mois sur ce cluster uniquement.
-                          Dashboard monitoring installé.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-20 text-right">
-                        <span className="text-sm font-semibold text-yellow-400">Mois 4-6</span>
-                      </div>
-                      <div className="flex-1 bg-black/40 p-4 rounded-lg border-l-4 border-purple-500">
-                        <p className="text-sm text-gray-300">
-                          <span className="font-semibold text-white">Expansion H2:</span> 15 mots-clés techniques moyenne concurrence ciblés.
-                          Campagne backlinks locaux. Résultat final: 1,287 impressions/mois, +150% visibilité.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-6">
-                  <h4 className="text-lg font-bold text-green-400 mb-3">Résultats mesurés</h4>
-                  <div className="grid md:grid-cols-3 gap-4 text-sm">
-                    <div>
-                      <div className="text-gray-300 mb-1">Performance PageSpeed</div>
-                      <div className="text-3xl font-black text-green-400">95+</div>
-                      <div className="text-xs text-gray-500">vs 65 avant</div>
-                    </div>
-                    <div>
-                      <div className="text-gray-300 mb-1">Position Google</div>
-                      <div className="text-3xl font-black text-green-400">#2</div>
-                      <div className="text-xs text-gray-500">Arc Lémanique</div>
-                    </div>
-                    <div>
-                      <div className="text-gray-300 mb-1">Visibilité</div>
-                      <div className="text-3xl font-black text-green-400">+150%</div>
-                      <div className="text-xs text-gray-500">1,287 impressions/mois</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
             {/* LMDI Case Study (shorter) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-16 bg-gradient-to-br from-pink-900/10 to-blue-900/10 border border-pink-400/20 rounded-2xl p-8 md:p-12"
+              className="mb-16 bg-gradient-to-br from-purple-900/10 to-purple-900/10 border border-purple-400/20 rounded-2xl p-8 md:p-12"
             >
               <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-pink-400/20 border border-pink-400/30 flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🛍️</span>
+                <div className="w-16 h-16 rounded-full bg-purple-400/20 border border-purple-400/30 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
                 </div>
                 <div>
                   <h3 className="text-3xl md:text-4xl font-black text-white mb-2">LMDI</h3>
-                  <p className="text-pink-400 font-semibold">Veille Concurrentielle × 3 Trafic</p>
+                  <p className="text-purple-400 font-semibold">Veille Concurrentielle × 3 Trafic</p>
                   <p className="text-gray-400 text-sm mt-1">E-commerce Premium - Mode & Design</p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-black/40 p-6 rounded-lg border border-pink-400/10">
+                <div className="bg-black/40 p-6 rounded-lg border border-purple-400/10">
                   <h4 className="text-lg font-bold text-white mb-3">Stratégie</h4>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>• Analyse 5 concurrents e-commerce premium</li>
@@ -797,21 +682,21 @@ export default function ExpertiseMarketingPage() {
                   </ul>
                 </div>
 
-                <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-6">
-                  <h4 className="text-lg font-bold text-green-400 mb-3">Résultats</h4>
+                <div className="bg-purple-900/20 border border-yellow-400/20 rounded-lg p-6">
+                  <h4 className="text-lg font-bold text-yellow-400 mb-3">Résultats</h4>
                   <div className="space-y-3">
                     <div>
                       <div className="text-gray-300 text-sm mb-1">Clics organiques/mois</div>
-                      <div className="text-3xl font-black text-green-400">315</div>
+                      <div className="text-3xl font-black text-yellow-400">315</div>
                     </div>
                     <div>
                       <div className="text-gray-300 text-sm mb-1">CTR moyen</div>
-                      <div className="text-3xl font-black text-green-400">3.45%</div>
+                      <div className="text-3xl font-black text-yellow-400">3.45%</div>
                       <div className="text-xs text-gray-500">Excellent pour e-commerce</div>
                     </div>
                     <div>
                       <div className="text-gray-300 text-sm mb-1">Impressions</div>
-                      <div className="text-3xl font-black text-green-400">9,133</div>
+                      <div className="text-3xl font-black text-yellow-400">9,133</div>
                       <div className="text-xs text-gray-500">par mois</div>
                     </div>
                   </div>
@@ -852,23 +737,23 @@ export default function ExpertiseMarketingPage() {
                   </div>
                 </div>
 
-                <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-6">
-                  <h4 className="text-lg font-bold text-green-400 mb-3">Impact</h4>
+                <div className="bg-purple-900/20 border border-yellow-400/20 rounded-lg p-6">
+                  <h4 className="text-lg font-bold text-yellow-400 mb-3">Impact</h4>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li className="flex items-start gap-2">
-                      <span className="text-green-400 mt-1">✓</span>
+                      <span className="text-yellow-400 mt-1">✓</span>
                       <span>200 visites/mois organiques immédiates</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-green-400 mt-1">✓</span>
+                      <span className="text-yellow-400 mt-1">✓</span>
                       <span>Crédibilité institutionnelle renforcée</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-green-400 mt-1">✓</span>
+                      <span className="text-yellow-400 mt-1">✓</span>
                       <span>Communication événements centralisée</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-green-400 mt-1">✓</span>
+                      <span className="text-yellow-400 mt-1">✓</span>
                       <span>Base solide pour expansion H2 (Valais culturel)</span>
                     </li>
                   </ul>
@@ -888,7 +773,7 @@ export default function ExpertiseMarketingPage() {
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-yellow-900/20 to-purple-900/20 border-2 border-yellow-400/30 rounded-2xl p-8 md:p-12"
             >
-              <h2 className="text-3xl md:text-5xl font-black text-white mb-6 text-center">
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-6 text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 Pourquoi Cette Transparence ?
               </h2>
 
@@ -934,7 +819,7 @@ export default function ExpertiseMarketingPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-6xl font-black mb-6">
+              <h2 className="text-4xl md:text-6xl font-black mb-6" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 <span className="text-white">Prêt à Appliquer</span>
                 <br />
                 <span className="text-yellow-400">Cette Méthodologie ?</span>
