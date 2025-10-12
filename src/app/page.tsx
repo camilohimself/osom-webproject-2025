@@ -212,18 +212,18 @@ export default async function Home() {
             <AnimatedElement type="fadeIn" delay={0.3}>
               <a
                 href="/services/performance"
-                className="group block bg-black/40 border border-pink-500/30 rounded-2xl p-8 hover:border-pink-500/70 hover:bg-black/60 transition-all duration-300 h-full relative"
+                className="group block bg-black/40 border border-purple-600/30 rounded-2xl p-8 hover:border-purple-600/70 hover:bg-black/60 transition-all duration-300 h-full relative"
               >
-                <div className="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                <div className="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                   POPULAIRE
                 </div>
 
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                     Performance
                   </h3>
-                  <div className="w-12 h-12 bg-pink-500/10 rounded-full flex items-center justify-center group-hover:bg-pink-500/20 transition-colors">
-                    <svg className="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-purple-600/10 rounded-full flex items-center justify-center group-hover:bg-purple-600/20 transition-colors">
+                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -233,19 +233,19 @@ export default async function Home() {
                   <p className="text-gray-300 text-sm">Transformation digitale complète</p>
                   <div className="space-y-2 text-sm">
                     <div className="flex items-start gap-2 text-gray-400">
-                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       <span>30-60 pages complexes</span>
                     </div>
                     <div className="flex items-start gap-2 text-gray-400">
-                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       <span>API & intégrations</span>
                     </div>
                     <div className="flex items-start gap-2 text-gray-400">
-                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-pink-400" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       <span>SEO stratégique mensuel</span>
@@ -253,8 +253,8 @@ export default async function Home() {
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-pink-500/20">
-                  <div className="text-lg font-medium text-pink-400 mb-1">Engagement 6-12 mois</div>
+                <div className="pt-6 border-t border-purple-600/20">
+                  <div className="text-lg font-medium text-purple-400 mb-1">Engagement 6-12 mois</div>
                   <div className="text-sm text-gray-400 flex items-center gap-2">
                     Découvrir le package
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

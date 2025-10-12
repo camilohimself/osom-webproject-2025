@@ -970,6 +970,7 @@ Ce n'est PAS "18,000 CHF projet + 1,800 CHF/mois support optionnel". C'est **18,
 - **NO EMOJIS**: Interdit dans l'ensemble du site (demande explicite utilisateur)
 - **Phare interactif**: Hero homepage SIGNATURE - NE JAMAIS MODIFIER sans validation
 - **Font**: Cera PRO (primary), Inter (fallback)
+- **Palette couleurs**: NOIR + JAUNE (yellow-400) + VIOLET (purple-500/600/700) UNIQUEMENT - **JAMAIS de rose/pink**
 - **Spacing**: Navigation aérée, CTAs fins et élégants
 - **Mobile-first**: Responsive total, touch-friendly
 - **Typographie**: Convention française - pas de Majuscules Multiples (sauf noms propres, acronymes, produits)
