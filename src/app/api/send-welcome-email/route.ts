@@ -213,7 +213,8 @@ export async function POST(request: NextRequest) {
     if (resend) {
       try {
         const { data, error } = await resend.emails.send({
-          from: 'OSOM <hello@osom.ch>',
+          from: 'OSOM <onboarding@resend.dev>', // Temporaire: domaine Resend (fonctionne immédiatement)
+          // TODO: Changer vers 'OSOM <hello@osom.ch>' après vérification domaine
           to: email,
           subject: 'OSOM - Votre kit de contact stratégie digitale',
           html: emailTemplate,
