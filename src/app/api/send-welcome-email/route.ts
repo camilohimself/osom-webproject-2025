@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+// Initialize Resend (graceful degradation si clé manquante)
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 export async function POST(request: NextRequest) {
   try {
@@ -169,9 +173,10 @@ export async function POST(request: NextRequest) {
             <div class="contact-info">
                 <h4>📞 Contact direct :</h4>
                 <p>
-                    <strong>Email :</strong> contact@osom.ch<br>
-                    <strong>Téléphone :</strong> +41 27 XXX XX XX<br>
-                    <strong>Adresse :</strong> Valais, Suisse
+                    <strong>Email :</strong> hello@osom.ch<br>
+                    <strong>Téléphone :</strong> +41 79 128 95 49<br>
+                    <strong>WhatsApp :</strong> +41 79 128 95 49<br>
+                    <strong>Adresse :</strong> Rue de Clodevis 13, 1967 Bramois, Valais
                 </p>
             </div>
             
@@ -193,8 +198,8 @@ export async function POST(request: NextRequest) {
         
         <div class="footer">
             <p><strong>OSOM</strong> - Expert marketing digital & SEO • Valais<br>
-            <a href="https://osom.ch">osom.ch</a> | contact@osom.ch</p>
-            
+            <a href="https://osom.ch">osom.ch</a> | hello@osom.ch | +41 79 128 95 49</p>
+
             <p style="font-size: 12px; margin-top: 20px;">
                 Vous recevez cet email car vous avez demandé des informations sur nos services.<br>
                 Si vous ne souhaitez plus recevoir nos communications, contactez-nous.
@@ -204,26 +209,41 @@ export async function POST(request: NextRequest) {
 </body>
 </html>`
 
-    // Pour le moment, on simule l'envoi (en production, utiliser Resend, SendGrid, etc.)
-    // Ici on peut logger l'email ou l'envoyer via un service
-    console.log('Email à envoyer à:', email)
-    console.log('Template:', emailTemplate.substring(0, 200) + '...')
+    // Envoi email via Resend (si configuré)
+    if (resend) {
+      try {
+        const { data, error } = await resend.emails.send({
+          from: 'OSOM <hello@osom.ch>',
+          to: email,
+          subject: 'OSOM - Votre kit de contact stratégie digitale',
+          html: emailTemplate,
+        })
 
-    // Simulation d'un délai d'envoi
-    await new Promise(resolve => setTimeout(resolve, 1000))
+        if (error) {
+          console.error('❌ Erreur Resend:', error)
+          // Fallback: log uniquement
+          console.log('📧 Email (fallback mode) à:', email)
+        } else {
+          console.log('✅ Email envoyé avec succès via Resend:', data?.id)
+        }
+      } catch (resendError) {
+        console.error('❌ Erreur lors de l\'envoi Resend:', resendError)
+        // Continue malgré l'erreur (graceful degradation)
+      }
+    } else {
+      // Mode développement sans Resend configuré
+      console.log('⚠️  RESEND_API_KEY non configurée - Mode simulation')
+      console.log('📧 Email à envoyer à:', email)
+      console.log('📄 Template:', emailTemplate.substring(0, 200) + '...')
 
-    // TODO: Intégrer un vrai service d'email comme Resend
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'OSOM <contact@osom.ch>',
-    //   to: email,
-    //   subject: 'OSOM - Votre kit de contact stratégie digitale',
-    //   html: emailTemplate,
-    // })
+      // Simulation délai
+      await new Promise(resolve => setTimeout(resolve, 500))
+    }
 
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Email envoyé avec succès' 
+    return NextResponse.json({
+      success: true,
+      message: 'Email envoyé avec succès',
+      mode: resend ? 'production' : 'development'
     })
 
   } catch (error) {

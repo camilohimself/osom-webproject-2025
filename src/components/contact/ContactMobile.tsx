@@ -9,21 +9,49 @@ export function ContactMobile() {
     phone: '',
     project: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError('')
 
-    // Validation simple
+    // Validation
     if (!formData.name || !formData.phone) {
-      alert('Nom et téléphone obligatoires')
+      setError('Nom et téléphone obligatoires')
       return
     }
 
-    // Envoi direct appel téléphonique
-    window.location.href = `tel:+41791289549`
+    setIsSubmitting(true)
 
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', project: '' })
+    try {
+      const response = await fetch('/api/contact-callback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'envoi')
+      }
+
+      // Succès!
+      setIsSuccess(true)
+      setFormData({ name: '', email: '', phone: '', project: '' })
+
+      // Auto-reset après 5 secondes
+      setTimeout(() => {
+        setIsSuccess(false)
+      }, 5000)
+
+    } catch (err) {
+      setError('Une erreur est survenue. Veuillez réessayer ou nous appeler directement.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -92,54 +120,108 @@ export function ContactMobile() {
       {/* Formulaire MINIMAL 2 champs */}
       <section className="py-12 px-4">
         <div className="max-w-lg mx-auto">
-          <div className="text-center mb-6">
-            <h2 className="text-xl font-bold mb-2">
-              Ou laissez vos coordonnées
-            </h2>
-            <p className="text-gray-400 text-sm">
-              On vous rappelle sous 2h (jours ouvrés)
-            </p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <input
-                type="text"
-                name="name"
-                placeholder="Votre nom *"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full p-5 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none text-lg"
-              />
+          {isSuccess ? (
+            // Message de succès
+            <div className="bg-green-500/10 border-2 border-green-500 rounded-2xl p-8 text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                Demande enregistrée !
+              </h3>
+              <p className="text-gray-300 mb-6">
+                On vous rappelle sous 2h (jours ouvrés)
+              </p>
+              <div className="space-y-3">
+                <p className="text-sm text-gray-400">
+                  Besoin d'une réponse immédiate ?
+                </p>
+                <div className="flex gap-3">
+                  <a
+                    href="tel:+41791289549"
+                    className="flex-1 bg-yellow-400 text-black font-bold py-4 rounded-xl hover:bg-yellow-500 transition-colors"
+                  >
+                    Appeler maintenant
+                  </a>
+                  <a
+                    href="https://wa.me/41791289549"
+                    className="flex-1 bg-green-500 text-white font-bold py-4 rounded-xl hover:bg-green-600 transition-colors"
+                  >
+                    WhatsApp
+                  </a>
+                </div>
+              </div>
             </div>
+          ) : (
+            <>
+              <div className="text-center mb-6">
+                <h2 className="text-xl font-bold mb-2">
+                  Ou laissez vos coordonnées
+                </h2>
+                <p className="text-gray-400 text-sm">
+                  On vous rappelle sous 2h (jours ouvrés)
+                </p>
+              </div>
 
-            <div>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Votre téléphone *"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                className="w-full p-5 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none text-lg"
-              />
-            </div>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Votre nom *"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    disabled={isSubmitting}
+                    className="w-full p-5 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none text-lg disabled:opacity-50"
+                  />
+                </div>
 
-            <button
-              type="submit"
-              className="w-full bg-yellow-400 text-black font-bold py-5 px-8 rounded-xl active:scale-95 transition-transform text-lg shadow-lg shadow-yellow-400/20"
-            >
-              Je veux être rappelé
-            </button>
+                <div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Votre téléphone *"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    disabled={isSubmitting}
+                    className="w-full p-5 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none text-lg disabled:opacity-50"
+                  />
+                </div>
 
-            <div className="text-center text-yellow-400 text-sm font-medium flex items-center justify-center gap-2">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-              <span>Réponse garantie sous 2h</span>
-            </div>
-          </form>
+                {error && (
+                  <div className="bg-red-500/10 border border-red-500 rounded-xl p-4 text-center">
+                    <p className="text-red-400 text-sm">{error}</p>
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-yellow-400 text-black font-bold py-5 px-8 rounded-xl active:scale-95 transition-transform text-lg shadow-lg shadow-yellow-400/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin"></div>
+                      Envoi en cours...
+                    </div>
+                  ) : (
+                    'Je veux être rappelé'
+                  )}
+                </button>
+
+                <div className="text-center text-yellow-400 text-sm font-medium flex items-center justify-center gap-2">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Réponse garantie sous 2h</span>
+                </div>
+              </form>
+            </>
+          )}
         </div>
       </section>
 

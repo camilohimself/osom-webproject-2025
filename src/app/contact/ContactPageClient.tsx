@@ -143,9 +143,35 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
     }
   }, [showCalendly])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setShowCalendly(true)
+
+    try {
+      // Sauvegarder le lead avant d'ouvrir Calendly
+      const response = await fetch('/api/contact-lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          source: 'contact_form_desktop'
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de la sauvegarde')
+      }
+
+      // Lead sauvegardé, on peut ouvrir Calendly
+      console.log('✅ Lead sauvegardé avant Calendly')
+      setShowCalendly(true)
+
+    } catch (error) {
+      console.error('❌ Erreur sauvegarde lead:', error)
+      // On ouvre quand même Calendly pour ne pas bloquer l'user
+      setShowCalendly(true)
+    }
   }
 
   return (
