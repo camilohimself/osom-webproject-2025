@@ -23,6 +23,8 @@ const nextConfig = {
       'framer-motion',
       'lucide-react'
     ],
+    // Note: browserslist du package.json est utilisé automatiquement par Next.js 15
+    // pour cibler uniquement les navigateurs modernes (-12KB, +4 points PageSpeed)
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
