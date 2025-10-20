@@ -246,11 +246,9 @@ export default function EvolutionPage() {
             <div className="bg-gradient-to-br from-white/5 to-black/40 border border-white/10 rounded-2xl p-8 hover:border-purple-400/40 transition-all duration-300">
               <div className="text-center mb-6">
                 <div className="text-purple-400 text-sm font-medium uppercase tracking-wide mb-2">Engagement 6 mois</div>
-                <div className="text-6xl font-bold text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                  2,750
-                  <span className="text-2xl text-gray-400"> CHF</span>
+                <div className="text-5xl font-bold text-purple-400 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  2,750 CHF/mois
                 </div>
-                <div className="text-sm text-gray-400">par mois</div>
                 <div className="text-xs text-gray-500 mt-2">Total: 16,500 CHF</div>
               </div>
               <Link
@@ -268,11 +266,9 @@ export default function EvolutionPage() {
               </div>
               <div className="text-center mb-6">
                 <div className="text-purple-400 text-sm font-medium uppercase tracking-wide mb-2">Engagement 12 mois</div>
-                <div className="text-6xl font-bold text-white mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                  2,500
-                  <span className="text-2xl text-gray-400"> CHF</span>
+                <div className="text-5xl font-bold text-purple-400 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                  2,500 CHF/mois
                 </div>
-                <div className="text-sm text-gray-400">par mois</div>
                 <div className="text-xs text-gray-500 mt-2">Total: 30,000 CHF</div>
                 <div className="text-xs text-green-400 mt-1 font-semibold">Économie: 3,000 CHF vs 6 mois</div>
               </div>

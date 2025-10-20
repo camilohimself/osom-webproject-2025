@@ -4,9 +4,9 @@ import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 
 export const metadata = {
-  title: 'Packages Développeur Web Valais | Essentiel, Performance, Sur Mesure | OSOM',
-  description: 'Packages développement web sur mesure Valais. Essentiel (5-9K), Performance (10-18K), Sur Mesure (20K+). Paiement mensuel = partenariat actif continu.',
-  keywords: 'packages développeur web, pricing développement valais, site sur mesure, partenariat mensuel, osom valais',
+  title: 'Packages Développeur Web Valais | Essentiel, Évolution, Performance, Sur Mesure | OSOM',
+  description: 'Packages développement web sur mesure Valais. Essentiel (1.5k/mois), Évolution (2.5k/mois), Performance (4k/mois), Sur Mesure (devis). Paiement mensuel = partenariat actif continu.',
+  keywords: 'packages développeur web, pricing développement valais, site sur mesure, partenariat mensuel, pme croissance, osom valais',
 }
 
 export default async function ServicesPage() {
@@ -15,7 +15,7 @@ export default async function ServicesPage() {
   const packages = [
     {
       name: "Essentiel",
-      tagline: "Fondations solides",
+      tagline: "Vous démarrez",
       priceOptions: [
         { duration: "3 mois", total: "5,000 CHF", monthly: "1,667 CHF/mois" },
         { duration: "6 mois", total: "9,000 CHF", monthly: "1,500 CHF/mois", popular: true }
@@ -35,8 +35,29 @@ export default async function ServicesPage() {
       badge: null
     },
     {
+      name: "Évolution",
+      tagline: "Vous grandissez",
+      priceOptions: [
+        { duration: "6 mois", total: "16,500 CHF", monthly: "2,750 CHF/mois" },
+        { duration: "12 mois", total: "30,000 CHF", monthly: "2,500 CHF/mois", popular: true }
+      ],
+      description: "PME 5-15 employés • SEO local mensuel • Mises à jour continues",
+      features: [
+        "20-30 pages sur mesure",
+        "SEO local mensuel (1 ville)",
+        "2 articles blog/mois",
+        "Support 72h",
+        "Dashboard analytics standard",
+        "Réunion bilan trimestrielle"
+      ],
+      cta: "Démarrer",
+      href: "/services/evolution",
+      color: "purple",
+      badge: "NOUVEAU"
+    },
+    {
       name: "Performance",
-      tagline: "Partenariat actif",
+      tagline: "Vous dominez",
       priceOptions: [
         { duration: "6 mois", total: "27,000 CHF", monthly: "4,500 CHF/mois" },
         { duration: "12 mois", total: "48,000 CHF", monthly: "4,000 CHF/mois", popular: true }
@@ -57,7 +78,7 @@ export default async function ServicesPage() {
     },
     {
       name: "Sur Mesure",
-      tagline: "Conquête digitale",
+      tagline: "Unique",
       priceOptions: [
         { duration: "12-24 mois", total: "20,000 - 100,000+ CHF", monthly: "Devis personnalisé" }
       ],
@@ -121,10 +142,11 @@ export default async function ServicesPage() {
           </div>
 
           {/* Pricing Cards Netflix Style */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {packages.map((pkg, index) => {
               const colors = colorClasses[pkg.color as keyof typeof colorClasses]
               const isPopular = pkg.badge === "POPULAIRE"
+              const isNew = pkg.badge === "NOUVEAU"
 
               return (
                 <div
@@ -132,7 +154,7 @@ export default async function ServicesPage() {
                   className={`relative bg-gradient-to-br ${colors.gradient} border ${colors.border} ${colors.hoverBorder} rounded-2xl p-8 transition-all duration-300 ${isPopular ? colors.ring : ''}`}
                 >
                   {pkg.badge && (
-                    <div className={`absolute -top-4 left-1/2 -translate-x-1/2 ${colors.bg} text-black text-xs font-bold px-4 py-1 rounded-full`}>
+                    <div className={`absolute -top-4 left-1/2 -translate-x-1/2 ${isNew ? 'bg-green-400' : colors.bg} text-black text-xs font-bold px-4 py-1 rounded-full`}>
                       {pkg.badge}
                     </div>
                   )}
