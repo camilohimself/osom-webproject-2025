@@ -29,22 +29,29 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
   const packages = [
     {
       name: 'Essentiel',
-      price: '5,000 - 9,000 CHF sur 3-6 mois',
+      price: '1,500 CHF/mois',
       href: '/services/essentiel',
-      description: 'Sites 15-25 pages',
+      description: 'Vous démarrez',
+    },
+    {
+      name: 'Évolution',
+      price: '2,500 CHF/mois',
+      href: '/services/evolution',
+      description: 'Vous grandissez',
+      badge: 'NOUVEAU'
     },
     {
       name: 'Performance',
-      price: '10,000 - 18,000 CHF sur 6-12 mois',
+      price: '4,000 CHF/mois',
       href: '/services/performance',
-      description: 'Projets complexes + API',
+      description: 'Vous dominez',
       badge: 'POPULAIRE'
     },
     {
       name: 'Sur Mesure',
-      price: '20,000+ CHF sur 12-24 mois',
+      price: 'Devis personnalisé',
       href: '/services/sur-mesure',
-      description: 'Conquête digitale',
+      description: 'Unique',
     },
     {
       name: 'Expertise Marketing',
