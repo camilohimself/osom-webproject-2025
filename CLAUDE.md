@@ -2,7 +2,14 @@
 
 ## 📅 DERNIÈRES MODIFICATIONS
 
-### ✅ 20 Octobre 2025 - Resend opérationnel + UX refinements
+### ✅ 20 Octobre 2025 - Package Évolution + Gaming UX + Pricing uniformisé
+- **Package Évolution créé**: Nouveau package 2,500 CHF/mois (12 mois) cible PME 5-15 employés
+- **Grid /services**: 3 → 4 packages (Essentiel, Évolution, Performance, Sur Mesure)
+- **Pricing uniformisé**: Tous packages utilisent text-5xl format "X,XXX CHF/mois" (cohérence totale)
+- **Gaming optimizations**:
+  - TicTacToe: Traduit FR (MORPION), auto-reset 5s countdown, stats session
+  - Pong: High score localStorage persistant, nouveau record détection
+- **Navigation**: Badge "NOUVEAU" Évolution + "POPULAIRE" Performance
 - **DNS Resend vérifiés**: SPF, DKIM, DMARC propagés et fonctionnels (Hostpoint)
 - **API Routes migration**: onboarding@resend.dev → @osom.ch (audit@, leads@, contact@)
 - **Emails opérationnels**: 3 workflows testés localement (Audit SEO, Questionnaire, Kit Contact)
@@ -67,24 +74,30 @@ Ce n'est PAS "projet + support optionnel". C'est partenariat total mensuel.
 ### 1. Essentiel (5,000 - 9,000 CHF)
 - **Durée**: 3-6 mois
 - **Pricing**: 1,667 CHF/mois (3 mois) ou 1,500 CHF/mois (6 mois POPULAIRE)
-- **Pour**: Professionnels, artisans, PME, cabinets
+- **Pour**: Professionnels, artisans, PME démarrage
 - **Inclus**: 15-25 pages, design responsive premium, SEO de base, formation 2h
 
-### 2. Performance (27,000 - 48,000 CHF)
+### 2. Évolution (16,500 - 30,000 CHF) ⭐ NOUVEAU
+- **Durée**: 6-12 mois
+- **Pricing**: 2,750 CHF/mois (6 mois) ou 2,500 CHF/mois (12 mois POPULAIRE)
+- **Pour**: PME 5-15 employés en croissance
+- **Inclus**: 20-30 pages, SEO local mensuel (1 ville), 2 articles blog/mois, Support 72h, Dashboard analytics standard, Réunion bilan trimestrielle
+
+### 3. Performance (27,000 - 48,000 CHF)
 - **Durée**: 6-12 mois
 - **Pricing**: 4,500 CHF/mois (6 mois) ou 4,000 CHF/mois (12 mois MEILLEUR PRIX)
-- **Pour**: PME B2B, e-commerce premium, institutions culturelles
+- **Pour**: PME B2B établies, e-commerce premium, institutions culturelles
 - **Inclus**: 30-60 pages, API & integrations, Dashboard personnalisé, SEO stratégique continu
 
-### 3. Sur Mesure (20,000 - 100,000+ CHF)
+### 4. Sur Mesure (20,000 - 100,000+ CHF)
 - **Durée**: 12-24 mois
 - **Pricing**: Dès 2,000 CHF/mois (devis personnalisé)
 - **Pour**: Finance, Corporate international, E-commerce scaling, Startup série A+
 - **Inclus**: Architecture entreprise, Consultant dédié, SEO domination, Support 24/7, Garanties contractuelles
 
-### 4. Optimisation Continue (1,500 - 4,000 CHF/mois)
+### 5. Optimisation Continue (1,500 - 4,000 CHF/mois)
 - **Essential** (1,500 CHF/mois): SEO local base, analytics
-- **Growth** (2,500 CHF/mois): SEO stratégique, dashboard, A/B tests (POPULAIRE)
+- **Growth** (2,500 CHF/mois): SEO stratégique, dashboard, A/B tests
 - **Performance** (4,000 CHF/mois): SEO agressif, consultant dédié, garantie résultats
 
 ---
@@ -132,17 +145,18 @@ Ce n'est PAS "projet + support optionnel". C'est partenariat total mensuel.
 
 ### Pages Actives
 - **Homepage**: Hero phare interactif SIGNATURE - NE JAMAIS MODIFIER sans validation
-- **Services**: `/services` (hub) + `/essentiel` + `/performance` + `/sur-mesure` + `/optimisation-continue`
+- **Services**: `/services` (hub) + `/essentiel` + `/evolution` + `/performance` + `/sur-mesure` + `/optimisation-continue`
 - **Réalisations**: Portfolio projets (H-Sechement, LMDI, Maîtrise Cathédrale, Camilo Rivera)
 - **Premium B2B**: Landing page packages B2B
-- **Agence**: À propos OSOM craftsman
+- **Agence**: À propos OSOM craftsman + Gaming interactif (Pong, TicTacToe)
 - **Contact**: WhatsApp direct + Tel + Email (pas Calendly)
 - **Outils**: Audit SEO gratuit + Calculateur ROI
 - **SEO Local**: Valais (hub), Lausanne, Genève, Fribourg, Neuchâtel
 
 ### Navigation (Header.tsx)
 - Logo OSOM | **Services ▼** | Portfolio | Agence | **Audit gratuit** | Contact
-- Dropdown Services: 3 packages + Optimisation + Ressources (Audit SEO, ROI Calculator)
+- Dropdown Services: 4 packages (Essentiel, Évolution, Performance, Sur Mesure) + Optimisation + Expertise Marketing + Ressources (Audit SEO, ROI Calculator)
+- Badges: "NOUVEAU" (Évolution vert) + "POPULAIRE" (Performance jaune)
 - Design: font-light, espacement ml-auto mr-8 space-x-12
 - **NO EMOJIS** + **Prix supprimés du navbar**
 
@@ -158,9 +172,10 @@ Ce n'est PAS "projet + support optionnel". C'est partenariat total mensuel.
 - **Typographie**: Convention française - pas de Majuscules Multiples (sauf noms propres, acronymes)
 
 ### Pricing UX
-- **Approche douce**: Prix mensuel EN GROS (text-3xl à text-6xl), total EN PETIT (text-xs, gris)
+- **Approche douce**: Prix mensuel EN GROS (text-5xl uniformisé), total EN PETIT (text-xs, gris)
+- **Format standard**: "X,XXX CHF/mois" (pas de séparation number/CHF)
 - **Psychologie**: Montant mensuel moins intimidant que total
-- **Cohérence**: Appliqué sur TOUTES les pages pricing
+- **Cohérence**: text-5xl appliqué sur TOUTES les pages pricing (Essentiel, Évolution, Performance, Sur Mesure)
 
 ### UX Flow Services
 - **Ordre optimal**: Hero → Valeur → Confiance → Qualification → Prix → Action
@@ -238,7 +253,10 @@ git add -A && git commit -m "message" && git push  # Déploiement auto Vercel
 
 ### ✅ Résolus
 - Calendly removed: -780ms render blocking
-- Pricing UX: Approche douce mensuelle appliquée
+- Pricing UX: Approche douce mensuelle appliquée + text-5xl uniformisé sur tous packages
+- Package Évolution: Intermédiaire 2,500 CHF/mois créé (PME 5-15 employés)
+- Grid /services: 3 → 4 packages avec responsive design (md:2 cols, xl:4 cols)
+- Gaming UX: TicTacToe FR + auto-reset 5s + stats session | Pong high score localStorage
 - UX Flow: Ordre sections optimisé (Hook → Valeur → Confiance → Qualification → Prix → Action)
 - Typographie: Majuscules multiples corrigées (convention française)
 - Audit SEO: API réelle Google PageSpeed + Cheerio scraping
@@ -310,4 +328,4 @@ Parcours mental du visiteur: Intrigué → Comprendre valeur → Confiance → S
 
 ---
 
-*Dernière mise à jour: 20 Octobre 2025 - Resend opérationnel + Radar labels + Favicon OSOM*
+*Dernière mise à jour: 20 Octobre 2025 - Package Évolution + Gaming UX + Pricing uniformisé + Grid 4 packages*
