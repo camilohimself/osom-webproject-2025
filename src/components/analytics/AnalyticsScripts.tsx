@@ -92,7 +92,7 @@ const AnalyticsScripts = () => {
       />
 
       {/* Search Console Verification */}
-      <meta name="google-site-verification" content="your-search-console-code" />
+      <meta name="google-site-verification" content="bf2daaa6e2779792" />
 
       {/* Structured Data for Enhanced Analytics */}
       <Script
