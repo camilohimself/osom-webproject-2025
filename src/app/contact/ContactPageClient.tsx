@@ -53,7 +53,6 @@ interface ContactPageClientProps {
 }
 
 const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
-  const [showCalendly, setShowCalendly] = useState(false)
   const [showEmailModal, setShowEmailModal] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
@@ -64,7 +63,6 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
 
   // Timeline state
   const timelineRef = useRef<HTMLDivElement>(null)
-  const calendlyRef = useRef<HTMLDivElement>(null)
   const [currentTimelineStep, setCurrentTimelineStep] = useState(0)
   
   const timelineSteps = [
@@ -118,60 +116,10 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
     }
   }
 
-  // Load Calendly script with useRef
-  useEffect(() => {
-    if (showCalendly && typeof window !== 'undefined' && calendlyRef.current) {
-      const script = document.createElement('script')
-      script.src = 'https://assets.calendly.com/assets/external/widget.js'
-      script.async = true
-      document.body.appendChild(script)
-
-      script.onload = () => {
-        if ((window as any).Calendly && calendlyRef.current) {
-          (window as any).Calendly.initInlineWidget({
-            url: 'https://calendly.com/osom-consultation/30min',
-            parentElement: calendlyRef.current,
-            prefill: {},
-            utm: {}
-          })
-        }
-      }
-
-      return () => {
-        document.body.removeChild(script)
-      }
-    }
-  }, [showCalendly])
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    try {
-      // Sauvegarder le lead avant d'ouvrir Calendly
-      const response = await fetch('/api/contact-lead', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          source: 'contact_form_desktop'
-        }),
-      })
-
-      if (!response.ok) {
-        throw new Error('Erreur lors de la sauvegarde')
-      }
-
-      // Lead sauvegardé, on peut ouvrir Calendly
-      console.log('✅ Lead sauvegardé avant Calendly')
-      setShowCalendly(true)
-
-    } catch (error) {
-      console.error('❌ Erreur sauvegarde lead:', error)
-      // On ouvre quand même Calendly pour ne pas bloquer l'user
-      setShowCalendly(true)
-    }
+  const handleWhatsAppContact = () => {
+    // Open WhatsApp with pre-filled message
+    const message = encodeURIComponent(`Bonjour OSOM, je souhaite discuter d'un projet digital.`)
+    window.open(`https://wa.me/41791289549?text=${message}`, '_blank')
   }
 
   return (
@@ -420,10 +368,10 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
 
 
                 <motion.button
-                  onClick={() => setShowCalendly(true)}
-                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-400/20"
+                  onClick={handleWhatsAppContact}
+                  className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-400/20 flex items-center space-x-2"
                   style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.02,
                     y: -2,
                   }}
@@ -441,7 +389,10 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
                     ease: 'easeInOut'
                   }}
                 >
-                  {dictionary.cta_schedule}
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+                  </svg>
+                  <span>Prendre rendez-vous</span>
                 </motion.button>
               </motion.div>
             </div>
@@ -714,125 +665,77 @@ const ContactPageClient = ({ dictionary }: ContactPageClientProps) => {
             </div>
           </motion.section>
 
-          {/* FORMULAIRE SECTION */}
-          <motion.section 
+          {/* CONTACT DIRECT SECTION */}
+          <motion.section
             className="mb-20"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
           >
-            <div className="max-w-2xl mx-auto">
-              <div className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl p-8">
+            <div className="max-w-3xl mx-auto">
+              <div className="backdrop-blur-sm border border-yellow-400/20 rounded-3xl p-8 text-center">
+                <motion.h3
+                  className="text-3xl font-light text-white mb-6"
+                  style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
+                >
+                  Contactez-nous <span className="text-yellow-400 font-bold">directement</span>
+                </motion.h3>
 
-                {showCalendly ? (
-                  <motion.div
-                    className="relative"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6 }}
+                <p className="text-gray-300 mb-8 text-lg">
+                  Parlons de votre projet. Réponse garantie sous 24h.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  {/* WhatsApp */}
+                  <motion.a
+                    href="https://wa.me/41791289549"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-green-500/10 border border-green-400/30 hover:bg-green-500/20 hover:border-green-400/50 rounded-xl p-6 transition-all duration-300"
+                    whileHover={{ scale: 1.02, y: -3 }}
                   >
-                    <motion.div
-                      className="h-96 rounded-2xl overflow-hidden bg-white"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <div ref={calendlyRef} className="w-full h-full"></div>
-                    </motion.div>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    <div className="text-4xl mb-3">💬</div>
+                    <div className="text-white font-semibold mb-2">WhatsApp</div>
+                    <div className="text-green-400 text-sm">+41 79 128 95 49</div>
+                  </motion.a>
+
+                  {/* Email */}
+                  <motion.a
+                    href="mailto:hello@osom.ch"
+                    className="bg-cyan-400/10 border border-cyan-400/30 hover:bg-cyan-400/20 hover:border-cyan-400/50 rounded-xl p-6 transition-all duration-300"
+                    whileHover={{ scale: 1.02, y: -3 }}
                   >
-                    <div className="text-center mb-8">
-                      <h3 className="text-2xl font-light text-white mb-2" style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}>
-                        Prêt pour une consultation <span className="text-yellow-400 font-bold">stratégique</span> ?
-                      </h3>
-                      <p className="text-gray-400">Renseignez vos informations pour commencer</p>
-                    </div>
-                    
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input
-                          type="text"
-                          placeholder="Nom & Prénom"
-                          value={formData.name}
-                          onChange={(e) => setFormData({...formData, name: e.target.value})}
-                          className="bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                          required
-                        />
-                        <input
-                          type="email"
-                          placeholder="Email professionnel"
-                          value={formData.email}
-                          onChange={(e) => setFormData({...formData, email: e.target.value})}
-                          className="bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                          required
-                        />
-                      </div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input
-                          type="tel"
-                          placeholder="Téléphone"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                          className="bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                        />
-                        <input
-                          type="text"
-                          placeholder="Entreprise"
-                          value={formData.company}
-                          onChange={(e) => setFormData({...formData, company: e.target.value})}
-                          className="bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-300"
-                        />
-                      </div>
-                      
-                      <motion.button
-                        type="submit"
-                        className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-lg px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-400/20"
-                        style={{ fontFamily: 'Cera PRO, Inter, sans-serif' }}
-                        whileHover={{ 
-                          scale: 1.02,
-                          y: -2,
-                        }}
-                        whileTap={{ scale: 0.98 }}
-                        animate={{
-                          boxShadow: [
-                            '0 4px 20px rgba(255,221,0,0.3)',
-                            '0 8px 30px rgba(255,221,0,0.4)',
-                            '0 4px 20px rgba(255,221,0,0.3)'
-                          ]
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: Infinity,
-                          ease: 'easeInOut'
-                        }}
-                      >
-                        Programmer ma consultation
-                      </motion.button>
-                    </form>
-                    
-                    <div className="text-center mt-6">
-                      <div className="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
-                        <div className="flex items-center">
-                          <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                          <span>Données GA4 vérifiées</span>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                          <span>Résultats mesurables</span>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
-                          <span>100% confidentiel</span>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
+                    <div className="text-4xl mb-3">📧</div>
+                    <div className="text-white font-semibold mb-2">Email</div>
+                    <div className="text-cyan-400 text-sm">hello@osom.ch</div>
+                  </motion.a>
+
+                  {/* Téléphone */}
+                  <motion.a
+                    href="tel:+41791289549"
+                    className="bg-purple-400/10 border border-purple-400/30 hover:bg-purple-400/20 hover:border-purple-400/50 rounded-xl p-6 transition-all duration-300"
+                    whileHover={{ scale: 1.02, y: -3 }}
+                  >
+                    <div className="text-4xl mb-3">📞</div>
+                    <div className="text-white font-semibold mb-2">Téléphone</div>
+                    <div className="text-purple-400 text-sm">+41 79 128 95 49</div>
+                  </motion.a>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                    <span>Réponse sous 24h</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
+                    <span>Consultation gratuite</span>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                    <span>100% confidentiel</span>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.section>

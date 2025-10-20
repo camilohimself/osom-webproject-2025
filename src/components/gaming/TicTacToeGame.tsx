@@ -15,6 +15,12 @@ interface GameState {
   isAIThinking: boolean
 }
 
+const winMessages = {
+  X: "Impossible ! Vous avez gagné !",
+  O: "Logique. L'IA OSOM domine.",
+  draw: "Match nul. Pas mal pour un humain."
+}
+
 export default function TicTacToeGame() {
   const [gameState, setGameState] = useState<GameState>({
     board: Array(9).fill(null),
@@ -23,6 +29,12 @@ export default function TicTacToeGame() {
     gameStarted: false,
     gameMessage: "Touchez pour défier l'IA OSOM",
     isAIThinking: false
+  })
+
+  const [sessionStats, setSessionStats] = useState({
+    wins: 0,
+    losses: 0,
+    draws: 0
   })
 
   const winningCombinations = [
@@ -39,12 +51,6 @@ export default function TicTacToeGame() {
     "IA OSOM réfléchit...",
     "Votre défaite approche..."
   ]
-
-  const winMessages = {
-    X: "Impossible ! Vous avez gagné !",
-    O: "Logique. L'IA OSOM domine.",
-    draw: "Match nul. Pas mal pour un humain."
-  }
 
   const checkWinner = (board: Board): Player | 'draw' | null => {
     // Check winning combinations
@@ -182,6 +188,37 @@ export default function TicTacToeGame() {
     })
   }
 
+  // Auto-reset après victoire/défaite/nul avec compte à rebours
+  useEffect(() => {
+    if (gameState.winner && gameState.gameStarted) {
+      // Mettre à jour les stats de session
+      if (gameState.winner === 'X') {
+        setSessionStats(prev => ({ ...prev, wins: prev.wins + 1 }))
+      } else if (gameState.winner === 'O') {
+        setSessionStats(prev => ({ ...prev, losses: prev.losses + 1 }))
+      } else if (gameState.winner === 'draw') {
+        setSessionStats(prev => ({ ...prev, draws: prev.draws + 1 }))
+      }
+
+      let countdown = 5
+      const interval = setInterval(() => {
+        countdown--
+        if (countdown > 0) {
+          const winMsg = winMessages[gameState.winner as 'X' | 'O' | 'draw'] || ""
+          setGameState(prev => ({
+            ...prev,
+            gameMessage: `${winMsg} • Nouvelle partie dans ${countdown}s...`
+          }))
+        } else {
+          clearInterval(interval)
+          resetGame()
+        }
+      }, 1000)
+
+      return () => clearInterval(interval)
+    }
+  }, [gameState.winner, gameState.gameStarted])
+
   const getCellColor = (cell: Player) => {
     if (cell === 'X') return 'text-blue-400'
     if (cell === 'O') return 'text-red-400'
@@ -193,7 +230,7 @@ export default function TicTacToeGame() {
       {/* Header */}
       <div className="text-center mb-6">
         <div className="text-purple-400 font-mono text-lg mb-2">
-          GATO vs IA OSOM
+          MORPION vs IA OSOM
         </div>
         <div className="text-purple-400/80 font-mono text-sm min-h-[20px]">
           {gameState.gameMessage}
@@ -236,14 +273,14 @@ export default function TicTacToeGame() {
             onClick={startGame}
             className="bg-purple-500 text-white px-6 py-3 font-mono font-bold rounded-lg hover:bg-purple-400 transition-colors"
           >
-            INICIAR DESAFÍO
+            DÉMARRER LE DÉFI
           </button>
         ) : (
           <button
             onClick={resetGame}
             className="bg-purple-500 text-white px-6 py-3 font-mono font-bold rounded-lg hover:bg-purple-400 transition-colors min-h-[44px] min-w-[120px] text-base"
           >
-            NUEVA PARTIDA
+            NOUVELLE PARTIE
           </button>
         )}
       </div>
@@ -267,6 +304,29 @@ export default function TicTacToeGame() {
                 }}
               />
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Session Stats */}
+      {(sessionStats.wins > 0 || sessionStats.losses > 0 || sessionStats.draws > 0) && (
+        <div className="mt-6 pt-4 border-t border-purple-500/30">
+          <div className="text-center text-purple-400/80 font-mono text-xs mb-2">
+            STATISTIQUES SESSION
+          </div>
+          <div className="grid grid-cols-3 gap-2">
+            <div className="text-center">
+              <div className="text-blue-400 font-mono text-xl font-bold">{sessionStats.wins}</div>
+              <div className="text-gray-400 font-mono text-xs">Victoires</div>
+            </div>
+            <div className="text-center">
+              <div className="text-red-400 font-mono text-xl font-bold">{sessionStats.losses}</div>
+              <div className="text-gray-400 font-mono text-xs">Défaites</div>
+            </div>
+            <div className="text-center">
+              <div className="text-yellow-400 font-mono text-xl font-bold">{sessionStats.draws}</div>
+              <div className="text-gray-400 font-mono text-xs">Nuls</div>
+            </div>
           </div>
         </div>
       )}

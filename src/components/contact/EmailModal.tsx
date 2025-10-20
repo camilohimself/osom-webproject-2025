@@ -191,7 +191,7 @@ const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
                       </div>
                       <div className="flex items-center">
                         <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></div>
-                        <span>Lien Calendly direct</span>
+                        <span>Contact direct WhatsApp</span>
                       </div>
                       <div className="flex items-center">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>

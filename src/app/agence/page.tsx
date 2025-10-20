@@ -14,7 +14,7 @@ const PongGameBeastMode = dynamic(() => import('@/components/gaming/PongGameBeas
 
 const TicTacToeGame = dynamic(() => import('@/components/gaming/TicTacToeGame'), {
   ssr: false,
-  loading: () => <div className="h-96 bg-black/50 rounded-2xl border border-purple-500/30 animate-pulse flex items-center justify-center"><span className="text-purple-400 font-mono">INICIANDO...</span></div>
+  loading: () => <div className="h-96 bg-black/50 rounded-2xl border border-purple-500/30 animate-pulse flex items-center justify-center"><span className="text-purple-400 font-mono">CHARGEMENT...</span></div>
 })
 
 export default function AgencePage() {

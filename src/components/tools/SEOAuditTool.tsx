@@ -136,9 +136,9 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
 
   const handleLeadSubmit = async () => {
     if (!email.trim() || !results) return
-    
+
     setIsSubmittingLead(true)
-    
+
     try {
       // Track lead capture
       trackConversionWithLead('seo_audit_lead', 15, {
@@ -146,16 +146,68 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
         source: 'seo_audit_tool',
         intent_score: results.score < 60 ? 8 : 6
       })
-      
+
       // Call parent callback if provided
       onLeadCapture?.(email, results)
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      
-      // Show success (this could trigger email sending)
+
+      // Enregistrer le lead
+      await fetch('/api/contact-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: null,
+          email: email.trim(),
+          phone: null,
+          company: null,
+          source: 'audit_seo'
+        })
+      })
+
+      // Get audit data from SEO API to get recommendations
+      const auditApiResponse = await fetch('/api/seo-audit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url })
+      })
+
+      let recommendations: string[] = []
+      if (auditApiResponse.ok) {
+        const auditApiData = await auditApiResponse.json()
+        recommendations = auditApiData.recommendations || []
+      }
+
+      // Send audit email with full data
+      const response = await fetch('/api/send-audit-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email.trim(),
+          auditData: {
+            url: url,
+            score: results.score,
+            title: results.title,
+            description: results.description,
+            headings: results.headings,
+            images: results.images,
+            performance: {
+              mobile: 100 - (results.performance.loadTime || 0) * 20, // Approximation
+              desktop: null
+            },
+            technical: results.technical,
+            recommendations: recommendations
+          }
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'envoi de l\'email')
+      }
+
       alert('✅ Audit SEO détaillé envoyé ! Vérifiez votre boîte e-mail.')
-      
+
+    } catch (error) {
+      console.error('Erreur envoi audit:', error)
+      alert('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.')
     } finally {
       setIsSubmittingLead(false)
     }
@@ -297,7 +349,7 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
               
               {/* Title & Description */}
               <div className="bg-black/40 rounded-lg p-6 border border-gray-600">
-                <h4 className="text-cyan-400 font-bold text-lg mb-4">📄 Balises Méta</h4>
+                <h4 className="text-cyan-400 font-bold text-lg mb-4">Balises méta</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-300">Title</span>
@@ -316,7 +368,7 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
 
               {/* Headings Structure */}
               <div className="bg-black/40 rounded-lg p-6 border border-gray-600">
-                <h4 className="text-cyan-400 font-bold text-lg mb-4">🏗️ Structure Titres</h4>
+                <h4 className="text-cyan-400 font-bold text-lg mb-4">Structure titres</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-300">H1</span>
@@ -342,7 +394,7 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
 
               {/* Images */}
               <div className="bg-black/40 rounded-lg p-6 border border-gray-600">
-                <h4 className="text-cyan-400 font-bold text-lg mb-4">🖼️ Optimisation Images</h4>
+                <h4 className="text-cyan-400 font-bold text-lg mb-4">Optimisation images</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-300">Images totales</span>
@@ -359,7 +411,7 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
 
               {/* Performance */}
               <div className="bg-black/40 rounded-lg p-6 border border-gray-600">
-                <h4 className="text-cyan-400 font-bold text-lg mb-4">⚡ Performance</h4>
+                <h4 className="text-cyan-400 font-bold text-lg mb-4">Performance</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-300">Temps de chargement</span>
@@ -392,10 +444,10 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
                 >
                   <div className="text-center">
                     <h4 className="text-2xl font-bold text-white mb-4">
-                      🎯 Recevez le Rapport Détaillé (PDF)
+                      Recevez le rapport détaillé (PDF)
                     </h4>
                     <p className="text-gray-300 mb-6">
-                      Recommendations personnalisées + plan d'action prioritaire pour améliorer votre SEO
+                      Recommandations personnalisées + lien PageSpeed Insights complet + plan d'action prioritaire
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -410,9 +462,9 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
                       <button
                         onClick={handleLeadSubmit}
                         disabled={!email.trim() || isSubmittingLead}
-                        className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors disabled:opacity-50"
+                        className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmittingLead ? '📧 Envoi...' : 'Recevoir le PDF'}
+                        {isSubmittingLead ? '📧 Envoi...' : 'Recevoir le rapport'}
                       </button>
                     </div>
                     

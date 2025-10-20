@@ -22,6 +22,7 @@ interface GameState {
   ballSize: number // NOUVEAU - taille balle dynamique
   aiSpeed: number // NOUVEAU - vitesse IA dynamique
   chaosMode: boolean // NOUVEAU - mode chaos
+  highScore: number // HIGH SCORE localStorage
 }
 
 export default function PongGameBeastMode() {
@@ -46,8 +47,17 @@ export default function PongGameBeastMode() {
     paddleHeight: 80, // Taille initiale
     ballSize: 10, // Taille initiale
     aiSpeed: 4, // Vitesse IA initiale
-    chaosMode: false
+    chaosMode: false,
+    highScore: 0 // Sera chargé depuis localStorage
   })
+
+  // Charger high score depuis localStorage au montage
+  useEffect(() => {
+    const savedHighScore = localStorage.getItem('pong_beast_highscore')
+    if (savedHighScore) {
+      setGameState(prev => ({ ...prev, highScore: parseInt(savedHighScore, 10) }))
+    }
+  }, [])
 
   const CANVAS_WIDTH = 800
   const CANVAS_HEIGHT = 400
@@ -167,7 +177,16 @@ export default function PongGameBeastMode() {
       if (newState.ballX < 0) {
         newState.gameStarted = false
         const level = getDifficultyLevel(newState.playerScore)
-        newState.gameMessage = `💀 GAME OVER - ${getDifficultyLabel(level)} | ${newState.playerScore} contacts!`
+
+        // Vérifier et sauvegarder nouveau high score
+        if (newState.playerScore > newState.highScore) {
+          newState.highScore = newState.playerScore
+          localStorage.setItem('pong_beast_highscore', newState.playerScore.toString())
+          newState.gameMessage = `🏆 NOUVEAU RECORD ! ${newState.playerScore} contacts - ${getDifficultyLabel(level)}`
+        } else {
+          newState.gameMessage = `💀 GAME OVER - ${getDifficultyLabel(level)} | ${newState.playerScore} contacts`
+        }
+
         newState.showNameInput = newState.playerScore > 0
       } else if (newState.ballX > CANVAS_WIDTH) {
         // Ball passed AI - reset
@@ -212,7 +231,7 @@ export default function PongGameBeastMode() {
   }
 
   const resetGame = () => {
-    setGameState({
+    setGameState(prev => ({
       ballX: CANVAS_WIDTH / 2,
       ballY: CANVAS_HEIGHT / 2,
       ballVelX: 5,
@@ -231,8 +250,9 @@ export default function PongGameBeastMode() {
       paddleHeight: 80,
       ballSize: 10,
       aiSpeed: 4,
-      chaosMode: false
-    })
+      chaosMode: false,
+      highScore: prev.highScore // Conserver le high score
+    }))
   }
 
   useEffect(() => {
@@ -369,6 +389,11 @@ export default function PongGameBeastMode() {
         <div className="text-green-400/80 font-mono text-sm">
           {gameState.gameMessage}
         </div>
+        {gameState.highScore > 0 && (
+          <div className="text-yellow-400 font-mono text-sm mt-2">
+            🏆 Record: {gameState.highScore} contacts
+          </div>
+        )}
         <div className="text-yellow-400 font-mono text-xs mt-2">
           Phase 1 (0-20): Vitesse | Phase 2 (20-50): Rétrécissement | Phase 3 (50+): CHAOS
         </div>

@@ -170,38 +170,39 @@ export default function ExpertiseMarketingPage() {
                   </div>
                 </motion.div>
 
-                {/* Visual placeholder - Radar diagram */}
+                {/* Visual - Radar diagram with labels */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="relative h-[500px] flex items-center justify-center"
+                  className="relative h-[500px] lg:h-[600px] flex items-center justify-center"
                 >
-                  <div className="relative w-full h-full max-w-md">
-                    {/* Octagon background */}
-                    <svg viewBox="0 0 400 400" className="w-full h-full">
+                  {/* Desktop: Full radar with labels */}
+                  <div className="hidden lg:block relative w-full h-full max-w-lg">
+                    <svg viewBox="0 0 500 500" className="w-full h-full">
                       {/* Grid lines */}
                       {[1, 2, 3, 4, 5].map((level) => (
                         <polygon
                           key={level}
-                          points="200,50 300,100 350,200 300,300 200,350 100,300 50,200 100,100"
+                          points="250,70 355,130 410,250 355,370 250,430 145,370 90,250 145,130"
                           fill="none"
                           stroke="rgba(250, 204, 21, 0.1)"
                           strokeWidth="1"
                           style={{ transform: `scale(${level * 0.2})`, transformOrigin: 'center' }}
                         />
                       ))}
+
                       {/* Axis lines */}
                       {Array.from({ length: 8 }).map((_, i) => {
                         const angle = (i * Math.PI * 2) / 8 - Math.PI / 2
-                        const x = 200 + Math.cos(angle) * 150
-                        const y = 200 + Math.sin(angle) * 150
+                        const x = 250 + Math.cos(angle) * 180
+                        const y = 250 + Math.sin(angle) * 180
                         return (
                           <line
                             key={i}
-                            x1="200"
-                            y1="200"
+                            x1="250"
+                            y1="250"
                             x2={x}
                             y2={y}
                             stroke="rgba(250, 204, 21, 0.2)"
@@ -209,14 +210,100 @@ export default function ExpertiseMarketingPage() {
                           />
                         )
                       })}
-                      {/* Data polygon (example) */}
+
+                      {/* Data polygon (example scores) */}
                       <polygon
-                        points="200,80 270,120 310,200 270,270 200,300 130,270 90,200 140,120"
-                        fill="rgba(250, 204, 21, 0.1)"
+                        points="250,100 320,150 370,250 320,340 250,380 180,340 130,250 190,150"
+                        fill="rgba(250, 204, 21, 0.15)"
                         stroke="rgb(250, 204, 21)"
-                        strokeWidth="2"
+                        strokeWidth="3"
                       />
+
+                      {/* Labels for each axis */}
+                      {[
+                        { label: 'Performance\ntechnique', angle: 0 },
+                        { label: 'SEO\non-page', angle: 1 },
+                        { label: 'Contenu &\nmots-clés', angle: 2 },
+                        { label: 'Backlinks &\nautorité', angle: 3 },
+                        { label: 'Expérience\nutilisateur', angle: 4 },
+                        { label: 'Taux de\nconversion', angle: 5 },
+                        { label: 'Veille\nconcurrentielle', angle: 6 },
+                        { label: 'Opportunités\nmarché local', angle: 7 }
+                      ].map((item, i) => {
+                        const angle = (item.angle * Math.PI * 2) / 8 - Math.PI / 2
+                        const labelDistance = 210
+                        const x = 250 + Math.cos(angle) * labelDistance
+                        const y = 250 + Math.sin(angle) * labelDistance
+
+                        return (
+                          <text
+                            key={i}
+                            x={x}
+                            y={y}
+                            fill="rgba(250, 204, 21, 0.9)"
+                            fontSize="11"
+                            fontWeight="600"
+                            textAnchor="middle"
+                            dominantBaseline="middle"
+                            className="pointer-events-none"
+                          >
+                            {item.label.split('\n').map((line, idx) => (
+                              <tspan key={idx} x={x} dy={idx === 0 ? 0 : 14}>
+                                {line}
+                              </tspan>
+                            ))}
+                          </text>
+                        )
+                      })}
+
+                      {/* Center label */}
+                      <text
+                        x="250"
+                        y="250"
+                        fill="rgba(255, 255, 255, 0.4)"
+                        fontSize="14"
+                        fontWeight="700"
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        DIAGNOSTIC
+                      </text>
                     </svg>
+                  </div>
+
+                  {/* Mobile: Simplified list version */}
+                  <div className="lg:hidden w-full px-4">
+                    <div className="bg-gradient-to-br from-yellow-400/5 to-purple-500/5 border border-yellow-400/20 rounded-2xl p-6">
+                      <h4 className="text-lg font-bold text-yellow-400 mb-4 text-center">8 dimensions analysées</h4>
+                      <div className="grid grid-cols-1 gap-3">
+                        {[
+                          { name: 'Performance technique', score: 8 },
+                          { name: 'SEO on-page', score: 7 },
+                          { name: 'Contenu & mots-clés', score: 6 },
+                          { name: 'Backlinks & autorité', score: 7 },
+                          { name: 'Expérience utilisateur', score: 9 },
+                          { name: 'Taux de conversion', score: 8 },
+                          { name: 'Veille concurrentielle', score: 6 },
+                          { name: 'Opportunités marché local', score: 7 }
+                        ].map((dimension, idx) => (
+                          <div key={idx} className="bg-black/40 p-3 rounded-lg border border-yellow-400/10">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-sm text-gray-300 font-medium">{dimension.name}</span>
+                              <span className="text-sm font-bold text-yellow-400">{dimension.score}/10</span>
+                            </div>
+                            <div className="w-full bg-gray-700 rounded-full h-1.5">
+                              <div
+                                className="bg-gradient-to-r from-yellow-400 to-yellow-500 h-1.5 rounded-full"
+                                style={{ width: `${dimension.score * 10}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <p className="text-xs text-gray-500 text-center mt-4 italic">
+                        Exemple de scores diagnostic client
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               </div>
