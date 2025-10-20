@@ -165,8 +165,8 @@ export async function POST(request: NextRequest) {
                 <a href="https://osom.ch/questionnaire" class="cta-button">
                     📋 Questionnaire intelligent (3 min)
                 </a>
-                <a href="https://calendly.com/osom-consultation/30min" class="cta-button">
-                    📅 Consultation gratuite (30 min)
+                <a href="https://wa.me/41791289549?text=Bonjour%20OSOM,%20je%20souhaite%20discuter%20d%27un%20projet%20digital." class="cta-button">
+                    💬 Consultation gratuite WhatsApp
                 </a>
             </div>
             
@@ -213,8 +213,8 @@ export async function POST(request: NextRequest) {
     if (resend) {
       try {
         const { data, error } = await resend.emails.send({
-          from: 'OSOM <onboarding@resend.dev>', // Temporaire: domaine Resend (fonctionne immédiatement)
-          // TODO: Changer vers 'OSOM <hello@osom.ch>' après vérification domaine
+          from: 'OSOM Contact <contact@osom.ch>',
+          replyTo: 'hello@osom.ch',
           to: email,
           subject: 'OSOM - Votre kit de contact stratégie digitale',
           html: emailTemplate,
