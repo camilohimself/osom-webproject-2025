@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   keywords: 'agence web valais, création site internet valais, seo valais, marketing digital valais, agence marketing valais, référencement valais, agence digitale valais, site web valais',
   authors: [{ name: 'osom Agency' }],
   robots: 'index, follow',
+  verification: {
+    google: 'bf2daaa6e2779792',
+  },
   openGraph: {
     title: 'osom - Agence Web Digitale Valais',
     description: 'Agence web spécialisée dans la création de sites internet, SEO, et marketing digital en Valais.',
