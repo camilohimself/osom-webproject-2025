@@ -6,8 +6,10 @@ import ROICalculatorEducatif from '@/components/tools/ROICalculatorEducatif'
 import AnimatedElement from '@/components/ui/AnimatedElement'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import { useIsDesktop } from '@/hooks/useMediaQuery'
 
 export default function OutilsPage() {
+  const isDesktop = useIsDesktop()
 
   // Premium animation variants (homepage level)
   const containerVariants = {
@@ -50,7 +52,8 @@ export default function OutilsPage() {
           }} />
         </div>
 
-        {/* Premium Gradient Animation */}
+        {/* Premium Gradient Animation - Desktop only */}
+        {isDesktop && (
         <motion.div
           className="absolute inset-0 opacity-10"
           animate={{
@@ -62,8 +65,11 @@ export default function OutilsPage() {
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
+        )}
 
-        {/* Floating Accent Elements */}
+        {/* Floating Accent Elements - Desktop only */}
+        {isDesktop && (
+        <>
         <motion.div
           className="absolute top-20 right-20 w-64 h-64 rounded-full opacity-20 blur-3xl"
           style={{ backgroundColor: "#ffd507" }}
@@ -78,7 +84,7 @@ export default function OutilsPage() {
             ease: "easeInOut"
           }}
         />
-        
+
         <motion.div
           className="absolute bottom-32 left-16 w-48 h-48 rounded-full opacity-10 blur-2xl"
           style={{ backgroundColor: "#9333EA" }}
@@ -94,6 +100,8 @@ export default function OutilsPage() {
             delay: 5
           }}
         />
+        </>
+        )}
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 

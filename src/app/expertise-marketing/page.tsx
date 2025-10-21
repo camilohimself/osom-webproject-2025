@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import { useIsDesktop } from '@/hooks/useMediaQuery'
 
 export default function ExpertiseMarketingPage() {
+  const isDesktop = useIsDesktop()
+
   return (
     <>
       <ScrollProgressIndicator />
@@ -179,7 +182,8 @@ export default function ExpertiseMarketingPage() {
                   className="relative h-[500px] lg:h-[600px] flex items-center justify-center"
                 >
                   {/* Desktop: Full radar with labels */}
-                  <div className="hidden lg:block relative w-full h-full max-w-lg">
+                  {isDesktop && (
+                  <div className="relative w-full h-full max-w-lg">
                     <svg viewBox="0 0 500 500" className="w-full h-full">
                       {/* Grid lines */}
                       {[1, 2, 3, 4, 5].map((level) => (
@@ -270,9 +274,11 @@ export default function ExpertiseMarketingPage() {
                       </text>
                     </svg>
                   </div>
+                  )}
 
                   {/* Mobile: Simplified list version */}
-                  <div className="lg:hidden w-full px-4">
+                  {!isDesktop && (
+                  <div className="w-full px-4">
                     <div className="bg-gradient-to-br from-yellow-400/5 to-purple-500/5 border border-yellow-400/20 rounded-2xl p-6">
                       <h4 className="text-lg font-bold text-yellow-400 mb-4 text-center">8 dimensions analysées</h4>
                       <div className="grid grid-cols-1 gap-3">
@@ -305,6 +311,7 @@ export default function ExpertiseMarketingPage() {
                       </p>
                     </div>
                   </div>
+                  )}
                 </motion.div>
               </div>
             </div>
