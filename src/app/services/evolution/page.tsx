@@ -26,27 +26,28 @@ export default function EvolutionPage() {
             <span className="text-purple-400 text-sm font-medium tracking-wide uppercase">Package Évolution</span>
           </div>
 
-          {/* Visual progression indicator */}
-          <div className="flex items-center justify-center gap-4 sm:gap-6 mb-12">
-            <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-white/40 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                5
+          {/* Ligne de progression animée */}
+          <div className="max-w-4xl mx-auto mb-16 px-4">
+            <div className="relative">
+              {/* Ligne de fond */}
+              <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                {/* Ligne qui se remplit avec gradient */}
+                <div
+                  className="h-full bg-gradient-to-r from-purple-400 to-purple-600 rounded-full transition-all duration-[3000ms] ease-out"
+                  style={{ width: '75%' }}
+                ></div>
               </div>
-              <div className="text-xs sm:text-sm text-gray-500 uppercase tracking-wide">employés</div>
+
+              {/* Flèche à la fin */}
+              <div className="absolute -right-2 top-1/2 -translate-y-1/2">
+                <svg className="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                </svg>
+              </div>
             </div>
 
-            <div className="flex flex-col items-center">
-              <svg className="w-12 h-12 sm:w-16 sm:h-16 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-              <div className="text-xs text-purple-400 mt-1 font-medium">évolution</div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                15
-              </div>
-              <div className="text-xs sm:text-sm text-purple-400 uppercase tracking-wide font-medium">employés</div>
+            <div className="text-center mt-4 text-sm text-purple-400 font-medium tracking-wide uppercase">
+              Croissance continue
             </div>
           </div>
 

@@ -54,18 +54,19 @@ export default async function EssentielPage() {
             <span className="text-yellow-400 text-sm font-medium tracking-wide uppercase">Package Essentiel</span>
           </div>
 
-          <div className="text-center mb-8">
-            <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-yellow-400 mb-4 leading-none" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-              15-25
+          <h1 className="mb-12 leading-tight text-center px-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-400 mb-3">
+              Votre
             </div>
-            <div className="text-xl sm:text-2xl text-gray-400 font-light tracking-wide uppercase mb-8">
-              pages sur mesure
+            <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-4">
+              SITE
             </div>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight text-center px-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Votre site professionnel<br/>
-            <span className="text-yellow-400 font-bold">clé en main</span>
+            <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black text-yellow-400 leading-none">
+              PROFESSIONNEL
+            </div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-300 mt-6">
+              clé en main
+            </div>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto text-center leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
