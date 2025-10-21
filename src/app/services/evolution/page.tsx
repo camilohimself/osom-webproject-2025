@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import ProgressionBar from '@/components/ui/ProgressionBar'
 
 export const metadata = {
   title: 'Package Évolution | Partenariat Digital PME en Croissance | 2,500 CHF/mois | OSOM',
@@ -27,29 +28,7 @@ export default function EvolutionPage() {
           </div>
 
           {/* Ligne de progression animée */}
-          <div className="max-w-4xl mx-auto mb-16 px-4">
-            <div className="relative">
-              {/* Ligne de fond */}
-              <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                {/* Ligne qui se remplit avec gradient */}
-                <div
-                  className="h-full bg-gradient-to-r from-purple-400 to-purple-600 rounded-full transition-all duration-[3000ms] ease-out"
-                  style={{ width: '75%' }}
-                ></div>
-              </div>
-
-              {/* Flèche à la fin */}
-              <div className="absolute -right-2 top-1/2 -translate-y-1/2">
-                <svg className="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
-                </svg>
-              </div>
-            </div>
-
-            <div className="text-center mt-4 text-sm text-purple-400 font-medium tracking-wide uppercase">
-              Croissance continue
-            </div>
-          </div>
+          <ProgressionBar />
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight text-center px-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             <span className="block mb-4">
