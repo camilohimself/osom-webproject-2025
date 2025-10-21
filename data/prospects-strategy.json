@@ -127,7 +127,7 @@
     }
   },
   "supporting_materials": {
-    "case_studies": ["h-sechement.json", "lmdi.json"],
+    "case_studies": ["lmdi.json", "maitrise-cathedrale.json", "artisane-lumiere.json"],
     "landing_pages": ["/premium-b2b", "/audit-gratuit"],
     "email_templates": "Templates personnalisés par secteur",
     "audit_framework": "Checklist audit 20 points",

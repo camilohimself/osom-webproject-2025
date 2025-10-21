@@ -46,7 +46,7 @@
       ],
       "perfect_for": [
         "Paroisse avec gestion événements (ex: Nendaz)",
-        "PME technique B2B (ex: H-Sechement)",
+        "PME technique B2B",
         "Institution culturelle (ex: Maîtrise Cathédrale)",
         "E-commerce premium"
       ],
@@ -56,12 +56,6 @@
           "specs": "60 pages + API Google Calendar automatique",
           "duration": "6 mois",
           "case_study": "paroisse-nendaz"
-        },
-        {
-          "name": "H-Sechement",
-          "specs": "Migration Next.js + SEO local + Dashboard",
-          "duration": "4 mois",
-          "case_study": "h-sechement"
         }
       ],
       "delivery": "3-6 mois",

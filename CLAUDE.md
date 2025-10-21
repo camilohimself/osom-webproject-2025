@@ -62,7 +62,6 @@
 
 **Pricing mensuel = partenariat continu (pas projet + support séparé)**
 
-- **H-Sechement**: 24,000 CHF sur 6 mois = 4,000 CHF/mois (dev + SEO + dashboard + support TOUT COMPRIS)
 - **Maîtrise Cathédrale**: 12,000 CHF sur 4 mois = 3,000 CHF/mois (site + calendrier + SEO + formation TOUT COMPRIS)
 
 Ce n'est PAS "projet + support optionnel". C'est partenariat total mensuel.
@@ -98,10 +97,6 @@ Ce n'est PAS "projet + support optionnel". C'est partenariat total mensuel.
 ---
 
 ## 🏆 PROJETS RÉELS OSOM
-
-### H-Sechement (B2B Technique)
-- **Package**: Performance (24K CHF / 6 mois)
-- **Résultats**: PageSpeed 65 → 95+, Position #2 Google, +150% visibilité, 1,287 impressions/mois
 
 ### Maîtrise Cathédrale Sion (Institution Culturelle)
 - **Package**: Performance (12K CHF / 4 mois)
@@ -141,7 +136,7 @@ Ce n'est PAS "projet + support optionnel". C'est partenariat total mensuel.
 ### Pages Actives
 - **Homepage**: Hero phare interactif SIGNATURE - NE JAMAIS MODIFIER sans validation
 - **Services**: `/services` (hub) + `/essentiel` + `/evolution` + `/performance` + `/sur-mesure` + `/optimisation-continue`
-- **Réalisations**: Portfolio projets (H-Sechement, LMDI, Maîtrise Cathédrale, Camilo Rivera)
+- **Réalisations**: Portfolio projets (Maîtrise Cathédrale, LMDI, Camilo Rivera, JD Waeber)
 - **Premium B2B**: Landing page packages B2B
 - **Agence**: À propos OSOM craftsman + Gaming interactif (Pong, TicTacToe)
 - **Contact**: WhatsApp direct + Tel + Email (pas Calendly)
