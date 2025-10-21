@@ -61,7 +61,7 @@ export default async function EssentielPage() {
             <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-4">
               SITE
             </div>
-            <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black text-yellow-400 leading-none">
+            <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-yellow-400 leading-none tracking-tight">
               PROFESSIONNEL
             </div>
             <div className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-300 mt-6">
