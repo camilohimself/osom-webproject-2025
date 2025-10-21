@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import AnimatedCounter from '@/components/ui/AnimatedCounter'
+import { trackEvent, trackLead } from '@/lib/analytics'
 
 interface FormData {
   projectType: string
@@ -180,6 +181,30 @@ const QuestionnairePage = () => {
       if (!response.ok) {
         throw new Error('Erreur lors de l\'envoi')
       }
+
+      // Track Questionnaire Lead conversion (Ultra qualified)
+      trackLead({
+        email: formData.contactInfo.email,
+        source: 'questionnaire_complete',
+        intent_score: 10, // Ultra qualified - answered full questionnaire
+        business_size: formData.projectType,
+        budget_range: formData.budget
+      })
+
+      // Track conversion event
+      trackEvent({
+        action: 'questionnaire_completed',
+        category: 'conversion',
+        label: 'questionnaire_form_submit',
+        value: 10,
+        custom_parameters: {
+          project_type: formData.projectType,
+          timeline: formData.timeline,
+          budget: formData.budget,
+          has_phone: !!formData.contactInfo.phone,
+          has_company: !!formData.contactInfo.company
+        }
+      })
 
       // Show success state
       setIsSubmitted(true)

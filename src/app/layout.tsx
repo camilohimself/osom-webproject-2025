@@ -7,6 +7,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale, locales, type Locale } from '@/lib/i18n'
 import { cookies } from 'next/headers'
 import AnalyticsScripts from '@/components/analytics/AnalyticsScripts'
+import GlobalTracker from '@/components/analytics/GlobalTracker'
 import { ABTestProvider } from '@/components/ab-testing/ABTestProvider'
 import CookieBanner from '@/components/cookies/CookieBanner'
 
@@ -97,6 +98,9 @@ export default async function RootLayout({
 
         {/* Advanced Analytics Scripts */}
         <AnalyticsScripts />
+
+        {/* Global Event Tracking - Performance Optimized */}
+        <GlobalTracker />
       </body>
     </html>
   )

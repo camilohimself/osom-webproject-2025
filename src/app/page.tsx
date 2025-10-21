@@ -160,6 +160,10 @@ export default async function Home() {
               <a
                 href="/services/essentiel"
                 className="group block bg-black/40 border border-yellow-400/20 rounded-2xl p-8 hover:border-yellow-400/60 hover:bg-black/60 transition-all duration-300 h-full"
+                data-ga-event="package_card_clicked"
+                data-ga-category="navigation"
+                data-ga-label="essentiel"
+                data-ga-value="3"
               >
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
@@ -213,6 +217,10 @@ export default async function Home() {
               <a
                 href="/services/performance"
                 className="group block bg-black/40 border border-purple-600/30 rounded-2xl p-8 hover:border-purple-600/70 hover:bg-black/60 transition-all duration-300 h-full relative"
+                data-ga-event="package_card_clicked"
+                data-ga-category="navigation"
+                data-ga-label="performance"
+                data-ga-value="5"
               >
                 <div className="absolute top-4 right-4 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                   POPULAIRE
@@ -270,6 +278,10 @@ export default async function Home() {
               <a
                 href="/services/sur-mesure"
                 className="group block bg-black/40 border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/60 hover:bg-black/60 transition-all duration-300 h-full relative"
+                data-ga-event="package_card_clicked"
+                data-ga-category="navigation"
+                data-ga-label="sur_mesure"
+                data-ga-value="5"
               >
                 <div className="absolute top-4 right-4 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                   ELITE
@@ -375,6 +387,10 @@ export default async function Home() {
                 <a
                   href="tel:+41791289549"
                   className="block w-full bg-yellow-400 text-black font-bold py-5 rounded-xl text-lg flex items-center justify-center gap-2 active:scale-95 transition-transform shadow-lg shadow-yellow-400/20"
+                  data-ga-event="phone_click"
+                  data-ga-category="conversion"
+                  data-ga-label="mobile_hero_cta"
+                  data-ga-value="10"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -384,6 +400,10 @@ export default async function Home() {
                 <a
                   href="/contact"
                   className="block w-full border-2 border-yellow-400 text-yellow-400 font-bold py-5 rounded-xl text-lg active:scale-95 transition-transform"
+                  data-ga-event="cta_clicked"
+                  data-ga-category="conversion"
+                  data-ga-label="mobile_consultation_cta"
+                  data-ga-value="8"
                 >
                   Consultation 30 min gratuite
                 </a>
@@ -592,6 +612,10 @@ export default async function Home() {
                 href="/contact"
                 variant="primary"
                 className="text-xl px-12 py-6 relative overflow-hidden group"
+                data-ga-event="cta_clicked"
+                data-ga-category="conversion"
+                data-ga-label="desktop_audit_cta"
+                data-ga-value="9"
               >
                 <span className="relative z-10">Audit gratuit 30 min</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
@@ -600,6 +624,10 @@ export default async function Home() {
                 href="/realisations"
                 variant="secondary"
                 className="text-xl px-12 py-6 border-2 border-gray-600 hover:border-purple-400 transition-all duration-300"
+                data-ga-event="cta_clicked"
+                data-ga-category="engagement"
+                data-ga-label="desktop_portfolio_cta"
+                data-ga-value="4"
               >
                 Portfolio projets
               </MagneticButton>

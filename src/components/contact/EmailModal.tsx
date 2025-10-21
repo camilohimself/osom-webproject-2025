@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { trackEvent, trackLead } from '@/lib/analytics'
 
 interface EmailModalProps {
   isOpen: boolean
@@ -41,6 +42,28 @@ const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
 
       if (response.ok) {
         setIsSuccess(true)
+
+        // Track lead qualified conversion
+        trackLead({
+          email,
+          source: 'contact_kit',
+          intent_score: 7,
+          business_size: 'unknown',
+          budget_range: 'unknown'
+        })
+
+        // Track conversion event
+        trackEvent({
+          action: 'lead_qualified',
+          category: 'conversion',
+          label: 'contact_kit_modal',
+          value: 7,
+          custom_parameters: {
+            conversion_type: 'email_kit',
+            email_provided: true
+          }
+        })
+
         setTimeout(() => {
           setIsSuccess(false)
           setEmail('')

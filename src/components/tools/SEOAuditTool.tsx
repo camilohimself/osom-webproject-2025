@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useAnalytics } from '@/hooks/useAnalytics'
+import { trackEvent, trackLead } from '@/lib/analytics'
 
 interface SEOMetrics {
   score: number
@@ -202,6 +203,28 @@ const SEOAuditTool: React.FC<SEOAuditToolProps> = ({ onLeadCapture }) => {
       if (!response.ok) {
         throw new Error('Erreur lors de l\'envoi de l\'email')
       }
+
+      // Track SEO Audit Lead conversion
+      trackLead({
+        email: email.trim(),
+        source: 'seo_audit_tool',
+        intent_score: 8,
+        business_size: 'unknown',
+        budget_range: '1500-2500'
+      })
+
+      // Track conversion event
+      trackEvent({
+        action: 'seo_audit_requested',
+        category: 'conversion',
+        label: 'audit_tool_submit',
+        value: 8,
+        custom_parameters: {
+          audit_score: results.score,
+          url_audited: url,
+          has_email: true
+        }
+      })
 
       alert('✅ Audit SEO détaillé envoyé ! Vérifiez votre boîte e-mail.')
 

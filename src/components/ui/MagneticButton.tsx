@@ -14,17 +14,24 @@ interface MagneticButtonProps {
   style?: React.CSSProperties
   analyticsId?: string
   target?: string
+  // GA4 tracking data-attributes
+  'data-ga-event'?: string
+  'data-ga-category'?: string
+  'data-ga-label'?: string
+  'data-ga-value'?: string
+  [key: string]: any // Allow any other props to pass through
 }
 
-const MagneticButton = ({ 
-  href, 
+const MagneticButton = ({
+  href,
   onClick,
-  children, 
-  className = '', 
+  children,
+  className = '',
   variant = 'primary',
   style = {},
   analyticsId,
-  target
+  target,
+  ...rest // Capture all other props including data-attributes
 }: MagneticButtonProps) => {
   const ref = useRef<HTMLAnchorElement | HTMLButtonElement>(null)
   const [isHovered, setIsHovered] = useState(false)
@@ -130,7 +137,7 @@ const MagneticButton = ({
   const buttonProps = {
     ref: ref as any,
     className: `
-      relative px-8 py-4 rounded-lg font-bold shadow-lg transition-all duration-300 
+      relative px-8 py-4 rounded-lg font-bold shadow-lg transition-all duration-300
       flex items-center justify-center overflow-hidden group select-none cursor-pointer
       ${isMobile ? 'active:scale-95' : ''} ${baseClasses} ${className}
     `,
@@ -141,6 +148,7 @@ const MagneticButton = ({
     onPointerEnter: handlePointerEnter,
     onTouchStart: handleTouchStart,
     onTouchEnd: handleTouchEnd,
+    ...rest // Pass all data-attributes and other props
   }
 
   const ButtonContent = (
