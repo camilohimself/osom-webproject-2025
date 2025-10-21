@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import SlotMachineText from '@/components/ui/SlotMachineText'
 
 export const metadata = {
   title: 'Package Évolution | Partenariat Digital PME en Croissance | 2,500 CHF/mois | OSOM',
@@ -26,9 +27,24 @@ export default function EvolutionPage() {
             <span className="text-purple-400 text-sm font-medium tracking-wide uppercase">Package Évolution</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight text-center" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Votre entreprise <span className="text-purple-400 font-bold">grandit.</span><br/>
-            Votre digital <span className="text-purple-400 font-bold">aussi.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight text-center px-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            <span className="block mb-4">
+              Votre entreprise{' '}
+              <SlotMachineText
+                words={['croît', 'évolue', 'se développe', 'grandit']}
+                finalWord="grandit"
+                duration={2200}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-bold inline-block animate-pulse"
+              />
+              .
+            </span>
+            <span className="block">
+              Votre digital{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-bold inline-block">
+                aussi
+              </span>
+              .
+            </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto text-center leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>

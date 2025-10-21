@@ -56,13 +56,13 @@ export default async function SurMesurePage() {
             <span className="ml-3 bg-gradient-to-r from-purple-400 to-purple-600 text-black text-xs font-bold px-3 py-1 rounded-full">ELITE</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-6 leading-tight text-center xl:whitespace-nowrap" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            Conquête digitale{' '}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light mb-6 leading-tight text-center px-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+            <span className="block sm:inline">Conquête digitale{' '}</span>
             <SlotMachineText
               words={['illimitée', 'unique', 'exclusive', 'premium', 'totale', 'audacieuse']}
               finalWord="sur mesure"
               duration={2500}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-bold"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-bold inline-block"
             />
           </h1>
 
