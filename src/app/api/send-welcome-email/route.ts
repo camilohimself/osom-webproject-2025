@@ -134,7 +134,11 @@ export async function POST(request: NextRequest) {
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">osom</div>
+            <img src="https://osom.ch/osom-logo-full.svg"
+                 alt="OSOM Logo"
+                 width="120"
+                 height="40"
+                 style="display: block; margin: 0 auto 15px auto;" />
             <div class="subtitle">Stratégie digitale data-driven • Valais</div>
         </div>
         

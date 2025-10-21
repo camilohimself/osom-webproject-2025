@@ -200,8 +200,12 @@ export async function POST(request: NextRequest) {
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">osom</div>
-            <div style="opacity: 0.9;">Audit SEO automatisé</div>
+            <img src="https://osom.ch/osom-logo-full.svg"
+                 alt="OSOM Logo"
+                 width="120"
+                 height="40"
+                 style="display: block; margin: 0 auto 15px auto;" />
+            <div style="opacity: 0.9; font-size: 16px;">Audit SEO automatisé</div>
         </div>
 
         <div class="content">
@@ -381,6 +385,11 @@ export async function POST(request: NextRequest) {
 <body>
     <div class="container">
         <div class="header">
+            <img src="https://osom.ch/osom-logo-full.svg"
+                 alt="OSOM Logo"
+                 width="100"
+                 height="33"
+                 style="display: block; margin: 0 auto 15px auto;" />
             <h1 style="margin: 0; font-size: 28px;">🔍 Nouveau Lead Audit SEO</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9;">Outil Audit SEO gratuit</p>
         </div>

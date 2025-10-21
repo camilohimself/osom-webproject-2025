@@ -137,6 +137,11 @@ export async function POST(request: NextRequest) {
 <body>
     <div class="container">
         <div class="header">
+            <img src="https://osom.ch/osom-logo-full.svg"
+                 alt="OSOM Logo"
+                 width="100"
+                 height="33"
+                 style="display: block; margin: 0 auto 15px auto; filter: brightness(0);" />
             <h1 style="margin: 0; font-size: 28px;">🎯 Nouveau Lead OSOM</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9;">Source: ${sourceLabel}</p>
         </div>
