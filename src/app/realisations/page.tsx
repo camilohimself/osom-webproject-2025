@@ -2,9 +2,38 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { InteractiveCaseStudy, ProjectCardMinimal } from '@/components/portfolio'
+import dynamic from 'next/dynamic'
 import IconeOSOM from '@/components/IconeOSOM'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+
+// Lazy load case studies pour améliorer performance mobile
+const InteractiveCaseStudy = dynamic(
+  () => import('@/components/portfolio').then(mod => ({ default: mod.InteractiveCaseStudy })),
+  {
+    loading: () => (
+      <div className="bg-gradient-to-br from-white/5 to-purple-500/5 border border-white/10 rounded-2xl p-8 h-96 animate-pulse">
+        <div className="h-8 bg-white/10 rounded w-1/3 mb-4"></div>
+        <div className="h-4 bg-white/5 rounded w-2/3 mb-2"></div>
+        <div className="h-4 bg-white/5 rounded w-1/2"></div>
+      </div>
+    ),
+    ssr: false
+  }
+)
+
+const ProjectCardMinimal = dynamic(
+  () => import('@/components/portfolio').then(mod => ({ default: mod.ProjectCardMinimal })),
+  {
+    loading: () => (
+      <div className="bg-black/40 border border-white/10 rounded-xl p-6 h-48 animate-pulse">
+        <div className="h-6 bg-white/10 rounded w-1/2 mb-3"></div>
+        <div className="h-4 bg-white/5 rounded w-full mb-2"></div>
+        <div className="h-4 bg-white/5 rounded w-3/4"></div>
+      </div>
+    ),
+    ssr: false
+  }
+)
 
 interface CaseStudyData {
   id: string

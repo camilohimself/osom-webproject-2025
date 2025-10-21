@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useIsMobile } from '@/hooks/useMediaQuery'
 
 interface AnimatedElementProps {
   children: React.ReactNode
@@ -12,8 +13,8 @@ interface AnimatedElementProps {
   type?: 'slideUp' | 'slideLeft' | 'slideRight' | 'fadeIn' | 'scale'
 }
 
-const AnimatedElement = ({ 
-  children, 
+const AnimatedElement = ({
+  children,
   className = "",
   delay = 0,
   duration = 0.6,
@@ -21,6 +22,13 @@ const AnimatedElement = ({
 }: AnimatedElementProps) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const isMobile = useIsMobile()
+
+  // Optimisation mobile: réduire delays et durée pour meilleure performance
+  const mobileDelay = Math.min(delay, 0.1)
+  const mobileDuration = Math.min(duration, 0.4)
+  const finalDelay = isMobile ? mobileDelay : delay
+  const finalDuration = isMobile ? mobileDuration : duration
 
   const variants = {
     slideUp: {
@@ -52,9 +60,9 @@ const AnimatedElement = ({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={variants[type]}
-      transition={{ 
-        duration, 
-        delay,
+      transition={{
+        duration: finalDuration,
+        delay: finalDelay,
         ease: [0.25, 0.25, 0.25, 0.75]
       }}
     >
