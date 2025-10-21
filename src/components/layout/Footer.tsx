@@ -11,9 +11,9 @@ export default function Footer({ currentLocale, dictionary }: FooterProps) {
   // Packages craftsman pour footer (aligné avec navbar)
   const packages = [
     { name: 'Essentiel', href: '/services/essentiel' },
+    { name: 'Évolution', href: '/services/evolution' },
     { name: 'Performance', href: '/services/performance' },
     { name: 'Sur Mesure', href: '/services/sur-mesure' },
-    { name: 'Optimisation continue', href: '/services/optimisation-continue' },
     { name: 'Audit gratuit', href: '/outils#audit' },
   ]
 

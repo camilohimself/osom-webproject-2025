@@ -146,7 +146,7 @@ export default async function Home() {
           <AnimatedElement type="fadeIn" delay={0.1}>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-light text-white mb-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-                Nos <span className="text-pink-400 font-bold">packages</span> sur mesure
+                Nos <span className="text-yellow-400 font-bold">packages</span> sur mesure
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
                 Du site professionnel clé en main à l'architecture entreprise avec garanties
@@ -154,7 +154,7 @@ export default async function Home() {
             </div>
           </AnimatedElement>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             {/* Package Essentiel */}
             <AnimatedElement type="fadeIn" delay={0.2}>
               <a
@@ -212,8 +212,69 @@ export default async function Home() {
               </a>
             </AnimatedElement>
 
-            {/* Package Performance */}
+            {/* Package Évolution */}
             <AnimatedElement type="fadeIn" delay={0.3}>
+              <a
+                href="/services/evolution"
+                className="group block bg-black/40 border border-purple-400/30 rounded-2xl p-8 hover:border-purple-400/50 hover:bg-black/60 transition-all duration-300 h-full relative"
+                data-ga-event="package_card_clicked"
+                data-ga-category="navigation"
+                data-ga-label="evolution"
+                data-ga-value="4"
+              >
+                <div className="absolute top-4 right-4 bg-green-400 text-black text-xs font-bold px-3 py-1 rounded-full">
+                  NOUVEAU
+                </div>
+
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                    Évolution
+                  </h3>
+                  <div className="w-12 h-12 bg-purple-400/10 rounded-full flex items-center justify-center group-hover:bg-purple-400/20 transition-colors">
+                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  <p className="text-gray-300 text-sm">PME en croissance 5-15 employés</p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>20-30 pages sur mesure</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>SEO local mensuel (1 ville)</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-gray-400">
+                      <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>2 articles blog/mois</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-purple-400/20">
+                  <div className="text-lg font-medium text-purple-400 mb-1">Engagement 6-12 mois</div>
+                  <div className="text-sm text-gray-400 flex items-center gap-2">
+                    Découvrir le package
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </AnimatedElement>
+
+            {/* Package Performance */}
+            <AnimatedElement type="fadeIn" delay={0.4}>
               <a
                 href="/services/performance"
                 className="group block bg-black/40 border border-purple-600/30 rounded-2xl p-8 hover:border-purple-600/70 hover:bg-black/60 transition-all duration-300 h-full relative"
@@ -274,7 +335,7 @@ export default async function Home() {
             </AnimatedElement>
 
             {/* Package Sur Mesure */}
-            <AnimatedElement type="fadeIn" delay={0.4}>
+            <AnimatedElement type="fadeIn" delay={0.5}>
               <a
                 href="/services/sur-mesure"
                 className="group block bg-black/40 border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/60 hover:bg-black/60 transition-all duration-300 h-full relative"

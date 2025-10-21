@@ -95,11 +95,6 @@ Ce n'est PAS "projet + support optionnel". C'est partenariat total mensuel.
 - **Pour**: Finance, Corporate international, E-commerce scaling, Startup série A+
 - **Inclus**: Architecture entreprise, Consultant dédié, SEO domination, Support 24/7, Garanties contractuelles
 
-### 5. Optimisation Continue (1,500 - 4,000 CHF/mois)
-- **Essential** (1,500 CHF/mois): SEO local base, analytics
-- **Growth** (2,500 CHF/mois): SEO stratégique, dashboard, A/B tests
-- **Performance** (4,000 CHF/mois): SEO agressif, consultant dédié, garantie résultats
-
 ---
 
 ## 🏆 PROJETS RÉELS OSOM
@@ -113,7 +108,7 @@ Ce n'est PAS "projet + support optionnel". C'est partenariat total mensuel.
 - **Livrables**: 18 pages + système événements, calendrier 2025-2026, SEO local culturel
 
 ### LMDI (E-commerce Premium)
-- **Package**: Optimisation Continue Growth
+- **Package**: Performance
 - **Résultats**: 315 clics organiques/mois, CTR 3.45%, 9,133 impressions/mois
 
 ### Camilo Rivera (Portfolio Artistique Personnel)
