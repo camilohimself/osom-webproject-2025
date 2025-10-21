@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
-import SlotMachineText from '@/components/ui/SlotMachineText'
 
 export const metadata = {
   title: 'Package Évolution | Partenariat Digital PME en Croissance | 2,500 CHF/mois | OSOM',
@@ -27,20 +26,41 @@ export default function EvolutionPage() {
             <span className="text-purple-400 text-sm font-medium tracking-wide uppercase">Package Évolution</span>
           </div>
 
+          {/* Visual progression indicator */}
+          <div className="flex items-center justify-center gap-4 sm:gap-6 mb-12">
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-white/40 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                5
+              </div>
+              <div className="text-xs sm:text-sm text-gray-500 uppercase tracking-wide">employés</div>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <svg className="w-12 h-12 sm:w-16 sm:h-16 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+              <div className="text-xs text-purple-400 mt-1 font-medium">évolution</div>
+            </div>
+
+            <div className="text-center">
+              <div className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 mb-2" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+                15
+              </div>
+              <div className="text-xs sm:text-sm text-purple-400 uppercase tracking-wide font-medium">employés</div>
+            </div>
+          </div>
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight text-center px-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
             <span className="block mb-4">
               Votre entreprise{' '}
-              <SlotMachineText
-                words={['croît', 'évolue', 'se développe', 'grandit']}
-                finalWord="grandit"
-                duration={2200}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-bold inline-block animate-pulse"
-              />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-bold">
+                grandit
+              </span>
               .
             </span>
             <span className="block">
               Votre digital{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-bold inline-block">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 font-bold">
                 aussi
               </span>
               .

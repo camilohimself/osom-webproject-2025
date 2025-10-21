@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
-import SlotMachineText from '@/components/ui/SlotMachineText'
 import { getFAQSchemaEssentiel, getServiceSchemaEssentiel, getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata = {
@@ -55,15 +54,18 @@ export default async function EssentielPage() {
             <span className="text-yellow-400 text-sm font-medium tracking-wide uppercase">Package Essentiel</span>
           </div>
 
+          <div className="text-center mb-8">
+            <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-yellow-400 mb-4 leading-none" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
+              15-25
+            </div>
+            <div className="text-xl sm:text-2xl text-gray-400 font-light tracking-wide uppercase mb-8">
+              pages sur mesure
+            </div>
+          </div>
+
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight text-center px-4" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
-            <span className="block sm:inline">Site{' '}</span>
-            <SlotMachineText
-              words={['moderne', 'performant', 'premium', 'rapide', 'professionnel']}
-              finalWord="professionnel"
-              duration={2000}
-              className="text-yellow-400 font-bold inline-block"
-            />
-            <span className="block sm:inline mt-2 sm:mt-0">{' '}clé en main</span>
+            Votre site professionnel<br/>
+            <span className="text-yellow-400 font-bold">clé en main</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto text-center leading-relaxed" style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}>
