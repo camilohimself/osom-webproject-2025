@@ -72,10 +72,10 @@ const nextConfig = {
         permanent: true,
       },
 
-      // 4. Gestion réseaux sociaux → Optimisation Continue (78 impressions/mois)
+      // 4. Gestion réseaux sociaux → Package Évolution (78 impressions/mois)
       {
         source: '/gestion-reseaux-sociaux-valais',
-        destination: '/services/optimisation-continue',
+        destination: '/services/evolution',
         permanent: true,
       },
 
