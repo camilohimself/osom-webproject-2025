@@ -1,4 +1,47 @@
+# Robots.txt OSOM - Site Next.js optimisé SEO
+# https://www.osom.ch
+
+# Règles pour tous les moteurs de recherche
 User-agent: *
 Allow: /
 
+# Bloquer les pages de test et développement
+Disallow: /agence-preview
+Disallow: /cartes-preview
+Disallow: /ctr-versions
+Disallow: /hero-performance-test
+Disallow: /hero-performance-voyage
+Disallow: /hero-preview
+Disallow: /hero-test
+Disallow: /hero-variants
+Disallow: /internal/
+Disallow: /phrase-preview
+Disallow: /pilier-test
+Disallow: /realisations-hero-test
+Disallow: /trio-piliers
+
+# Bloquer les fichiers API et Next.js
+Disallow: /api/
+Disallow: /_next/
+
+# Règles spécifiques pour les IA crawlers (optionnel - commenté par défaut)
+# Décommenter les lignes ci-dessous pour bloquer les IA
+
+# GPT (OpenAI)
+# User-agent: GPTBot
+# Disallow: /
+
+# Claude (Anthropic)
+# User-agent: anthropic-ai
+# Disallow: /
+
+# Google Bard/Gemini
+# User-agent: Google-Extended
+# Disallow: /
+
+# Common Crawl (utilisé pour l'entraînement IA)
+# User-agent: CCBot
+# Disallow: /
+
+# Sitemap principal
 Sitemap: https://www.osom.ch/sitemap.xml
