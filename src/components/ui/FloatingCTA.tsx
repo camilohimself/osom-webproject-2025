@@ -27,7 +27,7 @@ export default function FloatingCTA({
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 transition-all duration-300 transform ${
+      className={`hidden lg:block fixed bottom-8 right-8 z-50 transition-all duration-300 transform ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
       } ${className}`}
     >

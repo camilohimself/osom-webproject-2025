@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import FloatingCTA from '@/components/ui/FloatingCTA'
 import { getFAQSchemaEssentiel, getServiceSchemaEssentiel, getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata = {
@@ -25,6 +26,7 @@ export default async function EssentielPage() {
   return (
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
+      <FloatingCTA text="Démarrer Essentiel" href="/contact?package=essentiel" />
 
       {/* Structured Data JSON-LD pour SEO */}
       <script

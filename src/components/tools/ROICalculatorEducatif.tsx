@@ -422,9 +422,48 @@ const ROICalculatorEducatif = () => {
                   animate={{ opacity: 1, y: 0 }}
                   onClick={async () => {
                     setIsSubmitting(true)
-                    // Simuler l'envoi
-                    await new Promise(resolve => setTimeout(resolve, 1500))
-                    setCurrentStep(7)
+
+                    try {
+                      // Envoyer lead avec données ROI à OSOM
+                      const response = await fetch('/api/contact-lead', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                          email,
+                          name: formData.secteur ? `Prospect ${formData.secteur}` : 'Prospect ROI Calculator',
+                          source: 'roi_calculator',
+                          questionnaire: {
+                            secteur: formData.secteur,
+                            chiffreAffaires: formData.chiffreAffaires,
+                            nombreEmployes: formData.nombreEmployes,
+                            budgetMarketing: formData.budgetMarketing,
+                            objectifCroissance: formData.objectifCroissance
+                          }
+                        }),
+                      })
+
+                      if (!response.ok) {
+                        throw new Error('Erreur envoi')
+                      }
+
+                      // Analytics
+                      if (typeof window !== 'undefined' && window.gtag) {
+                        window.gtag('event', 'lead_capture', {
+                          event_category: 'conversion',
+                          event_label: 'roi_calculator_submit',
+                          value: 50
+                        })
+                      }
+
+                      setCurrentStep(7)
+                    } catch (error) {
+                      console.error('Erreur:', error)
+                      alert('Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement.')
+                    } finally {
+                      setIsSubmitting(false)
+                    }
                   }}
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-yellow-400 to-green-400 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-green-500 transition-all shadow-lg disabled:opacity-50"

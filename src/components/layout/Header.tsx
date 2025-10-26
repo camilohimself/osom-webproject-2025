@@ -16,6 +16,27 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
   const [isServicesMenuOpen, setIsServicesMenuOpen] = useState(false)
   const [servicesMenuTimeout, setServicesMenuTimeout] = useState<NodeJS.Timeout | null>(null)
 
+  // Analytics handlers
+  const handleAuditClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'audit_cta_click', {
+        event_category: 'conversion',
+        event_label: 'header_audit_gratuit',
+        value: 10
+      })
+    }
+  }
+
+  const handleContactClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'contact_cta_click', {
+        event_category: 'conversion',
+        event_label: 'header_contact_button',
+        value: 20
+      })
+    }
+  }
+
   // Fonction pour fermer immédiatement le menu services au clic
   const closeServicesMenu = () => {
     if (servicesMenuTimeout) {
@@ -212,6 +233,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
             {/* Audit gratuit - Subtle */}
             <Link
               href="/outils"
+              onClick={handleAuditClick}
               className="relative px-4 py-2 rounded-md font-medium text-sm transition-all duration-300 text-yellow-400/80 hover:text-yellow-400 hover:bg-yellow-400/10 group"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >
@@ -222,6 +244,7 @@ export default function Header({ currentLocale, dictionary }: HeaderProps) {
             {/* CTA Contact - Plus fin */}
             <Link
               href="/contact"
+              onClick={handleContactClick}
               className="bg-yellow-400 text-black px-5 py-2 rounded-md hover:bg-yellow-500 transition-all duration-300 font-medium text-sm shadow-sm hover:shadow-md"
               style={{fontFamily: 'Cera PRO, Inter, sans-serif'}}
             >

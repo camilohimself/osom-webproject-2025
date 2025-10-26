@@ -3,6 +3,7 @@ import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 import SlotMachineText from '@/components/ui/SlotMachineText'
+import FloatingCTA from '@/components/ui/FloatingCTA'
 import { getFAQSchemaSurMesure, getServiceSchemaSurMesure, getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata = {
@@ -26,6 +27,7 @@ export default async function SurMesurePage() {
   return (
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
+      <FloatingCTA text="Discuter Sur Mesure" href="/contact?package=sur-mesure" />
 
       {/* Structured Data JSON-LD pour SEO */}
       <script

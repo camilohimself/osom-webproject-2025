@@ -13,6 +13,37 @@ export function ContactMobile() {
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState('')
 
+  // Analytics handlers
+  const handleCallClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'call_click', {
+        event_category: 'conversion',
+        event_label: 'contact_mobile_call_hero',
+        value: 30
+      })
+    }
+  }
+
+  const handleWhatsAppClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'whatsapp_click', {
+        event_category: 'conversion',
+        event_label: 'contact_mobile_whatsapp_hero',
+        value: 25
+      })
+    }
+  }
+
+  const handleEmailClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'email_click', {
+        event_category: 'conversion',
+        event_label: 'contact_mobile_email_hero',
+        value: 20
+      })
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
@@ -78,6 +109,7 @@ export function ContactMobile() {
             {/* CTA 1 : CALL - Priority */}
             <a
               href="tel:+41791289549"
+              onClick={handleCallClick}
               className="block w-full bg-yellow-400 text-black font-bold py-6 rounded-2xl text-center active:scale-95 transition-transform shadow-lg shadow-yellow-400/20"
             >
               <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
@@ -90,6 +122,7 @@ export function ContactMobile() {
             {/* CTA 2 : WhatsApp - Priority 2 */}
             <a
               href="https://wa.me/41791289549"
+              onClick={handleWhatsAppClick}
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-green-500 text-white font-bold py-6 rounded-2xl text-center active:scale-95 transition-transform shadow-lg shadow-green-500/20"
@@ -104,6 +137,7 @@ export function ContactMobile() {
             {/* CTA 3 : Email - Priority 3 */}
             <a
               href="mailto:hello@osom.ch"
+              onClick={handleEmailClick}
               className="block w-full bg-gray-800 border-2 border-gray-700 text-white font-bold py-6 rounded-2xl text-center active:scale-95 transition-transform"
             >
               <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
 import ProgressionBar from '@/components/ui/ProgressionBar'
+import FloatingCTA from '@/components/ui/FloatingCTA'
 
 export const metadata = {
   title: 'Package Évolution | Partenariat Digital PME en Croissance | 2,500 CHF/mois | OSOM',
@@ -12,6 +13,7 @@ export default function EvolutionPage() {
   return (
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
+      <FloatingCTA text="Démarrer Évolution" href="/contact?package=evolution" />
 
       {/* Hero Section */}
       <section className="py-32 lg:py-40 bg-gradient-to-b from-black via-black to-purple-500/5 text-white relative overflow-hidden">

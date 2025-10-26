@@ -10,6 +10,7 @@ import AnalyticsScripts from '@/components/analytics/AnalyticsScripts'
 import GlobalTracker from '@/components/analytics/GlobalTracker'
 import { ABTestProvider } from '@/components/ab-testing/ABTestProvider'
 import CookieBanner from '@/components/cookies/CookieBanner'
+import GlobalMobileCTABar from '@/components/ui/GlobalMobileCTABar'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -94,6 +95,9 @@ export default async function RootLayout({
 
           {/* Cookie Consent Banner */}
           <CookieBanner />
+
+          {/* Global Mobile CTA Bar - Toutes pages sauf /contact */}
+          <GlobalMobileCTABar />
         </div>
 
         {/* Advanced Analytics Scripts */}

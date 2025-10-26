@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getDictionary } from '@/lib/dictionaries'
 import { defaultLocale } from '@/lib/i18n'
 import ScrollProgressIndicator from '@/components/ui/ScrollProgressIndicator'
+import FloatingCTA from '@/components/ui/FloatingCTA'
 import { getFAQSchemaPerformance, getServiceSchemaPerformance, getBreadcrumbSchema } from '@/lib/structured-data'
 
 export const metadata = {
@@ -25,6 +26,7 @@ export default async function PerformancePage() {
   return (
     <div className="min-h-screen bg-black">
       <ScrollProgressIndicator />
+      <FloatingCTA text="Démarrer Performance" href="/contact?package=performance" />
 
       {/* Structured Data JSON-LD pour SEO */}
       <script
