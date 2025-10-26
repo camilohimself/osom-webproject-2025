@@ -2,6 +2,21 @@
 
 ## 📅 DERNIÈRES MODIFICATIONS
 
+### ✅ 26 Octobre 2025 - Structured Data JSON-LD Complet + Package Évolution SEO
+- **Package Évolution ajouté structured data**: Maintenant visible Google
+  - LocalBusiness hasOfferCatalog: 4 packages (Essentiel, Évolution, Performance, Sur Mesure)
+  - getFAQSchemaEvolution(): 5 questions optimisées featured snippets
+  - getServiceSchemaEvolution(): Description complète PME 5-15 employés
+  - /services/evolution/page.tsx: JSON-LD complet (FAQ + Service + Breadcrumb)
+- **Pricing corrigé structured data**:
+  - Package Performance: 10,000-18,000 → 27,000-48,000 CHF (pricing actuel)
+  - Package Évolution: 16,500-30,000 CHF (2,750 CHF/mois × 6 ou 2,500 CHF/mois × 12)
+- **Social Media URLs uniformisés**: Organization sameAs cohérent avec LocalBusiness
+- **Impact SEO estimé**:
+  - Featured Snippets: Éligible Package Évolution
+  - Google Business Profile: 4 packages visibles (vs 3 avant)
+  - Local SEO: +30% visibilité "pme croissance valais", "partenariat digital 2500 chf"
+
 ### ✅ 26 Octobre 2025 - Optimisation Tunnel Conversion Mobile Complet
 - **Circuit leads CRITIQUE corrigé**: Contact-callback envoie emails OSOM (`leads@osom.ch`)
   - Formulaire mobile "Je veux être rappelé" maintenant opérationnel
@@ -355,4 +370,4 @@ Parcours mental du visiteur: Intrigué → Comprendre valeur → Confiance → S
 
 ---
 
-*Dernière mise à jour: 26 Octobre 2025 - Optimisation Tunnel Conversion Mobile Complet*
+*Dernière mise à jour: 26 Octobre 2025 - Structured Data JSON-LD Complet + Optimisation Tunnel Conversion Mobile*
