@@ -128,9 +128,23 @@ export const getLocalBusinessStructuredData = () => ({
       },
       {
         '@type': 'Offer',
+        name: 'Package Évolution',
+        description: 'Partenariat digital PME 5-15 employés avec SEO local mensuel et support 72h',
+        price: '16500-30000',
+        priceCurrency: 'CHF',
+        availability: 'https://schema.org/InStock',
+        url: 'https://www.osom.ch/services/evolution',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Partenariat Digital Évolution',
+          serviceType: 'Digital Partnership & Local SEO'
+        }
+      },
+      {
+        '@type': 'Offer',
         name: 'Package Performance',
         description: 'Projets complexes 30-60 pages + API + SEO stratégique continu',
-        price: '10000-18000',
+        price: '27000-48000',
         priceCurrency: 'CHF',
         availability: 'https://schema.org/InStock',
         url: 'https://www.osom.ch/services/performance',
@@ -188,8 +202,12 @@ export const getHomepageStructuredData = () => ({
     addressCountry: 'CH'
   },
   sameAs: [
-    'https://linkedin.com/company/osom-ch',
-    'https://instagram.com/osom.ch'
+    'https://www.linkedin.com/company/104685960/',
+    'https://www.facebook.com/profile.php?id=61562483814741',
+    'https://www.youtube.com/@OsomCreativeMarketing',
+    'https://www.tiktok.com/@osom.ch',
+    'https://www.instagram.com/osom.ch/',
+    'https://x.com/osom_ch'
   ],
   serviceArea: {
     '@type': 'State',
@@ -341,6 +359,54 @@ export const getFAQSchemaSurMesure = () => ({
   ]
 })
 
+// FAQ Schema pour Package Évolution - Optimisé featured snippets
+export const getFAQSchemaEvolution = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Combien coûte le Package Évolution OSOM pour PME en croissance ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Le Package Évolution coûte entre 16,500 et 30,000 CHF selon la durée. Pour 6 mois: 2,750 CHF/mois (16,500 CHF total). Pour 12 mois: 2,500 CHF/mois (30,000 CHF total, POPULAIRE). Ce partenariat mensuel actif inclut 20-30 pages, SEO local mensuel (1 ville), 2 articles blog/mois, support 72h, dashboard analytics standard, et réunion bilan trimestrielle.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Pour quelles entreprises est fait le Package Évolution ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Le Package Évolution est idéal pour PME 5-15 employés en croissance qui ont déjà un site mais veulent développer leur présence digitale. Secteurs typiques: commerce de détail régional, services B2B locaux, artisans établis, cabinets professionnels (comptabilité, architecture), entreprises familiales en expansion.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Qu\'est-ce que le SEO local mensuel inclus dans Évolution ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Le SEO local mensuel du Package Évolution cible 1 ville prioritaire (ex: Sion, Martigny, Sierre). Inclut: optimisation Google Business Profile, création contenu local (2 articles/mois), suivi positions locales, gestion avis clients, et optimisation citations locales. Objectif: top 10 Google pour "[votre service] [votre ville]" en 3-6 mois.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Quelle est la différence entre Package Essentiel et Évolution ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Le Package Essentiel (5,000-9,000 CHF) est pour lancement initial: site livré + SEO de base. Le Package Évolution (16,500-30,000 CHF) est pour croissance: partenariat mensuel actif avec SEO local continu, 2 articles/mois, dashboard analytics, support 72h, et réunions bilan trimestrielles. Évolution = Essentiel + accompagnement croissance mensuel.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Le Package Évolution inclut-il un dashboard analytics ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui, le Package Évolution inclut un dashboard analytics standard: suivi trafic mensuel, sources de visiteurs, pages populaires, conversions (formulaires, appels), positions SEO locales, et performance mobile. Accessible 24/7 depuis votre navigateur. Mise à jour automatique quotidienne.'
+      }
+    }
+  ]
+})
+
 // BreadcrumbList Schema pour navigation - Boost SEO
 export const getBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
   '@context': 'https://schema.org',
@@ -375,6 +441,29 @@ export const getServiceSchemaEssentiel = () => ({
     url: 'https://www.osom.ch/services/essentiel'
   },
   description: 'Sites professionnels 15-25 pages avec design responsive premium, SEO de base, accompagnement dev actif mensuel, formation 2h, et CMS simple. Idéal pour professionnels, artisans, PME, cabinets.'
+})
+
+export const getServiceSchemaEvolution = () => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Package Évolution - Partenariat Digital PME Croissance Valais',
+  provider: {
+    '@type': 'Organization',
+    name: 'OSOM',
+    url: 'https://www.osom.ch'
+  },
+  serviceType: 'Digital Partnership & Local SEO',
+  areaServed: {
+    '@type': 'State',
+    name: 'Valais'
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '16500-30000',
+    priceCurrency: 'CHF',
+    url: 'https://www.osom.ch/services/evolution'
+  },
+  description: 'Partenariat digital mensuel actif 20-30 pages pour PME 5-15 employés en croissance. Inclut SEO local mensuel (1 ville), 2 articles blog/mois, dashboard analytics standard, support 72h, et réunion bilan trimestrielle. Idéal commerce détail régional, services B2B locaux, artisans établis.'
 })
 
 export const getServiceSchemaPerformance = () => ({
