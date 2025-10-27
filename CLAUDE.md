@@ -285,9 +285,44 @@ git add -A && git commit -m "message" && git push  # Déploiement auto Vercel
 
 ---
 
+## 📊 MÉTRIQUES CLÉS À SURVEILLER (Post-Déploiement 26 Oct 2025)
+
+### **Conversion Mobile** (Baseline: 3% → Cible: 5%)
+- **Leads/jour**: 3 → 5-6 (+67%)
+- **Leads/mois**: 90 → 150-180 (+60-90)
+- **ROI annuel estimé**: +180K-216K CHF
+
+### **Sources Leads à Tracker** (GA4 + Emails)
+| **Source** | **Email To** | **Baseline** | **Cible** |
+|-----------|-------------|--------------|-----------|
+| Formulaire mobile callback | hello@osom.ch | 0/mois (perdu) | 20-30/mois |
+| ROI Calculator | hello@osom.ch | 0/mois (perdu) | 30-40/mois |
+| Audit SEO | hello@osom.ch | 40/mois | 50-60/mois |
+| Questionnaire | hello@osom.ch | 30/mois | 40-50/mois |
+
+### **Analytics Events à Monitorer** (GA4)
+```
+conversion/call_click: Tel clics (mobile sticky + contact + footer)
+conversion/whatsapp_click: WhatsApp clics (mobile sticky + contact)
+conversion/email_click: Email clics (contact mobile + footer)
+conversion/audit_cta_click: Header Audit gratuit
+conversion/contact_cta_click: Header Contact button
+conversion/lead_capture: ROI Calculator submit (value: 50)
+conversion/footer_phone_clicked: Footer téléphone
+conversion/footer_email_clicked: Footer email
+```
+
+### **Structured Data SEO** (Vérification 48-72h)
+- **Featured Snippets**: 4 packages FAQ éligibles (vs 3 avant)
+- **Local Pack**: 4 packages visibles Google Maps
+- **Rich Results**: Tous prix corrects
+- **Opportunité**: +120 recherches/mois Package Évolution = 15-30 leads/mois
+
+---
+
 ## 🔧 PROBLÈMES CONNUS & SOLUTIONS
 
-### ✅ Résolus
+### ✅ Résolus (26 Octobre 2025)
 - Calendly removed: -780ms render blocking
 - Pricing UX: Approche douce mensuelle appliquée + text-5xl uniformisé sur tous packages
 - Package Évolution: Intermédiaire 2,500 CHF/mois créé (PME 5-15 employés)
@@ -303,6 +338,13 @@ git add -A && git commit -m "message" && git push  # Déploiement auto Vercel
 - SEO Audit Tool: Messages simplifiés, emojis supprimés, capitalisation française
 - Expertise Marketing: Radar avec labels explicites (8 dimensions desktop + mobile légère)
 - Favicon: Logo OSOM officiel optimisé (SVG ~1.2KB)
+- Contact-callback API: Email notification OSOM manquante (corrigé 26/10)
+- ROI Calculator: Lead capture manquante (corrigé 26/10)
+- MobileCTABar: Présent uniquement homepage (corrigé → global 26/10)
+- Analytics: 70% CTA non trackés (corrigé → 100% coverage 26/10)
+- FloatingCTA: Non activé pages services (corrigé 26/10)
+- Package Évolution: Absent structured data (corrigé 26/10)
+- Prix Performance: Erroné structured data (corrigé 26/10)
 
 ### 🎯 Priorités Actuelles
 - [x] DNS Resend vérifiés ✅
@@ -312,8 +354,20 @@ git add -A && git commit -m "message" && git push  # Déploiement auto Vercel
 - [x] MobileCTABar global déployé ✅
 - [x] Analytics 100% coverage ✅
 - [x] ROI Calculator lead capture ✅
-- [ ] Tester emails en production après déploiement Vercel (callback + ROI calculator)
-- [ ] Monitoring GA4 (7 jours): Analyser performances CTA par canal
+- [x] Structured Data JSON-LD complet (4 packages) ✅
+- [ ] **Tests production prioritaires** (semaine 1):
+  - [ ] Formulaire mobile callback → vérifier email hello@osom.ch
+  - [ ] ROI Calculator → vérifier lead notification
+  - [ ] MobileCTABar → tester 5 pages différentes mobile
+  - [ ] FloatingCTA desktop → tester 4 pages services
+  - [ ] Analytics GA4 → surveiller événements temps réel
+- [ ] **Monitoring GA4** (7 jours): Analyser performances CTA par canal
+  - Objectif: Identifier quel canal convertit le mieux (Tel vs WhatsApp vs Email)
+  - Baseline: ~90 leads/mois → Cible: 150-180 leads/mois
+- [ ] **Structured Data vérification** (48-72h): Google Search Console
+  - Rich Results Test: https://osom.ch/services/evolution
+  - Schema Validator: Vérifier 4 packages dans hasOfferCatalog
+  - Featured Snippets: Vérifier éligibilité FAQ Évolution
 - [ ] Enrichir portfolio: 5+ case studies avec GA4 data
 - [ ] Blog activation: Réactiver menu + articles existants
 - [ ] A/B Testing: Activer tests CTA (Email vs Tel priority)
