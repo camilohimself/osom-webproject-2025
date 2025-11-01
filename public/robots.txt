@@ -22,6 +22,8 @@ Disallow: /trio-piliers
 
 # Bloquer les fichiers API et Next.js
 Disallow: /api/
+# Autoriser les ressources statiques pour Mobile-First Indexing (Google a besoin de CSS/JS pour rendre la page mobile)
+Allow: /_next/static/
 Disallow: /_next/
 
 # Règles spécifiques pour les IA crawlers (optionnel - commenté par défaut)
