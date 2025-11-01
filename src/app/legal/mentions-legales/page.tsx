@@ -3,6 +3,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Mentions Légales | OSOM',
   description: 'Mentions légales et informations légales de OSOM - Agence digitale spécialisée en IA et développement web en Valais, Suisse.',
+  alternates: {
+    canonical: 'https://www.osom.ch/legal/mentions-legales',
+  },
 }
 
 export default function MentionsLegalesPage() {

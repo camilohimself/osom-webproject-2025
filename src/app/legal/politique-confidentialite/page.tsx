@@ -3,6 +3,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Politique de Confidentialité | OSOM',
   description: 'Politique de confidentialité et protection des données personnelles de OSOM - Agence digitale en Valais, Suisse.',
+  alternates: {
+    canonical: 'https://www.osom.ch/legal/politique-confidentialite',
+  },
 }
 
 export default function PolitiqueConfidentialitePage() {

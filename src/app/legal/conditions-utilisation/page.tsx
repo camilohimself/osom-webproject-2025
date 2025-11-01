@@ -3,6 +3,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Conditions d\'Utilisation | OSOM',
   description: 'Conditions générales d\'utilisation du site web et des services de OSOM - Agence digitale en Valais, Suisse.',
+  alternates: {
+    canonical: 'https://www.osom.ch/legal/conditions-utilisation',
+  },
 }
 
 export default function ConditionsUtilisationPage() {

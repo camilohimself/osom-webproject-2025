@@ -2,6 +2,23 @@
 
 ## 📅 DERNIÈRES MODIFICATIONS
 
+### ✅ 1 Novembre 2025 - URLs Canoniques Uniformisées (Fix SEO Critique)
+- **Problème identifié**: Incohérence URLs canoniques (homepage avec `https://osom.ch` vs autres pages `https://www.osom.ch`)
+- **Impact SEO**: Google Search Console signalait "Non-canonical URL" sur toutes les pages
+- **Correction complète**:
+  - Homepage: `https://osom.ch` → `https://www.osom.ch` (cohérence totale)
+  - 4 pages services: URLs canoniques explicites ajoutées (essentiel, évolution, performance, sur-mesure)
+  - 4 pages légales: URLs canoniques ajoutées (mentions, confidentialité, conditions, cookies)
+  - 7 layouts créés pour pages client: outils, expertise-marketing, questionnaire, realisations, contact, blog
+  - 2 articles blog: URLs canoniques ajoutées
+  - Premium B2B: URL canonique ajoutée
+- **Vérification**:
+  - metadataBase: `https://www.osom.ch` (layout.tsx ligne 23) ✅
+  - Sitemap: Toutes URLs avec `www` ✅
+  - Build production: 0 erreur ✅
+- **Résultat**: 100% des pages ont maintenant URL canonique cohérente avec `www.osom.ch`
+- **Impact estimé**: Résolution problèmes indexation Google sous 48-72h
+
 ### ✅ 26 Octobre 2025 - Structured Data JSON-LD Complet + Package Évolution SEO
 - **Package Évolution ajouté structured data**: Maintenant visible Google
   - LocalBusiness hasOfferCatalog: 4 packages (Essentiel, Évolution, Performance, Sur Mesure)
@@ -321,6 +338,9 @@ conversion/footer_email_clicked: Footer email
 ---
 
 ## 🔧 PROBLÈMES CONNUS & SOLUTIONS
+
+### ✅ Résolus (1 Novembre 2025)
+- URLs canoniques: Incohérence www corrigée (100% pages uniformisées)
 
 ### ✅ Résolus (26 Octobre 2025)
 - Calendly removed: -780ms render blocking

@@ -73,11 +73,11 @@ export const metadata: Metadata = {
     images: ['/osom-og-image.jpg'],
   },
   alternates: {
-    canonical: 'https://osom.ch',
+    canonical: 'https://www.osom.ch',
     languages: {
-      'fr-CH': 'https://osom.ch',
-      'de-CH': 'https://osom.ch/de',
-      'en': 'https://osom.ch/en',
+      'fr-CH': 'https://www.osom.ch',
+      'de-CH': 'https://www.osom.ch/de',
+      'en': 'https://www.osom.ch/en',
     },
   },
   other: {

@@ -10,6 +10,9 @@ export const metadata = {
   title: 'Package Sur Mesure | Conquête digitale complète | OSOM Valais',
   description: 'Projets stratégiques haute visibilité. Architecture entreprise, SEO domination, support 24/7, garanties contractuelles. Les projets Sur mesure ne se discutent pas en ligne.',
   keywords: 'projet sur mesure, site entreprise, seo domination, garantie résultats, partenariat long terme, développeur elite valais',
+  alternates: {
+    canonical: 'https://www.osom.ch/services/sur-mesure',
+  },
 }
 
 export default async function SurMesurePage() {

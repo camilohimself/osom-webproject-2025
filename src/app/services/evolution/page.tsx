@@ -8,6 +8,9 @@ export const metadata = {
   title: 'Package Évolution | Partenariat Digital PME en Croissance | 2,500 CHF/mois | OSOM',
   description: 'Package Évolution OSOM : partenariat digital pour PME 5-15 employés. SEO local mensuel, mise à jour contenu, support 72h. 2,500 CHF/mois. Grandissez avec un expert digital.',
   keywords: 'partenariat digital valais, seo local valais, gestion site web pme, agence digitale suivi mensuel, marketing digital valais, présence web continue',
+  alternates: {
+    canonical: 'https://www.osom.ch/services/evolution',
+  },
 }
 
 export default function EvolutionPage() {

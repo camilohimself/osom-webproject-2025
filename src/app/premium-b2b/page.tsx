@@ -4,7 +4,10 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Solutions Premium B2B | OSOM - Expertise Technique Valais',
   description: 'Packages premium B2B pour entreprises techniques. ROI 300-600% garanti. Dashboard performance + SEO complexe. +150% visibilité moyenne clients.',
-  keywords: 'agence b2b valais, seo technique, dashboard performance, marketing b2b suisse'
+  keywords: 'agence b2b valais, seo technique, dashboard performance, marketing b2b suisse',
+  alternates: {
+    canonical: 'https://www.osom.ch/premium-b2b',
+  },
 }
 
 export default function PremiumB2BPage() {

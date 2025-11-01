@@ -3,6 +3,9 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Politique des Cookies | OSOM',
   description: 'Politique d\'utilisation des cookies sur le site web de OSOM - Agence digitale en Valais, Suisse.',
+  alternates: {
+    canonical: 'https://www.osom.ch/legal/cookies',
+  },
 }
 
 export default function CookiesPage() {

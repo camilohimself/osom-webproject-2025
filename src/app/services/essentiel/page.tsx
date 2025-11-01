@@ -9,6 +9,9 @@ export const metadata = {
   title: 'Création Site Internet Valais | Site Vitrine Pro 15-25 Pages | 5-9K CHF | OSOM',
   description: 'Création site web Valais professionnel. Site vitrine 15-25 pages, 5,000 CHF (3 mois) ou 9,000 CHF (6 mois). Développeur web Valais spécialisé PME. Paiement mensuel = accompagnement continu.',
   keywords: 'création site internet valais, création site web valais, site vitrine valais, créer site web valais, développeur web valais, création de site internet valais, site professionnel valais, création site pme valais',
+  alternates: {
+    canonical: 'https://www.osom.ch/services/essentiel',
+  },
 }
 
 export default async function EssentielPage() {

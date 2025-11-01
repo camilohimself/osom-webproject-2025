@@ -12,7 +12,10 @@ export const metadata: Metadata = {
     title: 'Révéler le ROI Invisible: +47K€ Revenue Caché Récupéré',
     description: 'Case study: 14,171 sessions Unassigned transformées en 47K€ revenue mesurable',
     images: ['/images/case-study-tracking-roi.jpg'],
-  }
+  },
+  alternates: {
+    canonical: 'https://www.osom.ch/blog/tracking-invisible-roi',
+  },
 }
 
 export default function TrackingInvisibleROIPage() {

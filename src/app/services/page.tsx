@@ -7,6 +7,9 @@ export const metadata = {
   title: 'Packages Développeur Web Valais | Essentiel, Évolution, Performance, Sur Mesure | OSOM',
   description: 'Packages développement web sur mesure Valais. Essentiel (1.5k/mois), Évolution (2.5k/mois), Performance (4k/mois), Sur Mesure (devis). Paiement mensuel = partenariat actif continu.',
   keywords: 'packages développeur web, pricing développement valais, site sur mesure, partenariat mensuel, pme croissance, osom valais',
+  alternates: {
+    canonical: 'https://www.osom.ch/services',
+  },
 }
 
 export default async function ServicesPage() {

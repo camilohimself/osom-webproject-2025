@@ -11,7 +11,10 @@ export const metadata: Metadata = {
     description: 'Comment nous intégrons l\'intelligence artificielle dans nos processus pour des résultats 8x plus rapides.',
     url: 'https://www.osom.ch/blog/journal-collaboration-humain-claude-ia',
     type: 'article',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.osom.ch/blog/journal-collaboration-humain-claude-ia',
+  },
 }
 
 export default function JournalCollaborationPage() {
